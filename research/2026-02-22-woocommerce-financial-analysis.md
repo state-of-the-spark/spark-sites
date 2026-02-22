@@ -196,8 +196,80 @@ These are **lost revenue, not theft**. Customers whose cards don't work. But 25-
 - [ ] What caused the September 2025 spike ($21K)?
 - [ ] Are there failed/abandoned orders not captured here? **YES — 25-34 failed charges/month**
 - [ ] Investigate the $495 fraud dispute from December 2025
-- [ ] Is WooCommerce dunning configured to retry failed card payments?
+- [x] Is WooCommerce dunning configured to retry failed card payments? **YES — 100% recovery rate. All 506 failed charges from Dec 2025 - Feb 2026 had a matching successful charge same month. Dunning is working perfectly.**
 - [ ] Check full dispute history across all months
+- [ ] Call on-hold subscriptions to reactivate (see list below)
+
+---
+
+## Failed Charges — Retry Analysis (added 2026-02-22)
+
+Pulled all 506 failed charges from Dec 2025 - Feb 2026 and cross-referenced against successful charges for the same customer + amount in the same month.
+
+| Metric | Value |
+|--------|-------|
+| **Failed charges** | 506 |
+| **Recovered (retried successfully)** | 506 (100%) |
+| **Truly lost** | $0.00 |
+
+**Conclusion:** WooCommerce automatic retry is handling all failed payments. No manual calls needed for failed charges — they all eventually go through.
+
+---
+
+## On-Hold Subscriptions — Call List (added 2026-02-22)
+
+**32 on-hold subscriptions** worth $2,364.87/period combined, vs **149 active** subscriptions.
+
+### High-Value (call first)
+
+| Customer | Amount | Product | On Hold Since | Phone | Email |
+|----------|--------|---------|---------------|-------|-------|
+| Jason Nix | $479.40/yr | Basic Membership F&F | 2024-07 | 863-934-6218 | jason@jasonnixllc.com |
+| William Tower Jr | $419.76/yr | New Sparked Website | 2025-11 | 863-944-0799 | sslachta1@gmail.com |
+| ReGina Bullock | $399.00/yr | Hosting & Support Annual | 2026-01 | 863-797-3136 | thepetnannylakeland@gmail.com |
+| Tim Whitham | $69.90/mo | Website Hosting | 2026-01 | 863-397-8497 | packagingnorthstar@gmail.com |
+| Meredith Meeks | $67.98/mo | WordPress Support | 2026-02 | 863-224-2030 | admin@myrestoredfloor.com |
+| Jude Johnson | $65.00/mo | WordPress Support | 2024-11 | 925-577-0177 | jude2022johnson@gmail.com |
+| Heather Pincelli | $64.98/mo | New Sparked Website | 2024-05 | 208-446-3220 | heather@parentingteengirls.com |
+| Emily Waters | $64.98/mo | Elite Designed Spark Site | 2025-08 | 352-812-2153 | hello@treasuryrentals.com |
+| David White | $64.98/mo | WP Support & Website | 2025-12 | (336) 667-2300 | bookkeepermf@mstarm.org |
+| Robert Berganza | $54.98/mo | WP Support & Website | 2025-07 | 863-255-1821 | rb@robertberganza.com |
+
+### Medium-Value
+
+| Customer | Amount | Product | On Hold Since | Phone | Email |
+|----------|--------|---------|---------------|-------|-------|
+| Stephen Johnson | $44.95/mo | Basic Membership | 2024-09 | 352-476-2407 | wearerelevantsocial@gmail.com |
+| Dale Powell | $39.95/mo | Basic Membership | 2025-06 | 863-294-4211 | clarkfloorcovering@yahoo.com |
+| Kenneth Onuoha | $35.00/mo | Hosting & Support | 2025-12 | 863-271-7776 | kennethonuoha12345876@gmail.com |
+| Kristy Robinson (x2) | $70.00/mo | 2 subs: Rooted Remedies + Sparked Website | 2025-09 | 305-434-2704 | wellnesskristy@gmail.com |
+| riko ramos | $35.00/mo | Basic Membership F&F | 2024-11 | 863-660-1403 | inwiththenew@live.com |
+| Matthew Wengerd | $35.00/mo | Basic Membership F&F | 2024-08 | 253-237-4636 | matthew@afinepress.com |
+| Leidy Yanes | $34.95/mo | Marketing-Ready Web Presence | 2026-02 | 863-209-6976 | leidy_yanes@icloud.com |
+| Tiffany Montgomery | $34.95/mo | New Sparked Website | 2024-04 | 813-756-8860 | tpmontgomery@jurleenskitchen.com |
+| Jenna Lister | $34.95/mo | Micro-Site Launch Kit | 2024-12 | 863-581-2456 | jenna.averett@gmail.com |
+| Jared Yates | $28.50/mo | Managed WP Hosting | 2026-02 | 863-666-1199 | jared@ydesignco.com |
+
+### Lower-Value
+
+| Customer | Amount | Product | On Hold Since | Phone | Email |
+|----------|--------|---------|---------------|-------|-------|
+| Terry Kruse | $25.00/mo | Managed WP F&F | 2025-01 | 772-766-3662 | terrylkruse@gmail.com |
+| Tomas Czernek | $25.00/mo | Managed WP F&F | 2024-09 | 352-212-3775 | kcczernek@gmail.com |
+| domingo sanchez | $24.95/mo | Micro-Site Launch Kit | 2025-11 | 813-997-9787 | domingosanchezjw@gmail.com |
+| Kymberli Ragsdale | $24.95/mo | DIY WP Hosting | 2024-08 | 720-278-6232 | authorsavoi@yahoo.com |
+| Lisa McQueen | $21.98/mo | DIY Hosting | 2023-09 | 707-906-8491 | lisamcqueen84@gmail.com |
+| Lisa Welsh | $19.98/mo | DIY WP Hosting | 2025-10 | 863-388-1906 | lisa@vitalityfarmscompany.com |
+| Joe Gross | $19.00/mo | Sparked Website | 2025-12 | 813-966-1404 | joegross@zebrafishgc.com |
+| Johanna Baynard (x2) | $29.90/mo | 2 subs: DIY Hosting | 2025-09 | 813-347-2237 | johannabaynard@gmail.com |
+| Kayla Starling | $14.95/mo | DIY Hosting | 2025-11 | 863-712-2803 | ryanneal1992@gmail.com |
+| Jonathan Sierra | $14.95/mo | DIY Hosting | 2024-05 | 863-370-8849 | jon@jonsierra.com |
+
+### Triage Notes
+
+- **Warm leads (on hold <2 months):** Tim Whitham, Meredith Meeks, Leidy Yanes, Jared Yates — card probably just needs updating
+- **Cold leads (on hold 6+ months):** Jason Nix, Heather Pincelli, Jude Johnson, Tiffany Montgomery, Stephen Johnson — may need "we miss you" conversation or cancellation
+- **Duplicates:** Kristy Robinson (2 subs), Johanna Baynard (2 subs) — one call covers both
 
 ---
 
