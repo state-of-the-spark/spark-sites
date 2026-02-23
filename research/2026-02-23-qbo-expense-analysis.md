@@ -15,15 +15,18 @@ Cross-referenced with Stripe/WooCommerce data from `research/2026-02-22-woocomme
 
 ## The Big Picture (90 Days)
 
-| | Amount |
-|--|--------|
-| **Revenue** | $55,514 |
-| **COGS** | $13,670 |
-| **Gross Profit** | $41,845 (75.4% margin) |
-| **Expenses** | $41,465 |
-| **Net Income** | **$399** |
+**Note:** Raw QBO numbers included a $1,497 profit distribution to Grant miscategorized as rent/contractor expense under "Marissa Nieddu" (ex-wife's name on account — should be Grant). Adjusted numbers below.
 
-Breaking even. $55K in revenue, $399 in profit. 0.7% net margin over 90 days.
+| | Raw QBO | Adjusted |
+|--|--------|----------|
+| **Revenue** | $55,514 | $55,514 |
+| **COGS** | $13,670 | $13,670 |
+| **Gross Profit** | $41,845 (75.4%) | $41,845 (75.4%) |
+| **Expenses** | $41,465 | $39,968 |
+| **Net Income** | $399 | **$1,896** |
+| **Net Margin** | 0.7% | **3.4%** |
+
+Still thin, but not as dire once the misclassified distribution is removed.
 
 ---
 
@@ -74,16 +77,16 @@ $2,434/month. Full vendor breakdown:
 | Vendor | 90-Day | Monthly | Verdict |
 |--------|--------|---------|---------|
 | **Flywheel** | $4,000 | $2,000 | ELIMINATING (Pressable move) |
-| **E2M Solutions** | $2,097 | $699 | What is this? SEO outsource? |
-| **ClickFunnels** | $291 | $97 | Are you actively using funnels? |
+| **E2M Solutions** | $2,097 | $699 | White-label web dev. Was 2 services, cut to 1. KEEP. |
+| **ClickFunnels** | $291 | $97 | Not actively used. CUT. |
 | **Zapier** | $221 | $74 | What automations are running? |
 | **Elegant Themes (Divi)** | $205 | varies | Needed if building with Divi |
 | **Paddle.net** | $184 | $62 | What product is this for? |
 | **Mail Chimp** | $324 | $104 | Sending enough email to justify? |
 | **Canva** | $74 | ~$13 | Reasonable |
 | **OpenAI** | $106 | $35 | Reasonable |
-| **Descript** | $70 | $35 | Editing video/podcast? |
-| **Restream** | $98 | $49 | Live streaming? |
+| **Descript** | $70 | $35 | Already canceled. CUT. |
+| **Restream** | $98 | $49 | Active for live streaming. KEEP. |
 | **Loveable** | $75 | $25 | Dev tool — still using? |
 | **Cloud Flare** | $75 | $25 | Likely needed |
 | **Firecrawl** | $38 | $19 | Still using for prospecting? |
@@ -92,7 +95,7 @@ $2,434/month. Full vendor breakdown:
 | **Zoom** | $51 | $17 | Needed for calls |
 | **ManageWP** | $25 | $8 | Needed for client sites |
 | **SendWP** | $27 | $9 | Needed for WP email |
-| **GoDaddy** | $610 | ~$200 | Domain renewals? Or hosting? High. |
+| **GoDaddy** | $610 | ~$200 | Domain renewals + white-label reseller. Reseller needs migration/cut. |
 | **DNH Domains** | $164 | ~$55 | More domains? |
 | **Google Domains** | $91 | ~$30 | More domains |
 | **Wordfence** | $134 | one-time | Security — needed |
@@ -102,25 +105,30 @@ $2,434/month. Full vendor breakdown:
 | **Brizy** | $19 | one-time? | Page builder — still using? |
 | **Elementor** | $79 | one-time? | Another page builder |
 | **Google Video Editor** | $9 | $3 | Tiny |
-| **YouTube Premium** | $38 | $13 | Personal? |
+| **YouTube Premium** | $38 | $13 | Business expense. KEEP. |
+| **Amazon Digital Svcs** | $172 | $57 | Was Audible+Kindle+Prime. Canceled Audible+Kindle. Now $15/mo Prime only. |
 
-### Questions That Need Answers
+### Questions — Resolved
 
-1. **E2M Solutions — $2,097 (90 days).** What is this? If outsourced SEO/content, is it producing client revenue exceeding $699/month?
-2. **Marissa Nieddu — $2,497 (COGS contractor).** Who is this? What does she deliver?
-3. **ClickFunnels — $97/month.** Actively running funnels producing leads or revenue? If not, cancel. $1,164/year.
-4. **Path Social — $350.** One-time or recurring? What did it produce?
-5. **GoDaddy — $610 in 90 days.** Very high for domains. Paying for hosting you don't need?
-6. **Descript + Restream — $84/month combined.** Actively producing video/podcast? If paused, cancel both = $1,008/year.
-7. **Google Ads — $2,302.** For clients (reimbursed) or for Spark? If Spark, what's the ROI?
+1. **E2M Solutions — $2,097 (90 days).** White-label web dev team. Was 2 services at $699 each, cut to 1. Now $699/mo. Core to client delivery — KEEP.
+2. **"Marissa Nieddu" — $2,497.** Actually Grant's account (ex-wife's name). $1,497 was profit distribution (misclassified as expense), $500/mo is rent to Grant for home studio office. QBO needs reclassification.
+3. **ClickFunnels — $97/month.** Not actively used. CUT. Saves $1,164/year.
+4. **Path Social — $350.** Annual social media tool. One-time yearly cost. KEEP.
+5. **GoDaddy — $610 in 90 days.** Mix of domain renewals + white-label reseller service. Reseller needs migration and cancellation. Future savings TBD.
+6. **Descript — $35/mo.** Already canceled. **Restream — $49/mo.** Active for live streaming. KEEP.
+7. **Google Ads — $2,302.** Mix of client spend and Spark's own. Temporarily paused. Will revisit at ~$500/mo budget — was getting good CPC.
+8. **Payroll — $6,684/mo.** Grant and Amber on W-2. Nicole is 1099 contractor. 36% of revenue — not a cut target.
+9. **December rent spike — $1,528.** Was the $1,497 misclassified distribution + $31 COhatch. Real rent is $624/mo ($124 COhatch + $500 home studio).
+10. **YouTube Premium — $12.58/mo.** Business expense. KEEP.
+11. **Amazon Digital Services — $57/mo.** Was Audible + Kindle + Prime. Canceled Audible and Kindle. Now $15/mo (Prime only). Saves ~$42/mo.
 
 ### Payroll — $20,051 / 90 days
 
-$6,684/month including employer taxes. Against $18,505/month revenue, that's 36% of revenue to payroll. Not alarming for an agency, but means almost no room for error. Need clarity on who's on payroll and what they're delivering.
+$6,684/month including employer taxes. Grant and Amber on W-2. Nicole is 1099 contractor (separate). 36% of revenue — not a cut target.
 
-### Rent — $2,777 / 90 days
+### Rent — $1,280 / 90 days (adjusted)
 
-COhatch at $624/month (Jan/Feb). December was $1,528 — deposit or different space? If steady at $624, reasonable for coworking.
+Actual recurring rent: $624/month ($124 COhatch + $500 home studio to Grant). December's $1,528 was inflated by $1,497 misclassified profit distribution. QBO needs correction.
 
 ### Interest Paid — $1,097 / 90 days
 
@@ -128,19 +136,35 @@ $366/month average on credit card debt. Confirms ~28% APR on the $27K balance es
 
 ---
 
-## Potential Cuts
+## Confirmed Cuts
 
-| Cut | Monthly Savings |
-|-----|----------------|
-| Flywheel → Pressable (already planned) | $1,262 net |
-| Meals to $500/mo | ~$874 |
-| ClickFunnels (if unused) | $97 |
-| Descript + Restream (if paused) | $84 |
-| E2M Solutions (if no ROI) | $699 |
-| Path Social (if recurring, no ROI) | $350 |
-| **Total potential** | **~$3,366/month** |
+| Cut | Monthly Savings | Status |
+|-----|----------------|--------|
+| E2M second service | $699 | Already done |
+| ClickFunnels | $97 | Cutting now |
+| Descript | $35 | Already canceled |
+| Audible + Kindle | $42 | Already canceled |
+| Google Ads (temporary pause) | ~$1,000 | Paused, revisit at $500/mo |
+| **Total confirmed** | **$1,873/month** |
 
-$3,366/month in potential savings — nearly enough to cover the entire LOC payment AND make a serious CC dent.
+## Pending / Future Cuts
+
+| Item | Potential Savings | Notes |
+|------|------------------|-------|
+| GoDaddy reseller migration | TBD | Needs migration work |
+| Flywheel → Pressable | $1,262 net | LOC arbitrage plan |
+| Meals reduction | ~$874 | Target $500/mo |
+| Google Ads reintroduction | -$500 | Bring back at lower budget |
+
+## Revised Monthly Picture
+
+| | Before | After Cuts |
+|--|--------|-----------|
+| Monthly expenses (avg) | ~$13,323 | ~$11,450 |
+| Monthly revenue (avg) | ~$18,505 | $18,505 |
+| **Monthly margin** | ~$5,182 | **~$7,055** |
+
+$1,873/month back immediately. Combined with Pressable arbitrage ($1,262 net), total improvement of **~$3,135/month**.
 
 ---
 
@@ -170,26 +194,35 @@ Hosting + memberships = 84% of revenue. This is recurring/subscription revenue �
 
 ## Bottom Line
 
-Not bleeding from one wound — bleeding from twenty small ones. The biggest controllable levers are:
+Not bleeding from one wound — bleeding from twenty small ones. Confirmed $1,873/month in cuts already executed or in progress. Remaining levers:
 
-1. **Meals** — cut in half, save $5K/year
-2. **Unused software** — audit and cancel, save $2-4K/year
-3. **E2M contractor** — validate ROI or cut, save $8.4K/year
-4. **Flywheel swap** — already planned, saves $15K/year net
+1. **Meals** — cut to $500/mo target, save $5K/year
+2. **GoDaddy reseller** — migrate and cancel, savings TBD
+3. **Flywheel swap** — already planned, saves $15K/year net
+4. **Google Ads** — reintroduce at $500/mo when ready (was getting good CPC)
 
 Combined with the LOC arbitrage play and on-hold subscription recovery ($2,365/period), there's a clear path to positive monthly cash flow.
 
 ---
 
-## Open Questions
+## QBO Cleanup Needed
 
-- [ ] What does E2M Solutions deliver? ROI?
-- [ ] Who is Marissa Nieddu and what does she deliver?
-- [ ] Is ClickFunnels actively producing?
-- [ ] Is Path Social recurring?
-- [ ] What's in the $610 GoDaddy spend?
-- [ ] Are Descript + Restream actively used?
-- [ ] Are Google Ads for clients or Spark?
-- [ ] Who's on payroll and what are the roles?
-- [ ] December rent spike — what happened?
-- [ ] Is YouTube Premium a business or personal expense?
+- [ ] Reclassify "Marissa Nieddu" vendor to "Grant Sparks" (or "Grant" — ex-wife's name on account)
+- [ ] Move $1,497 Dec payment from rent/contractor to owner's draw/distribution
+- [ ] Confirm $500/mo home studio payments are categorized correctly as rent
+
+---
+
+## Open Questions (Resolved)
+
+- [x] What does E2M Solutions deliver? → White-label web dev. Cut from 2 to 1 service. KEEP.
+- [x] Who is Marissa Nieddu? → Grant's account (ex-wife name). Distribution + rent to Grant.
+- [x] Is ClickFunnels actively producing? → No. CUT.
+- [x] Is Path Social recurring? → Annual ($350/yr). KEEP.
+- [x] What's in the $610 GoDaddy spend? → Domains + reseller service. Reseller needs migration.
+- [x] Are Descript + Restream actively used? → Descript canceled. Restream active, KEEP.
+- [x] Are Google Ads for clients or Spark? → Mix. Paused, revisit at $500/mo.
+- [x] Who's on payroll? → Grant + Amber (W-2). Nicole (1099).
+- [x] December rent spike? → Misclassified $1,497 distribution. Real rent $624/mo.
+- [x] Is YouTube Premium business? → Yes. KEEP.
+- [x] Amazon Digital Services? → Canceled Audible + Kindle. $15/mo Prime only.
