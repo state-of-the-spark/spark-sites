@@ -228,7 +228,7 @@ Grant loves these models. Each will be evaluated tier-by-tier -- some referenced
 Reference files to be updated as framework develops:
 - `reference/core/offer.md` — Add book as product in value ladder
 - `reference/domain/product-ladder.md` — Map book into consultancy funnel
-- New file: `reference/domain/book-framework.md` — The proprietary framework (once named + built out)
+- ~~New file: `reference/domain/book-framework.md`~~ ✅ CREATED 2026-02-24 — The SPARK Method as standalone reference
 
 ## Next Steps
 

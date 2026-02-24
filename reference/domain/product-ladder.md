@@ -170,6 +170,16 @@ Strategy Session ($350)
       DIY Worksheet (free) as lead magnet
 ```
 
+## The Book (Lead Magnet / Authority Builder)
+
+The SPARK Method book sits below the Starter Site as the lowest-friction entry point — a $27 downsell for prospects who can't afford services yet.
+
+```
+Book ($27) → Consultation call → Done-for-you services
+```
+
+See: `reference/domain/book-framework.md` for the full SPARK Method framework.
+
 ## Gaps to Address
 
 - ~~Strategy sessions need productizing~~ → Done. See `offers/strategy/`
