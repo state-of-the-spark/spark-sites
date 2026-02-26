@@ -100,7 +100,7 @@ sources:
 
 # --- Schedule ---
 schedule:
-  day: "thursday"
+  days: ["wednesday", "friday"]
   time: "08:00"
   timezone: "America/New_York"
 
@@ -108,12 +108,11 @@ schedule:
 output:
   markdown: true
   markdown_path: "agents/event-scout/output"
-  email: false
-  # email_to:
-  #   - "grant@sparkmysite.com"
-  #   - "nicole@sparkmysite.com"
-  #   - "amber@sparkmysite.com"
-  # email_from: "scout@sparkmysite.com"
+  email: true
+  email_to:
+    - "grant@stateofthespark.com"
+    - "nicole@sparkmysite.com"
+  email_from: "grant@stateofthespark.com"
 
 # --- API Keys ---
 # These are read from environment variables, NOT stored here.

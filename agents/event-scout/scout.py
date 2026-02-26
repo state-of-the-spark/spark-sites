@@ -14,8 +14,11 @@ Usage:
 import argparse
 import json
 import os
+import smtplib
 import sys
 from datetime import datetime, timedelta
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from pathlib import Path
 
 import yaml
@@ -377,6 +380,67 @@ def _format_event_ranked(event: dict, rank) -> list[str]:
 
 
 # ---------------------------------------------------------------------------
+# Email Notification
+# ---------------------------------------------------------------------------
+
+def send_digest_email(digest: str, config: dict) -> None:
+    """Send the digest as an HTML email via Gmail SMTP."""
+    output_config = config.get("output", {})
+    if not output_config.get("email", False):
+        return
+
+    app_password = os.environ.get("GMAIL_APP_PASSWORD")
+    if not app_password:
+        print("  WARNING: GMAIL_APP_PASSWORD not set. Skipping email.")
+        return
+
+    email_from = output_config.get("email_from", "grant@stateofthespark.com")
+    email_to = output_config.get("email_to", [])
+    if not email_to:
+        print("  WARNING: No email_to addresses configured. Skipping email.")
+        return
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    subject = f"Event Scout Digest — {today}"
+
+    # Convert markdown digest to simple HTML
+    html_body = "<html><body style='font-family: -apple-system, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px;'>"
+    for line in digest.split("\n"):
+        if line.startswith("---"):
+            html_body += "<hr>"
+        elif line.startswith("### "):
+            html_body += f"<h3>{line[4:]}</h3>"
+        elif line.startswith("## "):
+            html_body += f"<h2>{line[3:]}</h2>"
+        elif line.startswith("# "):
+            html_body += f"<h1>{line[2:]}</h1>"
+        elif line.startswith("- **"):
+            html_body += f"<p style='margin:2px 0 2px 20px;'>{line[2:]}</p>"
+        elif line.startswith("**"):
+            html_body += f"<p><strong>{line}</strong></p>"
+        elif line.startswith("*") and line.endswith("*"):
+            html_body += f"<p><em>{line.strip('*')}</em></p>"
+        elif line.strip():
+            html_body += f"<p>{line}</p>"
+    html_body += "</body></html>"
+
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"] = email_from
+    msg["To"] = ", ".join(email_to)
+    msg.attach(MIMEText(digest, "plain"))
+    msg.attach(MIMEText(html_body, "html"))
+
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(email_from, app_password)
+            server.sendmail(email_from, email_to, msg.as_string())
+        print(f"  Email sent to: {', '.join(email_to)}")
+    except Exception as e:
+        print(f"  ERROR sending email: {e}")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -514,6 +578,9 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / "digest-latest.md"
     output_path.write_text(digest, encoding="utf-8")
+
+    # Send email notification
+    send_digest_email(digest, config)
 
     # Show top results summary
     ranked = sorted(scored_events, key=lambda e: e.get("score", 0), reverse=True)
