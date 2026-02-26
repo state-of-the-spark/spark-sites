@@ -282,18 +282,101 @@ Return ONLY the JSON array, no other text."""
 # Deduplication
 # ---------------------------------------------------------------------------
 
+def event_fingerprint(event: dict) -> str:
+    """Generate a stable fingerprint for an event (lowercase title + date prefix)."""
+    title = event.get("title", "").lower().strip()
+    date = str(event.get("date", ""))[:10]
+    return f"{title}|{date}"
+
+
 def deduplicate(events: list[dict]) -> list[dict]:
     """Remove duplicate events based on title + date similarity."""
     seen = set()
     unique = []
     for event in events:
-        # Normalize key: lowercase title + date prefix
-        key = (event["title"].lower().strip(), str(event["date"])[:10])
+        key = event_fingerprint(event)
         if key not in seen:
             seen.add(key)
             unique.append(event)
     print(f"  Deduplicated: {len(events)} -> {len(unique)} unique events")
     return unique
+
+
+# ---------------------------------------------------------------------------
+# Seen Events Tracking
+# ---------------------------------------------------------------------------
+
+def get_seen_events_path() -> Path:
+    """Return the path to the seen events JSON file."""
+    return Path(__file__).parent / "output" / "seen-events.json"
+
+
+def load_seen_events() -> dict:
+    """Load previously seen events from JSON file.
+
+    Returns dict mapping fingerprint -> {first_seen, last_seen, times_seen, title, score}.
+    """
+    path = get_seen_events_path()
+    if not path.exists():
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return {}
+
+
+def save_seen_events(seen: dict) -> None:
+    """Save seen events to JSON file."""
+    path = get_seen_events_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(seen, f, indent=2, ensure_ascii=False)
+
+
+def tag_seen_events(events: list[dict], seen: dict) -> tuple[list[dict], list[dict]]:
+    """Split events into new and previously seen. Tags each event with 'seen' flag."""
+    new_events = []
+    seen_events = []
+    for event in events:
+        fp = event_fingerprint(event)
+        if fp in seen:
+            event["seen"] = True
+            event["first_seen"] = seen[fp].get("first_seen", "")
+            event["times_seen"] = seen[fp].get("times_seen", 1)
+            seen_events.append(event)
+        else:
+            event["seen"] = False
+            new_events.append(event)
+    return new_events, seen_events
+
+
+def update_seen_events(seen: dict, events: list[dict]) -> dict:
+    """Add/update events in the seen registry. Prunes entries older than 60 days."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    cutoff = (datetime.now() - timedelta(days=60)).strftime("%Y-%m-%d")
+
+    for event in events:
+        fp = event_fingerprint(event)
+        if fp in seen:
+            seen[fp]["last_seen"] = today
+            seen[fp]["times_seen"] = seen[fp].get("times_seen", 1) + 1
+            seen[fp]["score"] = event.get("score", seen[fp].get("score", 0))
+        else:
+            seen[fp] = {
+                "title": event.get("title", ""),
+                "date": str(event.get("date", ""))[:10],
+                "score": event.get("score", 0),
+                "first_seen": today,
+                "last_seen": today,
+                "times_seen": 1,
+            }
+
+    # Prune old entries
+    pruned = {k: v for k, v in seen.items() if v.get("last_seen", "") >= cutoff}
+    if len(pruned) < len(seen):
+        print(f"  Pruned {len(seen) - len(pruned)} stale entries from seen-events.json")
+    return pruned
 
 
 # ---------------------------------------------------------------------------
@@ -303,14 +386,26 @@ def deduplicate(events: list[dict]) -> list[dict]:
 MAX_DIGEST_EVENTS = 10
 
 
-def generate_digest(events: list[dict], config: dict, worth_watching: list[dict] = None) -> str:
-    """Generate a markdown digest of the top-ranked events."""
+def generate_digest(events: list[dict], config: dict, worth_watching: list[dict] = None,
+                    new_events: list[dict] = None, seen_events: list[dict] = None) -> str:
+    """Generate a markdown digest of the top-ranked events.
+
+    Prioritizes new (unseen) events. Previously seen events are shown in a
+    separate section only when there aren't enough new events to fill the digest.
+    """
     today = datetime.now().strftime("%Y-%m-%d")
     date_from, date_to = get_date_range()
 
-    # Sort by score descending, take the top N
-    ranked = sorted(events, key=lambda e: e.get("score", 0), reverse=True)
-    top = ranked[:MAX_DIGEST_EVENTS]
+    # If new/seen split is provided, use it. Otherwise treat all as new (backwards compat).
+    if new_events is not None:
+        ranked_new = sorted(new_events, key=lambda e: e.get("score", 0), reverse=True)
+        ranked_seen = sorted(seen_events or [], key=lambda e: e.get("score", 0), reverse=True)
+    else:
+        ranked_new = sorted(events, key=lambda e: e.get("score", 0), reverse=True)
+        ranked_seen = []
+
+    top_new = ranked_new[:MAX_DIGEST_EVENTS]
+    total_scored = len(new_events or events) + len(seen_events or [])
 
     lines = [
         f"---",
@@ -325,20 +420,48 @@ def generate_digest(events: list[dict], config: dict, worth_watching: list[dict]
         f"**Business:** {config['business_name']}",
         f"**Geography:** {', '.join(config['location']['cities'])}",
         f"**Date range:** {date_from} to {date_to}",
-        f"**Showing top {len(top)} of {len(events)} events scored**",
+        f"**{len(ranked_new)} new events | {len(ranked_seen)} previously seen | {total_scored} total scored**",
         f"",
         f"---",
         f"",
     ]
 
-    if not top or top[0].get("score", 0) == 0:
-        lines.append("*No scored events found this week.*")
+    # Section 1: New events
+    if top_new and top_new[0].get("score", 0) > 0:
+        lines.append("## New Events")
         lines.append("")
-    else:
-        for rank, event in enumerate(top, 1):
+        for rank, event in enumerate(top_new, 1):
             lines.extend(_format_event_ranked(event, rank))
+    elif not ranked_seen:
+        lines.append("*No new events found.*")
+        lines.append("")
 
-    # Worth Watching section — high-scoring events outside the 21-day window
+    # Section 2: Previously seen events (backfill if few new ones, or show top seen)
+    if ranked_seen:
+        # Show seen events if we have fewer than MAX new events, or if seen events score 7+
+        slots_remaining = MAX_DIGEST_EVENTS - len(top_new)
+        top_seen = ranked_seen[:max(slots_remaining, 3)] if slots_remaining > 0 else [
+            e for e in ranked_seen if e.get("score", 0) >= 7
+        ][:5]
+
+        if top_seen:
+            lines.append("---")
+            lines.append("")
+            if not top_new:
+                lines.append("## Events (Previously Seen)")
+                lines.append("")
+                lines.append("*No new events this run. Here are the best upcoming events from previous scans:*")
+            else:
+                lines.append("## Also on Your Radar (Previously Seen)")
+                lines.append("")
+                lines.append("*These showed up in a previous scan and are still upcoming.*")
+            lines.append("")
+            for event in top_seen:
+                times = event.get("times_seen", 1)
+                first = event.get("first_seen", "")
+                lines.extend(_format_event_ranked(event, "", seen_label=f"Seen {times}x since {first}"))
+
+    # Section 3: Worth Watching — high-scoring events outside the 21-day window
     if worth_watching:
         ww_ranked = sorted(worth_watching, key=lambda e: e.get("score", 0), reverse=True)
         lines.append("---")
@@ -353,14 +476,19 @@ def generate_digest(events: list[dict], config: dict, worth_watching: list[dict]
     return "\n".join(lines)
 
 
-def _format_event_ranked(event: dict, rank) -> list[str]:
+def _format_event_ranked(event: dict, rank, seen_label: str = "") -> list[str]:
     """Format a ranked event for the digest."""
     score = event.get("score", 0)
     platform = event.get("platform", "Unknown")
     title_prefix = f"#{rank}. " if rank else ""
+    seen_tag = f" *(Previously Seen)*" if seen_label else ""
     lines = [
-        f"### {title_prefix}{event['title']} (Score: {score}/10)",
+        f"### {title_prefix}{event['title']} (Score: {score}/10){seen_tag}",
         f"",
+    ]
+    if seen_label:
+        lines.append(f"- **Status:** {seen_label}")
+    lines.extend([
         f"- **Why:** {event.get('reasoning', '')}",
         f"- **Date:** {event.get('date', 'TBD')} {event.get('time', '')}".strip(),
         f"- **Location:** {event.get('location', 'TBD')}",
@@ -369,7 +497,7 @@ def _format_event_ranked(event: dict, rank) -> list[str]:
         f"- **Price:** {event.get('price', 'See event')}",
         f"- **Found on:** {platform}",
         f"- **Best for:** {', '.join(event.get('avatar_match', [])) or 'General'}",
-    ]
+    ])
     if event.get("url"):
         lines.append(f"- **Link:** {event['url']}")
     else:
@@ -569,28 +697,48 @@ def main():
     else:
         print("\n[5/6] No outside-window events to score.")
 
-    # --- Generate digest ---
-    print("\n[6/6] Generating digest...")
-    digest = generate_digest(scored_events, config, worth_watching=scored_outside)
+    # --- Check seen events ---
+    print("\n[6/7] Checking seen events...")
+    seen_registry = load_seen_events()
+    new_events, previously_seen = tag_seen_events(scored_events, seen_registry)
+    print(f"  {len(new_events)} new | {len(previously_seen)} previously seen")
 
-    # Save markdown — single file, overwritten each week (Zapier/N8N watches this)
+    # --- Generate digest ---
+    print("\n[7/7] Generating digest...")
+    digest = generate_digest(
+        scored_events, config,
+        worth_watching=scored_outside,
+        new_events=new_events,
+        seen_events=previously_seen,
+    )
+
+    # Save markdown — single file, overwritten each run
     output_dir = Path(__file__).parent / config["output"]["markdown_path"].replace("agents/event-scout/", "")
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / "digest-latest.md"
     output_path.write_text(digest, encoding="utf-8")
 
+    # Update seen events registry with all scored events
+    seen_registry = update_seen_events(seen_registry, scored_events)
+    save_seen_events(seen_registry)
+    print(f"  Seen events registry: {len(seen_registry)} total entries")
+
     # Send email notification
     send_digest_email(digest, config)
 
     # Show top results summary
-    ranked = sorted(scored_events, key=lambda e: e.get("score", 0), reverse=True)
-    top = ranked[:MAX_DIGEST_EVENTS]
+    ranked_new = sorted(new_events, key=lambda e: e.get("score", 0), reverse=True)
+    top = ranked_new[:MAX_DIGEST_EVENTS]
 
     print(f"\n{'=' * 60}")
     print(f"DONE! Digest saved to: {output_path}")
-    print(f"  Top {len(top)} events (of {len(scored_events)} scored):")
-    for i, e in enumerate(top, 1):
-        print(f"    #{i}. [{e.get('score', 0)}/10] {e['title']}")
+    print(f"  {len(new_events)} NEW events | {len(previously_seen)} previously seen")
+    if top:
+        print(f"  Top new events:")
+        for i, e in enumerate(top, 1):
+            print(f"    #{i}. [{e.get('score', 0)}/10] {e['title']}")
+    else:
+        print(f"  No new events — digest shows best previously seen events")
     print(f"{'=' * 60}")
 
 
