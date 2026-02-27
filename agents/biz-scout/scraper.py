@@ -622,6 +622,7 @@ SHEET_HEADERS = [
     "Business Name", "Document Number", "Entity Type", "Filing Date",
     "Status", "Principal Address", "Mailing Address", "City", "State",
     "ZIP", "Registered Agent", "Officer Name", "Officer Title", "FEI/EIN",
+    "First Seen", "Last Updated",
 ]
 
 MAIL_QUEUE_HEADERS = [
@@ -654,6 +655,8 @@ def records_to_sheet_rows(records: list[dict]) -> list[list[str]]:
             r.get("officer_name", ""),
             r.get("officer_title", ""),
             r.get("fei_number", ""),
+            r.get("first_seen", ""),
+            r.get("last_updated", ""),
         ])
     return rows
 
@@ -704,10 +707,45 @@ def save_sheets_payload(payload: dict, filepath: str):
 SHEET_ID = "1-zz0XifJir4UkioL97nGXWxshYMwXPUaEpjbMRC_RfE"
 
 
-def push_to_google_sheets(all_records: list[dict], new_records: list[dict]):
-    """Push data directly to Google Sheets using gspread + service account.
+# Map from sheet column headers to internal dict keys
+_HEADER_TO_KEY = {
+    "Business Name": "business_name",
+    "Document Number": "document_number",
+    "Entity Type": "entity_type",
+    "Filing Date": "filing_date",
+    "Status": "status",
+    "Principal Address": "principal_address",
+    "Mailing Address": "mailing_address",
+    "City": "city",
+    "State": "state",
+    "ZIP": "zip",
+    "Registered Agent": "registered_agent",
+    "Officer Name": "officer_name",
+    "Officer Title": "officer_title",
+    "FEI/EIN": "fei_number",
+    "First Seen": "first_seen",
+    "Last Updated": "last_updated",
+}
 
-    Clears and rewrites "All Businesses" and "New This Week" tabs.
+
+def _row_to_record(row: list[str]) -> dict:
+    """Convert a sheet row back to an internal record dict."""
+    record = {}
+    for i, header in enumerate(SHEET_HEADERS):
+        key = _HEADER_TO_KEY.get(header, header.lower().replace(" ", "_"))
+        record[key] = row[i] if i < len(row) else ""
+    return record
+
+
+def push_to_google_sheets(today_records: list[dict], new_records: list[dict]):
+    """Push data to Google Sheets with accumulation (merge, don't replace).
+
+    Reads existing "All Businesses" data, merges in today's records
+    (deduplicating by document_number), preserves "First Seen" dates for
+    existing records, and updates "Last Updated" for everything seen today.
+
+    "New This Week" shows businesses first seen within the last 7 days.
+
     Does NOT touch "Mail Queue" or "Mailed" tabs.
 
     Requires env var GOOGLE_SERVICE_ACCOUNT_JSON containing the full
@@ -736,16 +774,89 @@ def push_to_google_sheets(all_records: list[dict], new_records: list[dict]):
     print(f"  Opening sheet {SHEET_ID}...")
     spreadsheet = gc.open_by_key(SHEET_ID)
 
-    # --- All Businesses tab ---
-    all_rows = [SHEET_HEADERS] + records_to_sheet_rows(all_records)
+    today_str = datetime.now().strftime("%m/%d/%Y")
+
+    # --- Read existing "All Businesses" data ---
+    existing = {}  # document_number -> dict
+    try:
+        ws = spreadsheet.worksheet("All Businesses")
+        rows = ws.get_all_values()
+        if len(rows) > 1:  # Has header + data
+            headers = rows[0]
+            doc_num_idx = headers.index("Document Number") if "Document Number" in headers else 1
+            first_seen_idx = headers.index("First Seen") if "First Seen" in headers else None
+            last_updated_idx = headers.index("Last Updated") if "Last Updated" in headers else None
+            for row in rows[1:]:
+                if len(row) > doc_num_idx and row[doc_num_idx]:
+                    doc_num = row[doc_num_idx]
+                    existing[doc_num] = {
+                        "row": row,
+                        "first_seen": row[first_seen_idx] if first_seen_idx is not None and len(row) > first_seen_idx else "",
+                        "last_updated": row[last_updated_idx] if last_updated_idx is not None and len(row) > last_updated_idx else "",
+                    }
+            print(f"  Read {len(existing)} existing records from 'All Businesses'")
+    except gspread.WorksheetNotFound:
+        print(f"  'All Businesses' tab not found — will create it")
+
+    # --- Merge today's records into existing ---
+    new_count = 0
+    updated_count = 0
+    for r in today_records:
+        doc_num = r.get("document_number", "")
+        if not doc_num:
+            continue
+        if doc_num in existing:
+            # Existing record — preserve first_seen, update the rest
+            r["first_seen"] = existing[doc_num]["first_seen"] or today_str
+            r["last_updated"] = today_str
+            updated_count += 1
+        else:
+            # New record — set first_seen to today
+            r["first_seen"] = today_str
+            r["last_updated"] = today_str
+            new_count += 1
+        existing[doc_num] = {"record": r}
+
+    # Build merged list: update existing entries with today's data, keep old ones unchanged
+    merged_records = []
+    for doc_num, entry in existing.items():
+        if "record" in entry:
+            # This was seen today (new or updated)
+            merged_records.append(entry["record"])
+        else:
+            # Old record not seen today — convert row back to dict
+            row = entry["row"]
+            record = _row_to_record(row)
+            merged_records.append(record)
+
+    print(f"  Merge result: {new_count} new, {updated_count} updated, "
+          f"{len(merged_records)} total")
+
+    # --- Write "All Businesses" tab ---
+    all_rows = [SHEET_HEADERS] + records_to_sheet_rows(merged_records)
     _update_tab(spreadsheet, "All Businesses", all_rows)
 
-    # --- New This Week tab ---
-    new_rows = [SHEET_HEADERS] + records_to_sheet_rows(new_records)
+    # --- "New This Week" = businesses first seen within the last 7 days ---
+    cutoff = datetime.now() - timedelta(days=7)
+    new_this_week = []
+    for r in merged_records:
+        first_seen = r.get("first_seen", "")
+        if not first_seen:
+            continue
+        for fmt in ["%m/%d/%Y", "%m%d%Y", "%Y-%m-%d"]:
+            try:
+                fs_dt = datetime.strptime(first_seen, fmt)
+                if fs_dt >= cutoff:
+                    new_this_week.append(r)
+                break
+            except ValueError:
+                continue
+
+    new_rows = [SHEET_HEADERS] + records_to_sheet_rows(new_this_week)
     _update_tab(spreadsheet, "New This Week", new_rows)
 
-    print(f"  Google Sheets updated: {len(all_records)} total, "
-          f"{len(new_records)} new this week")
+    print(f"  Google Sheets updated: {len(merged_records)} total, "
+          f"{len(new_this_week)} new this week, {new_count} first-time seen today")
 
 
 def _update_tab(spreadsheet, tab_name: str, rows: list[list[str]]):
