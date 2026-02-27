@@ -287,42 +287,35 @@ def download_daily_file(data_dir: str, date_str: str = None) -> str | None:
     except ValueError:
         pass
 
-    # Daily files live inside a year subdirectory, e.g. /Public/doc/cor/2026/20260226c.txt
-    try:
-        dt = datetime.strptime(date_str, "%m%d%Y")
-    except ValueError:
-        dt = datetime.now()
-    year = dt.strftime("%Y")
-    daily_dir = f"{SFTP_DAILY_DIR}/{year}"
-
-    print(f"\n  Checking daily files in {daily_dir}...")
-    available = sftp_list_directory(daily_dir)
+    # Daily files live directly in /Public/doc/cor/ alongside year subdirectories.
+    # Files are named YYYYMMDDc.txt (e.g. 20260226c.txt).
+    print(f"\n  Checking daily files in {SFTP_DAILY_DIR}...")
+    available = sftp_list_directory(SFTP_DAILY_DIR)
     if available:
-        print(f"  Available files (last 10): {available[-10:]}")
-        if len(available) > 10:
-            print(f"  ({len(available)} total files)")
+        # Filter to only actual daily data files (ending in c.txt), not subdirs or WELCOME.TXT
+        daily_files = sorted([f for f in available if f.endswith(SFTP_DAILY_SUFFIX)])
+        print(f"  Found {len(daily_files)} daily files (last 5: {daily_files[-5:]})")
 
         # Try exact matches first
         for pattern in patterns:
             if pattern in available:
-                remote_path = f"{daily_dir}/{pattern}"
+                remote_path = f"{SFTP_DAILY_DIR}/{pattern}"
                 local_path = os.path.join(data_dir, f"daily_{date_str}.txt")
                 if sftp_download_file(remote_path, local_path):
                     return local_path
 
-        # Try to find the most recent file matching the daily suffix (e.g. "c.txt")
-        daily_files = [f for f in available if f.endswith(SFTP_DAILY_SUFFIX)]
+        # Fall back to most recent daily file
         if daily_files:
-            latest = sorted(daily_files)[-1]
+            latest = daily_files[-1]
             print(f"  Using most recent daily file: {latest}")
-            remote_path = f"{daily_dir}/{latest}"
+            remote_path = f"{SFTP_DAILY_DIR}/{latest}"
             local_path = os.path.join(data_dir, f"daily_{latest}")
             if sftp_download_file(remote_path, local_path):
                 return local_path
     else:
-        # Directory listing failed — try patterns blindly with year subdir
+        # Directory listing failed — try patterns blindly
         for pattern in patterns:
-            remote_path = f"{daily_dir}/{pattern}"
+            remote_path = f"{SFTP_DAILY_DIR}/{pattern}"
             local_path = os.path.join(data_dir, f"daily_{date_str}.txt")
             if sftp_download_file(remote_path, local_path):
                 return local_path
