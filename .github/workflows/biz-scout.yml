@@ -6,6 +6,7 @@
 #
 # Required GitHub Secrets:
 #   GOOGLE_SERVICE_ACCOUNT_JSON — service account key with Editor access to the Sheet
+#   GMAIL_APP_PASSWORD          — Gmail app password for grant@stateofthespark.com
 
 name: Biz Scout
 
@@ -40,6 +41,7 @@ jobs:
         working-directory: agents/biz-scout
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python scraper.py --active-only --push-sheet
 
       - name: Upload CSV artifacts

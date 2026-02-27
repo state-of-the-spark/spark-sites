@@ -858,6 +858,13 @@ def push_to_google_sheets(today_records: list[dict], new_records: list[dict]):
     print(f"  Google Sheets updated: {len(merged_records)} total, "
           f"{len(new_this_week)} new this week, {new_count} first-time seen today")
 
+    return {
+        "total": len(merged_records),
+        "new_today": new_count,
+        "updated_today": updated_count,
+        "new_this_week": len(new_this_week),
+    }
+
 
 def _update_tab(spreadsheet, tab_name: str, rows: list[list[str]]):
     """Clear a tab and write new rows. Creates the tab if it doesn't exist."""
@@ -873,6 +880,84 @@ def _update_tab(spreadsheet, tab_name: str, rows: list[list[str]]):
     if rows:
         ws.update(rows, "A1")
     print(f"  '{tab_name}' updated: {len(rows) - 1} data rows")
+
+
+# ---------------------------------------------------------------------------
+# Email Notification
+# ---------------------------------------------------------------------------
+
+SHEET_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/edit"
+EMAIL_FROM = "grant@stateofthespark.com"
+EMAIL_TO = ["grant@grantsparks.me"]
+
+
+def send_notification_email(stats: dict):
+    """Send a simple notification email after a successful Biz Scout run.
+
+    Requires env var GMAIL_APP_PASSWORD (same as Event Scout).
+    """
+    import smtplib
+    from email.mime.multipart import MIMEMultipart
+    from email.mime.text import MIMEText
+
+    app_password = os.environ.get("GMAIL_APP_PASSWORD")
+    if not app_password:
+        print("  WARNING: GMAIL_APP_PASSWORD not set. Skipping email.")
+        return
+
+    today_str = datetime.now().strftime("%A, %b %d")
+    subject = f"Biz Scout — {today_str}"
+
+    total = stats.get("total", 0)
+    new_today = stats.get("new_today", 0)
+    new_this_week = stats.get("new_this_week", 0)
+
+    plain = (
+        f"Biz Scout ran successfully on {today_str}.\n\n"
+        f"New businesses found today: {new_today}\n"
+        f"New this week: {new_this_week}\n"
+        f"Total in directory: {total}\n\n"
+        f"View the sheet: {SHEET_URL}\n"
+    )
+
+    html = f"""\
+<html><body style="font-family: Arial, sans-serif; color: #333; max-width: 500px;">
+<h2 style="color: #e8491d; margin-bottom: 4px;">Biz Scout</h2>
+<p style="color: #888; margin-top: 0;">{today_str}</p>
+<hr style="border: none; border-top: 1px solid #eee;">
+<table style="border-collapse: collapse; width: 100%; margin: 16px 0;">
+  <tr>
+    <td style="padding: 8px 12px; background: #f9f9f9; font-weight: bold;">New today</td>
+    <td style="padding: 8px 12px; background: #f9f9f9; text-align: right; font-size: 18px;">{new_today}</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px 12px;">New this week</td>
+    <td style="padding: 8px 12px; text-align: right; font-size: 18px;">{new_this_week}</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px 12px; background: #f9f9f9;">Total in directory</td>
+    <td style="padding: 8px 12px; background: #f9f9f9; text-align: right; font-size: 18px;">{total}</td>
+  </tr>
+</table>
+<p><a href="{SHEET_URL}" style="display: inline-block; padding: 10px 20px; background: #e8491d; color: #fff; text-decoration: none; border-radius: 4px;">Open Spreadsheet</a></p>
+<hr style="border: none; border-top: 1px solid #eee;">
+<p style="color: #aaa; font-size: 12px;">Polk County Business Directory — automated by Biz Scout</p>
+</body></html>"""
+
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"] = EMAIL_FROM
+    msg["To"] = ", ".join(EMAIL_TO)
+    msg.attach(MIMEText(plain, "plain"))
+    msg.attach(MIMEText(html, "html"))
+
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(EMAIL_FROM, app_password)
+            server.sendmail(EMAIL_FROM, EMAIL_TO, msg.as_string())
+        print(f"  Email sent to: {', '.join(EMAIL_TO)}")
+    except Exception as e:
+        print(f"  ERROR sending email: {e}")
 
 
 # ---------------------------------------------------------------------------
@@ -1062,10 +1147,12 @@ def main():
         new_csv_path = str(data_dir / "polk-county-new-this-week.csv")
         save_csv(new_records, new_csv_path)
 
-    # Google Sheets push
+    # Google Sheets push + email notification
     if args.push_sheet:
         print(f"\n[5/5] Pushing to Google Sheets...")
-        push_to_google_sheets(all_records, new_records)
+        stats = push_to_google_sheets(all_records, new_records)
+        if stats:
+            send_notification_email(stats)
 
     # --- Summary ---
     print(f"\n{'=' * 60}")
