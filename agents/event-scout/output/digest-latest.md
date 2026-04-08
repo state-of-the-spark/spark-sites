@@ -1,140 +1,140 @@
 ---
 type: digest
-date: 2026-04-03
+date: 2026-04-08
 agent: event-scout
 status: active
 ---
 
-# Event Scout Digest — 2026-04-03
+# Event Scout Digest — 2026-04-08
 
 **Business:** Spark Sites
 **Geography:** Lakeland, Tampa, Orlando, Winter Haven, Kissimmee, Brandon, St. Petersburg
-**Date range:** 2026-04-03 to 2026-04-24
-**28 new events | 37 previously seen | 65 total scored**
+**Date range:** 2026-04-08 to 2026-04-29
+**39 new events | 31 previously seen | 70 total scored**
 
 ---
 
 ## New Events
 
-### #1. Professional Women in Business Networking Lunch (Score: 8/10)
+### #1. 🌸 Women Business Owners Biweekly Networking Event - Featuring Brittany Ellerbe, Keepsake Studio (Score: 9/10)
 
-- **Why:** This is a networking lunch specifically for professional women in business, making it a strong fit for connecting with female founders and growing entrepreneurs.
-- **Date:** Wednesday, April 15, 2026 at 11:15 AM – 1:00 PM EDT Wed, Apr 15 at 11:15 AM EDT
-- **Location:** HCA Florida Trinity Hospital
+- **Why:** This event is specifically for women business owners in Polk County (Lakeland), making it a perfect fit for several of our target avatars and conveniently located.
+- **Date:** Thursday 9 April 2026 from 08:30-10:00 EDT Thu, 9 Apr at 08:30 EDT
+- **Location:** 211 E Main St, Lakeland, FL 33801-4628, United States
 - **Organizer:** 
-- **Attendees:** 5
+- **Attendees:** 17
 - **Price:** See event
 - **Found on:** Facebook
-- **Best for:** female_founder, growing_entrepreneur
-- **Link:** https://www.facebook.com/events/1501133150968353/
+- **Best for:** female_founder, local_business_owner, growing_entrepreneur
+- **Link:** https://www.facebook.com/events/2299112380578511/
 
-### #2. Central Florida 1st Annual Women in Global Business & Leadership Summit (Score: 8/10)
+### #2. GOBN Networking Weekly Meeting  (Score: 7/10)
 
-- **Why:** This summit focuses on women in global business and leadership, which is a strong fit for connecting with ambitious female founders and growing entrepreneurs, though the date is in the future.
-- **Date:** Friday 17 April 2026 at 09:00 EDT Fri, 17 Apr at 09:00 EDT
-- **Location:** Wyndham Garden Hotel Near Orlando Airport
+- **Why:** GOBN Networking aims to help small businesses grow, making it relevant to our target avatars, but it's in Orlando.
+- **Date:** 2026-04-14T11:00:00.000Z
+- **Location:** 
+- **Organizer:** The Greater Orlando Business Network
+- **Attendees:** 10
+- **Price:** Free
+- **Found on:** meetup
+- **Best for:** local_business_owner, growing_entrepreneur
+- **Link:** https://www.meetup.com/greater-orlando-business-network/events/313005599/
+
+### #3. 1 Million Cups - Orlando Weekly Meetup (Score: 7/10)
+
+- **Why:** 1 Million Cups is a good fit for entrepreneurs and small business owners looking for feedback, but the Orlando location is a slight drawback.
+- **Date:** 2026-04-15T12:30:00.000Z
+- **Location:** 
+- **Organizer:** 1 Million Cups - Orlando
+- **Attendees:** 1
+- **Price:** Free
+- **Found on:** meetup
+- **Best for:** growing_entrepreneur, local_business_owner
+- **Link:** https://www.meetup.com/1-million-cups-orlando/events/313959696/
+
+### #4. Business & Ballads: Chamber Group Mixer hosted by the Leadership HEB Alumni Association (Score: 7/10)
+
+- **Why:** Chamber of Commerce events are generally good for networking with local business owners and those looking for professional development.
+- **Date:** Thursday, April 16, 2026 at 5:00 PM – 7:00 PM CDT Thu, Apr 16 at 5:00 PM CDT
+- **Location:** Dos Amores Tex Mex
 - **Organizer:** 
-- **Attendees:** 15
-- **Price:** See event
-- **Found on:** Facebook
-- **Best for:** female_founder, growing_entrepreneur
-- **Link:** https://www.facebook.com/events/1464309855410795/
-
-### #3. Free Business Networking Sponsored by Hampton Inn & Suites Sarasota/Bradenton Airport/LegalShield   (Score: 8/10)
-
-- **Why:** This free business networking event in Sarasota is close to Lakeland and targets local businesses, making it a strong fit.
-- **Date:** Tuesday, April 7, 2026 at 7:00 PM – 8:30 PM EDT Tue, Apr 7 at 7:00 PM EDT
-- **Location:** 975 University Pkwy, Sarasota, FL 34243
-- **Organizer:** 
-- **Attendees:** 0
+- **Attendees:** 71
 - **Price:** See event
 - **Found on:** Facebook
 - **Best for:** local_business_owner, growing_entrepreneur
-- **Link:** https://www.facebook.com/events/858210516709569/
+- **Link:** https://www.facebook.com/events/899651899327221/
 
-### #4. Networking to grow YOUR business! (Score: 7/10)
+### #5. OTAB | Orlando Tech and Beer (Score: 6/10)
 
-- **Why:** Focuses on business growth strategies and marketing, which aligns with the growing entrepreneur avatar, but the attendee count is very low and the location is Winter Park.
-- **Date:** 2026-04-17T12:00:00.000Z
+- **Why:** Orlando Tech and Beer could attract some tech-savvy entrepreneurs, but it's not specifically focused on our ideal clients and is in Orlando.
+- **Date:** 2026-04-28T22:00:00.000Z
 - **Location:** 
-- **Organizer:** Business Power Partners Winter Park FL
-- **Attendees:** 3
+- **Organizer:** 🤖 Orlando WEB3 CFL Tech and Beer
+- **Attendees:** 19
 - **Price:** Free
 - **Found on:** meetup
 - **Best for:** growing_entrepreneur
-- **Link:** https://www.meetup.com/business-power-partners-winter-park-fl/events/312920452/
+- **Link:** https://www.meetup.com/orlando-web3tech-and-beer/events/314104444/
 
-### #5. CLG - After Hours Haines City (Score: 7/10)
+### #6. Business After Hours with First United Bank (Score: 6/10)
 
-- **Why:** This event in Haines City aims to bring together a large group of professionals, offering a good opportunity to connect with local business owners and growing entrepreneurs in the area.
-- **Date:** 2026-04-21T21:30:00.000Z
+- **Why:** Business After Hours events can attract local professionals, but the location in Norman, OK, reduces its relevance.
+- **Date:** Tuesday, April 14, 2026 at 5:00 PM – 7:00 PM CDT Tue, Apr 14 at 5:00 PM CDT
+- **Location:** First United Bank - Norman Northwest (570 24th Avenue Northwest, Norman, OK), 570 24th Avenue Northwest, Norman, OK
+- **Organizer:** 
+- **Attendees:** 16
+- **Price:** See event
+- **Found on:** Facebook
+- **Best for:** local_business_owner, growing_entrepreneur
+- **Link:** https://www.facebook.com/events/3436528426495523/
+
+### #7. Leadership Cape Cod (CLI) & Cape Cod Women in Business Morning Networking (Score: 6/10)
+
+- **Why:** Networking with Cape Cod Women in Business is a good fit for the female founder avatar, but the location in Harwich, MA, is too far.
+- **Date:** Tuesday, April 28, 2026 at 7:30 AM – 9:00 AM EDT Tue, Apr 28 at 7:30 AM EDT
+- **Location:** Cape Roots Market and Cafe, 557 Route 28 Unit 101, Harwich, MA, United States
+- **Organizer:** 
+- **Attendees:** 18
+- **Price:** See event
+- **Found on:** Facebook
+- **Best for:** female_founder, local_business_owner
+- **Link:** https://www.facebook.com/events/1269946875230448/
+
+### #8. Cedar Park / Leander / Liberty Hill Business "Happy Hour" by Networking Local™ (Score: 5/10)
+
+- **Why:** A local business happy hour could attract some local business owners, but the location in Cedar Park, TX, is a significant drawback.
+- **Date:** Tuesday, April 14, 2026 at 4:30 PM – 6:30 PM CDT Tue, Apr 14 at 4:30 PM CDT
+- **Location:** Red Horn Brewery & Roastery, 1615 Scottsdale Dr, Cedar Park, TX 78641-5553
+- **Organizer:** 
+- **Attendees:** 10
+- **Price:** See event
+- **Found on:** Facebook
+- **Best for:** local_business_owner
+- **Link:** https://www.facebook.com/events/888280336928877/
+
+### #9. Orlando Entrepreneurs Cigar Networking | Weekday 1PM (Score: 4/10)
+
+- **Why:** Cigar networking is too niche and may not attract a broad range of potential clients, plus it's in Orlando.
+- **Date:** 2026-04-23T17:00:00.000Z
 - **Location:** 
-- **Organizer:** Connections Leads Group
-- **Attendees:** 7
+- **Organizer:** Cigars & Conversations (Weekday Networking)
+- **Attendees:** 4
 - **Price:** Free
 - **Found on:** meetup
-- **Best for:** local_business_owner, growing_entrepreneur
-- **Link:** https://www.meetup.com/connectionsleadsgroups/events/313772671/
+- **Best for:** General
+- **Link:** https://www.meetup.com/cigars-conversations-weekday-networking/events/313507779/
 
-### #6. Orlando Entrepreneurs Networking Mixer (Score: 7/10)
+### #10. M.E.N – Male Entrepreneur Network (Score: 4/10)
 
-- **Why:** The Orlando Entrepreneurs Networking Mixer is a decent fit for local business owners and growing entrepreneurs looking to connect, but the location is not ideal.
-- **Date:** 2026-04-23T22:00:00.000Z
-- **Location:** 
-- **Organizer:** Orlando Networking And Business Strategies Meetup Group
-- **Attendees:** 9
-- **Price:** Free
-- **Found on:** meetup
-- **Best for:** local_business_owner, growing_entrepreneur
-- **Link:** https://www.meetup.com/meetup-group-udsnxyci/events/313682301/
-
-### #7. River Council Business Networking (Score: 7/10)
-
-- **Why:** This is a general business networking event hosted by a Chamber of Commerce, which could attract local business owners and growing entrepreneurs.
-- **Date:** Tuesday, April 21, 2026 at 7:30 AM – 9:00 AM EDT Tue, Apr 21 at 7:30 AM EDT
-- **Location:** Central Florida Zoo & Botanical Gardens
+- **Why:** This event is in the Tampa Bay area and targets male entrepreneurs, which is somewhat relevant, but not a perfect fit for all our avatars.
+- **Date:** Wednesday 29 April 2026 from 17:00-19:00 EDT Wed, 29 Apr at 17:00 EDT
+- **Location:** Studio 131 Weddings and Events, 11803 104th St, Largo, FL
 - **Organizer:** 
-- **Attendees:** 1
-- **Price:** See event
-- **Found on:** Facebook
-- **Best for:** local_business_owner, growing_entrepreneur
-- **Link:** https://www.facebook.com/events/826986849920017/
-
-### #8. Business & Baseball: Networking at LECOM Park (Score: 7/10)
-
-- **Why:** The baseball networking event in Bradenton offers a relaxed environment to connect with local businesses, making it a decent opportunity.
-- **Date:** Wednesday, April 8, 2026 at 11:00 AM – 2:00 PM EDT Wed, Apr 8 at 11:00 AM EDT
-- **Location:** LECOM Park
-- **Organizer:** 
-- **Attendees:** 20
-- **Price:** See event
-- **Found on:** Facebook
-- **Best for:** local_business_owner, growing_entrepreneur
-- **Link:** https://www.facebook.com/events/940477211899020/
-
-### #9. Altamonte Small Business Networking (Score: 7/10)
-
-- **Why:** This small business networking event in Altamonte Springs is relatively close to Lakeland and targets local businesses.
-- **Date:** Friday 17 April 2026 from 07:30-09:00 EDT Fri, 17 Apr at 07:30 EDT
-- **Location:** 830 Magnolia Dr, Altamonte Springs, FL 32701-5707, United States
-- **Organizer:** 
-- **Attendees:** 1
-- **Price:** See event
-- **Found on:** Facebook
-- **Best for:** local_business_owner, growing_entrepreneur
-- **Link:** https://www.facebook.com/events/827837556552233/
-
-### #10. Entrepreneur Networking Showcase Event  (Score: 6/10)
-
-- **Why:** This entrepreneur networking event in Daytona Beach could attract some of our avatars, but it's not as targeted as other options.
-- **Date:** Thursday 9 April 2026 from 18:00-21:00 EDT Thu, 9 Apr at 18:00 EDT
-- **Location:** L. Gale Lemerand Center, 1200 W International Speedway Blvd, Daytona Beach, FL, United States
-- **Organizer:** 
-- **Attendees:** 12
+- **Attendees:** 8
 - **Price:** See event
 - **Found on:** Facebook
 - **Best for:** growing_entrepreneur
-- **Link:** https://www.facebook.com/events/4369760316641829/
+- **Link:** https://www.facebook.com/events/1329587902567666/
 
 ---
 
@@ -142,23 +142,10 @@ status: active
 
 *These showed up in a previous scan and are still upcoming.*
 
-### Prosper & Flourish: Women in Business Networking (Score: 9/10) *(Previously Seen)*
-
-- **Status:** Seen 3x since 2026-03-20
-- **Why:** This event is specifically for women in business, making it a great opportunity to connect with female founders and growing entrepreneurs.
-- **Date:** Tuesday, April 7, 2026 at 9:00 AM – 11:00 AM EDT Tue, Apr 7 at 9:00 AM EDT
-- **Location:** Marketplace at Avalon Park, 3801 Avalon Park East Blvd., Orlando, FL
-- **Organizer:** 
-- **Attendees:** 4
-- **Price:** See event
-- **Found on:** Facebook
-- **Best for:** female_founder, growing_entrepreneur
-- **Link:** https://www.facebook.com/events/586866274504204/
-
 ### OrlandoPreneur Monthly Startup Happy Hour! (Score: 8/10) *(Previously Seen)*
 
-- **Status:** Seen 1x since 2026-04-01
-- **Why:** Specifically targets entrepreneurs and small business owners in Orlando, making it a strong fit for networking, and has a decent attendee count.
+- **Status:** Seen 2x since 2026-04-01
+- **Why:** OrlandoPreneur is specifically for entrepreneurs and small business owners, making it a strong fit, although it's in Orlando.
 - **Date:** 2026-04-20T21:30:00.000Z
 - **Location:** 
 - **Organizer:** OrlandoPreneur™ Startup Happy Hour: Connect, Learn & Grow!
@@ -168,44 +155,57 @@ status: active
 - **Best for:** growing_entrepreneur, female_founder
 - **Link:** https://www.meetup.com/orlandopreneur/events/313065871/
 
-### Discover How To Get More Clients As a Health and Wellness Professional (Score: 8/10) *(Previously Seen)*
+### Orlando Entrepreneurs Networking Mixer (Score: 8/10) *(Previously Seen)*
 
-- **Status:** Seen 1x since 2026-04-01
-- **Why:** This workshop specifically targets health and wellness professionals, making it a strong fit for local business owners, growing entrepreneurs, and potentially female founders in that industry.
-- **Date:** 2026-04-16T20:00:00.000Z
+- **Status:** Seen 1x since 2026-04-03
+- **Why:** This Orlando entrepreneur networking mixer is a strong fit for several of our avatars, offering a good opportunity for connection and collaboration.
+- **Date:** 2026-04-23T22:00:00.000Z
 - **Location:** 
-- **Organizer:** It’s All Fun and Games Tampa Bay Brandon Riverview and Ruskin
-- **Attendees:** 1
+- **Organizer:** Orlando Networking And Business Strategies Meetup Group
+- **Attendees:** 15
 - **Price:** Free
 - **Found on:** meetup
-- **Best for:** local_business_owner, growing_entrepreneur, female_founder
-- **Link:** https://www.meetup.com/its-all-fun-and-games-tampa/events/313987587/
+- **Best for:** growing_entrepreneur, local_business_owner, female_founder
+- **Link:** https://www.meetup.com/meetup-group-udsnxyci/events/313682301/
 
-### WINTER PARK: Join us for outrageous connection, growth and networking too! (Score: 8/10) *(Previously Seen)*
-
-- **Status:** Seen 3x since 2026-03-25
-- **Why:** Powerful Women Networking in Winter Park is a strong fit for female founders and could also attract local business owners and growing entrepreneurs.
-- **Date:** 2026-04-10T15:30:00.000Z
-- **Location:** 
-- **Organizer:** Powerful Women Networking
-- **Attendees:** 4
-- **Price:** $10
-- **Found on:** meetup
-- **Best for:** female_founder, local_business_owner, growing_entrepreneur
-- **Link:** https://www.meetup.com/powerfulwomennetworking/events/313744516/
-
-### GOBN Networking Weekly Meeting  (Score: 7/10) *(Previously Seen)*
+### Small Business Networking (Score: 8/10) *(Previously Seen)*
 
 - **Status:** Seen 1x since 2026-04-01
-- **Why:** Focuses on referrals and business growth, aligning with our target avatars, but the location is not specified.
-- **Date:** 2026-04-07T11:00:00.000Z
+- **Why:** A free small business networking event specifically targets our ideal clients, although the location in Ankeny, IA, is a drawback.
+- **Date:** Thursday, April 9, 2026 at 9:00 AM – 10:00 AM CDT Thu, Apr 9 at 9:00 AM CDT
+- **Location:** SalonAu , 1325 SW Oralabor Road #216 , Ankeny, IA, United States
+- **Organizer:** 
+- **Attendees:** 2
+- **Price:** See event
+- **Found on:** Facebook
+- **Best for:** local_business_owner, growing_entrepreneur
+- **Link:** https://www.facebook.com/events/1443428573943651/
+
+### LinkedIn Local Tampa Bay (Score: 7/10) *(Previously Seen)*
+
+- **Status:** Seen 3x since 2026-03-27
+- **Why:** LinkedIn Local events are generally good for networking with a broad range of professionals, including potential clients, and this one covers Polk County.
+- **Date:** 2026-04-15T12:00:00.000Z
 - **Location:** 
-- **Organizer:** The Greater Orlando Business Network
-- **Attendees:** 8
+- **Organizer:** Tampa Cybersecurity Training
+- **Attendees:** 7
 - **Price:** Free
 - **Found on:** meetup
 - **Best for:** local_business_owner, growing_entrepreneur
-- **Link:** https://www.meetup.com/greater-orlando-business-network/events/313005596/
+- **Link:** https://www.meetup.com/tampa-cybersecurity-training/events/313835058/
+
+### Networking to grow YOUR business! (Score: 7/10) *(Previously Seen)*
+
+- **Status:** Seen 1x since 2026-04-03
+- **Why:** Business Power Partners focuses on business growth, which aligns with our growing entrepreneur and female founder avatars, but it's in Winter Park.
+- **Date:** 2026-04-17T12:00:00.000Z
+- **Location:** 
+- **Organizer:** Business Power Partners Winter Park FL
+- **Attendees:** 4
+- **Price:** Free
+- **Found on:** meetup
+- **Best for:** growing_entrepreneur, female_founder
+- **Link:** https://www.meetup.com/business-power-partners-winter-park-fl/events/312920452/
 
 ---
 
@@ -213,14 +213,26 @@ status: active
 
 *These scored 8/10 or higher but are beyond the next 3 weeks (or don't have a confirmed date yet). Put them on your radar.*
 
-### Atlanta Small Business Expo 2026 (Score: 8/10)
+### Run Your Small Business Like a Startup: AI Playbook Night (Score: 8/10)
 
-- **Why:** This event is specifically for small business owners and entrepreneurs, making it a strong fit, although it is in Atlanta.
-- **Date:** Wednesday, December 16, 2026 at 10:00 AM – 5:00 PM EST Wed, Dec 16 at 10:00 AM EST
-- **Location:** Georgia International Convention Center
+- **Why:** An AI-focused event for small businesses in Orlando is relevant to our avatars interested in scaling and using technology, especially female founders, but the location is a bit far.
+- **Date:** Thursday 14 May 2026 at 18:00 EDT Thu, 14 May at 18:00 EDT
+- **Location:** 927 S Goldwyn Ave, Orlando, FL 32805-4301, United States
 - **Organizer:** 
-- **Attendees:** 29
+- **Attendees:** 0
 - **Price:** See event
 - **Found on:** Facebook
-- **Best for:** local_business_owner, growing_entrepreneur
-- **Link:** https://www.facebook.com/events/1404412217933492/
+- **Best for:** local_business_owner, growing_entrepreneur, female_founder
+- **Link:** https://www.facebook.com/events/1252319716451082/
+
+### Prosper & Flourish: Women in Business Networking (Score: 8/10)
+
+- **Why:** This event is specifically for women in business, a key avatar, and offers networking and resources, making it a strong fit despite being in Orlando.
+- **Date:** Tuesday 5 May 2026 from 09:00-11:00 EDT Tue, 5 May at 09:00 EDT
+- **Location:** Marketplace at Avalon Park, 3801 Avalon Park East Blvd., Orlando, FL, United States
+- **Organizer:** 
+- **Attendees:** 1
+- **Price:** See event
+- **Found on:** Facebook
+- **Best for:** female_founder, local_business_owner, growing_entrepreneur
+- **Link:** https://www.facebook.com/events/586866257837539/
