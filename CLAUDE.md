@@ -20,7 +20,7 @@ Start every session:
 ```bash
 cd ~/Documents/GitHub/spark-sites
 claude
-/start
+/mb-start
 ```
 
 ---
@@ -76,8 +76,13 @@ spark-sites/
 ├── .vip/
 │   ├── config.yaml        # Team settings (git-tracked)
 │   └── local.yaml         # Session state (git-ignored)
-├── reference/
-│   ├── core/              # soul, offer (brand-level), audience, voice
+├── core/                  # Main Branch v0.2 canonical content
+│   ├── soul.md            # Brand-level soul
+│   ├── offer.md           # Brand-level offer
+│   ├── audience.md        # Brand-level audience
+│   ├── voice.md           # Voice and tone
+│   ├── content-strategy.md
+│   ├── product-ladder.md
 │   ├── offers/            # Per-offer details
 │   │   ├── websites/
 │   │   ├── seo/
@@ -86,14 +91,20 @@ spark-sites/
 │   │   ├── social/
 │   │   ├── consulting/
 │   │   ├── influencer/
-│   │   └── education/
+│   │   ├── education/
+│   │   └── strategy/
 │   ├── brand/             # visual-style.md
 │   ├── proof/             # testimonials, angles
-│   └── domain/            # product-ladder.md
+│   └── operations/        # book-framework, lab-notes, pricing-matrix, funnel/
+├── bets/                  # Active business bets
+├── pushes/                # Pushes (campaigns)
+├── log/                   # Daily log
+├── documents/             # General documents
 ├── research/              # Dated investigations
 ├── decisions/             # Dated choices
-├── content/               # Drafts → scheduled → published
-└── outputs/               # Generated assets
+├── outputs/               # Generated assets
+└── reference/
+    └── clients/           # Client-specific notes (orphaned by v0.2 schema)
 ```
 
 ---
@@ -121,7 +132,7 @@ spark-sites/
 
 ## Known Gaps
 
-- [x] Strategy sessions need productizing → Messaging Strategy Session ($350, 90 min) live in `reference/offers/strategy/`
+- [x] Strategy sessions need productizing → Messaging Strategy Session ($350, 90 min) live in `core/offers/strategy/`
 - [ ] Educational library not yet launched
 - [ ] Webinars paused — need to restart
 - [ ] Social media pricing needs clearer structure
@@ -133,11 +144,11 @@ spark-sites/
 
 | Need | Skill | Source |
 |------|-------|--------|
-| Research, decide, update reference | `/think` | vip |
-| Generate ads | `/ads` | vip |
-| Create organic content | `/organic` | vip |
-| Build landing pages | `/site` | vip |
-| Help with anything | `/help` | vip |
+| Research, decide, update reference | `/mb-think` | vip |
+| Generate ads | `/mb-ads` | vip |
+| Create organic content | `/mb-organic` | vip |
+| Build landing pages | `/mb-site` | vip |
+| Help with anything | `/mb-help` | vip |
 | **Find prospect leads** | **`/prospect-pro`** | **spark-sales** |
 | **Build demo site for a lead** | **`/demo-drop`** | **spark-sales** |
 

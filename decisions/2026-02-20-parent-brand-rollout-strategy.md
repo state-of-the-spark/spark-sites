@@ -37,7 +37,7 @@ Deeper dives into individual offerings (AI-enabled marketing, strategy sessions,
 ## Channel 2: Organic Content
 
 ### Messaging Model
-Do a messaging session on ourselves (eat our own cooking). Use the Messaging Strategy Session framework from `reference/offers/strategy/messaging-session.md` to extract Spark's own core message, language map, and differentiators for the parent brand.
+Do a messaging session on ourselves (eat our own cooking). Use the Messaging Strategy Session framework from `core/offers/strategy/messaging-session.md` to extract Spark's own core message, language map, and differentiators for the parent brand.
 
 ### Content Themes (Recurring Phrases)
 Build these into the content vocabulary through repetition:
@@ -47,7 +47,7 @@ Build these into the content vocabulary through repetition:
 - **Growth partner** — the relationship frame (already decided)
 
 ### Execution
-- Use `/ads` skill to generate organic content (hooks, short-form, social posts)
+- Use `/mb-ads` skill to generate organic content (hooks, short-form, social posts)
 - Every piece links back to sparkmygrowth.com
 - Develop a hook library specifically for the parent brand messaging
 - Content introduces the concept gradually — don't lead with "we rebranded," lead with value
@@ -79,9 +79,9 @@ Build these into the content vocabulary through repetition:
 
 ## What Changes
 
-- `reference/core/voice.md` — Add parent brand vocabulary (AI-enabled marketing, marketing tools, growth partner)
-- `reference/domain/content-strategy.md` — Add parent brand content pillars and hook themes
-- New hook library needed for parent brand messaging (`/ads` skill)
+- `core/voice.md` — Add parent brand vocabulary (AI-enabled marketing, marketing tools, growth partner)
+- `core/content-strategy.md` — Add parent brand content pillars and hook themes
+- New hook library needed for parent brand messaging (`/mb-ads` skill)
 - sparkmysite.com nav needs sparkmygrowth.com link (when ready)
 - Email templates needed (separate output task)
 

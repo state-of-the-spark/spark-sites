@@ -33,7 +33,7 @@ This is a Main Branch business repo. It contains reference files, research, deci
 ```bash
 cd ~/Documents/GitHub/vip
 claude
-/start
+/mb-start
 ```
 
 The engine (vip) reads from this repo and uses it to generate content, ads, and more.

@@ -5,7 +5,7 @@ updated: 2026-02-11
 ---
 # Content Strategy
 
-*This file is scaffolded. Use `/think` to develop your content pillars, platforms, and cadence.*
+*This file is scaffolded. Use `/mb-think` to develop your content pillars, platforms, and cadence.*
 
 ## Content Pillars
 
@@ -31,7 +31,7 @@ updated: 2026-02-11
 
 *(Define posting frequency)*
 
-TBD — use `/think` to determine sustainable cadence.
+TBD — use `/mb-think` to determine sustainable cadence.
 
 ## Top-of-Funnel
 

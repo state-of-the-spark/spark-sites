@@ -26,3 +26,6 @@ Thumbs.db
 
 # Node (if used)
 node_modules/
+
+# Main Branch migration backups
+.mb/backups/

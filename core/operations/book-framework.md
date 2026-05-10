@@ -222,11 +222,11 @@ Also: Bulk copies handed to every prospect who can't afford services.
 - **AI research:** `research/2026-02-14-ai-reshaping-smb-marketing-claude-code.md`
 - **Book economics:** `research/2026-02-14-premium-book-authority-lead-magnet-claude-code.md`
 - **Raw manuscript:** `research/2026-02-14-no-bs-masterplan-chatgpt.md`
-- **Product ladder:** `reference/domain/product-ladder.md`
-- **Core offer:** `reference/core/offer.md`
-- **Strategy sessions:** `reference/offers/strategy/strategy-session-framework.md`
-- **Content strategy:** `reference/domain/content-strategy.md`
+- **Product ladder:** `core/product-ladder.md`
+- **Core offer:** `core/offer.md`
+- **Strategy sessions:** `core/offers/strategy/strategy-session-framework.md`
+- **Content strategy:** `core/content-strategy.md`
 - **Visual models:** `research/2026-02-14-visual-models-reference.md`
-- **Grant's voice:** `spark-coaching:reference/core/voice.md`
-- **Grant's soul:** `spark-coaching:reference/core/soul.md`
+- **Grant's voice:** `spark-coaching:core/voice.md`
+- **Grant's soul:** `spark-coaching:core/soul.md`
 - **AI enablement:** `howtoaimybiz:ai_enablement_cross_reference_for_business.md`

@@ -54,7 +54,7 @@ spark-dashboards/
 └── .env.local                        # META_ACCESS_TOKEN (gitignored)
 ```
 
-**Link back to spark-sites:** Add a reference in `spark-sites/reference/domain/` pointing to the dashboard repo, and optionally add it to `additionalDirectories` in `.claude/settings.local.json` if you want Claude to have context across both.
+**Link back to spark-sites:** Add a reference in `spark-sites/core/operations/` pointing to the dashboard repo, and optionally add it to `additionalDirectories` in `.claude/settings.local.json` if you want Claude to have context across both.
 
 ---
 

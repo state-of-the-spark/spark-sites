@@ -101,12 +101,12 @@ A Professor of Marketing. 20+ years of tech. Creative that connects.
 
 ## Reference Files Used
 
-- `reference/core/soul.md` — Values (Educate, Empower, Encourage), founding story
-- `reference/core/offer.md` — Growth partner positioning, services overview, entry points
-- `reference/core/voice.md` — Tone, approved phrases, educator style
-- `reference/core/audience.md` — Pains, desires, objections
-- `reference/proof/angles/academic-credibility.md` — Nicole's credentials
-- `reference/proof/angles/local-trust-lakeland.md` — Local roots
-- `reference/proof/angles/ai-forward.md` — AI positioning
+- `core/soul.md` — Values (Educate, Empower, Encourage), founding story
+- `core/offer.md` — Growth partner positioning, services overview, entry points
+- `core/voice.md` — Tone, approved phrases, educator style
+- `core/audience.md` — Pains, desires, objections
+- `core/proof/angles/academic-credibility.md` — Nicole's credentials
+- `core/proof/angles/local-trust-lakeland.md` — Local roots
+- `core/proof/angles/ai-forward.md` — AI positioning
 - `decisions/2026-02-12-growth-partner-positioning.md` — Growth partner framing
 - `decisions/2026-02-12-brand-name-evolution.md` — Spark as parent brand

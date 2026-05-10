@@ -135,7 +135,7 @@ The business has already outgrown the name, but the name still has value. Rather
 
 ## What Changes
 
-`core/offer.md` needs updating to reflect the parent brand architecture — the brand-level thesis should describe the parent, not just websites. `reference/domain/product-ladder.md` needs a new top layer showing the parent brand above the current service map. A new decision file will be needed for the parent brand name itself.
+`core/offer.md` needs updating to reflect the parent brand architecture — the brand-level thesis should describe the parent, not just websites. `core/product-ladder.md` needs a new top layer showing the parent brand above the current service map. A new decision file will be needed for the parent brand name itself.
 
 Outside reference: no immediate changes to legal, domains, or collateral until the parent brand name is decided.
 

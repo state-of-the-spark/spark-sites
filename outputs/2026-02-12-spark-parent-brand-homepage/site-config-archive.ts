@@ -1,6 +1,6 @@
 // ARCHIVED from grantspark/startwithspark (Netlify site deleted 2026-02-20)
 // Original site-config.ts — Single source of all brand-specific content
-// Derived from: reference/core/offer.md, audience.md, voice.md, soul.md
+// Derived from: core/offer.md, audience.md, voice.md, soul.md
 // Homepage copy: outputs/2026-02-12-spark-parent-brand-homepage/homepage-copy.md
 
 export const siteConfig = {

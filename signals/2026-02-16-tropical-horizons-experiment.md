@@ -41,5 +41,5 @@ If this converts, the playbook is repeatable across niches — restaurants, med 
 ## Next Steps
 
 - Monitor traffic and conversions over 2 weeks
-- If promising, document the playbook in `reference/domain/` as a repeatable process
+- If promising, document the playbook in `core/operations/` as a repeatable process
 - Consider testing a second niche funnel using the same workflow

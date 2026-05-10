@@ -178,7 +178,7 @@ The SPARK Method book sits below the Starter Site as the lowest-friction entry p
 Book ($27) → Consultation call → Done-for-you services
 ```
 
-See: `reference/domain/book-framework.md` for the full SPARK Method framework.
+See: `core/operations/book-framework.md` for the full SPARK Method framework.
 
 ## Gaps to Address
 

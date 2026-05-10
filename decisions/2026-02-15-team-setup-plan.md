@@ -65,9 +65,9 @@ Authenticate with their own Claude account (separate Pro subscriptions recommend
 If they join Main Branch on Skool:
 - Share GitHub username with Devon for vip repo access
 - Clone vip via GitHub Desktop
-- Run `/setup` from spark-sites to link vip as skill engine
+- Run `/mb-setup` from spark-sites to link vip as skill engine
 
-Without vip access, they can still edit reference files and use plain Claude Code — they just won't have `/start`, `/ads`, `/think`, etc.
+Without vip access, they can still edit reference files and use plain Claude Code — they just won't have `/mb-start`, `/mb-ads`, `/mb-think`, etc.
 
 ### 7. Verify Setup
 
@@ -94,5 +94,5 @@ Then make a test commit to confirm attribution shows correctly in GitHub Desktop
 
 ## What Changes
 
-- `reference/core/soul.md` — Team section already documents Grant, Nicole, Amber
+- `core/soul.md` — Team section already documents Grant, Nicole, Amber
 - No structural changes to the repo needed — collaborator access is the only prerequisite

@@ -11,7 +11,7 @@ Turn client requests into structured proposals — what they asked for, what the
 
 ## Critical Rules
 
-1. **Never invent pricing.** Every line item must trace to `reference/domain/pricing-matrix.md` or an `offers/[service]/offer.md` file. If a service isn't in the matrix, flag it and ask.
+1. **Never invent pricing.** Every line item must trace to `core/operations/pricing-matrix.md` or an `offers/[service]/offer.md` file. If a service isn't in the matrix, flag it and ask.
 2. **Never skip the explicit request.** The proposal always leads with exactly what the client asked for, quoted at the prices in the matrix.
 3. **Upsells are recommendations, not surprises.** The "Recommended" section explains WHY each addition matters — connected to the client's situation, not generic.
 4. **Never fabricate labor hours.** Use the estimates in the pricing matrix. If a task isn't listed, estimate conservatively and mark it as "estimated."
@@ -21,10 +21,10 @@ Turn client requests into structured proposals — what they asked for, what the
 
 ## Step 0: Find Business Repo
 
-**CWD-first:** If `reference/core/` exists in CWD, you're in the business repo — use it.
+**CWD-first:** If `core/` exists in CWD, you're in the business repo — use it.
 
 If CWD is NOT a business repo:
-- Check `.claude/settings.local.json` for additionalDirectories that contain `reference/core/`
+- Check `.claude/settings.local.json` for additionalDirectories that contain `core/`
 - Or ask the user for the path
 
 ---
@@ -96,16 +96,16 @@ Read these files (all required):
 
 | File | Path | Purpose |
 |------|------|---------|
-| Pricing Matrix | `reference/domain/pricing-matrix.md` | Internal costs, labor hours, upsell triggers |
-| Product Ladder | `reference/domain/product-ladder.md` | How services connect, upsell paths |
-| Soul | `reference/core/soul.md` | Voice and values for proposal tone |
-| Voice | `reference/core/voice.md` | How Spark communicates |
-| Proposal Voice | `reference/domain/funnel/proposal-voice.md` | Proposal-specific writing rules, structure, tone |
+| Pricing Matrix | `core/operations/pricing-matrix.md` | Internal costs, labor hours, upsell triggers |
+| Product Ladder | `core/product-ladder.md` | How services connect, upsell paths |
+| Soul | `core/soul.md` | Voice and values for proposal tone |
+| Voice | `core/voice.md` | How Spark communicates |
+| Proposal Voice | `core/operations/funnel/proposal-voice.md` | Proposal-specific writing rules, structure, tone |
 
 Also load the specific offer file(s) for whatever services the client is asking about:
 
 ```
-reference/offers/[service]/offer.md
+core/offers/[service]/offer.md
 ```
 
 If the client mentions multiple services, load all relevant offer files.
@@ -307,7 +307,7 @@ Every proposal includes a ready-to-send email written in the **Ember** persona.
 
 **Ember** is Spark's client-facing support voice — energetic, warm, people-first friendly. Think: the person at the front desk who genuinely lights up when someone walks in. Not salesy, not formal, just glad to help.
 
-> **TODO:** Full Ember persona definition coming (will live in `reference/brand/ember.md`). Until then, use these guidelines.
+> **TODO:** Full Ember persona definition coming (will live in `core/brand/ember.md`). Until then, use these guidelines.
 
 ### Ember Voice Rules
 

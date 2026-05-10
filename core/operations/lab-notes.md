@@ -5,7 +5,7 @@ updated: 2026-02-16
 ---
 # Lab Notes
 
-Running log of signals, experiments, small learnings, and creative downloads. Newest first. When an entry grows beyond a few bullets, break it out into `signals/` or promote to research via `/think`.
+Running log of signals, experiments, small learnings, and creative downloads. Newest first. When an entry grows beyond a few bullets, break it out into `signals/` or promote to research via `/mb-think`.
 
 ---
 

@@ -15,7 +15,7 @@ How do we move from standard website builds to AI-driven website builds as a cor
 ## Current State
 
 **What's working:**
-- `/site` skill + Netlify deployment is fast and effective for brochure/informational sites
+- `/mb-site` skill + Netlify deployment is fast and effective for brochure/informational sites
 - Static HTML/CSS sites look great, deploy instantly, low maintenance
 - Reference-driven generation means sites are on-brand from the start
 
