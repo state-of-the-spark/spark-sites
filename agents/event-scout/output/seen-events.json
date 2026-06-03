@@ -1,20 +1,4 @@
 {
-  "women's small business networking|Thursday, ": {
-    "title": "Women's Small Business Networking",
-    "date": "Thursday, ",
-    "score": 1,
-    "first_seen": "2026-02-27",
-    "last_seen": "2026-04-03",
-    "times_seen": 3
-  },
-  "emsworth small business networking at the ropemaker|Thursday, ": {
-    "title": "Emsworth Small Business networking at The Ropemaker",
-    "date": "Thursday, ",
-    "score": 1,
-    "first_seen": "2026-02-27",
-    "last_seen": "2026-04-03",
-    "times_seen": 4
-  },
   "entrepreneurs networking event|Wednesday,": {
     "title": "Entrepreneurs Networking Event ",
     "date": "Wednesday,",
@@ -71,22 +55,6 @@
     "last_seen": "2026-05-08",
     "times_seen": 9
   },
-  "murder mystery dinner cruise in tampa|Thursday, ": {
-    "title": "Murder Mystery Dinner Cruise in Tampa",
-    "date": "Thursday, ",
-    "score": 1,
-    "first_seen": "2026-03-06",
-    "last_seen": "2026-04-01",
-    "times_seen": 2
-  },
-  "small business networking social|Thursday, ": {
-    "title": "Small Business Networking Social",
-    "date": "Thursday, ",
-    "score": 0,
-    "first_seen": "2026-03-11",
-    "last_seen": "2026-04-01",
-    "times_seen": 3
-  },
   "free business networking group - florence, mt|Thursday 2": {
     "title": "FREE Business Networking Group - Florence, MT",
     "date": "Thursday 2",
@@ -101,22 +69,6 @@
     "score": 4,
     "first_seen": "2026-03-11",
     "last_seen": "2026-05-15",
-    "times_seen": 6
-  },
-  "from vision to exit: relationships, grit, and innovation|2026-04-01": {
-    "title": "From Vision to Exit: Relationships, Grit, and Innovation",
-    "date": "2026-04-01",
-    "score": 0,
-    "first_seen": "2026-03-13",
-    "last_seen": "2026-04-01",
-    "times_seen": 6
-  },
-  "central fl happy hour business networking event presented by neg|2026-04-01": {
-    "title": "Central FL Happy Hour Business Networking Event presented by NEG",
-    "date": "2026-04-01",
-    "score": 7,
-    "first_seen": "2026-03-13",
-    "last_seen": "2026-04-01",
     "times_seen": 6
   },
   "liberty hill business networking|Thursday, ": {
@@ -143,46 +95,6 @@
     "last_seen": "2026-05-15",
     "times_seen": 6
   },
-  "young professionals network (ypn) connect|2026-04-02": {
-    "title": "Young Professionals Network (YPN) Connect",
-    "date": "2026-04-02",
-    "score": 0,
-    "first_seen": "2026-03-18",
-    "last_seen": "2026-04-01",
-    "times_seen": 5
-  },
-  "prosper & flourish: women in business networking|Tuesday 7 ": {
-    "title": "Prosper & Flourish: Women in Business Networking",
-    "date": "Tuesday 7 ",
-    "score": 7,
-    "first_seen": "2026-03-18",
-    "last_seen": "2026-04-01",
-    "times_seen": 2
-  },
-  "suncoast mortgage expo|Tuesday, A": {
-    "title": "Suncoast Mortgage Expo",
-    "date": "Tuesday, A",
-    "score": 3,
-    "first_seen": "2026-03-18",
-    "last_seen": "2026-04-03",
-    "times_seen": 4
-  },
-  "entrepreneurs anonymous: free monthly meetup for small business owners|Wednesday,": {
-    "title": "Entrepreneurs Anonymous: Free Monthly Meetup for Small Business Owners",
-    "date": "Wednesday,",
-    "score": 0,
-    "first_seen": "2026-03-18",
-    "last_seen": "2026-04-01",
-    "times_seen": 3
-  },
-  "small business social (sbs) - green bay's premier networking event|Wednesday,": {
-    "title": "Small Business Social (SBS) - Green Bay's Premier Networking Event",
-    "date": "Wednesday,",
-    "score": 1,
-    "first_seen": "2026-03-18",
-    "last_seen": "2026-04-01",
-    "times_seen": 3
-  },
   "join @portland small business network for another amazing #socialhour & some amazing #networking wed|Wednesday,": {
     "title": "Join @Portland Small Business Network for another amazing #SocialHour & some amazing #networking Wed",
     "date": "Wednesday,",
@@ -191,14 +103,6 @@
     "last_seen": "2026-05-13",
     "times_seen": 2
   },
-  "monthly work session|2026-04-09": {
-    "title": "Monthly Work Session",
-    "date": "2026-04-09",
-    "score": 3,
-    "first_seen": "2026-03-20",
-    "last_seen": "2026-04-03",
-    "times_seen": 5
-  },
   "general business networking - orlando|2026-04-08": {
     "title": "General Business Networking - Orlando",
     "date": "2026-04-08",
@@ -206,14 +110,6 @@
     "first_seen": "2026-03-20",
     "last_seen": "2026-04-08",
     "times_seen": 6
-  },
-  "networking to grow your business!|2026-04-03": {
-    "title": "Networking to grow YOUR business!",
-    "date": "2026-04-03",
-    "score": 7,
-    "first_seen": "2026-03-20",
-    "last_seen": "2026-04-03",
-    "times_seen": 5
   },
   "polk county biggerpockets networking meetup|2026-04-09": {
     "title": "Polk County BiggerPockets Networking Meetup",
@@ -230,14 +126,6 @@
     "first_seen": "2026-03-20",
     "last_seen": "2026-04-08",
     "times_seen": 6
-  },
-  "prosper & flourish: women in business networking|Tuesday, A": {
-    "title": "Prosper & Flourish: Women in Business Networking",
-    "date": "Tuesday, A",
-    "score": 9,
-    "first_seen": "2026-03-20",
-    "last_seen": "2026-04-03",
-    "times_seen": 4
   },
   "entrepreneurs networking event|Wednesday ": {
     "title": "Entrepreneurs Networking Event ",
@@ -263,14 +151,6 @@
     "last_seen": "2026-04-15",
     "times_seen": 5
   },
-  "orlando entrepreneurs cigar networking | weekday 1pm|2026-04-07": {
-    "title": "Orlando Entrepreneurs Cigar Networking | Weekday 1PM",
-    "date": "2026-04-07",
-    "score": 4,
-    "first_seen": "2026-03-25",
-    "last_seen": "2026-04-03",
-    "times_seen": 4
-  },
   "data analytics & ai - tampa bay - april meetup|2026-04-08": {
     "title": "Data Analytics & AI - Tampa Bay - April MEETUP",
     "date": "2026-04-08",
@@ -295,14 +175,6 @@
     "last_seen": "2026-04-10",
     "times_seen": 6
   },
-  "how to understand value: analyzing deals in your market|2026-04-07": {
-    "title": "How to Understand Value: Analyzing Deals in Your Market",
-    "date": "2026-04-07",
-    "score": 2,
-    "first_seen": "2026-03-25",
-    "last_seen": "2026-04-03",
-    "times_seen": 4
-  },
   "small business networking|Tuesday, A": {
     "title": "Small Business Networking ",
     "date": "Tuesday, A",
@@ -318,22 +190,6 @@
     "first_seen": "2026-03-25",
     "last_seen": "2026-04-15",
     "times_seen": 3
-  },
-  "flourish networking milwaukie|Thursday, ": {
-    "title": "Flourish Networking Milwaukie",
-    "date": "Thursday, ",
-    "score": 2,
-    "first_seen": "2026-03-25",
-    "last_seen": "2026-04-03",
-    "times_seen": 2
-  },
-  "nawbo south florida second annual  “connect to more” pitch competition|Thursday, ": {
-    "title": "NAWBO South Florida Second Annual  “Connect to More” Pitch Competition",
-    "date": "Thursday, ",
-    "score": 7,
-    "first_seen": "2026-03-25",
-    "last_seen": "2026-04-03",
-    "times_seen": 2
   },
   "flourish networking canby|Thursday, ": {
     "title": "Flourish Networking Canby",
@@ -351,14 +207,6 @@
     "last_seen": "2026-05-15",
     "times_seen": 3
   },
-  "behind the hospitality|2026-04-07": {
-    "title": "Behind The Hospitality",
-    "date": "2026-04-07",
-    "score": 5,
-    "first_seen": "2026-03-27",
-    "last_seen": "2026-04-03",
-    "times_seen": 3
-  },
   "west orange working professionals – weekly coffee meetup|2026-04-09": {
     "title": "West Orange Working Professionals – Weekly Coffee Meetup",
     "date": "2026-04-09",
@@ -367,14 +215,6 @@
     "last_seen": "2026-04-08",
     "times_seen": 4
   },
-  "west orange working professionals – weekly coffee meetup|2026-04-02": {
-    "title": "West Orange Working Professionals – Weekly Coffee Meetup",
-    "date": "2026-04-02",
-    "score": 0,
-    "first_seen": "2026-03-27",
-    "last_seen": "2026-04-01",
-    "times_seen": 2
-  },
   "brandon professional networking lunch @just love coffee|2026-04-08": {
     "title": "Brandon Professional Networking Lunch @Just Love Coffee ",
     "date": "2026-04-08",
@@ -382,14 +222,6 @@
     "first_seen": "2026-03-27",
     "last_seen": "2026-04-08",
     "times_seen": 4
-  },
-  "general business networking - tampa|2026-04-15": {
-    "title": "General Business Networking - Tampa",
-    "date": "2026-04-15",
-    "score": 5,
-    "first_seen": "2026-03-27",
-    "last_seen": "2026-04-03",
-    "times_seen": 3
   },
   "linkedin local tampa bay|2026-04-15": {
     "title": "LinkedIn Local Tampa Bay",
@@ -415,22 +247,6 @@
     "last_seen": "2026-04-10",
     "times_seen": 3
   },
-  "best orlando networking|2026-04-07": {
-    "title": "Best Orlando Networking",
-    "date": "2026-04-07",
-    "score": 5,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-03",
-    "times_seen": 2
-  },
-  "gobn networking weekly meeting|2026-04-07": {
-    "title": "GOBN Networking Weekly Meeting ",
-    "date": "2026-04-07",
-    "score": 7,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-03",
-    "times_seen": 2
-  },
   "brandon business networking lunch ~ just love coffee ~ all welcome ~ join us~|2026-04-08": {
     "title": "Brandon Business Networking Lunch ~ Just Love Coffee ~ All Welcome ~ JOIN us~ ",
     "date": "2026-04-08",
@@ -439,14 +255,6 @@
     "last_seen": "2026-04-08",
     "times_seen": 3
   },
-  "new tampa business networking, connect with like minded professionals.  join us!|2026-04-07": {
-    "title": "New Tampa Business Networking, Connect with like minded professionals.  Join US!",
-    "date": "2026-04-07",
-    "score": 6,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-03",
-    "times_seen": 2
-  },
   "brandon professional networking lunch new location carrabba's|2026-04-08": {
     "title": "Brandon Professional Networking Lunch New Location Carrabba's ",
     "date": "2026-04-08",
@@ -454,22 +262,6 @@
     "first_seen": "2026-04-01",
     "last_seen": "2026-04-08",
     "times_seen": 3
-  },
-  "business networking tampa at riveters tampa|2026-04-03": {
-    "title": "Business Networking Tampa at Riveters Tampa  ",
-    "date": "2026-04-03",
-    "score": 7,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-03",
-    "times_seen": 2
-  },
-  "grow your business with focused referral networking|2026-04-08": {
-    "title": "Grow Your Business with focused Referral Networking",
-    "date": "2026-04-08",
-    "score": 6,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-03",
-    "times_seen": 2
   },
   "discover how to get more clients as a health and wellness professional|2026-04-16": {
     "title": "Discover How To Get More Clients As a Health and Wellness Professional",
@@ -503,14 +295,6 @@
     "last_seen": "2026-04-17",
     "times_seen": 6
   },
-  "1 million cups - orlando weekly meetup|2026-04-08": {
-    "title": "1 Million Cups - Orlando Weekly Meetup",
-    "date": "2026-04-08",
-    "score": 7,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-03",
-    "times_seen": 2
-  },
   "entrepreneur networking showcase event|Thursday, ": {
     "title": "Entrepreneur Networking Showcase Event ",
     "date": "Thursday, ",
@@ -527,30 +311,6 @@
     "last_seen": "2026-04-15",
     "times_seen": 5
   },
-  "suncoast mortgage expo|Tuesday 7 ": {
-    "title": "Suncoast Mortgage Expo",
-    "date": "Tuesday 7 ",
-    "score": 2,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
-  "tuesday business professionals networking|Tuesday 7 ": {
-    "title": "Tuesday Business Professionals Networking ",
-    "date": "Tuesday 7 ",
-    "score": 8,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
-  "florida growth roundtable|Wednesday,": {
-    "title": "Florida Growth Roundtable",
-    "date": "Wednesday,",
-    "score": 3,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
   "small business networking|Thursday, ": {
     "title": "Small Business Networking",
     "date": "Thursday, ",
@@ -559,14 +319,6 @@
     "last_seen": "2026-05-01",
     "times_seen": 5
   },
-  "after hours connections: professional local networking|Thursday, ": {
-    "title": "After Hours Connections: Professional Local Networking",
-    "date": "Thursday, ",
-    "score": 0,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
   "small business networking @ b. leigh's|Saturday 1": {
     "title": "Small Business Networking @ B. Leigh's",
     "date": "Saturday 1",
@@ -574,70 +326,6 @@
     "first_seen": "2026-04-01",
     "last_seen": "2026-04-15",
     "times_seen": 3
-  },
-  "downtown edmond mix & mingle business networking|Tuesday, A": {
-    "title": "Downtown Edmond Mix & Mingle Business Networking",
-    "date": "Tuesday, A",
-    "score": 0,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
-  "women entrepreneurs networking walk ✦ somerville, nj|Wednesday,": {
-    "title": "Women Entrepreneurs Networking Walk ✦ Somerville, NJ",
-    "date": "Wednesday,",
-    "score": 0,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
-  "business after hours | networking event|Thursday, ": {
-    "title": "Business After Hours | Networking Event",
-    "date": "Thursday, ",
-    "score": 0,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
-  "spanglish small business networking group|Tuesday 21": {
-    "title": "Spanglish Small Business Networking Group",
-    "date": "Tuesday 21",
-    "score": 2,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
-  "illinois local networking series april 2026 hosted by small business growth corporation|Thursday 1": {
-    "title": "Illinois Local Networking Series April 2026 Hosted by Small Business Growth Corporation",
-    "date": "Thursday 1",
-    "score": 1,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
-  "small business connections networking event|Tuesday 14": {
-    "title": "Small Business Connections Networking Event",
-    "date": "Tuesday 14",
-    "score": 1,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
-  "small business expo - building a resilient small business|Wednesday,": {
-    "title": "Small Business Expo - Building a Resilient Small Business",
-    "date": "Wednesday,",
-    "score": 1,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
-  },
-  "🌸 women business owners biweekly networking event - featuring brittany ellerbe, keepsake studio|Thursday, ": {
-    "title": "🌸 Women Business Owners Biweekly Networking Event - Featuring Brittany Ellerbe, Keepsake Studio",
-    "date": "Thursday, ",
-    "score": 10,
-    "first_seen": "2026-04-01",
-    "last_seen": "2026-04-01",
-    "times_seen": 1
   },
   "networking to grow your business!|2026-04-17": {
     "title": "Networking to grow YOUR business!",
@@ -671,22 +359,6 @@
     "last_seen": "2026-04-22",
     "times_seen": 6
   },
-  "river council business networking|Tuesday, A": {
-    "title": "River Council Business Networking",
-    "date": "Tuesday, A",
-    "score": 7,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "daybreak in debary - monthly business networking|Thursday, ": {
-    "title": "Daybreak in DeBary - Monthly Business Networking",
-    "date": "Thursday, ",
-    "score": 4,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
   "professional women in business networking lunch|Wednesday,": {
     "title": "Professional Women in Business Networking Lunch",
     "date": "Wednesday,",
@@ -695,22 +367,6 @@
     "last_seen": "2026-04-15",
     "times_seen": 2
   },
-  "emerald connect: broward business mixer|Saturday 1": {
-    "title": "Emerald Connect: Broward Business Mixer",
-    "date": "Saturday 1",
-    "score": 5,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "orthodox business networking|Tuesday 14": {
-    "title": "Orthodox Business Networking",
-    "date": "Tuesday 14",
-    "score": 0,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
   "central florida 1st annual women in global business & leadership summit|Friday 17 ": {
     "title": "Central Florida 1st Annual Women in Global Business & Leadership Summit",
     "date": "Friday 17 ",
@@ -718,78 +374,6 @@
     "first_seen": "2026-04-03",
     "last_seen": "2026-04-08",
     "times_seen": 2
-  },
-  "small business networking|Tuesday 7 ": {
-    "title": "Small Business Networking ",
-    "date": "Tuesday 7 ",
-    "score": 3,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "flourish networking lake oswego|Tuesday, A": {
-    "title": "Flourish Networking Lake Oswego",
-    "date": "Tuesday, A",
-    "score": 2,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "small business networking|Thursday 9": {
-    "title": "Small Business Networking",
-    "date": "Thursday 9",
-    "score": 5,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "entrepreneur networking showcase event|Thursday 9": {
-    "title": "Entrepreneur Networking Showcase Event ",
-    "date": "Thursday 9",
-    "score": 6,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "business & baseball: networking at lecom park|Wednesday,": {
-    "title": "Business & Baseball: Networking at LECOM Park",
-    "date": "Wednesday,",
-    "score": 7,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "illinois local networking series april 2026 hosted by small business growth corporation|Thursday, ": {
-    "title": "Illinois Local Networking Series April 2026 Hosted by Small Business Growth Corporation",
-    "date": "Thursday, ",
-    "score": 1,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "free business networking sponsored by hampton inn & suites sarasota/bradenton airport/legalshield|Tuesday, A": {
-    "title": "Free Business Networking Sponsored by Hampton Inn & Suites Sarasota/Bradenton Airport/LegalShield  ",
-    "date": "Tuesday, A",
-    "score": 8,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "altamonte small business networking|Friday 17 ": {
-    "title": "Altamonte Small Business Networking",
-    "date": "Friday 17 ",
-    "score": 7,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "small business connections networking event|Tuesday, A": {
-    "title": "Small Business Connections Networking Event",
-    "date": "Tuesday, A",
-    "score": 2,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
   },
   "portland small business network 🍸  clarklewispdx|Thursday, ": {
     "title": "Portland Small Business Network 🍸  ClarkLewisPDX",
@@ -815,30 +399,6 @@
     "last_seen": "2026-05-15",
     "times_seen": 4
   },
-  "bni success networking - broward business networking events - local growth!|Tuesday, A": {
-    "title": "BNI Success Networking - Broward Business Networking Events - Local Growth!",
-    "date": "Tuesday, A",
-    "score": 3,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "entrepreneur exchange networking meeting|Thursday, ": {
-    "title": "Entrepreneur Exchange Networking Meeting",
-    "date": "Thursday, ",
-    "score": 4,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "#smallbizfriday #networkingforsmallbusinessowners #boston #virtual|Friday 17 ": {
-    "title": "#SmallBizFriday #NetworkingforSmallBusinessOwners #Boston #Virtual",
-    "date": "Friday 17 ",
-    "score": 3,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
   "small business networking social|Thursday 9": {
     "title": "Small Business Networking Social",
     "date": "Thursday 9",
@@ -846,22 +406,6 @@
     "first_seen": "2026-04-03",
     "last_seen": "2026-04-08",
     "times_seen": 2
-  },
-  "billy strings - tampa, fl|Wednesday ": {
-    "title": "Billy Strings - Tampa, FL",
-    "date": "Wednesday ",
-    "score": 1,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
-  },
-  "lancing small business networking at the perch|Thursday, ": {
-    "title": "Lancing Small Business Networking at The Perch",
-    "date": "Thursday, ",
-    "score": 3,
-    "first_seen": "2026-04-03",
-    "last_seen": "2026-04-03",
-    "times_seen": 1
   },
   "ai think tank. learn to make money with ai|2026-04-12": {
     "title": "AI think tank. Learn to make money with AI",
