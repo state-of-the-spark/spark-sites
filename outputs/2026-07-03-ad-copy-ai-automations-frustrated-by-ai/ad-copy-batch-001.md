@@ -2,8 +2,9 @@
 type: output
 format: facebook-ad-copy
 date: 2026-07-03
-status: draft
+status: active
 platform: meta
+campaign_status: LIVE — active Facebook ad campaign driving traffic to AI strategy sessions (landing: sparkmysite.com/ai-automations/)
 offer: ai-action-plan-workshop
 landing_page: https://sparkmysite.com/ai-automations/
 key_phrase: "frustrated by AI"
