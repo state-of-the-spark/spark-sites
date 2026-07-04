@@ -4,7 +4,12 @@ format: facebook-ad-copy
 date: 2026-07-03
 status: active
 platform: meta
+funnel_stage: awareness
+campaign_objective: awareness
 campaign_status: LIVE — active Facebook ad campaign driving traffic to AI strategy sessions (landing: sparkmysite.com/ai-automations/)
+sibling_campaigns:
+  - engagement: outputs/2026-07-04-ad-copy-ai-automations-engagement/ad-copy-batch-001.md
+  - conversion: outputs/2026-07-04-ad-copy-ai-automations-conversion/ad-copy-batch-001.md
 offer: ai-action-plan-workshop
 landing_page: https://sparkmysite.com/ai-automations/
 key_phrase: "frustrated by AI"
