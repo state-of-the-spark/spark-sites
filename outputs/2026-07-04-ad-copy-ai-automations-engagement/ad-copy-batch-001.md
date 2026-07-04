@@ -6,6 +6,7 @@ status: active
 platform: meta
 offer: ai-action-plan-workshop
 landing_page: https://sparkmysite.com/ai-automations/
+google_doc: https://docs.google.com/document/d/1hkXm7w16PvNmSeYLo19RQ4Y3zdYaTvzkvdX49mvrhM0
 funnel_stage: engagement
 campaign_objective: engagement
 key_phrase: "frustrated by AI"

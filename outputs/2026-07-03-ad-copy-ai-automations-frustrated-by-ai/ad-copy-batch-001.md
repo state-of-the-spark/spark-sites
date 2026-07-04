@@ -12,6 +12,7 @@ sibling_campaigns:
   - conversion: outputs/2026-07-04-ad-copy-ai-automations-conversion/ad-copy-batch-001.md
 offer: ai-action-plan-workshop
 landing_page: https://sparkmysite.com/ai-automations/
+google_doc: https://docs.google.com/document/d/1d4FT0j_zpfj_fyqW31Aa1ksWeOs06FHZIXbBgABS0-Q
 key_phrase: "frustrated by AI"
 entry_point: copy-only
 ---
