@@ -159,7 +159,7 @@ Strategy sessions sit at the decision layer — they help clients figure out wha
 Strategy Session ($350)
   ├── Messaging → Website project ($900+), Content Strategy Session
   ├── SEO → SEO retainer ($500-$1K/mo), Content Bot ($1,200 setup)
-  ├── Social Media → Social management ($500-$2K/mo), Facebook Ads
+  ├── Social Media → Social management ($585-$2K/mo), Facebook Ads
   ├── Ads → Ads management ($350 setup + monthly), landing page
   ├── Funnel → Website + Email marketing + Ads (bundled)
   ├── AI/Automation → Content Bot, workflow implementation
@@ -185,5 +185,5 @@ See: `core/operations/book-framework.md` for the full SPARK Method framework.
 - ~~Strategy sessions need productizing~~ → Done. See `offers/strategy/`
 - **Educational library** not yet launched — will become a major entry point
 - **Webinars** paused — need to restart as top-of-funnel
-- **Starter Site add-on pricing** — need to finalize one-time prices for Google Business, Social Setup, Domain Email
+- **Starter Site add-on pricing** — Google Business Profile $175 and Social Media Setup $425 finalized 2026-07-17; Domain Email one-time price still open
 - **Session bundles** — consider pricing for 2-3 session packages (Messaging + Content Strategy, etc.)

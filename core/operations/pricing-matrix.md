@@ -1,7 +1,7 @@
 ---
 type: reference
 status: active
-updated: 2026-02-17
+updated: 2026-07-17
 purpose: Internal pricing, labor costs, and upsell triggers for proposal generation
 ---
 # Pricing Matrix
@@ -37,7 +37,7 @@ Internal reference for generating proposals. Not client-facing.
 |--------|-------------|-------------------|-------------------|
 | MLS/IDX Installation (Georgia) | $450 | ~2 hrs install + ~2 hrs site edits | IDX provider fee (client-paid) |
 | Additional pages (per page) | ~$150–$300 | ~1.5–3 hrs | — |
-| Google Business Profile setup | Included in All-Inclusive, ~$150 standalone | ~1–2 hrs | — |
+| Google Business Profile setup | Included in All-Inclusive, $175 standalone | ~1–2 hrs | — |
 | MailChimp integration | Included in All-Inclusive, ~$200 standalone | ~2 hrs | MailChimp plan (client-paid) |
 | Training session (post-launch) | Included in all tiers | ~1 hr | — |
 
@@ -105,11 +105,12 @@ Internal reference for generating proposals. Not client-facing.
 
 | Scope | Client Price | Est. Labor Hours | Third-Party Costs |
 |-------|-------------|-------------------|-------------------|
-| Single platform, light posting | ~$500/mo | ~5–8 hrs/mo | Scheduling tools (internal) |
+| Social Media Setup (one-time: profiles, branding, content pillars) | $425 | ~3 hrs | — |
+| Starter (2-3 posts/week + guidance and training for their team) | $585/mo | ~5-8 hrs/mo | Scheduling tools (internal) |
 | 2–3 platforms, regular posting | ~$1,000–$1,500/mo | ~10–15 hrs/mo | Scheduling tools (internal) |
 | Full management (3+ platforms, engagement, strategy) | ~$1,500–$2,000/mo | ~15–20 hrs/mo | Scheduling tools (internal) |
 
-*Note: Pricing needs productizing. Currently quoted per client. These are typical ranges.*
+*Note: Setup and Starter tier productized 2026-07-17 (Grant-set prices). Higher tiers still quoted per client.*
 
 **Upsell triggers:**
 - Social client → Facebook Ads (amplify top-performing organic posts)

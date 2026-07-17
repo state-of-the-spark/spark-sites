@@ -1,7 +1,7 @@
 ---
 type: reference
 status: active
-updated: 2026-02-11
+updated: 2026-07-17
 offer: social
 ---
 # Social Media Management
@@ -12,13 +12,14 @@ Ongoing content creation and management for social media platforms. Building bra
 
 ## Pricing
 
-*Currently quoted per client based on scope. Needs productizing.*
+| Tier | Price |
+|------|-------|
+| Social Media Setup (one-time: profiles, branding, content pillars) | $425 |
+| Starter - 2-3 posts/week plus guidance and training for your team | $585/mo |
+| 2-3 platforms, regular posting | $1,000-$1,500/mo |
+| Full management (3+ platforms, engagement, strategy) | $1,500-$2,000/mo |
 
-Typical range: $500–$2,000/month depending on:
-- Number of platforms
-- Posting frequency
-- Content creation needs
-- Engagement management
+Higher tiers flex on number of platforms, posting frequency, content creation needs, and engagement management.
 
 ## What's Included
 
@@ -54,4 +55,4 @@ Social → Influencer Events (expand reach)
 
 ## Known Gap
 
-Pricing and packaging needs clearer structure. Currently too custom per client.
+Setup and Starter tier productized 2026-07-17. Mid and full tiers still custom per client.

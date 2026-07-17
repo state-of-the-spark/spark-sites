@@ -32,7 +32,7 @@ Your growth partner. We combine strategy, education, and execution to help small
 | Websites | $25/mo–$3,500+ | Starter Site (demo on cold call) to full e-commerce |
 | SEO | $900 one-time or $500–$1K/mo | Includes Content Bot option |
 | Google/Facebook Ads | $350 setup + $350–$1,500/mo | Based on ad spend |
-| Social Media | Varies | Content management |
+| Social Media | $425 setup, from $585/mo | Content management |
 | Strategy Sessions | $350/session | Structured 90-min sessions + written deliverable (Messaging, SEO, Ads, etc.) |
 | Consulting (hourly) | $120/hr | Follow-up work, ad-hoc support, implementation questions |
 | Influencer Events | Custom | Nicole's specialty |
