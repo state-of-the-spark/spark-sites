@@ -6,6 +6,7 @@ status: draft
 platform: meta
 offer: claude-skill
 campaign: skill-drop-launch
+google_doc: https://docs.google.com/document/d/1HyDl8QIKcg8hw1CYnC83Ascf3gCC50xr2aYAKcWSG_k/edit
 ---
 
 # Campaign Batch 001 — Skill Drop Launch
