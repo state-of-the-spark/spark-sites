@@ -13,7 +13,7 @@ google_doc: https://docs.google.com/document/d/1HyDl8QIKcg8hw1CYnC83Ascf3gCC50xr
 
 Generated: 2026-07-17
 Target: Spark Skill Drops — first drop: the $10/Day Google Ads Skill (free with email)
-Destination: https://sparkmysite.com/skill-drops **[PLACEHOLDER — landing page not built yet; update before launch]**
+Destination: https://sparkmysite.com/claude-skill-drops **[PLACEHOLDER — landing page not built yet; update before launch]**
 
 **Mechanism:** Spark Skill Drops — downloadable Claude skills. "We don't train you. We train your Claude."
 **Funnel:** Ad → landing page → email capture → thank-you (download + book a call + Skool group invite)
@@ -323,7 +323,7 @@ The first Skill Drop is free. Enter an email address, download the skill, and fo
 And if you'd rather have every skill we ever create, or just have us deploy it all for you, those doors are on the other side too.
 
 Download the $10/Day Google Ads Skill here:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -347,7 +347,7 @@ No course. No retainer. You need a Claude subscription and a Google Ads account,
 
 The first one's free with an email address. We're calling them Spark Skill Drops, and there are more coming.
 
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -379,7 +379,7 @@ What it doesn't do: promise results no honest marketer would promise. It gets a 
 Why free? Because this is the first of a series. Some people will download one skill and be happy. Some will want access to every skill we release. Some will decide they'd rather have us do the whole thing for them. All three are fine with us.
 
 Download the $10/Day Google Ads Skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -398,7 +398,7 @@ We package what we'd teach you into a skill. You upload it into your Claude AI. 
 No course. No retainer. No pretending you have time to learn one more platform.
 
 First skill's free:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -425,7 +425,7 @@ You need a Claude subscription and a Google Ads account. You don't need to be te
 The skill is free with an email address. If you want more than one skill - or you'd rather we just do it for you, the way we did for Sarah - both of those paths are waiting on the download page.
 
 Get the first Skill Drop here:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -497,7 +497,7 @@ The skill is free with an email address. Download it tonight and the weekend sta
 And if it makes you want every skill we release - or makes you decide you'd rather hand the whole thing to a team - both options are right there on the download page.
 
 Get the $10/Day Google Ads Skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -521,7 +521,7 @@ You'll need a Claude subscription and a Google Ads account; the install guide ha
 
 First skill is free with an email address. More drops are coming.
 
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -554,7 +554,7 @@ One honest caveat: getting a campaign set up properly is the start of marketing,
 
 Download it, run it tonight, and let the course collect dust with a clear conscience.
 
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -571,7 +571,7 @@ Most owners don't need another course. They need the thing the course was suppos
 So skip the middleman. Upload one skill into your Claude AI. It sets up your Google Ads at $10 a day of ad spend while your course library keeps napping.
 
 Free download:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -600,7 +600,7 @@ The skill is free with an email address.
 And if you're at the stage where you'd rather hand off marketing entirely - the way Wesley did - the download page has a book-a-call button for exactly that. Either way, the setup barrier stops being the reason your ads aren't running.
 
 Get the free skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -674,7 +674,7 @@ The skill is free with an email address. Download it, deploy it, own it.
 If it earns your trust and you want more - every future skill we release, or a team that just handles it - those doors are on the download page. But they're optional. That's the point.
 
 Get the $10/Day Google Ads Skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -698,7 +698,7 @@ You need a Claude subscription and a Google Ads account. The skill itself is fre
 
 Where do we make money? Some people want every skill we release, or want it all done for them. Those folks find us. The rest get a working campaign, free, and tell their friends.
 
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -729,7 +729,7 @@ That's the whole deal, in plain language, because the last marketer who confused
 We're Spark Sites - Lakeland-based, building websites and marketing since 2013, and our model has always been that clients should understand exactly what they're paying for. This time we went one further: you don't pay, and you own the capability.
 
 Download the skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -748,7 +748,7 @@ Free.
 Why? Because the setup fee was never the relationship. Owners who see how we work tend to stick around for the parts that do take a team.
 
 The $10/Day Google Ads Skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -775,7 +775,7 @@ You'll need a Claude subscription (with Claude in Chrome) and a Google Ads accou
 The skill is free with an email address. If it turns out we're the first marketing people who did exactly what they said - the download page has a button for wanting more of that.
 
 Get the skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -848,7 +848,7 @@ Want the whole curriculum? Every skill we release goes to our members, and there
 
 Class dismissed. Your Claude has homework.
 
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -876,7 +876,7 @@ You need a Claude subscription and a Google Ads account; the walkthrough handles
 
 First skill's free with an email. It's called a Spark Skill Drop, and there are more on the syllabus.
 
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -915,7 +915,7 @@ What we'd tell you in the workshop, so we'll tell you here: a properly built cam
 We're Spark Sites - teaching Lakeland businesses since 2013. This is the same education, minus your evenings.
 
 Download the skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -934,7 +934,7 @@ Upload the skill into your Claude AI. It sets up your Google Ads at $10 a day of
 The education happens. You just aren't the one being educated.
 
 Free with an email:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -960,7 +960,7 @@ And for the owners who want the full curriculum - every skill we ever release - 
 
 The free-value tradition continues. It just installs now.
 
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -1030,7 +1030,7 @@ Why free? Because it's the first in a series. Some owners will take the free ski
 But every one of those owners will have marketing running this week, for the price of lunch.
 
 Download the $10/Day Google Ads Skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -1054,7 +1054,7 @@ You need a Claude subscription and a Google Ads account. You don't need marketin
 
 We're calling them Spark Skill Drops. The first one's free with an email address, and honestly, that's the best marketing budget news a small business has gotten in years.
 
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -1092,7 +1092,7 @@ What no one can sell you: guaranteed results. Ads are a system you run and learn
 We're Spark Sites, Lakeland, est. 2013. "High-end doesn't have to mean high-cost" has been our line for years. This is us putting a number on it: ten dollars.
 
 Download the skill:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -1111,7 +1111,7 @@ The setup? A free skill you upload into your Claude AI. About thirty minutes. No
 The most affordable "we're finally doing marketing" moment ever shipped.
 
 Free download:
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---
@@ -1139,7 +1139,7 @@ And if what you actually want is the full Wesley experience - a team handling SE
 
 Setup for the price of an email. Ad spend for the price of lunch. The Claude subscription many owners already have covers the rest.
 
-https://sparkmysite.com/skill-drops
+https://sparkmysite.com/claude-skill-drops
 ```
 
 ---

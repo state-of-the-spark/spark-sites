@@ -5,7 +5,7 @@ Status: **REVIEW REQUIRED — 2 launch gates open (P1). Copy itself is fixed and
 
 ## P1 — Launch gates (NOT auto-fixed; Grant decisions/build work)
 
-1. **Landing page does not exist.** Every ad points to placeholder `https://sparkmysite.com/skill-drops`. Build + QA the page, then replace the URL batch-wide. The page must match ad claims: skill free with email, $10/day = Google ad spend, Claude subscription requirement, three-path thank-you funnel.
+1. **Landing page does not exist.** Every ad points to placeholder `https://sparkmysite.com/claude-skill-drops`. Build + QA the page, then replace the URL batch-wide. The page must match ad claims: skill free with email, $10/day = Google ad spend, Claude subscription requirement, three-path thank-you funnel.
 2. **"Every skill we ever release" membership promise** (appears in ~7 primaries) requires the Spark AI Skool group about page to be updated and the membership tier/pricing to exist BEFORE launch. Alternative if launching sooner: strip that line from the 7 primaries.
 
 ## P2/P3 — Auto-applied fixes
