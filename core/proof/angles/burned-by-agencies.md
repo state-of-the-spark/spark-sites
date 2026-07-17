@@ -25,7 +25,7 @@ Most small business owners in Lakeland have already tried hiring someone for the
 
 - Discovery calls focused on education, not pressure
 - Grant has been building websites since 2004 — not a fly-by-night operation
-- Spark Sites founded in 2018 and still growing in Lakeland
+- Spark Sites founded in 2013 and still growing in Lakeland (2013 per `core/soul.md`; a "2018" error here was corrected 2026-07-17 - prior precedent: 2026-02-12 batch review-log)
 - Clients stay because they understand the value, not because they're locked in
 
 ## Use In

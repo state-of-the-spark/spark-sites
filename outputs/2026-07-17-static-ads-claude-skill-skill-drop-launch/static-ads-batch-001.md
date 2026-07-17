@@ -70,7 +70,7 @@ Center-crop the vertical to extract the 1:1 safe zone at 1920×1920: owner, lapt
 
 **Vertical (1080×1920) — design this first:**
 ```text
-Aspect ratio 9:16, resolution 1080x1920. Pattern-interrupt graphic on white. Centered in the 1:1 safe zone: what looks like a printed job posting pinned to a corkboard, headline in bold type: "HELP WANTED: Google Ads Manager" — with a thick coral-to-pink gradient marker stroke crossing it out diagonally. Below it, a small clean sticky note reading "Taught our Claude instead." in handwritten-style text. Bright, warm, sun-washed lighting, subtle Florida foliage shadow across the corkboard. Fill top and bottom margins with corkboard texture and one pinned palm-tree postcard. Keep the crossed-out posting and sticky note centered vertically between 25% and 70% from top.
+Aspect ratio 9:16, resolution 1080x1920. Pattern-interrupt graphic on white. Centered in the 1:1 safe zone: what looks like a printed job posting pinned to a corkboard, headline in bold type: "HELP WANTED: Ads Manager" — with a thick coral-to-pink gradient marker stroke crossing it out diagonally. Below it, a small clean sticky note reading "Taught our Claude instead." in handwritten-style text. Bright, warm, sun-washed lighting, subtle Florida foliage shadow across the corkboard. Fill top and bottom margins with corkboard texture and one pinned palm-tree postcard. Keep the crossed-out posting and sticky note centered vertically between 25% and 70% from top.
 ```
 
 **Square (1920×1920) — center-crop from vertical:**
@@ -140,7 +140,7 @@ Center-crop the vertical to extract the 1:1 safe zone at 1920×1920: full stack 
 
 **Vertical (1080×1920) — design this first:**
 ```text
-Aspect ratio 9:16, resolution 1080x1920. Bright graphic ad, white background. Centered in the 1:1 safe zone: a dark navy (#1A1A2E) closed box labeled "agency retainer" in small muted text, lid being lifted to release warm light — and beside it, an open flat glowing card in coral-to-hot-pink gradient (#FF6B47 to #E91E8C) labeled "a skill that runs in YOUR Claude" in bold warm serif. Visual message: closed black box vs. open transparent tool. Clean lines, generous white space, hopeful solarpunk warmth, small organic leaf accents. Fill top and bottom margins with soft pink-tinted (#FFE8E2) geometric shapes. Keep both objects centered vertically between 25% and 70% from top.
+Aspect ratio 9:16, resolution 1080x1920. Bright graphic ad, white background. Centered in the 1:1 safe zone: a dark navy (#1A1A2E) closed box labeled "agency retainer" in small muted text, lid being lifted to release warm light — and beside it, an open flat glowing card in coral-to-hot-pink gradient (#FF6B47 to #E91E8C) labeled "YOUR Claude" in bold warm serif. Visual message: closed black box vs. open transparent tool. Clean lines, generous white space, hopeful solarpunk warmth, small organic leaf accents. Fill top and bottom margins with soft pink-tinted (#FFE8E2) geometric shapes. Keep both objects centered vertically between 25% and 70% from top.
 ```
 
 **Square (1920×1920) — center-crop from vertical:**
@@ -154,7 +154,7 @@ Center-crop the vertical to extract the 1:1 safe zone at 1920×1920: box and glo
 
 **Vertical (1080×1920) — design this first:**
 ```text
-Aspect ratio 9:16, resolution 1080x1920. Candid smartphone-style photo, bright natural light inside a real local storefront (hardware store or bakery counter feel, Central Florida warmth). A business owner (50s, genuine, no fake smile) turning a laptop toward the camera as if showing a friend, pointing at the screen where a simple, readable campaign dashboard is softly visible. Body language says "look, I can actually see what it's doing." Authentic UGC framing, warm daylight through the shop window, real business clutter in soft focus. Keep owner and laptop centered in the 1:1 zone, storefront atmosphere filling top and bottom margins.
+Aspect ratio 9:16, resolution 1080x1920. Candid smartphone-style photo, bright natural light inside a real local storefront (hardware store or bakery counter feel, Central Florida warmth). A business owner (50s, genuine, no fake smile) turning a laptop toward the camera as if showing a friend, pointing at the screen where a simple clean dashboard layout is softly visible, no readable text. Body language says "look, I can actually see what it's doing." Authentic UGC framing, warm daylight through the shop window, real business clutter in soft focus. Keep owner and laptop centered in the 1:1 zone, storefront atmosphere filling top and bottom margins.
 ```
 
 **Square (1920×1920) — center-crop from vertical:**
@@ -168,7 +168,7 @@ Center-crop the vertical to extract the 1:1 safe zone at 1920×1920: owner and t
 
 **Vertical (1080×1920) — design this first:**
 ```text
-Aspect ratio 9:16, resolution 1080x1920. Pattern-interrupt graphic on bright white. Centered in the 1:1 safe zone: a generic monthly invoice document (labeled only "Monthly Marketing Retainer — $1,500/mo", no company names) with a bold coral-to-pink gradient "PAID FOR THE LAST TIME" stamp across it at an angle. Below, small clean text on a white card: "the skill is yours. forever." Bright, sun-washed, hopeful — liberation, not anger. Fill top and bottom margins with white space and one warm gradient sun arc. Keep invoice and card centered vertically between 25% and 70% from top.
+Aspect ratio 9:16, resolution 1080x1920. Pattern-interrupt graphic on bright white. Centered in the 1:1 safe zone: a generic monthly invoice document (labeled only "Monthly Retainer", no company names or dollar figures) with a bold coral-to-pink gradient "PAID FOR THE LAST TIME" stamp across it at an angle. Below, small clean text on a white card: "the skill is yours." Bright, sun-washed, hopeful — liberation, not anger. Fill top and bottom margins with white space and one warm gradient sun arc. Keep invoice and card centered vertically between 25% and 70% from top.
 ```
 
 **Square (1920×1920) — center-crop from vertical:**
@@ -189,7 +189,7 @@ Center-crop the vertical to extract the 1:1 safe zone at 1920×1920: stamped inv
 
 **Vertical (1080×1920) — design this first:**
 ```text
-Aspect ratio 9:16, resolution 1080x1920. Bright timeline graphic, white background, warm solarpunk style. Centered in the 1:1 safe zone: a three-step horizontal evolution — step 1: a small classroom icon labeled "2018: we taught workshops", step 2: a laptop-with-person icon labeled "2024: we trained teams", step 3 (largest, glowing): a rounded skill-card icon with a coral-to-hot-pink gradient border labeled "2026: we train your Claude". A thin warm line connects them, growing thicker toward step 3 like a vine. Bold warm serif labels, clean lines, generous white space, small organic leaf details on the connecting vine. Fill top and bottom margins with soft sunrise gradient tints at low opacity. Keep the timeline centered vertically between 25% and 70% from top.
+Aspect ratio 9:16, resolution 1080x1920. Bright timeline graphic, white background, warm solarpunk style. Centered in the 1:1 safe zone: a three-step horizontal evolution — step 1: a small classroom icon labeled "we taught workshops", step 2: a laptop-with-person icon labeled "we trained teams", step 3 (largest, glowing): a rounded skill-card icon with a coral-to-hot-pink gradient border labeled "we train your Claude". A thin warm line connects them, growing thicker toward step 3 like a vine. Bold warm serif labels, clean lines, generous white space, small organic leaf details on the connecting vine. Fill top and bottom margins with soft sunrise gradient tints at low opacity. Keep the timeline centered vertically between 25% and 70% from top.
 ```
 
 **Square (1920×1920) — center-crop from vertical:**
@@ -252,7 +252,7 @@ Center-crop the vertical to extract the 1:1 safe zone at 1920×1920: all three p
 
 **Vertical (1080×1920) — design this first:**
 ```text
-Aspect ratio 9:16, resolution 1080x1920. Candid smartphone-style overhead photo, bright Florida daylight on an outdoor cafe table. A $10 bill tucked under the corner of a phone; on the phone screen, a simple ads dashboard showing a modest, honest campaign summary (no big numbers, just "Campaign: Active"). A half-eaten Cuban sandwich on a paper wrapper beside it. Authentic, warm, sunlit, slightly imperfect UGC framing. Small handwritten-style caption vibe without text. Keep the bill and phone in the center 1:1 zone, table texture and sandwich filling top and bottom margins.
+Aspect ratio 9:16, resolution 1080x1920. Candid smartphone-style overhead photo, bright Florida daylight on an outdoor cafe table. A $10 bill tucked under the corner of a phone; on the phone screen, a simple clean dashboard layout with a single green active-status dot, no readable text. A half-eaten Cuban sandwich on a paper wrapper beside it. Authentic, warm, sunlit, slightly imperfect UGC framing. Small handwritten-style caption vibe without text. Keep the bill and phone in the center 1:1 zone, table texture and sandwich filling top and bottom margins.
 ```
 
 **Square (1920×1920) — center-crop from vertical:**
@@ -288,10 +288,10 @@ Copy and paste into Ads Manager after images are ready.
 
 ### Primary 1 — Deep Ad (~500 words)
 
-**Hook:** How small business owners go from watching AI happen to having Google Ads running at $10 a day using a downloaded 'Spark Skill Drop'
+**Hook:** How small business owners can go from watching AI happen to having Google Ads running at $10 a day with a downloaded 'Spark Skill Drop'
 
 ```text
-How small business owners go from watching AI happen to having Google Ads running at $10 a day using a downloaded 'Spark Skill Drop'
+How small business owners can go from watching AI happen to having Google Ads running at $10 a day with a downloaded 'Spark Skill Drop'
 
 Here's something we've noticed after years of working with small businesses in Lakeland and beyond:
 
@@ -311,9 +311,9 @@ Upload it, and it walks your Claude through setting up your initial Google Ads c
 
 A few honest notes, because that's how we do things:
 
-It requires a Claude subscription (the plan that includes Claude in Chrome) and a Google Ads account. The $10/day is your ad budget, paid to Google, not to us. And a skill sets up your campaigns properly - it doesn't guarantee what any ad campaign can't guarantee. What it removes is the part that's been stopping you: the setup, the learning curve, the not-knowing-where-to-start.
+It requires a Claude subscription (the plan that includes Claude in Chrome - the version that can click through Google Ads for you) and a Google Ads account. The $10/day is your ad budget, paid to Google, not to us. And a skill sets up your campaigns properly - it doesn't guarantee what any ad campaign can't guarantee. What it removes is the part that's been stopping you: the setup, the learning curve, the not-knowing-where-to-start.
 
-One of our clients put it this way after we helped implement AI in her business: "We appreciate the thoughtful guidance he gave us on implementing AI automations to improve our workflows, freeing us up to interact more meaningfully with our clients." - Sarah M.
+One of our consulting clients put it this way after hands-on AI work with us - a different, paid service, but the same philosophy these skills now package: "We appreciate the thoughtful guidance he gave us on implementing AI automations to improve our workflows, freeing us up to interact more meaningfully with our clients." - Sarah M.
 
 That's the whole idea. The technology does the tedious part. You get your time back for the part only you can do.
 
@@ -338,9 +338,9 @@ For years, our answer to "how do I keep up with all this?" was education. Worksh
 
 But somewhere along the way we noticed the pattern: the owners who needed marketing most were the ones with the least time to learn it.
 
-So we flipped it. Instead of training the owner, we started training their Claude.
+So we flipped it. Instead of training the owner, we started training their Claude - the AI assistant a lot of businesses already have open in another tab.
 
-We packaged our Google Ads setup process into a downloadable skill. You upload it into your own Claude, and it sets up your first campaigns at $10 a day - the same process we'd walk a client through, minus the six weeks of learning.
+We packaged our Google Ads setup process into a downloadable skill. You upload it into your own Claude, and it sets up your first campaigns at $10 a day of ad spend (paid straight to Google, not to us) - the same process we'd walk a client through, minus the six weeks of learning.
 
 No course. No retainer. You need a Claude subscription and a Google Ads account, and the install guide covers the rest.
 
@@ -367,7 +367,7 @@ The first drop is the $10/Day Google Ads Skill. It handles:
 - Your initial campaign structure
 - Keyword selection for your local market
 - Budget caps at $10/day so spend stays controlled
-- The settings that trip up beginners (location targeting, match types, conversion basics)
+- The settings that trip up beginners (like who sees your ad, where, and how you know it worked)
 
 What you need: a Claude subscription with Claude in Chrome, a Google Ads account, and about 30 minutes. The install guide assumes zero technical background - if you can attach a file to an email, you can do this.
 
@@ -392,7 +392,7 @@ We're done training business owners. From now on, we're training their AI instea
 
 Not a pivot away from education. The final form of it.
 
-We package what we'd teach you into a skill. You upload it into your Claude. Your first Google Ads campaigns go live at $10 a day.
+We package what we'd teach you into a skill. You upload it into your Claude AI. Your first Google Ads campaigns go live at $10 a day (ad spend that goes to Google, not us).
 
 No course. No retainer. No pretending you have time to learn one more platform.
 
@@ -413,7 +413,7 @@ That's from Sarah M., after working with Grant on bringing AI into her business 
 
 Here's the full quote: "We appreciate the time he spent with us to really understand our business objectives and the thoughtful guidance he gave us on implementing AI automations to improve our internal and external workflows, freeing us up to interact more meaningfully with our clients and our team."
 
-That sentence - "freeing us up" - is the entire reason Spark Skill Drops exist.
+That was hands-on consulting work - a different, paid service. But that sentence - "freeing us up" - is why Spark Skill Drops exist.
 
 For years we've done this work client by client: understand the business, set up the AI, hand over something that works. Now we've started packaging that same process into downloadable skills for Claude, so any business owner can deploy it in-house.
 
@@ -433,7 +433,7 @@ https://sparkmysite.com/skill-drops
 
 **Headline 1 — Proof-led**
 ```text
-From the Team Behind 20+ Years of Small Business Tech
+From a Founder Building Small Business Tech Since 2004
 ```
 
 **Headline 2 — Mechanism-led**
@@ -471,7 +471,7 @@ This 'Skill Drop' method eliminates the courses, the tutorials, even setup calls
 
 There's a specific kind of tired that comes from building a business solo.
 
-It's the 11:47 PM tired. The tab-number-forty-seven tired. The "I'll finally learn Google Ads this weekend" tired - said in March, and again in May, and the weekend keeps not coming, because the business needs you during the day and there's nothing left at night.
+It's the 11:47 PM tired. The tab-number-forty-seven tired. The "I'll finally learn Google Ads this weekend" tired - said in March, and again in May, and the weekend keeps not coming, because the business takes the daylight hours and there's nothing left for tutorials at night.
 
 For founders juggling operations, delivery, and marketing at the same time, the problem was never intelligence or effort. The problem is that every marketing platform assumes you have twenty hours to give it before it gives you anything back.
 
@@ -487,7 +487,7 @@ It sets up your initial Google Ads campaigns - structure, local keywords, budget
 
 Let's be straight about what this is and isn't:
 
-You need a Claude subscription (with Claude in Chrome) and a Google Ads account. The $10 a day is ad spend that goes to Google - you control it, cap it, or pause it anytime. And no setup tool can promise what your market will do. What it can do is get you past the part where most solo founders stall forever: the blank campaign screen.
+You need a Claude subscription (with Claude in Chrome - the version that can click through Google Ads itself) and a Google Ads account. The $10 a day is ad spend that goes to Google - you control it, cap it, or pause it anytime. And no setup tool can promise what your market will do. What it can do is get you past the part where most solo founders stall forever: the blank campaign screen.
 
 The DIY instinct got you this far, and honestly, it's a good instinct. This isn't the opposite of DIY - it's DIY with the learning curve removed. It still runs on your laptop, in your accounts, under your control. You see everything it does.
 
@@ -503,12 +503,12 @@ https://sparkmysite.com/skill-drops
 
 ### Primary 2 — UGC/Native (~200 words)
 
-**Hook:** The Google Ads course has been sitting in my someday pile since March. A downloaded skill did the setup on a Tuesday night.
+**Hook:** Almost every founder has a Google Ads course sitting in a someday pile. A downloaded skill now handles the setup in one evening.
 
 ```text
-The Google Ads course has been sitting in my someday pile since March. A downloaded skill did the setup on a Tuesday night.
+Almost every founder has a Google Ads course sitting in a someday pile. A downloaded skill now handles the setup in one evening.
 
-That's the story we keep hearing versions of, and it's exactly who we built this for.
+That someday pile is exactly who we built this for.
 
 Solo founders don't have a knowledge problem. They have a bandwidth problem. Every "just learn it yourself" solution costs the one resource that's already gone: evenings.
 
@@ -527,10 +527,10 @@ https://sparkmysite.com/skill-drops
 
 ### Primary 3 — Direct Response (~300 words)
 
-**Hook:** For founders who keep postponing "learn Google Ads": a downloadable Claude skill now does the setup in about 30 minutes.
+**Hook:** For founders who keep postponing "learn Google Ads": a skill for Claude AI now walks the setup through in about 30 minutes.
 
 ```text
-For founders who keep postponing "learn Google Ads": a downloadable Claude skill now does the setup in about 30 minutes.
+For founders who keep postponing "learn Google Ads": a skill for Claude AI now walks the setup through in about 30 minutes.
 
 Here's the math nobody does on DIY marketing:
 
@@ -567,7 +567,7 @@ The marketing course industry has a dirty secret: completion rates.
 
 Most owners don't need another course. They need the thing the course was supposed to produce: a campaign, live, tonight.
 
-So skip the middleman. Upload one skill into your Claude. It sets up your Google Ads at $10 a day while your course library keeps napping.
+So skip the middleman. Upload one skill into your Claude AI. It sets up your Google Ads at $10 a day of ad spend while your course library keeps napping.
 
 Free download:
 https://sparkmysite.com/skill-drops
@@ -577,14 +577,14 @@ https://sparkmysite.com/skill-drops
 
 ### Primary 5 — Testimonial (~300 words)
 
-**Hook:** "Cost efficient and streamlined." That's the standard our clients hold us to - and the standard we built this free skill around.
+**Hook:** "Cost efficient and streamlined." That's the feedback our paid services earn - and the bar we set for this free skill.
 
 ```text
-"Cost efficient and streamlined." That's the standard our clients hold us to - and the standard we built this free skill around.
+"Cost efficient and streamlined." That's the feedback our paid services earn - and the bar we set for this free skill.
 
 Wesley S. left us that review: "Grant and Amber are excellent! Highly recommend for cost efficient and streamlined SEO, website and content generation."
 
-Cost efficient. Streamlined. Those two words are basically the spec sheet for what we just released.
+That review is about our paid client services - SEO, websites, content. The Skill Drop is new and different: our attempt to bring that same cost-efficient, streamlined standard to something anyone can download.
 
 Spark Skill Drops are downloadable skills for Claude - our processes, packaged so you can deploy them in your own business without hiring us and without taking a course.
 
@@ -639,14 +639,14 @@ DIY Control, Without the DIY Learning Curve
 
 ### Primary 1 — Deep Ad (~500 words)
 
-**Hook:** Here's how even owners burned by agency retainers (without hiring anyone) are launching their own Google Ads with one uploaded skill
+**Hook:** Here's how even owners burned by agency retainers (without hiring anyone) can launch their own Google Ads with one uploaded skill
 
 ```text
-Here's how even owners burned by agency retainers (without hiring anyone) are launching their own Google Ads with one uploaded skill
+Here's how even owners burned by agency retainers (without hiring anyone) can launch their own Google Ads with one uploaded skill
 
 Most business owners we meet have a marketing scar.
 
-The freelancer who took the deposit and vanished. The agency that charged $1,500 a month and sent reports nobody could decode. The nephew who "knows computers." Money spent, nothing to show, and a permanent flinch whenever someone says "let's talk about your marketing."
+The freelancer who took the deposit and vanished. The agency that charged four figures a month and sent reports nobody could decode. The nephew who "knows computers." Money spent, nothing to show, and a permanent flinch whenever someone says "let's talk about your marketing."
 
 Here's the thing: that skepticism is healthy. We've said it for years - if a marketer can't explain what they're doing and why, the confusion is the product.
 
@@ -662,9 +662,9 @@ Notice what's different about the ownership model:
 
 It runs in YOUR Claude, on your laptop. It works in YOUR Google Ads account, which you keep. Every step happens where you can see it - no black box, no login you don't have, no report you can't read. If you never talk to us again, the campaign is still yours and still running. Nothing about it is held hostage.
 
-That's not how agencies usually work, and we say that as people who run one. It's also exactly why we built it this way - our whole model has always been that clients should understand what they're paying for. This time, the understanding is built into the tool.
+That's not how agencies usually work - and we know it from inside the industry. It's also exactly why we built it this way - our whole model has always been that clients should understand what they're paying for. This time, the understanding is built into the tool.
 
-What it requires, stated plainly: a Claude subscription with Claude in Chrome, a Google Ads account, and about 30 minutes with an install guide written for regular business owners. The $10/day is ad spend paid straight to Google - we never touch it.
+What it requires, stated plainly: a Claude subscription with Claude in Chrome (the version that can click through Google Ads for you), a Google Ads account, and about 30 minutes with an install guide written for regular business owners. The $10/day is ad spend paid straight to Google - we never touch it.
 
 And what no honest marketer will promise: guaranteed results. A properly structured campaign is the foundation, not a magic trick. But it beats the scar-tissue alternative of running nothing at all.
 
@@ -680,14 +680,14 @@ https://sparkmysite.com/skill-drops
 
 ### Primary 2 — UGC/Native (~200 words)
 
-**Hook:** An agency owner's confession: most of what small businesses pay retainers for could be a downloadable file by now.
+**Hook:** A confession from inside the marketing industry: most of what small businesses pay retainers for could be a downloadable file by now.
 
 ```text
-An agency owner's confession: most of what small businesses pay retainers for could be a downloadable file by now.
+A confession from inside the marketing industry: most of what small businesses pay retainers for could be a downloadable file by now.
 
 We run a marketing shop in Lakeland. We know exactly what goes into a Google Ads setup - because clients have paid us to do it for years.
 
-Here's the honest truth: the setup part doesn't need a retainer anymore. AI got good enough that we could package our process into a skill for Claude, and the setup happens on the owner's own laptop.
+Here's the honest truth: the setup part doesn't need a retainer anymore. AI got good enough that we could package our process into a skill for Claude (the AI assistant), and the setup happens on the owner's own laptop.
 
 So that's what we did. The $10/Day Google Ads Skill uploads into your Claude and sets up your initial campaigns - your account, your control, spend capped at ten bucks a day paid straight to Google.
 
@@ -709,7 +709,7 @@ https://sparkmysite.com/skill-drops
 ```text
 No retainer, no contract, no login held hostage: a downloadable skill now handles the Google Ads setup agencies charge for.
 
-If getting burned by a marketing vendor left a permanent flinch, read the ownership terms on this:
+For owners left with a permanent flinch by a past marketing vendor, here are ownership terms worth reading:
 
 THE TOOL: The $10/Day Google Ads Skill - the first Spark Skill Drop. A downloadable skill you upload into your own Claude (the AI assistant).
 
@@ -725,7 +725,7 @@ WHAT YOU NEED: A Claude subscription with Claude in Chrome, a Google Ads account
 
 That's the whole deal, in plain language, because the last marketer who confused you was doing it on purpose.
 
-We're Spark Sites - Lakeland-based, building websites and marketing since 2018, and our model has always been that clients should understand exactly what they're paying for. This time we went one further: you don't pay, and you own the capability.
+We're Spark Sites - Lakeland-based, building websites and marketing since 2013, and our model has always been that clients should understand exactly what they're paying for. This time we went one further: you don't pay, and you own the capability.
 
 Download the skill:
 https://sparkmysite.com/skill-drops
@@ -735,12 +735,12 @@ https://sparkmysite.com/skill-drops
 
 ### Primary 4 — Pattern Interrupt (~80 words)
 
-**Hook:** A marketing agency just released the thing agencies aren't supposed to release.
+**Hook:** A marketing team just released the thing agencies aren't supposed to release.
 
 ```text
-A marketing agency just released the thing agencies aren't supposed to release.
+A marketing team just released the thing agencies aren't supposed to release.
 
-Our Google Ads setup process. Packaged as a downloadable skill. Running in your Claude, your account, your control.
+Our Google Ads setup process. Packaged as a downloadable skill. Running in your Claude AI, your account, your control - $10/day of ad spend, no retainer.
 
 Free.
 
@@ -759,7 +759,7 @@ https://sparkmysite.com/skill-drops
 ```text
 "Intelligent, productive and a pleasure to work with in every possible way." Here's what that looks like as a free download.
 
-That review is from Charles L., about working with our team at Spark Sites. We include it because if you've been burned by a marketing vendor before, you're not evaluating a product right now - you're evaluating whether anyone in this industry can be trusted.
+That review is from Charles L., about working with our team at Spark Sites on our regular client services. We include it because owners who've been burned by a marketing vendor before aren't really evaluating a product - they're evaluating whether anyone in this industry can be trusted.
 
 Fair. So here's what trust looks like in practice:
 
@@ -767,7 +767,7 @@ We packaged our own Google Ads setup process - the one clients hire us for - int
 
 Everything runs where you can see it. Your Claude. Your Google Ads account. Your logins, kept by you. If we disappeared tomorrow, your campaign wouldn't notice.
 
-We built it that way on purpose. Our whole model since 2018 has been earning trust through transparency - explaining what we're doing and why, so clients understand the value instead of taking it on faith. A skill you own and watch work is that philosophy, shipped as a file.
+We built it that way on purpose. Our whole model since 2013 has been earning trust through transparency - explaining what we're doing and why, so clients understand the value instead of taking it on faith. A skill you own and watch work is that philosophy, shipped as a file.
 
 You'll need a Claude subscription (with Claude in Chrome) and a Google Ads account. No technical background required.
 
@@ -783,7 +783,7 @@ https://sparkmysite.com/skill-drops
 
 **Headline 1 — Proof-led**
 ```text
-From a Real Lakeland Agency, Est. 2018 - Given Away Free
+From a Real Lakeland Marketing Team, Est. 2013 - Free
 ```
 
 **Headline 2 — Mechanism-led**
@@ -814,12 +814,12 @@ Marketing You Own. Not Marketing You Rent.
 
 ### Primary 1 — Deep Ad (~500 words)
 
-**Hook:** After years of training business owners on marketing tools, we stopped. Now we train their Claude instead - and it works in minutes
+**Hook:** After years of training business owners on marketing tools, we stopped. Now we train their Claude AI instead - it works in minutes
 
 ```text
-After years of training business owners on marketing tools, we stopped. Now we train their Claude instead - and it works in minutes
+After years of training business owners on marketing tools, we stopped. Now we train their Claude AI instead - it works in minutes
 
-Since 2018, our answer to almost everything has been education.
+Since 2013, our answer to almost everything has been education.
 
 Workshops at Cohatch. Free strategy calls that ran long because somebody finally explained the thing no one else would. Trainings where business owners learned what they were actually paying for. Our founding belief at Spark Sites has always been: the more you understand, the more value you get.
 
@@ -882,10 +882,10 @@ https://sparkmysite.com/skill-drops
 
 ### Primary 3 — Direct Response (~300 words)
 
-**Hook:** The workshop is now a file. Everything a Google Ads training teaches, packaged as a skill that installs into Claude in minutes.
+**Hook:** The workshop is now a file. Everything a Google Ads training teaches, packaged as a skill that installs into Claude AI in minutes.
 
 ```text
-The workshop is now a file. Everything a Google Ads training teaches, packaged as a skill that installs into Claude in minutes.
+The workshop is now a file. Everything a Google Ads training teaches, packaged as a skill that installs into Claude AI in minutes.
 
 Compare the two ways to get your first real ad campaign running:
 
@@ -911,7 +911,7 @@ What it costs: nothing but your email. Ad spend is $10/day, paid to Google, cont
 
 What we'd tell you in the workshop, so we'll tell you here: a properly built campaign is the starting line, not a finish line. But most owners never get to the starting line, and that's the part this fixes.
 
-We're Spark Sites - teaching Lakeland businesses since 2018. This is the same education, minus your evenings.
+We're Spark Sites - teaching Lakeland businesses since 2013. This is the same education, minus your evenings.
 
 Download the skill:
 https://sparkmysite.com/skill-drops
@@ -921,14 +921,14 @@ https://sparkmysite.com/skill-drops
 
 ### Primary 4 — Pattern Interrupt (~80 words)
 
-**Hook:** Our best marketing workshop just got condensed into a file you don't have to attend.
+**Hook:** Our best marketing workshop just got condensed into a file that nobody has to attend.
 
 ```text
-Our best marketing workshop just got condensed into a file you don't have to attend.
+Our best marketing workshop just got condensed into a file that nobody has to attend.
 
 No chairs. No notebook. No "I'll implement it this weekend."
 
-Upload the skill into your Claude. It sets up your Google Ads at $10 a day while you keep running your business.
+Upload the skill into your Claude AI. It sets up your Google Ads at $10 a day of ad spend while you keep running your business.
 
 The education happens. You just aren't the one being educated.
 
@@ -940,14 +940,14 @@ https://sparkmysite.com/skill-drops
 
 ### Primary 5 — Testimonial (~300 words)
 
-**Hook:** "So much feedback and guidance and a whole lot of value on a FREE call." That philosophy just became a downloadable skill.
+**Hook:** "So much feedback and guidance and a whole lot of value on a FREE call." We're bringing that philosophy to a downloadable skill.
 
 ```text
-"So much feedback and guidance and a whole lot of value on a FREE call." That philosophy just became a downloadable skill.
+"So much feedback and guidance and a whole lot of value on a FREE call." We're bringing that philosophy to a downloadable skill.
 
 The full review, from Luiza H.: "I am so grateful for my conversation with Nicole and Grant. I received so much feedback and guidance and a whole lot of value on a FREE call. I connected with them at a workshop they did at the Cohatch in Lakeland on Social Media and Marketing (which was absolutely amazing). I am looking forward to learning more from them as they are both amazing guides in their areas of expertise."
 
-That's been the Spark Sites model since 2018: teach first, give real value away, let trust do the selling. Workshops, free calls, education over pressure.
+That's been the Spark Sites model since 2013: teach first, give real value away, let trust do the selling. Workshops, free calls, education over pressure. (Her review is about our live workshops and calls - the Skill Drop is the newest expression of the same approach.)
 
 Spark Skill Drops are that model's next chapter. Instead of only teaching people - which takes time most owners don't have - we now package what we teach into downloadable skills for Claude, the AI assistant. Upload one into your own Claude and the guidance executes itself.
 
@@ -978,7 +978,7 @@ The Workshop, Packaged as an Uploadable Claude Skill
 
 **Headline 3 — Outcome-led**
 ```text
-Campaigns Live in 30 Minutes. Zero Homework.
+Campaigns Live Today. Zero Homework.
 ```
 
 **Headline 4 — Curiosity-led**
@@ -999,14 +999,14 @@ All the Education. None of the Studying.
 
 ### Primary 1 — Deep Ad (~500 words)
 
-**Hook:** Marketing used to mean $1,500 retainers or 40-hour courses. Now it's a $10-a-day Google Ads campaign a downloaded skill sets up
+**Hook:** Marketing used to mean four-figure retainers or 40-hour courses. Now it's a $10-a-day Google Ads campaign a downloaded skill sets up
 
 ```text
-Marketing used to mean $1,500 retainers or 40-hour courses. Now it's a $10-a-day Google Ads campaign a downloaded skill sets up
+Marketing used to mean four-figure retainers or 40-hour courses. Now it's a $10-a-day Google Ads campaign a downloaded skill sets up
 
 For most local business owners, "real marketing" has always lived behind two doors, and both of them were expensive.
 
-Door one: the agency. Fifteen hundred a month, minimum commitments, and reports that need a translator. For a business doing solid-but-not-huge revenue, that math never worked.
+Door one: the agency. Hundreds to thousands a month, minimum commitments, and reports that need a translator. For a business doing solid-but-not-huge revenue, that math never worked.
 
 Door two: do it yourself. Free, technically - if you don't count the forty hours of courses, the platform's learning curve, and the quiet suspicion you set the whole thing up wrong.
 
@@ -1014,7 +1014,7 @@ So most owners pick the third door: nothing. The business runs on word of mouth 
 
 Here's what changed: the entry price is now ten dollars a day and one file upload.
 
-We're Spark Sites - a Lakeland web and marketing team, building for small businesses since 2018. Our slogan has always been that high-end doesn't have to mean high-cost. This year, AI finally let us prove it at a new level.
+We're Spark Sites - a Lakeland web and marketing team, building for small businesses since 2013. Our slogan has always been that high-end doesn't have to mean high-cost. This year, AI finally let us prove it at a new level.
 
 We packaged our Google Ads setup process into a Spark Skill Drop - a downloadable skill for Claude, the AI assistant. You upload the $10/Day Google Ads Skill into your own Claude, follow a walkthrough written for normal humans, and it sets up your initial campaigns: sensible structure, keywords for your local market, and spend capped at ten dollars a day.
 
@@ -1022,9 +1022,9 @@ Ten dollars. A day. That's a lunch. That's what many owners spend on boosted pos
 
 The honest fine print, because we always do the fine print out loud: you need a Claude subscription (with Claude in Chrome) and a Google Ads account. The $10/day goes to Google as ad spend - you can raise it, lower it, or pause it any time. And no setup - ours or anyone's - can guarantee results; anyone promising otherwise is a fourth door you should close. What the skill removes is the four-figure barrier between you and being in the game at all.
 
-The skill itself is free with an email address. That's the whole price.
+The skill itself is free with an email address. The only other costs: the Claude subscription and the $10 a day that goes to Google.
 
-Why free? Because it's the first in a series. Some owners will take the free skill and run - genuinely fine. Some will want every skill we release. Some will decide ten minutes in that they'd rather have our team handle everything - and that's the service we've offered since 2018.
+Why free? Because it's the first in a series. Some owners will take the free skill and run - genuinely fine. Some will want every skill we release. Some will decide ten minutes in that they'd rather have our team handle everything - and that's the service we've offered since 2013.
 
 But every one of those owners will have marketing running this week, for the price of lunch.
 
@@ -1036,16 +1036,16 @@ https://sparkmysite.com/skill-drops
 
 ### Primary 2 — UGC/Native (~200 words)
 
-**Hook:** A Lakeland business owner asked what real marketing costs now. The honest answer surprised both of us: ten dollars a day.
+**Hook:** The honest answer to what real marketing costs a Lakeland business now keeps surprising owners: about ten dollars a day of ad spend.
 
 ```text
-A Lakeland business owner asked what real marketing costs now. The honest answer surprised both of us: ten dollars a day.
+The honest answer to what real marketing costs a Lakeland business now keeps surprising owners: about ten dollars a day of ad spend.
 
-Not $1,500 a month for an agency. Not $300 for a course plus your weekends.
+Not four figures a month for an agency. Not a course plus your weekends.
 
 Ten dollars a day of ad spend, and a free downloadable skill that does the setup.
 
-Here's how it works. We took our Google Ads setup process - the one we've charged for since 2018 - and packaged it as a skill for Claude, the AI assistant. You upload it into your own Claude, and it builds your first campaigns with you: real structure, keywords for your local market, budget capped at $10/day so nothing runs away.
+Here's how it works. We took our Google Ads setup process - the one we've charged for since 2013 - and packaged it as a skill for Claude, the AI assistant. You upload it into your own Claude, and it builds your first campaigns with you: real structure, keywords for your local market, budget capped at $10/day so nothing runs away.
 
 The setup that used to be the expensive part is now the free part. The ad spend goes straight to Google, and you control every dollar.
 
@@ -1080,6 +1080,7 @@ The $10/Day Google Ads Skill - the first Spark Skill Drop. A downloadable skill 
 - Skill: free, with an email address
 - Setup time: about 30 minutes, guided walkthrough
 - Ad spend: $10/day, paid directly to Google, capped and controlled by you
+- Claude subscription: the plan you may already have (needs Claude in Chrome - the version that can click through Google Ads)
 - Technical background needed: none
 - What you get: your initial Google Ads campaigns, properly structured - local keywords, sane targeting, beginner traps handled
 
@@ -1087,7 +1088,7 @@ Requirements: a Claude subscription with Claude in Chrome, and a Google Ads acco
 
 What no one can sell you: guaranteed results. Ads are a system you run and learn from, not a slot machine. But the difference between $0/day and $10/day is the difference between invisible and in the game.
 
-We're Spark Sites, Lakeland, est. 2018. "High-end doesn't have to mean high-cost" has been our line for years. This is us putting a number on it: ten dollars.
+We're Spark Sites, Lakeland, est. 2013. "High-end doesn't have to mean high-cost" has been our line for years. This is us putting a number on it: ten dollars.
 
 Download the skill:
 https://sparkmysite.com/skill-drops
@@ -1104,7 +1105,7 @@ Everyone's marketing budget has a lunch in it.
 
 That's the whole pitch. $10 a day - lunch money - runs a real Google Ads campaign for a local business.
 
-The setup? A free skill you upload into your Claude. Thirty minutes. No course, no agency, no four-figure anything.
+The setup? A free skill you upload into your Claude AI. About thirty minutes. No course, no agency, no four-figure anything.
 
 The most affordable "we're finally doing marketing" moment ever shipped.
 
@@ -1123,7 +1124,7 @@ https://sparkmysite.com/skill-drops
 
 That phrase comes from Wesley S.'s review of our team: "Grant and Amber are excellent! Highly recommend for cost efficient and streamlined SEO, website and content generation."
 
-Cost-efficient and streamlined is kind of our whole personality at Spark Sites. We're a Lakeland team, we work with local budgets, and "high-end doesn't have to mean high-cost" has been the promise since 2018.
+That review is about our paid services - SEO, websites, content. But cost-efficient and streamlined is kind of our whole personality at Spark Sites. We're a Lakeland team, we work with local budgets, and "high-end doesn't have to mean high-cost" has been the promise since 2013.
 
 The Spark Skill Drop series is that promise taken to its logical end.
 
@@ -1135,7 +1136,7 @@ You need a Claude subscription (with Claude in Chrome) and a Google Ads account.
 
 And if what you actually want is the full Wesley experience - a team handling SEO, website, content, and ads while you run your business - that door is on the download page too. But it's a door, not a toll booth. The skill is yours either way.
 
-Marketing for the price of lunch. Setup for the price of an email.
+Setup for the price of an email. Ad spend for the price of lunch. The Claude subscription many owners already have covers the rest.
 
 https://sparkmysite.com/skill-drops
 ```
@@ -1161,7 +1162,7 @@ Real Google Ads Running for the Price of Lunch
 
 **Headline 4 — Curiosity-led**
 ```text
-The $1,500 Retainer vs. the $10 Bill
+The Monthly Retainer vs. the $10 Bill
 ```
 
 **Headline 5 — Benefit-led**

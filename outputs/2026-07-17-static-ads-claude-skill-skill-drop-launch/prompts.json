@@ -1,0 +1,92 @@
+{
+  "001_01_graphic": {
+    "ad": 1,
+    "angle": "Train Your Claude",
+    "style": "graphic",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Bright solarpunk-style graphic ad, white background with generous white space. Centered in the 1:1 safe zone: large bold warm serif headline reading \"We don't train you.\" on one line and \"We train your Claude.\" below it, with the words rendered in dark charcoal and 'your Claude' in a coral-to-hot-pink gradient (#FF6B47 to #E91E8C). Below the headline, a simple diagram: a glowing download arrow flowing into a friendly laptop icon, then a small upward line chart sprouting from the laptop like a plant seedling. Clean lines, organic integration of tech and nature, hopeful technological future, sun-drenched warmth. Fill top and bottom margins with soft pink/coral tinted (#FFE8E2) abstract leaf and sun shapes at low opacity. Keep all text centered vertically between 25% and 70% from top. No photorealistic people. No dark dystopian tech."
+  },
+  "001_02_lofi": {
+    "ad": 1,
+    "angle": "Train Your Claude",
+    "style": "lofi",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Casual candid smartphone-style photo, bright natural Florida light. A small business owner (40s, relaxed, real-looking, no fake smile) at a sunny cafe table with an open laptop, mid-click, looking quietly pleased. On the laptop screen, softly visible: a simple file-upload interface with a progress bar almost complete, no readable text. A small coffee cup and notebook beside the laptop, subtropical plants and warm golden-hour window light in the background. Authentic UGC feel, slightly imperfect framing, no studio polish. Keep the person and laptop in the center 1:1 zone, atmospheric cafe detail filling top and bottom margins."
+  },
+  "001_03_interrupt": {
+    "ad": 1,
+    "angle": "Train Your Claude",
+    "style": "interrupt",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Pattern-interrupt graphic on white. Centered in the 1:1 safe zone: a printed job posting pinned to a corkboard, headline in bold type: \"HELP WANTED: Ads Manager\" with a thick coral-to-pink gradient marker stroke crossing it out diagonally. Below it, a small clean sticky note reading \"Taught our Claude instead.\" in handwritten-style text. Bright, warm, sun-washed lighting, subtle palm foliage shadow across the corkboard. Fill top and bottom margins with corkboard texture and one pinned palm-tree postcard. Keep the crossed-out posting and sticky note centered vertically between 25% and 70% from top."
+  },
+  "001_04_graphic": {
+    "ad": 2,
+    "angle": "DIY Trap",
+    "style": "graphic",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Bright split-panel comparison graphic, white background, warm solarpunk energy. Centered in the 1:1 safe zone, two stacked panels: TOP panel labeled \"Learn it yourself\" in muted gray (#6B7280) showing a tangled pile of icons (video course play buttons, thick textbooks, dozens of browser tabs, a calendar with crossed-out weekends). BOTTOM panel labeled \"Upload one skill\" in bold dark charcoal with a single clean rounded file card icon glowing with a coral-to-hot-pink gradient edge (#FF6B47 to #E91E8C), a simple checkmark beside it. Bold warm serif labels, clean lines, generous white space. Fill top and bottom margins with soft coral-tinted sun rays at low opacity. Keep both panels centered vertically between 25% and 70% from top."
+  },
+  "001_05_lofi": {
+    "ad": 2,
+    "angle": "DIY Trap",
+    "style": "lofi",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Candid smartphone-style photo, warm lamp light. A female founder (30s, real, tired-but-determined, no fake smile) at a kitchen table at night, laptop open, one hand in her hair, surrounded by a mug and sticky notes. Laptop screen shows a paused tutorial video with a long progress bar, no readable text. Phone beside her glowing with a late-night lock screen. Authentic, slightly grainy, honest UGC energy, but warm and human, not bleak; a soft golden lamp glow keeps it hopeful. Keep her and the laptop in the center 1:1 zone, kitchen atmosphere filling top and bottom margins."
+  },
+  "001_06_interrupt": {
+    "ad": 2,
+    "angle": "DIY Trap",
+    "style": "interrupt",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Pattern-interrupt still-life photo, bright daylight on a white desk. Centered in the 1:1 safe zone: a comically tall stack of thick course binders and marketing textbooks teetering, with a tiny USB-drive-sized glowing card leaning against the base of the stack, lit with a subtle coral-to-pink gradient sheen. Small handwritten-style label under the card reading \"or... this\". Bright, warm, sun-drenched, hopeful; the stack is absurd, the card is calm. Fill top and bottom margins with white desk surface and one small potted succulent. Keep stack and card centered vertically between 25% and 70% from top."
+  },
+  "001_07_graphic": {
+    "ad": 3,
+    "angle": "Own It In-House",
+    "style": "graphic",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Bright graphic ad, white background. Centered in the 1:1 safe zone: a dark navy (#1A1A2E) closed box labeled \"agency retainer\" in small muted text, lid being lifted to release warm light; beside it, an open flat glowing card in coral-to-hot-pink gradient (#FF6B47 to #E91E8C) labeled \"YOUR Claude\" in bold warm serif. Visual message: closed black box versus open transparent tool. Clean lines, generous white space, hopeful solarpunk warmth, small organic leaf accents. Fill top and bottom margins with soft pink-tinted (#FFE8E2) geometric shapes. Keep both objects centered vertically between 25% and 70% from top."
+  },
+  "001_08_lofi": {
+    "ad": 3,
+    "angle": "Own It In-House",
+    "style": "lofi",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Candid smartphone-style photo, bright natural light inside a real local storefront (hardware store or bakery counter feel, Central Florida warmth). A business owner (50s, genuine, no fake smile) turning a laptop toward the camera as if showing a friend, pointing at the screen where a simple clean dashboard layout is softly visible, no readable text. Body language says look, I can actually see what it's doing. Authentic UGC framing, warm daylight through the shop window, real business clutter in soft focus. Keep owner and laptop centered in the 1:1 zone, storefront atmosphere filling top and bottom margins."
+  },
+  "001_09_interrupt": {
+    "ad": 3,
+    "angle": "Own It In-House",
+    "style": "interrupt",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Pattern-interrupt graphic on bright white. Centered in the 1:1 safe zone: a generic monthly invoice document labeled \"Monthly Retainer\" in plain type (no company names) with a bold coral-to-pink gradient rubber stamp reading \"PAID FOR THE LAST TIME\" across it at an angle. Below, small clean text on a white card reading \"the skill is yours.\" Bright, sun-washed, hopeful; liberation, not anger. Fill top and bottom margins with white space and one warm gradient sun arc. Keep invoice and card centered vertically between 25% and 70% from top."
+  },
+  "001_10_graphic": {
+    "ad": 4,
+    "angle": "We Stopped Training Humans",
+    "style": "graphic",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Bright timeline graphic, white background, warm solarpunk style. Centered in the 1:1 safe zone: a three-step horizontal evolution; step 1: a small classroom icon labeled \"we taught workshops\", step 2: a laptop-with-person icon labeled \"we trained teams\", step 3 (largest, glowing): a rounded skill-card icon with a coral-to-hot-pink gradient border labeled \"we train your Claude\". A thin warm line connects them, growing thicker toward step 3 like a vine with small leaves. Bold warm serif labels, clean lines, generous white space. Fill top and bottom margins with soft sunrise gradient tints at low opacity. Keep the timeline centered vertically between 25% and 70% from top."
+  },
+  "001_11_lofi": {
+    "ad": 4,
+    "angle": "We Stopped Training Humans",
+    "style": "lofi",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Candid smartphone-style photo, bright coworking-space daylight. A friendly presenter caught mid-gesture next to a whiteboard where a marketing funnel diagram has been drawn, with a marker arrow redirecting from the audience toward a laptop on the table, and the words \"just upload it\" written beside the arrow in marker handwriting. Real workshop attendees' shoulders in soft-focus foreground. Warm, bright, communal, genuinely candid, no staged corporate polish. Keep presenter and whiteboard in the center 1:1 zone, workshop room atmosphere filling top and bottom margins."
+  },
+  "001_12_interrupt": {
+    "ad": 4,
+    "angle": "We Stopped Training Humans",
+    "style": "interrupt",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Pattern-interrupt graphic, bright white background. Centered in the 1:1 safe zone: a framed diploma-style certificate; the recipient line reads \"Awarded to: Your Claude\" in elegant serif, with a small gold-foil sun seal and a coral-to-pink gradient ribbon. The certificate title reads \"Google Ads\". Below the frame, small clean text reading \"the business gets the results\". Warm, witty, sun-washed, celebratory. Fill top and bottom margins with sparse confetti-like coral and pink paper dots. Keep the certificate centered vertically between 25% and 70% from top."
+  },
+  "001_13_graphic": {
+    "ad": 5,
+    "angle": "$10/Day Reframe",
+    "style": "graphic",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Bright graphic ad, white background, generous white space. Centered in the 1:1 safe zone: a simple descending ladder of three price tags; \"$1,500/mo agency\" (muted gray, small), \"$300 course\" (muted gray, small), and the bottom rung large and glowing: \"$10/day\" in bold warm serif with a coral-to-hot-pink gradient tag (#FF6B47 to #E91E8C). A small sprouting seedling grows from the bottom tag. Clean lines, hopeful solarpunk warmth, Florida sun energy. Fill top and bottom margins with soft warm gradient arcs at low opacity. Keep the price ladder centered vertically between 25% and 70% from top."
+  },
+  "001_14_lofi": {
+    "ad": 5,
+    "angle": "$10/Day Reframe",
+    "style": "lofi",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Candid smartphone-style overhead photo, bright Florida daylight on an outdoor cafe table. A ten dollar bill tucked under the corner of a smartphone; on the phone screen, a simple clean dashboard layout with a single green active-status dot, no readable text. A half-eaten pressed Cuban sandwich on a paper wrapper beside it. Authentic, warm, sunlit, slightly imperfect UGC framing. Keep the bill and phone in the center 1:1 zone, table texture and sandwich filling top and bottom margins."
+  },
+  "001_15_interrupt": {
+    "ad": 5,
+    "angle": "$10/Day Reframe",
+    "style": "interrupt",
+    "prompt": "Aspect ratio 9:16, resolution 1080x1920. Pattern-interrupt illustration, bright and playful solarpunk style. Centered in the 1:1 safe zone: a friendly retro vending machine painted white with coral-to-pink gradient trim, sitting in warm Florida sunlight with palm shadows. Instead of snacks, the rows hold glowing skill cards; the front row card reads \"Google Ads $10/day\" in bold warm serif. A hand reaches for the coin slot holding a single coin. Hopeful, whimsical, sun-drenched, tech-that-serves-people energy. Fill top and bottom margins with sky gradient and palm fronds. Keep the machine centered vertically between 25% and 70% from top."
+  }
+}
