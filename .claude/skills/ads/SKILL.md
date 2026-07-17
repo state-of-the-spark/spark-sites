@@ -294,6 +294,8 @@ Campaign Batch 001
 
 **Deep Ad spec (REQUIRED for Primary 1):** Every concept's Primary 1 follows the full Deep Ad Framework - the five dimensions (Resonance, Pain, Benefit, Challenge, Unique Approach), the 5-step body structure, and the element brainstorm. Load [references/deep-ad-framework.md](references/deep-ad-framework.md) before writing Deep Ad copy. The hook rules above (no questions, no you/your, 123-135 chars) come from this framework; the reference has the full formulas with examples.
 
+**Retargeting ads:** Every campaign needs a retargeting ad running alongside the cold ads. When writing retargeting copy (warm audience that visited the offer page but didn't convert), load [references/retargeting-copy-swipe-file.md](references/retargeting-copy-swipe-file.md) - a 7-part framework (opening, objections, counterarguments, social proof, urgency, risk reversal, CTA) with full swipe examples. Retargeting copy intentionally breaks cold-traffic hook rules (direct questions and "you" address are correct for warm audiences).
+
 ### Image Prompt Types
 
 | Type | Use Case |
