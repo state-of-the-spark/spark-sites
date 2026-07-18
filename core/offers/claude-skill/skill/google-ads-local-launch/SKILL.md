@@ -102,7 +102,12 @@ Follow in order. State what you're doing before each major step. If a screen req
 
 1. **Confirm the site research.** The site was browsed during intake Stage 2 — if anything was skipped (deeper service pages, quote/contact/about URLs), finish it now. You need **real** URLs for sitelinks and final URLs (confirm they resolve, never guess), the real phone number, and phrasing/benefits for keywords and ad copy.
 
-2. **Open Google Ads and select the account.** Go to `ads.google.com`. If multiple accounts exist, switch to the correct one (account picker, top right). Confirm the account name back to the user.
+2. **Open Google Ads and land on the RIGHT account — switch it yourself.** Go to `ads.google.com` and note which account loaded (name + customer ID, top right). Then climb this ladder, escalating only when a rung fails:
+   - **Wrong account showing? Switch it — don't ask.** Open the account picker (top right; also check "All accounts" and any manager/MCC sub-account list). Read the accounts available under the current Google login, find the target by name or customer ID, click it, and verify after the page loads that the name/ID now matches. Being logged into the right Google login but sitting on the wrong ad account is YOUR problem to fix with clicks, not the user's.
+   - **Target not in the picker?** Ask ONE interactive question, listing what you actually see: "I can see these accounts: [names/IDs]. The one we need isn't among them. Use one of these / Switch to a different Google login (you sign in, then I continue) / Create a new Google Ads account?"
+   - **Different Google login needed?** Click through to the sign-in/account-chooser screen and select the right Google account if it's listed — but the moment a password, 2FA, or "Confirm it's you" appears, stop and hand off (Guardrails). When the user finishes signing in, resume and re-verify the account.
+   - **No Ads account exists at all?** Offer to walk the user through creating one (skip Smart-campaign onboarding; get to the full editor) before proceeding.
+   - Finish by confirming the account name + customer ID back to the user before building anything.
 
 3. **Create the Search campaign.** Click **Campaigns → + New campaign**.
    - **Objective:** choose **Leads** (or "Create a campaign without a goal's guidance" if you want full manual control).
