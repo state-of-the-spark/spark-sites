@@ -84,7 +84,8 @@ Cover, in roughly this order:
 6. **Phone confirm** — "I found `[PHONE]` on your site — is that the number that should ring?" → "Yes (Recommended)" / "No, use a different number". Skip if calls aren't a lead type.
 7. **Hours confirm** — confirm the posted hours (drives dayparting), or let them correct. Skip for 24/7 online businesses.
 8. **Competitors to exclude** — offer any competitor names surfaced in research as options, plus "Something else" / "Skip".
-9. **Which Google Ads account** — only if more than one account is accessible; list the account names as options.
+9. **Own business or client?** — "Is this Google Ads build for your own business, or for a client you manage?" → "My own business (Recommended)" / "A client's business". If a client's: the build itself is identical, but the campaign must live in the client's own Ads account (or a sub-account under the user's manager/MCC account) — confirm which before step 2, and factor it into the account-switching ladder. Creating brand-new client accounts, MCC linking, and billing ownership are a coming expansion of this skill; if that's what's needed, say so honestly and help with what's possible today.
+10. **Which Google Ads account** — only if more than one account is accessible; list the account names as options.
 
 **Fallback:** if the interactive question tool is not available on the current surface, conduct the same interview **one question per message** in chat, stating the recommended default inline ("just say 'yes' to accept"). Never dump all questions as a single bulleted list.
 
