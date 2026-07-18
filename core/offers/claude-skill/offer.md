@@ -49,6 +49,10 @@ Three ascending paths from the thank-you page:
 
 Small business owners and entrepreneurs (see `core/audience.md`) who know they should be using AI but don't want to be trained on it. They've watched competitors move; they're overwhelmed by tools; the DIY learning curve is the thing that's stopped them. Also existing Spark clients who want capabilities in-house without hiring.
 
+## Skill Source
+
+The first skill's source of truth lives in this repo: `core/offers/claude-skill/skill/google-ads-local-launch/SKILL.md`. The distributable package is the same folder zipped as `google-ads-local-launch.skill` (one top-level folder containing SKILL.md, forward-slash paths). v1.1 (2026-07-18) replaced the bulleted intake with a three-stage guided onboarding: one free-text opener (name + website) → silent site research → interactive questionnaire (AskUserQuestion) whose options are generated from the research, with a one-question-per-message chat fallback.
+
 ## Open Items (Grant to confirm)
 
 - [x] **Mechanism name:** **Spark Skill Drops** (chosen by Grant 2026-07-17). First drop: "The $10/Day Google Ads Skill."
