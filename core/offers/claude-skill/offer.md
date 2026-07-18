@@ -51,7 +51,7 @@ Small business owners and entrepreneurs (see `core/audience.md`) who know they s
 
 ## Skill Source
 
-The first skill's source of truth lives in this repo: `core/offers/claude-skill/skill/google-ads-local-launch/SKILL.md`. The distributable package is the same folder zipped as `google-ads-local-launch.skill` (one top-level folder containing SKILL.md, forward-slash paths). v1.1 (2026-07-18) replaced the bulleted intake with a three-stage guided onboarding: one free-text opener (name + website) → silent site research → interactive questionnaire (AskUserQuestion) whose options are generated from the research, with a one-question-per-message chat fallback.
+The first skill's source of truth lives in this repo: `core/offers/claude-skill/skill/google-ads-local-launch/SKILL.md`. The distributable package is the same folder zipped as `google-ads-local-launch.skill` (one top-level folder containing SKILL.md, forward-slash paths). v1.1 (2026-07-18) replaced the bulleted intake with a three-stage guided onboarding: one free-text opener (name + website) → silent site research → interactive questionnaire (AskUserQuestion) whose options are generated from the research, with a one-question-per-message chat fallback. v1.2 (2026-07-18) generalized beyond home services: the research pass classifies the business into a profile (LOCAL_SERVICE / STOREFRONT / REGIONAL_NATIONAL / ONLINE_SELLER), profile-filtered steps adapt targeting, keywords, dayparting, and conversion goals, and ambiguous steps ask a mid-run interactive question instead of guessing. Shopping-feed campaigns remain out of scope (future skill). Fix motive: v1.1's description hard-refused non-home-services businesses during Grant's test.
 
 ## Open Items (Grant to confirm)
 
