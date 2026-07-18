@@ -33,10 +33,12 @@ Ad  →  Landing page  →  Email capture  →  Thank-you page
          what you get)                     └─ "Just do it for me" → Schedule a call / Spark Sites
 ```
 
-Three ascending paths from the thank-you page:
-1. **Free:** enter email → download the skill.
-2. **Membership:** join the Spark AI Skool group → access to every skill Spark ever creates. (Group is being refocused on Spark citizens / Spark Sites owners getting the full skill library.)
-3. **Done-for-you:** book a call / become a Spark Sites owner - we deploy it all, and owners get the full skill library too.
+Three doors (Grant, 2026-07-18 - supersedes the earlier ascending-paths draft):
+1. **Free with email:** enter email → download the skill (Jetpack form on the landing page).
+2. **Spark Sites owners:** every drop is already theirs - delivered via the owners' Facebook page.
+3. **Skool group:** join the Spark AI Skool group FREE → this skill + every future drop.
+
+Landing page: sparkmysite.com page 45198 (`claude-skills-google-ads`), built 2026-07-18 as draft - 7 Divi sections, design-tab styling only, blank template, hook "We don't train you. We train your Claude." Owners-page + Skool button URLs still placeholder.
 
 ## Value Proposition
 
