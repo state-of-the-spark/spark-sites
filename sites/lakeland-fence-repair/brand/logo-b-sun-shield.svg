@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 250" role="img" aria-label="Lakeland Fence Repair shield logo with rising sun and fence pickets">
+  <defs>
+    <clipPath id="shieldClip">
+      <path d="M 14 22 Q 14 14 22 14 L 198 14 Q 206 14 206 22 L 206 150 Q 206 196 110 238 Q 14 196 14 150 Z"/>
+    </clipPath>
+  </defs>
+  <!-- shield base -->
+  <path d="M 10 20 Q 10 10 20 10 L 200 10 Q 210 10 210 20 L 210 151 Q 210 200 110 244 Q 10 200 10 151 Z" fill="#153A22"/>
+  <path d="M 14 22 Q 14 14 22 14 L 198 14 Q 206 14 206 22 L 206 150 Q 206 196 110 238 Q 14 196 14 150 Z" fill="#F4F1E8"/>
+  <g clip-path="url(#shieldClip)">
+    <!-- sky -->
+    <rect x="14" y="14" width="192" height="86" fill="#F4F1E8"/>
+    <!-- sun + rays -->
+    <g>
+      <circle cx="110" cy="100" r="30" fill="#E8A33D"/>
+      <g stroke="#E8A33D" stroke-width="7" stroke-linecap="round">
+        <line x1="110" y1="52" x2="110" y2="38"/>
+        <line x1="76" y1="66" x2="66" y2="56"/>
+        <line x1="144" y1="66" x2="154" y2="56"/>
+      </g>
+    </g>
+    <!-- ground -->
+    <rect x="14" y="100" width="192" height="140" fill="#1F4D2E"/>
+    <!-- pickets -->
+    <g fill="#5C4030">
+      <path d="M 34 112 L 43 100 L 52 112 L 52 190 L 34 190 Z"/>
+      <path d="M 62 106 L 71 94 L 80 106 L 80 196 L 62 196 Z"/>
+      <path d="M 90 102 L 99 90 L 108 102 L 108 202 L 90 202 Z"/>
+      <path d="M 118 102 L 127 90 L 136 102 L 136 202 L 118 202 Z"/>
+      <path d="M 146 106 L 155 94 L 164 106 L 164 196 L 146 196 Z"/>
+      <path d="M 174 112 L 183 100 L 192 112 L 192 190 L 174 190 Z"/>
+    </g>
+    <rect x="14" y="122" width="192" height="8" fill="#4A3326"/>
+    <rect x="14" y="152" width="192" height="8" fill="#4A3326"/>
+  </g>
+  <!-- banner -->
+  <g>
+    <path d="M 6 172 L 214 172 L 214 204 L 6 204 Z" fill="#1F4D2E"/>
+    <path d="M 6 172 L 0 178 L 6 184 Z" fill="#112D1A"/>
+    <path d="M 214 172 L 220 178 L 214 184 Z" fill="#112D1A"/>
+    <text x="110" y="194" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="800" fill="#F4F1E8" letter-spacing="5" text-anchor="middle">LAKELAND</text>
+  </g>
+  <text x="110" y="222" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="800" fill="#E8A33D" letter-spacing="2.6" text-anchor="middle">FENCE REPAIR</text>
+</svg>

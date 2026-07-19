@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Lakeland Fence Repair circular badge logo with fence pickets and swan">
+  <defs>
+    <path id="arcTop" d="M 36 120 A 84 84 0 0 1 204 120" fill="none"/>
+    <path id="arcBottom" d="M 30 122 A 90 90 0 0 0 210 122" fill="none"/>
+  </defs>
+  <!-- outer badge -->
+  <circle cx="120" cy="120" r="118" fill="#153A22"/>
+  <circle cx="120" cy="120" r="112" fill="none" stroke="#E8A33D" stroke-width="2"/>
+  <!-- ring text -->
+  <text font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16.5" font-weight="800" fill="#F4F1E8" letter-spacing="3.2">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">LAKELAND FENCE REPAIR</textPath>
+  </text>
+  <text font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#E8A33D" letter-spacing="3">
+    <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">POLK COUNTY · FLORIDA</textPath>
+  </text>
+  <!-- side stars -->
+  <circle cx="26" cy="120" r="3" fill="#E8A33D"/>
+  <circle cx="214" cy="120" r="3" fill="#E8A33D"/>
+  <!-- center medallion -->
+  <circle cx="120" cy="120" r="64" fill="#F4F1E8"/>
+  <circle cx="120" cy="120" r="64" fill="none" stroke="#5C4030" stroke-width="2.5"/>
+  <g clip-path="url(#medClip)">
+  </g>
+  <clipPath id="medClip"><circle cx="120" cy="120" r="62"/></clipPath>
+  <g clip-path="url(#medClip)">
+    <!-- sun -->
+    <circle cx="120" cy="112" r="26" fill="#E8A33D"/>
+    <!-- fence pickets -->
+    <g fill="#5C4030">
+      <path d="M 78 96 L 84 88 L 90 96 L 90 150 L 78 150 Z"/>
+      <path d="M 96 90 L 102 82 L 108 90 L 108 150 L 96 150 Z"/>
+      <path d="M 114 86 L 120 78 L 126 86 L 126 150 L 114 150 Z"/>
+      <path d="M 132 90 L 138 82 L 144 90 L 144 150 L 132 150 Z"/>
+      <path d="M 150 96 L 156 88 L 162 96 L 162 150 L 150 150 Z"/>
+    </g>
+    <!-- rails -->
+    <rect x="66" y="104" width="108" height="6" fill="#4A3326"/>
+    <rect x="66" y="126" width="108" height="6" fill="#4A3326"/>
+    <!-- water -->
+    <rect x="56" y="150" width="128" height="34" fill="#1F4D2E"/>
+    <path d="M 56 150 Q 76 144 96 150 T 136 150 T 184 150 L 184 184 L 56 184 Z" fill="#1F4D2E"/>
+    <!-- swan (facing left) -->
+    <g>
+      <path d="M 104 158 C 106 148 116 144 126 144 L 134 144 C 143 144 148 148 148 152 C 152 149 154 145 154 140 C 155 151 149 159 137 160 L 115 160 C 108 160 105 159 104 158 Z" fill="#FFFFFF"/>
+      <path d="M 119 147 C 111 142 108 133 111 126 C 112.5 122.5 115 121 117 121.5" fill="none" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
+      <circle cx="116" cy="121" r="5.5" fill="#FFFFFF"/>
+      <path d="M 103 121 L 111 118 L 111 124 Z" fill="#E8A33D"/>
+      <path d="M 126 151 Q 134 147 142 150 Q 135 154 128 154 Z" fill="#E9E4D6"/>
+    </g>
+    <!-- water ripples -->
+    <path d="M 66 166 Q 80 162 94 166 T 122 166 T 150 166 T 178 166" fill="none" stroke="#E3EAE2" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+</svg>
