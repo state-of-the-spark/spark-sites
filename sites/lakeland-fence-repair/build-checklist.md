@@ -25,6 +25,8 @@ Rule: document each phase AS EXECUTED so this file becomes the reusable protocol
 - [x] Meta: Slim SEO installed; excerpts = meta descriptions (140-160 chars) on all pages; sitemap live at /sitemap.xml
 - [x] Sample page deleted; pretty permalinks confirmed; 16/16 pages verified (200, single H1, no leaked block markup, CTA, schema)
 - [x] Interim imagery: 5 CC0 public-domain photos (media 47-51, license + source recorded in each media description) placed on install/wood/vinyl/chain-link/storm pages
+- [x] Home v2 redesign (2026-07-19 late): Mossy Oak Fences structure adopted per Grant (profile: design-profile.md) - cover-block hero w/ photo + 70% forest overlay at fixed 560px (NOT full-vh), trust cards, 6 image-card services grid (4:3 crops), two-col editorial w/ photo, "Ready to get started?" 4-step + Jetpack quote form ON home (First/Last/Email/Phone/dropdown/message), sitewide mega-footer w/ full page hierarchy (4 columns). Copy unchanged per instruction.
+- [x] LESSON: Jetpack form submit is block `jetpack/button` - `jetpack/field-button` is dead and silently renders NO submit button (both forms shipped buttonless until caught; verify submit label text, not just "<form")
 - [ ] REPLACE interim photos with real job photos (or AI-generated after Gemini billing fix) before launch
 - [ ] Logo: BLOCKED - Gemini image models need billing enabled on the API key project (free tier limit 0; old nano-banana model retired). Header uses styled site-title text meanwhile
 - [ ] Staging is INDEXABLE (no X-Robots-Tag, blog_public not in REST): Grant flips Settings > Reading > "Discourage search engines" in wp-admin until DNS cutover, then flips back
