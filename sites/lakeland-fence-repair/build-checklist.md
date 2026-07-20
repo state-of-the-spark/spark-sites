@@ -12,10 +12,17 @@ Rule: document each phase AS EXECUTED so this file becomes the reusable protocol
 - [ ] Polk County / City of Lakeland local registration check for fence work
 - [ ] Lock canonical NAP string in variables.md BEFORE any listing is created
 
-## Phase 2 - Brand kit
-- [ ] 2-3 badge logo concepts (nano-banana drafts -> Canva master template with {city}/{icon}/{motif} variables)
-- [ ] Palette + type locked into theme.json tokens
-- [ ] Favicon + OG image
+## Phase 2 - Brand kit [LOGO DONE 2026-07-20]
+- [x] Final brand package delivered by Claude Design (direction "2b Wordmark Lockup - refined/estate"): 7 SVGs + brand guide, in `brand/final/`. Clone tokens {CITY} {TRADE} {PHONE} {TAGLINE} {COUNTY} - pickets and palette never change, so the kit re-clones per city (Bartow, Fort Meade)
+- [x] Logo live on staging: lockup-light in header (site-logo block, 280px), favicon as WP site icon
+- [ ] Palette: brand guide locks Estate gold #B08D3F, but the site ships Sun Gold #E8A33D on accent-1 (buttons/eyebrows). GRANT DECISION - reconcile or keep the brighter CTA gold deliberately
+- [ ] OG image (not yet built; seal.svg or monogram are candidates)
+
+### Phase 2 lessons (apply to every future tree)
+- **WordPress core refuses SVG uploads** (`rest_upload_sideload_error`). Either rasterize to PNG or add a sanitizing plugin. PNG chosen here: one less plugin in a site being built to sell.
+- **Never ship a live-text SVG as a logo.** The lockup calls Marcellus, which is not installed on the site or on most visitors' machines - and an SVG loaded via `<img>` cannot pull a webfont, so it silently falls back to Georgia (or generic serif on Android/Linux). Every visitor would see a slightly different logo. Fix: render to PNG with the font embedded (headless Chrome + base64 @font-face, script kept at `brand/final/rendered/`), or outline the text before shipping vector.
+- **Swapping site-title text for a fixed-width logo breaks a `nowrap` header.** Text shrinks and wraps; a 280px image does not. The TT25 header group had `flexWrap:"nowrap"`, so the Get a Free Quote button was clipped off-screen at 390px. Fix was block-native (`flexWrap:"wrap"`), no CSS added.
+- **Company name must move into the logo's alt text** when the text site-title is removed, or the name leaves the DOM entirely.
 
 ## Phase 3 - Site build (staging: lakelandfencerepair.mystagingwebsite.com) [CORE DONE 2026-07-19]
 - [x] Global styles via REST (global-styles post ID 5): brand palette on TT25 slugs (base/contrast/accent-1..6), SYSTEM FONT STACK instead of Font Library webfonts - deliberate CWV choice, zero font payload (deviation from original plan, keep for future trees)
@@ -28,7 +35,7 @@ Rule: document each phase AS EXECUTED so this file becomes the reusable protocol
 - [x] Home v2 redesign (2026-07-19 late): Mossy Oak Fences structure adopted per Grant (profile: design-profile.md) - cover-block hero w/ photo + 70% forest overlay at fixed 560px (NOT full-vh), trust cards, 6 image-card services grid (4:3 crops), two-col editorial w/ photo, "Ready to get started?" 4-step + Jetpack quote form ON home (First/Last/Email/Phone/dropdown/message), sitewide mega-footer w/ full page hierarchy (4 columns). Copy unchanged per instruction.
 - [x] LESSON: Jetpack form submit is block `jetpack/button` - `jetpack/field-button` is dead and silently renders NO submit button (both forms shipped buttonless until caught; verify submit label text, not just "<form")
 - [ ] REPLACE interim photos with real job photos (or AI-generated after Gemini billing fix) before launch
-- [ ] Logo: BLOCKED - Gemini image models need billing enabled on the API key project (free tier limit 0; old nano-banana model retired). Header uses styled site-title text meanwhile
+- [x] Logo: DONE 2026-07-20 (Claude Design package, not Gemini - Gemini billing no longer blocks the logo, only custom photography). Header site-title replaced by site-logo block (media 61, 1200x156 PNG, alt = "Lakeland Fence Repair - fence repair and installation in Polk County, Florida"); site icon set (media 62, 512x512). Verified rendered at 390/768/1440
 - [ ] Staging is INDEXABLE (no X-Robots-Tag, blog_public not in REST): Grant flips Settings > Reading > "Discourage search engines" in wp-admin until DNS cutover, then flips back
 - [ ] CWV check: LCP < 2.0s mobile, zero CLS (not yet measured)
 - [ ] GA4 + Search Console + call tracking wired (needs phone number decision)
