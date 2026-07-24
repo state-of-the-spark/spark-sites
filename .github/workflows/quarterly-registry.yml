@@ -1,0 +1,60 @@
+# Biz Scout — Quarterly Full Registry (one-off, manual)
+#
+# Runs the FULL quarterly Sunbiz download (not the daily new-filings pull),
+# filters to ACTIVE Polk County entities, and MERGES the complete set into
+# the existing "All Businesses" tab of the Polk County Business Directory
+# sheet. The push is additive (dedupe by document number, preserves First
+# Seen), so this safely SEEDS a full active-Polk registry without disturbing
+# the daily Biz Scout job. Purpose: give the AI Prospect Sourcer an
+# authoritative registry to verify established businesses against.
+#
+# Manual trigger only. Uses the same secrets as the daily job.
+
+name: Biz Scout — Quarterly Full Registry
+
+on:
+  workflow_dispatch:
+
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: agents/biz-scout/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r agents/biz-scout/requirements.txt
+
+      - name: Build full active-Polk registry (quarterly)
+        working-directory: agents/biz-scout
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python scraper.py --quarterly --active-only --push-sheet
+
+      - name: Upload CSV artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: polk-active-registry-${{ github.run_number }}
+          path: agents/biz-scout/data/polk-county-businesses.csv
+          retention-days: 14
+
+      - name: Summary
+        if: always()
+        working-directory: agents/biz-scout
+        run: |
+          echo "## Quarterly Full Registry" >> $GITHUB_STEP_SUMMARY
+          if [ -f data/polk-county-businesses.csv ]; then
+            echo "- **Total active Polk rows:** $(($(wc -l < data/polk-county-businesses.csv) - 1))" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **No data file generated** — check logs / SFTP quarterly paths" >> $GITHUB_STEP_SUMMARY
+          fi
