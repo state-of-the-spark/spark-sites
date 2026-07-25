@@ -6,6 +6,7 @@ status: draft
 platform: meta
 offer: seo
 campaign: seo-checklist-lead-magnet
+google_doc: https://docs.google.com/document/d/1cRhm2KFRr4rxbF3j2vqvlzROH364rhZ4YYFeVws-sA4/edit
 note: Long-form (Deep Ad) variations only, per Grant's request. Cold traffic. Retargeting long-form versions available on request.
 ---
 
