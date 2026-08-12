@@ -140,6 +140,10 @@ spark-sites/
 
 ---
 
+## Building Websites — Finish It, Verify It, Then Present (added 2026-08-12)
+
+**When you build, redesign, or refine a client website, run it to completion — do not build a round, list the fixes you found, and hand them back.** A fix you spotted is the next thing to do, not a status report. The loop: build on a DRAFT page → confirm applied (deploy/WP-CLI/REST success + cache flush) → open the live URL in **Claude in Chrome** with a `?v=N` cache-buster → screenshot → **zoom into the exact region and actually look** (desktop AND mobile, logged-out and logged-in when they differ) → every defect goes on the punch list → **fix the next item and re-verify** → repeat until the punch list is clear and the screenshots confirm the brief. Only then present for review, with the screenshots — and present only the things that are genuinely Grant's call (taste/brand approval, publishing over the live site, a tested access gap, a real design fork). Editing or pushing code is NOT verification; only your own eyes on a fresh screenshot count. Claude in Chrome (Rail 3) is Lumen-only, so this loop is Lumen's job in a live session — never a headless employee, never handed back to Grant. **Full procedure: the `/build-site` skill.** Origin: the AIM for Clean Air build (2026-08-12), where the loop was skipped and fixes were listed instead of made.
+
 ## Key Skills
 
 | Need | Skill | Source |
@@ -148,6 +152,7 @@ spark-sites/
 | Generate ads | `/mb-ads` | vip |
 | Create organic content | `/mb-organic` | vip |
 | Build landing pages | `/mb-site` | vip |
+| **Build/finish a client website (verify-to-done loop)** | **`/build-site`** | **spark-sites** |
 | Help with anything | `/mb-help` | vip |
 | **Find prospect leads** | **`/prospect-pro`** | **spark-sales** |
 | **Build demo site for a lead** | **`/demo-drop`** | **spark-sales** |
