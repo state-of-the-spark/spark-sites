@@ -1,9 +1,15 @@
 ---
 type: reference
-status: active
-updated: 2026-02-12
+status: superseded
+updated: 2026-08-12
+superseded_by: quiet-voltage.md
 ---
-# Visual Style
+# Visual Style (ARCHIVED — superseded 2026-08-12)
+
+> **⚠️ This is the OLD Spark Sites brand** (bright "solarpunk," coral-to-pink gradient, Fraunces + DM Sans). It was replaced on 2026-08-12 by the **"Quiet Voltage"** direction from the Claude Design brand system — porcelain grounds + rationed cyan, Hanken Grotesk + Source Serif 4, ink spark with a cyan dot, **no gradients**. See [`quiet-voltage.md`](quiet-voltage.md). Kept here for history only; do not build to this.
+
+---
+
 
 ## Brand Aesthetic
 

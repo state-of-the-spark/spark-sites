@@ -1,0 +1,32 @@
+/* ============================================================
+   SPARK SITES — subsidiary brand ("Quiet Voltage")
+   Premium, minimal, quietly expensive. Cyan spent one ray at a time.
+   Fonts: https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap
+   ============================================================ */
+:root {
+  /* color */
+  --ss-ink: #101418;             /* primary */
+  --ss-porcelain: #F7F8F8;       /* secondary ground */
+  --ss-cyan: #0ECAEB;            /* THE accent — spark core, hairlines, key numbers only */
+  --ss-graphite: #2A3138;        /* subheads, secondary surfaces */
+  --ss-mist: #E4E8EA;            /* borders, dividers, quiet panels */
+  --ss-gray: #8A939B;            /* muted text */
+  --ss-white: #FFFFFF;
+  /* type */
+  --ss-font-display: 'Hanken Grotesk', sans-serif;  /* 600, letter-spacing -0.03em */
+  --ss-font-body: 'Source Serif 4', serif;          /* 400 prose; italics for captions */
+  --ss-font-logo: 'Poppins', sans-serif;            /* wordmark ONLY, weight 600 */
+  /* radius */
+  --ss-radius: 10px;
+}
+/* usage rules:
+   - light-first: porcelain grounds, ink sections for statements
+   - spark mark renders INK with CYAN CENTER DOT (never full cyan here)
+   - cyan budget per view: the spark dot + at most one hairline/number
+   - primary CTA: ink fill, white text; hover reveals a 2px cyan underline/edge
+   - endorsement line in footers/cards: "a State of the Spark company" */
+.ss-btn-primary { background: var(--ss-ink); color: var(--ss-white); font-family: var(--ss-font-display); font-weight: 600; border-radius: var(--ss-radius); padding: 14px 26px; border: 0; }
+.ss-btn-primary:hover { box-shadow: inset 0 -2px 0 var(--ss-cyan); }
+.ss-hairline { height: 2px; width: 44px; background: var(--ss-cyan); }
+.ss-endorsement { font-family: var(--ss-font-display); font-size: 12px; letter-spacing: 0.06em; color: var(--ss-gray); }
+a.ss-link { color: var(--ss-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--ss-cyan); }

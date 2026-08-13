@@ -1,0 +1,873 @@
+<title>Spark Sites - Websites & Marketing That Work in 30 Days</title>
+<meta name="description" content="We design websites and marketing systems that generate leads, guaranteed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101418;
+    --porcelain:#F7F8F8;
+    --cyan:#0ECAEB;
+    --graphite:#2A3138;
+    --mist:#E4E8EA;
+    --gray:#8A939B;
+    --white:#FFFFFF;
+
+    --max:1180px;
+    --gutter:clamp(20px, 5vw, 64px);
+    --pad-section: clamp(72px, 10vw, 120px);
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--porcelain);
+    color:var(--ink);
+    font-family:'Source Serif 4', serif;
+    font-size:1.0625rem;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    width:100%;
+  }
+  img,svg{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3,h4{
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.03em;
+    line-height:1.1;
+    margin:0;
+  }
+  p{margin:0;}
+  ul{list-style:none;margin:0;padding:0;}
+  button{font-family:inherit;cursor:pointer;}
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding-left:var(--gutter);
+    padding-right:var(--gutter);
+  }
+
+  :focus-visible{
+    outline:2px solid var(--cyan);
+    outline-offset:3px;
+  }
+
+  /* ---------- Eyebrow / index ---------- */
+  .eyebrow{
+    display:block;
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    font-size:12.5px;
+    margin-bottom:20px;
+  }
+  .eyebrow.on-ink{color:#9BA6AD;}
+  .eyebrow.on-porcelain{color:var(--gray);}
+
+  .index-num{
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:600;
+    letter-spacing:0.06em;
+    font-size:13px;
+    color:var(--gray);
+  }
+
+  /* cyan hairline device - 44x2, at most one per section */
+  .hairline{
+    width:44px;
+    height:2px;
+    background:var(--cyan);
+    margin-top:20px;
+    margin-bottom:0;
+  }
+
+  /* ---------- Sections ---------- */
+  section{
+    padding-top:var(--pad-section);
+    padding-bottom:var(--pad-section);
+    position:relative;
+  }
+  .on-ink{background:var(--ink); color:var(--white);}
+  .on-ink .muted{color:#AEB6BC;}
+  .on-porcelain{background:var(--porcelain); color:var(--ink);}
+  .on-porcelain .muted{color:var(--graphite);}
+
+  .hairline-top{border-top:1px solid var(--mist);}
+  .hairline-top-ink{border-top:1px solid rgba(255,255,255,0.12);}
+
+  /* ---------- Reveal (JS-optional enhancement) ---------- */
+  .reveal{
+    opacity:1;
+    transform:none;
+  }
+  .js-ready .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .js-ready .reveal.in-view{
+    opacity:1;
+    transform:none;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    border-radius:10px;
+    padding:15px 28px;
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+    border:1px solid transparent;
+    transition:box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
+    white-space:nowrap;
+  }
+  /* primary on light grounds: ink fill, white text; hover reveals cyan ledge */
+  .btn-primary-light{
+    background:var(--ink);
+    color:var(--white);
+  }
+  .btn-primary-light:hover{box-shadow:inset 0 -2px 0 var(--cyan);}
+
+  /* primary on ink grounds: white fill, ink text */
+  .btn-primary-ink{
+    background:var(--white);
+    color:var(--ink);
+  }
+  .btn-primary-ink:hover{background:#EDEFEF;}
+
+  /* secondary / outline */
+  .btn-outline-light{
+    background:transparent;
+    color:var(--ink);
+    border-color:var(--mist);
+  }
+  .btn-outline-light:hover{border-color:var(--cyan);}
+  .btn-outline-ink{
+    background:transparent;
+    color:var(--white);
+    border-color:rgba(255,255,255,0.18);
+  }
+  .btn-outline-ink:hover{border-color:var(--cyan);}
+
+  /* text link - ink text, cyan underline */
+  .text-link{
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+    color:var(--ink);
+    text-decoration:underline;
+    text-decoration-color:var(--cyan);
+    text-underline-offset:3px;
+    display:inline-flex;
+    align-items:center;
+  }
+  .text-link.on-ink{color:var(--white);}
+
+  .btn-row{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:24px;
+  }
+
+  /* ---------- Spark mark ---------- */
+  .spark{flex:none;}
+
+  /* ---------- Nav ---------- */
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(247,248,248,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--mist);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:18px;
+    padding-bottom:18px;
+    color:var(--ink);
+  }
+  .wordmark{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+    font-size:1.1rem;
+    letter-spacing:-0.02em;
+    text-transform:lowercase;
+    color:var(--ink);
+  }
+  .wordmark.on-ink{color:var(--white);}
+
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:36px;
+  }
+  .nav-links a{
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:500;
+    font-size:0.92rem;
+    color:var(--graphite);
+    transition:color .2s ease;
+  }
+  .nav-links a:hover{color:var(--ink);}
+
+  .nav-cta{display:flex; align-items:center;}
+  .nav-cta .btn{padding:11px 20px; font-size:0.85rem;}
+
+  .hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    width:40px;
+    height:40px;
+    background:transparent;
+    border:1px solid var(--mist);
+    border-radius:8px;
+  }
+  .hamburger span{
+    width:18px;
+    height:2px;
+    background:var(--ink);
+    display:block;
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .mobile-panel{
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    padding:8px var(--gutter) 24px;
+    border-top:1px solid var(--mist);
+  }
+  .mobile-panel.open{display:flex;}
+  .mobile-panel a{
+    padding:14px 0;
+    border-bottom:1px solid var(--mist);
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:500;
+    color:var(--ink);
+  }
+  .mobile-panel .btn{margin-top:16px; width:100%;}
+
+  @media (max-width: 880px){
+    .nav-links, .nav-cta{display:none;}
+    .hamburger{display:flex;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding-top:clamp(64px, 10vw, 108px);
+    padding-bottom:clamp(80px, 11vw, 120px);
+  }
+  .hero-inner{max-width:760px;}
+  .hero h1{
+    font-size:clamp(2.4rem, 5.5vw, 4rem);
+  }
+  .hero .subhead{
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:500;
+    font-size:clamp(1.05rem, 1.8vw, 1.3rem);
+    color:var(--graphite);
+    margin-top:26px;
+    letter-spacing:-0.01em;
+  }
+  .hero .body-copy{
+    max-width:520px;
+    color:var(--graphite);
+    font-size:1.0625rem;
+    margin-top:14px;
+    margin-bottom:40px;
+  }
+
+  /* ---------- Cards (services) ---------- */
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:0;
+    border:1px solid var(--mist);
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:56px;
+  }
+  .card{
+    padding:36px 30px;
+    border-right:1px solid var(--mist);
+    background:var(--white);
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .card:last-child{border-right:none;}
+  .card .icon-wrap{
+    width:42px;
+    height:42px;
+    border:1px solid var(--mist);
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .card .icon-wrap svg{width:20px; height:20px; stroke:var(--ink);}
+  .card h3{
+    font-size:1.1rem;
+    font-weight:600;
+  }
+  .card p{color:var(--graphite); font-size:0.95rem;}
+
+  @media (max-width: 980px){
+    .card-grid{grid-template-columns:repeat(2, 1fr);}
+    .card{border-bottom:1px solid var(--mist);}
+    .card:nth-child(2){border-right:none;}
+    .card:nth-child(4){border-right:none; border-bottom:none;}
+    .card:nth-child(3){border-bottom:none;}
+  }
+  @media (max-width: 560px){
+    .card-grid{grid-template-columns:1fr;}
+    .card{border-right:none !important;}
+  }
+
+  /* ---------- Section headers ---------- */
+  .section-head{
+    max-width:680px;
+    margin-bottom:56px;
+  }
+  .section-head h2{
+    font-size:clamp(1.8rem, 3.4vw, 2.75rem);
+  }
+  .section-head.center{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+
+  /* ---------- Logos strip ---------- */
+  .logos-band{text-align:center;}
+  .logos-band h3{
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    font-size:clamp(1.1rem, 2.2vw, 1.4rem);
+    margin-bottom:44px;
+  }
+  .logos-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:0;
+    border-top:1px solid var(--mist);
+    border-left:1px solid var(--mist);
+  }
+  .logo-tile{
+    flex:1 1 200px;
+    min-width:200px;
+    padding:26px 20px;
+    border-right:1px solid var(--mist);
+    border-bottom:1px solid var(--mist);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:500;
+    font-size:0.92rem;
+    letter-spacing:0.01em;
+    color:var(--gray);
+    transition:color .2s ease;
+  }
+  .logo-tile:hover{color:var(--graphite);}
+
+  /* ---------- Problem (ink, statement) ---------- */
+  .problem-inner{max-width:640px;}
+  .problem-inner h2{font-size:clamp(1.9rem, 3.8vw, 2.9rem);}
+  .problem-inner .body-copy{
+    max-width:540px;
+    color:#C6CCD0;
+    font-size:1.0625rem;
+    margin-top:24px;
+    margin-bottom:36px;
+  }
+
+  /* ---------- Value prop ---------- */
+  .value-top{max-width:680px; margin-bottom:16px;}
+  .value-top .body-copy{
+    color:var(--graphite);
+    font-size:1.0625rem;
+    margin-top:20px;
+    max-width:600px;
+  }
+
+  .benefit-list{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    margin-top:48px;
+    border-top:1px solid var(--mist);
+  }
+  .benefit-item{
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+    padding:26px 0;
+    border-bottom:1px solid var(--mist);
+  }
+  .benefit-item .tick{
+    flex:none;
+    margin-top:6px;
+    width:16px;
+    height:16px;
+  }
+  .benefit-item .tick svg{stroke:var(--ink);}
+  .benefit-item h4{
+    font-size:1.1rem;
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .benefit-item p{color:var(--graphite); font-size:0.97rem; max-width:520px;}
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:0;
+    border:1px solid var(--mist);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .testi-card{
+    padding:34px 30px;
+    border-right:1px solid var(--mist);
+    background:var(--white);
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  .testi-card:last-child{border-right:none;}
+  .testi-quote{
+    font-style:italic;
+    font-size:1.02rem;
+    line-height:1.6;
+    color:var(--graphite);
+  }
+  .testi-attr{
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:500;
+    font-size:0.85rem;
+    color:var(--gray);
+    letter-spacing:0.02em;
+  }
+
+  @media (max-width: 860px){
+    .testi-grid{grid-template-columns:1fr;}
+    .testi-card{border-right:none; border-bottom:1px solid var(--mist);}
+    .testi-card:last-child{border-bottom:none;}
+  }
+
+  /* ---------- Final CTA (ink, statement) ---------- */
+  .final-cta{text-align:center;}
+  .final-cta .wrap{max-width:760px;}
+  .final-cta h2{
+    font-size:clamp(1.9rem, 4vw, 3rem);
+  }
+  .final-cta .body-copy{
+    max-width:520px;
+    margin:24px auto 40px;
+    color:#C6CCD0;
+    font-size:1.08rem;
+  }
+  .final-cta .btn-row{justify-content:center;}
+  .final-cta .hairline{margin-left:auto; margin-right:auto;}
+
+  /* ---------- Footer ---------- */
+  .site-footer{padding-top:var(--pad-section); padding-bottom:40px;}
+  .footer-top{
+    display:grid;
+    grid-template-columns:1.3fr repeat(4, 1fr);
+    gap:40px;
+    padding-bottom:56px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-brand p.tagline{color:#9BA6AD; margin-top:14px; max-width:260px; font-size:0.95rem; font-family:'Source Serif 4', serif;}
+  .footer-brand .endorsement{
+    margin-top:16px;
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:500;
+    font-size:12px;
+    letter-spacing:0.06em;
+    color:var(--gray);
+  }
+  .footer-col h5{
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:600;
+    font-size:0.82rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:#9BA6AD;
+    margin-bottom:18px;
+  }
+  .footer-col ul{display:flex; flex-direction:column; gap:12px;}
+  .footer-col a{color:var(--white); font-size:0.95rem; transition:color .2s ease;}
+  .footer-col a:hover{color:var(--cyan);}
+
+  @media (max-width: 860px){
+    .footer-top{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width: 560px){
+    .footer-top{grid-template-columns:1fr;}
+  }
+
+  .footer-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+    padding-top:32px;
+  }
+  .footer-links-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+  }
+  .footer-links-row a{color:#9BA6AD; font-size:0.9rem;}
+  .footer-links-row a:hover{color:var(--white);}
+  .social-row{display:flex; gap:14px;}
+  .social-row a{
+    width:36px; height:36px;
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:8px;
+    display:flex; align-items:center; justify-content:center;
+    transition:border-color .2s ease;
+  }
+  .social-row a:hover{border-color:var(--cyan);}
+  .social-row svg{width:16px; height:16px; stroke:var(--gray); transition:stroke .2s ease;}
+  .social-row a:hover svg{stroke:var(--white);}
+  .copyright{
+    padding-top:28px;
+    color:var(--gray);
+    font-size:0.85rem;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.12);
+    margin-top:28px;
+  }
+
+  @media (max-width: 620px){
+    .footer-bottom{flex-direction:column; align-items:flex-start;}
+  }
+</style>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="#" class="wordmark" aria-label="Spark Sites home">
+      <svg class="spark" viewBox="0 0 100 100" width="24" height="24" aria-hidden="true"><g transform="rotate(-14 50 50)" fill="#101418"><polygon points="61,48.4 61,51.6 86,52.8 86,47.2"/><polygon transform="rotate(38 50 50)" points="61,48.4 61,51.6 79,52.8 79,47.2"/><polygon transform="rotate(76 50 50)" points="61,48.4 61,51.6 88,52.8 88,47.2"/><polygon transform="rotate(114 50 50)" points="61,48.4 61,51.6 78,52.8 78,47.2"/><polygon transform="rotate(152 50 50)" points="61,48.4 61,51.6 85,52.8 85,47.2"/><polygon transform="rotate(190 50 50)" points="61,48.4 61,51.6 80,52.8 80,47.2"/><polygon transform="rotate(228 50 50)" points="61,48.4 61,51.6 88,52.8 88,47.2"/><polygon transform="rotate(266 50 50)" points="61,48.4 61,51.6 78,52.8 78,47.2"/><polygon transform="rotate(304 50 50)" points="61,48.4 61,51.6 84,52.8 84,47.2"/></g><circle cx="50" cy="50" r="4" fill="#0ECAEB"/></svg>
+      spark sites
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">AI &amp; Automations</a>
+      <a href="#services">Website Design</a>
+      <a href="#value">Other Marketing Services</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary-light" href="tel:8634095635">Text/Call: 863-409-5635</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="mobilePanel" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#services">AI &amp; Automations</a>
+    <a href="#services">Website Design</a>
+    <a href="#value">Other Marketing Services</a>
+    <a class="btn btn-primary-light" href="tel:8634095635">Text/Call: 863-409-5635</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="on-porcelain hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow on-porcelain">Websites &amp; Marketing That Work in 30 Days</p>
+      <h1>More Leads. Less Stress.</h1>
+      <div class="hairline" aria-hidden="true"></div>
+      <p class="subhead">Websites &amp; Marketing That Work in 30 Days</p>
+      <p class="body-copy">We design websites and marketing systems that generate leads, guaranteed.</p>
+      <div class="btn-row">
+        <a href="tel:8634095635" class="btn btn-primary-light">Call or Text me! (863) 409-5635</a>
+        <a href="#final-cta" class="text-link">Book Your Free Consult</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="on-porcelain" id="services">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow on-porcelain">What We Do</p>
+        <h2>A full-stack growth partner, not another vendor.</h2>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M7 14h4"/></svg>
+          </div>
+          <span class="index-num">01</span>
+          <h3>Website Design</h3>
+          <p>Sites built to convert visitors into booked calls, not just look good.</p>
+        </div>
+        <div class="card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          </div>
+          <span class="index-num">02</span>
+          <h3>Marketing</h3>
+          <p>Campaigns tied to pipeline, so every dollar spent points at revenue.</p>
+        </div>
+        <div class="card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="15" r="3"/><path d="M10.5 9.5l4 4"/></svg>
+          </div>
+          <span class="index-num">03</span>
+          <h3>Influencers</h3>
+          <p>Local voices that put your business in front of buyers who trust them.</p>
+        </div>
+        <div class="card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="10" r="1.2"/><circle cx="15" cy="10" r="1.2"/><path d="M8 15c1.2 1 2.7 1.5 4 1.5s2.8-.5 4-1.5"/></svg>
+          </div>
+          <span class="index-num">04</span>
+          <h3>AI + Automations</h3>
+          <p>Systems that follow up, qualify, and book while you run the business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section class="on-porcelain hairline-top logos-band">
+    <div class="wrap reveal">
+      <h3>Awesome Clients We Have Served!</h3>
+      <div class="logos-row">
+        <div class="logo-tile">S &amp; D Website</div>
+        <div class="logo-tile">Patriot Craft Coffee</div>
+        <div class="logo-tile">Balance Culture</div>
+        <div class="logo-tile">Black and Brew Coffee</div>
+        <div class="logo-tile">Humarian Probonix</div>
+        <div class="logo-tile">Executive Career Upgrades</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM (ink, statement) -->
+  <section class="on-ink">
+    <div class="wrap reveal problem-inner">
+      <p class="eyebrow on-ink">The Problem</p>
+      <h2>You Don't Need More Hustle, You Need a Better System</h2>
+      <p class="body-copy">Chasing the same customers week after week gets exhausting fast. Traffic shows up, but it doesn't convert, and the leads quietly slip away. Meanwhile you're juggling five different marketing tools, trying to be the strategist, designer, and follow-up team all at once.</p>
+      <div class="btn-row">
+        <a href="#final-cta" class="btn btn-primary-ink">Let's Fix that - Together</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITION -->
+  <section class="on-porcelain" id="value">
+    <div class="wrap reveal">
+      <div class="value-top">
+        <p class="eyebrow on-porcelain">What You Get</p>
+        <h2>We Build Websites That Spark Growth</h2>
+        <div class="hairline" aria-hidden="true"></div>
+        <p class="body-copy">We combine design, automation, and strategy into one system built to generate leads, not just impressions.</p>
+      </div>
+
+      <div class="benefit-list">
+        <div class="benefit-item">
+          <span class="tick" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg>
+          </span>
+          <div>
+            <h4>Conversion-focused websites</h4>
+            <p>Every page is built around one job: turning visitors into booked calls.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <span class="tick" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg>
+          </span>
+          <div>
+            <h4>AI automations</h4>
+            <p>Follow-up, qualification, and booking happen automatically, day or night.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <span class="tick" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg>
+          </span>
+          <div>
+            <h4>Measurable ROI marketing</h4>
+            <p>Every campaign is tracked back to pipeline, so you always know what's working.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:44px;">
+        <a href="#final-cta" class="btn btn-primary-light">Book Your Free Consult</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="on-porcelain hairline-top">
+    <div class="wrap reveal">
+      <div class="section-head center">
+        <p class="eyebrow on-porcelain">Proof</p>
+        <h2>Trusted by Entrepreneurs Who Get Results</h2>
+      </div>
+
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p class="testi-quote">"Our new site started booking calls in the first week. It finally feels like our marketing is working for us instead of the other way around."</p>
+          <p class="testi-attr">- Owner, Local Business</p>
+        </div>
+        <div class="testi-card">
+          <p class="testi-quote">"I stopped juggling five different tools. Now the follow-up happens automatically and I actually get to run my business."</p>
+          <p class="testi-attr">- Founder, Service Company</p>
+        </div>
+        <div class="testi-card">
+          <p class="testi-quote">"Straightforward process, clear communication, and a site that actually looks like us. Leads started coming in within a month."</p>
+          <p class="testi-attr">- Owner, Retail Brand</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA (ink, statement) -->
+  <section class="on-ink final-cta" id="final-cta">
+    <div class="wrap reveal">
+      <h2>Do You Need a Professionally Designed Website That Generates Leads?</h2>
+      <p class="body-copy">Look professional. Focus on your business. We'll take care of your site.</p>
+      <div class="btn-row">
+        <a href="tel:8634095635" class="btn btn-primary-ink">Book Your Free Consult</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer on-ink">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="wordmark on-ink">
+          <svg class="spark" viewBox="0 0 100 100" width="24" height="24" aria-hidden="true"><g transform="rotate(-14 50 50)" fill="#FFFFFF"><polygon points="61,48.4 61,51.6 86,52.8 86,47.2"/><polygon transform="rotate(38 50 50)" points="61,48.4 61,51.6 79,52.8 79,47.2"/><polygon transform="rotate(76 50 50)" points="61,48.4 61,51.6 88,52.8 88,47.2"/><polygon transform="rotate(114 50 50)" points="61,48.4 61,51.6 78,52.8 78,47.2"/><polygon transform="rotate(152 50 50)" points="61,48.4 61,51.6 85,52.8 85,47.2"/><polygon transform="rotate(190 50 50)" points="61,48.4 61,51.6 80,52.8 80,47.2"/><polygon transform="rotate(228 50 50)" points="61,48.4 61,51.6 88,52.8 88,47.2"/><polygon transform="rotate(266 50 50)" points="61,48.4 61,51.6 78,52.8 78,47.2"/><polygon transform="rotate(304 50 50)" points="61,48.4 61,51.6 84,52.8 84,47.2"/></g><circle cx="50" cy="50" r="4" fill="#0ECAEB"/></svg>
+          spark sites
+        </a>
+        <p class="tagline">Websites and marketing systems built to generate leads, not just look good.</p>
+        <p class="endorsement">A STATE OF THE SPARK COMPANY</p>
+      </div>
+      <div class="footer-col">
+        <h5>Websites</h5>
+        <ul>
+          <li><a href="#services">Website Design</a></li>
+          <li><a href="#">Strategy</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Influencers</h5>
+        <ul>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Coaching</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Marketing</h5>
+        <ul>
+          <li><a href="#">Content Marketing</a></li>
+          <li><a href="#">SEO + AIO</a></li>
+          <li><a href="#">Marketing Tips</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Automations</h5>
+        <ul>
+          <li><a href="#">AI Agents</a></li>
+          <li><a href="#">Is AI Worth It?</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-links-row">
+        <a href="#">Contact</a>
+        <a href="#">Meet Team</a>
+        <a href="#">Resources</a>
+        <a href="#">Client Login</a>
+      </div>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.3"/><circle cx="16.2" cy="7.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Google">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 12h6.5"/><path d="M12 3.5c2 2.2 3 5.2 3 8.5s-1 6.3-3 8.5"/><path d="M12 3.5c-2 2.2-3 5.2-3 8.5s1 6.3 3 8.5"/><path d="M4 12h16"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <p class="copyright">&copy; 2026 Spark Sites. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var hamburger = document.getElementById('hamburgerBtn');
+    var panel = document.getElementById('mobilePanel');
+    hamburger.addEventListener('click', function(){
+      var open = panel.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    panel.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        panel.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    if('IntersectionObserver' in window){
+      document.documentElement.classList.add('js-ready');
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+      document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    }
+  })();
+</script>
