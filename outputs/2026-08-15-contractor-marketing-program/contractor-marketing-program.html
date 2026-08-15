@@ -24,6 +24,12 @@ body.page #main-content{padding:0!important;}
 #sscp .fcard{background:#FFFFFF;border:1px solid #E4E8EA;border-radius:14px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;transition:border-color .15s;}
 #sscp .fcard:hover{border-color:#0ECAEB;}
 #sscp .flink:hover{color:#0ECAEB!important;}
+#sscp .mega-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;}
+#sscp .fcol-h{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FFFFFF;margin-bottom:10px;}
+#sscp .mega-cols a{display:block;font-size:14px;color:#B6BEC5;padding:5px 0;text-decoration:none;}
+#sscp .mega-cols a:hover{color:#0ECAEB;}
+#sscp .msoc a{color:#B6BEC5;display:inline-flex;}
+#sscp .msoc a:hover{color:#0ECAEB;}
 #sscp h1,#sscp h2,#sscp h3{margin:0;}
 #sscp #sscp-mtoggle{display:none;background:none;border:0;cursor:pointer;padding:6px;}
 #sscp #sscp-mmenu{display:none;}
@@ -38,6 +44,7 @@ body.page #main-content{padding:0!important;}
   #sscp .hero-right{padding:0!important;}
   #sscp .sec{padding-left:22px!important;padding-right:22px!important;}
   #sscp .grid3{grid-template-columns:1fr!important;}
+  #sscp .mega-cols{grid-template-columns:1fr 1fr!important;gap:24px!important;}
   #sscp .price-grid{grid-template-columns:1fr!important;gap:36px!important;}
   #sscp .faq-grid{grid-template-columns:1fr!important;gap:32px!important;}
   #sscp .faq-qa{grid-template-columns:1fr!important;}
@@ -54,6 +61,7 @@ body.page #main-content{padding:0!important;}
   #sscp .hero h1{font-size:32px!important;}
   #sscp .hbtns{flex-direction:column!important;align-items:stretch!important;}
   #sscp .hbtns a{text-align:center;}
+  #sscp .mega-cols{grid-template-columns:1fr!important;}
 }
 </style>
 <div id="sscp">
@@ -218,6 +226,7 @@ body.page #main-content{padding:0!important;}
         <div style="background:#FFFFFF;border:1px solid #E4E8EA;border-top:3px solid #0ECAEB;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px;"><p style="margin:0;font-family:'Source Serif 4',serif;font-size:16px;line-height:1.6;color:#2A3138;">&ldquo;The best part is the ease of everything. I can sit back and not worry about this part of the business.&rdquo;</p><span style="font-size:13px;font-weight:600;color:#8A939B;">- Owner, electrical contractor</span></div>
         <div style="background:#FFFFFF;border:1px solid #E4E8EA;border-top:3px solid #0ECAEB;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px;"><p style="margin:0;font-family:'Source Serif 4',serif;font-size:16px;line-height:1.6;color:#2A3138;">&ldquo;I stopped juggling five tools. Follow-up happens automatically and I actually get to run my business.&rdquo;</p><span style="font-size:13px;font-weight:600;color:#8A939B;">- Founder, HVAC company</span></div>
       </div>
+      <a href="https://goo.gl/maps/JDsur6BAjFG2" target="_blank" rel="noopener" style="align-self:flex-start;color:#0891B2;font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#0ECAEB;">Read our reviews on Google &rarr;</a>
       <div class="audit" style="background:rgba(14,202,235,0.08);border:1px solid #C8E9F1;border-radius:14px;padding:28px 32px;display:flex;align-items:center;gap:32px;">
         <div class="audit-photo" style="flex-shrink:0;width:220px;height:150px;border-radius:12px;background:#101418;display:flex;align-items:center;justify-content:center;overflow:hidden;"><svg width="48" height="48" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#FFFFFF"></use><use href="#sscp-dot" fill="#0ECAEB"></use></svg></div>
         <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
@@ -272,6 +281,21 @@ body.page #main-content{padding:0!important;}
         <a href="#pricing" class="flink" style="font-size:14px;color:#B6BEC5;">Pricing</a>
         <a href="#faq" class="flink" style="font-size:14px;color:#B6BEC5;">FAQ</a>
         <a href="#cta" class="flink" style="font-size:14px;color:#B6BEC5;">Contact</a>
+      </div>
+    </div>
+    <div class="wrap mega-footer" style="border-top:1px solid #2A3138;margin-top:32px;padding-top:36px;display:flex;flex-direction:column;gap:34px;">
+      <div class="mega-cols">
+        <div><div class="fcol-h">Websites</div><a href="/website-design/">Website Design</a><a href="/web-strategy/">Website Strategy</a><a href="/website-support/">Website Support</a></div>
+        <div><div class="fcol-h">Marketing</div><a href="/content-marketing/">Content Marketing</a><a href="/what-is-ai-optimization-ai-search-success/">SEO + AIO</a><a href="https://sparkmysite.com/category/seo-marketing/">Marketing Tips</a></div>
+        <div><div class="fcol-h">Influencers</div><a href="https://hotmodagency.com/" target="_blank" rel="noopener">Influencer Marketing</a><a href="https://hotmodagency.com/" target="_blank" rel="noopener">Influencer Coaching</a></div>
+        <div><div class="fcol-h">Automations</div><a href="/category/ai-agents/">AI Agents</a><a href="https://isaiworthit.com/" target="_blank" rel="noopener">Is AI Worth It?</a><a href="/spark-my-site-account/">Client Login</a></div>
+        <div><div class="fcol-h">Company</div><a href="/contact-spark-sites">Contact</a><a href="https://sparkmysite.com/our-team/">Meet the Spark Team</a><a href="/blog">Website Resources</a></div>
+      </div>
+      <div class="msoc" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+        <a href="https://goo.gl/maps/JDsur6BAjFG2" target="_blank" rel="noopener" style="color:#0ECAEB;font-size:14px;font-weight:600;text-decoration:none;margin-right:8px;">Read our Google reviews &rarr;</a>
+        <a href="https://www.facebook.com/sparksites/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"></path></svg></a>
+        <a href="https://www.instagram.com/sparkmysite/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6zm6.9-11.2a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0z"></path></svg></a>
+        <a href="https://goo.gl/maps/JDsur6BAjFG2" target="_blank" rel="noopener" aria-label="Find us on Google"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"></path></svg></a>
       </div>
     </div>
     <div class="wrap footer-bottom" style="border-top:1px solid #2A3138;margin-top:32px;padding-top:18px;display:flex;justify-content:space-between;">
