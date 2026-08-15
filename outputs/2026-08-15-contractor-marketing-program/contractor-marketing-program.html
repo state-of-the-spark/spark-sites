@@ -1,0 +1,285 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+/* hide theme chrome + force full-width (Divi sidebar layout) */
+#sidebar,.et_pb_widget_area,#main-content h1.main_title,.et_post_meta_wrapper,.entry-title{display:none!important;}
+#left-area{width:100%!important;max-width:100%!important;padding:0!important;float:none!important;}
+#content-area{width:100%!important;max-width:100%!important;padding:0!important;}
+#main-content .container{width:100%!important;max-width:100%!important;padding:0!important;}
+#main-content .container .et_pb_row{width:100%!important;max-width:100%!important;}
+#page-container{padding-top:0!important;}
+body.page #main-content{padding:0!important;}
+#sscp *{box-sizing:border-box;}
+#sscp{font-family:'Hanken Grotesk',sans-serif;color:#101418;background:#F7F8F8;line-height:1.4;overflow-x:hidden;}
+#sscp a{color:#101418;text-decoration:none;}
+#sscp .wrap{max-width:1400px;margin:0 auto;}
+#sscp .cta-cyan{background:#0ECAEB;color:#06313A;font-weight:700;border-radius:10px;text-decoration:none;display:inline-block;transition:background .15s,color .15s;}
+#sscp .cta-cyan:hover{background:#0891B2;color:#FFFFFF;}
+#sscp .cta-ink{background:#101418;color:#FFFFFF;font-weight:600;border-radius:10px;text-decoration:none;display:inline-block;transition:box-shadow .15s;}
+#sscp .cta-ink:hover{box-shadow:inset 0 -2px 0 #0ECAEB;color:#FFFFFF;}
+#sscp .cta-white:hover{background:#FFFFFF!important;color:#101418!important;}
+#sscp .navlink{font-size:14px;font-weight:500;color:#2A3138;}
+#sscp .navlink:hover{color:#0891B2;}
+#sscp .fcard{background:#FFFFFF;border:1px solid #E4E8EA;border-radius:14px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;transition:border-color .15s;}
+#sscp .fcard:hover{border-color:#0ECAEB;}
+#sscp .flink:hover{color:#0ECAEB!important;}
+#sscp h1,#sscp h2,#sscp h3{margin:0;}
+#sscp #sscp-mtoggle{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+#sscp #sscp-mmenu{display:none;}
+@media(max-width:900px){
+  #sscp .nav-desktop{display:none!important;}
+  #sscp #sscp-mtoggle{display:block!important;}
+  #sscp #sscp-mmenu.open{display:flex!important;}
+  #sscp header{padding:16px 20px!important;}
+  #sscp .hero{grid-template-columns:1fr!important;gap:36px!important;padding:44px 22px 40px!important;}
+  #sscp .hero h1{font-size:38px!important;}
+  #sscp .hero-photo{position:relative!important;width:100%!important;height:220px!important;top:auto!important;left:auto!important;margin-bottom:14px;}
+  #sscp .hero-right{padding:0!important;}
+  #sscp .sec{padding-left:22px!important;padding-right:22px!important;}
+  #sscp .grid3{grid-template-columns:1fr!important;}
+  #sscp .price-grid{grid-template-columns:1fr!important;gap:36px!important;}
+  #sscp .faq-grid{grid-template-columns:1fr!important;gap:32px!important;}
+  #sscp .faq-qa{grid-template-columns:1fr!important;}
+  #sscp .audit{flex-direction:column!important;align-items:flex-start!important;gap:20px!important;}
+  #sscp .audit-photo{width:100%!important;height:180px!important;}
+  #sscp .footer-top{flex-direction:column!important;gap:24px!important;}
+  #sscp .footer-links{flex-wrap:wrap;gap:20px!important;}
+  #sscp .footer-bottom{flex-direction:column!important;gap:10px!important;}
+  #sscp h2{font-size:30px!important;}
+  #sscp .cmp{overflow-x:auto;}
+  #sscp .cmp-inner{min-width:520px;}
+}
+@media(max-width:520px){
+  #sscp .hero h1{font-size:32px!important;}
+  #sscp .hbtns{flex-direction:column!important;align-items:stretch!important;}
+  #sscp .hbtns a{text-align:center;}
+}
+</style>
+<div id="sscp">
+  <svg width="0" height="0" style="position:absolute;"><defs>
+    <symbol id="sscp-rays" viewBox="0 0 100 100"><g transform="rotate(-14 50 50)">
+      <polygon points="61,48.4 61,51.6 86,52.8 86,47.2"></polygon>
+      <polygon transform="rotate(38 50 50)" points="61,48.4 61,51.6 79,52.8 79,47.2"></polygon>
+      <polygon transform="rotate(76 50 50)" points="61,48.4 61,51.6 88,52.8 88,47.2"></polygon>
+      <polygon transform="rotate(114 50 50)" points="61,48.4 61,51.6 78,52.8 78,47.2"></polygon>
+      <polygon transform="rotate(152 50 50)" points="61,48.4 61,51.6 85,52.8 85,47.2"></polygon>
+      <polygon transform="rotate(190 50 50)" points="61,48.4 61,51.6 80,52.8 80,47.2"></polygon>
+      <polygon transform="rotate(228 50 50)" points="61,48.4 61,51.6 88,52.8 88,47.2"></polygon>
+      <polygon transform="rotate(266 50 50)" points="61,48.4 61,51.6 78,52.8 78,47.2"></polygon>
+      <polygon transform="rotate(304 50 50)" points="61,48.4 61,51.6 84,52.8 84,47.2"></polygon>
+    </g></symbol>
+    <symbol id="sscp-dot" viewBox="0 0 100 100"><circle cx="50" cy="50" r="4"></circle></symbol>
+  </defs></svg>
+
+  <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 72px;border-bottom:1px solid #E4E8EA;background:#F7F8F8;position:sticky;top:0;z-index:50;">
+    <a href="https://sparkmysite.com/" style="display:flex;align-items:center;text-decoration:none;">
+      <img src="https://sparkmysite.com/wp-content/uploads/2026/08/spark-sites-logo-black-text.png" alt="Spark Sites" style="height:34px;width:auto;display:block;">
+    </a>
+    <nav class="nav-desktop" style="display:flex;gap:30px;align-items:center;">
+      <a href="#program" class="navlink">The Program</a>
+      <a href="#pricing" class="navlink">Pricing</a>
+      <a href="#trades" class="navlink">Who we help</a>
+      <a href="#faq" class="navlink">FAQ</a>
+      <a href="https://sparkmysite.com/product/spark-care-growth/" class="cta-cyan" style="font-size:14px;padding:11px 22px;">Get started now</a>
+    </nav>
+    <button id="sscp-mtoggle" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#101418" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+  </header>
+  <div id="sscp-mmenu" style="flex-direction:column;gap:4px;padding:12px 22px 18px;background:#F7F8F8;border-bottom:1px solid #E4E8EA;position:sticky;top:69px;z-index:49;">
+    <a href="#program" class="navlink" style="padding:10px 0;">The Program</a>
+    <a href="#pricing" class="navlink" style="padding:10px 0;">Pricing</a>
+    <a href="#trades" class="navlink" style="padding:10px 0;">Who we help</a>
+    <a href="#faq" class="navlink" style="padding:10px 0;">FAQ</a>
+    <a href="https://sparkmysite.com/product/spark-care-growth/" class="cta-cyan" style="font-size:14px;padding:12px 22px;text-align:center;margin-top:6px;">Get started now</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" style="display:grid;grid-template-columns:7fr 5fr;gap:64px;padding:88px 72px 72px;max-width:1400px;margin:0 auto;align-items:center;">
+    <div style="display:flex;flex-direction:column;gap:22px;">
+      <span style="align-self:flex-start;background:rgba(14,202,235,0.14);color:#0891B2;font-size:13px;font-weight:700;letter-spacing:0.1em;padding:7px 16px;border-radius:999px;">BUILT FOR CONTRACTORS &amp; HOME SERVICES</span>
+      <h1 style="font-weight:600;font-size:56px;line-height:1.06;letter-spacing:-0.03em;">Contractor marketing that <span style="color:#0891B2;">generates leads.</span></h1>
+      <p style="margin:0;font-family:'Source Serif 4',serif;font-size:19px;line-height:1.6;color:#2A3138;max-width:520px;">Your website, SEO, reviews, CRM, and AI follow-up - run as one program, by one team, for one monthly number. Live in 30 days.</p>
+      <div class="hbtns" style="display:flex;gap:16px;align-items:center;">
+        <a href="https://sparkmysite.com/product/spark-care-growth/" class="cta-cyan" style="font-size:15px;padding:15px 30px;">Get started now</a>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2L-OByW_l30ZamDR9N2kPF1gsttwOAgGbn4MF75GrDREzBKvN8pkVo969YKzHDuqLZyIylZYU6" target="_blank" rel="noopener" class="cta-ink" style="font-size:15px;padding:15px 30px;">Request a consult</a>
+      </div>
+      <span style="font-size:13px;color:#8A939B;">No contracts. No hidden fees. Just $297/month.</span>
+    </div>
+    <div class="hero-right" style="position:relative;padding:48px 0 0 56px;">
+      <div class="hero-photo" style="position:absolute;top:0;left:0;width:78%;height:92%;border-radius:14px;box-shadow:0 24px 48px rgba(16,20,24,0.22);overflow:hidden;background:#101418;">
+        <img src="https://sparkmysite.com/wp-content/uploads/2026/08/contractor-hero-jobsite.webp" alt="Contractors reviewing blueprints on a jobsite" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:14px;">
+        <div style="background:#101418;border-radius:14px;padding:26px 28px;display:flex;gap:18px;align-items:center;box-shadow:0 12px 28px rgba(16,20,24,0.18);">
+          <span style="font-weight:700;font-size:30px;color:#0ECAEB;min-width:96px;">30 days</span>
+          <span style="font-family:'Source Serif 4',serif;font-size:15px;line-height:1.5;color:#9AA4AC;">from kickoff to a live, lead-ready website.</span>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid #E4E8EA;border-radius:14px;padding:26px 28px;display:flex;gap:18px;align-items:center;box-shadow:0 12px 28px rgba(16,20,24,0.12);">
+          <span style="font-weight:700;font-size:30px;color:#101418;min-width:96px;">90 day</span>
+          <span style="font-family:'Source Serif 4',serif;font-size:15px;line-height:1.5;color:#2A3138;">money-back guarantee. Don't like it? Cancel and get a refund.</span>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid #E4E8EA;border-radius:14px;padding:26px 28px;display:flex;gap:18px;align-items:center;box-shadow:0 12px 28px rgba(16,20,24,0.12);">
+          <span style="font-weight:700;font-size:30px;color:#101418;min-width:96px;">0</span>
+          <span style="font-family:'Source Serif 4',serif;font-size:15px;line-height:1.5;color:#2A3138;">contracts. We earn your business month to month.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRADES -->
+  <section id="trades" class="sec" style="background:#FFFFFF;border-top:1px solid #E4E8EA;border-bottom:1px solid #E4E8EA;padding:26px 72px;">
+    <div class="wrap" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:0.1em;color:#8A939B;margin-right:8px;">WHO WE HELP</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Roofing</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">HVAC</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Plumbing</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Electrical</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Painting</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Landscaping</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Pressure Washing</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Remodeling</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Pest Control</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Cleaning</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Decking</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Septic</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Siding</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">Windows</span>
+      <span style="border:1px solid #C8E9F1;background:rgba(14,202,235,0.07);color:#0A6E85;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">General Contractors</span>
+    </div>
+  </section>
+
+  <!-- PROGRAM GRID -->
+  <section id="program" class="sec" style="padding:80px 72px;">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:40px;">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:700px;">
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.14em;color:#0891B2;">THE SPARK PROGRAM</span>
+        <h2 style="font-weight:600;font-size:40px;letter-spacing:-0.03em;line-height:1.12;">Everything you need to be a successful contractor. In one program.</h2>
+        <p style="margin:0;font-family:'Source Serif 4',serif;font-size:17px;line-height:1.6;color:#2A3138;">No contracts. No surprises. Just results - every piece below is included in $297/month.</p>
+      </div>
+      <div class="grid3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Custom website, unlimited pages</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">A custom contractor site with mobile optimization and SEO built in - designed to convert visitors into booked jobs.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">AI-enhanced project content</h3><span style="background:#0ECAEB;color:#06313A;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:3px 8px;border-radius:999px;">NEW</span></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">AI-assisted writing that turns your finished jobs into content that ranks and converts.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Local SEO</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">Optimized listings, on-site SEO, and location targeting so you rank in the areas you actually serve.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Content marketing</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">Custom blog and service content that boosts SEO and positions you as the local expert.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Citations &amp; backlinks</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">Quality backlinks and local citations that build authority and trust in search results.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Google Business Profile</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">We optimize, manage, and monitor your listing to help you show up in the local 3-pack.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Contractor-ready CRM</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">Organize leads, manage contacts, and track every conversation so more jobs close.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Automated review management</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">Requests and tracks reviews from happy customers automatically to grow your reputation.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">SEO + AEO + GEO</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">Search, answer-engine, and generative-engine optimization - so Google and AI tools recommend you.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">24/7 appointment scheduler</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">Customers book online any time. No back-and-forth, no missed opportunities.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Online payments &amp; invoicing</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">Branded invoices and secure payments - easier for customers, faster for you.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Lead capture + AI follow-up</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">Custom forms feed your dashboard, and AI follow-up answers every lead in under a minute.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Dedicated marketing consultant</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">A real person who knows your goals, reviews results, and guides your growth.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Annual marketing plan</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">A year-long strategy tailored to your trade, your goals, and your growth timeline.</p></div>
+        <div class="fcard"><div style="display:flex;align-items:center;gap:10px;"><svg width="18" height="18" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#0ECAEB"></use><use href="#sscp-dot" fill="#101418"></use></svg><h3 style="font-weight:700;font-size:17px;letter-spacing:-0.01em;">Project spotlight marketing</h3></div><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.55;color:#2A3138;">We feature your best work to win search engines and convince web visitors.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="sec" style="background:#101418;padding:88px 72px;">
+    <div class="wrap price-grid" style="display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:center;">
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.14em;color:#0ECAEB;">CUTTING COSTS, NOT CORNERS</span>
+        <h2 style="font-weight:600;font-size:40px;letter-spacing:-0.03em;line-height:1.12;color:#FFFFFF;">No contracts. No hidden fees. Just <span style="color:#0ECAEB;">$297/month.</span></h2>
+        <p style="margin:0;font-family:'Source Serif 4',serif;font-size:17px;line-height:1.6;color:#9AA4AC;">It's cheaper to run your marketing through Spark Sites than to piece it together yourself - and a fraction of what a traditional agency charges.</p>
+        <a href="https://sparkmysite.com/product/spark-care-growth/" class="cta-cyan cta-white" style="align-self:flex-start;font-size:15px;padding:15px 30px;">Get started now</a>
+      </div>
+      <div class="cmp" style="background:#FFFFFF;border-radius:14px;overflow:hidden;">
+        <div class="cmp-inner">
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:16px 26px;border-bottom:1px solid #E4E8EA;background:#F7F8F8;">
+            <span style="font-weight:700;font-size:13px;color:#8A939B;">PRICING &amp; FEATURES</span>
+            <span style="font-weight:700;font-size:13px;color:#8A939B;text-align:center;">OTHER AGENCIES</span>
+            <span style="font-weight:700;font-size:13px;color:#0891B2;text-align:center;">SPARK SITES</span>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:12px 26px;border-bottom:1px solid #EFF2F3;align-items:center;"><span style="font-size:14px;font-weight:500;color:#2A3138;">Price</span><span style="font-size:14px;color:#C6CDD2;text-align:center;">$5,000+</span><span style="font-size:14px;font-weight:700;color:#0891B2;text-align:center;">$297/mo</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:12px 26px;border-bottom:1px solid #EFF2F3;align-items:center;"><span style="font-size:14px;font-weight:500;color:#2A3138;">Custom website design</span><span style="font-size:14px;color:#C6CDD2;text-align:center;">&#45;</span><span style="font-size:14px;font-weight:700;color:#0891B2;text-align:center;">Free</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:12px 26px;border-bottom:1px solid #EFF2F3;align-items:center;"><span style="font-size:14px;font-weight:500;color:#2A3138;">Hosting &amp; maintenance</span><span style="font-size:14px;color:#C6CDD2;text-align:center;">Extra</span><span style="font-size:14px;font-weight:700;color:#0891B2;text-align:center;">Included</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:12px 26px;border-bottom:1px solid #EFF2F3;align-items:center;"><span style="font-size:14px;font-weight:500;color:#2A3138;">SEO + AEO + GEO</span><span style="font-size:14px;color:#C6CDD2;text-align:center;">Extra</span><span style="font-size:14px;font-weight:700;color:#0891B2;text-align:center;">Included</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:12px 26px;border-bottom:1px solid #EFF2F3;align-items:center;"><span style="font-size:14px;font-weight:500;color:#2A3138;">Google Business Profile</span><span style="font-size:14px;color:#C6CDD2;text-align:center;">Extra</span><span style="font-size:14px;font-weight:700;color:#0891B2;text-align:center;">Included</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:12px 26px;border-bottom:1px solid #EFF2F3;align-items:center;"><span style="font-size:14px;font-weight:500;color:#2A3138;">Review management</span><span style="font-size:14px;color:#C6CDD2;text-align:center;">Extra</span><span style="font-size:14px;font-weight:700;color:#0891B2;text-align:center;">Included</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:12px 26px;border-bottom:1px solid #EFF2F3;align-items:center;"><span style="font-size:14px;font-weight:500;color:#2A3138;">CRM + booking + invoicing</span><span style="font-size:14px;color:#C6CDD2;text-align:center;">Extra</span><span style="font-size:14px;font-weight:700;color:#0891B2;text-align:center;">Included</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:12px 26px;border-bottom:1px solid #EFF2F3;align-items:center;"><span style="font-size:14px;font-weight:500;color:#2A3138;">AI lead follow-up</span><span style="font-size:14px;color:#C6CDD2;text-align:center;">&#45;</span><span style="font-size:14px;font-weight:700;color:#0891B2;text-align:center;">Included</span></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:12px 26px;align-items:center;"><span style="font-size:14px;font-weight:500;color:#2A3138;">Dedicated consultant</span><span style="font-size:14px;color:#C6CDD2;text-align:center;">&#45;</span><span style="font-size:14px;font-weight:700;color:#0891B2;text-align:center;">Included</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS + AUDIT -->
+  <section class="sec" style="padding:88px 72px;">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:40px;">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:640px;">
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.14em;color:#0891B2;">PROOF</span>
+        <h2 style="font-weight:600;font-size:38px;letter-spacing:-0.03em;line-height:1.15;">Trusted by owners who'd rather be on the job.</h2>
+      </div>
+      <div class="grid3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+        <div style="background:#FFFFFF;border:1px solid #E4E8EA;border-top:3px solid #0ECAEB;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px;"><p style="margin:0;font-family:'Source Serif 4',serif;font-size:16px;line-height:1.6;color:#2A3138;">&ldquo;The ROI was immediate. I wish I'd started sooner - the site was booking calls in the first week.&rdquo;</p><span style="font-size:13px;font-weight:600;color:#8A939B;">- Owner, pressure washing company</span></div>
+        <div style="background:#FFFFFF;border:1px solid #E4E8EA;border-top:3px solid #0ECAEB;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px;"><p style="margin:0;font-family:'Source Serif 4',serif;font-size:16px;line-height:1.6;color:#2A3138;">&ldquo;The best part is the ease of everything. I can sit back and not worry about this part of the business.&rdquo;</p><span style="font-size:13px;font-weight:600;color:#8A939B;">- Owner, electrical contractor</span></div>
+        <div style="background:#FFFFFF;border:1px solid #E4E8EA;border-top:3px solid #0ECAEB;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px;"><p style="margin:0;font-family:'Source Serif 4',serif;font-size:16px;line-height:1.6;color:#2A3138;">&ldquo;I stopped juggling five tools. Follow-up happens automatically and I actually get to run my business.&rdquo;</p><span style="font-size:13px;font-weight:600;color:#8A939B;">- Founder, HVAC company</span></div>
+      </div>
+      <div class="audit" style="background:rgba(14,202,235,0.08);border:1px solid #C8E9F1;border-radius:14px;padding:28px 32px;display:flex;align-items:center;gap:32px;">
+        <div class="audit-photo" style="flex-shrink:0;width:220px;height:150px;border-radius:12px;background:#101418;display:flex;align-items:center;justify-content:center;overflow:hidden;"><svg width="48" height="48" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#FFFFFF"></use><use href="#sscp-dot" fill="#0ECAEB"></use></svg></div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+          <h3 style="font-weight:700;font-size:22px;letter-spacing:-0.02em;">Not sure it's right for you? Our free audit will show you.</h3>
+          <p style="margin:0;font-family:'Source Serif 4',serif;font-size:15px;line-height:1.55;color:#2A3138;max-width:640px;">Not a generic &ldquo;free audit.&rdquo; We review your website and local presence like you already hired us - and hand you the findings either way.</p>
+        </div>
+        <a href="#cta" class="cta-ink" style="white-space:nowrap;font-size:15px;padding:14px 28px;">Claim your free audit &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="sec" style="background:#FFFFFF;border-top:1px solid #E4E8EA;padding:80px 72px;">
+    <div class="wrap faq-grid" style="display:grid;grid-template-columns:4fr 8fr;gap:64px;align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.14em;color:#0891B2;">FAQ</span>
+        <h2 style="font-weight:600;font-size:36px;letter-spacing:-0.03em;line-height:1.15;">Questions? Answers.</h2>
+        <div style="width:44px;height:2px;background:#0ECAEB;margin-top:6px;"></div>
+      </div>
+      <div class="faq-qa" style="display:grid;grid-template-columns:1fr 1fr;gap:32px 40px;">
+        <div style="display:flex;flex-direction:column;gap:8px;"><h3 style="font-weight:700;font-size:16px;letter-spacing:-0.01em;">How are you different from other marketing companies?</h3><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.6;color:#2A3138;">We're a focused team, not a bloated agency. Websites, AI, and hosting for local service businesses is all we do - with real, personalized support.</p></div>
+        <div style="display:flex;flex-direction:column;gap:8px;"><h3 style="font-weight:700;font-size:16px;letter-spacing:-0.01em;">Do you own my website if I cancel?</h3><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.6;color:#2A3138;">No. We don't hold sites hostage. If you cancel, we help you take your site with you.</p></div>
+        <div style="display:flex;flex-direction:column;gap:8px;"><h3 style="font-weight:700;font-size:16px;letter-spacing:-0.01em;">Why is this so much cheaper than agencies?</h3><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.6;color:#2A3138;">Systems. We've streamlined what contractors actually need and cut the overhead - you pay for results, not office space.</p></div>
+        <div style="display:flex;flex-direction:column;gap:8px;"><h3 style="font-weight:700;font-size:16px;letter-spacing:-0.01em;">How fast will I see leads?</h3><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.6;color:#2A3138;">Many clients see movement within weeks. Google Business Profile and follow-up automation kick in fast; SEO compounds over months.</p></div>
+        <div style="display:flex;flex-direction:column;gap:8px;"><h3 style="font-weight:700;font-size:16px;letter-spacing:-0.01em;">Will I talk to a real person?</h3><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.6;color:#2A3138;">Always. You get a dedicated consultant with a direct phone number and email - plus AI that covers the nights and weekends.</p></div>
+        <div style="display:flex;flex-direction:column;gap:8px;"><h3 style="font-weight:700;font-size:16px;letter-spacing:-0.01em;">Is there a long-term contract?</h3><p style="margin:0;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.6;color:#2A3138;">No. Month to month, with a 90-day money-back guarantee. We earn your business every month.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="cta" class="sec" style="padding:96px 72px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;">
+    <svg width="44" height="44" viewBox="0 0 100 100"><use href="#sscp-rays" fill="#101418"></use><use href="#sscp-dot" fill="#0ECAEB"></use></svg>
+    <h2 style="font-weight:600;font-size:42px;letter-spacing:-0.03em;line-height:1.12;max-width:760px;">Tell us about your business. We'll handle the rest.</h2>
+    <p style="margin:0;font-family:'Source Serif 4',serif;font-size:18px;line-height:1.6;color:#2A3138;max-width:540px;">A no-pressure call about your goals - and a straight answer on whether the program fits.</p>
+    <div class="hbtns" style="display:flex;gap:16px;align-items:center;justify-content:center;">
+      <a href="https://sparkmysite.com/product/spark-care-growth/" class="cta-cyan" style="font-size:15px;padding:15px 30px;">Get started now</a>
+      <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2L-OByW_l30ZamDR9N2kPF1gsttwOAgGbn4MF75GrDREzBKvN8pkVo969YKzHDuqLZyIylZYU6" target="_blank" rel="noopener" class="cta-ink" style="font-size:15px;padding:15px 30px;">Request a consult</a>
+    </div>
+    <span style="font-size:13px;color:#8A939B;">No contracts &middot; 90-day money-back guarantee &middot; $297/month</span>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sec" style="background:#101418;padding:48px 72px 36px;">
+    <div class="wrap footer-top" style="display:flex;justify-content:space-between;align-items:flex-start;gap:40px;">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <img src="https://sparkmysite.com/wp-content/uploads/2026/08/spark-sites-logo-white-text.png" alt="Spark Sites" style="height:30px;width:auto;display:block;">
+        <span style="font-size:12px;letter-spacing:0.06em;color:#8A939B;">A STATE OF THE SPARK COMPANY</span>
+      </div>
+      <div class="footer-links" style="display:flex;gap:40px;">
+        <a href="#program" class="flink" style="font-size:14px;color:#B6BEC5;">The Program</a>
+        <a href="#pricing" class="flink" style="font-size:14px;color:#B6BEC5;">Pricing</a>
+        <a href="#faq" class="flink" style="font-size:14px;color:#B6BEC5;">FAQ</a>
+        <a href="#cta" class="flink" style="font-size:14px;color:#B6BEC5;">Contact</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom" style="border-top:1px solid #2A3138;margin-top:32px;padding-top:18px;display:flex;justify-content:space-between;">
+      <span style="font-size:13px;color:#8A939B;">&copy; 2026 Spark Sites. All rights reserved.</span>
+      <span style="font-size:13px;color:#8A939B;">Lakeland &amp; Central Florida</span>
+    </div>
+  </footer>
+</div>
+<script>
+(function(){var t=document.getElementById('sscp-mtoggle'),m=document.getElementById('sscp-mmenu');if(t&&m){t.addEventListener('click',function(){m.classList.toggle('open');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');});});}})();
+</script>
