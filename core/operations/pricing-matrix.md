@@ -21,6 +21,37 @@ Internal reference for generating proposals. Not client-facing.
 
 ---
 
+## Marketing Support Packages ($297/mo Managed Tier)
+
+Flagship recurring tier, rolling out across verticals (added 2026-08-20, Grant). A productized monthly "digital marketing support and service" package, deliberately bounded so it stays profitable and repeatable across many clients. **Priced per business / per website: $297/mo each** (two brands = two subscriptions). Sold from a per-vertical landing page; spin new verticals from the same template.
+
+| Package | Vertical | Price | Woo Product | Landing Page |
+|---------|----------|-------|-------------|--------------|
+| Spark Care - Growth | Contractors / home services | $297/mo | 45617 (spark-care-growth) | /contractor-marketing-program/ |
+| Spark Ecommerce Care Growth | E-commerce / CPG brands | $297/mo | 45797 (spark-ecomm-care-growth) | /ecomm-marketing-support/ |
+
+*More verticals to follow from the same template as the rollout continues.*
+
+### What's included (bounded scope, per Grant's 2026-08-20 scoping edit)
+- **Site management, not a new build:** we manage the client's EXISTING site - update products, maintain prices, update coupons, general upkeep. A brand-new build is a separate Website-tier project below.
+- **Getting found in search:** on-site + technical SEO, AEO/GEO, ongoing blog/product content, backlinks, managed Google Business Profile. *Caveat set with the client: results vary by platform and whether it supports proper SEO.*
+- **Conversion setup:** help set up their CRM (e.g. MailChimp), automated review requests, lead-capture forms + AI follow-up (replies under a minute), online payments/invoicing.
+- **Initial ad SETUP only:** one-time setup of Meta + Google "Discovery Ads" campaigns.
+- **Team + reporting:** a dedicated marketing consultant, regular marketing-analytics reporting emailed to the client, an annual marketing plan, and **4 hours/month** of hands-on content support. **Work beyond 4h/month is billed additionally.**
+
+### What's NOT included (quote separately)
+- **Ongoing active paid ad management** - setup is included; ongoing management is the separate Ads line ($350/mo+).
+- Social media posting/management, cold outreach, physical/print marketing.
+- Custom edits beyond the monthly 4-hour content allowance.
+
+### Terms
+- Live within ~30 days. Month-to-month. **90-day performance guarantee.** A fraction of a traditional agency ($5,000+/mo).
+
+### Why it is scoped this tight (rationale)
+At $297/mo this cannot be "all your marketing" and stay profitable across dozens of clients, so it is defined as the **managed digital foundation**: site upkeep + search visibility + on-site conversion + initial ad setup + reporting, priced **per site** so revenue scales with each brand. The hard **4-hour content ceiling** and **explicit exclusions** do double duty - they keep expectations *below* delivery (every client feels over-served: under-promise, over-deliver) and they route every "can you also..." into a separate quote (a built-in upsell into the Ads, Social, and Website lines below). That containment is what makes a $297 recurring SKU safe to roll out at volume: it is a repeatable product, not a bespoke promise. The honest caveats (SEO varies by platform, extra work costs extra, ongoing ads excluded) are the mechanism, not fine print.
+
+---
+
 ## Websites
 
 | Tier | Client Price | Est. Labor Hours | Third-Party Costs | Margin Notes |
