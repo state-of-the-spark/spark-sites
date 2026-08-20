@@ -45,7 +45,8 @@ Flagship recurring tier, rolling out across verticals (added 2026-08-20, Grant).
 - Custom edits beyond the monthly 4-hour content allowance.
 
 ### Terms
-- Live within ~30 days. Month-to-month. **90-day performance guarantee.** A fraction of a traditional agency ($5,000+/mo).
+- Live within ~30 days. Month-to-month. **90-day money-back guarantee.** A fraction of a traditional agency ($5,000+/mo).
+- **Guarantee wording (canonical, define it on each vertical landing page):** "We guarantee you will see more traffic, increase your audiences for marketing and retargeting, and that you will have a clear path to vibrant sales; or your money back." (Displayed as a defined block at the bottom of the page, above the footer.)
 
 ### Why it is scoped this tight (rationale)
 At $297/mo this cannot be "all your marketing" and stay profitable across dozens of clients, so it is defined as the **managed digital foundation**: site upkeep + search visibility + on-site conversion + initial ad setup + reporting, priced **per site** so revenue scales with each brand. The hard **4-hour content ceiling** and **explicit exclusions** do double duty - they keep expectations *below* delivery (every client feels over-served: under-promise, over-deliver) and they route every "can you also..." into a separate quote (a built-in upsell into the Ads, Social, and Website lines below). That containment is what makes a $297 recurring SKU safe to roll out at volume: it is a repeatable product, not a bespoke promise. The honest caveats (SEO varies by platform, extra work costs extra, ongoing ads excluded) are the mechanism, not fine print.
