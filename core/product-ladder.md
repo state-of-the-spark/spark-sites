@@ -1,7 +1,7 @@
 ---
 type: reference
 status: active
-updated: 2026-02-19
+updated: 2026-08-20
 ---
 # Product Ladder
 
@@ -97,6 +97,11 @@ Nicole handles soft openings and influencer networking. These are project-based 
 
 **Typical flow:** Event → Relationship → Ongoing services
 
+### 7. Marketing Support Landing Pages ($297/mo)
+Per-vertical landing pages (contractor-marketing-program, ecomm-marketing-support, more to come) sell the managed $297/mo tier directly. A prospect can land, see exactly what is included, and subscribe, one flat monthly number, per business/per website.
+
+**Typical flow:** Landing page → $297/mo Marketing Support → Ads management / Social / Website upgrade as needs grow
+
 ## Website Tiers
 
 | Tier | Price | Description |
@@ -107,6 +112,16 @@ Nicole handles soft openings and influencer networking. These are project-based 
 | Multi-Page | $1,500–$2,500 | Full business website |
 | E-commerce | $2,500+ | WooCommerce, full online store |
 | All-Inclusive | $3,500+ | Website + Google Business + MailChimp + marketing |
+
+## Managed Marketing Support ($297/mo Tier)
+
+The recurring "done-for-you" tier: a productized $297/mo package that manages a client's digital marketing foundation, priced **per business / per website**. Rolling out across verticals from one template - Spark Care - Growth (contractors) and Spark Ecommerce Care Growth (e-commerce / CPG), with more to follow. Full scope, inclusions/exclusions, and the rationale live in `core/operations/pricing-matrix.md` under "Marketing Support Packages ($297/mo Managed Tier)".
+
+**In one line:** we manage their existing site, run search visibility (SEO, content, Google Business Profile), set up conversion (CRM, reviews, lead capture) plus initial ad campaigns, and send monthly analytics reporting, with a dedicated consultant and 4 hours/month of content support. Bounded on purpose: ongoing ad management, social posting, cold outreach, and physical/print marketing are excluded, each a separate quote.
+
+**Where it sits in the ladder:** the recurring home base a Starter Site or Website project graduates into, and the anchor most upsells (ongoing Ads management, Social, Website upgrades) branch off from. It is the piece that turns one-time build revenue into durable monthly recurring revenue.
+
+**Typical flow:** Starter Site or Website → discovery → Marketing Support ($297/mo per site) → Ads management / Social / Website upgrade as needs grow.
 
 ## The Discovery Call
 
@@ -121,9 +136,10 @@ This is where most upselling happens. Starter Site clients get a discovery call 
 
 | From | Natural upsell to |
 |------|------------------|
-| **Starter Site** | Google Business Profile, Social Setup, Strategy Session, Multi-Page Website, SEO |
+| **Starter Site** | Google Business Profile, Social Setup, Strategy Session, Multi-Page Website, SEO, Marketing Support ($297/mo) |
 | **Strategy Session** | Execution service for the topic (Website, SEO, Ads, Social), another session on a different topic |
-| Website project | SEO, Ads, Social, All-Inclusive |
+| Website project | SEO, Ads, Social, Marketing Support ($297/mo), All-Inclusive |
+| **Marketing Support ($297/mo)** | Ongoing Ads management, Social media management, Website upgrade, extra content hours beyond the monthly 4 |
 | SEO | Google Ads, Facebook Ads |
 | Ads | Social media management |
 | Any service | Strategy sessions ($350), All-Inclusive |
@@ -138,6 +154,9 @@ Starter Site ($25/mo)
   ├── + Google Business Profile (one-time)
   ├── + Social Media Setup (one-time)
   ├── + Custom Domain Email (one-time)
+  │
+  ├──▶ Marketing Support ($297/mo per site)
+  │     └── Recurring managed foundation: site upkeep, SEO, conversion + initial ads, monthly reporting
   │
   ├──▶ Multi-Page Website Upgrade ($900+)
   │     └── Now on a real website tier with more pages, features
