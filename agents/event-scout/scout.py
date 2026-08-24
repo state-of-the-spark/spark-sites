@@ -75,7 +75,7 @@ def scrape_event_scraper_pro(client: ApifyClient, config: dict) -> list[dict]:
     print(f"  Scraping Meetup/Eventbrite/Lu.ma for {', '.join(cities)}...")
     run = client.actor(source_config["actor"]).call(
         run_input=actor_input,
-        timeout_secs=180,
+        run_timeout=timedelta(seconds=180),
     )
     items = list(client.dataset(run["defaultDatasetId"]).iterate_items())
     print(f"  Found {len(items)} events from Event Scraper Pro")
@@ -97,7 +97,7 @@ def scrape_facebook_events(client: ApifyClient, config: dict) -> list[dict]:
     # Timeout after 3 minutes — Facebook scraper paginates aggressively
     run = client.actor(source_config["actor"]).call(
         run_input=actor_input,
-        timeout_secs=180,
+        run_timeout=timedelta(seconds=180),
     )
     items = list(client.dataset(run["defaultDatasetId"]).iterate_items())
     print(f"  Found {len(items)} events from Facebook")
