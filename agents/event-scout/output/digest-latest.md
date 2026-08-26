@@ -1,15 +1,15 @@
 ---
 type: digest
-date: 2026-08-21
+date: 2026-08-26
 agent: event-scout
 status: active
 ---
 
-# Event Scout Digest — 2026-08-21
+# Event Scout Digest — 2026-08-26
 
 **Business:** Spark Sites
 **Geography:** Lakeland, Tampa, Orlando, Winter Haven, Kissimmee, Brandon, St. Petersburg
-**Date range:** 2026-08-21 to 2026-09-11
+**Date range:** 2026-08-26 to 2026-09-16
 **0 new events | 0 previously seen | 0 total scored**
 
 ---
