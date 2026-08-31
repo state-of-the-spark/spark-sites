@@ -12,7 +12,7 @@ Four categories, one to three tiers each, built 2026-08-31 at Grant's direction 
 - `core/product-ladder.md` - the upsell ladder stays as the training tool (how to walk one client up)
 - `core/operations/pricing-matrix.md` - internal canonical pricing for custom quotes
 
-**Commission defaults (Grant to finalize, ClickUp 868kygphj):** 20% of one-time revenue + 20% of the first 3 months of recurring revenue, paid once per closed sale. All commission figures below use these defaults; the Google Sheet computes them from editable rate cells.
+**Commission - LOCKED 2026-08-31 (Grant):** 20% of one-time revenue + 20% of the first 3 months of recurring revenue, paid once per closed sale on cash collected. **Ratchet: 25% (all rates) in any month the ambassador's sourced sales collect $15,000+ commissionable revenue** (volume trigger chosen because close rate isn't measurable while Grant closes; threshold editable in the Sheet, Internal!D5). Still open: clawback window on early churn - decide before first payout. All commission figures below show the 20% base; the Sheet has a ratchet column on both tabs.
 
 **Cost-basis method:** estimated AI-era human hours on task (AI does ~90% of mechanical delivery) at a $60/hr internal cost rate, plus hard third-party costs (hosting, tools, travel, books, crew). These are planning estimates, not accounting figures.
 
