@@ -36,7 +36,7 @@ Every category has an entry tier (easy first yes), a growth tier (recurring reve
 **Tier 3 - Content + Leadership Intensive, $2,500-$3,000.** Everything in Tier 2 plus a recording team on site, custom-edited social posts, a leadership training block, and a curated student Q&A. The event becomes a semester of content for them.
 
 ## Your commission
-**20% of one-time revenue + 20% of your client's first 3 months of recurring revenue**, on every deal you source that closes - paid on cash collected. **Ratchet: in any month your sales collect $15,000 or more, everything that month pays 25% instead.** Per-offer payouts are in the shared Google Sheet ("Judah" tab), with a ratchet-month column so you can see the upside.
+**20% of one-time revenue + 20% of your client's first 3 months of recurring revenue**, on every deal you source that closes - paid on cash collected. **Ratchet: in any month your sales collect $15,000 or more, everything that month pays 25% instead.** Per-offer payouts are in your commission sheet ("Judah - Spark Offerings & Commission" - a live view that updates automatically when pricing changes), with a ratchet-month column so you can see the upside.
 
 What the targets look like at 20%: a built site pays you $380.40; a build + Growth combo $558.60; an e-commerce deal $878.20; a $2,500 AI Roadmap $500; a $10K AI custom $2,000; a Campus Impact Day $200. Example month at ratchet pace ($15K+ collected): one AI custom + three combos + one e-comm + two Impact Days = $6,192.50 at 25%.
 
