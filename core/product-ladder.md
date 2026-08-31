@@ -5,6 +5,8 @@ updated: 2026-08-20
 ---
 # Product Ladder
 
+> **Ambassador/sales view:** the commodified 1-3-tiers-per-category matrix (Small Business, Contractors, AI, Speaking) lives in `core/offers/ambassador-offer-matrix.md`. This ladder stays the training tool for walking one client up; the matrix is what an Ambassador sells from.
+
 ## How Services Connect
 
 ```
