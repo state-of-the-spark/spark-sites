@@ -4,7 +4,7 @@ status: active
 created: 2026-08-31
 updated: 2026-08-31
 purpose: Commodified 3-tier offer matrix per category for Ambassador/sales use (Judah). Internal version - includes cost basis. Judah-facing version lives in the Google Sheet's "Judah" tab and judah-ambassador-briefing.md.
-google_sheet: PENDING - link added when the Sheet is created
+google_sheet: https://docs.google.com/spreadsheets/d/1O0iGAxzP1OoRZAXkebsVIlC-RCPjV0oi7H1icxiqG7g/edit
 ---
 # Ambassador Offer Matrix (Commodified Offerings)
 
