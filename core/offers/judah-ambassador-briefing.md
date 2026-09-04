@@ -3,6 +3,7 @@ type: reference
 status: draft - for Judah's Claude project once Grant finalizes commission
 created: 2026-08-31
 purpose: Judah-facing service breakdown. No cost basis, no internal margin data. Upload this + the Sheet's Judah tab to a Claude project so Judah can ask questions about the offerings.
+google_doc: https://docs.google.com/document/d/1w_zXqfsR-2h0PrW3RVDDKiCFq9gGZJ_lc6e4sEJKIB0/edit
 ---
 # Spark Sites - Ambassador Briefing (Judah)
 
