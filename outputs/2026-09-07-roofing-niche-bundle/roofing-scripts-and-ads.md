@@ -9,6 +9,7 @@ landing_page: https://sparkmysite.com/roofing-marketing/
 product: Spark Care - Growth ($297/mo, Woo 45617); bundle SKU draft Woo 45988
 source: grant-sparks/research/2026-09-07-niche-question-content-strategy.md
 clickup: https://app.clickup.com/t/868m29bye
+google_doc: https://docs.google.com/document/d/1Kp-umwCWAF1CWTjI0KqknsVBJGxWXBzMHwS-8atIMr8/edit
 ---
 
 # Roofing Niche Bundle: Content Pack (13 scripts)
