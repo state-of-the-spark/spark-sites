@@ -51,3 +51,7 @@ node_modules/
 
 # Main Branch local status marker
 .mb/last-status-seen.json
+
+# raw DBPR licensee dump (46MB), regenerate from myfloridalicense.com
+outputs/2026-09-08-polk-roofing-leads/dbpr_construction_raw.csv
+outputs/2026-09-08-polk-roofing-leads/maps_raw.json
