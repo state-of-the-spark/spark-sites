@@ -4,13 +4,13 @@ subtype: proposal-email
 date: 2026-09-10
 client: PCNet Tech Services (Jesse Balingit)
 status: gmail-draft (unsent)
-gmail_draft: r6268698461722281187
+gmail_draft: r-2254335420515605532
 spec: grant-sparks/tools/gmail-html-draft/pcnet-jesse-proposal-spec.json
 ---
 
 From: grant@stateofthespark.com
 To: jesse@pcnet-tech.com
-Cc: nicole@sparkmysite.com
+Cc: support@sparkmysite.com (Amber)
 Subject: Let's Get You Found Beyond Word-of-Mouth
 
 Hi Jesse,
@@ -56,7 +56,7 @@ To get moving, here's what we'll need from you:
 - Admin access to your Facebook page and LinkedIn company page
 - DNS access for pcnet-tech.com at launch (or you point it yourself, you know the drill)
 
-Nicole (Cc'd here) will get everything rolling as soon as you give the word.
+Amber (Cc'd here) will get everything rolling as soon as you give the word.
 
 One quick question: do you want to start with the website and brand refresh, or add the Pulse Check so we reach your clients at the same time?
 
