@@ -3,7 +3,7 @@ type: output
 subtype: proposal
 date: 2026-09-10
 client: PCNet Tech Services (Jesse Balingit)
-status: draft
+status: sent
 clickup: 868m3rzuu
 woo_product: 46034
 source: Gemini notes 1ELWWOK7-nuicH705d6czdhioQBmXz3d6PcmektQgtWg (Spark Q&A, 2026-09-10 9:30am)

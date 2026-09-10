@@ -3,7 +3,7 @@ type: output
 subtype: proposal-email
 date: 2026-09-10
 client: PCNet Tech Services (Jesse Balingit)
-status: gmail-draft (unsent)
+status: sent 2026-09-10 7:44pm ET (Gmail message 1a08db4ef6d61d4a)
 gmail_draft: r-4389850233282929676
 spec: grant-sparks/tools/gmail-html-draft/pcnet-jesse-proposal-spec.json
 ---
