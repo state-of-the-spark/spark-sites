@@ -4,7 +4,7 @@ subtype: proposal-email
 date: 2026-09-10
 client: PCNet Tech Services (Jesse Balingit)
 status: gmail-draft (unsent)
-gmail_draft: r-2254335420515605532
+gmail_draft: r-4389850233282929676
 spec: grant-sparks/tools/gmail-html-draft/pcnet-jesse-proposal-spec.json
 ---
 
@@ -54,7 +54,7 @@ To get moving, here's what we'll need from you:
 - Your logo files, whatever versions you have
 - Your service packages and the pain you solve for clients, rough notes are fine
 - Admin access to your Facebook page and LinkedIn company page
-- DNS access for pcnet-tech.com at launch (or you point it yourself, you know the drill)
+- DNS access for your domain at launch (or you point it yourself, you know the drill)
 
 Amber (Cc'd here) will get everything rolling as soon as you give the word.
 
