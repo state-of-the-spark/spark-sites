@@ -1,0 +1,222 @@
+{
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Report"
+    },
+    {
+      "id": "page-2",
+      "name": "Other directions"
+    }
+  ],
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "01 Cover",
+      "x": 0,
+      "y": 0,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Intro.dc.html",
+      "title": "02 Read This First",
+      "x": 912,
+      "y": 0,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Truth1.dc.html",
+      "title": "03 Truth 1: Renting Leads",
+      "x": 1824,
+      "y": 0,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Truth2.dc.html",
+      "title": "04 Truth 2: Retainer Math",
+      "x": 2736,
+      "y": 0,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Truth3.dc.html",
+      "title": "05 Truth 3: Reports vs Results",
+      "x": 0,
+      "y": 1216,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Truth4.dc.html",
+      "title": "06 Truth 4: The Map Pack",
+      "x": 912,
+      "y": 1216,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Truth5.dc.html",
+      "title": "07 Truth 5: Speed to Lead",
+      "x": 1824,
+      "y": 1216,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Truth6.dc.html",
+      "title": "08 Truth 6: The 15-Year Rule",
+      "x": 2736,
+      "y": 1216,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Truth7.dc.html",
+      "title": "09 Truth 7: Storm Chasers",
+      "x": 0,
+      "y": 2432,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Truth8.dc.html",
+      "title": "10 Truth 8: Own Everything",
+      "x": 912,
+      "y": 2432,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Checklist.dc.html",
+      "title": "11 Tear-Out Checklist",
+      "x": 1824,
+      "y": 2432,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Offer.dc.html",
+      "title": "12 The Offer",
+      "x": 2736,
+      "y": 2432,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "Sources.dc.html",
+      "title": "13 Sources",
+      "x": 0,
+      "y": 3648,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-1"
+    },
+    {
+      "file": "CoverCaution.dc.html",
+      "title": "A · Caution Label",
+      "x": 0,
+      "y": 0,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-2"
+    },
+    {
+      "file": "CoverRedacted.dc.html",
+      "title": "B · Redacted File",
+      "x": 912,
+      "y": 0,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-2"
+    },
+    {
+      "file": "TruthWarning.dc.html",
+      "title": "D · Inside Page, Warning Theme",
+      "x": 1824,
+      "y": 0,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-2"
+    },
+    {
+      "file": "CoverOriginal.dc.html",
+      "title": "Previous Cover",
+      "x": 2736,
+      "y": 0,
+      "w": 816,
+      "h": 1056,
+      "print": "fixed",
+      "page": "page-2"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "dir-note-1",
+      "x": 0,
+      "y": -300,
+      "w": 816,
+      "text": "A · CAUTION LABEL\nReads as a warning from across the room: caution tape, a warning label, then the headline.\nTradeoff: adds safety yellow, a color outside the Spark Sites brand.",
+      "page": "page-2"
+    },
+    {
+      "id": "dir-note-2",
+      "x": 912,
+      "y": -300,
+      "w": 816,
+      "text": "B · REDACTED FILE\nThe most on-brand option: ink, porcelain, one cyan stamp. A leaked agency memo with the good parts blacked out sells the \"won't dare tell\" promise.\nTradeoff: quieter than A or C at thumbnail size.",
+      "page": "page-2"
+    },
+    {
+      "id": "dir-note-3",
+      "x": 1824,
+      "y": -300,
+      "w": 816,
+      "text": "D · INSIDE PAGES (optional)\nCarries the warning theme through the report: a photo behind each big number, \"Warning 01\" instead of \"Truth 01,\" and a caution stripe under the band. Shown on Truth 1 with an AI-generated storm-tarp photo.",
+      "page": "page-2"
+    },
+    {
+      "id": "dir-note-4",
+      "x": 2736,
+      "y": -300,
+      "w": 816,
+      "text": "PREVIOUS COVER\nThe calm version from before the warning pass. Kept for reference.",
+      "page": "page-2"
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-1"
+  }
+}

@@ -1,0 +1,8 @@
+# Seeded Claude Design canvas: ~2.7MB, almost all of it the editor payload rather
+# than our design. Regenerate it from the .dc.html artboards in design/ with
+# seed-canvas.mjs instead of versioning it.
+florida-roofer-report.html
+
+# Intermediate cover/warning direction proofs. design/print-directions.html plus a
+# headless Chrome --print-to-pdf regenerates these.
+warning-directions.pdf
