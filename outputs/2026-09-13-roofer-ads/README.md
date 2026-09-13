@@ -91,6 +91,50 @@ the roofing marketing page traffic. The ad names above are written so
    other would look correct and still refuse every write. Until that is resolved these
    go in by hand, or through Claude in Chrome.
 
+## Layout: why the text sits high
+
+Grant's note on the first render: the type was too small and sat over the house
+where it was barely readable. Three changes fixed it, and they are worth keeping if
+anyone regenerates these:
+
+- The text block sits **high, in the cloud band**, not anchored to the bottom. The
+  roofline and foliage were fighting the headline.
+- The **STOP mark sits above the headline, not beside it.** Beside it, it ate 146px of
+  a 952px frame; above it, the headline gets the full width, which bought a jump from
+  82px to 94px at these hook lengths for free.
+- The dark gradient runs **top down**, so contrast sits where the text is and the house
+  and lightning stay clean underneath.
+
+The kicker reads "8 truths", numeral, matching the landing page. Grant asked for that
+change on the page and it applies identically here.
+
+## Status, 2026-09-13 evening
+
+**Spend limit resolved.** The account was hard-stopped at $261.30 spent against a
+$261.30 limit, which had stopped ALL 253 ads, not just roofing. Grant raised it to
+**$485**. Remaining runway is $223.70, and at the account's $15-23/day burn that likely
+caps out again before Oct 1.
+
+**One draft ad exists in the account**, built through Ads Manager by hand:
+`52564262245210`, "Roofer Report - H26 - How many roofs", In draft, never published.
+Correct campaign and ad set, Website URL set, Spark Sites Pixel tracking. Missing its
+image, body copy and CTA.
+
+**Three gotchas from driving Ads Manager**, all verified the hard way:
+
+1. **New ads default to the WRONG Facebook Page.** This one inherited "Trash Tamers
+   Junk Hauling" with its Instagram, unprompted. A roofing ad would have run under a
+   junk-hauling brand. Always set identity explicitly: Page **Spark Sites**
+   (239358836422382), Instagram **sparkmysite** (6407003099369180). Search the Page
+   dropdown by ID, not name; the account has 42 client Pages and several similar names.
+2. **The "Set up creative" dialog hangs.** Three attempts, three renderer timeouts on
+   that exact click, and no `input type=file` ever appears in the DOM, so the media
+   cannot be attached programmatically. The rest of the editor is responsive. This is
+   the one step that needs a human.
+3. **The URL parameters field rejects programmatic input**, silently writing an empty
+   string. It needs to be typed, and the UTM string belongs there, never appended to
+   the Website URL.
+
 ## Rebuilding
 
 ```

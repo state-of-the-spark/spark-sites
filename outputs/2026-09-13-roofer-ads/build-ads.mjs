@@ -57,11 +57,11 @@ const stopSign = (px) => `<svg xmlns="http://www.w3.org/2000/svg" width="${px}" 
  */
 function hookSize(text) {
   const n = text.length;
-  if (n <= 38) return 108;
-  if (n <= 55) return 94;
-  if (n <= 75) return 82;
-  if (n <= 100) return 66;
-  return 56;
+  if (n <= 38) return 128;
+  if (n <= 55) return 112;
+  if (n <= 75) return 94;
+  if (n <= 100) return 78;
+  return 66;
 }
 
 // Typographic apostrophes, without touching any markup.
@@ -90,7 +90,7 @@ function ad({ id, hook, kicker, proof }) {
        A flat 0.66 veil across the whole frame was the first attempt: it washed the sky
        into grey mush and left the top two thirds of the ad dead. -->
   <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(16,20,24,0.34);"></div>
-  <div style="position:absolute;left:0;right:0;bottom:0;height:74%;background:linear-gradient(to bottom, rgba(16,20,24,0) 0%, rgba(16,20,24,0.70) 40%, rgba(16,20,24,0.94) 100%);"></div>
+  <div style="position:absolute;left:0;right:0;top:0;height:80%;background:linear-gradient(to bottom, rgba(16,20,24,0.90) 0%, rgba(16,20,24,0.78) 45%, rgba(16,20,24,0) 100%);"></div>
 
   <!-- Caution tape, the warning motif carried from the cover -->
   <div style="position:absolute;top:58px;right:-120px;width:460px;height:58px;transform:rotate(45deg);background:repeating-linear-gradient(-45deg, ${SAFETY} 0 22px, ${INK} 22px 44px);box-shadow:0 8px 20px rgba(0,0,0,0.35);"></div>
@@ -104,16 +104,19 @@ function ad({ id, hook, kicker, proof }) {
 
     <div style="margin-top:10px;font-family:${DISPLAY};font-weight:600;font-size:15px;letter-spacing:0.16em;color:${MIST};text-transform:uppercase;">A free report for Florida roofers</div>
 
-    <div style="margin-top:auto;display:flex;align-items:flex-start;gap:30px;">
-      ${stopSign(116)}
-      <h1 style="margin:0;font-family:${DISPLAY};font-weight:600;font-size:${size}px;line-height:1.04;letter-spacing:-0.03em;color:${WHITE};text-wrap:balance;">${smart(hook)}</h1>
-    </div>
+    <!-- Everything sits HIGH, in the cloud band. Anchoring this block to the bottom
+         put the headline over the roofline and foliage, where Grant could barely read
+         it. The STOP mark moved above the headline rather than beside it, which hands
+         the type the full 952px of frame and buys a big size increase for free. -->
+    <div style="margin-top:38px;">${stopSign(104)}</div>
 
-    <p style="margin:26px 0 0;font-family:'Source Serif 4', Georgia, serif;font-size:27px;line-height:1.45;color:${MIST};max-width:820px;">${smart(kicker)}</p>
+    <h1 style="margin:26px 0 0;font-family:${DISPLAY};font-weight:600;font-size:${size}px;line-height:1.03;letter-spacing:-0.03em;color:${WHITE};text-wrap:balance;">${smart(hook)}</h1>
 
-    <div style="margin-top:30px;display:inline-flex;align-self:flex-start;background:${SAFETY};color:${INK};font-family:${DISPLAY};font-weight:800;font-size:26px;letter-spacing:-0.01em;padding:12px 20px;border-radius:4px;">${smart(proof)}</div>
+    <p style="margin:30px 0 0;font-family:'Source Serif 4', Georgia, serif;font-size:31px;line-height:1.45;color:${MIST};max-width:880px;">${smart(kicker)}</p>
 
-    <div style="margin-top:34px;font-family:${DISPLAY};font-weight:600;font-size:22px;letter-spacing:0.04em;color:${WHITE};">sparkmysite.com/roofing-report</div>
+    <div style="margin-top:34px;display:inline-flex;align-self:flex-start;background:${SAFETY};color:${INK};font-family:${DISPLAY};font-weight:800;font-size:30px;letter-spacing:-0.01em;padding:14px 22px;border-radius:4px;">${smart(proof)}</div>
+
+    <div style="margin-top:32px;margin-bottom:auto;font-family:${DISPLAY};font-weight:600;font-size:26px;letter-spacing:0.04em;color:${WHITE};">sparkmysite.com/roofing-report</div>
 
   </div>
 </div>
