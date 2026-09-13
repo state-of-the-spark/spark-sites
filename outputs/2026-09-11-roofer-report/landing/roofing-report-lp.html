@@ -26,8 +26,14 @@ html,body{overflow-x:hidden!important;max-width:100%!important;}
 #srr .srr-tape{position:absolute;top:44px;right:-86px;width:340px;height:46px;transform:rotate(45deg);background:repeating-linear-gradient(-45deg,#F7C600 0 18px,#101418 18px 36px);box-shadow:0 6px 16px rgba(0,0,0,0.35);}
 #srr .srr-wrap{position:relative;width:100%;max-width:1180px;margin:0 auto;padding:42px 28px 64px;display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:center;}
 /* Caution-tape yellow highlight on the one line that has to stop a roofer cold.
-   box-decoration-break keeps the highlight solid when the line wraps. */
-#srr .srr-hl{background:#F7C600;color:#101418;font-weight:700;padding:2px 7px;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone;}
+   Forced onto a single unbroken line so it reads as one warning bar. Phones let it
+   wrap again (see the media query): at 360px a nowrap line runs off the screen. */
+#srr .srr-hl{display:inline-block;white-space:nowrap;margin-top:14px;background:#F7C600;color:#101418;font-weight:700;padding:3px 10px;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone;}
+/* Spark Sites wordmark under the left column, clickable through to the roofing
+   product page. Same lockup as the report cover: ink rays, cyan centre dot. */
+#srr a.srr-logo{display:inline-flex;align-items:center;gap:7px;margin-top:38px;text-decoration:none;}
+#srr a.srr-logo span{font-family:'Poppins',sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;color:#FFFFFF;}
+#srr a.srr-logo:hover span{color:#0ECAEB;}
 #srr .srr-eyebrow{font-weight:600;font-size:12px;letter-spacing:0.14em;color:#E4E8EA;text-transform:uppercase;}
 #srr h1{font-weight:600;font-size:56px;line-height:1.05;letter-spacing:-0.035em;color:#FFFFFF;margin:16px 0 0;max-width:620px;}
 #srr .srr-sub{font-family:'Source Serif 4',Georgia,serif;font-size:20px;line-height:1.5;color:#E4E8EA;margin:20px 0 0;max-width:560px;}
@@ -48,10 +54,7 @@ html,body{overflow-x:hidden!important;max-width:100%!important;}
 #srr .srr-done h2{font-size:27px;}
 #srr .srr-done .srr-dl{display:block;text-align:center;background:#101418;color:#FFFFFF;font-weight:700;font-size:17px;line-height:1.3;text-decoration:none;border-radius:10px;padding:16px 18px;margin:20px 0 0;}
 #srr .srr-done .srr-dl:hover{box-shadow:inset 0 -3px 0 #F7C600;}
-#srr .srr-foot{position:relative;width:100%;max-width:1180px;margin:0 auto;padding:0 28px 26px;font-size:12px;letter-spacing:0.06em;color:#8A939B;text-align:center;}
-#srr .srr-foot a{color:#E4E8EA;text-decoration:none;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;}
-#srr .srr-foot a:hover{color:#0ECAEB;}
-@media (max-width:900px){#srr .srr-wrap{grid-template-columns:1fr;gap:32px;padding:30px 20px 48px;}#srr h1{font-size:38px;}#srr .srr-sub{font-size:18px;}#srr .srr-tape{width:240px;right:-70px;top:30px;}}
+@media (max-width:900px){#srr .srr-wrap{grid-template-columns:1fr;gap:32px;padding:30px 20px 48px;}#srr h1{font-size:38px;}#srr .srr-sub{font-size:18px;}#srr .srr-hl{white-space:normal;}#srr a.srr-logo{margin-top:28px;}#srr .srr-tape{width:240px;right:-70px;top:30px;}}
 </style>
 <img class="srr-bg" src="https://sparkmysite.com/wp-content/uploads/2026/09/florida-roofing-storm-report-hero.jpg" alt="Storm rolling in over a Florida roof">
 <div class="srr-veil"></div>
@@ -60,13 +63,14 @@ html,body{overflow-x:hidden!important;max-width:100%!important;}
 <div>
 <div class="srr-eyebrow">A free report for Florida roofers</div>
 <h1>What your marketing company won't dare tell a Florida roofer!</h1>
-<p class="srr-sub">8 truths about leads, retainers, and the 15-year roof rule. <span class="srr-hl">Read it before you pay for another lead.</span></p>
+<p class="srr-sub">8 truths about leads, retainers, and the 15-year roof rule.<br><span class="srr-hl">Read it before you pay for another lead.</span></p>
 <ul class="srr-list">
 <li><span class="srr-tick"></span><span>Why a shared lead costs you $600 to $1,200 by the time you actually close one.</span></li>
 <li><span class="srr-tick"></span><span>What a $3,000 a month agency really costs you: 1.1 to 3.3 roofs of revenue a year.</span></li>
 <li><span class="srr-tick"></span><span>The 15-year roof rule, and the page almost no roofer has built for it.</span></li>
 <li><span class="srr-tick"></span><span>Plus 10 questions to ask any marketing company before you sign.</span></li>
 </ul>
+<a class="srr-logo" href="https://sparkmysite.com/roofing-marketing/?utm_source=roofer-report&amp;utm_medium=landing-page&amp;utm_campaign=roofer-report&amp;utm_content=logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" style="display:block"><g transform="rotate(-14 50 50)" fill="#FFFFFF"><polygon points="61,48.4 61,51.6 86,52.8 86,47.2"></polygon><polygon transform="rotate(38 50 50)" points="61,48.4 61,51.6 79,52.8 79,47.2"></polygon><polygon transform="rotate(76 50 50)" points="61,48.4 61,51.6 88,52.8 88,47.2"></polygon><polygon transform="rotate(114 50 50)" points="61,48.4 61,51.6 78,52.8 78,47.2"></polygon><polygon transform="rotate(152 50 50)" points="61,48.4 61,51.6 85,52.8 85,47.2"></polygon><polygon transform="rotate(190 50 50)" points="61,48.4 61,51.6 80,52.8 80,47.2"></polygon><polygon transform="rotate(228 50 50)" points="61,48.4 61,51.6 88,52.8 88,47.2"></polygon><polygon transform="rotate(266 50 50)" points="61,48.4 61,51.6 78,52.8 78,47.2"></polygon><polygon transform="rotate(304 50 50)" points="61,48.4 61,51.6 84,52.8 84,47.2"></polygon></g><circle cx="50" cy="50" r="4" fill="#0ECAEB"></circle></svg><span>spark sites</span></a>
 </div>
 <div class="srr-card">
 <div class="srr-form">
@@ -88,7 +92,6 @@ html,body{overflow-x:hidden!important;max-width:100%!important;}
 </div>
 </div>
 </div>
-<div class="srr-foot"><a href="https://sparkmysite.com/roofing-marketing/?utm_source=roofer-report&amp;utm_medium=landing-page&amp;utm_campaign=roofer-report&amp;utm_content=footer">Spark Sites</a></div>
 <script>
 (function(){
 var go=document.getElementById('srr-go'),err=document.getElementById('srr-err');
