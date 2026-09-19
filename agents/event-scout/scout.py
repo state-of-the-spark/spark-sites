@@ -77,7 +77,7 @@ def scrape_event_scraper_pro(client: ApifyClient, config: dict) -> list[dict]:
         run_input=actor_input,
         run_timeout=timedelta(seconds=180),
     )
-    items = list(client.dataset(run["defaultDatasetId"]).iterate_items())
+    items = list(client.dataset(run.default_dataset_id).iterate_items())
     print(f"  Found {len(items)} events from Event Scraper Pro")
     return items
 
@@ -99,7 +99,7 @@ def scrape_facebook_events(client: ApifyClient, config: dict) -> list[dict]:
         run_input=actor_input,
         run_timeout=timedelta(seconds=180),
     )
-    items = list(client.dataset(run["defaultDatasetId"]).iterate_items())
+    items = list(client.dataset(run.default_dataset_id).iterate_items())
     print(f"  Found {len(items)} events from Facebook")
     return items
 
