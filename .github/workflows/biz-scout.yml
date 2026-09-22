@@ -12,8 +12,8 @@ name: Biz Scout
 
 on:
   schedule:
-    # 8:00 AM ET = 12:00 UTC (EST) / 11:00 UTC (EDT)
-    - cron: "0 12 * * *"
+    # 8:13 AM ET = 12:13 UTC (EST) / 11:13 UTC (EDT) — off top-of-hour per Mechanic's fix
+    - cron: "13 12 * * *"
   workflow_dispatch:  # Allow manual trigger
 
 jobs:

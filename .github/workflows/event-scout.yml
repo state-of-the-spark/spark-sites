@@ -10,8 +10,8 @@ name: Event Scout
 
 on:
   schedule:
-    # Every Wednesday and Friday at 12:00 UTC (8:00 AM ET)
-    - cron: "0 12 * * 3,5"
+    # Every Wednesday and Friday at 12:27 UTC (8:27 AM ET) — off top-of-hour per Mechanic's fix
+    - cron: "27 12 * * 3,5"
   workflow_dispatch:
     # Manual trigger — click "Run workflow" in GitHub Actions tab
 
