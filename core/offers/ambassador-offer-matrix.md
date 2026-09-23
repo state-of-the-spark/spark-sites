@@ -2,7 +2,7 @@
 type: reference
 status: active
 created: 2026-08-31
-updated: 2026-08-31
+updated: 2026-09-23
 purpose: Commodified 3-tier offer matrix per category for Ambassador/sales use (Judah). Internal version - includes cost basis. Judah-facing version lives in the Google Sheet's "Judah" tab and judah-ambassador-briefing.md.
 google_sheet: https://docs.google.com/spreadsheets/d/1O0iGAxzP1OoRZAXkebsVIlC-RCPjV0oi7H1icxiqG7g/edit
 judah_view_sheet: https://docs.google.com/spreadsheets/d/1DsedMt4iA1awaeK8qEUT2nSsWrFbkSUFth2ZTQ5XZ_M/edit
@@ -58,6 +58,18 @@ Judah's beachhead market. University target from the 8/29 meeting: ~$2,000/engag
 | 1 | **Campus Talk** | Grant speaks at the university | One-time | ~$290 | **$500** | $100 |
 | 2 | **Campus Impact Day** | The talk + leadership-team Q&A/mastermind session + leave-behinds (10 copies of the goal-setting book OR deck/AI-synthesis handout for non-attendees) + recording & reshare rights + we collab-post to our channels (their reach extends through ours) | One-time; $250 of price is travel/per diem | ~$690 ($250 travel + ~$80 books + ~6 hrs) | **$1,000** | $200 |
 | 3 | **Content + Leadership Intensive** | Everything in Tier 2, plus: recording team on site, custom-EDITED social posts (not just collab shares), leadership training block, hand-selected student Q&A | One-time, full day | ~$1,600 (crew, editing, travel, books, full day) | **$2,500-$3,000** | $500-$600 |
+
+## Law Firms (added 2026-09-23)
+
+Sold from /law-firm-marketing/ via the plan-call form (no checkout button). Lead magnet: The 40% Problem (/law-firm-report/). Exclusivity: one firm per practice area per county, so check the county before pitching.
+
+| Tier | Offering | Included | Term | Cost basis (est.) | Public price | Commission (est.) |
+|---|---|---|---|---|---|---|
+| 1 | **Built-For-You Attorney Site** | Custom site, a page per practice area, Bar-aware copy, hosted | One-time + monthly | ~$375 + $15/mo | **$1,800 one-time + $34/mo** | $380.40 |
+| 2 | **Standard Social (law)** | 8 posts/mo incl. 2 videos, quarterly shoot, client approves every post (attorney advertising) | Monthly | ~$327.50/mo | **$750/mo** | $450 (20% x 3 mo) |
+| 3 | **Law Firm Program** | Site + first shoot + intake setup + GBP + local SEO + reviews + annual plan, then monthly GBP/SEO, reviews, Spark Intake, social + content shoots, consultant | $4,500 setup; $0/mo until first new-client inquiry, then $750/mo | Setup ~$1,100; monthly est. $550-650 (thin, see product ladder) | **$4,500 + $750/mo after first inquiry** | $900 + $450 |
+
+**Open (Grant):** Spark Intake is not built yet; the monthly margin at $750 depends on shoot cadence. Commission on the monthly counts the first 3 PAID months (after the first inquiry).
 
 ---
 

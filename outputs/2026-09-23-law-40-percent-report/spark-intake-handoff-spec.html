@@ -1,0 +1,268 @@
+<title>Law Firm Intake Handoff</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F3F5F6; --paper:#FFFFFF; --ink:#111820; --body:#2A3138; --muted:#6B7680; --line:#DDE2E5;
+  --firm:#1E4A42; --firm-soft:#E6EFEC; --spark:#0891B2; --spark-soft:#E3F4F8; --bubble:#E9ECEE; --warn:#8A5A00; --warn-soft:#FBF1DC;
+  --shadow:0 18px 40px rgba(17,24,32,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#0E1317; --paper:#161D23; --ink:#EEF2F4; --body:#C9D1D6; --muted:#8C98A1; --line:#27313A;
+    --firm:#7FC2B3; --firm-soft:#1A2B28; --spark:#3CC6E3; --spark-soft:#12303A; --bubble:#222B33; --warn:#E6B45C; --warn-soft:#2E2515;
+    --shadow:0 18px 40px rgba(0,0,0,.45);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#0E1317; --paper:#161D23; --ink:#EEF2F4; --body:#C9D1D6; --muted:#8C98A1; --line:#27313A;
+  --firm:#7FC2B3; --firm-soft:#1A2B28; --spark:#3CC6E3; --spark-soft:#12303A; --bubble:#222B33; --warn:#E6B45C; --warn-soft:#2E2515;
+  --shadow:0 18px 40px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--body);font:16px/1.6 'Hanken Grotesk',system-ui,sans-serif;padding-inline:20px;padding-block:40px 64px}
+.wrap{max-width:1080px;margin:0 auto}
+h1,h2,h3{color:var(--ink);text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.02em;font-weight:700}
+h2{font-size:24px;letter-spacing:-.01em;font-weight:700}
+h3{font-size:17px;font-weight:600}
+p{margin:0}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--spark);font-weight:600}
+.lede{font-family:'Newsreader',Georgia,serif;font-size:20px;line-height:1.55;color:var(--body);max-width:62ch}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.02em}
+header{display:grid;gap:16px;margin-bottom:40px}
+.note{background:var(--warn-soft);color:var(--ink);border-left:3px solid var(--warn);padding:14px 16px;border-radius:0 10px 10px 0;font-size:15px;max-width:72ch}
+.note b{color:var(--warn)}
+.moment{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;align-items:start;padding-block:36px;border-top:1px solid var(--line)}
+.moment .copy{display:grid;gap:12px;align-content:start}
+.clock{display:inline-flex;gap:10px;align-items:center;color:var(--muted)}
+.clock b{color:var(--ink);font-weight:500}
+ul.rules{margin:4px 0 0;padding-left:18px;display:grid;gap:6px;font-size:15px}
+.stage{display:flex;justify-content:center}
+/* phone */
+.phone{width:min(330px,100%);background:var(--paper);border:1px solid var(--line);border-radius:34px;padding:14px 14px 18px;box-shadow:var(--shadow)}
+.phone .top{display:grid;justify-items:center;gap:4px;padding:10px 0 14px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--firm);color:#fff;display:grid;place-items:center;font-family:'Newsreader',serif;font-size:18px}
+.phone .who{font-weight:600;color:var(--ink);font-size:14px}
+.thread{display:grid;gap:10px}
+.sys{justify-self:center;font-size:11px;color:var(--muted)}
+.b{max-width:84%;padding:10px 13px;border-radius:18px;font-size:14px;line-height:1.45}
+.b.in{background:var(--bubble);color:var(--ink);border-bottom-left-radius:6px}
+.b.out{justify-self:end;background:var(--firm);color:#fff;border-bottom-right-radius:6px}
+/* web card */
+.card{width:min(460px,100%);background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.card .head{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center}
+.card .head .t{font-family:'Newsreader',serif;font-size:19px;color:var(--ink)}
+.card .body{padding:20px 22px;display:grid;gap:16px}
+.steps{display:flex;gap:6px}
+.steps span{flex:1;height:4px;border-radius:4px;background:var(--line)}
+.steps span.on{background:var(--firm)}
+.label{font-size:13px;font-weight:600;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:14px;background:var(--paper);color:var(--body);font-family:inherit;cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--firm);background:var(--firm-soft);color:var(--ink);font-weight:600}
+.chip:focus-visible,.btn:focus-visible{outline:2px solid var(--spark);outline-offset:2px}
+.fine{font-size:12.5px;color:var(--muted);line-height:1.5}
+.btn{border:0;border-radius:10px;padding:13px 18px;background:var(--firm);color:#fff;font:600 15px 'Hanken Grotesk',sans-serif;cursor:pointer;width:100%}
+.btn.ghost{background:transparent;color:var(--firm);border:1px solid var(--firm)}
+.timeline{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.timeline li{display:grid;grid-template-columns:78px 1fr;gap:12px;font-size:14.5px}
+.timeline .mono{color:var(--muted);padding-top:2px}
+/* email */
+.mail{width:min(480px,100%);background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.mail .meta{padding:14px 20px;border-bottom:1px solid var(--line);display:grid;gap:2px;font-size:13px;color:var(--muted)}
+.mail .meta b{color:var(--ink);font-weight:600}
+.letter{padding:26px 26px 22px;font-family:'Newsreader',Georgia,serif;font-size:16.5px;line-height:1.6;color:var(--ink);display:grid;gap:14px}
+.letterhead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--firm);padding-bottom:10px;font-family:'Newsreader',serif}
+.letterhead .n{font-size:20px;color:var(--firm);letter-spacing:.01em}
+.letterhead .c{font:12px 'Hanken Grotesk',sans-serif;color:var(--muted)}
+.slot{display:flex;gap:8px;flex-wrap:wrap}
+.slot span{font:500 13px 'Hanken Grotesk',sans-serif;border:1px solid var(--firm);color:var(--firm);border-radius:8px;padding:7px 11px}
+/* alert */
+.alert{width:min(420px,100%);background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px;display:grid;gap:14px}
+.alert .row{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.pill{font:600 11px 'Hanken Grotesk',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--spark-soft);color:var(--spark)}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:6px 12px;font-size:14px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;color:var(--ink);font-weight:500}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+/* options */
+section.opts{padding-block:40px 0;border-top:1px solid var(--line);display:grid;gap:20px}
+.optgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.opt{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:10px;align-content:start}
+.opt.rec{border-color:var(--spark)}
+.opt .tag{justify-self:start}
+.opt ul{margin:0;padding-left:18px;font-size:14.5px;display:grid;gap:5px}
+.src{font-size:13px;color:var(--muted)}
+.src a{color:var(--spark)}
+@media (max-width:820px){.moment{grid-template-columns:1fr;gap:22px}}
+@media (prefers-reduced-motion:no-preference){.chip{transition:background .15s,border-color .15s}}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Spark Intake · design spec for law firms</span>
+  <h1>The first reply should feel like a receptionist, not a receipt.</h1>
+  <p class="lede">Four moments between "nobody picked up" and "consultation booked." Each one is sent in the firm's name, from the firm's own local number, in the firm's own letterhead. None of them ever discuss the case. The firm approves every word once, at setup.</p>
+  <p class="note"><b>Not built yet.</b> Our pages promise this today, but no system sends it for any client. The mockups below are the target; the build options are at the bottom. The firm shown, "Harbor &amp; Pine Law," is fictional.</p>
+</header>
+
+<section class="moment" aria-labelledby="m1">
+  <div class="copy">
+    <span class="clock mono"><b>6:42 PM</b> · call rings out, 0:00</span>
+    <h2 id="m1">1. Missed call → text within a minute</h2>
+    <p>The caller hangs up and, before they dial the next firm on the list, their phone buzzes with a text from the number they just called. That's the whole trick: it's not a stranger, it's the firm.</p>
+    <ul class="rules">
+      <li>From the firm's own local number, signed with the firm name. No short codes, no links in the first text.</li>
+      <li>Asks only what kind of matter and when to call. Never "tell us what happened."</li>
+      <li>After hours it says when the office opens. Criminal defense firms can add their after-hours line for arrests.</li>
+    </ul>
+  </div>
+  <div class="stage">
+    <div class="phone" role="img" aria-label="Text message thread from a law firm after a missed call">
+      <div class="top"><div class="avatar">H</div><div class="who">Harbor &amp; Pine Law</div><div class="mono" style="color:var(--muted)">(863) 555-0142</div></div>
+      <div class="thread">
+        <span class="sys">Missed call · 6:42 PM</span>
+        <div class="b in">Hi, this is Harbor &amp; Pine Law in Lakeland. Sorry we missed your call. An attorney's office will call you back. What kind of legal matter is this, and what's the best time to reach you?</div>
+        <div class="b out">Divorce. Tomorrow after 4 is best.</div>
+        <div class="b in">Thank you. We've let the team know. Expect a call tomorrow after 4 from this number. Please don't text details about your situation; we'll cover everything privately on the call.</div>
+        <span class="sys">6:43 PM · team alerted</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="moment" aria-labelledby="m2">
+  <div class="copy">
+    <span class="clock mono"><b>9:10 PM</b> · website visit</span>
+    <h2 id="m2">2. Consultation request, not a contact form</h2>
+    <p>This replaces the Gravity Forms look: one short card, three quick taps, and a clear "what happens next." It still feeds the same inbox and alert.</p>
+    <ul class="rules">
+      <li>Taps, not typing: matter type, county, best time. Name and mobile last.</li>
+      <li>A plain confidentiality line: don't include case details; this doesn't create an attorney-client relationship.</li>
+      <li>The confirmation shows the timeline and an attorney's face, so it feels like a person is on it.</li>
+    </ul>
+  </div>
+  <div class="stage">
+    <div class="card">
+      <div class="head"><div class="avatar" aria-hidden="true">H</div><div><div class="t">Request a consultation</div><div class="fine">Harbor &amp; Pine Law · Lakeland, Florida</div></div></div>
+      <div class="body">
+        <div class="steps" aria-label="Step 1 of 3"><span class="on"></span><span></span><span></span></div>
+        <div style="display:grid;gap:10px">
+          <span class="label" id="mt">What kind of matter?</span>
+          <div class="chips" role="group" aria-labelledby="mt">
+            <button type="button" class="chip" id="c-div" aria-pressed="true">Divorce</button>
+            <button type="button" class="chip" id="c-cus" aria-pressed="false">Custody</button>
+            <button type="button" class="chip" id="c-dui" aria-pressed="false">DUI</button>
+            <button type="button" class="chip" id="c-crim" aria-pressed="false">Criminal charge</button>
+            <button type="button" class="chip" id="c-est" aria-pressed="false">Wills &amp; probate</button>
+            <button type="button" class="chip" id="c-oth" aria-pressed="false">Something else</button>
+          </div>
+        </div>
+        <div style="display:grid;gap:10px">
+          <span class="label" id="bt">Best time to call</span>
+          <div class="chips" role="group" aria-labelledby="bt">
+            <button type="button" class="chip" id="t-am" aria-pressed="false">Morning</button>
+            <button type="button" class="chip" id="t-mid" aria-pressed="false">Midday</button>
+            <button type="button" class="chip" id="t-pm" aria-pressed="true">After 4 PM</button>
+          </div>
+        </div>
+        <p class="fine">Please don't include details about your situation here. Submitting this request doesn't create an attorney-client relationship.</p>
+        <button type="button" class="btn" id="next">Continue</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="moment" aria-labelledby="m3">
+  <div class="copy">
+    <span class="clock mono"><b>9:11 PM</b> · 60 seconds later</span>
+    <h2 id="m3">3. The instant reply, on letterhead</h2>
+    <p>A text within the minute, plus this email. It looks like it came from the firm's front desk, because the firm wrote it.</p>
+    <ul class="rules">
+      <li>Firm letterhead, the attorney's name, office address. No marketing banner.</li>
+      <li>Two or three real consultation times they can tap, or "we'll call you."</li>
+      <li>Repeats the confidentiality line. Nothing about the case.</li>
+    </ul>
+  </div>
+  <div class="stage">
+    <div class="mail">
+      <div class="meta"><span><b>Harbor &amp; Pine Law</b> &lt;office@harborpinelaw.example&gt;</span><span>Your consultation request</span></div>
+      <div class="letter">
+        <div class="letterhead"><span class="n">Harbor &amp; Pine Law</span><span class="c">Lakeland · Polk County</span></div>
+        <p>Thank you for reaching out tonight. We received your request, and someone from our office will call you tomorrow after 4 PM.</p>
+        <p>If it's easier, you can pick a consultation time now:</p>
+        <div class="slot"><span>Thu 4:30 PM</span><span>Fri 10:00 AM</span><span>Fri 2:15 PM</span></div>
+        <p style="font-size:14px;color:var(--muted)">Please don't reply with details about your situation. We'll cover everything privately when we speak.</p>
+        <p>Office of Attorney Jane Harbor<br><span style="font-size:14px;color:var(--muted)">(863) 555-0142 · 100 Example Ave, Lakeland, FL</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="moment" aria-labelledby="m4">
+  <div class="copy">
+    <span class="clock mono"><b>9:11 PM</b> · same minute</span>
+    <h2 id="m4">4. The firm's alert: one card, one tap to call</h2>
+    <p>The firm's phone gets a clean lead card in the app, by text, or both. Whoever is on callback duty taps once to call from the firm's number. When the call happens, it's logged, and that's also how we know the "first new-client inquiry" has arrived for billing.</p>
+    <ul class="rules">
+      <li>Shows what was already said to the person, so nobody repeats themselves.</li>
+      <li>Conflict check stays with the firm: name first, details on the call.</li>
+      <li>If nobody marks it contacted within the firm's window, it nudges again.</li>
+    </ul>
+  </div>
+  <div class="stage">
+    <div class="alert">
+      <div class="row"><span class="pill">New inquiry</span><span class="mono" style="color:var(--muted)">9:11 PM · web form</span></div>
+      <h3 style="font-size:20px">Maria G. · Divorce</h3>
+      <dl class="kv">
+        <dt>County</dt><dd>Polk</dd>
+        <dt>Best time</dt><dd>Tomorrow after 4 PM</dd>
+        <dt>Already sent</dt><dd>Text + letterhead email, 9:11 PM</dd>
+        <dt>Mobile</dt><dd class="mono" style="font-size:14px">(863) 555-0199</dd>
+      </dl>
+      <div class="two"><button type="button" class="btn" id="call">Call from firm line</button><button type="button" class="btn ghost" id="done">Mark contacted</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="opts" aria-labelledby="build">
+  <span class="eyebrow">How we'd build it</span>
+  <h2 id="build">Two ways to make this real</h2>
+  <div class="optgrid">
+    <div class="opt rec">
+      <span class="pill tag">Recommended</span>
+      <h3>GoHighLevel, one sub-account per firm</h3>
+      <ul>
+        <li>Missed-call text-back is built in, plus forms, booking calendars, a two-way text inbox, and a mobile app for the alert card.</li>
+        <li>Unlimited plan is $297/mo for unlimited client sub-accounts; texts run under a cent each.</li>
+        <li>We style the form and emails to the firm's letterhead, as above.</li>
+        <li>Each firm's number needs US texting (A2P 10DLC) registration, which takes days to a few weeks. Start at signing.</li>
+      </ul>
+    </div>
+    <div class="opt">
+      <span class="pill tag" style="background:var(--bubble);color:var(--muted)">Custom</span>
+      <h3>Twilio + n8n + our own form</h3>
+      <ul>
+        <li>Cheapest per firm and fully ours: Twilio number with call forwarding, n8n sends the text and the alert, a custom form on the firm's WordPress site.</li>
+        <li>More build and more upkeep: we'd be writing the inbox, the alert, and the booking ourselves.</li>
+        <li>Same A2P registration requirement.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="src">Pricing: <a href="https://getautomized.com/gohighlevel-pricing/">Automize, GoHighLevel pricing 2026</a> · <a href="https://www.thestackinsiders.com/blog/gohighlevel-phone-system">The Stack Insiders, GoHighLevel phone system</a>. Confirm on signup; plans change.</p>
+</section>
+</div>
+
+<script>
+document.querySelectorAll('.chips').forEach(function(g){
+  g.addEventListener('click',function(e){
+    var b=e.target.closest('.chip'); if(!b) return;
+    g.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true');
+  });
+});
+</script>
