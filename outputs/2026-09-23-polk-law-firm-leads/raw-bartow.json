@@ -1,0 +1,6232 @@
+[
+  {
+    "title": "The Rodriguez Law Office",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "690 E Davidson St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "690 E Davidson St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.rodriguezcriminaldefense.com/",
+    "phone": "(863) 774-4556",
+    "phoneUnformatted": "+18637744556",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8974922,
+      "lng": -81.8380522
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJdf7li6gX3YgRAEkdd2GOMSg",
+    "categories": [
+      "Criminal justice attorney",
+      "Attorney",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd17a88be5fe75:0x28318e61771d4900",
+    "cid": "2896252584637319424",
+    "reviewsCount": 127,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 1,
+      "fiveStar": 124
+    },
+    "imagesCount": 18,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.923Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": false
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Rodriguez%20Law%20Office&query_place_id=ChIJdf7li6gX3YgRAEkdd2GOMSg",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmP76--8BoROSlzUdK461pNn0mSTyassfpEWgPkJO1bnajjxvpYL8wPU3vWMule-NcKTNt_QTS9M7K3t3aGYnHJP8wrklt8Wzz6WHh06_DdVWEGBifab3fG6-BJszLiktTITiRAn-w=w408-h271-k-no",
+    "kgmid": "/g/11hdcg9tl1",
+    "businessProfileId": "816093439944768126"
+  },
+  {
+    "title": "Boswell & Dunlap LLP",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "245 S Central Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "245 S Central Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.bosdun.com/",
+    "phone": "(863) 533-7117",
+    "phoneUnformatted": "+18635337117",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8954391,
+      "lng": -81.8426055
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ3bbhwL8X3YgRKi7YafgB6vY",
+    "categories": [
+      "Law firm",
+      "Bankruptcy attorney",
+      "Civil law attorney",
+      "Criminal justice attorney",
+      "Estate planning attorney",
+      "Family law attorney",
+      "Personal injury attorney",
+      "Real estate attorney"
+    ],
+    "fid": "0x88dd17bfc0e1b6dd:0xf6ea01f869d82e2a",
+    "cid": "17792035444319858218",
+    "reviewsCount": 64,
+    "reviewsDistribution": {
+      "oneStar": 9,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 2,
+      "fiveStar": 52
+    },
+    "imagesCount": 27,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.925Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Boswell%20%26%20Dunlap%20LLP&query_place_id=ChIJ3bbhwL8X3YgRKi7YafgB6vY",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMakaCKnzomJDUxp-25yLj-c3cBoUb66MgXFs9ZX9iYjKgowZqfYF9flHcq8_FfSbRdI3RTINbxUQoJ0cCnEtRx5RleX6nnvwRechUR60x25hXsbeKXI3eMY6iJVelqNMkIdOHN=w408-h408-k-no",
+    "kgmid": "/g/1tdzry_7",
+    "businessProfileId": "14525520355404942524"
+  },
+  {
+    "title": "Lobb & Mohr",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "295 W Summerlin St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "295 W Summerlin St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.lobbmohr.com/",
+    "phone": "(863) 533-4433",
+    "phoneUnformatted": "+18635334433",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8953659,
+      "lng": -81.8447602
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJAwqZDsAX3YgR8hiTBFNTUsQ",
+    "categories": [
+      "Family law attorney",
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd17c00e990a03:0xc4525353049318f2",
+    "cid": "14146460995548289266",
+    "reviewsCount": 108,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 1,
+      "fiveStar": 98
+    },
+    "imagesCount": 12,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.925Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 12 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lobb%20%26%20Mohr&query_place_id=ChIJAwqZDsAX3YgR8hiTBFNTUsQ",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPzsV_BpsfHqMZobo9LM5yVicxTU2CueMFhFw7-5_xCEEtq5-3sLF3xVTupGFGoC86yXidmI761fgPxZ8Y_aw0_OVHfAbMjV9skPXEAYgWifpIJZnR_YeSqf4xutHRD3CBtWXxV=w425-h240-k-no",
+    "kgmid": "/g/1tdds_vb",
+    "businessProfileId": "2976710239686614037"
+  },
+  {
+    "title": "Advocate Law Firm, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "620 Polk St Building A, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "620 Polk St Building A",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.everarguedwithawoman.com/",
+    "phone": "(863) 644-5566",
+    "phoneUnformatted": "+18636445566",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9007074,
+      "lng": -81.8495445
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJj32Ar8YX3YgRU0N7sz8Y5Pc",
+    "categories": [
+      "Family law attorney",
+      "Divorce lawyer",
+      "Law firm",
+      "Attorney",
+      "Legal services"
+    ],
+    "fid": "0x88dd17c6af807d8f:0xf7e4183fb37b4353",
+    "cid": "17862428683931435859",
+    "reviewsCount": 105,
+    "reviewsDistribution": {
+      "oneStar": 15,
+      "twoStar": 2,
+      "threeStar": 1,
+      "fourStar": 3,
+      "fiveStar": 84
+    },
+    "imagesCount": 8,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.925Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Advocate%20Law%20Firm%2C%20P.A.&query_place_id=ChIJj32Ar8YX3YgRU0N7sz8Y5Pc",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmODVnnbOoG1D6360rmaWYv5JhKbkjV55Z2e5fIC-HqVWRzlR_YycmuQnw40k0RxTS-cTZP_QPEBh0EXlGti2smh12PhoX0eYGkn1anW6Pbfc3A0ybdO67UvARc7mtD5mhPVczX4iw=w426-h240-k-no",
+    "kgmid": "/g/11bwd319mg",
+    "businessProfileId": "9973933461866663994"
+  },
+  {
+    "title": "The Law Firm of Gil Colón, Jr.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "325 E Davidson St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "325 E Davidson St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.gilcolonjr.com/?utm_source=referral&utm_medium=gbp&utm_campaign=gbp",
+    "phone": "(863) 622-9602",
+    "phoneUnformatted": "+18636229602",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8970045,
+      "lng": -81.8410211
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJewRe-L4X3YgRrAA1DyALYO4",
+    "categories": [
+      "Family law attorney",
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd17bef85e047b:0xee600b200f3500ac",
+    "cid": "17176741211113062572",
+    "reviewsCount": 283,
+    "reviewsDistribution": {
+      "oneStar": 22,
+      "twoStar": 0,
+      "threeStar": 3,
+      "fourStar": 4,
+      "fiveStar": 254
+    },
+    "imagesCount": 7,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.925Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Law%20Firm%20of%20Gil%20Col%C3%B3n%2C%20Jr.&query_place_id=ChIJewRe-L4X3YgRrAA1DyALYO4",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPq1mUJCTpaZynOlZ293Saj6sXqnPqJwjBtRd_zbtmgNNm8byJKvARQGpVuoY2zG9CzRlMnqAdAet5uUyRuf4EOQL4tgxYH42byNPzhKU1gc6zyxbuw854BW9YPQynLmlUNPo76_Q=w408-h272-k-no",
+    "kgmid": "/g/1ts1t0vn",
+    "businessProfileId": "14777461991086161296"
+  },
+  {
+    "title": "Sutton Law Firm",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "325 W Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "325 W Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.suttonlawfirm.net/locations/bartow-office/",
+    "phone": "(863) 400-3401",
+    "phoneUnformatted": "+18634003401",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8962439,
+      "lng": -81.8456777
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJD0M_Z_UX3YgR_U8JE41gjNo",
+    "categories": [
+      "Family law attorney",
+      "Law firm",
+      "Attorney"
+    ],
+    "fid": "0x88dd17f5673f430f:0xda8c608d13094ffd",
+    "cid": "15748068156033814525",
+    "reviewsCount": 72,
+    "reviewsDistribution": {
+      "oneStar": 9,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 3,
+      "fiveStar": 60
+    },
+    "imagesCount": 33,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.925Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 12 PM, 1 to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 12 PM, 1 to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 12 PM, 1 to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 12 PM, 1 to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 12 PM, 1 to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Sutton%20Law%20Firm&query_place_id=ChIJD0M_Z_UX3YgR_U8JE41gjNo",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMgeaJcdNRFMhN9f8opZufrpkDCGKzxjUoEMm_HMAfbKxXY5_Qej5cU2C8-U0rw9NVXTZsBaV7i7vb63cQVLtsDSqfj8pyxsQoItvoW8xPdatM8hI0pLLToWXdDhJ-HBXj5zgI=w408-h433-k-no",
+    "kgmid": "/g/11bbymtqdh",
+    "businessProfileId": "16088600345878939162"
+  },
+  {
+    "title": "Law Office of Michael Dicks, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "580 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "580 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://michaeldickslaw.com/",
+    "phone": "(863) 533-0507",
+    "phoneUnformatted": "+18635330507",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8966169,
+      "lng": -81.8393009
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJp1K_Z74X3YgRSYVjPHQqceQ",
+    "categories": [
+      "Family law attorney",
+      "Civil law attorney",
+      "Criminal justice attorney",
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd17be67bf52a7:0xe4712a743c638549",
+    "cid": "16460984791733601609",
+    "reviewsCount": 49,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 45
+    },
+    "imagesCount": 14,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.926Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 1 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Law%20Office%20of%20Michael%20Dicks%2C%20P.A.&query_place_id=ChIJp1K_Z74X3YgRSYVjPHQqceQ",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOQ98TBQAcTK_Jm3xVurq57eyVtUX2KPo5jE3l29DneNrV4LkPfpb9BzXt8vtEQPMhv_ul28x9apZvCifG1xIUXt1KjwnIxu2NDQYOrZS9z-2ylF4edgCPucApVe3G1wijN5ktR=w408-h333-k-no",
+    "kgmid": "/g/11c2mdflfc",
+    "businessProfileId": "17287332106181167630"
+  },
+  {
+    "title": "McKinley Law Firm",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "190 E Davidson St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "190 E Davidson St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.mckinleylaw.net/",
+    "phone": "(863) 533-6698",
+    "phoneUnformatted": "+18635336698",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8975129,
+      "lng": -81.8426258
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ0zcrDL8X3YgRPRa44DGxzXo",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17bf0c2b37d3:0x7acdb131e0b8163d",
+    "cid": "8848923670634567229",
+    "reviewsCount": 27,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 19
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.926Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:15 AM to 5:15 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:15 AM to 5:15 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:15 AM to 5:15 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:15 AM to 5:15 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:15 AM to 5:15 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=McKinley%20Law%20Firm&query_place_id=ChIJ0zcrDL8X3YgRPRa44DGxzXo",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOyVZUxlkpIKBPGZsPRYW5Aj2plqzbkRhlykLfneTLCzbDnDMHHJaxHmC8bcvaht58jGMvQmPqvSoz0UfwuLz2b5dcQxKTk2GTisRfYZiJJ70RyQybYabLnjgbQ0rnYZc7JOAP3=w408-h272-k-no",
+    "kgmid": "/g/1tf612n9",
+    "businessProfileId": "14366009817414199264"
+  },
+  {
+    "title": "Kelley W Collier PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "1125 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "1125 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.legalmatch.com/home/atty/profilePopUp.do?attorneyNumber=1912843747988A&profileId=1475991&ia=true",
+    "phone": "(863) 534-9318",
+    "phoneUnformatted": "+18635349318",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8966126,
+      "lng": -81.8318316
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJe3QgH6MX3YgRe5dw8kMZ1EU",
+    "categories": [
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd17a31f20747b:0x45d41943f270977b",
+    "cid": "5031674463300654971",
+    "reviewsCount": 83,
+    "reviewsDistribution": {
+      "oneStar": 26,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 56
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.926Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Kelley%20W%20Collier%20PA&query_place_id=ChIJe3QgH6MX3YgRe5dw8kMZ1EU",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=hagQ8L1qTAOyPFieREbGmQ&cb_client=search.gws-prod.grass&w=408&h=240&yaw=200.64342&pitch=-0.63244736&thumbfov=100",
+    "kgmid": "/g/1tfh5gj4",
+    "businessProfileId": null
+  },
+  {
+    "title": "Lasseigne & Ladner P.A. Attorneys at Law",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "205 N Mill Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "205 N Mill Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://rymap.org/business/lasseigne-ladner-pa-attorneys-at-law-f8ctvb",
+    "phone": "(863) 422-2047",
+    "phoneUnformatted": "+18634222047",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8974389,
+      "lng": -81.8469236
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJmfv3_sAX3YgRP_9ebcF5qjQ",
+    "categories": [
+      "Law firm",
+      "Attorney"
+    ],
+    "fid": "0x88dd17c0fef7fb99:0x34aa79c16d5eff3f",
+    "cid": "3794979507683655487",
+    "reviewsCount": 33,
+    "reviewsDistribution": {
+      "oneStar": 5,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 28
+    },
+    "imagesCount": 10,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.926Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lasseigne%20%26%20Ladner%20P.A.%20Attorneys%20at%20Law&query_place_id=ChIJmfv3_sAX3YgRP_9ebcF5qjQ",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmP-yAEgvQ0V74uVq1dZy9wqVzD1fqbdD8bNX8BF32XxqUat68wM5JPxFA9_q_lLmN6oUXkIMkV0hAgLPUehwP0ldRPpqG1P_rNROqXihnUjANNThE71F0oTcKwGDnoAIlM93WJlSw=w717-h240-k-no",
+    "kgmid": "/g/11hm3xh1l1",
+    "businessProfileId": "16816123053143451148"
+  },
+  {
+    "title": "McNelis Law, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "158 E Summerlin St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "158 E Summerlin St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.mcnelislawpa.com/",
+    "phone": "(863) 537-7370",
+    "phoneUnformatted": "+18635377370",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8958721,
+      "lng": -81.8427772
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJeXkFv78X3YgRQT15fd9Udoo",
+    "categories": [
+      "Family law attorney",
+      "Criminal justice attorney",
+      "Law firm"
+    ],
+    "fid": "0x88dd17bfbf057979:0x8a7654df7d793d41",
+    "cid": "9977255343345450305",
+    "reviewsCount": 31,
+    "reviewsDistribution": {
+      "oneStar": 5,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 25
+    },
+    "imagesCount": 11,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.926Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=McNelis%20Law%2C%20P.A.&query_place_id=ChIJeXkFv78X3YgRQT15fd9Udoo",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNHP5Srqgs-SXh0SwCAyZFtvO5Nss9Is_BDoavrYPsUo-xSJ50jScqolnuzOkl1Lo0ELKecQPg0Q-DlhWbM8e129F-wIGXO4Y0yqA0qnb-Xa4I6hJ-AugO9Gu8GKQOyCVXjMStifZp66h52=w408-h513-k-no",
+    "kgmid": "/g/11hcttxdsr",
+    "businessProfileId": "2772168299631399816"
+  },
+  {
+    "title": "Moody Law, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "575 N Broadway Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "575 N Broadway Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.moodylaw.com/locations/bartow-office/",
+    "phone": "(863) 456-7847",
+    "phoneUnformatted": "+18634567847",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8998858,
+      "lng": -81.8436411
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ15qoUr8X3YgR56a3zLIvvhg",
+    "categories": [
+      "Personal injury attorney",
+      "Law firm",
+      "Attorney",
+      "Legal services",
+      "Medical lawyer"
+    ],
+    "fid": "0x88dd17bf52a89ad7:0x18be2fb2ccb7a6e7",
+    "cid": "1782914947470567143",
+    "reviewsCount": 69,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 68
+    },
+    "imagesCount": 96,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.927Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Online service hours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Moody%20Law%2C%20P.A.&query_place_id=ChIJ15qoUr8X3YgR56a3zLIvvhg",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 12,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPQSyJ8z73RZ_TjoWsMMT07NQPGjP7_Yx4hWjWkUI-Csa7uOGoNajmSetmxFtvwBwl020lUfsvvavolp1BXQ-MZMUdoC4stXQxLfdS393xnrGvt2OfxBsDpALPYuqIvqk4BZWIqOra6uIlq=w642-h240-k-no",
+    "kgmid": "/g/1td9rb7b",
+    "businessProfileId": "17497582751569124252"
+  },
+  {
+    "title": "Nathaniel White Attorney At Law",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "515 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "515 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 534-3617",
+    "phoneUnformatted": "+18635343617",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8962574,
+      "lng": -81.8397193
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJZThVZL4X3YgR0Gj1j0_hDqQ",
+    "categories": [
+      "Law firm",
+      "Criminal justice attorney",
+      "Divorce lawyer",
+      "Family law attorney"
+    ],
+    "fid": "0x88dd17be64553865:0xa40ee14f8ff568d0",
+    "cid": "11821633803728021712",
+    "reviewsCount": 27,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 23
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.927Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Nathaniel%20White%20Attorney%20At%20Law&query_place_id=ChIJZThVZL4X3YgR0Gj1j0_hDqQ",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 13,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPdpx8ojDN4ilEeLZb_hNHkfalbQWTvupMFpVuMK84HqAJ6euanAHeDgujQwLFnwb9gR8mvEJtmnZh08_KiZ8dIqajO6sr6UnruXu_JDz-gqa196EddGcFLhMjltvZZkL8Mo_Ft=w408-h544-k-no",
+    "kgmid": "/g/1tq4rx0r",
+    "businessProfileId": "499103700851128846"
+  },
+  {
+    "title": "Saunders Law Group",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "480 S Broadway Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "480 S Broadway Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.saunders-law.com/?npcmp=dir:local:3972853:33830",
+    "phone": "(863) 533-6200",
+    "phoneUnformatted": "+18635336200",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8933461,
+      "lng": -81.8430115
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.2,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJdwGsQpUX3YgRRG1QonWo5_o",
+    "categories": [
+      "Attorney",
+      "Mediation service"
+    ],
+    "fid": "0x88dd179542ac0177:0xfae7a875a2506d44",
+    "cid": "18079604452289965380",
+    "reviewsCount": 37,
+    "reviewsDistribution": {
+      "oneStar": 6,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 3,
+      "fiveStar": 27
+    },
+    "imagesCount": 17,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.928Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Saunders%20Law%20Group&query_place_id=ChIJdwGsQpUX3YgRRG1QonWo5_o",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 14,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMeH3gP99rksDlVAGMBIJxJ--XjIOe-DwL5N4dVGEuYTb_qQFfSilGyI1oxZSl5Q1We1sX1w8W_EVm83_ZB1yZAMxef3Yy1HnwhoNQkT6SVvJpKgm7oBdatoOyV3KaXEddL8h2eSg=w408-h517-k-no",
+    "kgmid": "/g/1td663qg",
+    "businessProfileId": "7423385797634038695"
+  },
+  {
+    "title": "Blenk Law, PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "158 E Summerlin St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "158 E Summerlin St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://criminalattorneypolk.com/",
+    "phone": "(863) 534-3555",
+    "phoneUnformatted": "+18635343555",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8957779,
+      "lng": -81.8427674
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJX3cjC78X3YgR2tFb6ENOraM",
+    "categories": [
+      "Law firm"
+    ],
+    "fid": "0x88dd17bf0b23775f:0xa3ad4e43e85bd1da",
+    "cid": "11794169052721304026",
+    "reviewsCount": 25,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 6,
+      "fourStar": 1,
+      "fiveStar": 17
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.928Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Blenk%20Law%2C%20PA&query_place_id=ChIJX3cjC78X3YgR2tFb6ENOraM",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNkwuCIxvOPjvEpp-s_8tAfcmJ0VJaey-D1G8VRVrZOz3XpRy0BbuyFxx19HKKn-Z6mCUf24p8NE7IKKN-cc1akUlEHCvOabgHtfL-W1izCHW48IaPYub9x74VGm93h2KqEcCTL=w408-h272-k-no",
+    "kgmid": "/g/1vyxk6ml",
+    "businessProfileId": "16073617530593486602"
+  },
+  {
+    "title": "The Franklin Law Firm PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "343 W Davidson St #103, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "343 W Davidson St #103",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 519-0700",
+    "phoneUnformatted": "+18635190700",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8967903,
+      "lng": -81.8454918
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJGR7SYMAX3YgR6HDW5KFro5I",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17c060d21e19:0x92a36ba1e4d670e8",
+    "cid": "10566407493814481128",
+    "reviewsCount": 18,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 15
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.928Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Franklin%20Law%20Firm%20PA&query_place_id=ChIJGR7SYMAX3YgR6HDW5KFro5I",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 16,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmN05C4-S1a844df4gkOpqswoXY8J2pyAIef0mfwFcthfdVcV4QPEISNlVNA-2ukLMjsYe22eAE62Wtcp4sWwQzfXlVxokRHZ7BrzZCUkS-ZoVYd1dEQDPruOldp02QO0C6qqYc2gw=w408-h272-k-no",
+    "kgmid": "/g/1thx9fft",
+    "businessProfileId": "745876809761582603"
+  },
+  {
+    "title": "Law Office of Cory Chastang, PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "510 S Broadway Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "510 S Broadway Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.chastanglaw.com/?npcmp=dir:local:5369904:33830",
+    "phone": "(863) 400-5810",
+    "phoneUnformatted": "+18634005810",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8926272,
+      "lng": -81.8429671
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJmcjH4yYX3YgRzdWXTjQIilk",
+    "categories": [
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd1726e3c7c899:0x598a08344e97d5cd",
+    "cid": "6451978436911551949",
+    "reviewsCount": 14,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 13
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.928Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Law%20Office%20of%20Cory%20Chastang%2C%20PA&query_place_id=ChIJmcjH4yYX3YgRzdWXTjQIilk",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 17,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=9h9QB-LK2AMO5iaLm01v0A&cb_client=search.gws-prod.grass&w=408&h=240&yaw=98.218895&pitch=0&thumbfov=100",
+    "kgmid": "/g/11x7hllz6l",
+    "businessProfileId": "6479069237723691636"
+  },
+  {
+    "title": "Frost Law Firm, PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "395 S Central Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "395 S Central Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.frostpa.com/",
+    "phone": "(863) 533-0314",
+    "phoneUnformatted": "+18635330314",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8945986,
+      "lng": -81.8426664
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJnzpq3r8X3YgRCteIvA_8d-0",
+    "categories": [
+      "Family law attorney",
+      "Divorce lawyer",
+      "Attorney",
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd17bfde6a3a9f:0xed77fc0fbc88d70a",
+    "cid": "17111422453735282442",
+    "reviewsCount": 13,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 10
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.928Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Frost%20Law%20Firm%2C%20PA&query_place_id=ChIJnzpq3r8X3YgRCteIvA_8d-0",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=k3kY9wMyrBPyJNiNMD3DZQ&cb_client=search.gws-prod.grass&w=408&h=240&yaw=313.21307&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tf612nb",
+    "businessProfileId": null
+  },
+  {
+    "title": "Law Office of the Public Defender, Polk County, FL",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Public defender's office",
+    "address": "255 N Broadway Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "255 N Broadway Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://pd10.org/",
+    "phone": "(863) 534-4200",
+    "phoneUnformatted": "+18635344200",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8975942,
+      "lng": -81.8446348
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 2.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJoaOsbr8X3YgR4e3DnVDcdrc",
+    "categories": [
+      "Public defender's office",
+      "County government office"
+    ],
+    "fid": "0x88dd17bf6eaca3a1:0xb776dc509dc3ede1",
+    "cid": "13219995994995027425",
+    "reviewsCount": 41,
+    "reviewsDistribution": {
+      "oneStar": 24,
+      "twoStar": 1,
+      "threeStar": 1,
+      "fourStar": 2,
+      "fiveStar": 13
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.930Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Law%20Office%20of%20the%20Public%20Defender%2C%20Polk%20County%2C%20FL&query_place_id=ChIJoaOsbr8X3YgR4e3DnVDcdrc",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=pGD5pRkZ9J2kR_6t4hnysQ&cb_client=search.gws-prod.grass&w=408&h=240&yaw=182.4358&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tr18cnz",
+    "businessProfileId": null
+  },
+  {
+    "title": "Musca Law",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "240 N Broadway Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "240 N Broadway Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.muscalaw.com/locations/bartow",
+    "phone": "(888) 484-5057",
+    "phoneUnformatted": "+18884845057",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8975651,
+      "lng": -81.8430494
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJKf0ZDwAX3YgR35B3wflYWQM",
+    "categories": [
+      "Law firm"
+    ],
+    "fid": "0x88dd17000f19fd29:0x35958f9c17790df",
+    "cid": "241321884756971743",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:31.930Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Musca%20Law&query_place_id=ChIJKf0ZDwAX3YgR35B3wflYWQM",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=k8JpItbYW_adIKJbCq9bIQ&cb_client=search.gws-prod.grass&w=408&h=240&yaw=110.95027&pitch=0&thumbfov=100",
+    "kgmid": "/g/11yz_h7yjd",
+    "businessProfileId": null
+  },
+  {
+    "title": "John Liguori",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "345 W Davidson St #201, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "345 W Davidson St #201",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 533-6143",
+    "phoneUnformatted": "+18635336143",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8969362,
+      "lng": -81.8456071
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJuZGhisAX3YgRP0YRamiEWwQ",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17c08aa191b9:0x45b84686a11463f",
+    "cid": "313990183023363647",
+    "reviewsCount": 43,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 41
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:34.424Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=John%20Liguori&query_place_id=ChIJuZGhisAX3YgRP0YRamiEWwQ",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "attorney Bartow FL",
+    "language": "en",
+    "rank": 16,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jxt10hFbEJMwntZIEaw1bA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=179.38452&pitch=0&thumbfov=100",
+    "kgmid": "/g/1v4k79xn",
+    "businessProfileId": "1152823602834018587"
+  },
+  {
+    "title": "Brewer & Wilson, PLLC - Bartow Office",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "310 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "310 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.brewerandwilson.com/",
+    "phone": "(863) 658-3833",
+    "phoneUnformatted": "+18636583833",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8965625,
+      "lng": -81.8414067
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJtXxoMAQX3YgR-XkVyMLZoHc",
+    "categories": [
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd170430687cb5:0x77a0d9c2c81579f9",
+    "cid": "8620129117390862841",
+    "reviewsCount": 9,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 8
+    },
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:34.424Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Brewer%20%26%20Wilson%2C%20PLLC%20-%20Bartow%20Office&query_place_id=ChIJtXxoMAQX3YgR-XkVyMLZoHc",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Bartow%20FL/@27.8851143,-81.75172112255174,14z?hl=en",
+    "searchString": "attorney Bartow FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnYmipONmDZP8Aj5s2Fcw6Q_JGMpvVTGPZ4JxkvuPLdbBVKSPU7UKne2JxInxugj-_4CoPql2khLB6b10TszwYfhP98ksi8FE7PEqwSlgqb47XDWVkHFR1Xusq6bzfm0X4e_mC6mA=w408-h326-k-no",
+    "kgmid": "/g/11jzntxk61",
+    "businessProfileId": "7066424543304094958"
+  },
+  {
+    "title": "Lopez & Humphries, P.A. - Car Accident Lawyers - Bartow",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "205 N Mill Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "205 N Mill Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.lopezandhumphries.com/?fct=001&utm_source=GMB&utm_medium=organic&utm_campaign=bartow",
+    "phone": "(863) 774-3407",
+    "phoneUnformatted": "+18637743407",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8973421,
+      "lng": -81.8469184
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJgdibwodt3YgRx6cNXEWphW4",
+    "categories": [
+      "Personal injury attorney",
+      "Law firm",
+      "Attorney",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd6d87c29bd881:0x6e85a9455c0da7c7",
+    "cid": "7963957631436826567",
+    "reviewsCount": 28,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 25
+    },
+    "imagesCount": 97,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:39.649Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Identifies as veteran-owned": true
+        },
+        {
+          "Identifies as women-owned": true
+        }
+      ],
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lopez%20%26%20Humphries%2C%20P.A.%20-%20Car%20Accident%20Lawyers%20-%20Bartow&query_place_id=ChIJgdibwodt3YgRx6cNXEWphW4",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.94582350993603,-81.88897627744828,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmM2eAkfaMQA9ElyAW1qlGWYaYDjD5pvBSL3RV2A1v5jJfOM6Rwr2vwluiBU3dH7ZxanWtN-EvC9G26VVedUV1KRXwKMXMEubIwWwl8M0q9TefaLZTZ1B5f9lAggImzWNh7lUC0_eQ=w457-h240-k-no",
+    "kgmid": "/g/1262xpk43",
+    "businessProfileId": "13622776677929345669"
+  },
+  {
+    "title": "Mark A. Taylor, PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "341 W Davidson St #302, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "341 W Davidson St #302",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 519-7100",
+    "phoneUnformatted": "+18635197100",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.89699,
+      "lng": -81.84542
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJM29A-1MX3YgRDewBI01xtqE",
+    "categories": [
+      "Law firm",
+      "Criminal justice attorney",
+      "Legal services",
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd1753fb406f33:0xa1b6714d2301ec0d",
+    "cid": "11652625661981486093",
+    "reviewsCount": 16,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 14
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:47.433Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mark%20A.%20Taylor%2C%20PA&query_place_id=ChIJM29A-1MX3YgRDewBI01xtqE",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=szAQI4KXNW43FgkgZF0eDA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=185.25272&pitch=0&thumbfov=100",
+    "kgmid": "/g/11mr3dt8qq",
+    "businessProfileId": "785997332101959579"
+  },
+  {
+    "title": "The Buerger Law Firm, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "766 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "766 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.attorneybuerger.com/?utm_source=google-my-business&utm_medium=organic&utm_campaign=gmb&utm_term=winter-haven-fl&utm_content=website",
+    "phone": "(863) 537-7907",
+    "phoneUnformatted": "+18635377907",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8967081,
+      "lng": -81.836872
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJD2ajTbwX3YgRdLLE5A2fYQA",
+    "categories": [
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd17bc4da3660f:0x619f0de4c4b274",
+    "cid": "27477954762420852",
+    "reviewsCount": 8,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 8
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 1 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        },
+        {
+          "Online appointments": false
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Buerger%20Law%20Firm%2C%20P.A.&query_place_id=ChIJD2ajTbwX3YgRdLLE5A2fYQA",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 24,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm4vR1xI77P8mEjX45675h6eSH63rEPHwGyJJa4f30uV-z-dSKjO7Lks5sgn_gQKms1nN8UQ0BSPwol17pC_MHJzekNQm_j-46O1spwT4TJvb8VezSPpC9yHMT3n9B1ZOAIfaLM=w408-h447-k-no",
+    "kgmid": "/g/1w0h89x7",
+    "businessProfileId": "15257697286027400765"
+  },
+  {
+    "title": "Karen I. Meeks, P.A",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "160 E Summerlin St #208, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "160 E Summerlin St #208",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 534-8300",
+    "phoneUnformatted": "+18635348300",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8958727,
+      "lng": -81.8426734
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJKfxBds8X3YgRfaonNTgYmkQ",
+    "categories": [
+      "Family law attorney",
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd17cf7641fc29:0x449a18383527aa7d",
+    "cid": "4943290170681567869",
+    "reviewsCount": 17,
+    "reviewsDistribution": {
+      "oneStar": 7,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 9
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 3 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Karen%20I.%20Meeks%2C%20P.A&query_place_id=ChIJKfxBds8X3YgRfaonNTgYmkQ",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 26,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=tRgfd0pR6_j1YXagOYU6RA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=353.72464&pitch=0&thumbfov=100",
+    "kgmid": "/g/11f5vdm87q",
+    "businessProfileId": null
+  },
+  {
+    "title": "Stidham & Stidham",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "150 E Davidson St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "150 E Davidson St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.stidhamlawyers.com/",
+    "phone": "(863) 533-0866",
+    "phoneUnformatted": "+18635330866",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.897462,
+      "lng": -81.842764
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJM2dxDb8X3YgReUj3sGwb4I0",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17bf0d716733:0x8de01b6cb0f74879",
+    "cid": "10223201307770439801",
+    "reviewsCount": 5,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 3
+    },
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Stidham%20%26%20Stidham&query_place_id=ChIJM2dxDb8X3YgReUj3sGwb4I0",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 27,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnarYRqnd6VCV4CPV-V501cSqTHOcrW41Jcc_cgO8M11RB1uIYwbGbZlnbG_yc2u_XPkg5GA4unCyuQ4V8sIP9nbvhQwX9DDP0m1UoyolZHZbj7zI5Wr0WI4h2RLtL1zluAqGo=w507-h240-k-no",
+    "kgmid": "/g/1v6qjf9b",
+    "businessProfileId": null
+  },
+  {
+    "title": "The Rivas Law Firm, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "115 E Main St Ste 3, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "115 E Main St Ste 3",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://theorlandocriminaldefense.com/",
+    "phone": "(407) 553-9344",
+    "phoneUnformatted": "+14075539344",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.896334,
+      "lng": -81.8430344
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJecSYBHEX3YgRL0Kng6USwzw",
+    "categories": [
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd17710498c479:0x3cc312a583a7422f",
+    "cid": "4378363764821934639",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Rivas%20Law%20Firm%2C%20P.A.&query_place_id=ChIJecSYBHEX3YgRL0Kng6USwzw",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 28,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=zmbamVar4QwJ2CAg25I6rw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=188.9478&pitch=0&thumbfov=100",
+    "kgmid": "/g/11srhs8yzm",
+    "businessProfileId": "14649842071897561465"
+  },
+  {
+    "title": "The Concepcion Law Firm",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "113 E Main St Ste 2, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "113 E Main St Ste 2",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.concepcionlawfirm.com/",
+    "phone": "(863) 900-5297",
+    "phoneUnformatted": "+18639005297",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8963368,
+      "lng": -81.8431665
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJJ1TqkBc53YgRJfJ6FFHCNuw",
+    "categories": [
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd391790ea5427:0xec36c251147af225",
+    "cid": "17021005495185109541",
+    "reviewsCount": 25,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 24
+    },
+    "imagesCount": 20,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Concepcion%20Law%20Firm&query_place_id=ChIJJ1TqkBc53YgRJfJ6FFHCNuw",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 29,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn5nodfRm7hPHzjLBjwQJfRj0gN-AQSSQzeoOzSfboRTlofEnFRxDtPMRejoRvOo4GhBDn3nqGgmrtQuP538gLmecvRevfzWZQxpsQRZ0OMiS7LLcmZhNhJbbns1MoEdJpIGebPo4a-6nVc=w408-h271-k-no",
+    "kgmid": "/g/11vtbjxw1j",
+    "businessProfileId": "17247724285316692134"
+  },
+  {
+    "title": "O'Toole Law Group",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "310 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "310 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://otoolepa.com/",
+    "phone": "(863) 533-5525",
+    "phoneUnformatted": "+18635335525",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8966486,
+      "lng": -81.8414269
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJG6pPjXcX3YgR6FZFCQLw__c",
+    "categories": [
+      "Personal injury attorney",
+      "Insurance attorney",
+      "Attorney",
+      "Legal services",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd17778d4faa1b:0xf7fff002094556e8",
+    "cid": "17870265737965557480",
+    "reviewsCount": 27,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 27
+    },
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=O'Toole%20Law%20Group&query_place_id=ChIJG6pPjXcX3YgR6FZFCQLw__c",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 30,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlOAwEffWtqmcj3xMNtUW-26uHP1P8pM03FpI8DdiMdhq8NrXYiGTl_2dRWYObL7SAYAe6BZgMVnc11lq5YLbdTe3lwp70gAfj_8bI_2zZb86HvhHutyj5k8BoV0ghfkfgqLHjB=w409-h240-k-no",
+    "kgmid": "/g/11gr62f_8h",
+    "businessProfileId": "14733271966505624339"
+  },
+  {
+    "title": "Heart of Florida Legal Aid",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "550 E Davidson St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "550 E Davidson St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.hofla.org/",
+    "phone": "(863) 519-5663",
+    "phoneUnformatted": "+18635195663",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8974318,
+      "lng": -81.8396425
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJWTNfhb4X3YgRzAnmZ_1eeEU",
+    "categories": [
+      "Family law attorney",
+      "Divorce lawyer",
+      "Public defender's office"
+    ],
+    "fid": "0x88dd17be855f3359:0x45785efd67e609cc",
+    "cid": "5005855428285172172",
+    "reviewsCount": 36,
+    "reviewsDistribution": {
+      "oneStar": 17,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 17
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 1 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Heart%20of%20Florida%20Legal%20Aid&query_place_id=ChIJWTNfhb4X3YgRzAnmZ_1eeEU",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 31,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=E5iCPD3BJUrgsqPbxeKtGg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=238.90602&pitch=0&thumbfov=100",
+    "kgmid": "/g/1v2f1b09",
+    "businessProfileId": "12888258159225602637"
+  },
+  {
+    "title": "State Attorney's Office 10th Judicial Circuit",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "255 N Broadway Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "255 N Broadway Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.sao10.com/",
+    "phone": "(863) 534-4800",
+    "phoneUnformatted": "+18635344800",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8975942,
+      "lng": -81.8446348
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 2.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJoaOsbr8X3YgRPVx6rAL3S9k",
+    "categories": [
+      "Attorney",
+      "Criminal justice attorney",
+      "Government office"
+    ],
+    "fid": "0x88dd17bf6eaca3a1:0xd94bf702ac7a5c3d",
+    "cid": "15657880120339356733",
+    "reviewsCount": 17,
+    "reviewsDistribution": {
+      "oneStar": 10,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 7
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Parking": [
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=State%20Attorney's%20Office%2010th%20Judicial%20Circuit&query_place_id=ChIJoaOsbr8X3YgRPVx6rAL3S9k",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 32,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=pGD5pRkZ9J2kR_6t4hnysQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=182.43703&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tctmlx6",
+    "businessProfileId": null
+  },
+  {
+    "title": "Law Office of Robert A. Norgard",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "310 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "310 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.norgardlaw.com/",
+    "phone": "(863) 533-8556",
+    "phoneUnformatted": "+18635338556",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8965592,
+      "lng": -81.8414164
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ_3aEisAX3YgR1Ul5gfv-B2Q",
+    "categories": [
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd17c08a8476ff:0x6407fefb817949d5",
+    "cid": "7208010084792224213",
+    "reviewsCount": 5,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 3
+    },
+    "imagesCount": 8,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": false
+        },
+        {
+          "Wheelchair accessible seating": false
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Law%20Office%20of%20Robert%20A.%20Norgard&query_place_id=ChIJ_3aEisAX3YgR1Ul5gfv-B2Q",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 33,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlXLJ354nVttxQGxJ-8uUw_og2Wj1Z-AhsFArojMoAlz7gODhaUg_XG-1RExmS-JWMHBY6L8nibROCeRIfPPT2tf1dug89Ft2W9ZWkyINyll3ZzMKpaDEXMpGanA6AsWkmKeHE=w570-h240-k-no",
+    "kgmid": "/g/1v1vd_l2",
+    "businessProfileId": "1626806137293229316"
+  },
+  {
+    "title": "Sensabaugh Terry K",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "1685 Margaret Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "1685 Margaret Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 205-6363",
+    "phoneUnformatted": "+18632056363",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.878964,
+      "lng": -81.847593
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlQ8RpfMX3YgRR3HBL1g8pEg",
+    "categories": [
+      "Family law attorney"
+    ],
+    "fid": "0x88dd17f3a5110f95:0x48a43c582fc17147",
+    "cid": "5234375016367354183",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Sensabaugh%20Terry%20K&query_place_id=ChIJlQ8RpfMX3YgRR3HBL1g8pEg",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 34,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=lpCH54BdetPWOmJ17fMEIA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=282.8109&pitch=0&thumbfov=100",
+    "kgmid": "/g/12602tksr",
+    "businessProfileId": null
+  },
+  {
+    "title": "The Flynn Law Group",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "345 W Davidson St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "345 W Davidson St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 533-6707",
+    "phoneUnformatted": "+18635336707",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.896953,
+      "lng": -81.845623
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlyP0XsAX3YgRYGLeo3bq3d4",
+    "categories": [
+      "Criminal justice attorney",
+      "Law firm",
+      "Attorney"
+    ],
+    "fid": "0x88dd17c05ef42397:0xdeddea76a3de6260",
+    "cid": "16059249641549357664",
+    "reviewsCount": 10,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 8
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.196Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Flynn%20Law%20Group&query_place_id=ChIJlyP0XsAX3YgRYGLeo3bq3d4",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 35,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkSz-I-h-YtXRRYWIVcVmBeuRGEFCSTL-bgxEdcSFskkYdO0TF77ZD76PWkB5O6vWlbP_fGR2zVuLcEEIokFfRA4jQOsMB-MnHMyIn2o_SdZT7ygZVIEqFr97qxh4jyq0Ie1E6z=w426-h240-k-no",
+    "kgmid": "/g/1v831xsw",
+    "businessProfileId": "15121288168167329650"
+  },
+  {
+    "title": "Criminal Conflict And Civil Regional Counsel",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "622 Polk St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "622 Polk St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 534-3689",
+    "phoneUnformatted": "+18635343689",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9007072,
+      "lng": -81.8495485
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 2.1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJl4EXq8YX3YgRI0n06_GqYaY",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17c6ab178197:0xa661aaf1ebf44923",
+    "cid": "11989051639059466531",
+    "reviewsCount": 23,
+    "reviewsDistribution": {
+      "oneStar": 14,
+      "twoStar": 2,
+      "threeStar": 2,
+      "fourStar": 1,
+      "fiveStar": 4
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.197Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Criminal%20Conflict%20And%20Civil%20Regional%20Counsel&query_place_id=ChIJl4EXq8YX3YgRI0n06_GqYaY",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 36,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qa2rhpUmI0o7KsSqNhU0og&cb_client=search.gws-prod.gps&w=408&h=240&yaw=330.54828&pitch=0&thumbfov=100",
+    "kgmid": "/g/11h3vc2cgy",
+    "businessProfileId": null
+  },
+  {
+    "title": "Combee Law Firm",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "341 W Davidson St #302, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "341 W Davidson St #302",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.combeelawfirm.com/",
+    "phone": "(863) 519-0314",
+    "phoneUnformatted": "+18635190314",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.89699,
+      "lng": -81.84542
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ_3aEisAX3YgRk97fWwqJ8zc",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17c08a8476ff:0x37f3890a5bdfde93",
+    "cid": "4031716769010802323",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 0
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.197Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "6 AM to 6 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "6 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": false,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Combee%20Law%20Firm&query_place_id=ChIJ_3aEisAX3YgRk97fWwqJ8zc",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 37,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=szAQI4KXNW43FgkgZF0eDA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=185.25272&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tghdz14",
+    "businessProfileId": null
+  },
+  {
+    "title": "The Wright Law Firm",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "415 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "415 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 529-4842",
+    "phoneUnformatted": "+18635294842",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8962732,
+      "lng": -81.8403878
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ58pGXL4X3YgR7gGGdzORk4A",
+    "categories": [
+      "Law firm"
+    ],
+    "fid": "0x88dd17be5c46cae7:0x80939133778601ee",
+    "cid": "9264908508665872878",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.197Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Wright%20Law%20Firm&query_place_id=ChIJ58pGXL4X3YgR7gGGdzORk4A",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 38,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qqFmz7sGKnMdN38lAlAWHQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=177.70715&pitch=0&thumbfov=100",
+    "kgmid": "/g/11rs1122y",
+    "businessProfileId": null
+  },
+  {
+    "title": "Parker Sean R",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "245 S Central Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "245 S Central Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.bosdun.com/team/sean-r-parker/",
+    "phone": "(863) 533-7117",
+    "phoneUnformatted": "+18635337117",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.895348,
+      "lng": -81.842684
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ3bbhwL8X3YgRgT55fwnPjfU",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17bfc0e1b6dd:0xf58dcf097f793e81",
+    "cid": "17694026150708854401",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.197Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Parker%20Sean%20R&query_place_id=ChIJ3bbhwL8X3YgRgT55fwnPjfU",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 39,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=z4_LHvHj1BJzsCLEgaj-xg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=243.23639&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tgdd6q_",
+    "businessProfileId": null
+  },
+  {
+    "title": "580 Bartow LLC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "580 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "580 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 533-4400",
+    "phoneUnformatted": "+18635334400",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8966018,
+      "lng": -81.8393642
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJs4_AWL4X3YgR-oCpIZ4jyAE",
+    "categories": [
+      "Legal services"
+    ],
+    "fid": "0x88dd17be58c08fb3:0x1c8239e21a980fa",
+    "cid": "128391751456620794",
+    "reviewsCount": 3,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 2
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.197Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=580%20Bartow%20LLC&query_place_id=ChIJs4_AWL4X3YgR-oCpIZ4jyAE",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 40,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=mjEnVBP-Ij50_uRulMBRHw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=359.46954&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tddyl47",
+    "businessProfileId": null
+  },
+  {
+    "title": "Bouchillon K C",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "310 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "310 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 202-8922",
+    "phoneUnformatted": "+18632028922",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8965625,
+      "lng": -81.8414067
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJIdZ_VL4X3YgRu746KP5ZdfI",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17be547fd621:0xf27559fe283abebb",
+    "cid": "17470969277585211067",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bouchillon%20K%20C&query_place_id=ChIJIdZ_VL4X3YgRu746KP5ZdfI",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 41,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=VIn5v227bkWY3-a0NhtaIg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=323.38104&pitch=0&thumbfov=100",
+    "kgmid": "/g/1262w508x",
+    "businessProfileId": null
+  },
+  {
+    "title": "Joshua E. Schoen, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "620 Polk St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "620 Polk St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.joshlawfirm.com/",
+    "phone": "(863) 660-2185",
+    "phoneUnformatted": "+18636602185",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9006992,
+      "lng": -81.8495407
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ__9rqcYX3YgR02JX5FKXvc0",
+    "categories": [
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd17c6a96bffff:0xcdbd9752e45762d3",
+    "cid": "14825171930647585491",
+    "reviewsCount": 5,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 5
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Joshua%20E.%20Schoen%2C%20P.A.&query_place_id=ChIJ__9rqcYX3YgR02JX5FKXvc0",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 42,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qa2rhpUmI0o7KsSqNhU0og&cb_client=search.gws-prod.gps&w=408&h=240&yaw=330.94263&pitch=0&thumbfov=100",
+    "kgmid": "/g/11fx7wg2ht",
+    "businessProfileId": null
+  },
+  {
+    "title": "Wilson Jr Donald H",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "245 S Central Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "245 S Central Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.bosdun.com/",
+    "phone": "(863) 533-7117",
+    "phoneUnformatted": "+18635337117",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.895348,
+      "lng": -81.842684
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ3bbhwL8X3YgRvh5jWD1306A",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17bfc0e1b6dd:0xa0d3773d58631ebe",
+    "cid": "11588737371514019518",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Wilson%20Jr%20Donald%20H&query_place_id=ChIJ3bbhwL8X3YgRvh5jWD1306A",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 43,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=z4_LHvHj1BJzsCLEgaj-xg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=243.23639&pitch=0&thumbfov=100",
+    "kgmid": "/g/1td7t_dh",
+    "businessProfileId": null
+  },
+  {
+    "title": "Donaldson Law",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "130 E Davidson St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "130 E Davidson St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.donaldsonlawpa.com/",
+    "phone": "(407) 270-5025",
+    "phoneUnformatted": "+14072705025",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8974181,
+      "lng": -81.8428692
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJSYAveTsX3YgRsSMQaGqOuUc",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd173b792f8049:0x47b98e6a681023b1",
+    "cid": "5168318635047920561",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 0
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "7 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "7 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "7 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "7 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "7 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Donaldson%20Law&query_place_id=ChIJSYAveTsX3YgRsSMQaGqOuUc",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 44,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn1EtR1GkiYp3sAdkhfJeobRPBVMPd18bKGsuUQDOF_0ckD5H4GCTugcHOPwKCxU66Xks_E-a91r_9pPOm8uOp2L1ACXRLK79ZqTPFXgTmcrU9K3jXABNrsU3veg2MAwdiMd1k=w408-h272-k-no",
+    "kgmid": "/g/11tt93bycp",
+    "businessProfileId": "6504256556226334734"
+  },
+  {
+    "title": "Miller Keith D",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "245 S Central Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "245 S Central Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.bosdun.com/team/keith-d-miller/",
+    "phone": "(863) 533-7117",
+    "phoneUnformatted": "+18635337117",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.895348,
+      "lng": -81.842684
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ3bbhwL8X3YgRGNnj1iMHkwc",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17bfc0e1b6dd:0x7930723d6e3d918",
+    "cid": "545787830352468248",
+    "reviewsCount": 4,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 3
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Miller%20Keith%20D&query_place_id=ChIJ3bbhwL8X3YgRGNnj1iMHkwc",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 45,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=z4_LHvHj1BJzsCLEgaj-xg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=243.23639&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tcwryyx",
+    "businessProfileId": null
+  },
+  {
+    "title": "David Carmichael BCS",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "245 S Central Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "245 S Central Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 733-9119",
+    "phoneUnformatted": "+18637339119",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.895348,
+      "lng": -81.8426839
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 2.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ3bbhwL8X3YgR3AsuuesRigM",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17bfc0e1b6dd:0x38a11ebb92e0bdc",
+    "cid": "255036033021643740",
+    "reviewsCount": 4,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=David%20Carmichael%20BCS&query_place_id=ChIJ3bbhwL8X3YgR3AsuuesRigM",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 46,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=z4_LHvHj1BJzsCLEgaj-xg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=243.22826&pitch=0&thumbfov=100",
+    "kgmid": "/g/11c3svbpjm",
+    "businessProfileId": null
+  },
+  {
+    "title": "Top Notch Paralegal Services",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Paralegal services provider",
+    "address": "415 E Main St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "415 E Main St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 430-8588",
+    "phoneUnformatted": "+18634308588",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8962484,
+      "lng": -81.8403866
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ58pGXL4X3YgRu-xspuOdL_U",
+    "categories": [
+      "Paralegal services provider"
+    ],
+    "fid": "0x88dd17be5c46cae7:0xf52f9de3a66cecbb",
+    "cid": "17667513464273038523",
+    "reviewsCount": 5,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 3
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Top%20Notch%20Paralegal%20Services&query_place_id=ChIJ58pGXL4X3YgRu-xspuOdL_U",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 47,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qqFmz7sGKnMdN38lAlAWHQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=177.68822&pitch=0&thumbfov=100",
+    "kgmid": "/g/119vttk01",
+    "businessProfileId": null
+  },
+  {
+    "title": "George T. Dunlap III",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "245 S Central Ave, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "245 S Central Ave",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.bosdun.com/",
+    "phone": "(863) 533-7117",
+    "phoneUnformatted": "+18635337117",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.895348,
+      "lng": -81.842684
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ3bbhwL8X3YgRGMyc1ocETWc",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd17bfc0e1b6dd:0x674d0487d69ccc18",
+    "cid": "7443610740580994072",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=George%20T.%20Dunlap%20III&query_place_id=ChIJ3bbhwL8X3YgRGMyc1ocETWc",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 48,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=z4_LHvHj1BJzsCLEgaj-xg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=243.23639&pitch=0&thumbfov=100",
+    "kgmid": "/g/1thr7zx9",
+    "businessProfileId": null
+  },
+  {
+    "title": "Polk County Guardian Ad Litem",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "County government office",
+    "address": "205 E Main St #101, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "205 E Main St #101",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://guardianadlitem.org/",
+    "phone": "(863) 534-4605",
+    "phoneUnformatted": "+18635344605",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8963025,
+      "lng": -81.8422207
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJyxUEsL8X3YgRnJNsxRiHdTE",
+    "categories": [
+      "County government office"
+    ],
+    "fid": "0x88dd17bfb00415cb:0x31758718c56c939c",
+    "cid": "3563903220594807708",
+    "reviewsCount": 5,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 5
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Polk%20County%20Guardian%20Ad%20Litem&query_place_id=ChIJyxUEsL8X3YgRnJNsxRiHdTE",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 49,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWldIw0Vdf5lBaVG9akFHEARj30BP1-29IOJngwlE0d3I5847g6NnCEpngjMb5kCy3MZgy6FMLn31o0yLlRccBDwe_g07l6tYGPiNgWRoX5ahqj-6paLsnZz5b5n6EsOzFDjSpLk=w408-h272-k-no",
+    "kgmid": "/g/1tlnf7s8",
+    "businessProfileId": null
+  },
+  {
+    "title": "Kenny Velasquez Bail",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bail bonds service",
+    "address": "415 E Main St #201, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "415 E Main St #201",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://kenvbail.com/",
+    "phone": "(863) 800-3312",
+    "phoneUnformatted": "+18638003312",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8962508,
+      "lng": -81.8403947
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJvX3DDSQX3YgR5b5xNkJC0TA",
+    "categories": [
+      "Bail bonds service"
+    ],
+    "fid": "0x88dd17240dc37dbd:0x30d142423671bee5",
+    "cid": "3517665636101766885",
+    "reviewsCount": 44,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 2,
+      "fiveStar": 40
+    },
+    "imagesCount": 26,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Delivery": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ],
+      "Online service hours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Portuguese": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Kenny%20Velasquez%20Bail&query_place_id=ChIJvX3DDSQX3YgR5b5xNkJC0TA",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 50,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnilFIEQ-OXkpfmbXUsahbORWb_156wLxRLQIA8o-JaSLMWc7latWIblJLqplaXdTTdf0qyCIA5EmX8ghtTpOf4cmcINQEhYh8opTGWTC2jmVpei5HsOSs52WFGLoV1NI3BH7iucW79IHuC=w408-h286-k-no",
+    "kgmid": "/g/11fmy3fkdv",
+    "businessProfileId": "3095717210972749871"
+  },
+  {
+    "title": "William Moffatt - Notary Public State of Florida/Signing Agent",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Notary public",
+    "address": "1095 Turner St, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "1095 Turner St",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.bartownotary.com/",
+    "phone": "(863) 698-3793",
+    "phoneUnformatted": "+18636983793",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8793737,
+      "lng": -81.8532181
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJW6Scy-8X3YgRpnclHZr0WRw",
+    "categories": [
+      "Notary public"
+    ],
+    "fid": "0x88dd17efcb9ca45b:0x1c59f49a1d2577a6",
+    "cid": "2042932848740366246",
+    "reviewsCount": 7,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 7
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 2:30 AM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "10 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=William%20Moffatt%20-%20Notary%20Public%20State%20of%20Florida%2FSigning%20Agent&query_place_id=ChIJW6Scy-8X3YgRpnclHZr0WRw",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 51,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmFdPdxYwOdNNI4mcN6qaFKWIJGMULuwOcKYxgoj-e0TOf4Fwp8L_5EK_e8sELtsUFSz6RfnY_AlmoHGeWtEoRZfFX_5U03aekaISj9jL5H_Kbs4PU4aOIORWTtxKpRi60JYrpQ=w408-h271-k-no",
+    "kgmid": "/g/11bz33hyst",
+    "businessProfileId": "2389217739014779699"
+  },
+  {
+    "title": "Injury and Wellness of Bartow",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Chiropractor",
+    "address": "415 E Main St Ste 205, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "415 E Main St Ste 205",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://injuryofbartow.com/",
+    "phone": "(863) 537-6081",
+    "phoneUnformatted": "+18635376081",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8962508,
+      "lng": -81.8403947
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ-d_L59gX3YgRk-SLwMOtPC4",
+    "categories": [
+      "Chiropractor"
+    ],
+    "fid": "0x88dd17d8e7cbdff9:0x2e3cadc3c08be493",
+    "cid": "3331728880607945875",
+    "reviewsCount": 39,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 39
+    },
+    "imagesCount": 6,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "7 AM to 7 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "7 AM to 7 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "7 AM to 7 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "7 AM to 7 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "7 AM to 7 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "7 AM to 7 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "12 to 5 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free street parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Injury%20and%20Wellness%20of%20Bartow&query_place_id=ChIJ-d_L59gX3YgRk-SLwMOtPC4",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 52,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkPo1e6iYyCMBhDjFOPwUJc67j0Z3XekSKkPVzDSx0f9KW375rNf4H0i-sq_ZnHwCrF9fWS2FlliUAWMFSvEaal2ImciQugoe6Z1wJBd2zyESrO4qIAQbcIMbOQ9OIaAXgZrkhp4aW1zgs=w408-h389-k-no",
+    "kgmid": "/g/11n45_7qk_",
+    "businessProfileId": "7427252922723690437"
+  },
+  {
+    "title": "Bartow Office",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Administrative attorney",
+    "address": "415 E Main St #801, Bartow, FL 33830",
+    "neighborhood": null,
+    "street": "415 E Main St #801",
+    "city": "Bartow",
+    "postalCode": "33830",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8962508,
+      "lng": -81.8403947
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ_yGF_20X3YgR6TdrY8Gl3Eo",
+    "categories": [
+      "Administrative attorney"
+    ],
+    "fid": "0x88dd176dff8521ff:0x4adca5c1636b37e9",
+    "cid": "5394368703698253801",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.986Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bartow%20Office&query_place_id=ChIJ_yGF_20X3YgR6TdrY8Gl3Eo",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Bartow%20FL/@27.8851143,-81.82034870000001,14z?hl=en",
+    "searchString": "law firm Bartow FL",
+    "language": "en",
+    "rank": 53,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qqFmz7sGKnMdN38lAlAWHQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=179.69226&pitch=0&thumbfov=100",
+    "kgmid": "/g/11j3k3fk_b",
+    "businessProfileId": null
+  }
+]

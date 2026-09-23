@@ -1,0 +1,2178 @@
+[
+  {
+    "title": "Patriot Legal Group",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "10 Bobby Green Plaza, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "10 Bobby Green Plaza",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.patriotlegal.com/",
+    "phone": "(863) 332-2114",
+    "phoneUnformatted": "+18633322114",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0652742,
+      "lng": -81.7906262
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJp8fMjnlr3YgRkzds9t5ONLg",
+    "categories": [
+      "Law firm",
+      "Estate planning attorney",
+      "Probate attorney",
+      "Real estate attorney"
+    ],
+    "fid": "0x88dd6b798eccc7a7:0xb8344edef66c3793",
+    "cid": "13273320721291687827",
+    "reviewsCount": 22,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 2,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 16
+    },
+    "imagesCount": 12,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.544Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Patriot%20Legal%20Group&query_place_id=ChIJp8fMjnlr3YgRkzds9t5ONLg",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Auburndale%20FL/@28.099568135468104,-81.8253701935942,17z?hl=en",
+    "searchString": "law firm Auburndale FL",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlyqAYn51x5fIND0ZOeTsnZKkU6r6Mfu_elgxj-qL2_Iq83wUp0BSOYqlQioreh8YjBNbdOy4hc0iRTarJQ-KsBsUF7xM9Mdb-pNYUOVfobVmPQZJQ_d8gp_j7JuSMBjgU8GfwN=w408-h306-k-no",
+    "kgmid": "/g/11jh4cgp1h",
+    "businessProfileId": "18115435257801835598"
+  },
+  {
+    "title": "L&R Paralegal Services LLC.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "209 Palmetto St Ste 8, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "209 Palmetto St Ste 8",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://landrparalegalservicesllc.com/",
+    "phone": "(863) 618-7479",
+    "phoneUnformatted": "+18636187479",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0638615,
+      "lng": -81.7875909
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ__-wY1Zr3YgRTIiSFzIzn30",
+    "categories": [
+      "Legal services",
+      "Attorney referral service"
+    ],
+    "fid": "0x88dd6b5663b0ffff:0x7d9f33321792884c",
+    "cid": "9052010066274846796",
+    "reviewsCount": 129,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 2,
+      "fiveStar": 124
+    },
+    "imagesCount": 16,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.545Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=L%26R%20Paralegal%20Services%20LLC.&query_place_id=ChIJ__-wY1Zr3YgRTIiSFzIzn30",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Auburndale%20FL/@28.099568135468104,-81.8253701935942,17z?hl=en",
+    "searchString": "law firm Auburndale FL",
+    "language": "en",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlApyeYBDBZRIMxI2pYuw849zM4EUwRlgpaRR8ZKTGx0ojhTDsPmxQKYCm5ZDPa8Vu2CDcOgHwDn5egnhYe_znl4jFU_r6jfx0zzMGXj46OHfdOysvrYoLfFQl8KU9gycnT_6Wdc13QpjuD=w408-h407-k-no",
+    "kgmid": "/g/11g0k1z1cc",
+    "businessProfileId": "12612765897936551485"
+  },
+  {
+    "title": "Law Office of Ryan Cappy",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "522 Magnolia Ave, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "522 Magnolia Ave",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.cappylaw.com/",
+    "phone": "(813) 512-6011",
+    "phoneUnformatted": "+18135126011",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.059178,
+      "lng": -81.7894276
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJuaDXGlJr3YgRsJTOnyVOdZc",
+    "categories": [
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd6b521ad7a0b9:0x97754e259fce94b0",
+    "cid": "10913715195504137392",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.546Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Law%20Office%20of%20Ryan%20Cappy&query_place_id=ChIJuaDXGlJr3YgRsJTOnyVOdZc",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Auburndale%20FL/@28.099568135468104,-81.8253701935942,17z?hl=en",
+    "searchString": "law firm Auburndale FL",
+    "language": "en",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=YxELTMhmAoHsen4eNq2XRQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=339.61005&pitch=0&thumbfov=100",
+    "kgmid": "/g/1wt3p6yq",
+    "businessProfileId": "2593596747468674989"
+  },
+  {
+    "title": "Patriot Title Law",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "10 Bobby Green Plaza, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "10 Bobby Green Plaza",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://patriottitlelaw.com/",
+    "phone": "(863) 663-6343",
+    "phoneUnformatted": "+18636636343",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0652742,
+      "lng": -81.7906262
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ6_JlR01r3YgRhuTeiM_n-SU",
+    "categories": [
+      "Law firm",
+      "Title company",
+      "Real estate attorney"
+    ],
+    "fid": "0x88dd6b4d4765f2eb:0x25f9e7cf88dee486",
+    "cid": "2736473127144842374",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.547Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Patriot%20Title%20Law&query_place_id=ChIJ6_JlR01r3YgRhuTeiM_n-SU",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Auburndale%20FL/@28.099568135468104,-81.8253701935942,17z?hl=en",
+    "searchString": "law firm Auburndale FL",
+    "language": "en",
+    "rank": 13,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=v8qawucx-9QZXOIF3-cU7Q&cb_client=search.gws-prod.gps&w=408&h=240&yaw=230.77884&pitch=0&thumbfov=100",
+    "kgmid": "/g/11y9hvv2f6",
+    "businessProfileId": "8091390410961093500"
+  },
+  {
+    "title": "Camp Margaritaville RV Resort & Cabana Cabins Auburndale",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": "$254",
+    "categoryName": "Resort hotel",
+    "address": "361 Denton Ave, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "361 Denton Ave",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.margaritavilleresorts.com/camp-margaritaville-rv-resort-auburndale?utm_source=google&utm_medium=organic&utm_campaign=lastmile_maplink",
+    "phone": "(863) 455-7335",
+    "phoneUnformatted": "+18634557335",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0841415,
+      "lng": -81.8264989
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlYIC5xZr3YgRDDTfipEolmo",
+    "categories": [
+      "Resort hotel",
+      "Hotel",
+      "RV park"
+    ],
+    "fid": "0x88dd6b16e7028295:0x6a9628918adf340c",
+    "cid": "7680370820092212236",
+    "reviewsCount": 1794,
+    "reviewsDistribution": {
+      "oneStar": 57,
+      "twoStar": 52,
+      "threeStar": 86,
+      "fourStar": 197,
+      "fiveStar": 1402
+    },
+    "imagesCount": 3107,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:43.939Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": "Resort hotel",
+    "hotelDescription": null,
+    "checkInDate": "2026-10-14",
+    "checkOutDate": "2026-10-15",
+    "hotelAds": [
+      {
+        "title": "Pitchup.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80Oswsi8H8eg61Hfo0O4YMceKYsndmGDQ03r0nOTe8r6HOFNpogxhUcP1K7POUIKKQc1neVBolAezFDDxl3DgvrTUKjkIhV3DGj_Xqz5stPHdZAgnUpDZ567xzZjJueVAR6lanXEI4Xz9WunJbQDe6wU6AiI3rlRjt-WhfYbfPQO1ZxmWq27WCz39m_dM&pcurl=https://www.pitchup.com/en-us/campsites/usa/south/florida/auburndale/camp-margaritaville-auburndale-resort/?arrive%3D2026-10-14%26depart%3D2026-10-15%26adults%3D2%26scroll_to_pitchtype%3D87508%26utm_content%3D41419&s=AD1XQnlgEgkZCezAkc0fFRhj1A-A",
+        "isOfficialSite": false,
+        "price": "$284",
+        "url": "https://www.pitchup.com/en-us/campsites/usa/south/florida/auburndale/camp-margaritaville-auburndale-resort/?arrive=2026-10-14&depart=2026-10-15&adults=2&scroll_to_pitchtype=87508&utm_content=41419"
+      },
+      {
+        "title": "Booking.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80OswsPfB7f0BOw8HQfCi83BpOqMP0qlZKQ5dUBgIcdtzVc1LpRRbCtOWAy3NyT31ER7uJ78O3UJWR9ONytug7z_cukrfhLcPDegm0m9997iADBgjShkqdkO4nKx-BUvQWMewpxYzzVpamfoG9FHeVpRkPu5073gKb8jNAMRiMgQvPcGp6enNX064jImRohGksFqqaiQ&pcurl=https://www.booking.com/searchresults.en.html?dest_id%3D12502080%26highlighted_hotels%3D12502080%26dest_type%3Dhotel%26checkin%3D2026-10-14%26checkout%3D2026-10-15%26group_adults%3D2%26req_adults%3D2%26show_room%3D1250208005_397547251_2_0_0%26lang%3Den%26selected_currency%3DUSD%26exrt%3D1.00000000%26ext_price_total%3D302.47%26ext_price_tax%3D98.47%26xfc%3DUSD%26hca%3Dm%26group_children%3D0%26req_children%3D0%26%26no_rooms%3D1%26ts%3D1790191924%26edgtid%3DJ-urvBtASm2nDzFyFWw3jg%26efpc%3DIEsAowK0ii8%26utm_source%3Dmetagha%26utm_medium%3Dmapresults%26utm_campaign%3DUS%26utm_term%3Dhotel-12502080%26utm_content%3Ddev-desktop_los-1_bw-21_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20261014_ppt-0%26aid%3D2127489%26label%3Dmetagha-link-MRUS-hotel-12502080_dev-desktop_los-1_bw-21_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20261014_ppt-0&s=AD1XQnk36FZ7X6zX9FyK5r_Nwltq",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://www.booking.com/searchresults.en.html?dest_id=12502080&highlighted_hotels=12502080&dest_type=hotel&checkin=2026-10-14&checkout=2026-10-15&group_adults=2&req_adults=2&show_room=1250208005_397547251_2_0_0&lang=en&selected_currency=USD&exrt=1.00000000&ext_price_total=302.47&ext_price_tax=98.47&xfc=USD&hca=m&group_children=0&req_children=0&&no_rooms=1&ts=1790191924&edgtid=J-urvBtASm2nDzFyFWw3jg&efpc=IEsAowK0ii8&utm_source=metagha&utm_medium=mapresults&utm_campaign=US&utm_term=hotel-12502080&utm_content=dev-desktop_los-1_bw-21_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20261014_ppt-0&aid=2127489&label=metagha-link-MRUS-hotel-12502080_dev-desktop_los-1_bw-21_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20261014_ppt-0"
+      },
+      {
+        "title": "Priceline",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80OszgWgH9qDbFLON8JFTHu4YBs3ZdodYPvauw6yUirkRIVTINQqYvG6votmDUI_Cjy0FTgTL0KUMM-PdvdQhRrQm0UXRWiFHGEWdpI4-zq50WHQiCrSpaZN2U7zuWW6KMcWqS-k12bQvJmbDZjZHGBiWFXOYmfixUhTGYfcTSyluo4-NoMvIjNbMdqYqB6RZJ73o&pcurl=https://www.priceline.com/r/?channel%3Dmeta%26product%3Dhotel%26theme%3DGoogle-L%26refid%3DPLGOOGLEMSS%26refclickid%3DUS_HP%257C274393304_mapresults_1%257C20261014%257Cdesktop%257Cdefaultdate%7Cpublic%7C%7C%7C21%257C2%257C0%7C0%7CEN%26hotelid%3D274393304%26checkin%3D20261014%26checkout%3D20261015%26rooms%3D1%26cur%3DUSD%26POSCountryCode%3DUS%26taxDisplayMode%3DBP%26cityID%3D3000003092%26adults%3D2%26land%3DL%26metaid%3Dg6uaWbPmcQIVY-wTc_SVw7C8sEHY5typn2Q_6s0RwZzrYkmwvqpCqFQSNP_5vc9N6oUSKuMZGO_Qi7gqRA6Xd2jtuJNMKCkOvz_ZNKZpz5VJz28zUKXIA4u6r4DqcFqma2wBBa1L2mVnW-YQbAkrZNYVOPZIfNG6kMXjHETE5w_lM57BCiSXUkkGvjAu494ks45SXfT8vT0XJAg1tnUl7If4qcg5eXXFCSEcIjEbnQbF1-Bt99eQi1r9jKM-mQZQqgdtD6se2w-mm2W1XrR9I28cLLxlYc0xcbXK-i3aHFpCQlP9TgnRciPI321jwcF1Zh0SceEfdF7oFxEm6Hcwr_S29kGAZAD6l2hB-KG5RIsgKHGGAosdNvTuOnawb45STACh5Ue8oUyQc4bfvKUhKll-h3v4k0NTr7Uf9znC0v5IsjjwSRWb9_VENsoQsV4oTG1zeYklQzpdUPjlLDIY3A%26dblcnt%3Dtrue%26hc%3D1%26pdtax%3D98.47%26pdf%3D74.00%26pdt%3D302.47%26locale%3Den-us%26ad-src%3D%26numChild%3D0%26aid%3D%26selAdults%3D2&s=AD1XQnmaBi-hmzKnRYaPm4KtPxjZ",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://www.priceline.com/r/?channel=meta&product=hotel&theme=Google-L&refid=PLGOOGLEMSS&refclickid=US_HP|274393304_mapresults_1|20261014|desktop|defaultdate|public|||21|2|0|0|EN&hotelid=274393304&checkin=20261014&checkout=20261015&rooms=1&cur=USD&POSCountryCode=US&taxDisplayMode=BP&cityID=3000003092&adults=2&land=L&metaid=g6uaWbPmcQIVY-wTc_SVw7C8sEHY5typn2Q_6s0RwZzrYkmwvqpCqFQSNP_5vc9N6oUSKuMZGO_Qi7gqRA6Xd2jtuJNMKCkOvz_ZNKZpz5VJz28zUKXIA4u6r4DqcFqma2wBBa1L2mVnW-YQbAkrZNYVOPZIfNG6kMXjHETE5w_lM57BCiSXUkkGvjAu494ks45SXfT8vT0XJAg1tnUl7If4qcg5eXXFCSEcIjEbnQbF1-Bt99eQi1r9jKM-mQZQqgdtD6se2w-mm2W1XrR9I28cLLxlYc0xcbXK-i3aHFpCQlP9TgnRciPI321jwcF1Zh0SceEfdF7oFxEm6Hcwr_S29kGAZAD6l2hB-KG5RIsgKHGGAosdNvTuOnawb45STACh5Ue8oUyQc4bfvKUhKll-h3v4k0NTr7Uf9znC0v5IsjjwSRWb9_VENsoQsV4oTG1zeYklQzpdUPjlLDIY3A&dblcnt=true&hc=1&pdtax=98.47&pdf=74.00&pdt=302.47&locale=en-us&ad-src=&numChild=0&aid=&selAdults=2"
+      },
+      {
+        "title": "Tripadvisor.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80OsyaV0YsPdtcKaHs403bzKI0Sh1H4sFBWl3xCE5ZmmS3LMkSXHtB5rPRSK0ftqS29UjLLoxk75zCvYRjTiBTDbzGShE4Hx05ExuZjQ4fYJWPfVsTh77yUB3Raq6DsYw61XbQjBwdpzwCDwvRgnVbK1DbmU27AoZ1mVTpiSoQZe8o_7R5-AZeM-40tNM&pcurl=https://www.tripadvisor.com/HotelHighlight?detail%3D22867782%26m%3D66081%26staydates%3D2026_10_14_2026_10_15%26uguests%3D1_2_%26supdv%3Ddesktop%26supbl%3Dmapresults%26supkl%3Ddefault%26supuc%3DUS%26supul%3Den%26supia%3D0%26supip%3D0%26supmb%3DwoH4Rlwp6HuXpXlHgMaHaJmD1dDhpFQYNa575inVtxlZH4cBaiSVmeJLk_G4xUgB2m2AOB0Qr2xg2mIlTihjZn0hoE6XCVpaAuGGshSE-IAnoMQzfFGK35ut9HaMzqSdgcf6mAeSCY3by1uC6xX2qAzqMVicwUgz8IfdGdLL24nS-vnyX50VPGW0urzz2w%26supmc%3DdjfspjKCKY_P7965cTVEU0rgWXQis1UScwQVP8_vYtwHaLd5W5cQN1hs4q01uwZRvB8T%26supts%3D%26supey%3Dm%7C108054%7CPL_GC_query%26supcd%3D%26suptp%3DbRteatQPgj_7z6y9ABEBIznuo2xyToGgGWYdsvwlhJHpMMWrrXo0aYi-YFXr1kCvDS-YfYbSzPItYbqUuYq1of-MRH-5bRPCOKQGtVqgJP9F3JZOaFIQhDlV4fPkS0nq-Rk9KPVnlcJ-fZhftWbKSBcxN2AQI7in56TqyhGuIdgZts7F1lT0IgtYGAW7ee%26supas%3D&s=AD1XQnkSt3L-6PVCYvOermCqC-1G",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://www.tripadvisor.com/HotelHighlight?detail=22867782&m=66081&staydates=2026_10_14_2026_10_15&uguests=1_2_&supdv=desktop&supbl=mapresults&supkl=default&supuc=US&supul=en&supia=0&supip=0&supmb=woH4Rlwp6HuXpXlHgMaHaJmD1dDhpFQYNa575inVtxlZH4cBaiSVmeJLk_G4xUgB2m2AOB0Qr2xg2mIlTihjZn0hoE6XCVpaAuGGshSE-IAnoMQzfFGK35ut9HaMzqSdgcf6mAeSCY3by1uC6xX2qAzqMVicwUgz8IfdGdLL24nS-vnyX50VPGW0urzz2w&supmc=djfspjKCKY_P7965cTVEU0rgWXQis1UScwQVP8_vYtwHaLd5W5cQN1hs4q01uwZRvB8T&supts=&supey=m|108054|PL_GC_query&supcd=&suptp=bRteatQPgj_7z6y9ABEBIznuo2xyToGgGWYdsvwlhJHpMMWrrXo0aYi-YFXr1kCvDS-YfYbSzPItYbqUuYq1of-MRH-5bRPCOKQGtVqgJP9F3JZOaFIQhDlV4fPkS0nq-Rk9KPVnlcJ-fZhftWbKSBcxN2AQI7in56TqyhGuIdgZts7F1lT0IgtYGAW7ee&supas="
+      },
+      {
+        "title": "Agoda",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80Osyg8JbxWvtV4Yy7rRXlCb_k5rGImUzT6yzuo4YMQQOjfxqzXaChhWGXZsrgA1o7idmTbYfSYOVK0rlGIRUpb3m_xjVH1FKv_hnDQPXNwIIoC32tLdkzU9wMQainsIPUaYFP1D-vTAGMCiT9numZ7KK0rasXSyhrqnxSMJGp-vxLqrqbr2Mhhc3kWm3NUg&pcurl=https://www.agoda.com/partners/partnersearch.aspx?site_id%3D1917614%26CkInDay%3D14%26CkInMonth%3D10%26CkInYear%3D2026%26CkOutDay%3D15%26campaignid%3D%26CkOutMonth%3D10%26CkOutYear%3D2026%26SearchDateType%3Ddefault%26NumberOfAdults%3D2%26LT%3D21%26NumberOfChildren%3D0%26childages%3D%26NumberOfRooms%3D1%26gsite%3Dmapresults%26los%3D1%26PartnerCurrency%3DUSD%26hid%3D45928285%26RoomID%3D895802853%26masterRoomId%3D895802853%26PriceTotal%3D302.47%26PriceTax%3D98.47%26PriceFee%3D74.00%26RatePlan%3D4897fca3-db64-2bae-119b-2a6c5781a888%26UserCountry%3DUS%26Currency%3DUSD%26UserDevice%3Ddesktop%26Verif%3Dfalse%26rr%3DLiveQuery%26audience_list%3D%26mcid%3D3038%26booking_source%3Dcpc%26adType%3D0%26mpt%3DV3dVWTVmRGZFbzJpZGhxaGdWaWxTYVg0YjZVOWVWdVM3SnNqVkVsTDZxVmhSdWpha3ZxaXZMcHgralFXZWxxZG1ZUkJQdlhtVitiM0VRPT0%26original_rr%3DUS_LQ%26gaClickSrc%3D%26clickType%3Dhotel%26lang%3Den%26pkgId%3Dfalse_false_0&s=AD1XQnmCkugif2nLO3fxLFP6onmo",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://www.agoda.com/partners/partnersearch.aspx?site_id=1917614&CkInDay=14&CkInMonth=10&CkInYear=2026&CkOutDay=15&campaignid=&CkOutMonth=10&CkOutYear=2026&SearchDateType=default&NumberOfAdults=2&LT=21&NumberOfChildren=0&childages=&NumberOfRooms=1&gsite=mapresults&los=1&PartnerCurrency=USD&hid=45928285&RoomID=895802853&masterRoomId=895802853&PriceTotal=302.47&PriceTax=98.47&PriceFee=74.00&RatePlan=4897fca3-db64-2bae-119b-2a6c5781a888&UserCountry=US&Currency=USD&UserDevice=desktop&Verif=false&rr=LiveQuery&audience_list=&mcid=3038&booking_source=cpc&adType=0&mpt=V3dVWTVmRGZFbzJpZGhxaGdWaWxTYVg0YjZVOWVWdVM3SnNqVkVsTDZxVmhSdWpha3ZxaXZMcHgralFXZWxxZG1ZUkJQdlhtVitiM0VRPT0&original_rr=US_LQ&gaClickSrc=&clickType=hotel&lang=en&pkgId=false_false_0"
+      },
+      {
+        "title": "Reserving",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80Oszmg81Kyd9QEgAz5x53vDzTYXQ8xflK4X1tNGrxyUp09tx2wuRF3Po99JISrukNEIg0T5vGOdn5S5tfpcSfBOBbK9O5ZfZlKN5FHg5v0d2OCY6E3briiieJ_wkU9zuLGEXNCRSUlsixsgWVV96TlRdA0BR9PIRY4Q7PI57K2tYhds37mG1z_kREvvwnpwDByA&pcurl=https://h-en.reserving.com/search?i%3D7103%26rf%3DGOOGLEHOTELS%26portal%3Drsvcom%26lang%3Den%26auto%3D1%26tipo%3DS%26id%3D1288375%26numero_habs%3D1%26no_adultos_hab1%3D2%26no_ninos_hab1%3D0%26fecha_entrada%3D14%252F10%252F2026%26fecha_salida%3D15%252F10%252F2026%26refp%3D302.47%26campaing-id%3D%26tp%3D%26moneda%3DUSD%26device%3Ddesktop%26pais_dom%3DUS%26sg%3Db%3D265.58,b$%3DUSD,bhab%3D1824,big%3D2026-09-23T21:19:00%2B02:00,bmid%3D100,bpd%3Dus,bpi%3D16.68,bpt%3D21.49,breg%3D12,bwp%3DMXRDZU0anCo,ts%3D2026-09-23T21:19:46%2B02:00/B:20EED7E503A24FDA5828E68E32B01CE79EE810FE8235FE92836E068F%26c3%3Dmode%3DP,d%3D2,ts_id%3D1911864120749256%26r%3DCAMPAIGN-ID%3D;TRACKING-PARAM%3D;CUSTOM1%3D;PRICE-DISPLAYED-TOTAL%3D302.47;DEFAULT-DATE%3D1;CLICK-TYPE%3Dhotel;USER-COUNTRY%3DUS;DEVICE%3Ddesktop;SITE%3Dmapresults;USER-LANGUAGE%3Den;USER-CURRENCY%3DUSD;POS%3DALL-ALL-ALL-RSVCOM;AD-CLICK%3D0;PAYMENT-ID%3Dfree;C2%3Db%3D265.58,b$%3DUSD,bhab%3D1824,big%3D2026-09-23T21:19:00%2B02:00,bmid%3D100,bpd%3Dus,bpi%3D16.68,bpt%3D21.49,breg%3D12,bwp%3DMXRDZU0anCo,ts%3D2026-09-23T21:19:46%2B02:00/B:20EED7E503A24FDA5828E68E32B01CE79EE810FE8235FE92836E0;C3%3Dmode%3DP,d%3D2,ts_id%3D1911864120749256&s=AD1XQnmKVe0RJhLpkzqA6Tihynyi",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://h-en.reserving.com/search?i=7103&rf=GOOGLEHOTELS&portal=rsvcom&lang=en&auto=1&tipo=S&id=1288375&numero_habs=1&no_adultos_hab1=2&no_ninos_hab1=0&fecha_entrada=14/10/2026&fecha_salida=15/10/2026&refp=302.47&campaing-id=&tp=&moneda=USD&device=desktop&pais_dom=US&sg=b=265.58,b$=USD,bhab=1824,big=2026-09-23T21:19:00+02:00,bmid=100,bpd=us,bpi=16.68,bpt=21.49,breg=12,bwp=MXRDZU0anCo,ts=2026-09-23T21:19:46+02:00/B:20EED7E503A24FDA5828E68E32B01CE79EE810FE8235FE92836E068F&c3=mode=P,d=2,ts_id=1911864120749256&r=CAMPAIGN-ID=;TRACKING-PARAM=;CUSTOM1=;PRICE-DISPLAYED-TOTAL=302.47;DEFAULT-DATE=1;CLICK-TYPE=hotel;USER-COUNTRY=US;DEVICE=desktop;SITE=mapresults;USER-LANGUAGE=en;USER-CURRENCY=USD;POS=ALL-ALL-ALL-RSVCOM;AD-CLICK=0;PAYMENT-ID=free;C2=b=265.58,b$=USD,bhab=1824,big=2026-09-23T21:19:00+02:00,bmid=100,bpd=us,bpi=16.68,bpt=21.49,breg=12,bwp=MXRDZU0anCo,ts=2026-09-23T21:19:46+02:00/B:20EED7E503A24FDA5828E68E32B01CE79EE810FE8235FE92836E0;C3=mode=P,d=2,ts_id=1911864120749256"
+      },
+      {
+        "title": "goseek.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80OswRzWpBfgaABmlVLOhoo8icBWL7jHokQtJRWFMWtEdf2c0eWKWUM5IeQnAIGNgQStQTzvJMPwaPp8uMjT2luaZWlHdXu-XARhVNvcvh_Lo6TPeYefGacGPlFhWkRigdlZi17Q1UhdSlEp8wWgXIhQC8l5CIMTlglKbTJJE5Q-9CJt4_UmVx3BjD_c3Cs1UWTw&pcurl=https://deals.goseek.com/?sig%3D34c47a49c3e8320dca5a5dda0da2a460c1bc23afde972e2894a4ff0b6052fb53383131303836353931%26turl%3Dhttps%253A%252F%252Fwww.goseek.com%252FHotel%252FSearch%253FcheckIn%253D2026-10-14%2526checkOut%253D2026-10-15%2526currency%253DUSD%2526forceCurrencyChange%253D1%2526lang%253Den%2526forceLanguageChange%253D1%2526rooms%253D2%253A%2526utm_source%253Dgha%2526utm_medium%253Dcpc%2526hotelId%253D113238183%2526userCountry%253DUS%2526profile%253Dr2d2m73kn8%2526preferredRate%253D302.47%2526deviceType%253Ddesktop%2526label%253Dsrc%25253Dgha%252526cltype%25253Dhotel%252526datype%25253Ddefault%252526gsite%25253Dmapresults%252526vf%25253D0%252526ucountry%25253DUS%252526udevice%25253Ddesktop%252526hotel%25253D113238183%252526day%25253D14%252526month%25253D10%252526year%25253D2026%252526los%25253D1%252526price%25253D302.47%252526currency%25253DUSD%252526cid%25253D%252526listid%25253D%252526rateid%25253DUS_D%252526closerateid%25253D%252526promo%25253D0%252526isPrivateRate%25253D0%252526isAudienceUser%25253D0%252526isPaidClick%25253D0%252526%2526cp%253DmYKUPXm80ZLYHy7dChIIsJ8BEOg5GJATIgNVU0RSATISGhWhh8_rGgt6R2xmWDBTenI3WSgEMMq_0NUG&s=AD1XQnnrqWYKR0BQP-TSznGgnu-o",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://deals.goseek.com/?sig=34c47a49c3e8320dca5a5dda0da2a460c1bc23afde972e2894a4ff0b6052fb53383131303836353931&turl=https://www.goseek.com/Hotel/Search?checkIn=2026-10-14&checkOut=2026-10-15&currency=USD&forceCurrencyChange=1&lang=en&forceLanguageChange=1&rooms=2:&utm_source=gha&utm_medium=cpc&hotelId=113238183&userCountry=US&profile=r2d2m73kn8&preferredRate=302.47&deviceType=desktop&label=src%3Dgha%26cltype%3Dhotel%26datype%3Ddefault%26gsite%3Dmapresults%26vf%3D0%26ucountry%3DUS%26udevice%3Ddesktop%26hotel%3D113238183%26day%3D14%26month%3D10%26year%3D2026%26los%3D1%26price%3D302.47%26currency%3DUSD%26cid%3D%26listid%3D%26rateid%3DUS_D%26closerateid%3D%26promo%3D0%26isPrivateRate%3D0%26isAudienceUser%3D0%26isPaidClick%3D0%26&cp=mYKUPXm80ZLYHy7dChIIsJ8BEOg5GJATIgNVU0RSATISGhWhh8_rGgt6R2xmWDBTenI3WSgEMMq_0NUG"
+      },
+      {
+        "title": "Bluepillow.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80OsyHfcQ_U5UUDMfUTmHZazH4YEw8FYG_QJBOkYTqp0pti2N9vhiX0nJrXkllSxXYfm6ZBCAB-S1u9rjL6iKiv0yFIZTR6NmDcdqhUM2lWpjOJohWEy4PBU7BK59N4T44CgdIGh23yHS8FWilQ8eWlWcAh4azD078cZqEyI5NNVwwGETqkyM6mKzzYA&pcurl=https://www.bluepillow.com/search/67a22b87905c444f2d03d39d?begin%3D2026-10-14%26end%3D2026-10-15%26block_id%3D-b,0bEpzpgVh6uuvrMxgiRuGr6NcWAOJel_VenKiID76dY,-bpag-Hotel%26fees%3D24.47%26tax%3D24.47%26total%3D302.47%26adults%3D2%26childs%3D0%26infants%3D0%26childrens%3D0%26country%3DUS%26currency%3DUSD%26language%3Den%26source%3Dmapresults%26utm_campaign%3Dhotel%26prid%3D&s=AD1XQnn7A7ArFCrGbF5yTKYNcmv1",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://www.bluepillow.com/search/67a22b87905c444f2d03d39d?begin=2026-10-14&end=2026-10-15&block_id=-b,0bEpzpgVh6uuvrMxgiRuGr6NcWAOJel_VenKiID76dY,-bpag-Hotel&fees=24.47&tax=24.47&total=302.47&adults=2&childs=0&infants=0&childrens=0&country=US&currency=USD&language=en&source=mapresults&utm_campaign=hotel&prid="
+      },
+      {
+        "title": "Etrip.net",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80Osx3uaQ3R_XqnmtKZMcGmQf3Gt3LeyU6aYM89mn4JtWgQ2YqI4_hxZu9Y-yfIGK2T0NxSJr1pgjpeT7U_30RE3-magR0iQckK91-eZKV0tCnwDZO12zeS1LaPUv6Q51ZFcoUUom0HDjSOHGbrWQ3YKq3Zromx970QbUNjSYANaW7fjdoKlY&pcurl=https://deals.etrip.net/?sig%3De9cc68956712e1e5d60f579a67e54afadd83f5d631dc9782cc50d47864de2f2c2d32303330363031313335%26turl%3Dhttps%253A%252F%252Fsearch.etrip.net%252FHotel%252FSearch%253FcheckIn%253D2026-10-14%2526checkOut%253D2026-10-15%2526currency%253DUSD%2526forceCurrencyChange%253D1%2526lang%253Den%2526forceLanguageChange%253D1%2526rooms%253D2%253A%2526utm_source%253Dgha%2526utm_medium%253Dcpc%2526hotelId%253D113238183%2526userCountry%253DUS%2526profile%253Dr2d2m73kn8%2526preferredRate%253D302.47%2526label%253Dsrc%25253Dgha%252526cltype%25253Dhotel%252526datype%25253Ddefault%252526gsite%25253Dmapresults%252526vf%25253D0%252526ucountry%25253DUS%252526udevice%25253Ddesktop%252526hotel%25253D113238183%252526day%25253D14%252526month%25253D10%252526year%25253D2026%252526los%25253D1%252526price%25253D302.47%252526currency%25253DUSD%252526cid%25253D%252526listid%25253D%252526rateid%25253DUS_D%252526closerateid%25253D%252526promo%25253D0%252526isPrivateRate%25253D0%252526isAudienceUser%25253D0%252526isPaidClick%25253D0%252526%2526cp%253Dv_MTz2Q6ku_YHy7dChIIsJ8BEOg5GJATIgNVU0RSATISGhWhh8_rGgt6R2xmWDBTenI3WSgEMKq90NUG&s=AD1XQnkC9JOfdLL0UM8wPQuz2t8g",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://deals.etrip.net/?sig=e9cc68956712e1e5d60f579a67e54afadd83f5d631dc9782cc50d47864de2f2c2d32303330363031313335&turl=https://search.etrip.net/Hotel/Search?checkIn=2026-10-14&checkOut=2026-10-15&currency=USD&forceCurrencyChange=1&lang=en&forceLanguageChange=1&rooms=2:&utm_source=gha&utm_medium=cpc&hotelId=113238183&userCountry=US&profile=r2d2m73kn8&preferredRate=302.47&label=src%3Dgha%26cltype%3Dhotel%26datype%3Ddefault%26gsite%3Dmapresults%26vf%3D0%26ucountry%3DUS%26udevice%3Ddesktop%26hotel%3D113238183%26day%3D14%26month%3D10%26year%3D2026%26los%3D1%26price%3D302.47%26currency%3DUSD%26cid%3D%26listid%3D%26rateid%3DUS_D%26closerateid%3D%26promo%3D0%26isPrivateRate%3D0%26isAudienceUser%3D0%26isPaidClick%3D0%26&cp=v_MTz2Q6ku_YHy7dChIIsJ8BEOg5GJATIgNVU0RSATISGhWhh8_rGgt6R2xmWDBTenI3WSgEMKq90NUG"
+      },
+      {
+        "title": "dealbase.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80Oszmrl1XSn4XY1EhOlNG7tYzfIFqu79LhLSOfGGuMzIlGHLtguMzwydjX4Q_jWdSf3MAovg_ogRpi4_gFq6tw8bdXR9Esx1Yyc0FIM-HZR4OKQzQa_PUFNwm_MK5Pmt4pXMu2jlS7CIk2IUd0Bs6QMyVuceY_IzSt_8TEu3B6GFTW-uC-LDT1sMs7NsmlZqqc_0pvw&pcurl=https://deals.dealbase.com/?sig%3Dd24b78db5ff27b2a7633c125e8c1eb65fcdd29bfbe8d2468da3702f8e475011131373338383435313339%26turl%3Dhttps%253A%252F%252Fwww.dealbase.com%252FHotel%252FSearch%253FcheckIn%253D2026-10-14%2526checkOut%253D2026-10-15%2526currency%253DUSD%2526forceCurrencyChange%253D1%2526lang%253Den%2526forceLanguageChange%253D1%2526rooms%253D2%253A%2526utm_source%253Dgha%2526utm_medium%253Dcpc%2526hotelId%253D113238183%2526userCountry%253DUS%2526profile%253Dr2d2m73kn8%2526preferredRate%253D302.47%2526deviceType%253Ddesktop%2526label%253Dsrc%25253Dgha%252526cltype%25253Dhotel%252526datype%25253Ddefault%252526gsite%25253Dmapresults%252526vf%25253D0%252526ucountry%25253DUS%252526udevice%25253Ddesktop%252526hotel%25253D113238183%252526day%25253D14%252526month%25253D10%252526year%25253D2026%252526los%25253D1%252526price%25253D302.47%252526currency%25253DUSD%252526cid%25253D%252526listid%25253D%252526rateid%25253DUS_D%252526closerateid%25253D%252526promo%25253D0%252526isPrivateRate%25253D0%252526isAudienceUser%25253D0%252526isPaidClick%25253D0%252526%2526cp%253DFzCzFyEOiGnYHy7dChIIsJ8BEOg5GJATIgNVU0RSATISGhU53z2uGgt6R2xmWDBTenI3WSgBMKC90NUG&s=AD1XQnk2Gv52WY6ZkEPTmFOf3A6-",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://deals.dealbase.com/?sig=d24b78db5ff27b2a7633c125e8c1eb65fcdd29bfbe8d2468da3702f8e475011131373338383435313339&turl=https://www.dealbase.com/Hotel/Search?checkIn=2026-10-14&checkOut=2026-10-15&currency=USD&forceCurrencyChange=1&lang=en&forceLanguageChange=1&rooms=2:&utm_source=gha&utm_medium=cpc&hotelId=113238183&userCountry=US&profile=r2d2m73kn8&preferredRate=302.47&deviceType=desktop&label=src%3Dgha%26cltype%3Dhotel%26datype%3Ddefault%26gsite%3Dmapresults%26vf%3D0%26ucountry%3DUS%26udevice%3Ddesktop%26hotel%3D113238183%26day%3D14%26month%3D10%26year%3D2026%26los%3D1%26price%3D302.47%26currency%3DUSD%26cid%3D%26listid%3D%26rateid%3DUS_D%26closerateid%3D%26promo%3D0%26isPrivateRate%3D0%26isAudienceUser%3D0%26isPaidClick%3D0%26&cp=FzCzFyEOiGnYHy7dChIIsJ8BEOg5GJATIgNVU0RSATISGhU53z2uGgt6R2xmWDBTenI3WSgBMKC90NUG"
+      },
+      {
+        "title": "Vio.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AA80OsxrRzHsKqs21UWVH9L0V9j6uYqHF9y9vApoB40cjG7D24y-iubz63poCw1yHObfipfKxrLLfzLqS0GlpTQpm24t5jkFBPdXTV3KrXns0EnEVdsofuUiiPfkgqlPTjowPmnY74Ehkj0N9lQI1rHOF5wihdO1U01Oh2aFaRybQCjQ0422Koo9pv4T&pcurl=https://deals.vio.com/?sig%3D73aca13c7f952d2641c156f3e69125e1eb497c325f122828ee5aa8797168b9a12d32303331333438363233%26turl%3Dhttps%253A%252F%252Fwww.vio.com%252FHotel%252FSearch%253FcheckIn%253D2026-10-14%2526checkOut%253D2026-10-15%2526currency%253DUSD%2526forceCurrencyChange%253D1%2526lang%253Den%2526forceLanguageChange%253D1%2526rooms%253D2%253A%2526utm_source%253Dgha%2526utm_medium%253Dcpc%2526hotelId%253D113238183%2526userCountry%253DUS%2526profile%253Dr2d2m73kn8%2526preferredRate%253D302.47%2526deviceType%253Ddesktop%2526label%253Dsrc%25253Dgha%252526cltype%25253Dhotel%252526datype%25253Ddefault%252526gsite%25253Dmapresults%252526vf%25253D0%252526ucountry%25253DUS%252526udevice%25253Ddesktop%252526hotel%25253D113238183%252526day%25253D14%252526month%25253D10%252526year%25253D2026%252526los%25253D1%252526price%25253D302.47%252526currency%25253DUSD%252526cid%25253D%252526listid%25253D%252526rateid%25253DUS_D%252526closerateid%25253D%252526promo%25253D0%252526isPrivateRate%25253D0%252526isAudienceUser%25253D0%252526isPaidClick%25253D0%252526%2526cp%253Dv_MTz2Q6ku_YHy7dChIIsJ8BEOg5GJATIgNVU0RSATISGhWhh8_rGgt6R2xmWDBTenI3WSgEMKq90NUG&s=AD1XQnkY4ftjMhruU-3YdDLL9dzO",
+        "isOfficialSite": false,
+        "price": "$302",
+        "url": "https://deals.vio.com/?sig=73aca13c7f952d2641c156f3e69125e1eb497c325f122828ee5aa8797168b9a12d32303331333438363233&turl=https://www.vio.com/Hotel/Search?checkIn=2026-10-14&checkOut=2026-10-15&currency=USD&forceCurrencyChange=1&lang=en&forceLanguageChange=1&rooms=2:&utm_source=gha&utm_medium=cpc&hotelId=113238183&userCountry=US&profile=r2d2m73kn8&preferredRate=302.47&deviceType=desktop&label=src%3Dgha%26cltype%3Dhotel%26datype%3Ddefault%26gsite%3Dmapresults%26vf%3D0%26ucountry%3DUS%26udevice%3Ddesktop%26hotel%3D113238183%26day%3D14%26month%3D10%26year%3D2026%26los%3D1%26price%3D302.47%26currency%3DUSD%26cid%3D%26listid%3D%26rateid%3DUS_D%26closerateid%3D%26promo%3D0%26isPrivateRate%3D0%26isAudienceUser%3D0%26isPaidClick%3D0%26&cp=v_MTz2Q6ku_YHy7dChIIsJ8BEOg5GJATIgNVU0RSATISGhWhh8_rGgt6R2xmWDBTenI3WSgEMKq90NUG"
+      }
+    ],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Amenities": [
+        {
+          "Free Wi-Fi": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Camp%20Margaritaville%20RV%20Resort%20%26%20Cabana%20Cabins%20Auburndale&query_place_id=ChIJlYIC5xZr3YgRDDTfipEolmo",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Auburndale%20FL/@28.099568135468104,-81.8253701935942,17z?hl=en",
+    "searchString": "lawyer Auburndale FL",
+    "language": "en",
+    "rank": 12,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn9Cu4m2CqXY1uMSYYA9hZXtYgwJBxTaNTTpCV04qqS5zb_NyKx--Q8uXYl2VWkIwEcsRcWTkd4SDwTILKg-XG492APbMA1Hr8H8trfCvjtVd46GTDDGPsUOXepGhJCJiMmmZ0Z=w408-h272-k-no",
+    "kgmid": "/g/11jkns8y8l",
+    "businessProfileId": "9902937815008732667"
+  },
+  {
+    "title": "Central Florida Notary Agents ** PLEASE CALL FOR APPTS**",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Notary public",
+    "address": "132 Owen Cir N, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "132 Owen Cir N",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 661-8899",
+    "phoneUnformatted": "+18636618899",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0914709,
+      "lng": -81.7856168
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlY83oHtr3YgR88VSkwUyO2s",
+    "categories": [
+      "Notary public"
+    ],
+    "fid": "0x88dd6b7ba0378f95:0x6b3b32059352c5f3",
+    "cid": "7726824585212118515",
+    "reviewsCount": 36,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 36
+    },
+    "imagesCount": 10,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:51.823Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "7 AM to 11:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "7 AM to 11:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "7 AM to 11:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "7 AM to 11:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "7 AM to 11:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "7 AM to 11:30 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Central%20Florida%20Notary%20Agents%20**%20PLEASE%20CALL%20FOR%20APPTS**&query_place_id=ChIJlY83oHtr3YgR88VSkwUyO2s",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Auburndale%20FL/@28.076843541872435,-81.79103986880197,17z?hl=en",
+    "searchString": "attorney Auburndale FL",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmONdNePKsugd_RvmMoeUVqgINzjZCsH0LuEwAhD-_8SN9IERK1ZrmHFt0CDr-c9fn3XLbshi5HpvbqfvLFGUUHgCivMVEQTxMjkiATVEuPdKkAvIXCVDAZhnh97hYP4xhxOAczD=w532-h240-k-no",
+    "kgmid": "/g/1tgw5vdq",
+    "businessProfileId": "16249293156810447037"
+  },
+  {
+    "title": "Sandy Stephens CPA PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Certified public accountant",
+    "address": "221 Main St, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "221 Main St",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.sandystephenscpa.com/",
+    "phone": "(863) 967-7888",
+    "phoneUnformatted": "+18639677888",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0628834,
+      "lng": -81.7885855
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJDVDyXNhr3YgR4j3wdSE7mxI",
+    "categories": [
+      "Certified public accountant"
+    ],
+    "fid": "0x88dd6bd85cf2500d:0x129b3b2175f03de2",
+    "cid": "1340730328971492834",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 2
+    },
+    "imagesCount": 6,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:51.824Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 12 PM, 1 to 4 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 12 PM, 1 to 4 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 12 PM, 1 to 4 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 12 PM, 1 to 4 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Sandy%20Stephens%20CPA%20PA&query_place_id=ChIJDVDyXNhr3YgR4j3wdSE7mxI",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Auburndale%20FL/@28.076843541872435,-81.79103986880197,17z?hl=en",
+    "searchString": "attorney Auburndale FL",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPDfW9G8swT2sO-OC6OQe-vXJ9Qi6ci6-FeVyIm7Knoy7rvEdtgYOhd8-DFK3NZNelFQwdfinul0R3SGX7apXfECYcR6WjjHbQPTbE6S8vYVS3zKyaYjyFdb8dgdxoAYj_TPdnojg=w408-h242-k-no",
+    "kgmid": "/g/11f5mfn2yy",
+    "businessProfileId": "14189598990912099350"
+  },
+  {
+    "title": "Medline Industries Inc",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Warehouse",
+    "address": "Ext.2234 Transp. Office 1062, Old Dixie Hwy, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "Ext.2234 Transp. Office 1062, Old Dixie Hwy",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "FL",
+    "countryCode": "US",
+    "website": "https://www.medline.com/",
+    "phone": "(863) 337-4797",
+    "phoneUnformatted": "+18633374797",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0748966,
+      "lng": -81.8284249
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJNZJ-bNxq3YgRTxH0kfd5a3M",
+    "categories": [
+      "Warehouse"
+    ],
+    "fid": "0x88dd6adc6c7e9235:0x736b79f791f4114f",
+    "cid": "8316875241082327375",
+    "reviewsCount": 133,
+    "reviewsDistribution": {
+      "oneStar": 29,
+      "twoStar": 1,
+      "threeStar": 9,
+      "fourStar": 18,
+      "fiveStar": 76
+    },
+    "imagesCount": 25,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:12.028Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Medline%20Industries%20Inc&query_place_id=ChIJNZJ-bNxq3YgRTxH0kfd5a3M",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Auburndale%20FL/@28.076843541872435,-81.84253535599031,17z?hl=en",
+    "searchString": "attorney Auburndale FL",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmP2PfY5WO7bZbgLmg6JoGvfz6J8CRwx_Qdx_5vQ7B8_dJ8pzx5MBvQKGsjoG3XmSe1q-TzsohoJQH5GqqpEleT1YUvlNlevxnphPE4Qkqpy8jYXJw6ndafWO0ZvGP8spUOuyYytwAC3qak=w408-h544-k-no",
+    "kgmid": "/g/11hbgg_s_4",
+    "businessProfileId": "2494021102712304989"
+  },
+  {
+    "title": "Michael I Newbern Air Conditioning Contractor, Inc",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "HVAC contractor",
+    "address": "1139 N Berkley Rd, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "1139 N Berkley Rd",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.newbernac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "phone": "(863) 967-1956",
+    "phoneUnformatted": "+18639671956",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0739819,
+      "lng": -81.8178325
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJO9YQnoYU3YgRAESIh-0UuT0",
+    "categories": [
+      "HVAC contractor",
+      "Air conditioning contractor",
+      "Air conditioning repair service",
+      "Furnace repair service",
+      "Heating contractor"
+    ],
+    "fid": "0x88dd14869e10d63b:0x3db914ed87884400",
+    "cid": "4447609117418734592",
+    "reviewsCount": 88,
+    "reviewsDistribution": {
+      "oneStar": 15,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 72
+    },
+    "imagesCount": 13,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:12.028Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "8 AM to 12 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        },
+        {
+          "Online estimates": false
+        }
+      ],
+      "Offerings": [
+        {
+          "Installation service": true
+        },
+        {
+          "Repair services": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Michael%20I%20Newbern%20Air%20Conditioning%20Contractor%2C%20Inc&query_place_id=ChIJO9YQnoYU3YgRAESIh-0UuT0",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Auburndale%20FL/@28.076843541872435,-81.84253535599031,17z?hl=en",
+    "searchString": "attorney Auburndale FL",
+    "language": "en",
+    "rank": 17,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmO004rGbqntSPonZgk4N8XxHHgl40iTHVOFleXrSxNMvECyGqS2JtNejRj5Y-1gKriK1g82TEKX5qbYzvKMciHAaMVkXR5UxVvziHjFMvUrClMR2wa11BkCITG71Sjepay40dECMJxSJolR=w408-h544-k-no",
+    "kgmid": "/g/1tlc8wmx",
+    "businessProfileId": "2649974533701622862"
+  },
+  {
+    "title": "Adams Homes at Lake Juliana Estates",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Gated community",
+    "address": "4970 Tennessee Lake Dr, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "4970 Tennessee Lake Dr",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.adamshomes.com/communities/florida/lakeland-polk-county/lake-julianna-estates",
+    "phone": "(863) 265-1933",
+    "phoneUnformatted": "+18632651933",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.149849,
+      "lng": -81.809712
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ-dnEJdlr3YgRB__tEixHuDA",
+    "categories": [
+      "Gated community"
+    ],
+    "fid": "0x88dd6bd925c4d9f9:0x30b8472c12edff07",
+    "cid": "3510634164157021959",
+    "reviewsCount": 66,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 2,
+      "threeStar": 0,
+      "fourStar": 12,
+      "fiveStar": 49
+    },
+    "imagesCount": 75,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:22.979Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "12 to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "12 to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Adams%20Homes%20at%20Lake%20Juliana%20Estates&query_place_id=ChIJ-dnEJdlr3YgRB__tEixHuDA",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Auburndale%20FL/@28.14501732265944,-81.80820503119809,17z?hl=en",
+    "searchString": "lawyer Auburndale FL",
+    "language": "en",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNEt0HaF5Jr4xCvk44ozypo1pwFBuw7mcFn5-77hycEpTAn0pcdSkCy-xRDrzwXe29DfH4TIZ6dREulth3fkCtGDyrrZloNzMM8HvMxSpauGQ3mZjNU8sPGD-Nvk6uQOmk0gmx2=w408-h306-k-no",
+    "kgmid": "/g/11ckr4by1n",
+    "businessProfileId": "9029523349747851742"
+  },
+  {
+    "title": "Superspeed Orlando",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Car racing venue",
+    "address": "150 Raceway Dr Suite A, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "150 Raceway Dr Suite A",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://superspeedorlando.com/",
+    "phone": "(863) 247-6900",
+    "phoneUnformatted": "+18632476900",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1552153,
+      "lng": -81.8109275
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJi1Dy5Ulp3YgRtlv_VDpK8eE",
+    "categories": [
+      "Car racing venue"
+    ],
+    "fid": "0x88dd6949e5f2508b:0xe1f14a3a54ff5bb6",
+    "cid": "16280875742315633590",
+    "reviewsCount": 547,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 1,
+      "threeStar": 1,
+      "fourStar": 3,
+      "fiveStar": 539
+    },
+    "imagesCount": 274,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:34.190Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Superspeed%20Orlando&query_place_id=ChIJi1Dy5Ulp3YgRtlv_VDpK8eE",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Auburndale%20FL/@28.15259218719133,-81.81678761239614,17z?hl=en",
+    "searchString": "lawyer Auburndale FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPXuLwDCOfauG32zcTS_bjOq-rOtAWJH78ls8Zj9nsVuhnmfPJCZBCRnDWW-osgO1kLrf2PFvv1k4WnODa1Du7pAplekYn3alUsx1-WfVjpbppzvFgJ2vx2C_e3_vWNFa_zcg3k24a-0vSr=w408-h544-k-no",
+    "kgmid": "/g/11xkvmdbxl",
+    "businessProfileId": "10713425155920468228"
+  },
+  {
+    "title": "Auburndale Bookkeeping & Tax Service",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tax preparation",
+    "address": "417 Havendale Blvd, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "417 Havendale Blvd",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.auburndalebookkeeping.com/",
+    "phone": "(863) 965-1161",
+    "phoneUnformatted": "+18639651161",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0560145,
+      "lng": -81.777967
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJd-R_xKps3YgRb1RcFriJ1vE",
+    "categories": [
+      "Tax preparation",
+      "Accountant",
+      "Bookkeeping service",
+      "Business management consultant",
+      "Business to business service",
+      "Tax consultant"
+    ],
+    "fid": "0x88dd6caac47fe477:0xf1d689b8165c546f",
+    "cid": "17426267231898850415",
+    "reviewsCount": 64,
+    "reviewsDistribution": {
+      "oneStar": 17,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 46
+    },
+    "imagesCount": 6,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:50.087Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        },
+        {
+          "Online appointments": false
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        },
+        {
+          "Wheelchair accessible restroom": false
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": false
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Auburndale%20Bookkeeping%20%26%20Tax%20Service&query_place_id=ChIJd-R_xKps3YgRb1RcFriJ1vE",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Auburndale%20FL/@28.061693812808656,-81.78245728760392,17z?hl=en",
+    "searchString": "lawyer Auburndale FL",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMUFi7xnffe0-_i7nhVSqkFbYR8zEn-JXtTPWYAVFDAA5D2aJS-9kj4BJ5_CqOQ85NCllroqlwk998pbs-xsoxespPIK5EsIX-4rd5v0vV8lb2JYLZGot-v19XLnW8o41QCf5gy=w408-h306-k-no",
+    "kgmid": "/g/1hc211r52",
+    "businessProfileId": "13735445944587924672"
+  },
+  {
+    "title": "ABC Supply Interiors, Inc.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Building materials supplier",
+    "address": "408 Old Dixie Hwy, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "408 Old Dixie Hwy",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.abcsupplyinteriors.com/locations/auburndale-fl/",
+    "phone": "(863) 965-3602",
+    "phoneUnformatted": "+18639653602",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0737016,
+      "lng": -81.8181579
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJJRa-QCFr3YgRSQRv8zLAgio",
+    "categories": [
+      "Building materials supplier",
+      "Building materials store",
+      "Ceiling supplier",
+      "Construction material wholesaler",
+      "Dry wall supply store",
+      "Insulation materials store",
+      "Steel distributor"
+    ],
+    "fid": "0x88dd6b2140be1625:0x2a82c032f36f0449",
+    "cid": "3063222021630395465",
+    "reviewsCount": 27,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 2,
+      "threeStar": 1,
+      "fourStar": 4,
+      "fiveStar": 16
+    },
+    "imagesCount": 27,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:56:28.867Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "7 AM to 4:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "7 AM to 4:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "7 AM to 4:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "7 AM to 4:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "7 AM to 4:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=ABC%20Supply%20Interiors%2C%20Inc.&query_place_id=ChIJJRa-QCFr3YgRSQRv8zLAgio",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Auburndale%20FL/@28.076843541872435,-81.8253701935942,17z?hl=en",
+    "searchString": "law firm Auburndale FL",
+    "language": "en",
+    "rank": 13,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl45o9XhoX2VenNxPqC22br9yrarOSXluysN5VfNM8S7PayKNjUbHnwtWfxt_rf_c0Rv-_l7MtPwXSo7RS6_OcQ9CCqF1PgVowa0RB3OKobjlM-IupN5oNDz2kXwMFXrzPBY3Pxtjt5m0NL=w408-h272-k-no",
+    "kgmid": "/g/1hc5tx9vg",
+    "businessProfileId": "15870259076303970469"
+  },
+  {
+    "title": "Berkley Chapel",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Non-denominational church",
+    "address": "581 S Berkley Rd, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "581 S Berkley Rd",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.berkleychapel.com/",
+    "phone": "(863) 967-5433",
+    "phoneUnformatted": "+18639675433",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0648256,
+      "lng": -81.8186712
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJr4-5kSFr3YgR8l9DxObYmC4",
+    "categories": [
+      "Non-denominational church",
+      "Church"
+    ],
+    "fid": "0x88dd6b2191b98faf:0x2e98d8e6c4435ff2",
+    "cid": "3357672007851532274",
+    "reviewsCount": 231,
+    "reviewsDistribution": {
+      "oneStar": 7,
+      "twoStar": 0,
+      "threeStar": 5,
+      "fourStar": 13,
+      "fiveStar": 206
+    },
+    "imagesCount": 74,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:56:38.380Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM, 6 to 9 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "8 AM to 12 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Berkley%20Chapel&query_place_id=ChIJr4-5kSFr3YgR8l9DxObYmC4",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Auburndale%20FL/@28.061693812808656,-81.81678761239614,17z?hl=en",
+    "searchString": "lawyer Auburndale FL",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPDzO-tINk_cIiIi9gNHZMz5-UsXaAfnEh0EUzVZLa6OkbnuurQjKpOfYEX-62EEw-Sdy42dn_DT04K5IsjtS7q96f7QLauTkEGDG7WDEaM8z0Sv0EHRurrQnvuOQageg8Qa4uy=w408-h306-k-no",
+    "kgmid": "/g/1td72tkm",
+    "businessProfileId": "3995758002219483893"
+  },
+  {
+    "title": "Water Ridge",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Real estate agency",
+    "address": "112 Water Ridge Blvd, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "112 Water Ridge Blvd",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.waterridge.com/",
+    "phone": "(844) 803-8050",
+    "phoneUnformatted": "+18448038050",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.1032716,
+      "lng": -81.7556201
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJkxUyCl5s3YgRTW3szgQcZvM",
+    "categories": [
+      "Real estate agency"
+    ],
+    "fid": "0x88dd6c5e0a321593:0xf3661c04ceec6d4d",
+    "cid": "17538736605818023245",
+    "reviewsCount": 32,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 2,
+      "threeStar": 0,
+      "fourStar": 4,
+      "fiveStar": 24
+    },
+    "imagesCount": 52,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:57:39.751Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "12 to 5 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Water%20Ridge&query_place_id=ChIJkxUyCl5s3YgRTW3szgQcZvM",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Auburndale%20FL/@28.107142999999994,-81.75670954400975,17z?hl=en",
+    "searchString": "lawyer Auburndale FL",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn5RgbZe5IWE6yP9hcRYlwfTX8U161GkAi6ZkkW0h2naq5J4AP8w6ReIAANWS0sYTKdsR8eQFZPrEhMrYyQCsq0mGPPGu8a21m5KHjlzzosQYmzPBEvgZ_9pbo_4aiZa-7eXQtVRwVImkI=w519-h240-k-no",
+    "kgmid": "/g/11dyxzkzdt",
+    "businessProfileId": null
+  },
+  {
+    "title": "The House of Flowers",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Florist",
+    "address": "821 S Berkley Rd, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "821 S Berkley Rd",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.auburndaleflowers33823.com/",
+    "phone": "(863) 967-3471",
+    "phoneUnformatted": "+18639673471",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0683651,
+      "lng": -81.8177791
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ7__vEiZr3YgRzu2xDrl7GpA",
+    "categories": [
+      "Florist",
+      "Flower delivery",
+      "Flower designer"
+    ],
+    "fid": "0x88dd6b2612efffef:0x901a7bb90eb1edce",
+    "cid": "10383747925601807822",
+    "reviewsCount": 138,
+    "reviewsDistribution": {
+      "oneStar": 7,
+      "twoStar": 3,
+      "threeStar": 3,
+      "fourStar": 4,
+      "fiveStar": 121
+    },
+    "imagesCount": 119,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:58:19.648Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 1 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20House%20of%20Flowers&query_place_id=ChIJ7__vEiZr3YgRzu2xDrl7GpA",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Auburndale%20FL/@28.069268677340546,-81.80820503119809,17z?hl=en",
+    "searchString": "lawyer Auburndale FL",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmZkJRUUAfHTvTzj6UG3BqO45cTQxzrPhZIhhfcgUCrth50UB-Mwi58gEyX8jH7d1aPp2nbaAM5BVmOaFj60BS0Aq0nYYhxCwBSc-xzqGDafDUdh4IufHP-F_2ysJnn-M3WKadi=w408-h544-k-no",
+    "kgmid": "/g/1tcyy74q",
+    "businessProfileId": "14938054246777960108"
+  },
+  {
+    "title": "The Greater Auburndale Chamber of Commerce",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Chamber of Commerce",
+    "address": "2701 Lake Myrtle Park Rd, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "2701 Lake Myrtle Park Rd",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.myauburndalechamber.com/",
+    "phone": "(863) 967-3400",
+    "phoneUnformatted": "+18639673400",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0967125,
+      "lng": -81.8193329
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJB6umb9xr3YgRfB_Bo0qDE0c",
+    "categories": [
+      "Chamber of Commerce"
+    ],
+    "fid": "0x88dd6bdc6fa6ab07:0x4713834aa3c11f7c",
+    "cid": "5121581557848547196",
+    "reviewsCount": 9,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 7
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:58:52.054Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Greater%20Auburndale%20Chamber%20of%20Commerce&query_place_id=ChIJB6umb9xr3YgRfB_Bo0qDE0c",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Auburndale%20FL/@28.107142999999994,-81.81678761239614,17z?hl=en",
+    "searchString": "attorney Auburndale FL",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=zz5x3urqCIdq7LyxTr5SvA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=342.6519&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tcvq20h",
+    "businessProfileId": "1561104105377538507"
+  },
+  {
+    "title": "Mac's Beach with boat ramp",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "City park",
+    "address": "2230 Lake Ariana Blvd, Auburndale, FL 33823",
+    "neighborhood": null,
+    "street": "2230 Lake Ariana Blvd",
+    "city": "Auburndale",
+    "postalCode": "33823",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.0744656,
+      "lng": -81.8092569
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJawSRMp9r3YgRUPB9EScnDPE",
+    "categories": [
+      "City park"
+    ],
+    "fid": "0x88dd6b9f3291046b:0xf10c2727117df050",
+    "cid": "17369300911611834448",
+    "reviewsCount": 163,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 1,
+      "threeStar": 12,
+      "fourStar": 39,
+      "fiveStar": 103
+    },
+    "imagesCount": 359,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:58:56.112Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "7 AM to 8:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "7 AM to 8:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "7 AM to 8:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "7 AM to 8:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "7 AM to 8:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "7 AM to 8:30 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "7 AM to 8:30 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Highlights": [
+        {
+          "Picnics": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Picnic tables": true
+        },
+        {
+          "Public restroom": true
+        },
+        {
+          "Swings": true
+        }
+      ],
+      "Children": [
+        {
+          "Good for kids": true
+        },
+        {
+          "Good for kids birthday": true
+        },
+        {
+          "Playground": true
+        }
+      ],
+      "Pets": [
+        {
+          "Dogs allowed": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mac's%20Beach%20with%20boat%20ramp&query_place_id=ChIJawSRMp9r3YgRUPB9EScnDPE",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Auburndale%20FL/@28.069268677340546,-81.81678761239614,17z?hl=en",
+    "searchString": "lawyer Auburndale FL",
+    "language": "en",
+    "rank": 17,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWncwpiV9fFXYkK8do8egouGdqNg2mIWNAe9UPfXEj_aZ2PEExAILqCiDL1juHifXnZRjtKDbhUyV_3mmWcE3VzrF4XVZeDQZvU3GMdzW_dg8VOaPVTRikKeL67sv7ItO5NqfRQV=w408-h544-k-no",
+    "kgmid": "/g/11frrrw62_",
+    "businessProfileId": null
+  }
+]

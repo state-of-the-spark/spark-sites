@@ -1,0 +1,4179 @@
+[
+  {
+    "title": "The Law Offices of Markeishia L Smith, PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Civil law attorney",
+    "address": "408 S 10th St, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "408 S 10th St",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.thesmithlawfirm.org/",
+    "phone": "(863) 866-9917",
+    "phoneUnformatted": "+18638669917",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1002977,
+      "lng": -81.6235874
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJDeHMRdFz3YgRBqbOLT8V5LA",
+    "categories": [
+      "Civil law attorney"
+    ],
+    "fid": "0x88dd73d145cce10d:0xb0e4153f2dcea606",
+    "cid": "12746336206460986886",
+    "reviewsCount": 28,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 26
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.473Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Law%20Offices%20of%20Markeishia%20L%20Smith%2C%20PA&query_place_id=ChIJDeHMRdFz3YgRBqbOLT8V5LA",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkIIWBPfrbgrdI0KiQG9UTlPNvQNMToNh1AhmQXiACpCh2uHTt96kg050XGo5SeiNzaSIJGwYTsX4Hz8OKroBH876B9j4MIkB8W1Hn3BB2lKdLkbLOS8QtIXNg59M_d31T-igf75w=w408-h342-k-no",
+    "kgmid": "/g/11w30httv1",
+    "businessProfileId": "1725287147367930041"
+  },
+  {
+    "title": "Lasseigne and Ladner",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "105 McKay Dr #4000, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "105 McKay Dr #4000",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.lasseigneandladner.com/",
+    "phone": "(863) 422-2216",
+    "phoneUnformatted": "+18634222216",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1067636,
+      "lng": -81.6359818
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJQ9Wmcrpz3YgR6jP3gAYdl-A",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd73ba72a6d543:0xe0971d0680f733ea",
+    "cid": "16183435699749860330",
+    "reviewsCount": 48,
+    "reviewsDistribution": {
+      "oneStar": 10,
+      "twoStar": 0,
+      "threeStar": 3,
+      "fourStar": 3,
+      "fiveStar": 32
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.474Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lasseigne%20and%20Ladner&query_place_id=ChIJQ9Wmcrpz3YgR6jP3gAYdl-A",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jwloHPhWm5pGxTesV5xThQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=81.991776&pitch=0&thumbfov=100",
+    "kgmid": "/g/1td6yy5n",
+    "businessProfileId": "5204247572123750744"
+  },
+  {
+    "title": "Howell & Thornhill - Haines City",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "135 N 6th St Ste C, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "135 N 6th St Ste C",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://howellthornhill.com/office-locations/howell-thornhill-haines-city/?utm_source=gbp&utm_medium=organic&utm_campaign=gbp-website-haines-city",
+    "phone": "(863) 293-3166",
+    "phoneUnformatted": "+18632933166",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1091317,
+      "lng": -81.6264021
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJxxOHdb5z3YgR_fmHlMNWsmY",
+    "categories": [
+      "Personal injury attorney",
+      "Civil law attorney",
+      "Insurance attorney",
+      "Law firm",
+      "Attorney",
+      "Legal services",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd73be758713c7:0x66b256c39487f9fd",
+    "cid": "7400072535733697021",
+    "reviewsCount": 39,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 38
+    },
+    "imagesCount": 36,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.474Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Online service hours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Identifies as Asian-owned": true
+        },
+        {
+          "Identifies as veteran-owned": true
+        },
+        {
+          "Identifies as women-owned": true
+        }
+      ],
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Howell%20%26%20Thornhill%20-%20Haines%20City&query_place_id=ChIJxxOHdb5z3YgR_fmHlMNWsmY",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnigF1bImiqOCg-3gTkiXXASWz7-DSIRU33sGpFKMhShVRNhKtaLxPKoaqmuiwKHGX7q0P-h6dK8pcG12WJ9_IkFmVJWOF3ksiuz7CodybqaSVX9y9rF15Frl0DD4S88jje0acs=w408-h570-k-no",
+    "kgmid": "/g/1tgdtyzb",
+    "businessProfileId": "11644427862332444163"
+  },
+  {
+    "title": "Abrahamson & Uiterwyk Car Accident and Personal Injury Lawyers",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "651 E Main St Ste d, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "651 E Main St Ste d",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.theinjurylawyers.com/haines-city-car-accident-lawyer/?utm_medium=organic&utm_source=gmb&utm_campaign=website&utm_term=hainescity",
+    "phone": "(863) 400-1733",
+    "phoneUnformatted": "+18634001733",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.107857,
+      "lng": -81.62605
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJO44MlRFz3YgRooKUjDUHwfo",
+    "categories": [
+      "Personal injury attorney",
+      "Civil law attorney",
+      "Elder law attorney",
+      "Insurance attorney",
+      "Law firm",
+      "Attorney",
+      "Legal services",
+      "Medical lawyer",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd7311950c8e3b:0xfac107358c9482a2",
+    "cid": "18068731106560344738",
+    "reviewsCount": 29,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 29
+    },
+    "imagesCount": 199,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.475Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Abrahamson%20%26%20Uiterwyk%20Car%20Accident%20and%20Personal%20Injury%20Lawyers&query_place_id=ChIJO44MlRFz3YgRooKUjDUHwfo",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWldQefFoWShu1xmfyz9CG2-hpBh76LZzPWZYEGVkSrr92dYozDp8AqTdjW7XPB8KhbWKv3xirDHvOlVcaS5hUJwICokZe7af9DK9yIToNmcGqUDkhFWk72X_Ao717CeO1GHKmPI5110gF0D=w426-h240-k-no",
+    "kgmid": "/g/11mcg7qwyk",
+    "businessProfileId": "15612676812878515259"
+  },
+  {
+    "title": "Pardy & Rodriguez, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "40230 US-27 #140, Davenport, FL 33837",
+    "neighborhood": null,
+    "street": "40230 US-27 #140",
+    "city": "Davenport",
+    "postalCode": "33837",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://pardyrodriguezlaw.com/",
+    "phone": "(863) 880-1847",
+    "phoneUnformatted": "+18638801847",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1853678,
+      "lng": -81.640725
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJXzue6_1w3YgRRz4gPiPyqWg",
+    "categories": [
+      "Personal injury attorney",
+      "Insurance attorney",
+      "Law firm",
+      "Attorney",
+      "Legal services",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd70fdeb9e3b5f:0x68a9f2233e203e47",
+    "cid": "7541825284188683847",
+    "reviewsCount": 588,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 2,
+      "threeStar": 8,
+      "fourStar": 33,
+      "fiveStar": 537
+    },
+    "imagesCount": 73,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.475Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Pardy%20%26%20Rodriguez%2C%20P.A.&query_place_id=ChIJXzue6_1w3YgRRz4gPiPyqWg",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmtYQa3CyQR6EsjpqXrqUk_LbI47DfEuk3C8itQJXY1cnunhtOr8w4OQwVA7M_Ebx4TPrEhKPGE1ibezzvE9w6lYEOqvA64ibk-MSOQ_kkCGPx2xPQgnYS7nadDGL-Zl5JjJmnc3A=w408-h270-k-no",
+    "kgmid": "/g/11gf16hskj",
+    "businessProfileId": "17791854689460970962"
+  },
+  {
+    "title": "Haff Tula Michele",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "135 N 6th St Second Floor, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "135 N 6th St Second Floor",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 421-2626",
+    "phoneUnformatted": "+18634212626",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1091437,
+      "lng": -81.6263882
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJo45qFr5z3YgRGdXGFlxjQ2I",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd73be166a8ea3:0x6243635c16c6d519",
+    "cid": "7080612286326822169",
+    "reviewsCount": 6,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 4
+    },
+    "imagesCount": 8,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.475Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Haff%20Tula%20Michele&query_place_id=ChIJo45qFr5z3YgRGdXGFlxjQ2I",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn8HjarMr74guJHefW_hL1i5P38po61zWhfJC2CrEH7wjtTS6OxEJVHbl8tlqaoo6AhaBSixHWGUDwJyxP5RwcU7fouRINR15PW92POEZ2O4T0n2ga0onlXEdwkGUYEQHHpMTTqdw=w408-h544-k-no",
+    "kgmid": "/g/11dy1fvzkn",
+    "businessProfileId": "1868245886383981982"
+  },
+  {
+    "title": "Nazario Consumer Services LLC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Paralegal services provider",
+    "address": "139 N 6th St, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "139 N 6th St",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 422-8203",
+    "phoneUnformatted": "+18634228203",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.1093104,
+      "lng": -81.6264143
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJJUQOFb5z3YgRNKop6WNcu4o",
+    "categories": [
+      "Paralegal services provider",
+      "Legal services",
+      "Notary public",
+      "Tax preparation service",
+      "Translation service"
+    ],
+    "fid": "0x88dd73be150e4425:0x8abb5c63e929aa34",
+    "cid": "9996685382062287412",
+    "reviewsCount": 43,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 2,
+      "threeStar": 0,
+      "fourStar": 2,
+      "fiveStar": 31
+    },
+    "imagesCount": 6,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.475Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Nazario%20Consumer%20Services%20LLC&query_place_id=ChIJJUQOFb5z3YgRNKop6WNcu4o",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn4afylnA-OXpbshKfi7TVDdBHLrashjuATHYOT3g1dY2CjTGj_nrqKOcgf62iiTnXVGjGjgRQ5H8_UrN03w-y5WdL4V39ccchcdiAZMoW4mHd4RKJnoHdcPJVmUMgJ4QLAGtne=w408-h873-k-no",
+    "kgmid": "/g/1vvr7059",
+    "businessProfileId": null
+  },
+  {
+    "title": "The Law Firm of Gil Colón, Jr.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "95 S 10th St, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "95 S 10th St",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.gilcolonjr.com/",
+    "phone": "(863) 534-3777",
+    "phoneUnformatted": "+18635343777",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.1054773,
+      "lng": -81.6231357
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJMQpRV5Zz3YgROH65DNrFfmM",
+    "categories": [
+      "Attorney",
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd739657510a31:0x637ec5da0cb97e38",
+    "cid": "7169385197127433784",
+    "reviewsCount": 4,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 2
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.475Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "9 AM to 5 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Law%20Firm%20of%20Gil%20Col%C3%B3n%2C%20Jr.&query_place_id=ChIJMQpRV5Zz3YgROH65DNrFfmM",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkt7wWkJalOajW-N-ap3YGr34-_v2Rwdohgw-d20GJyafFxKxSndaXKcuPlw7VTbKiqWBvdOoKapNb0je8xiKLGjM7PiD2lhPAbi8BiEL3fnl9biDm077G9ip49qb0Mt5kFioyn=w408-h306-k-no",
+    "kgmid": "/g/1tdg40d0",
+    "businessProfileId": null
+  },
+  {
+    "title": "Tropical Multi Services LLC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "39 N 11th St, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "39 N 11th St",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.tropicalmultiservices.com/",
+    "phone": "(863) 353-5449",
+    "phoneUnformatted": "+18633535449",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1084086,
+      "lng": -81.6223198
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJYaATzdJz3YgRBCH8SJow-Gg",
+    "categories": [
+      "Legal services",
+      "Accountant",
+      "Tax preparation service",
+      "Money transfer service",
+      "Moving and storage service",
+      "Notary public",
+      "Real estate agent",
+      "Tax attorney",
+      "Tax consultant",
+      "Tax preparation"
+    ],
+    "fid": "0x88dd73d2cd13a061:0x68f8309a48fc2104",
+    "cid": "7563849013376327940",
+    "reviewsCount": 436,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 0,
+      "threeStar": 4,
+      "fourStar": 4,
+      "fiveStar": 424
+    },
+    "imagesCount": 11,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.476Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "8 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Tropical%20Multi%20Services%20LLC&query_place_id=ChIJYaATzdJz3YgRBCH8SJow-Gg",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnJluqO0SNntrQpvt_ZsfAqdZ7z07QvctfKIKl0HhDj_x5OBVcYrI093TRuEWd5MaJOlPsttZ9zdiYNa3hqi0ud-8zEa1cqVLHP1WjTGT1voqgyQMFcDcFq8QUZaZpL6Bz79vo__w=w480-h240-k-no",
+    "kgmid": "/g/11pv2lr6vm",
+    "businessProfileId": "5959078886847879557"
+  },
+  {
+    "title": "Humphries Kevin",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "19 N 6th St, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "19 N 6th St",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 422-1020",
+    "phoneUnformatted": "+18634221020",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.107357,
+      "lng": -81.626356
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJgbBt5L1z3YgROMYeSRjuDW0",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd73bde46db081:0x6d0dee18491ec638",
+    "cid": "7858198712904762936",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.476Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Humphries%20Kevin&query_place_id=ChIJgbBt5L1z3YgROMYeSRjuDW0",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=93PFTjhUmZZXvcoGY0SE0g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=91.40882&pitch=0&thumbfov=100",
+    "kgmid": "/g/1261bzc3m",
+    "businessProfileId": null
+  },
+  {
+    "title": "Smith Feddeler & Smith, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "Haines City, FL 33844",
+    "neighborhood": null,
+    "street": null,
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 420-6868",
+    "phoneUnformatted": "+18634206868",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.114221,
+      "lng": -81.6177964
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJxXCv3Oxz3YgRAAZkX66x5fQ",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd73ecdcaf70c5:0xf4e5b1ae5f640600",
+    "cid": "17646706077403973120",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.476Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Smith%20Feddeler%20%26%20Smith%2C%20P.A.&query_place_id=ChIJxXCv3Oxz3YgRAAZkX66x5fQ",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 12,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=sPWFp6biE8BZgFDsQsRchA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=75.19279&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tdqccvh",
+    "businessProfileId": null
+  },
+  {
+    "title": "Kennedy Law Group",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "Haines City, FL 33844",
+    "neighborhood": null,
+    "street": null,
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.kennedylawgroup.com/",
+    "phone": "(863) 422-2277",
+    "phoneUnformatted": "+18634222277",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.114221,
+      "lng": -81.6177964
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJxXCv3Oxz3YgRG0Dbnl_4R3M",
+    "categories": [
+      "Legal services"
+    ],
+    "fid": "0x88dd73ecdcaf70c5:0x7347f85f9edb401b",
+    "cid": "8306881127278919707",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.476Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Kennedy%20Law%20Group&query_place_id=ChIJxXCv3Oxz3YgRG0Dbnl_4R3M",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 14,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=sPWFp6biE8BZgFDsQsRchA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=75.19279&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tgcn2rw",
+    "businessProfileId": null
+  },
+  {
+    "title": "Brandon Family Law Center LLC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "619 E Lumsden Rd, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "619 E Lumsden Rd",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 588-4444",
+    "phoneUnformatted": "+18635884444",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.114221,
+      "lng": -81.6177964
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJxXCv3Oxz3YgRTfTWXs6fpEY",
+    "categories": [
+      "Legal services"
+    ],
+    "fid": "0x88dd73ecdcaf70c5:0x46a49fce5ed6f44d",
+    "cid": "5090369187538728013",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.476Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Brandon%20Family%20Law%20Center%20LLC&query_place_id=ChIJxXCv3Oxz3YgRTfTWXs6fpEY",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=sPWFp6biE8BZgFDsQsRchA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=75.19279&pitch=0&thumbfov=100",
+    "kgmid": "/g/12613g5kk",
+    "businessProfileId": null
+  },
+  {
+    "title": "Nettleton Robert C",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "702 E Main St, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "702 E Main St",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 422-6484",
+    "phoneUnformatted": "+18634226484",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.108324,
+      "lng": -81.625609
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ34of4b1z3YgRlyo-vRjGIHQ",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd73bde11f8adf:0x7420c618bd3e2a97",
+    "cid": "8367905917210864279",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.476Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Nettleton%20Robert%20C&query_place_id=ChIJ34of4b1z3YgRlyo-vRjGIHQ",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 16,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=snGrRSKQdNmpYolheDsROg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=348.72574&pitch=0&thumbfov=100",
+    "kgmid": "/g/1ptw52xfd",
+    "businessProfileId": null
+  },
+  {
+    "title": "Fred Reilly",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "33 N 6th St, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "33 N 6th St",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 242-5467",
+    "phoneUnformatted": "+18632425467",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.1075801,
+      "lng": -81.6265193
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJMan7Cb5z3YgR6ydnHoRY4X0",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd73be09fba931:0x7de158841e6727eb",
+    "cid": "9070628448969893867",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 0
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.476Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Fred%20Reilly&query_place_id=ChIJMan7Cb5z3YgR6ydnHoRY4X0",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=3JBHiygV8d-_tCuB1RENaw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=115.03078&pitch=0&thumbfov=100",
+    "kgmid": "/g/11gmxk9w5z",
+    "businessProfileId": null
+  },
+  {
+    "title": "Aponte & Associates-Abogados",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "1920 Verano Dr, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "1920 Verano Dr",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 438-7451",
+    "phoneUnformatted": "+18634387451",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.0860275,
+      "lng": -81.6220169
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ5Y-zXHRz3YgRQAhZLxsgcEo",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd73745cb38fe5:0x4a70201b2f590840",
+    "cid": "5363822457328830528",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.476Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Aponte%20%26%20Associates-Abogados&query_place_id=ChIJ5Y-zXHRz3YgRQAhZLxsgcEo",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=cQXjpmloYvb3Ig3B9zVZkQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=317.0103&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tdry3lg",
+    "businessProfileId": null
+  },
+  {
+    "title": "Milly Gutierrez Notary Public",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Notary public",
+    "address": "1605 Lockhart Ave, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "1605 Lockhart Ave",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 557-6184",
+    "phoneUnformatted": "+18635576184",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1193105,
+      "lng": -81.6187282
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ0X4GCT5z3YgR98vlcwkFXfk",
+    "categories": [
+      "Notary public"
+    ],
+    "fid": "0x88dd733e09067ed1:0xf95d050973e5cbf7",
+    "cid": "17968523626435431415",
+    "reviewsCount": 34,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 32
+    },
+    "imagesCount": 19,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.920Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 12 PM, 1 to 4 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 12 PM, 1 to 3:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 12 PM, 1 to 4 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 12 PM, 1 to 3:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 12 PM, 1 to 4 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Identifies as Latino-owned": true
+        },
+        {
+          "Identifies as women-owned": true
+        }
+      ],
+      "Service options": [
+        {
+          "Online appointments": false
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        }
+      ],
+      "Parking": [
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Milly%20Gutierrez%20Notary%20Public&query_place_id=ChIJ0X4GCT5z3YgR98vlcwkFXfk",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "attorney Haines City FL",
+    "language": "en",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPrdOVO3DVFa2EutKRkTEarPGrwZD1i0H6npD0uxbkP6ymsQR-2-JGObpu9OVfCZULS91sq8LUi0Sr0J8OJ6ZvhcvRKsSfqd4_BV1IjPkP8rGRd2kw5JG0-3F-jnG9qnSmxZkc=w408-h306-k-no",
+    "kgmid": "/g/11r9gsg5pb",
+    "businessProfileId": "8796831695533788311"
+  },
+  {
+    "title": "Spine & Injury Associates | Top-Rated Chiropractor in Haines City, Florida",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Chiropractor",
+    "address": "49F5+8C, 35894 US-27, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "49F5+8C, 35894 US-27",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://spineandinjuryfl.com/",
+    "phone": "(407) 434-7246",
+    "phoneUnformatted": "+14074347246",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1233137,
+      "lng": -81.641357
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJkfZqra1z3YgRgjfovMELMr4",
+    "categories": [
+      "Chiropractor",
+      "Doctor",
+      "Medical Center",
+      "Medical clinic",
+      "Pain management physician"
+    ],
+    "fid": "0x88dd73adad6af691:0xbe320bc1bce83782",
+    "cid": "13705029542767769474",
+    "reviewsCount": 6,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 4
+    },
+    "imagesCount": 13,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:36.920Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        },
+        {
+          "Assistive hearing loop": false
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        },
+        {
+          "Restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        },
+        {
+          "NFC mobile payments": true
+        },
+        {
+          "Credit cards": true
+        }
+      ],
+      "Children": [
+        {
+          "Nursing room": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "Free street parking": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Spine%20%26%20Injury%20Associates%20%7C%20Top-Rated%20Chiropractor%20in%20Haines%20City%2C%20Florida&query_place_id=ChIJkfZqra1z3YgRgjfovMELMr4",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Haines%20City%20FL/@28.0735371638208,-81.5585774378184,16z?hl=en",
+    "searchString": "attorney Haines City FL",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMuJVvyGd1KBhSTqctf3dNbNe9GX4R1Lyd-opCywFHS1BQE6iMraLQ3jUf0NmXXq1PB8dLHzz4xzKc0hWwYul0CDOCP7Jdr3Wvil8cZR-aSqAYM6PBE69zf_AdvzQYDGsmTw_mN8CHpdxA=w408-h544-k-no",
+    "kgmid": "/g/11t8h0j6_b",
+    "businessProfileId": "4427971744384149482"
+  },
+  {
+    "title": "Dynamic Pro Advisors",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "651 E Main St Ste 3, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "651 E Main St Ste 3",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://dynamicproadvisors.net/",
+    "phone": "(689) 318-1362",
+    "phoneUnformatted": "+16893181362",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1078565,
+      "lng": -81.62605
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJMXLM9HRz3YgRIFqj9EAXnhM",
+    "categories": [
+      "Legal services",
+      "Company registry",
+      "Divorce service",
+      "Fax service",
+      "Insurance agency",
+      "Tax preparation",
+      "Notary public",
+      "Tax consultant",
+      "Translation service"
+    ],
+    "fid": "0x88dd7374f4cc7231:0x139e1740f4a35a20",
+    "cid": "1413592900790606368",
+    "reviewsCount": 34,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 33
+    },
+    "imagesCount": 10,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:41.208Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 3 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 3 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 3 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 3 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Online service hours": [
+        {
+          "day": "Monday",
+          "hours": "4–7:30 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "4–7:30 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Thursday",
+          "hours": "4–7:30 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "4–7:30 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM–2 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM–12 PM"
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": false,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dynamic%20Pro%20Advisors&query_place_id=ChIJMXLM9HRz3YgRIFqj9EAXnhM",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Haines%20City%20FL/@28.088684559872,-81.59290961260612,16z?hl=en",
+    "searchString": "attorney Haines City FL",
+    "language": "en",
+    "rank": 17,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmzPtLoQcp-QxtbXSQSSMz9oIQnyweIyTHN19mkWWERUi65ZO4OfbQmIM0sfKPkn9ZYHpRU8Bor3BHUi0C7f3xgf2aJLw-QWvrOBZ4l9TmYSViUL7iD8A7LJu8gGknowMoE7uRizRgaRWK9=w408-h306-k-no",
+    "kgmid": "/g/11m5prwhyw",
+    "businessProfileId": "14872659213492635741"
+  },
+  {
+    "title": "Ridgeview Accounting & Tax",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Accountant",
+    "address": "608 Ingraham Ave, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "608 Ingraham Ave",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://ridgeview-tax.com/",
+    "phone": "(863) 224-8492",
+    "phoneUnformatted": "+18632248492",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1098113,
+      "lng": -81.6264292
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJl-IxOxpz3YgR0pusayfGUVY",
+    "categories": [
+      "Accountant"
+    ],
+    "fid": "0x88dd731a3b31e297:0x5651c6276bac9bd2",
+    "cid": "6219970432987864018",
+    "reviewsCount": 174,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 172
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:44.038Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Ridgeview%20Accounting%20%26%20Tax&query_place_id=ChIJl-IxOxpz3YgR0pusayfGUVY",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Haines%20City%20FL/@28.088684559872,-81.59290961260612,16z?hl=en",
+    "searchString": "law firm Haines City FL",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=_d39LA84NEtsGNCeRnyZ8w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=10.24502&pitch=0&thumbfov=100",
+    "kgmid": "/g/11j8vw7r96",
+    "businessProfileId": "249622972305322239"
+  },
+  {
+    "title": "Amscot - The Money Superstore",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Loan agency",
+    "address": "35938 US-27, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "35938 US-27",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.amscot.com/location/branch-175/35938-us-27-haines-city-fl-33844/?utm_source=GMB&utm_medium=organic&utm_content=branch175&utm_campaign=website_button",
+    "phone": "(863) 422-6828",
+    "phoneUnformatted": "+18634226828",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1244605,
+      "lng": -81.6413894
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ313XWc5z3YgRv_IR1yFP4cI",
+    "categories": [
+      "Loan agency",
+      "Check cashing service",
+      "Money order service",
+      "Money transfer service",
+      "Notary public"
+    ],
+    "fid": "0x88dd73ce59d75ddf:0xc2e14f21d711f2bf",
+    "cid": "14042592119878709951",
+    "reviewsCount": 363,
+    "reviewsDistribution": {
+      "oneStar": 41,
+      "twoStar": 5,
+      "threeStar": 2,
+      "fourStar": 7,
+      "fiveStar": 308
+    },
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:48.918Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Amscot%20-%20The%20Money%20Superstore&query_place_id=ChIJ313XWc5z3YgRv_IR1yFP4cI",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Haines%20City%20FL/@28.164421540128007,-81.6444078747877,16z?hl=en",
+    "searchString": "law firm Haines City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNP82Zp8P1Bi04RjoOqLoyO7qwb9n2PP-h8y_aK1q0dVtm1I1cUSuAozBt-YBjhASfYsBKVUyZBrF6ixPp5R1ZRmsIaEOinYxhBpSvyR3pdi1nDNCIj54c8xGZCHP9oLiDeaDk=w408-h306-k-no",
+    "kgmid": "/g/1tdpbf3c",
+    "businessProfileId": "18052102352104692693"
+  },
+  {
+    "title": "Hill Orthopedic and Podiatry Center",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Orthopedic surgeon",
+    "address": "108 Park Pl Blvd Ste c, Davenport, FL 33837",
+    "neighborhood": null,
+    "street": "108 Park Pl Blvd Ste c",
+    "city": "Davenport",
+    "postalCode": "33837",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://hillorthopediccenter.com/",
+    "phone": "(407) 447-7001",
+    "phoneUnformatted": "+14074477001",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1838121,
+      "lng": -81.6417999
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJwZAdlgNx3YgRCr4icMDCo9c",
+    "categories": [
+      "Orthopedic surgeon",
+      "Chiropractor",
+      "Orthopedic clinic",
+      "Pain management physician",
+      "Pediatric orthopedic surgeon",
+      "Personal injury attorney",
+      "Physical therapy clinic",
+      "Podiatrist",
+      "Sports medicine physician"
+    ],
+    "fid": "0x88dd7103961d90c1:0xd7a3c2c07022be0a",
+    "cid": "15538477271129177610",
+    "reviewsCount": 210,
+    "reviewsDistribution": {
+      "oneStar": 26,
+      "twoStar": 6,
+      "threeStar": 3,
+      "fourStar": 7,
+      "fiveStar": 168
+    },
+    "imagesCount": 26,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:49.161Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        },
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        },
+        {
+          "NFC mobile payments": true
+        },
+        {
+          "Credit cards": true
+        }
+      ],
+      "Children": [
+        {
+          "Nursing room": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Hill%20Orthopedic%20and%20Podiatry%20Center&query_place_id=ChIJwZAdlgNx3YgRCr4icMDCo9c",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Haines%20City%20FL/@28.164421540128007,-81.6444078747877,16z?hl=en",
+    "searchString": "attorney Haines City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk0EHZk7w8VD4fsGLtHWugF-tFplcBsp9bPMOAEzvTwaMMNO_6sk6Bf3y-xDqR1kQOIqFA8XjaZr_C37Qt8q7Z4T4_SyldEGtb187vb-lrb4aTJ5ntdIldeSlPLJXkjOawi5PWlbrliI4Dz=w408-h544-k-no",
+    "kgmid": "/g/1tfwqshk",
+    "businessProfileId": "11183117126333470655"
+  },
+  {
+    "title": "Haines City Head Spa",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Spa",
+    "address": "3212 Nadine Rd suite 4, Davenport, FL 33837",
+    "neighborhood": null,
+    "street": "3212 Nadine Rd suite 4",
+    "city": "Davenport",
+    "postalCode": "33837",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://hainescityheadspa.com/",
+    "phone": "(863) 326-2211",
+    "phoneUnformatted": "+18633262211",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.156512,
+      "lng": -81.638223
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJzzcN8-Nx3YgRCPJeaNSx2x4",
+    "categories": [
+      "Spa"
+    ],
+    "fid": "0x88dd71e3f30d37cf:0x1edbb1d4685ef208",
+    "cid": "2223566366879707656",
+    "reviewsCount": 31,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 31
+    },
+    "imagesCount": 9,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:56.099Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "9:30 AM to 12 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Offerings": [
+        {
+          "Skincare treatments": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        },
+        {
+          "Restaurant": false
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        },
+        {
+          "NFC mobile payments": true
+        }
+      ],
+      "Children": [
+        {
+          "Good for kids": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Haines%20City%20Head%20Spa&query_place_id=ChIJzzcN8-Nx3YgRCPJeaNSx2x4",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.164421540128007,-81.6444078747877,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 14,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkqm8ShpaNq-LviowgQ7PU8HwnWBkSG6-EOes3RKZQ-uG-H4VE7xb_TLSYzyR89kgWYm97Gxj8MxDMieyTKiOTAACr_y2LZZX4Q6dn01CqEPH8GI_iW2sM5D6kulj8QkkbdvDHBx-_dhGw=w408-h710-k-no",
+    "kgmid": "/g/11yhhcgmjr",
+    "businessProfileId": "4444613983011902570"
+  },
+  {
+    "title": "Mehaffey's Jewelry",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Jeweler",
+    "address": "1095 Old Polk City Rd #1, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "1095 Old Polk City Rd #1",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://mehaffeysjewelry.com/",
+    "phone": "(863) 422-1477",
+    "phoneUnformatted": "+18634221477",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1211062,
+      "lng": -81.6411413
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJJ3Rars5z3YgR-hagycbbfGI",
+    "categories": [
+      "Jeweler"
+    ],
+    "fid": "0x88dd73ceae5a7427:0x627cdbc6c9a016fa",
+    "cid": "7096788759661778682",
+    "reviewsCount": 305,
+    "reviewsDistribution": {
+      "oneStar": 19,
+      "twoStar": 6,
+      "threeStar": 4,
+      "fourStar": 24,
+      "fiveStar": 252
+    },
+    "imagesCount": 485,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:04.273Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 5:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 5:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 5:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 5:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 5:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Small business": true
+        }
+      ],
+      "Service options": [
+        {
+          "In-store pickup": true
+        },
+        {
+          "Onsite services": true
+        },
+        {
+          "Delivery": false
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Offerings": [
+        {
+          "Installation service": true
+        },
+        {
+          "Repair services": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Quick visit": true
+        }
+      ],
+      "Payments": [
+        {
+          "Checks": true
+        },
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        },
+        {
+          "NFC mobile payments": true
+        },
+        {
+          "Credit cards": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mehaffey's%20Jewelry&query_place_id=ChIJJ3Rars5z3YgR-hagycbbfGI",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Haines%20City%20FL/@28.1104839,-81.66128565,17z?hl=en",
+    "searchString": "law firm Haines City FL",
+    "language": "en",
+    "rank": 21,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlmRI9cmapqzr5EEDpR6cfL6ht5iE1fFqYRAqBfGx4maOzwwCta7KkYdMYnD5MzFqfLvCV8NM9ENwx_To0gzcxefY_pUyaFrH7MQVCkhZRrv7EfPsk30P8rtNsPwKBpAtpdW42wSCsKkxc=w409-h240-k-no",
+    "kgmid": "/g/1vg_dn_9",
+    "businessProfileId": "3221899981920412161"
+  },
+  {
+    "title": "Lopez Melodie",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "19 N 6th St, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "19 N 6th St",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 422-1020",
+    "phoneUnformatted": "+18634221020",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.107357,
+      "lng": -81.626356
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJgbBt5L1z3YgRRyIfdXcPa14",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd73bde46db081:0x5e6b0f77751f2247",
+    "cid": "6803548667813765703",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:12.994Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lopez%20Melodie&query_place_id=ChIJgbBt5L1z3YgRRyIfdXcPa14",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.1038319559232,-81.61007569999998,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=93PFTjhUmZZXvcoGY0SE0g&cb_client=search.gws-prod.grass&w=408&h=240&yaw=91.41506&pitch=0&thumbfov=100",
+    "kgmid": "/g/126180p0n",
+    "businessProfileId": null
+  },
+  {
+    "title": "Lenin's Barber Studio",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Barber shop",
+    "address": "36 S 5th St, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "36 S 5th St",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://leninsbarberstudio.netlify.app/",
+    "phone": "(863) 968-4099",
+    "phoneUnformatted": "+18639684099",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1054116,
+      "lng": -81.627669
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlV5gSVVz3YgRzdYqUdMeKW4",
+    "categories": [
+      "Barber shop"
+    ],
+    "fid": "0x88dd735549605e95:0x6e291ed3512ad6cd",
+    "cid": "7937909711165904589",
+    "reviewsCount": 117,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 116
+    },
+    "imagesCount": 69,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:12.994Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "8:30 AM to 12 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Identifies as Latino-owned": true
+        }
+      ],
+      "Service options": [
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Offerings": [
+        {
+          "Beverages": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        },
+        {
+          "Restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        },
+        {
+          "Accepts walk-ins": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        },
+        {
+          "Credit cards": true
+        }
+      ],
+      "Children": [
+        {
+          "Good for kids": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "Free street parking": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lenin's%20Barber%20Studio&query_place_id=ChIJlV5gSVVz3YgRzdYqUdMeKW4",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.1038319559232,-81.61007569999998,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmP20BdJSLG-3AdzzK11MHGfmJci8xTuTUY3X2kMHaTbwJNOvW7VJUNEKGeootiWBs6KoGCe451L5OTe68U1wATVgCQJPlWlNyBj4qoJIe7lu_sbj8PHn7vSkoIAQAtUdjP3sZUAPiy-Erey=w408-h544-k-no",
+    "kgmid": "/g/11kjymprdn",
+    "businessProfileId": "16707227172921637077"
+  },
+  {
+    "title": "RC Tax Service",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tax preparation service",
+    "address": "436 U.S. Hwy 17-92 N, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "436 U.S. Hwy 17-92 N",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://rctaxservice.com/",
+    "phone": "(863) 421-0617",
+    "phoneUnformatted": "+18634210617",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1130773,
+      "lng": -81.618385
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJMQULC85z3YgRD3Vaj8OopBI",
+    "categories": [
+      "Tax preparation service",
+      "Accountant",
+      "Bookkeeping service",
+      "Company registry",
+      "Consultant",
+      "Notary public",
+      "Payroll service",
+      "Tax consultant"
+    ],
+    "fid": "0x88dd73ce0b0b0531:0x12a4a8c38f5a750f",
+    "cid": "1343384146740409615",
+    "reviewsCount": 426,
+    "reviewsDistribution": {
+      "oneStar": 5,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 4,
+      "fiveStar": 416
+    },
+    "imagesCount": 46,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:13.364Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=RC%20Tax%20Service&query_place_id=ChIJMQULC85z3YgRD3Vaj8OopBI",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Haines%20City%20FL/@28.1038319559232,-81.61007569999998,16z?hl=en",
+    "searchString": "attorney Haines City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNrZva5iiGUkrEBTihh7fexo1PbmIGNxy8VOdTsUe6oYIOVBxZjP0O1gnU_UQQOohkUOw-oG0NPjsEUlCws_UFobXxdkZBmy3DbTWUB6hnmOv8hfU-ZqkxpRCNRRbxLTMUENJLn=w408-h326-k-no",
+    "kgmid": "/g/1260fbh2n",
+    "businessProfileId": "3695753403172788711"
+  },
+  {
+    "title": "Feddeler III Carl A",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "Haines City, FL 33844",
+    "neighborhood": null,
+    "street": null,
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.all-injuries.com/",
+    "phone": "(863) 688-7766",
+    "phoneUnformatted": "+18636887766",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.114221,
+      "lng": -81.6177964
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJxXCv3Oxz3YgRn_Fo-Z5uKgo",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd73ecdcaf70c5:0xa2a6e9ef968f19f",
+    "cid": "732519518469419423",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:17.246Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Feddeler%20III%20Carl%20A&query_place_id=ChIJxXCv3Oxz3YgRn_Fo-Z5uKgo",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.118979351974403,-81.61007569999998,16z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=sPWFp6biE8BZgFDsQsRchA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=75.198166&pitch=0&thumbfov=100",
+    "kgmid": "/g/125_s817b",
+    "businessProfileId": null
+  },
+  {
+    "title": "Campbell & Associates",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Accountant",
+    "address": "105 McKay Dr, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "105 McKay Dr",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 421-6822",
+    "phoneUnformatted": "+18634216822",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.1067866,
+      "lng": -81.6359093
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJQ9Wmcrpz3YgRng9WMmA3_64",
+    "categories": [
+      "Accountant"
+    ],
+    "fid": "0x88dd73ba72a6d543:0xaeff376032560f9e",
+    "cid": "12609858367961567134",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:37.045Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Campbell%20%26%20Associates&query_place_id=ChIJQ9Wmcrpz3YgRng9WMmA3_64",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Haines%20City%20FL/@28.118979351974403,-81.66157396218156,16z?hl=en",
+    "searchString": "law firm Haines City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jwloHPhWm5pGxTesV5xThQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=79.004234&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tfc2v51",
+    "businessProfileId": null
+  },
+  {
+    "title": "Florida Injury Centers",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Medical clinic",
+    "address": "82 Maxcy Plaza Cir Ste A, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "82 Maxcy Plaza Cir Ste A",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.floridainjurycenters.com/car-accident-injury-clinics/haines-city-medical-injury-center/",
+    "phone": "(866) 402-4250",
+    "phoneUnformatted": "+18664024250",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1263707,
+      "lng": -81.6414162
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJtRSjMnxz3YgRuwWAxcKBidM",
+    "categories": [
+      "Medical clinic",
+      "Chiropractor",
+      "Doctor",
+      "Medical group",
+      "Osteopath",
+      "Pain control clinic",
+      "Pain management physician",
+      "Physical rehabilitation center",
+      "Physical therapy clinic",
+      "Urgent care center"
+    ],
+    "fid": "0x88dd737c32a314b5:0xd38981c2c58005bb",
+    "cid": "15242857087349294523",
+    "reviewsCount": null,
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:48.157Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        },
+        {
+          "NFC mobile payments": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Florida%20Injury%20Centers&query_place_id=ChIJtRSjMnxz3YgRuwWAxcKBidM",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Haines%20City%20FL/@28.1038319559232,-81.66157396218156,16z?hl=en",
+    "searchString": "attorney Haines City FL",
+    "language": "en",
+    "rank": 17,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmO_wdZmMb-a9n6s8zTZOGXb6Xf6nVXKQ3AuEG9Uabl11hTtGSRfLKO8nlLDRx1UoYhVNbkFWUMgSX4hcQmL_ZzRAoDKHLqdr56EJdrlyHn8rmVhh1BGLhh7VBU9vNZ87TxQKpd-AHK2UxOB=w408-h302-k-no",
+    "kgmid": "/g/11y8lhxtvg",
+    "businessProfileId": "582686294789682186"
+  },
+  {
+    "title": "Advance America",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Loan agency",
+    "address": "517 U.S. Hwy 17-92 W #4, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "517 U.S. Hwy 17-92 W #4",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.advanceamerica.net/store-locations/florida/517-us-hwy-17-92-w-4-haines-city-33844?utm_source=soci-gmb&utm_medium=local&utm_content=570&utm_campaign=website",
+    "phone": "(863) 421-6697",
+    "phoneUnformatted": "+18634216697",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.105243,
+      "lng": -81.637423
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ0e5CA14m_ogR5Fq3f2snpBI",
+    "categories": [
+      "Loan agency",
+      "Financial institution",
+      "Money order service",
+      "Money transfer service"
+    ],
+    "fid": "0x88fe265e0342eed1:0x12a4276b7fb75ae4",
+    "cid": "1343241931520957156",
+    "reviewsCount": 792,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 6,
+      "fiveStar": 784
+    },
+    "imagesCount": 21,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:56:15.327Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Online service hours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Advance%20America&query_place_id=ChIJ0e5CA14m_ogR5Fq3f2snpBI",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Haines%20City%20FL/@28.088684559872,-81.61007569999998,16z?hl=en",
+    "searchString": "attorney Haines City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl-vmjuhT9iJFzOLnhzDHJRc1laCp4ZhOUQcdfGpdBRa9XFMoGtR277idN0SlV0D3NlS9jOKcwGjOryD4RjErg3fa_xTc8xRrlRQ0N5g352Jh8RGcwe9eg6TNlRsTuhAYzq8SjAoOSGMzP1=w426-h240-k-no",
+    "kgmid": "/g/1vsps9ff",
+    "businessProfileId": "1839312010648685553"
+  },
+  {
+    "title": "Haines City Dental",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Dentist",
+    "address": "35914 US-27 #2b, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "35914 US-27 #2b",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.hainescitydental.com/",
+    "phone": "(863) 422-8338",
+    "phoneUnformatted": "+18634228338",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1236545,
+      "lng": -81.6415102
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJLZjge85z3YgRDnn0rAPjZzY",
+    "categories": [
+      "Dentist"
+    ],
+    "fid": "0x88dd73ce7be0982d:0x3667e303acf4790e",
+    "cid": "3920351605575416078",
+    "reviewsCount": 134,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 2,
+      "threeStar": 1,
+      "fourStar": 3,
+      "fiveStar": 120
+    },
+    "imagesCount": 29,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:56:15.399Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "7 AM to 3 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "7 AM to 3 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "7 AM to 3 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "7 AM to 3 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": false,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Haines%20City%20Dental&query_place_id=ChIJLZjge85z3YgRDnn0rAPjZzY",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Haines%20City%20FL/@28.118979351974403,-81.66157396218156,16z?hl=en",
+    "searchString": "attorney Haines City FL",
+    "language": "en",
+    "rank": 17,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMZ__jouVnyT3NlI2jFvcgqZ20qBBEOumVnjHpk7RipzLNpMH0tHILtqP8cnRSmzDCfNDTZJXPRRfI-Tad_tGi5sh4hXcEbfEy87DM7VX3S_7GxIEpJbS4R_dYD2P0I-2hNyZNq=w408-h873-k-no",
+    "kgmid": "/g/1tr18cq7",
+    "businessProfileId": "16228131519271035411"
+  },
+  {
+    "title": "Healing Hands Massage Therapy",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Massage therapist",
+    "address": "35973 US-27, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "35973 US-27",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://healinghands-haines.lovable.app/",
+    "phone": "(863) 438-4090",
+    "phoneUnformatted": "+18634384090",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1222907,
+      "lng": -81.6379145
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlcxymNBz3YgRbcqfqTRl0oA",
+    "categories": [
+      "Massage therapist"
+    ],
+    "fid": "0x88dd73d09872cc95:0x80d26534a99fca6d",
+    "cid": "9282593058822539885",
+    "reviewsCount": 227,
+    "reviewsDistribution": {
+      "oneStar": 22,
+      "twoStar": 5,
+      "threeStar": 2,
+      "fourStar": 6,
+      "fiveStar": 192
+    },
+    "imagesCount": 44,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:56:34.952Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 9 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 9 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 9 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 9 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 9 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 9 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "10 AM to 9 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Healing%20Hands%20Massage%20Therapy&query_place_id=ChIJlcxymNBz3YgRbcqfqTRl0oA",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Haines%20City%20FL/@28.118979351974403,-81.6444078747877,16z?hl=en",
+    "searchString": "law firm Haines City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmPGx_Lkoka17O99BxwOQSzZMtwoXAbHbihOZgXbPQTig-3fJWwqvy8fVXwNRK6Mbr0YWT9WtL-ibPQXXI8EcSv5qEec_kwBLDKCH78QN38maP6uIZ1YsiRfFNQn7B5EgCh_n-c=w408-h305-k-no",
+    "kgmid": "/g/11t7trs917",
+    "businessProfileId": "9618429817001500790"
+  },
+  {
+    "title": "Lake Eva Community Park",
+    "subTitle": null,
+    "description": "Grassy lakeside park offering a playground & aquatics center with an outdoor swimming pool.",
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Park",
+    "address": "555 Ledwith Ave, Haines City, FL 33844",
+    "neighborhood": null,
+    "street": "555 Ledwith Ave",
+    "city": "Haines City",
+    "postalCode": "33844",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://hainescity.com/172/Parks-Recreation-Department",
+    "phone": "(863) 421-3700",
+    "phoneUnformatted": "+18634213700",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.1016133,
+      "lng": -81.6267502
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJw_n9taJz3YgRyPm7W5iZgzk",
+    "categories": [
+      "Park",
+      "Tourist attraction"
+    ],
+    "fid": "0x88dd73a2b5fdf9c3:0x398399985bbbf9c8",
+    "cid": "4144324961764112840",
+    "reviewsCount": 3888,
+    "reviewsDistribution": {
+      "oneStar": 39,
+      "twoStar": 22,
+      "threeStar": 144,
+      "fourStar": 579,
+      "fiveStar": 3104
+    },
+    "imagesCount": 5808,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:57:06.416Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lake%20Eva%20Community%20Park&query_place_id=ChIJw_n9taJz3YgRyPm7W5iZgzk",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Haines%20City%20FL/@28.1002977,-81.6235874,16.82175718027394z?hl=en",
+    "searchString": "lawyer Haines City FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkEtJnyatefaa-mPsUCsgf7BcFjanmSoqVj9aBGR2Y0MaUb9eSKgjNKKouBg1Gvh5FXs6VlGAYmGg4dmATGSFmQQ2s8Qp39BWilxf_6FHFC6AcYcxqXM898ziz3vmiFKHUuXUdCWg=w408-h306-k-no",
+    "kgmid": "/g/1q2wlmxwx",
+    "businessProfileId": "6606107729296665714"
+  }
+]

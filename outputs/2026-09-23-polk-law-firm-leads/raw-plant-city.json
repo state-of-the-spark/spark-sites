@@ -1,0 +1,3655 @@
+[
+  {
+    "title": "Byrd & Barnhill, P.L.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "206 N Collins St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "206 N Collins St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://byrd-law.com/",
+    "phone": "(813) 759-1224",
+    "phoneUnformatted": "+18137591224",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0168295,
+      "lng": -82.1233078
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJtWW2a4M23YgRwAEi1VldrF0",
+    "categories": [
+      "Attorney",
+      "Criminal justice attorney",
+      "Estate litigation attorney",
+      "Estate planning attorney",
+      "Family law attorney",
+      "General practice attorney",
+      "Probate attorney",
+      "Real estate attorney"
+    ],
+    "fid": "0x88dd36836bb665b5:0x5dac5d59d52201c0",
+    "cid": "6749872581930779072",
+    "reviewsCount": 118,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 109
+    },
+    "imagesCount": 9,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.552Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        },
+        {
+          "Restroom": false
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Byrd%20%26%20Barnhill%2C%20P.L.&query_place_id=ChIJtWW2a4M23YgRwAEi1VldrF0",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMMUaBRE_1zgFwUa26FzyvmEO4fsoUeb_wRzt1fHej6CpJU8wIvVBGMHFe2DyzbMa2-myNGMzX296SEY08AA43gn0UnwPjBoPht7_8OHq701Q2icP1bz-XODT19-0i3UFCAVfJ2=w408-h501-k-no",
+    "kgmid": "/g/1tf3_56t",
+    "businessProfileId": "7428001357038787932"
+  },
+  {
+    "title": "Rogo Law - Plant City, FL",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "1303 N Wheeler St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1303 N Wheeler St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.rogolaw.net/contact-us/plant-city-fl/",
+    "phone": "(813) 707-1488",
+    "phoneUnformatted": "+18137071488",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0268779,
+      "lng": -82.125934
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJA1ntS4033YgRFONOqlOAqXg",
+    "categories": [
+      "Law firm"
+    ],
+    "fid": "0x88dd378d4bed5903:0x78a98053aa4ee314",
+    "cid": "8694621652443390740",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.554Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Rogo%20Law%20-%20Plant%20City%2C%20FL&query_place_id=ChIJA1ntS4033YgRFONOqlOAqXg",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=AUqb7LEUSUc8Px0ALTEb_w&cb_client=search.gws-prod.grass&w=408&h=240&yaw=275.01196&pitch=0&thumbfov=100",
+    "kgmid": "/g/11y3pwbks4",
+    "businessProfileId": "10079558669941834205"
+  },
+  {
+    "title": "Heritage Law Group",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "120 N Collins St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "120 N Collins St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.heritagelawyers.com/",
+    "phone": "(813) 655-1801",
+    "phoneUnformatted": "+18136551801",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0161962,
+      "lng": -82.1232906
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJn8r2Q4M23YgRcOIgL_i7LgM",
+    "categories": [
+      "Law firm",
+      "Attorney",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd368343f6ca9f:0x32ebbf82f20e270",
+    "cid": "229327305659441776",
+    "reviewsCount": 402,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 402
+    },
+    "imagesCount": 6,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.554Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Heritage%20Law%20Group&query_place_id=ChIJn8r2Q4M23YgRcOIgL_i7LgM",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNQwTR-1AMFD3JoGqjez1AyB4N09R9YlYdSb5V1QIsN1Y91N84GqzlOV64U7iuzC0DQrEgM7GCj0mLto3W8COg5mav32A7MvVAmOyxCgGfVYrB2cZ-T5cT1Ut_VUcV-b0RnjjdZ=w408-h452-k-no",
+    "kgmid": "/g/11cfcd_pm",
+    "businessProfileId": "16273108877312075753"
+  },
+  {
+    "title": "The Tancredo Law Firm, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bankruptcy attorney",
+    "address": "1306 Thonotosassa Rd, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1306 Thonotosassa Rd",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://tancredolaw.com/",
+    "phone": "(813) 659-3612",
+    "phoneUnformatted": "+18136593612",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0159095,
+      "lng": -82.1363802
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJk75Xhy803YgReFNnfc0xtdE",
+    "categories": [
+      "Bankruptcy attorney",
+      "Family law attorney",
+      "Law firm",
+      "Tax attorney"
+    ],
+    "fid": "0x88dd342f8757be93:0xd1b531cd7d675378",
+    "cid": "15111038883353547640",
+    "reviewsCount": 55,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 2,
+      "fiveStar": 50
+    },
+    "imagesCount": 38,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.554Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 12 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Tancredo%20Law%20Firm%2C%20P.A.&query_place_id=ChIJk75Xhy803YgReFNnfc0xtdE",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmN1KAm2YP5PpwZl-3KWjEmZ4-uWUS2vSyVK41_-hJ7_WyDViQ9TTZ-6Psw7GoLRsWt_hjws-Tl2r2TzEhDacmKMdbpx6v26m0Q-v3ehibhM9xx3gntK3WU0bE3aFInE1kwYPyJaRQ=w408-h445-k-no",
+    "kgmid": "/g/1w456dzj",
+    "businessProfileId": "13168219340884460084"
+  },
+  {
+    "title": "Trinkle Redman P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Real estate attorney",
+    "address": "121 N Collins St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "121 N Collins St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://trinkle-law.com/",
+    "phone": "(813) 752-6133",
+    "phoneUnformatted": "+18137526133",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0159653,
+      "lng": -82.1236805
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJU95yR4M23YgR0DLKr6yC_PI",
+    "categories": [
+      "Real estate attorney",
+      "Estate planning attorney"
+    ],
+    "fid": "0x88dd36834772de53:0xf2fc82acafca32d0",
+    "cid": "17509013129504895696",
+    "reviewsCount": 16,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 4,
+      "fiveStar": 11
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.554Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Trinkle%20Redman%20P.A.&query_place_id=ChIJU95yR4M23YgR0DLKr6yC_PI",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNL0vkWNkNqElNzypHZbdp8bxAx4FCEPYF51QEH7t-Y8VjY8gTps3f9YlExBbSsM5wpuNL6oillLuNvVjbGV3yXmUgbeCb9Dl9d-2OuhRs-XJKS6EeCsWJCmCjJxSw9KxNUn9o=w408-h655-k-no",
+    "kgmid": "/g/1tfm7gcd",
+    "businessProfileId": "11951519690266191648"
+  },
+  {
+    "title": "Sperry Law Firm",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "General practice attorney",
+    "address": "1607 S Alexander St Ste 101, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1607 S Alexander St Ste 101",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.sperrylaw-pc.com/",
+    "phone": "(813) 754-3030",
+    "phoneUnformatted": "+18137543030",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.000238,
+      "lng": -82.1386389
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ3fAU1iQ03YgRd87bWb_9nUI",
+    "categories": [
+      "General practice attorney",
+      "Business attorney",
+      "Civil law attorney",
+      "Estate planning attorney",
+      "Law firm",
+      "Real estate attorney"
+    ],
+    "fid": "0x88dd3424d614f0dd:0x429dfdbf59dbce77",
+    "cid": "4800271776134975095",
+    "reviewsCount": 16,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 16
+    },
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.554Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Onsite services": true
+        },
+        {
+          "Online appointments": false
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        },
+        {
+          "Assistive hearing loop": false
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        },
+        {
+          "Restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Sperry%20Law%20Firm&query_place_id=ChIJ3fAU1iQ03YgRd87bWb_9nUI",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMv9EHx-LC7bjm4_YHoeYANtFBIijVDCN6eBG83L4ZtMBQKIkI-k0utRDIQfuPWW4DTfIw_lCJ8fvzBRnNx4z_s1qz_ofopGiaBhhji3kaUtLOoc-Y3UJEgITnY17YbDuQXej3K=w408-h272-k-no",
+    "kgmid": "/g/1tdkyh8x",
+    "businessProfileId": "4445921153334658513"
+  },
+  {
+    "title": "Ronald S. Tulin, PL",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Criminal justice attorney",
+    "address": "3126 FL-574, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "3126 FL-574",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 717-9400",
+    "phoneUnformatted": "+18137179400",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0107716,
+      "lng": -82.1556967
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJhbW8WoQ23YgRI539EyVZdwQ",
+    "categories": [
+      "Criminal justice attorney"
+    ],
+    "fid": "0x88dd36845abcb585:0x477592513fd9d23",
+    "cid": "321823914164329763",
+    "reviewsCount": 49,
+    "reviewsDistribution": {
+      "oneStar": 7,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 2,
+      "fiveStar": 40
+    },
+    "imagesCount": 11,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Ronald%20S.%20Tulin%2C%20PL&query_place_id=ChIJhbW8WoQ23YgRI539EyVZdwQ",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOGt_d6ngYWJiS-IDH78DtZMZlrgkwQBnjrkpapIYD9P9Jelc-zNaEt-xFnE4S-iP4L9zgMmAXGGP4y3PdhZK_lLwlM-e8fMZZv5VPqQPW3CMkR4qoTRlzsA9cA41BXUBy2hGfs=w426-h240-k-no",
+    "kgmid": "/g/1v_z9qfp",
+    "businessProfileId": "3646571549777120961"
+  },
+  {
+    "title": "State Attorney's Office - Plant City",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "301 N Michigan Ave # 1022, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "301 N Michigan Ave # 1022",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.sao13th.com/",
+    "phone": "(813) 757-3890",
+    "phoneUnformatted": "+18137573890",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.0176996,
+      "lng": -82.1201866
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ8QvbV4Q23YgROvwZHzaFsZM",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd368457db0bf1:0x93b185361f19fc3a",
+    "cid": "10642433861949717562",
+    "reviewsCount": 3,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 2
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=State%20Attorney's%20Office%20-%20Plant%20City&query_place_id=ChIJ8QvbV4Q23YgROvwZHzaFsZM",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=vlS-p_zNfvHuG1sKjr7iWA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=259.46832&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tdkhgf3",
+    "businessProfileId": null
+  },
+  {
+    "title": "Makar Law Firm - Immigration Attorneys",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Immigration attorney",
+    "address": "1403 Reynolds St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1403 Reynolds St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.themakarlawfirm.com/",
+    "phone": "(813) 756-6600",
+    "phoneUnformatted": "+18137566600",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0146413,
+      "lng": -82.1372295
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJpUcPppw23YgRL45DyoqdzWU",
+    "categories": [
+      "Immigration attorney"
+    ],
+    "fid": "0x88dd369ca60f47a5:0x65cd9d8aca438e2f",
+    "cid": "7335692587480878639",
+    "reviewsCount": 101,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 1,
+      "fiveStar": 97
+    },
+    "imagesCount": 20,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "8 AM to 5 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Makar%20Law%20Firm%20-%20Immigration%20Attorneys&query_place_id=ChIJpUcPppw23YgRL45DyoqdzWU",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMFOoGqKUnl9RQsoLguKH3H9U50U-DsmdZ6Z8Z5HnmwPVHdXZrVqrozRn9YyMgjXVSi1A77lbu2cLErSSISLw0yG3O0VxGWK1q5azthKATDTtjCIHEHU-bHPhdvfPe8ayWTl9U=w408-h544-k-no",
+    "kgmid": "/g/11c5_0sq50",
+    "businessProfileId": "4157831077706850660"
+  },
+  {
+    "title": "The Law Office of Keith Will Wynne, Esq.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bankruptcy attorney",
+    "address": "1001 E Baker St Ste 101, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1001 E Baker St Ste 101",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 567-5894",
+    "phoneUnformatted": "+18135675894",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0180799,
+      "lng": -82.1156026
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ6QOCc4823YgR_zLeqUpps8M",
+    "categories": [
+      "Bankruptcy attorney",
+      "Criminal justice attorney",
+      "Divorce lawyer",
+      "Family law attorney",
+      "Foreclosure service",
+      "General practice attorney"
+    ],
+    "fid": "0x88dd368f738203e9:0xc3b3694aa9de32ff",
+    "cid": "14101730627625562879",
+    "reviewsCount": 11,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 8
+    },
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Law%20Office%20of%20Keith%20Will%20Wynne%2C%20Esq.&query_place_id=ChIJ6QOCc4823YgR_zLeqUpps8M",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMhKXleHK3qEfLByv2cbN9tBN8sOt9Q2zvFcJjzJen-YK3_TCuTvxVKgN7YfqxKdu1Q0AFNDXMsmaQBcQP5gjrZvQiqcJnafsayne65W2Knenb2g7KZoxurjho81ttYSUSdDDWj=w426-h240-k-no",
+    "kgmid": "/g/1tsyqlgt",
+    "businessProfileId": "4293112246852444411"
+  },
+  {
+    "title": "Maranatha Law - Accident & Injury Lawyers",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "410 W Renfro St Ste D, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "410 W Renfro St Ste D",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://maranathalaw.com/plant-city/",
+    "phone": "(813) 686-2335",
+    "phoneUnformatted": "+18136862335",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0127859,
+      "lng": -82.1262071
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJk-oWkiQ33YgRGdXkqU4jEJ4",
+    "categories": [
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd37249216ea93:0x9e10234ea9e4d519",
+    "cid": "11389642278384751897",
+    "reviewsCount": 6,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 6
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Maranatha%20Law%20-%20Accident%20%26%20Injury%20Lawyers&query_place_id=ChIJk-oWkiQ33YgRGdXkqU4jEJ4",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOB4vz9P5ugg-xmDEti637JS9woRsr6ch4luvVXBXAbVRZ-3R0BazMNIieKVgtCTIos1-Kuy_Ux3mkyOkG7-DuutIsphuFsDbEBk7wi0nTJ8OqmpqJF9xSCgqP5IQtPwAdab9fUUPSvNP0Z=w408-h408-k-no",
+    "kgmid": "/g/11yjmph0jw",
+    "businessProfileId": "9875840304437773084"
+  },
+  {
+    "title": "Dwyer, John A",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "506 N Alexander St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "506 N Alexander St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 754-1198",
+    "phoneUnformatted": "+18137541198",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0189637,
+      "lng": -82.1376462
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.2,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJK6_qNC403YgR6LJ5UkRit_w",
+    "categories": [
+      "Law firm",
+      "Bankruptcy attorney",
+      "Estate planning attorney",
+      "Family law attorney",
+      "Attorney",
+      "Tax attorney"
+    ],
+    "fid": "0x88dd342e34eaaf2b:0xfcb762445279b2e8",
+    "cid": "18210131663876895464",
+    "reviewsCount": 10,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 8
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dwyer%2C%20John%20A&query_place_id=ChIJK6_qNC403YgR6LJ5UkRit_w",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 12,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=cApLCj8sTGhofOiEwD7flw&cb_client=search.gws-prod.grass&w=408&h=240&yaw=70.336426&pitch=0.75488263&thumbfov=100",
+    "kgmid": "/g/1tvm3kz7",
+    "businessProfileId": "13056974690250718031"
+  },
+  {
+    "title": "Charles S. White PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Real estate attorney",
+    "address": "110 E Reynolds St #900, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "110 E Reynolds St #900",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.cswatty.com/",
+    "phone": "(813) 752-6155",
+    "phoneUnformatted": "+18137526155",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0166224,
+      "lng": -82.1229287
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJf9z4NoM23YgR6cf7YlL_eUM",
+    "categories": [
+      "Real estate attorney",
+      "Business attorney",
+      "Elder law attorney",
+      "Family law attorney",
+      "Law firm",
+      "Attorney",
+      "Legal services",
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd368336f8dc7f:0x4379ff5262fbc7e9",
+    "cid": "4862198002036230121",
+    "reviewsCount": 11,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 1,
+      "threeStar": 1,
+      "fourStar": 1,
+      "fiveStar": 6
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Charles%20S.%20White%20PA&query_place_id=ChIJf9z4NoM23YgR6cf7YlL_eUM",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 13,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMXi6PBSqe_ZlNQ8ZbyfwollIuA_0lazJU8KkQlBQ59Iku75nFedW8eGeo76Xdhixvs0LzMHnAIAAvFsSO0ggbrr3h6DDupk_p9OC8BDocstbn3WPBdVZHOI-NfBV_cePqai10k=w408-h544-k-no",
+    "kgmid": "/g/11c6s5pkb9",
+    "businessProfileId": "9879862543811556254"
+  },
+  {
+    "title": "Evans Stephen L",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "104 N Thomas St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "104 N Thomas St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 752-1795",
+    "phoneUnformatted": "+18137521795",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.015372,
+      "lng": -82.125552
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJy2IV04I23YgRyLQZD5Xq-Tg",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd3682d31562cb:0x38f9ea950f19b4c8",
+    "cid": "4105570461249287368",
+    "reviewsCount": 8,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 7
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Evans%20Stephen%20L&query_place_id=ChIJy2IV04I23YgRyLQZD5Xq-Tg",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 14,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=IKnZODlseQUfDUxJsBLhSw&cb_client=search.gws-prod.grass&w=408&h=240&yaw=110.01942&pitch=0&thumbfov=100",
+    "kgmid": "/g/1vr1xfvp",
+    "businessProfileId": null
+  },
+  {
+    "title": "Ruballos Law Firm, PLLC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Immigration attorney",
+    "address": "1805 James L Redman Pkwy Ste 201, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1805 James L Redman Pkwy Ste 201",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 822-4552",
+    "phoneUnformatted": "+18138224552",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.995611,
+      "lng": -82.1221631
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJa2asOiI33YgR4-LEjyB2EfY",
+    "categories": [
+      "Immigration attorney",
+      "Legal services"
+    ],
+    "fid": "0x88dd37223aac666b:0xf61176208fc4e2e3",
+    "cid": "17731083090157429475",
+    "reviewsCount": 12,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 12
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 3 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Identifies as Latino-owned": true
+        },
+        {
+          "Identifies as women-owned": true
+        }
+      ],
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Ruballos%20Law%20Firm%2C%20PLLC&query_place_id=ChIJa2asOiI33YgR4-LEjyB2EfY",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=J4TIlTCApZQ5JmK8Nf60VA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=196.90063&pitch=0&thumbfov=100",
+    "kgmid": "/g/11xybtkf4h",
+    "businessProfileId": "5557597534990121144"
+  },
+  {
+    "title": "Law Office of Herman and Herman",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Estate planning attorney",
+    "address": "607 S Alexander St Ste 111, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "607 S Alexander St Ste 111",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.hermanandhermanesq.com/?utm_source=google-local&utm_medium=organic&utm_campaign=3513",
+    "phone": "(813) 704-6892",
+    "phoneUnformatted": "+18137046892",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0089807,
+      "lng": -82.1383255
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJc0G9_Rk03YgRflUjMHTtMKE",
+    "categories": [
+      "Estate planning attorney",
+      "Business development service",
+      "Business to business service",
+      "Law firm",
+      "Attorney",
+      "Legal services"
+    ],
+    "fid": "0x88dd3419fdbd4173:0xa130ed743023557e",
+    "cid": "11615044522268120446",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 7,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.555Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 12 AM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 12 AM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 12 AM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 12 AM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 12 AM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 12 AM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "9 AM to 12 AM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Law%20Office%20of%20Herman%20and%20Herman&query_place_id=ChIJc0G9_Rk03YgRflUjMHTtMKE",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 16,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNzhYhg7KWTin-1mk7wn-cd9g83qEPh8kqaBBksK8qK2auhyMnJt5jbV2vJuladwaXKPqhvWDcxpExZvjS0jYG9TNCJ_kQ9WY7YIXqyVJ17OZU5cCu1vurZ6q388W4K9b6eH546=w426-h240-k-no",
+    "kgmid": "/g/1pwftkfz5",
+    "businessProfileId": "2033367450501936462"
+  },
+  {
+    "title": "Cynthia M. Petitjean, P.L.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tax attorney",
+    "address": "1306 Thonotosassa Rd, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1306 Thonotosassa Rd",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://plantcityattorney.com/",
+    "phone": "(813) 659-2020",
+    "phoneUnformatted": "+18136592020",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.0159231,
+      "lng": -82.1363639
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJtbT8fSU03YgRCUmQNKS83kg",
+    "categories": [
+      "Tax attorney",
+      "Certified public accountant"
+    ],
+    "fid": "0x88dd34257dfcb4b5:0x48debca434904909",
+    "cid": "5250841629003106569",
+    "reviewsCount": 4,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 4
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.556Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "9 AM to 5 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Cynthia%20M.%20Petitjean%2C%20P.L.&query_place_id=ChIJtbT8fSU03YgRCUmQNKS83kg",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 17,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOur0O6k4V11i4utXxCVeJrkesU-sROgG5YvZMRZGp5jcA0kPcOIQAYR48a-Y0H9CZlElwOOQZkVe-y_bw33Dj1tadURwNeqDGxkRkyp_Qaa9jx5Z6t8JVSvObS1w7JRjjyu26LYg=w408-h306-k-no",
+    "kgmid": "/g/126294j_b",
+    "businessProfileId": null
+  },
+  {
+    "title": "Bay Area Legal Services",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "1503 S Alexander St Ste 103, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1503 S Alexander St Ste 103",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.bals.org/",
+    "phone": "(800) 625-2257",
+    "phoneUnformatted": "+18006252257",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0015632,
+      "lng": -82.1386995
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJA9hvqLE23YgRZOW4pHVOJi8",
+    "categories": [
+      "Legal services",
+      "Law firm",
+      "Non-profit organization"
+    ],
+    "fid": "0x88dd36b1a86fd803:0x2f264e75a4b8e564",
+    "cid": "3397489236079338852",
+    "reviewsCount": 16,
+    "reviewsDistribution": {
+      "oneStar": 5,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 1,
+      "fiveStar": 9
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.556Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 4:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bay%20Area%20Legal%20Services&query_place_id=ChIJA9hvqLE23YgRZOW4pHVOJi8",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmM8-HM87DVYyYpPg078koeExBWXkV3YGUrcq9Zo-w5mbey4kz88Yf6F7DuZY2sIgsIQyDXtRfjlTHFvqBLtHlA9_pv40LpfMzwkxBjXfgFVxLAmOri1Q1c0VpLY0F3mRF0HJo20=w408-h272-k-no",
+    "kgmid": "/g/1tf_j6nt",
+    "businessProfileId": "5340035717216728162"
+  },
+  {
+    "title": "The Law Office of David Heller, PLLC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "1805 James L Redman Pkwy Ste 201, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1805 James L Redman Pkwy Ste 201",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://davidhellerlaw.com/",
+    "phone": "(813) 652-0013",
+    "phoneUnformatted": "+18136520013",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.995611,
+      "lng": -82.1221631
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJeS4gJ7E33YgRAoQ2wHvgu10",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd37b127202e79:0x5dbbe07bc0368402",
+    "cid": "6754238888282588162",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.556Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Law%20Office%20of%20David%20Heller%2C%20PLLC&query_place_id=ChIJeS4gJ7E33YgRAoQ2wHvgu10",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=J4TIlTCApZQ5JmK8Nf60VA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=196.90063&pitch=0&thumbfov=100",
+    "kgmid": "/g/11xcjbj_8g",
+    "businessProfileId": "8936714319241631582"
+  },
+  {
+    "title": "David H Galloway PA Attorney",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "506 N Alexander St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "506 N Alexander St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 754-3438",
+    "phoneUnformatted": "+18137543438",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.0189617,
+      "lng": -82.1376232
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJaeZmMy403YgR8JZgmL7aIbY",
+    "categories": [
+      "Family law attorney",
+      "Estate planning attorney",
+      "Attorney",
+      "Legal services",
+      "Personal injury attorney",
+      "Real estate attorney",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd342e3366e669:0xb621dabe986096f0",
+    "cid": "13124011301269444336",
+    "reviewsCount": 3,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 3
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.556Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=David%20H%20Galloway%20PA%20Attorney&query_place_id=ChIJaeZmMy403YgR8JZgmL7aIbY",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.063573490343995,-82.09560431718987,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Cepeau8Pn9kk0OTHzBG-AQ&cb_client=search.gws-prod.grass&w=408&h=240&yaw=84.078&pitch=0&thumbfov=100",
+    "kgmid": "/g/1262090wc",
+    "businessProfileId": null
+  },
+  {
+    "title": "Law Office of Rocio A. Perez-Lugo",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "1003 S Alexander St #1, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1003 S Alexander St #1",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 754-7835",
+    "phoneUnformatted": "+18137547835",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.0055959,
+      "lng": -82.1382813
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJBY18yCI03YgR8oUkOIOLu7w",
+    "categories": [
+      "Law firm",
+      "General contractor"
+    ],
+    "fid": "0x88dd3422c87c8d05:0xbcbb8b83382485f2",
+    "cid": "13599616895474238962",
+    "reviewsCount": 11,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 7
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:32.677Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 4:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Law%20Office%20of%20Rocio%20A.%20Perez-Lugo&query_place_id=ChIJBY18yCI03YgR8oUkOIOLu7w",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Plant%20City%20FL/@28.048411043562663,-82.09560431718987,16z?hl=en",
+    "searchString": "law firm Plant City FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=1XR-qY4GypT0SMHV-WIASg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=264.0647&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tqtbh17",
+    "businessProfileId": null
+  },
+  {
+    "title": "Jayson, Farthing, Skafidas & Wright, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "104 N Thomas St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "104 N Thomas St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.jfswlaw.com/",
+    "phone": "(877) 345-5379",
+    "phoneUnformatted": "+18773455379",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.015372,
+      "lng": -82.125552
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJy2IV04I23YgRjvSN30GVidA",
+    "categories": [
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd3682d31562cb:0xd0899541df8df48e",
+    "cid": "15026705741854405774",
+    "reviewsCount": null,
+    "imagesCount": 9,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:03.049Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Jayson%2C%20Farthing%2C%20Skafidas%20%26%20Wright%2C%20P.A.&query_place_id=ChIJy2IV04I23YgRjvSN30GVidA",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Plant%20City%20FL/@28.01808615,-82.11276983906328,16z?hl=en",
+    "searchString": "attorney Plant City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmN7q63xX8abd8J_6XejsreuSwLSclueFb-ubxIajTYGXE4YYt0wj0J5vzjxOoPLpFTAzuiCrlwvm6ijk4IPeEm1AxN6Hv78e3bjFmgWQAOjvHm514EErfLYpvzhGKhQNK1iABI=w408-h466-k-no",
+    "kgmid": "/g/11csbnljh0",
+    "businessProfileId": "6845303433505860471"
+  },
+  {
+    "title": "AGS Immigrant Center Inc",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Notary public",
+    "address": "410 W Renfro St Unit D, Office 7, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "410 W Renfro St Unit D, Office 7",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 481-7025",
+    "phoneUnformatted": "+18134817025",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0127859,
+      "lng": -82.1262071
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJXeldt_Q23YgRjs55rCGQDcM",
+    "categories": [
+      "Notary public"
+    ],
+    "fid": "0x88dd36f4b75de95d:0xc30d9021ac79ce8e",
+    "cid": "14055048486395170446",
+    "reviewsCount": 41,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 41
+    },
+    "imagesCount": 124,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:05.381Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "11 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=AGS%20Immigrant%20Center%20Inc&query_place_id=ChIJXeldt_Q23YgRjs55rCGQDcM",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@28.01808615,-82.11276983906328,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPAZ6VWBwOpjMyBZgsrLDHMRilFQgKFEdMl-H_TSch06D1Q0wQd6yuCfYuFJAQltZHUj0nu7TGhpx6EmLrMqvkp0kbJlWAu1obu5oWrt5iq_wVg8402GSwOKM5t59vdJpzKAt0i_Q=w408-h408-k-no",
+    "kgmid": "/g/11cmt38b2b",
+    "businessProfileId": "15674237558924516992"
+  },
+  {
+    "title": "Kinney Fernandez & Boire: Fernandez Marcus",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "1408 Reynolds St B, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1408 Reynolds St B",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://kfblaw.com/",
+    "phone": "(813) 757-1694",
+    "phoneUnformatted": "+18137571694",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.0150178,
+      "lng": -82.1375833
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJo9HwQiU03YgRsFJ-cQnj6XY",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd342542f0d1a3:0x76e9e309717e52b0",
+    "cid": "8568629395747394224",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 2
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:07.373Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Kinney%20Fernandez%20%26%20Boire%3A%20Fernandez%20Marcus&query_place_id=ChIJo9HwQiU03YgRsFJ-cQnj6XY",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Plant%20City%20FL/@28.01808615,-82.12993536093668,16z?hl=en",
+    "searchString": "attorney Plant City FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Icg5YuMFxFeShrDQv9skbA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=334.79916&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tggbslh",
+    "businessProfileId": null
+  },
+  {
+    "title": "Buchman Kenneth",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "City government office",
+    "address": "302 W Reynolds St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "302 W Reynolds St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 659-4242",
+    "phoneUnformatted": "+18136594242",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.0162604,
+      "lng": -82.125631
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJqdtk3YI23YgRsN_CMDfoUWA",
+    "categories": [
+      "City government office"
+    ],
+    "fid": "0x88dd3682dd64dba9:0x6051e83730c2dfb0",
+    "cid": "6940583824493567920",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:07.979Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Buchman%20Kenneth&query_place_id=ChIJqdtk3YI23YgRsN_CMDfoUWA",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Plant%20City%20FL/@28.01808615,-82.12993536093668,16z?hl=en",
+    "searchString": "attorney Plant City FL",
+    "language": "en",
+    "rank": 22,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=7VX87zr5K3FWgC8s-SjwVw&cb_client=search.gws-prod.grass&w=408&h=240&yaw=173.222&pitch=0&thumbfov=100",
+    "kgmid": "/g/1260tppp4",
+    "businessProfileId": null
+  },
+  {
+    "title": "Joseph J. Nolan, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "111 S Palmer St, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "111 S Palmer St",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.josephjnolanpa.com/contact.html",
+    "phone": "(813) 473-8120",
+    "phoneUnformatted": "+18134738120",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 28.014904,
+      "lng": -82.122486
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ_RBeqpw23YgRkv-CuqQPN9Q",
+    "categories": [
+      "Legal services"
+    ],
+    "fid": "0x88dd369caa5e10fd:0xd4370fa4ba82ff92",
+    "cid": "15291708259938008978",
+    "reviewsCount": null,
+    "imagesCount": 0,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:07.979Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Joseph%20J.%20Nolan%2C%20P.A.&query_place_id=ChIJ_RBeqpw23YgRkv-CuqQPN9Q",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Plant%20City%20FL/@28.01808615,-82.12993536093668,16z?hl=en",
+    "searchString": "attorney Plant City FL",
+    "language": "en",
+    "rank": 23,
+    "isAdvertisement": false,
+    "imageUrl": null,
+    "kgmid": "/g/11g0k17xsf",
+    "businessProfileId": null
+  },
+  {
+    "title": "Willy Mo Law: JMW",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "1409 Berryfest Pl, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1409 Berryfest Pl",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 719-6605",
+    "phoneUnformatted": "+18137196605",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0160847,
+      "lng": -82.1377017
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ8z8i5aM23YgRj42tH7OAG2o",
+    "categories": [
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd36a3e5223ff3:0x6a1b80b31fad8d8f",
+    "cid": "7645846299210517903",
+    "reviewsCount": 23,
+    "reviewsDistribution": {
+      "oneStar": 6,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 16
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:10.460Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Willy%20Mo%20Law%3A%20JMW&query_place_id=ChIJ8z8i5aM23YgRj42tH7OAG2o",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Plant%20City%20FL/@28.01808615,-82.12993536093668,16z?hl=en",
+    "searchString": "law firm Plant City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkyaCzxq6wFnbzmg4PXrSSR_8aSgCTI3iyXTfdubFkNPititla8HzyrDxg0GHOA7i2wIueCMAe2bKsDwsG27rsxWLK_6YlliDYB7_90AGW9uMQ7qGAQpKBC3Idx5mfrB1FSdMybFw=w426-h240-k-no",
+    "kgmid": "/g/1tf_1wwf",
+    "businessProfileId": "8315486450103495910"
+  },
+  {
+    "title": "KFB Law - Car Accident & Personal Injury Lawyers",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "1001 E Baker St #201c, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1001 E Baker St #201c",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://kfblaw.com/locations/plant-city-personal-injury-attorney/?utm_source=localsearch&utm_medium=organic&utm_campaign=googlemybusiness",
+    "phone": "(813) 705-7823",
+    "phoneUnformatted": "+18137057823",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 28.0180168,
+      "lng": -82.1157786
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJo9HwQiU03YgRY9C-RZbid3U",
+    "categories": [
+      "Law firm",
+      "Elder law attorney",
+      "Insurance attorney",
+      "Personal injury attorney",
+      "Attorney",
+      "Legal services"
+    ],
+    "fid": "0x88dd342542f0d1a3:0x7577e29645bed063",
+    "cid": "8464483159709241443",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 1
+    },
+    "imagesCount": 151,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:14.245Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=KFB%20Law%20-%20Car%20Accident%20%26%20Personal%20Injury%20Lawyers&query_place_id=ChIJo9HwQiU03YgRY9C-RZbid3U",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Plant%20City%20FL/@28.01808615,-82.11276983906328,16z?hl=en",
+    "searchString": "law firm Plant City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmN-koAGkKeaNHb5mxh13x6DtGBczvOvZGlecZxRdrrGpTid8EzxOEKZlueWPBbSO9Mjk0uZc8zkwyNa39-0k78gPwQG2Zx_nGdgsVINgP1xbuJjref4HKaKE1Ma33CydCBWBQY=w408-h272-k-no",
+    "kgmid": "/g/1262gmqld",
+    "businessProfileId": "18204742592013158912"
+  },
+  {
+    "title": "Conley Immigration Law Group, PLLC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Immigration attorney",
+    "address": "1805 James L Redman Pkwy Ste 201, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1805 James L Redman Pkwy Ste 201",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(813) 708-2910",
+    "phoneUnformatted": "+18137082910",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9955985,
+      "lng": -82.1221742
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJF4Nd5P833YgRicNzPizUmaM",
+    "categories": [
+      "Immigration attorney",
+      "Law firm",
+      "Attorney"
+    ],
+    "fid": "0x88dd37ffe45d8317:0xa399d42c3e73c389",
+    "cid": "11788686786110407561",
+    "reviewsCount": null,
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:25.366Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 3 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Conley%20Immigration%20Law%20Group%2C%20PLLC&query_place_id=ChIJF4Nd5P833YgRicNzPizUmaM",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Plant%20City%20FL/@27.987761256437334,-82.12993536093668,16z?hl=en",
+    "searchString": "lawyer Plant City FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=2Ei3DBnUxGfxYHRZTy6TDg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=169.20737&pitch=0&thumbfov=100",
+    "kgmid": "/g/11jb22vf2x",
+    "businessProfileId": "10223877226946340617"
+  },
+  {
+    "title": "Kevin L. Sullivan II.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "1805 James L Redman Pkwy Ste 201, Plant City, FL 33563",
+    "neighborhood": null,
+    "street": "1805 James L Redman Pkwy Ste 201",
+    "city": "Plant City",
+    "postalCode": "33563",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://lawkevin.com/",
+    "phone": "(813) 598-4868",
+    "phoneUnformatted": "+18135984868",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.995611,
+      "lng": -82.1221631
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJRW03RWY33YgRDYF_geKOT7c",
+    "categories": [
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd376645376d45:0xb74f8ee2817f810d",
+    "cid": "13208933335587324173",
+    "reviewsCount": 16,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 16
+    },
+    "imagesCount": 11,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:56:07.069Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Kevin%20L.%20Sullivan%20II.&query_place_id=ChIJRW03RWY33YgRDYF_geKOT7c",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Plant%20City%20FL/@27.987761256437334,-82.12993536093668,16z?hl=en",
+    "searchString": "law firm Plant City FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnmm_ffeaZ_qpWL66WhuzlDfmEstoWc_T8v-mrfBJy-VKMQ6ljcYNupaXuA5ePsPZPVkFegWNrQm-MjkfFbeS9hzjg-c5UKL1-fpQb-wqT6cW3cU_C8JY8vqu5vUcHiQ0wlbcxh=w510-h240-k-no",
+    "kgmid": "/g/11s7z_1mz4",
+    "businessProfileId": "5579881382766688424"
+  }
+]

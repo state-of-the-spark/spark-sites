@@ -1,0 +1,4608 @@
+[
+  {
+    "title": "Weaver Loveless Law",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "240 E Park Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "240 E Park Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.welovelaw.com/",
+    "phone": "(863) 676-6000",
+    "phoneUnformatted": "+18636766000",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9024609,
+      "lng": -81.5873081
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJi0O3UycJ3YgRTAg4yviW_Pc",
+    "categories": [
+      "Law firm",
+      "Estate planning attorney",
+      "Attorney",
+      "Legal services"
+    ],
+    "fid": "0x88dd092753b7438b:0xf7fc96f8ca38084c",
+    "cid": "17869323416788011084",
+    "reviewsCount": 96,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 3,
+      "fiveStar": 92
+    },
+    "imagesCount": 7,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.884Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 12 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Weaver%20Loveless%20Law&query_place_id=ChIJi0O3UycJ3YgRTAg4yviW_Pc",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmP6i0r3_gr0-HJF_C-zGpzKWwvT1iR3wPER3UQo7Nn8EFe0Lr_3QrIZFKRGyhE6orFdGmms_FyCLLzHSh0MSCCdHAJczNFQhAkHKYMcuvFGwAR93jphqEyZwiqWkZ--yoZL-m0Z=w408-h443-k-no",
+    "kgmid": "/g/1tf43s58",
+    "businessProfileId": "6528383627748247224"
+  },
+  {
+    "title": "Tonya Stewart Law PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "299 E Stuart Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "299 E Stuart Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://tonyastewartlaw.com/",
+    "phone": "(863) 279-4473",
+    "phoneUnformatted": "+18632794473",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9024974,
+      "lng": -81.5873469
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJjTPhW24J3YgRDPLK5IHisws",
+    "categories": [
+      "Law firm",
+      "Criminal justice attorney",
+      "Personal injury attorney",
+      "Attorney"
+    ],
+    "fid": "0x88dd096e5be1338d:0xbb3e281e4caf20c",
+    "cid": "843266602765578764",
+    "reviewsCount": 49,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 48
+    },
+    "imagesCount": 19,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.886Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 12 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Identifies as Black-owned": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Tonya%20Stewart%20Law%20PA&query_place_id=ChIJjTPhW24J3YgRDPLK5IHisws",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmP2o4vXFZUsgzWN-P_sWN9CVKkJCYJoQQxDVfnApSqSIgQjVbUkYqPyYGnU-dd7uAQ49Hf60X6uNJrokbrqpyu1Bt5ES6bz8EleJmkLW38CTCV3IXPCMmaNjY3ICDvAa4zCtVNwM61__rDm=w408-h252-k-no",
+    "kgmid": "/g/11h0cz09wz",
+    "businessProfileId": "7958976571630807197"
+  },
+  {
+    "title": "Ouellette Law Firm PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Personal injury attorney",
+    "address": "151 E Central Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "151 E Central Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 676-2455",
+    "phoneUnformatted": "+18636762455",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9014349,
+      "lng": -81.5884161
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJDesBWScJ3YgRTYq8G93w3rc",
+    "categories": [
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd09275901eb0d:0xb7def0dd1bbc8a4d",
+    "cid": "13249291986214357581",
+    "reviewsCount": 24,
+    "reviewsDistribution": {
+      "oneStar": 7,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 17
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.887Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Ouellette%20Law%20Firm%20PA&query_place_id=ChIJDesBWScJ3YgRTYq8G93w3rc",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmM0AcFlEN3dDeaOKU2Zy966kQnls1l3qEc_Xk5Ouzd72FLZMxm_8QZjLtN9j2IVcmbxEMEunmZuqKVRDeUIy5Xdxr4xix3ik4TxhR7wBzXytw7bN4LVd6TgOBrE0ndRMnno2cA=w513-h240-k-no",
+    "kgmid": "/g/1tg4m5lm",
+    "businessProfileId": null
+  },
+  {
+    "title": "Sara Jones Law, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "922 FL-60, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "922 FL-60",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://joneslawjustice.com/",
+    "phone": "(863) 455-4811",
+    "phoneUnformatted": "+18634554811",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.893669,
+      "lng": -81.5714377
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJM-3_wOQI3YgReGoO9250NLw",
+    "categories": [
+      "Law firm",
+      "Criminal justice attorney",
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd08e4c0ffed33:0xbc34746ef70e6a78",
+    "cid": "13561592397859547768",
+    "reviewsCount": 147,
+    "reviewsDistribution": {
+      "oneStar": 15,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 1,
+      "fiveStar": 130
+    },
+    "imagesCount": 16,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.887Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Sara%20Jones%20Law%2C%20P.A.&query_place_id=ChIJM-3_wOQI3YgReGoO9250NLw",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPCyiaUgkD8qUZaKljGzP9w4VHSibZzzIOPseB5xjpwsB9aoU3J593woWkl_8ezY9J02sE1XkoWqAImJ_J9jQCkDDJLRejCxQiNwVtPWXiOfLjJr1UwuFT_o5ZiLTPShxu3FZ1ddQ=w408-h408-k-no",
+    "kgmid": "/g/11f15m4kdn",
+    "businessProfileId": "9419151692523496376"
+  },
+  {
+    "title": "D. Andrew Hunt P. A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Estate planning attorney",
+    "address": "225 E Park Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "225 E Park Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://dahuntlaw.com/",
+    "phone": "(863) 676-1423",
+    "phoneUnformatted": "+18636761423",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9028469,
+      "lng": -81.5876804
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJOaCeTycJ3YgRw8CsYvOL21s",
+    "categories": [
+      "Estate planning attorney",
+      "Probate attorney"
+    ],
+    "fid": "0x88dd09274f9ea039:0x5bdb8bf362acc0c3",
+    "cid": "6619037954799878339",
+    "reviewsCount": 27,
+    "reviewsDistribution": {
+      "oneStar": 10,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 3,
+      "fiveStar": 14
+    },
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.887Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 4 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=D.%20Andrew%20Hunt%20P.%20A.&query_place_id=ChIJOaCeTycJ3YgRw8CsYvOL21s",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMjiBpscJ9uAQOzRgDiLkw02xdKta3Oo6NlnSrgaFCScEJy57L_gHrRS0BU2blorwWESUXXvCPyhqSmCofOfvHgA8zEaPmwaGUBcBl2C1QziDf9ZMmcMqY00Gg7r5HKRanWhLSs=w408-h873-k-no",
+    "kgmid": "/g/1tm13dvy",
+    "businessProfileId": "1086612591764667710"
+  },
+  {
+    "title": "Law Offices of A.M. Stuckey, P.A",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "General practice attorney",
+    "address": "37 W Central Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "37 W Central Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 676-6412",
+    "phoneUnformatted": "+18636766412",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9011355,
+      "lng": -81.5905589
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJifCkqWsJ3YgRhyyMeqCz8nA",
+    "categories": [
+      "General practice attorney",
+      "Personal injury attorney"
+    ],
+    "fid": "0x88dd096ba9a4f089:0x70f2b3a07a8c2c87",
+    "cid": "8138764978444053639",
+    "reviewsCount": 13,
+    "reviewsDistribution": {
+      "oneStar": 5,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 8
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.887Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 12 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Law%20Offices%20of%20A.M.%20Stuckey%2C%20P.A&query_place_id=ChIJifCkqWsJ3YgRhyyMeqCz8nA",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=4SMDCyjq8fQFCWWyXZkCyA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=168.14284&pitch=0&thumbfov=100",
+    "kgmid": "/g/11j6fw576q",
+    "businessProfileId": null
+  },
+  {
+    "title": "The Kohl Law Firm",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "229 FL-60, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "229 FL-60",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 676-6800",
+    "phoneUnformatted": "+18636766800",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8942542,
+      "lng": -81.5857802
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJUXvDzNAI3YgRqVz1NfPysLg",
+    "categories": [
+      "Legal services",
+      "Bankruptcy attorney",
+      "Bankruptcy service",
+      "Criminal justice attorney",
+      "Divorce lawyer",
+      "Divorce service",
+      "Family law attorney",
+      "Foreclosure service",
+      "Attorney",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd08d0ccc37b51:0xb8b0f2f335f55ca9",
+    "cid": "13308404025276062889",
+    "reviewsCount": 9,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 8
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.888Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 4 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Kohl%20Law%20Firm&query_place_id=ChIJUXvDzNAI3YgRqVz1NfPysLg",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=FblF2FZWybz7HfZv2ad7Ig&cb_client=search.gws-prod.grass&w=408&h=240&yaw=347.38715&pitch=0&thumbfov=100",
+    "kgmid": "/g/1wfvng4z",
+    "businessProfileId": null
+  },
+  {
+    "title": "JAY MCCLENDON, P.A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "219 E Central Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "219 E Central Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://jaymcclendon.com/",
+    "phone": "(863) 232-5200",
+    "phoneUnformatted": "+18632325200",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.90147,
+      "lng": -81.5874371
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJm9uartgI3YgRXlZRisyDeNE",
+    "categories": [
+      "Law firm"
+    ],
+    "fid": "0x88dd08d8ae9adb9b:0xd17883cc8a51565e",
+    "cid": "15093959065649370718",
+    "reviewsCount": 18,
+    "reviewsDistribution": {
+      "oneStar": 7,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 10
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.888Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=JAY%20MCCLENDON%2C%20P.A.&query_place_id=ChIJm9uartgI3YgRXlZRisyDeNE",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPf8BxlCHb-EcJ3BCbx7okOVQx8xomq4UZv7suLX-Bknu9YYNUEpZRpmyPRRv3hP9WjzGsiagxre7uI5ppljTSo2_56iC5I756et40-VUoYo9BHqHKgb_BqzBDzznjNBcMjTCQL=w408-h240-k-no-pi-0-ya0-ro-0-fo100",
+    "kgmid": "/g/11b6g9k555",
+    "businessProfileId": "13347494711232731133"
+  },
+  {
+    "title": "Rosa Irizarry Immigration Law",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Immigration attorney",
+    "address": "100 W Stuart Ave 3rd Floor, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "100 W Stuart Ave 3rd Floor",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://irizarrylawfirm.com/contact/",
+    "phone": "(863) 274-6585",
+    "phoneUnformatted": "+18632746585",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9016903,
+      "lng": -81.5900458
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJAVKPF8myHk0RwfpIvF5u6eQ",
+    "categories": [
+      "Immigration attorney"
+    ],
+    "fid": "0x4d1eb2c9178f5201:0xe4e96e5ebc48fac1",
+    "cid": "16494836463386032833",
+    "reviewsCount": 10,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 9
+    },
+    "imagesCount": 8,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.888Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Rosa%20Irizarry%20Immigration%20Law&query_place_id=ChIJAVKPF8myHk0RwfpIvF5u6eQ",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMAV4KMrn0oWDDYAhrP8kR3c8K-Syj3PwTfIR5IljAc3mtn4eVt591Q0YUC-fARE6c7nBCqbgV2E985qnyG-eCMoGnGW02LyRJ-dblp65k0ZG8lVvtkLd4SGtadgFWH2w10Nc5jA-TLUSck=w408-h474-k-no",
+    "kgmid": "/g/11wj294cpr",
+    "businessProfileId": "15967760226117562708"
+  },
+  {
+    "title": "Elizabeth A Stewart Pa: Stewart Elizabeth A",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Family law attorney",
+    "address": "2 N 1st St #100, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "2 N 1st St #100",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 676-4525",
+    "phoneUnformatted": "+18636764525",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.901527,
+      "lng": -81.5900474
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJf35jfNgI3YgRJHqfRSp8cLg",
+    "categories": [
+      "Family law attorney"
+    ],
+    "fid": "0x88dd08d87c637e7f:0xb8707c2a459f7a24",
+    "cid": "13290259021368883748",
+    "reviewsCount": 12,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 11
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.888Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 4 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 4 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 4 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 4 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 12 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Elizabeth%20A%20Stewart%20Pa%3A%20Stewart%20Elizabeth%20A&query_place_id=ChIJf35jfNgI3YgRJHqfRSp8cLg",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=XC5ssd8N3-BBE_rg4DDLAA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=269.54993&pitch=0&thumbfov=100",
+    "kgmid": "/g/1vzn6cgd",
+    "businessProfileId": null
+  },
+  {
+    "title": "Lilly & Brown, LLP",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "815 FL-60 Ste b, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "815 FL-60 Ste b",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.lillybrownlaw.com/?utm_source=GMB&utm_medium=organic&utm_campaign=LakeWales",
+    "phone": "(863) 676-1991",
+    "phoneUnformatted": "+18636761991",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8943281,
+      "lng": -81.5737421
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJAQAAACQJ3YgRSjZf38SVPAU",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd092400000001:0x53c95c4df5f364a",
+    "cid": "377341141585966666",
+    "reviewsCount": 25,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 25
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.888Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lilly%20%26%20Brown%2C%20LLP&query_place_id=ChIJAQAAACQJ3YgRSjZf38SVPAU",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOLxK_e_31yzPHLXpgrVTD6cZYIP4nD2AKbhAfw6bs7KszmUp7Aa3s5QQIV88Z7vrzD7tBHZWiDxiv8WINvRX_MHUPLixL5bbAVdjQF3lUYKiaT-T4_86nqJWz9t7ZakaHxQZBb=w426-h240-k-no",
+    "kgmid": "/g/1260p3hsc",
+    "businessProfileId": "5423598484434761896"
+  },
+  {
+    "title": "Howell & Thornhill - Lake Wales",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "2 S 1st St Ste 211, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "2 S 1st St Ste 211",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://howellthornhill.com/office-locations/howell-thornhill-lake-wales/?utm_source=gbp&utm_medium=organic&utm_campaign=gmb-website-lake-wales",
+    "phone": "(863) 293-3166",
+    "phoneUnformatted": "+18632933166",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9014343,
+      "lng": -81.5900143
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJK-qMX94I3YgRG2Ff8O6Q8pM",
+    "categories": [
+      "Law firm",
+      "Civil law attorney",
+      "General practice attorney",
+      "Insurance attorney",
+      "Personal injury attorney",
+      "Attorney",
+      "Legal services",
+      "Trial attorney"
+    ],
+    "fid": "0x88dd08de5f8cea2b:0x93f290eef05f611b",
+    "cid": "10660742623848784155",
+    "reviewsCount": 8,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 8
+    },
+    "imagesCount": 37,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.889Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Online service hours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Identifies as Asian-owned": true
+        },
+        {
+          "Identifies as veteran-owned": true
+        },
+        {
+          "Identifies as women-owned": true
+        }
+      ],
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        },
+        {
+          "Restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Howell%20%26%20Thornhill%20-%20Lake%20Wales&query_place_id=ChIJK-qMX94I3YgRG2Ff8O6Q8pM",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 12,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPWLwYUJOsfcLZsbjjj9FKbtncuUI0joTA2RZPlUIUgaI2VeCHcPwybO0MVc8piVL63-fX35HzY4NwuWGGNrZawWdIyWO8WY5y8Ax34Z0bGo-KIv8BNVly06J70dpInsavs7Bu03oyuNiY=w503-h240-k-no",
+    "kgmid": "/g/1td7cz8f",
+    "businessProfileId": "10230193044303171599"
+  },
+  {
+    "title": "Dykxhoorn Law Firm, P. A.",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": null,
+    "address": "225 E Stuart Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "225 E Stuart Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9020777,
+      "lng": -81.5877285
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJbUaLVycJ3YgRHC7Ky8jMF-k",
+    "categories": [],
+    "fid": "0x88dd0927578b466d:0xe917ccc8cbca2e1c",
+    "cid": "16796118498086104604",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 2
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.889Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dykxhoorn%20Law%20Firm%2C%20P.%20A.&query_place_id=ChIJbUaLVycJ3YgRHC7Ky8jMF-k",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 13,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=-8LPcjZxH_1afWw2Duf3Vg&cb_client=search.gws-prod.grass&w=408&h=240&yaw=344.79047&pitch=2.56814&thumbfov=100",
+    "kgmid": "/g/11wwsj3dhx",
+    "businessProfileId": null
+  },
+  {
+    "title": "Myers III C B",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": null,
+    "city": "Lake Wales",
+    "postalCode": null,
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 679-5337",
+    "phoneUnformatted": "+18636795337",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.901744,
+      "lng": -81.587995
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlUfqptgI3YgRWHcHG47Y4bM",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd08d8a6ea4795:0xb3e1d88e1b077758",
+    "cid": "12961879307399427928",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.889Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Myers%20III%20C%20B&query_place_id=ChIJlUfqptgI3YgRWHcHG47Y4bM",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 14,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=0p33er6iwCORMUdXFrqx8w&cb_client=search.gws-prod.grass&w=408&h=240&yaw=81.79324&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tj5rk0t",
+    "businessProfileId": null
+  },
+  {
+    "title": "Michael T. Gallaher",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Civil law attorney",
+    "address": "100 W Stuart Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "100 W Stuart Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.petersonmyers.com/",
+    "phone": "(863) 676-7611",
+    "phoneUnformatted": "+18636767611",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9016903,
+      "lng": -81.5900458
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJf35jfNgI3YgRelsUIglggc4",
+    "categories": [
+      "Civil law attorney",
+      "Attorney"
+    ],
+    "fid": "0x88dd08d87c637e7f:0xce81600922145b7a",
+    "cid": "14880280236151561082",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.889Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Michael%20T.%20Gallaher&query_place_id=ChIJf35jfNgI3YgRelsUIglggc4",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=klRTcGAxAT5WROyC5HqhbQ&cb_client=search.gws-prod.grass&w=408&h=240&yaw=187.80977&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tmqmlkp",
+    "businessProfileId": null
+  },
+  {
+    "title": "Mc Kinley Law Firm",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "33 W Service Road 60, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "33 W Service Road 60",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.mckinleylaw.net/",
+    "phone": "(863) 578-5951",
+    "phoneUnformatted": "+18635785951",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.907758,
+      "lng": -81.5870604
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJq6qqqh4J3YgRvbmh95zsbjs",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd091eaaaaaaab:0x3b6eec9cf7a1b9bd",
+    "cid": "4282620454589544893",
+    "reviewsCount": 4,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 2
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.889Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mc%20Kinley%20Law%20Firm&query_place_id=ChIJq6qqqh4J3YgRvbmh95zsbjs",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 16,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=BMQdeh0VIMidWzZYMwf2Ig&cb_client=search.gws-prod.grass&w=408&h=240&yaw=191.12349&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tflypyc",
+    "businessProfileId": null
+  },
+  {
+    "title": "McKinley Law Firm",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Law firm",
+    "address": "33 FL-60, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "33 FL-60",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.mckinleylaw.net/",
+    "phone": "(863) 678-9776",
+    "phoneUnformatted": "+18636789776",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.895719,
+      "lng": -81.5909899
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJP-e-u_gI3YgRw2DXpkIl63I",
+    "categories": [
+      "Law firm"
+    ],
+    "fid": "0x88dd08f8bbbee73f:0x72eb2542a6d760c3",
+    "cid": "8280753308047990979",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 2
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.889Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=McKinley%20Law%20Firm&query_place_id=ChIJP-e-u_gI3YgRw2DXpkIl63I",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 17,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMqAqZL4iu_kPmzWEIFRtpQ3iBLtlfOob-Xow_O8dFWoFGoaRUYTV8id4QssKC5p9Rr86B8sUce7dNmFi_C0slDXjSOPDW71c7K8dyQLca8W9CVfvjlKnULmOincqIHF90ACsjX=w513-h240-k-no",
+    "kgmid": "/g/1w0r0ql8",
+    "businessProfileId": null
+  },
+  {
+    "title": "Albert C. Galloway, Jr., PA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "116 E Stuart Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "116 E Stuart Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.acgpa.net/",
+    "phone": "(863) 679-5333",
+    "phoneUnformatted": "+18636795333",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.90174,
+      "lng": -81.589061
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlUfqptgI3YgRq1hicuSWQGI",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd08d8a6ea4795:0x624096e4726258ab",
+    "cid": "7079824522142177451",
+    "reviewsCount": 3,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.889Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Albert%20C.%20Galloway%2C%20Jr.%2C%20PA&query_place_id=ChIJlUfqptgI3YgRq1hicuSWQGI",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=cz9kzbo1At040feFYTzTJg&cb_client=search.gws-prod.grass&w=408&h=240&yaw=186.65504&pitch=0&thumbfov=100",
+    "kgmid": "/g/1v_z9qd_",
+    "businessProfileId": null
+  },
+  {
+    "title": "Duke Samuel E",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "100 S Scenic Hwy #107, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "100 S Scenic Hwy #107",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 676-9461",
+    "phoneUnformatted": "+18636769461",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8998334,
+      "lng": -81.5859853
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJIYCdPN8I3YgRdvghu-pOc5Y",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd08df3c9d8021:0x96734eeabb21f876",
+    "cid": "10841095498079795318",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 2
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:37.889Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Duke%20Samuel%20E&query_place_id=ChIJIYCdPN8I3YgRdvghu-pOc5Y",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=kx540CT4ULoejC0d8jzHrA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=239.63219&pitch=0&thumbfov=100",
+    "kgmid": "/g/1v6qjf92",
+    "businessProfileId": null
+  },
+  {
+    "title": "DOCUMENT PREPS INC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Legal services",
+    "address": "318 S Scenic Hwy #104, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "318 S Scenic Hwy #104",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 271-2100",
+    "phoneUnformatted": "+18632712100",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8974746,
+      "lng": -81.5848461
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJx79cyksJ3YgRHfbu-WlPhKA",
+    "categories": [
+      "Legal services"
+    ],
+    "fid": "0x88dd094bca5cbfc7:0xa0844f69f9eef61d",
+    "cid": "11566457059577624093",
+    "reviewsCount": 3,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 2
+    },
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:38.772Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=DOCUMENT%20PREPS%20INC&query_place_id=ChIJx79cyksJ3YgRHfbu-WlPhKA",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.53585223683663,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Tl2dr1TfqsauXub1ZLCzxg&cb_client=search.gws-prod.grass&w=408&h=240&yaw=163.36269&pitch=0&thumbfov=100",
+    "kgmid": "/g/11l28vqkc3",
+    "businessProfileId": "14841770214748288930"
+  },
+  {
+    "title": "TowerView Title - Lake Wales Title Company",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Title company",
+    "address": "229 E Park Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "229 E Park Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.towerviewtitle.com/",
+    "phone": "(863) 455-8234",
+    "phoneUnformatted": "+18634558234",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9028628,
+      "lng": -81.5875599
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJx88QcdcJ3YgR18Uoq2juK7c",
+    "categories": [
+      "Title company"
+    ],
+    "fid": "0x88dd09d77110cfc7:0xb72bee68ab28c5d7",
+    "cid": "13198905266254955991",
+    "reviewsCount": 21,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 21
+    },
+    "imagesCount": 7,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:38.972Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=TowerView%20Title%20-%20Lake%20Wales%20Title%20Company&query_place_id=ChIJx88QcdcJ3YgR18Uoq2juK7c",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 21,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNz08_MeDXl0ePw0aAe01IbP2fzzTc3X9pAsZoJK3Qu7-X7oPazDj3fhHQ_3q5HgEQYbNZjplEIfSr6VlLyzRexQkUy-LklO6SLldGl_bJTeANR6HB3HKbjcjkf-n991MxJiX6U92q0RKA=w519-h240-k-no",
+    "kgmid": "/g/11mv5s9wcl",
+    "businessProfileId": "10107495333861549834"
+  },
+  {
+    "title": "Ruster Deborah A",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "100 W Stuart Ave #300, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "100 W Stuart Ave #300",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 676-7611",
+    "phoneUnformatted": "+18636767611",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9016902,
+      "lng": -81.5900458
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJf35jfNgI3YgRXkHOPmOelT4",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd08d87c637e7f:0x3e959e633ece415e",
+    "cid": "4509684750974075230",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:38.972Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Ruster%20Deborah%20A&query_place_id=ChIJf35jfNgI3YgRXkHOPmOelT4",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 22,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=klRTcGAxAT5WROyC5HqhbQ&cb_client=search.gws-prod.grass&w=408&h=240&yaw=187.80724&pitch=0&thumbfov=100",
+    "kgmid": "/g/1ttpc374",
+    "businessProfileId": null
+  },
+  {
+    "title": "Lake Wales Area Chamber of Commerce & Economic Development Council",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Chamber of Commerce",
+    "address": "340 W Central Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "340 W Central Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.lakewaleschamber.com/",
+    "phone": "(863) 676-3445",
+    "phoneUnformatted": "+18636763445",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9003305,
+      "lng": -81.5973838
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ6bFdetYI3YgRKM53Npcsuvk",
+    "categories": [
+      "Chamber of Commerce"
+    ],
+    "fid": "0x88dd08d67a5db1e9:0xf9ba2c973677ce28",
+    "cid": "17994744289077743144",
+    "reviewsCount": 11,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 9
+    },
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:38.972Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lake%20Wales%20Area%20Chamber%20of%20Commerce%20%26%20Economic%20Development%20Council&query_place_id=ChIJ6bFdetYI3YgRKM53Npcsuvk",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 23,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmP4HG32Sc_Xp79q58L6Ujj9UN6I40IJqdEQcs06FrKkRLIZBCqK58Jc6sDUpiuH5Csrrq41gCtmtwQbfGPWkIsN8xiAoyrc3IGeWHkpFUPoJx_yjsdX5L0Vn9SvE0Xkga8ewBd5uBkoKls0=w408-h275-k-no",
+    "kgmid": "/g/1tkf1stf",
+    "businessProfileId": "11041965786400651182"
+  },
+  {
+    "title": "Kincaid Electrical Services Inc",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Electrician",
+    "address": "56 W Central Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "56 W Central Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.kincaidelectric.com/",
+    "phone": "(863) 676-0198",
+    "phoneUnformatted": "+18636760198",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9014096,
+      "lng": -81.591019
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJK-qMX94I3YgROlj4r7790Iw",
+    "categories": [
+      "Electrician"
+    ],
+    "fid": "0x88dd08de5f8cea2b:0x8cd0fdbeaff8583a",
+    "cid": "10146888955903629370",
+    "reviewsCount": 84,
+    "reviewsDistribution": {
+      "oneStar": 7,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 2,
+      "fiveStar": 74
+    },
+    "imagesCount": 7,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:38.972Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "7:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "7:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "7:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "7:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "7:30 AM to 4:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Kincaid%20Electrical%20Services%20Inc&query_place_id=ChIJK-qMX94I3YgROlj4r7790Iw",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 24,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNvswaZnJFJD94shYgUUDzZ7Krc-PWeEar76VWqzZPu7qv4UAUENZAfP7fHdevAXtijvVAXs03qblVoCdcOaeN-QwH72AFD7nGO-e4o7rpidfP3WC-MB7iNRYfXMQTt55x1qubgBSK--vdx=w408-h540-k-no",
+    "kgmid": "/g/1tffvrc_",
+    "businessProfileId": "3390330747116143438"
+  },
+  {
+    "title": "Law Office of Irene E. Pearce",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "132 W Central Ave #1, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "132 W Central Ave #1",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(407) 402-0159",
+    "phoneUnformatted": "+14074020159",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.901528,
+      "lng": -81.5929999
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ67gT8NcI3YgR2awM_jANies",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd08d7f013b8eb:0xeb890d30fe0cacd9",
+    "cid": "16972111174794259673",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:45.393Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Law%20Office%20of%20Irene%20E.%20Pearce&query_place_id=ChIJ67gT8NcI3YgR2awM_jANies",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=U5Se5n07F7g0BGcvesq5eQ&cb_client=search.gws-prod.grass&w=408&h=240&yaw=348.95215&pitch=0&thumbfov=100",
+    "kgmid": "/g/1vs5xjkz",
+    "businessProfileId": "15730515368897981151"
+  },
+  {
+    "title": "Lake Wailes Park",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Park",
+    "address": "Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": null,
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 440-3322",
+    "phoneUnformatted": "+18634403322",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9035678,
+      "lng": -81.5797473
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJG1DbLf0I3YgRU6mYh7zBw_s",
+    "categories": [
+      "Park",
+      "Tourist attraction"
+    ],
+    "fid": "0x88dd08fd2ddb501b:0xfbc3c1bc8798a953",
+    "cid": "18141556739451431251",
+    "reviewsCount": 217,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 2,
+      "threeStar": 9,
+      "fourStar": 35,
+      "fiveStar": 167
+    },
+    "imagesCount": 398,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:47.256Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "6 AM to 8 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "6 AM to 8 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "6 AM to 8 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "6 AM to 8 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "6 AM to 8 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "6 AM to 8 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "6 AM to 8 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lake%20Wailes%20Park&query_place_id=ChIJG1DbLf0I3YgRU6mYh7zBw_s",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 21,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmO4BYADE3eB8g02yOaxoxz4I6np3_1Am-owLbIZb1Epw1iQSGXdi9NqN0tz4wjFjgkQ_BsT9ffqSR43lhhqTz5nfPXa6p4YGLO5z1hwR1RJVK92VJeayp-n6yiaQAsd33WUQvLW=w408-h306-k-no",
+    "kgmid": "/g/11b7vkrb7h",
+    "businessProfileId": null
+  },
+  {
+    "title": "Ashley Marston Croley - State Farm Insurance Agent",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Insurance agency",
+    "address": "116 S 1st St, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "116 S 1st St",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.ashleycroley.com/?cmpid=D30A_blm_0001",
+    "phone": "(863) 676-2718",
+    "phoneUnformatted": "+18636762718",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.899519,
+      "lng": -81.58987
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJfRcKMkYJ3YgRviEFTyeJ8RE",
+    "categories": [
+      "Insurance agency",
+      "Auto insurance agency",
+      "Home insurance agency",
+      "Life insurance agency",
+      "Renter's insurance agency"
+    ],
+    "fid": "0x88dd0946320a177d:0x11f189274f0521be",
+    "cid": "1292965369954509246",
+    "reviewsCount": 648,
+    "reviewsDistribution": {
+      "oneStar": 6,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 6,
+      "fiveStar": 636
+    },
+    "imagesCount": 140,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:47.256Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Ashley%20Marston%20Croley%20-%20State%20Farm%20Insurance%20Agent&query_place_id=ChIJfRcKMkYJ3YgRviEFTyeJ8RE",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 22,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNeFuxwCfnmJvzCpDN1AXmoC0KAmz-qYfyqyz8cvkkyBXl2_JPb4w0j8HYG3Zu6VhklpHAFMI1r8-8e6fIWGPE1-ZyGk_rREQQ6vPvO-lsrDJHDCq-30A7tQVfWtBL5_yGNPrI=w408-h306-k-no",
+    "kgmid": "/g/11b6z2pssz",
+    "businessProfileId": "12308030802638491472"
+  },
+  {
+    "title": "Lake Wales Care Center",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Nursing home",
+    "address": "730 N Scenic Hwy, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "730 N Scenic Hwy",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://lakewalescare.com/",
+    "phone": "(863) 676-1512",
+    "phoneUnformatted": "+18636761512",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.913111,
+      "lng": -81.588389
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJc9HqeOMJ3YgRne9A_-Jy5co",
+    "categories": [
+      "Nursing home",
+      "Rehabilitation center"
+    ],
+    "fid": "0x88dd09e378ead173:0xcae572e2ff40ef9d",
+    "cid": "14620218084598804381",
+    "reviewsCount": 153,
+    "reviewsDistribution": {
+      "oneStar": 14,
+      "twoStar": 2,
+      "threeStar": 2,
+      "fourStar": 11,
+      "fiveStar": 124
+    },
+    "imagesCount": 21,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:47.256Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lake%20Wales%20Care%20Center&query_place_id=ChIJc9HqeOMJ3YgRne9A_-Jy5co",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 24,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOz29VzXvlQAikih_4yDqNForaWmb6I_2S6VBZycRV1LmF2KV97aLmX2dnfGGFP4enT6_k8eojfQUQ8KhXGh72s4Pk7Jw2g6U4HVOuH3ohV1e8kQfK7KKBmVbohHjLxAHBMmh-JpKRISuyr=w408-h272-k-no",
+    "kgmid": "/g/11j8xydwb5",
+    "businessProfileId": "7339827920357294957"
+  },
+  {
+    "title": "Mayer Jewelers",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Jewelry store",
+    "address": "201 E Stuart Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "201 E Stuart Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 676-1317",
+    "phoneUnformatted": "+18636761317",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9021071,
+      "lng": -81.5880565
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJLVLQWCcJ3YgRWtk0Eq-N62s",
+    "categories": [
+      "Jewelry store",
+      "Jeweler",
+      "Jewelry engraver",
+      "Jewelry repair service"
+    ],
+    "fid": "0x88dd092758d0522d:0x6beb8daf1234d95a",
+    "cid": "7776464964649539930",
+    "reviewsCount": 66,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 2,
+      "threeStar": 2,
+      "fourStar": 4,
+      "fiveStar": 54
+    },
+    "imagesCount": 14,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:47.256Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 1 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": false,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mayer%20Jewelers&query_place_id=ChIJLVLQWCcJ3YgRWtk0Eq-N62s",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 25,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPpWqAomUmVdRAHGjLQNUgvXjrglvk58wENryLtMOVxmsd8B0MttzcRExQrCTQ8OzW5ajvFIGA8u04BxmRP9lpZkEEmUJfKb3o2vP9Sl7K6Ej91CQBIJMv_Tl_hE9Oc5V26LvZV=w408-h256-k-no",
+    "kgmid": "/g/1tf6bvzk",
+    "businessProfileId": "1824945800538921090"
+  },
+  {
+    "title": "Lake Wales Police Department",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Police station",
+    "address": "137 E Tillman Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "137 E Tillman Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.cityoflakewales.com/679/Police-Department",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9004468,
+      "lng": -81.5882314
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ1UqsSXQJ3YgRcDyRbCDYPqM",
+    "categories": [
+      "Police station"
+    ],
+    "fid": "0x88dd097449ac4ad5:0xa33ed8206c913c70",
+    "cid": "11763076910510324848",
+    "reviewsCount": null,
+    "imagesCount": 10,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:47.256Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lake%20Wales%20Police%20Department&query_place_id=ChIJ1UqsSXQJ3YgRcDyRbCDYPqM",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 26,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNz7W806RwCoZgJsHSiwYS0P2cS1venZi8ShYbGGm4b-f7CEzr8F1R3wZwBnlUIl90rYkT_rZQeCmG3zMazXedfkzUSQjk0FilL18Jke7msw_LVM5oEcAjlJ8vsd64ec3sx46B3Lg=w513-h240-k-no",
+    "kgmid": "/g/11sh0lfjm8",
+    "businessProfileId": null
+  },
+  {
+    "title": "Universal Weapons",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Gun shop",
+    "address": "100 S Scenic Hwy #107, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "100 S Scenic Hwy #107",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.dontdial911.com/",
+    "phone": "(407) 851-2216",
+    "phoneUnformatted": "+14078512216",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8999477,
+      "lng": -81.586011
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlfj5LWCH3YgR_MM8E2Ib4mY",
+    "categories": [
+      "Gun shop"
+    ],
+    "fid": "0x88dd87602df9f895:0x66e21b62133cc3fc",
+    "cid": "7413518044648752124",
+    "reviewsCount": 82,
+    "reviewsDistribution": {
+      "oneStar": 11,
+      "twoStar": 2,
+      "threeStar": 2,
+      "fourStar": 4,
+      "fiveStar": 63
+    },
+    "imagesCount": 32,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:47.256Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 4 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Universal%20Weapons&query_place_id=ChIJlfj5LWCH3YgR_MM8E2Ib4mY",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 27,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOY6rtf5EoObF7Awr7VILeUFb4BAwtXXljRAZ7V3YShCNxNRPnopgru9h_P4NjtvrCNoHgW9TbWyy8ZmXryPik09w-U0sEcautuoyPOPobf7djoN4TwvV_qEaQfoex6v1mJoBVF=w408-h408-k-no",
+    "kgmid": "/g/1xfspk0f",
+    "businessProfileId": "13865593897802060279"
+  },
+  {
+    "title": "Heritage Hill",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Garden",
+    "address": "409 N 3rd St, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "409 N 3rd St",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://lakewalesheritage.org/",
+    "phone": "(863) 455-4925",
+    "phoneUnformatted": "+18634554925",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9070637,
+      "lng": -81.5862744
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ6cZeKQAJ3YgRfxCShLc1UPM",
+    "categories": [
+      "Garden"
+    ],
+    "fid": "0x88dd0900295ec6e9:0xf35035b78492107f",
+    "cid": "17532572411672793215",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:47.256Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Heritage%20Hill&query_place_id=ChIJ6cZeKQAJ3YgRfxCShLc1UPM",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 28,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=GP5XkhKmHMi7zDGRhB4vXg&cb_client=search.gws-prod.grass&w=408&h=240&yaw=341.86044&pitch=0&thumbfov=100",
+    "kgmid": "/g/11w30j1pgq",
+    "businessProfileId": null
+  },
+  {
+    "title": "Qp Gas Station",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Gas station",
+    "address": "704 N Scenic Hwy, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "704 N Scenic Hwy",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9104914,
+      "lng": -81.5873705
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.2,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ5VkKfiQJ3YgRux-4jH-1kU0",
+    "categories": [
+      "Gas station"
+    ],
+    "fid": "0x88dd09247e0a59e5:0x4d91b57f8cb81fbb",
+    "cid": "5589448171969847227",
+    "reviewsCount": 51,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 4,
+      "threeStar": 5,
+      "fourStar": 5,
+      "fiveStar": 34
+    },
+    "imagesCount": 9,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:54:47.256Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "7 AM to 2 AM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "7 AM to 2 AM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "7 AM to 2 AM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "7 AM to 2 AM"
+      },
+      {
+        "day": "Friday",
+        "hours": "7 AM to 2 AM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "7 AM to 2 AM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "7 AM to 2 AM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Qp%20Gas%20Station&query_place_id=ChIJ5VkKfiQJ3YgRux-4jH-1kU0",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.9059923304081,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 29,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMAmtCT6Whg-9TBhv6FKX7RuFu7cJhdBKtnZbX9Lalb5Zf1DRTmLcguCkqg_eLyIeT_vSHhqHTbM3xRH9yiLBggYbt4oVZuiSKjQxoTmKKFg4w7bstxajYFdKsYNUrSCCoDegKq=w513-h240-k-no",
+    "kgmid": "/g/11c5_558rd",
+    "businessProfileId": null
+  },
+  {
+    "title": "Martin Joe T",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "416 S 1st St, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "416 S 1st St",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 676-6085",
+    "phoneUnformatted": "+18636766085",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8957846,
+      "lng": -81.5898547
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJfUL-LNoI3YgRzi7WB7Zllyw",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd08da2cfe427d:0x2c9765b607d62ece",
+    "cid": "3213148691642068686",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:42.813Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Martin%20Joe%20T&query_place_id=ChIJfUL-LNoI3YgRzi7WB7Zllyw",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Lake%20Wales%20FL/@27.890816360816203,-81.62167868421285,16z?hl=en",
+    "searchString": "attorney Lake Wales FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=d1oczWLpIWyFZEmCV4JBGg&cb_client=search.gws-prod.grass&w=408&h=240&yaw=276.33948&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tmgd73w",
+    "businessProfileId": null
+  },
+  {
+    "title": "Kaylor Law Group: Rayes Matthew",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "225 E Park Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "225 E Park Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "(863) 678-3300",
+    "phoneUnformatted": "+18636783300",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9028737,
+      "lng": -81.5876585
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 2,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJOaCeTycJ3YgRASJQVgDw57Q",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd09274f9ea039:0xb4e7f00056502201",
+    "cid": "13035651530685948417",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 0
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:48.955Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Kaylor%20Law%20Group%3A%20Rayes%20Matthew&query_place_id=ChIJOaCeTycJ3YgRASJQVgDw57Q",
+    "searchPageUrl": "https://www.google.com/maps/search/lawyer%20Lake%20Wales%20FL/@27.96669620877569,-81.58734810526236,16z?hl=en",
+    "searchString": "lawyer Lake Wales FL",
+    "language": "en",
+    "rank": 18,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=KP9WgN4SqZvYzvUchOLv6g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=8.164332&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tfc2v3v",
+    "businessProfileId": null
+  },
+  {
+    "title": "Serenity at Lake Wales",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Apartment complex",
+    "address": "105 Serenity Blvd, Lake Wales, FL 33859",
+    "neighborhood": null,
+    "street": "105 Serenity Blvd",
+    "city": "Lake Wales",
+    "postalCode": "33859",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.serenityatlakewales.com/",
+    "phone": "(863) 279-0100",
+    "phoneUnformatted": "+18632790100",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9591155,
+      "lng": -81.618294
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJgYuPalUN3YgR5399RYqRjtk",
+    "categories": [
+      "Apartment complex",
+      "Apartment building",
+      "Condominium complex"
+    ],
+    "fid": "0x88dd0d556a8f8b81:0xd98e918a457d7fe7",
+    "cid": "15676627375980642279",
+    "reviewsCount": 162,
+    "reviewsDistribution": {
+      "oneStar": 28,
+      "twoStar": 5,
+      "threeStar": 6,
+      "fourStar": 4,
+      "fiveStar": 119
+    },
+    "imagesCount": 111,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:55:56.316Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Serenity%20at%20Lake%20Wales&query_place_id=ChIJgYuPalUN3YgR5399RYqRjtk",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.96669620877569,-81.60451339473761,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnnUn6DeDU5f2Thj10_DR3GPOzBUNZFs3zkx6kRxU31EdGlIbt3ayt2mPeRuHZswpqSCabKwsvW-wPslsY6Op-loZv3QUZ87MTvXbMpK8KPG3COHz7p1_0Ug89vmqep2DJRZABb=w408-h272-k-no",
+    "kgmid": "/g/11h3l60jnv",
+    "businessProfileId": "14387366165452099276"
+  },
+  {
+    "title": "JLM Express Process Service, LLC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Process server",
+    "address": "1 E Grove Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "1 E Grove Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://jlmprocess.com/",
+    "phone": "(863) 678-1235",
+    "phoneUnformatted": "+18636781235",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8906539,
+      "lng": -81.5893422
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJv1VbNsUI3YgRvNoDTq98SNo",
+    "categories": [
+      "Process server",
+      "Legal services",
+      "Notary public"
+    ],
+    "fid": "0x88dd08c5365b55bf:0xda487caf4e03dabc",
+    "cid": "15728958790961453756",
+    "reviewsCount": 17,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 17
+    },
+    "imagesCount": 12,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:56:02.241Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=JLM%20Express%20Process%20Service%2C%20LLC&query_place_id=ChIJv1VbNsUI3YgRvNoDTq98SNo",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Lake%20Wales%20FL/@27.875640391224305,-81.57018281578712,16z?hl=en",
+    "searchString": "attorney Lake Wales FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnPGP7MBkoSj8aql-UMlau97HIvr9Po-PkCdMiyg3kCgUhYh5HpNzHgkPtiRPFV_YehXLxjs2lF8zOO9OXBbErUWBNaA2apfVW2DEjP3DX_1_Rg9eqpcgyE5eiSl9MB_dz3fN9e=w408-h272-k-no",
+    "kgmid": "/g/11ghr07pjm",
+    "businessProfileId": "13805567738523158074"
+  },
+  {
+    "title": "Abogada De la Fe/Lilly & Brown LLP",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Immigration attorney",
+    "address": "815 FL-60 Ste b, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "815 FL-60 Ste b",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.abogadadelafe.com/",
+    "phone": "(863) 294-8114",
+    "phoneUnformatted": "+18632948114",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.894211,
+      "lng": -81.573748
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ6VlHwbgJ3YgR3Oz7HBfh3Es",
+    "categories": [
+      "Immigration attorney"
+    ],
+    "fid": "0x88dd09b8c14759e9:0x4bdce1171cfbecdc",
+    "cid": "5466491537107709148",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:56:24.253Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Abogada%20De%20la%20Fe%2FLilly%20%26%20Brown%20LLP&query_place_id=ChIJ6VlHwbgJ3YgR3Oz7HBfh3Es",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Lake%20Wales%20FL/@27.890816360816203,-81.57018281578712,16z?hl=en",
+    "searchString": "attorney Lake Wales FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=q0H4GSQKFUuJdzNtK4jqtw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=341.0736&pitch=0&thumbfov=100",
+    "kgmid": "/g/11g22_3ww5",
+    "businessProfileId": null
+  },
+  {
+    "title": "Kohl & Company, Certified Public Accountants",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Accountant",
+    "address": "29 FL-60, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "29 FL-60",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "http://www.kohlcompany.com/",
+    "phone": "(863) 676-3465",
+    "phoneUnformatted": "+18636763465",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.8953844,
+      "lng": -81.5906617
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ3d6xO9oI3YgReRDyEBDI5IU",
+    "categories": [
+      "Accountant",
+      "Bookkeeping service",
+      "Business development service",
+      "Business management consultant",
+      "Certified public accountant",
+      "Tax preparation"
+    ],
+    "fid": "0x88dd08da3bb1dedd:0x85e4c81010f21079",
+    "cid": "9648056273063776377",
+    "reviewsCount": 15,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 15
+    },
+    "imagesCount": 15,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:56:27.534Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 5:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Kohl%20%26%20Company%2C%20Certified%20Public%20Accountants&query_place_id=ChIJ3d6xO9oI3YgReRDyEBDI5IU",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.890816360816203,-81.60451339473761,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 17,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlUIdZ9qXqNDi7nM6t9N72zRVwJ07GD5YdT0MnBo4iPbQGrXhnwGV43SpZiIdQGvaW7eIC74mUWQ2_uBwnnlSEaP5lMVi0gpzadYPWNyG2lez4Qrk8LPGcbMGBssfI4lTA47Oohqw=w408-h306-k-no",
+    "kgmid": "/g/1tn06lxd",
+    "businessProfileId": "14073950640097550460"
+  },
+  {
+    "title": "Lake Wales Title Company",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Title company",
+    "address": "231 E Tillman Ave, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "231 E Tillman Ave",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.titlecompanylakewales.com/",
+    "phone": "(863) 456-7130",
+    "phoneUnformatted": "+18634567130",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.9003338,
+      "lng": -81.5864316
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJO0h_UpoJ3YgR4S7OBxgbtgM",
+    "categories": [
+      "Title company"
+    ],
+    "fid": "0x88dd099a527f483b:0x3b61b1807ce2ee1",
+    "cid": "267431017899241185",
+    "reviewsCount": 9,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 7
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:57:06.808Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lake%20Wales%20Title%20Company&query_place_id=ChIJO0h_UpoJ3YgR4S7OBxgbtgM",
+    "searchPageUrl": "https://www.google.com/maps/search/attorney%20Lake%20Wales%20FL/@27.9059923304081,-81.53585223683663,16z?hl=en",
+    "searchString": "attorney Lake Wales FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=DCaJ96_KxH2-09OuH-a-Lg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=347.51733&pitch=0&thumbfov=100",
+    "kgmid": "/g/11h6dj6fkh",
+    "businessProfileId": null
+  },
+  {
+    "title": "Dyer Chevrolet Lake Wales",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Chevrolet dealer",
+    "address": "23350 US-27, Lake Wales, FL 33859",
+    "neighborhood": null,
+    "street": "23350 US-27",
+    "city": "Lake Wales",
+    "postalCode": "33859",
+    "state": "Florida",
+    "countryCode": "US",
+    "website": "https://www.dyerchevylakewales.com/?utm_source=google&utm_medium=organic&utm_campaign=google_my_business&utm_content=website_button",
+    "phone": "(863) 236-9863",
+    "phoneUnformatted": "+18632369863",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 27.9506897,
+      "lng": -81.6203656
+    },
+    "locatedIn": "Dyer Chevrolet Lake Wales Parts",
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJfRKR6rUO3YgRdkDpXYlus6g",
+    "categories": [
+      "Chevrolet dealer",
+      "Auto parts store",
+      "Auto repair shop",
+      "Car finance and loan company",
+      "Car leasing service",
+      "Electric motor vehicle dealer",
+      "Tire shop",
+      "Truck dealer",
+      "Used car dealer",
+      "Used truck dealer"
+    ],
+    "fid": "0x88dd0eb5ea91127d:0xa8b36e895de94076",
+    "cid": "12156181355468243062",
+    "reviewsCount": 1605,
+    "reviewsDistribution": {
+      "oneStar": 209,
+      "twoStar": 46,
+      "threeStar": 37,
+      "fourStar": 81,
+      "fiveStar": 1232
+    },
+    "imagesCount": 258,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:57:08.627Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM to 7 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM to 7 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM to 7 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM to 7 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM to 7 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Dyer Chevrolet Lake Wales Parts": [
+        {
+          "day": "Monday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "7:30 AM–2 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "Dyer Chevrolet Lake Wales Service": [
+        {
+          "day": "Monday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "7:30 AM–5:30 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "8 AM–2 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dyer%20Chevrolet%20Lake%20Wales&query_place_id=ChIJfRKR6rUO3YgRdkDpXYlus6g",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.951520239183793,-81.62167868421285,16z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 20,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk7QIUIdlxCnu0DvN0KhNA8tn3FImrK4REJifXYO_OCoT9jtimnajneRw6hF17voZDCxc8r2bkT1R-YYytWiZdAT36MXQJWu-5rYoT8Ffzn_JvYF_u6PjQJJyWwwgqOGSwOLcCgVQ=w408-h408-k-no",
+    "kgmid": "/g/1xfspjy_",
+    "businessProfileId": "7653094023886797627"
+  },
+  {
+    "title": "Thompson Wealth Advocates",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Attorney",
+    "address": "137 FL-60, Lake Wales, FL 33853",
+    "neighborhood": null,
+    "street": "137 FL-60",
+    "city": "Lake Wales",
+    "postalCode": "33853",
+    "state": "Florida",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 27.8963999,
+      "lng": -81.5934891
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJR1cUs9AI3YgRnyRII1JXkkA",
+    "categories": [
+      "Attorney"
+    ],
+    "fid": "0x88dd08d0b3145747:0x409257522348249f",
+    "cid": "4652877375318008991",
+    "reviewsCount": null,
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-09-23T19:57:28.772Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Thompson%20Wealth%20Advocates&query_place_id=ChIJR1cUs9AI3YgRnyRII1JXkkA",
+    "searchPageUrl": "https://www.google.com/maps/search/law%20firm%20Lake%20Wales%20FL/@27.8998334,-81.5859853,16.824441072543067z?hl=en",
+    "searchString": "law firm Lake Wales FL",
+    "language": "en",
+    "rank": 23,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=wDg11aKtsez2qnFWtan7yw&cb_client=search.gws-prod.grass&w=408&h=240&yaw=175.69818&pitch=-1.6632788&thumbfov=100",
+    "kgmid": "/g/11hrl2xlvq",
+    "businessProfileId": null
+  }
+]
