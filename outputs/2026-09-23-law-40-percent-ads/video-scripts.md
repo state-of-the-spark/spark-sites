@@ -3,6 +3,7 @@ type: output
 format: deep-ad-video-scripts
 date: 2026-09-23
 niche: law-firm (Florida solo/small practices)
+google_doc: https://docs.google.com/document/d/1yGgtC2iso3uUvDMmjOTSXdIaTK3yQSFPl2KZUH525yA/edit
 source: spark-sites/outputs/2026-09-23-law-40-percent-report/the-40-percent-problem.md
 landing: https://sparkmysite.com/law-firm-marketing/
 report_destination: https://sparkmysite.com/law-firm-report/

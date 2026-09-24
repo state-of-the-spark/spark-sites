@@ -289,7 +289,7 @@ pages.push({ name: 'Offer', title: '12 The Offer', html: page(POR, `
       'A fast first reply: missed calls get a text back in about a minute, forms get an instant reply that books the consultation. Your firm approves every word.',
       'Google Business Profile management and local SEO for your towns and practice areas.',
       'Review requests at the right moment, with replies that never discuss the matter.',
-      'Monthly or bi-monthly content shoots at your office. You give us about an hour; we plan, film, and edit everything else.',
+      'Monthly content shoots at your office. You give us about an hour; we plan, film, and edit everything else.',
       'A dedicated marketing consultant who explains every number in plain English.',
     ].map((t) => `<div style="display:flex;gap:10px;align-items:flex-start;">${TICK}${P(t, 'font-size:15px;line-height:1.48;')}</div>`).join('')}
   </div>

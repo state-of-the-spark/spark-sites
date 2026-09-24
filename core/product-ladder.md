@@ -124,9 +124,9 @@ A niche program is a done-for-you bundle priced for a high-value client vertical
 |---|---|---|---|---|---|
 | **Law Firm Program** | **$4,500 one-time** (site $1,800, first shoot $750, intake setup $600, GBP $500, local SEO $350, reviews $250, annual plan $250) | **$0 until the first new-client inquiry, then $750/mo**, month to month | One firm per practice area per county (exclusivity). Ad spend separate. | /law-firm-marketing/ (page 46268) | LIVE 2026-09-23. No Woo product yet (sold via plan call). |
 
-**Includes monthly:** Google Business Profile + local SEO, review requests, Spark Intake (missed-call text-back + instant form reply), social and content marketing, monthly or bi-monthly content shoots, dedicated consultant, annual plan.
+**Includes monthly:** Google Business Profile + local SEO, review requests, Spark Intake (missed-call text-back + instant form reply), social and content marketing, monthly content shoots, dedicated consultant, annual plan.
 
-**Margin warning (Lumen, 2026-09-23, for Grant):** Standard Social alone costs ~$327/mo to deliver at quarterly shoots (`grant-sparks/research/2026-09-22-standard-social-package-proposal.md`). Add GBP/SEO, reviews, intake platform costs, and MONTHLY shoots, and the $750 monthly runs thin (est. cost $550-650/mo). Protect it by either (a) defining shoots as bi-monthly or quarterly and social at Standard volume, or (b) moving the monthly to $997. The $4,500 setup is healthy.
+**Margin warning (Lumen, 2026-09-23, for Grant):** Standard Social alone costs ~$327/mo to deliver at quarterly shoots (`grant-sparks/research/2026-09-22-standard-social-package-proposal.md`). Add GBP/SEO, reviews, intake platform costs, and MONTHLY shoots, and the $750 monthly runs thin (est. cost $550-650/mo). **Decided 2026-09-24 (Grant): shoots are MONTHLY at $750.** Watch delivery hours on the first client; if the monthly runs thin, revisit price ($997) or social volume rather than the shoot cadence. The $4,500 setup is healthy.
 
 **Next niches from the same shape:** roofing (currently sold as Spark Care $297, candidate to move up), HVAC, medical/dental, financial advisors: any vertical where one client is worth $2,500+.
 
@@ -256,7 +256,7 @@ See: `core/operations/book-framework.md` for the full SPARK Method framework.
 - **Webinars** paused — need to restart as top-of-funnel
 - **Starter Site add-on pricing** — Google Business Profile $175 and Social Media Setup $425 finalized 2026-07-17; Domain Email one-time price still open
 - **Session bundles** — consider pricing for 2-3 session packages (Messaging + Content Strategy, etc.)
-- **Spark Intake (speed-to-lead) is promised but not built** (added 2026-09-23). Blocks honest delivery of Spark Care's "AI follow-up" and the Law Firm Program. Platform decision needed (GoHighLevel sub-accounts vs Twilio + n8n).
+- **Spark Intake (speed-to-lead) is promised but not built** (added 2026-09-23; ON HOLD per Grant 2026-09-24 until the next lead in this vertical). Blocks honest delivery of Spark Care's "AI follow-up" and the Law Firm Program. Platform decision needed (GoHighLevel sub-accounts vs Twilio + n8n).
 - **Law Firm Program monthly margin** at $750 with monthly shoots is thin; decide shoot cadence or $997 (see Niche Programs).
 - **No Woo products** for the Law Firm Program, Standard Social ($750), or VIP Social ($1,500).
 - **"$0 until first inquiry" billing trigger** needs a mechanism (manual start of the subscription when the first inquiry lands, logged in the client's dashboard).

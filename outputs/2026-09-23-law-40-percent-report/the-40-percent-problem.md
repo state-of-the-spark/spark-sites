@@ -171,7 +171,7 @@ We built one program for solo and small law firms, and we answer all ten of thos
 - A fast first reply: missed calls get a text back in about a minute, and forms get an instant reply that books the consultation. Your firm approves every word, and your team makes the callback.
 - Google Business Profile management and local SEO for your towns and practice areas.
 - Review requests at the right moment, with replies that never discuss the matter.
-- Monthly or bi-monthly content shoots at your office. You give us about an hour; we plan, film, and edit everything else.
+- Monthly content shoots at your office. You give us about an hour; we plan, film, and edit everything else.
 - A dedicated marketing consultant who explains every number in plain English.
 
 **One $4,500 setup fee. Then $0 a month until your first new-client inquiry arrives. After that, $750 a month, month to month.** Ad spend is separate and goes straight to Google.
