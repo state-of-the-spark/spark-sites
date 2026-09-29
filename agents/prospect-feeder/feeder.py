@@ -23,21 +23,14 @@ FEED_TAB = "Leads"
 HEADERS = ["Business Name", "Category", "Address", "City", "Phone",
            "Google Rating", "Review Count", "Website", "Source", "First Seen"]
 
-# Rotating Polk County target categories (P1-P6 in target-profiles.md).
-# One per weekly run keeps cost low and coverage broad over time.
-SEARCHES = [
-    "HVAC contractor Lakeland FL",
-    "plumber Lakeland FL",
-    "roofing contractor Lakeland FL",
-    "auto repair Lakeland FL",
-    "chiropractor Lakeland FL",
-    "landscaping Lakeland FL",
-    "pest control Lakeland FL",
-    "electrician Lakeland FL",
-    "dentist Winter Haven FL",
-    "auto body shop Lakeland FL",
-]
-MAX_PLACES = 25          # per search, hard cap (cost control)
+# Rotating Polk County target categories x cities (P1-P6 in target-profiles.md).
+# Expanded 2026-09-29: the old 10-search list (Lakeland-heavy) was exhausted; the
+# 9/24 and 9/28 runs surfaced 0 new leads. Each run now takes the next search in
+# a category x city cross so the pool keeps refreshing.
+CATEGORIES = ['HVAC contractor', 'plumber', 'roofing contractor', 'auto repair', 'chiropractor', 'landscaping', 'pest control', 'electrician', 'auto body shop', 'tree service', 'pressure washing', 'pool service', 'cleaning service', 'painter', 'handyman', 'moving company', 'towing service', 'barber shop', 'nail salon', 'veterinarian']
+CITIES = ['Lakeland FL', 'Winter Haven FL', 'Bartow FL', 'Auburndale FL', 'Haines City FL', 'Lake Wales FL']
+SEARCHES = [f"{c} {city}" for city in CITIES for c in CATEGORIES]
+MAX_PLACES = 60          # per search, hard cap (cost control; ~$0.25/run)
 APIFY_ACTOR = "compass~crawler-google-places"
 
 # National chains / franchises to drop (not our ICP).
@@ -47,10 +40,13 @@ CHAINS = ["midas", "aspen dental", "mavis", "firestone", "tire choice",
 
 
 def pick_search():
-    """Rotate by ISO week so each run covers a different category."""
+    """Rotate every ~3 days (runs are Mon + Thu) so no two consecutive runs
+    scrape the same search. (Old ISO-week rotation reran the same search twice
+    a week, so the second run could only ever dedupe to zero.)"""
     from datetime import datetime, timezone
-    wk = datetime.now(timezone.utc).isocalendar()[1]
-    return SEARCHES[wk % len(SEARCHES)]
+    step = datetime.now(timezone.utc).toordinal() // 3
+    # stride 7 is coprime with len(SEARCHES) so consecutive runs jump categories
+    return SEARCHES[(step * 7) % len(SEARCHES)]
 
 
 def run_apify(search):
