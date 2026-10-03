@@ -137,7 +137,7 @@ Missed calls get a branded text back in about a minute; web forms and emails get
 - **Status: promised on the contractor, roofing, and law pages and in the Spark Care spec, but no system does it for any client today** (discovery 2026-09-23: no Twilio, GoHighLevel, CallRail, or SMS workflow on record). It must be built before the first niche-program client goes live.
 - **Sold as:** included in the Law Firm Program; included (as "AI follow-up") in Spark Care; candidate standalone add-on for any Website or Spark Care client.
 
-## Social Media Management tiers (added 2026-09-23 from the Peddy Law sale)
+## Social Media Management tiers (added 2026-09-23 from our first law-firm social sale)
 
 | Tier | Price | Shape |
 |---|---|---|
