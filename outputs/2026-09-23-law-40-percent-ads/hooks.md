@@ -127,7 +127,7 @@ below are written that way; none opens with a personal "you are a..." constructi
 
 **H36.** One program built for solo and small Florida law firms. $4,500 to start, $0 a month until the first new-client inquiry. (Offer block)
 
-**H37.** Free Intake Speed Test: a call to a firm after hours, timed, with the results sent back in plain English. (Offer block)
+**H37.** Free Front Door Review: a one-page written report on a firm's website, tracking, accessibility, Florida Bar basics, and Google profile. (Offer block)
 
 **H38.** $750 a month, month to month, and it only starts after the first inquiry arrives. (Offer block)
 

@@ -253,12 +253,9 @@ $4,500 to start, $0 a month until the first new-client inquiry, then $750 a mont
 month to month. One firm per practice area, per county. See what's included at
 [sparkmysite.com/law-firm-marketing](https://sparkmysite.com/law-firm-marketing/).
 
-### CTA-C: Call or text, free Intake Speed Test (warm, low friction)
+### CTA-C: Call or text, free Front Door Review (warm, low friction)
 
-Want to see the number for your own firm first? Ask for the free Intake Speed Test.
-With permission, we'll call the firm and fill out the website's contact form after
-hours, then send back exactly how long it took to hear something, plus a review of
-the website and Google profile. No pitch required. Call or text (863) 225-1713.
+Want to see where your own firm stands first? Ask for a free Front Door Review: we look at your firm's website and send you a one-page written report on what tracking runs on your contact pages, accessibility errors, any chatbot, the Florida Bar basics, and your Google profile and reviews. No pitch required. Call or text (863) 225-1713.
 
 ---
 

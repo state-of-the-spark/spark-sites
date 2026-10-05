@@ -180,7 +180,7 @@ We built one program for solo and small law firms, and we answer all ten of thos
 
 And we don't hold sites hostage. If you ever leave, we help you take everything with you.
 
-**Want to see your own number first?** Ask for the free **Intake Speed Test**. With your permission, we'll call your firm and fill out your website form after hours, then send you exactly how long it took to hear back, plus a review of your website and Google profile. No pitch required.
+**Want to see where your firm stands?** Ask for a free **Front Door Review**. We look at your firm's website and send you a one-page written report on what tracking runs on your contact pages, accessibility errors, any chatbot, the Florida Bar basics, and your Google profile and reviews. No pitch required.
 
 **Call or text (863) 225-1713**, or go to [sparkmysite.com/law-firm-marketing](https://sparkmysite.com/law-firm-marketing/?utm_source=law-report&utm_medium=pdf&utm_campaign=law-40-percent-report).
 

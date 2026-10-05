@@ -5,7 +5,7 @@ updated: 2026-09-23
 ---
 # Product Ladder
 
-> **2026-09-23 revision (Lumen, at Grant's direction):** added the niche-program rung (Law Firm Program first), niche lead magnets and the free Intake Speed Test as entry points, the Standard/VIP social tiers, content shoots, county exclusivity, and Spark Intake (speed-to-lead). See "Niche Programs" and "What changed 2026-09-23" below.
+> **2026-09-23 revision (Lumen, at Grant's direction):** added the niche-program rung (Law Firm Program first), niche lead magnets and the free Front Door Review as entry points, the Standard/VIP social tiers, content shoots, county exclusivity, and Spark Intake (speed-to-lead). See "Niche Programs" and "What changed 2026-09-23" below.
 
 > **Ambassador/sales view:** the commodified 1-3-tiers-per-category matrix (Small Business, Contractors, AI, Speaking) lives in `core/offers/ambassador-offer-matrix.md`. This ladder stays the training tool for walking one client up; the matrix is what an Ambassador sells from.
 
@@ -111,10 +111,10 @@ One free report per niche, gated behind an email, feeding a niche nurture in Mai
 
 **Typical flow:** Meta/Google ad → free report → nurture emails → niche landing page → plan call → niche program
 
-### 9. Intake Speed Test (free, added 2026-09-23)
-With the firm's permission, we call and fill out their form after hours and send them how long it took to hear back, plus a website and Google profile review. It is the "free audit" made specific, and it sells Spark Intake by showing the prospect their own number.
+### 9. Front Door Review (free, added 2026-09-23)
+We look at the firm's website and send a one-page written report on what tracking runs on their contact pages, accessibility errors, any chatbot, the Florida Bar basics, and their Google profile and reviews. It is the "free audit" made specific.
 
-**Typical flow:** Report CTA or ad → Speed Test → findings call → Law Firm Program (or Spark Intake alone)
+**Typical flow:** Report CTA or ad → Front Door Review → findings call → Law Firm Program (or Spark Intake alone)
 
 ## Niche Programs (premium verticals, added 2026-09-23)
 
@@ -189,7 +189,7 @@ This is where most upselling happens. Starter Site clients get a discovery call 
 | Ads | Social media management |
 | Any service | Strategy sessions ($350), All-Inclusive |
 | Webinar attendee | Starter Site, Strategy Session, or Website |
-| **Niche report download** (added 9/23) | Intake Speed Test → niche program (Law Firm Program) or Spark Care |
+| **Niche report download** (added 9/23) | Front Door Review → niche program (Law Firm Program) or Spark Care |
 | **Website client in a high-value vertical** (law, medical, financial) | Law Firm Program / niche program, Spark Intake, Standard Social |
 | **Standard Social ($750/mo)** | VIP Social, extra content shoots, paid ads management, Spark Intake |
 | **Law Firm Program** | Google Local Services Ads setup + management, Google Ads management, second practice area / second county exclusivity, VIP Social |
@@ -263,4 +263,4 @@ See: `core/operations/book-framework.md` for the full SPARK Method framework.
 - **Built-For-You site price:** $1,800 (ambassador matrix, law page value tag) vs Multi-Page $1,500-$2,500 range (pricing matrix). $1,800 is now the stated value on the law page.
 
 ## What changed 2026-09-23
-Added entry points 8 (niche lead magnets) and 9 (Intake Speed Test), the Niche Programs rung (Law Firm Program), Spark Intake, the Social tiers (Starter/Standard/VIP) with content shoots, new upsell rows, and the five gaps above. Source session: grant-sparks signal 2026-09-23 law firm niche.
+Added entry points 8 (niche lead magnets) and 9 (Front Door Review), the Niche Programs rung (Law Firm Program), Spark Intake, the Social tiers (Starter/Standard/VIP) with content shoots, new upsell rows, and the five gaps above. Source session: grant-sparks signal 2026-09-23 law firm niche.

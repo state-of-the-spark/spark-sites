@@ -30,7 +30,7 @@ running first.
 
 - **Fixed CTA: CTA-A (download the report).** The only one of the three that
   captures an email, so it's the only one that builds an asset rather than renting
-  a click. CTA-C (call or text / Intake Speed Test) belongs on retargeting to
+  a click. CTA-C (call or text / Front Door Review) belongs on retargeting to
   people who already downloaded. CTA-B (see the program page) is the weakest cold
   ad because it captures nothing. The three CTAs are stages, not alternatives,
   same logic as the roofer set.
