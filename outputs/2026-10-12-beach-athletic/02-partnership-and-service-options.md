@@ -53,7 +53,7 @@ You film. We do everything else, every week.
 - **Social media management** on Instagram, Facebook and TikTok: posting, captions, replies.
 - **YouTube:** 4 long videos and 12 Shorts a month, edited from your footage.
 - **Email:** the welcome series plus 2 campaigns a month.
-- **Micro-influencer program**, run by Nicole: 5 to 10 creators a quarter on a gift-plus-commission deal, with content rights secured.
+- **Micro-influencer program:** 5 to 10 creators a quarter on a gift-plus-commission deal, with content rights secured.
 
 **Investment:** $1,500 setup, then $3,250/month, 6-month minimum.
 
@@ -162,8 +162,8 @@ If you'd rather pick pieces than a tier, here's what each one costs on its own.
 | **SEO, monthly** | $750/month |
 | **Spark Ecommerce Care Growth** (site management, search, reporting) | $297/month |
 | **Website rebuild,** modern WooCommerce store | from $2,500 |
-| **Influencer event, small** (5 to 10 creators), led by Nicole | $1,000 per event |
-| **Influencer event, large** (10 to 25 creators), led by Nicole | $2,250 per event |
+| **Influencer event, small** (5 to 10 creators) | $1,000 per event |
+| **Influencer event, large** (10 to 25 creators) | $2,250 per event |
 | **Market research sprint:** test one channel in 30 days (ad spend separate) | $1,200 |
 | **Strategy session** | $120/hour |
 
@@ -193,7 +193,7 @@ Then line their answers up against this document.
 
 ## Next step
 
-Separate from all of this, you offered to bring a Frame to Lakeland for a joint workout. Nicole and I will turn that session into a content shoot for you: we'll film it as one of your creators, walk you through building a content library in your Google Drive, and use it to freshen up your socials.
+Separate from all of this, you offered to bring a Frame to Lakeland for a joint workout. We'll turn that session into a content shoot for you: we'll film it, walk you through building a content library in your Google Drive, and use it to freshen up your socials.
 
 **Which is more useful to start: the roadmap moves on your own, or a Tier 1 setup so the plumbing gets done this month?**
 
