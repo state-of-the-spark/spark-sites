@@ -63,6 +63,8 @@ So the point stands: years of traffic have come and gone without being cookied f
 
 ---
 
+**If at any point you want help knocking these out, we're here to serve you.** Take on as much as you like yourself, and hand us whatever you'd rather not do. One move or all five.
+
 ## The Level 1 Playbook: five moves, about 30 days
 
 Do these in order. Moves 1 and 2 matter most, because they make every later dollar and every later post work harder.
