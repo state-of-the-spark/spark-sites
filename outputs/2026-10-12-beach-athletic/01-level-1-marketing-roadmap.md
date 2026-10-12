@@ -4,7 +4,9 @@ google_doc: https://docs.google.com/document/d/13R81UCVKuV9oqS8a31Mcm_3G_O1yWht-
 # The Fitness Frame: Level 1 Marketing-Readiness Roadmap
 
 **Prepared for:** Tony Salomone, Beach Athletic Company
+
 **Prepared by:** Grant Sparks, Spark Sites
+
 **Date:** October 13, 2026
 
 ---
@@ -74,10 +76,10 @@ Do these in order. Moves 1 and 2 matter most, because they make every later doll
 
 **Done when:** a $1 test purchase shows up in both GA4 and Meta Events Manager.
 
-### Move 2: Make the $699 page close the sale (weeks 1-2)
+### Move 2: Make the $699 page close the sale (weeks 1 to 2)
 
 - **Get 5 to 10 reviews from past buyers.** Email or call them personally (your strength). Post them on the product page and ask the happiest ones for a Google review too.
-- **Put a 60-90 second demo video at the top.** Land and water, setup, a few moves.
+- **Put a 60 to 90 second demo video at the top.** Land and water, setup, a few moves.
 - **Add a trust block next to Add to Cart:** warranty, shipping, the 30-day returns you already offer, "patented design," and your phone number.
 - **Offer a payment plan.** Stripe supports Klarna and Affirm. "$699, or pay monthly" lowers the bar for a retiree on a fixed income.
 - **Finish the details:** move it out of "Uncategorized," and add height range, weight capacity, materials, and whether it's saltwater-safe.
@@ -91,7 +93,7 @@ Do these in order. Moves 1 and 2 matter most, because they make every later doll
 
 **Done when:** you sign up with your own email and the first message lands within a minute.
 
-### Move 4: Clean the storefront (weeks 2-3)
+### Move 4: Clean the storefront (weeks 2 to 3)
 
 - Remove the COVID statement from the homepage carousel.
 - Give the homepage one clear headline that names the product and who it's for.
@@ -102,7 +104,7 @@ Do these in order. Moves 1 and 2 matter most, because they make every later doll
 
 **Done when:** a free accessibility scan comes back clean on the basics, and the homepage loads in a few seconds on a phone.
 
-### Move 5: Start the pulse (weeks 1-4, then ongoing)
+### Move 5: Start the pulse (weeks 1 to 4, then ongoing)
 
 - **Open a branded YouTube channel** ("Beach Athletic" or "The Fitness Frame") separate from your personal one.
 - **Rhythm:** 1 long video a week plus 3 Shorts a week, cut from your Drive library. Post the same Shorts to Instagram Reels, Facebook and TikTok.
@@ -169,22 +171,23 @@ The test: a one-page offer for one segment, a short list of 25 targets, your cal
 
 ## 30-day scorecard
 
-| # | Item | Done |
-|---|---|---|
-| 1 | Meta Pixel + Conversions API live, test purchase verified | ☐ |
-| 2 | Google Ads tag live, products in free Google Shopping | ☐ |
-| 3 | Admin access to GA4, Google Business, Meta Business and domain in your name | ☐ |
-| 4 | 5+ reviews on the $699 page | ☐ |
-| 5 | Demo video and trust block on the $699 page | ☐ |
-| 6 | Payment plan offered at checkout | ☐ |
-| 7 | 15-Minute Launchpad sign-up form + 5-email welcome series live | ☐ |
-| 8 | COVID slide removed, new homepage headline, page descriptions written | ☐ |
-| 9 | Four accessibility basics fixed | ☐ |
-| 10 | Branded YouTube channel open, 4 weeks of posting without a miss | ☐ |
-| 11 | Partnership Readiness Pack assembled | ☐ |
-| 12 | Affiliate program set up, first 3 creators gifted | ☐ |
+| Item | Done |
+|---|---|
+| Meta Pixel + Conversions API live, test purchase verified | ☐ |
+| Google Ads tag live, products in free Google Shopping | ☐ |
+| Admin access to GA4, Google Business, Meta Business and domain in your name | ☐ |
+| 5+ reviews on the $699 page | ☐ |
+| Demo video and trust block on the $699 page | ☐ |
+| Payment plan offered at checkout | ☐ |
+| 15-Minute Launchpad sign-up form + 5-email welcome series live | ☐ |
+| COVID slide removed, new homepage headline, page descriptions written | ☐ |
+| Four accessibility basics fixed | ☐ |
+| Branded YouTube channel open, 4 weeks of posting without a miss | ☐ |
+| Partnership Readiness Pack assembled | ☐ |
+| Affiliate program set up, first 3 creators gifted | ☐ |
 
 Questions on any of it? Call me at (863) 409-5635.
 
 **Grant Sparks**
+
 Spark Sites
