@@ -59,7 +59,7 @@ jobs:
           git config user.email "bot@sparkmysite.com"
           git add -f agents/biz-scout/data/
           git diff --cached --quiet || git commit -m "[biz-scout] daily run $(date +%Y-%m-%d)"
-          git push
+          for i in 1 2 3; do git pull --rebase origin master && git push && break; sleep 5; done
 
       - name: Summary
         if: always()
