@@ -162,13 +162,36 @@ ENTITY_TYPE_MAP = {
 # SFTP Download
 # ---------------------------------------------------------------------------
 
+def _sftp_connect(attempts: int = 5, delay: int = 10):
+    """Open an SFTP session, retrying transient failures (the Sunbiz server
+    sometimes resets the connection during the SSH banner exchange)."""
+    import time
+    import paramiko
+
+    for i in range(1, attempts + 1):
+        transport = None
+        try:
+            transport = paramiko.Transport((SFTP_HOST, 22))
+            transport.banner_timeout = 60
+            transport.connect(username=SFTP_USER, password=SFTP_PASS)
+            return transport, paramiko.SFTPClient.from_transport(transport)
+        except Exception as e:
+            if transport is not None:
+                try:
+                    transport.close()
+                except Exception:
+                    pass
+            if i == attempts:
+                raise
+            print(f"  SFTP connect failed ({e}); retry {i}/{attempts - 1} in {delay * i}s...")
+            time.sleep(delay * i)
+
+
 def sftp_list_directory(remote_dir: str) -> list[str]:
     """List files in an SFTP directory. Useful for discovering paths."""
     import paramiko
 
-    transport = paramiko.Transport((SFTP_HOST, 22))
-    transport.connect(username=SFTP_USER, password=SFTP_PASS)
-    sftp = paramiko.SFTPClient.from_transport(transport)
+    transport, sftp = _sftp_connect()
 
     try:
         files = sftp.listdir(remote_dir)
@@ -189,9 +212,7 @@ def sftp_download_file(remote_path: str, local_path: str) -> bool:
     os.makedirs(local_dir, exist_ok=True)
 
     print(f"  Connecting to {SFTP_HOST}...")
-    transport = paramiko.Transport((SFTP_HOST, 22))
-    transport.connect(username=SFTP_USER, password=SFTP_PASS)
-    sftp = paramiko.SFTPClient.from_transport(transport)
+    transport, sftp = _sftp_connect()
 
     try:
         file_stat = sftp.stat(remote_path)
@@ -216,9 +237,7 @@ def discover_sftp_structure() -> dict:
     import paramiko
 
     print("\n[Discovery] Connecting to SFTP to explore directory structure...")
-    transport = paramiko.Transport((SFTP_HOST, 22))
-    transport.connect(username=SFTP_USER, password=SFTP_PASS)
-    sftp = paramiko.SFTPClient.from_transport(transport)
+    transport, sftp = _sftp_connect()
 
     structure = {}
     try:
