@@ -644,8 +644,8 @@
     "date": "Thursday, ",
     "score": 0,
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-28",
-    "times_seen": 2
+    "last_seen": "2026-10-30",
+    "times_seen": 3
   },
   "biweekly coffee & connections with pcwmb|Thursday, ": {
     "title": "Biweekly Coffee & Connections with PCWMB",
@@ -1228,8 +1228,8 @@
     "date": "Monday 9 N",
     "score": 0,
     "first_seen": "2026-10-21",
-    "last_seen": "2026-10-21",
-    "times_seen": 1
+    "last_seen": "2026-10-30",
+    "times_seen": 2
   },
   "first friday medicare aep check-in | downtown lakeland|Friday 6 N": {
     "title": "First Friday Medicare AEP Check-In | Downtown Lakeland",
@@ -1244,8 +1244,8 @@
     "date": "Tuesday, N",
     "score": 0,
     "first_seen": "2026-10-21",
-    "last_seen": "2026-10-21",
-    "times_seen": 1
+    "last_seen": "2026-10-30",
+    "times_seen": 2
   },
   "sip & spill with sprigs life|Wednesday ": {
     "title": "Sip & Spill with Sprigs Life",
@@ -1276,16 +1276,16 @@
     "date": "Wednesday,",
     "score": 0,
     "first_seen": "2026-10-21",
-    "last_seen": "2026-10-28",
-    "times_seen": 3
+    "last_seen": "2026-10-30",
+    "times_seen": 4
   },
   "community over competition|Thursday 5": {
     "title": "Community Over Competition ",
     "date": "Thursday 5",
     "score": 0,
     "first_seen": "2026-10-21",
-    "last_seen": "2026-10-23",
-    "times_seen": 2
+    "last_seen": "2026-10-30",
+    "times_seen": 3
   },
   "eli brown - halloween night - tampa, fl|Saturday, ": {
     "title": "ELI BROWN - HALLOWEEN NIGHT - Tampa, FL",
@@ -1348,8 +1348,8 @@
     "date": "Thursday, ",
     "score": 0,
     "first_seen": "2026-10-23",
-    "last_seen": "2026-10-28",
-    "times_seen": 2
+    "last_seen": "2026-10-30",
+    "times_seen": 3
   },
   "eli brown - halloween night - tampa, fl|Saturday 3": {
     "title": "ELI BROWN - HALLOWEEN NIGHT - Tampa, FL",
@@ -1388,8 +1388,8 @@
     "date": "Tuesday 17",
     "score": 0,
     "first_seen": "2026-10-28",
-    "last_seen": "2026-10-28",
-    "times_seen": 1
+    "last_seen": "2026-10-30",
+    "times_seen": 2
   },
   "ribbon cutting for residence inn lakeland|Thursday, ": {
     "title": "Ribbon Cutting for Residence Inn Lakeland",
@@ -1468,8 +1468,8 @@
     "date": "Saturday, ",
     "score": 0,
     "first_seen": "2026-10-28",
-    "last_seen": "2026-10-28",
-    "times_seen": 1
+    "last_seen": "2026-10-30",
+    "times_seen": 2
   },
   "south florida business expo & vip networking|Wednesday,": {
     "title": "South Florida Business EXPO & VIP Networking",
@@ -1517,6 +1517,62 @@
     "score": 0,
     "first_seen": "2026-10-28",
     "last_seen": "2026-10-28",
+    "times_seen": 1
+  },
+  "free rockstar connect carrollwood networking event (november)|Wednesday,": {
+    "title": "Free Rockstar Connect Carrollwood Networking Event (November) ",
+    "date": "Wednesday,",
+    "score": 0,
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "times_seen": 1
+  },
+  "bowling at seminole lanes networking|Tuesday, N": {
+    "title": "BOWLING AT SEMINOLE LANES NETWORKING",
+    "date": "Tuesday, N",
+    "score": 0,
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "times_seen": 1
+  },
+  "ribbon cutting & business after hours - bethesda assisted living|Thursday, ": {
+    "title": "Ribbon Cutting & Business After Hours - Bethesda Assisted Living",
+    "date": "Thursday, ",
+    "score": 0,
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "times_seen": 1
+  },
+  "business after hours - freddie mullis plumbing & pipe pros|Thursday, ": {
+    "title": "Business After Hours - Freddie Mullis Plumbing & Pipe Pros",
+    "date": "Thursday, ",
+    "score": 0,
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "times_seen": 1
+  },
+  "health & wellness panel luncheon|Thursday 1": {
+    "title": "Health & Wellness Panel Luncheon",
+    "date": "Thursday 1",
+    "score": 0,
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "times_seen": 1
+  },
+  "first friday medicare aep check-in | downtown lakeland|Friday, No": {
+    "title": "First Friday Medicare AEP Check-In | Downtown Lakeland",
+    "date": "Friday, No",
+    "score": 0,
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "times_seen": 1
+  },
+  "from the heart | state of the main street mixer|Thursday 1": {
+    "title": "From The Heart | State of the Main Street Mixer",
+    "date": "Thursday 1",
+    "score": 0,
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
     "times_seen": 1
   }
 }
