@@ -75,7 +75,7 @@ def scrape_event_scraper_pro(client: ApifyClient, config: dict) -> list[dict]:
     print(f"  Scraping Meetup/Eventbrite/Lu.ma for {', '.join(cities)}...")
     run = client.actor(source_config["actor"]).call(
         run_input=actor_input,
-        run_timeout=timedelta(seconds=180),
+        run_timeout=timedelta(seconds=420),
     )
     items = list(client.dataset(run.default_dataset_id).iterate_items())
     print(f"  Found {len(items)} events from Event Scraper Pro")
@@ -201,6 +201,7 @@ def score_events_with_ai(events: list[dict], config: dict) -> list[dict]:
     avatar_context = "\n".join(avatar_descriptions)
 
     primary_city = config["location"]["primary_city"]
+    territory = ", ".join(config["location"]["cities"])
 
     # Batch events into groups of 10 for efficiency
     scored_events = []
@@ -225,13 +226,15 @@ TARGET AVATARS (who we want to meet):
 {avatar_context}
 
 SCORING GUIDE:
-- 9-10: Perfect fit. Event is specifically for our avatars (small business networking, entrepreneur meetups, women in business). High attendee count. Close to {primary_city}.
+- 9-10: Perfect fit. Event is specifically for our avatars (small business networking, entrepreneur meetups, women in business). High attendee count. Inside our territory.
 - 7-8: Strong fit. Our avatars will likely be there. Business-adjacent events, chamber of commerce, coworking meetups.
 - 5-6: Decent fit. Some avatars might attend. General professional events, community gatherings, market/vendor events.
 - 3-4: Weak fit. Mostly wrong audience but some crossover possible.
 - 1-2: Not relevant. Purely social, niche hobby, corporate-only, or online-only.
 
-FACTOR IN: avatar match (most important), proximity to {primary_city}, event size, networking opportunity, and specificity of the event to our ideal clients.
+OUR TERRITORY: {territory}. Every city on that list counts as local; do not mark an event down for being in any of them, only for being outside the list.
+
+FACTOR IN: avatar match (most important), being inside our territory, event size, networking opportunity, and specificity of the event to our ideal clients.
 
 EVENTS TO SCORE:
 {events_text}

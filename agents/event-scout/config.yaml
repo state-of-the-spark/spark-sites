@@ -22,6 +22,10 @@ location:
     - "Kissimmee"
     - "Brandon"
     - "St. Petersburg"
+    - "Cocoa"
+    - "Cocoa Beach"
+    - "Cape Canaveral"
+    - "New Smyrna Beach"
 
 # --- Target Avatars ---
 # These define WHO you want to meet at events.
@@ -96,7 +100,11 @@ sources:
       - "business networking Lakeland FL"
       - "entrepreneur networking Tampa FL"
       - "small business networking Orlando FL"
-    max_events: 30
+      - "business networking Cocoa FL"
+      - "small business networking Cocoa Beach FL"
+      - "entrepreneur networking Cape Canaveral FL"
+      - "business networking New Smyrna Beach FL"
+    max_events: 60
 
 # --- Schedule ---
 schedule:
