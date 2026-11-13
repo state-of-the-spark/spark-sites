@@ -122,3 +122,32 @@ Homepage 200, `X-nananana: Batcache-Hit`, edge MISS once after the purge then HI
 - Mobile on live (not asked; the site's bot check blocks mobile user agents). Local 390 px frames viewed: the vine is a thin line about 18 px tall at that width with small leaves, readable but small.
 - Dark mode and a real phone were not viewed. A browser console error "atob" appeared on the logged-in homepage; it comes from the site's own scripts (the plugin prints nothing for administrators) and was not investigated.
 - Real-time frame timing on live was captured once (the 6.5 s load); the timed frames are clock-set, not wall-clock.
+
+## Dashboard animation (0.1.3)
+
+Result: **live (plugin 0.1.3), not rolled back.** Site confirmed before every write (`siteurl` = https://sparkmysite.com, Pressable site 1614838; each write command also aborts unless that matches).
+
+### What changed
+Only the admin dashboard (`/living/`, the shortcode and the wp-admin page) plus the version number.
+- The vine now stops at 75 percent of the width (stem path ends at x 600 of the 800 unit viewBox; measured 75.0 percent at 1366 and at 390 wide). Stem duration 1.8 s, same easing. Seven leaves and two tendrils were re-spaced along the shorter stem and their delays recomputed from the easing curve so each unfurls as the tip passes.
+- The small bud and its halo ring are gone. A Spark burst grows out of the vine tip the moment the stem finishes: scale 0 to 1.18 to 1 with a slight rotation, 0.55 s, then it stays as the resting ornament. Size 36.8 px wide at 1366 (about 2.4 times the leaf height); 1.5 times larger on phones so it stays readable (20.6 px at 390).
+- The burst is the real brand mark, redrawn inline (no file request): 9 flared rays plus the core circle from `C:\Users\grant\Documents\GitHub\spark-sites\core\brand\assets\spark-mark.svg`, same angles and ray lengths, filled spark blue #0ECAEB (stays the same in dark mode).
+- One CSS value drives the timing: `--sl-stem` (1.8 s). `--sl-burst-at` equals it, and the burst, the evolved card bubbles and the card gradient all start from `--sl-burst-at`, so they cannot drift apart. Bubbles start at 1.8 s (was a fixed 2.6 s), the gradient wash 0.1 s later.
+- `prefers-reduced-motion: reduce`: vine drawn to 75 percent, full burst, resting gradient, no bubbles, zero running animations (checked, `getAnimations()` returned 0).
+- Version 0.1.3 in `spark-living.php` (header and constant) and both `editor.asset.php`; README title and a "Dashboard animation (0.1.3)" section.
+
+### Local
+t10 (36), t11 (34), t12 (15), t13 (42), t14 (16) and `tests/stats-check.js` (28) all pass. Local frames viewed (desktop, 390 px, dark, reduced motion, plus a 3x zoom of the burst on the stem end): `C:\Users\grant\Documents\GitHub\spark-sites\sites\living-websites\audit\screenshots\dash-anim3-local-*.png`.
+
+### Deploy
+Same Pressable WP-CLI route, in-place patch with md5 guards (the command refuses to write unless the live old md5 and the patch md5 both match). Old files copied to `wp-content/sl-bak-013/` first, written as `.new`, md5 checked, then renamed. Live md5 after: dashboard f9b694fa to **dbf4e952f25526c823a3b6b25dd3548b**, `spark-living.php` d28e2041 to **e4a3ac8576ff39f81e49647b89af1109**, both `editor.asset.php` 42d66566 to **908f129fa6f65c3648b8d9315b970996**; all four equal the local files. `SPARK_LIVING_VERSION` reads 0.1.3, plugin active, 0 stray `.new` files, 0 stray chunk files. The temporary backup folder and chunk files were removed after verification. Edge cache purged and object cache flushed.
+
+### Seen live (as the owner's administrator, user ID 17393, no password touched)
+Short-lived (30 minute) login cookie from WP-CLI, desktop user agent in my own playwright-core Chromium (also used at 390 px width, since the bot check blocks mobile user agents). Frames at exact times (animations paused and clock set): 1.6 s (stem nearly done, no burst yet), 2.0 s (burst mid growth, first bubbles starting), 2.4 s (0.6 s after the burst starts, bubbles mid flight), rest, at 1366 and 390; plus dark mode rest and reduced motion. Files are `live-dash-anim3-*.png` in `C:\Users\grant\Documents\GitHub\spark-sites\sites\living-websites\audit\screenshots\`. Stem measured 75.0 percent live at both widths. Browser page errors: none. The session token created for the cookie was destroyed afterwards.
+
+### Logged out, after the deploy
+/ 200, /living/ 404. Pressable PHP log (last 7 days, 220 entries): nothing from Spark Living; newest entry 16:57 UTC, before the deploy.
+
+### Not verified
+- Wall-clock timing on live: frames are clock-set, and the real-time sampler returned nothing on live; the 1.82 s stem finish was measured only locally in real time.
+- A real phone and a real mobile user agent (frames at 390 px use a desktop user agent).

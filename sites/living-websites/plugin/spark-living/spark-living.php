@@ -3,7 +3,7 @@
  * Plugin Name:       Spark Living
  * Plugin URI:        https://sparkmysite.com/
  * Description:       Living Websites by Spark Sites. A site that tests one improvement at a time, keeps what brings in more leads, and logs every change.
- * Version:           0.1.2
+ * Version:           0.1.3
  * Requires at least: 6.3
  * Requires PHP:      8.1
  * Author:            Spark Sites
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SPARK_LIVING_VERSION', '0.1.2' );
+define( 'SPARK_LIVING_VERSION', '0.1.3' );
 define( 'SPARK_LIVING_DB_VERSION', '1' );
 define( 'SPARK_LIVING_FILE', __FILE__ );
 define( 'SPARK_LIVING_DIR', plugin_dir_path( __FILE__ ) );

@@ -1,4 +1,4 @@
-# Spark Living v0.1.2
+# Spark Living v0.1.3
 
 Living Websites by Spark Sites. A WordPress plugin that runs one split test at a time on a site, keeps what brings in more leads, logs every change, and reports through a REST API.
 
@@ -158,6 +158,10 @@ Before this change the sentence used the total number of log entries, so every c
 ## Dashboard animation (0.1.2)
 
 The dashboard (admin only) plays two one-time animations on load, in pure inline SVG and CSS: a vine that grows under the title (about 2.2 s), then, after about 2.6 s, small spark blue bubbles rise through the first tally card ("evolved") and it settles into a soft spark blue gradient. Transform and opacity only, no libraries, no requests. A three-line inline script sets how far the bubbles rise to the card height (the CSS has a default if it does not run). With `prefers-reduced-motion: reduce` the vine is fully drawn, the card shows its resting gradient and nothing moves. Nothing outside the dashboard changed.
+
+## Dashboard animation (0.1.3)
+
+The vine now stops at about 75 percent of the width (1.8 s). A Spark burst, redrawn inline from the brand logo mark, grows out of the vine tip the moment the stem finishes (0.55 s with a slight overshoot) and stays as the resting ornament. The evolved card bubbles start at that same moment. One CSS value, `--sl-stem`, drives the stem, the burst and the bubbles, so they cannot drift apart. Reduced motion shows the finished state with no movement.
 
 ## Cache flush
 
