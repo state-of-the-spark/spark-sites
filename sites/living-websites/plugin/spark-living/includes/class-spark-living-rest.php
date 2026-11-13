@@ -9,6 +9,7 @@
  *   GET  /wp-json/spark-living/v1/stats[?experiment_id=ID]
  *   GET  /wp-json/spark-living/v1/log[?per_page=50&page=1]
  *   POST /wp-json/spark-living/v1/tests
+ *   POST /wp-json/spark-living/v1/tests/{id}          (edit change_type, a_label, b_label only; allowed on a running test)
  *   POST /wp-json/spark-living/v1/tests/{id}/start   (needs sessions_14d >= 100, or force:true)
  *   POST /wp-json/spark-living/v1/tests/{id}/conclude
  *
@@ -99,6 +100,15 @@ final class Spark_Living_Rest {
 		);
 		register_rest_route(
 			$ns,
+			'/tests/(?P<id>\d+)',
+			array(
+				'methods'             => WP_REST_Server::EDITABLE,
+				'callback'            => array( __CLASS__, 'update_test' ),
+				'permission_callback' => array( __CLASS__, 'can_manage' ),
+			)
+		);
+		register_rest_route(
+			$ns,
 			'/tests/(?P<id>\d+)/start',
 			array(
 				'methods'             => WP_REST_Server::CREATABLE,
@@ -125,6 +135,7 @@ final class Spark_Living_Rest {
 	 */
 	public static function present_experiment( array $exp ): array {
 		unset( $exp['snapshot'] );
+		$exp['comparison'] = Spark_Living_Store::describe( $exp );
 		return $exp;
 	}
 
@@ -156,6 +167,7 @@ final class Spark_Living_Rest {
 				'site'           => home_url(),
 				'now_utc'        => Spark_Living_Util::mysql_utc(),
 				'running'        => $running ? array_merge( self::present_experiment( $running ), array( 'live' => Spark_Living_Engine::snapshot( $running ) ) ) : null,
+					'sources'        => Spark_Living_Sources::for_rest(),
 				'queued'         => array_map( array( __CLASS__, 'present_experiment' ), $queue ),
 				'promoted'       => $promoted,
 				'lift'           => Spark_Living_Engine::lift_summary(),
@@ -219,7 +231,9 @@ final class Spark_Living_Rest {
 	 *
 	 * Body (JSON): name, element_type (block|selector), target, hypothesis,
 	 * variants {A:{label,changes[]},B:{label,changes[],css}}, tier (1|2),
-	 * device (all|mobile|desktop), start (bool). With start:true the same
+	 * device (all|mobile|desktop), change_type (wording|color|shape|placement|
+ * visibility|style|block), a_label, b_label (what visitors in A and B see, plain
+ * text), start (bool). With start:true the same
 	 * eligibility rule as POST /tests/{id}/start applies: send sessions_14d
 	 * (or force:true as an administrator).
 	 *
@@ -271,6 +285,39 @@ final class Spark_Living_Rest {
 			}
 		}
 		return new WP_REST_Response( self::present_experiment( (array) Spark_Living_Store::get( $id ) ), 201 );
+	}
+
+	/**
+	 * POST /tests/{id}
+	 *
+	 * Body: any of change_type (wording, color, shape, placement, visibility,
+	 * style, block), a_label, b_label (plain text, 200 characters). Only these
+	 * three descriptive fields can be changed here, in any status including
+	 * running; assignment, variants, weights, start time and counts are never
+	 * touched. Send an empty string to clear a field.
+	 *
+	 * @param WP_REST_Request $request Request.
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public static function update_test( WP_REST_Request $request ) {
+		$id     = absint( $request['id'] );
+		$params = $request->get_json_params();
+		$params = is_array( $params ) ? $params : $request->get_params();
+
+		$fields = array();
+		foreach ( array( 'change_type', 'a_label', 'b_label' ) as $key ) {
+			if ( array_key_exists( $key, $params ) ) {
+				$fields[ $key ] = $params[ $key ];
+			}
+		}
+		if ( ! $fields ) {
+			return new WP_Error( 'spark_living_nothing', __( 'Send at least one of change_type, a_label, b_label.', 'spark-living' ), array( 'status' => 400 ) );
+		}
+		$done = Spark_Living_Store::update_descriptors( $id, $fields );
+		if ( is_wp_error( $done ) ) {
+			return $done;
+		}
+		return new WP_REST_Response( self::present_experiment( (array) Spark_Living_Store::get( $id ) ), 200 );
 	}
 
 	/**

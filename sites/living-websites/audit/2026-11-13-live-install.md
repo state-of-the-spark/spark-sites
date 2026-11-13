@@ -151,3 +151,37 @@ Short-lived (30 minute) login cookie from WP-CLI, desktop user agent in my own p
 ### Not verified
 - Wall-clock timing on live: frames are clock-set, and the real-time sampler returned nothing on live; the 1.82 s stem finish was measured only locally in real time.
 - A real phone and a real mobile user agent (frames at 390 px use a desktop user agent).
+
+## Dashboard sources and current vs challenger (0.1.4)
+
+Result: **live (plugin 0.1.4), not rolled back.** Site confirmed before every write (`siteurl` = https://sparkmysite.com, Pressable site 1614838; each write command aborts unless that matches).
+
+### What changed
+Only the admin dashboard (`/living/`, the shortcode and the wp-admin page), two REST additions and a new small class.
+- **Data sources row** just above the Live numbers table: one chip per source with a 16 px logo, the name, a status dot with the word Live (green) or Paused (grey), a muted line on what it supplies and one detail line. Built from a registry (`Spark_Living_Sources`, new file `includes/class-spark-living-sources.php`) passed through the `spark_living_data_sources` filter. Two sources ship: Site visit log (Live only while a test is running and the tracking script is being printed; logo is the site icon with an inline leaf fallback; detail "Last event: ..." or "No events yet") and Google Analytics (inline SVG bars, Paused unless the `spark_living_ga_connected` filter returns true; detail "Not connected. Traffic count entered by hand when the test started (N sessions)"). `GET /state` returns the list under `sources`.
+- **Current versus Challenger** in the Current test card, after the hypothesis: "What is being tested" (Wording, Colour, Shape, Placement, Visibility, Style or Block content) and a Current (variant A) row and a Challenger (variant B) row. New optional test fields `change_type`, `a_label`, `b_label`, accepted by `POST /tests` and by a new `POST /tests/{id}` that edits only those three fields (allowed on a running test). Wording tests on a button or link target show each text as a small pill. The selector stays in the card, smaller.
+- Phone width: the numbers tables now scroll sideways inside their own box instead of widening the page (the Live numbers table made the page 476 px wide at 390 px before; CSS only, markup unchanged).
+- Version 0.1.4 in `spark-living.php` (header and constant) and both `editor.asset.php`. README documents the fields, the filters and the `sources` key. The vine, burst and bubble animation was not touched.
+
+### Where the original text lives
+Nowhere in the test. Variant A of a text-swap test carries no change, only B stores the replacement text, so without a label the default Current reads "Original text (unchanged)". Test 46907 needed the label: the exact original text was read from the live homepage HTML (administrator view, which is always variant A: `<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="#contact">Get started</a>`), capital G, lowercase s. `a_label` on test 46907 was set to `Get started` (through the plugin's own `Spark_Living_Store::update_descriptors()` inside WP-CLI, no application password created).
+
+### Local
+t10 (36), t11 (34), t12 (15), t13 (42), t14 (16), new t15 (70) and `tests/stats-check.js` (28) all pass. Local frames viewed: `C:\Users\grant\Documents\GitHub\spark-sites\sites\living-websites\audit\screenshots\local-dash-*.png`.
+
+### Deploy
+10 files, zip md5 fe75ccb0040e889788b4e0ded3432e4f, fetched by the site itself from a temporary branch of the public repository (deleted afterwards) and md5 checked before and after extraction, instead of base64 chunks. Old files were copied aside first; each file was written as `.new`, md5 checked, then renamed (new class file first, dashboard last). Live md5 after, all equal to the local files: `spark-living.php` 2b51c270226858b782150cee086ca026, dashboard 9e9a0bd5900aef6f1d1b7c116a26b7ab, store 6095ad674757366f19c3e03fa837f15c, rest 7f15270c04773babf62daaeb5e0910c3, util 85d908a8d5fec8a7ac01fbf579b01081, metrics 8be1330e5f12767b0daaa7c97865a7cc, frontend 10a0fd593965f6b928864f7651818f9a, sources (new) 5cdc7d64d4461fcfd99c13fbed7e9317, both `editor.asset.php` 94b542e9610a01369e7b8611556b665c. `wp plugin get`: active, 0.1.4. 0 stray `.new` files; the temporary folder was removed. Edge cache purged and object cache flushed.
+
+### Test 46907 before and after
+Before the deploy and after the label: status running, start 2026-11-13 13:58:11 UTC, variants md5 8a72dc8f..., weights md5 911ae2d7..., start_sessions_14d 137, 11 event rows in total (1 under 46907) with the same row digest fd53052ffde6f83396866c1ce6c0a60c. Only `a_label` changed (empty to "Get started").
+
+### Seen live (as the owner's administrator, user ID 17393, no password touched)
+30 minute login cookie from WP-CLI, desktop user agent in my own playwright-core Chromium (also at 390 px, since the bot check blocks mobile user agents); frames after the animation settled: `live-dash-sources-desktop.png`, `live-dash-current-vs-challenger-desktop.png`, `live-dash-sources-and-test-mobile.png`, `live-dash-sources-and-test-dark.png` in the screenshots folder. The session token was destroyed afterwards (`verify` returned false). No browser page errors. The page showed Site visit log Live (site icon, "Last event: 3 hours ago", the one real visitor event), Google Analytics Paused with "(137 sessions)", Current "Get started" and Challenger "Get My Free Website Plan".
+
+### Logged out, after the deploy
+/ 200, /living/ 404 (curl). Pressable PHP log (last 7 days): nothing from Spark Living; the newest entries (18:03 and 18:05 UTC) are a WordPress core site health and cron "Unknown named parameter $interval" error that has recurred since 2026-11-09.
+
+### Not verified
+- A real phone and a real mobile user agent (frames at 390 px use a desktop user agent).
+- Logged-out homepage in a browser: the site's bot check (a hashcash challenge) did not pass in my headless Chromium this time, so the logged-out checks were HTTP status only (curl).
+- The Analytics chip turning Live on the live site (it needs a real connection; covered locally by the filter test).

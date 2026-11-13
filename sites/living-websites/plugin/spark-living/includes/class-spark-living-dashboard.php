@@ -277,6 +277,37 @@ body.sl-page{margin:0;background:#ffffff}
 @keyframes sl-wob{from{translate:calc(var(--w) * -1) 0}to{translate:var(--w) 0}}
 @keyframes sl-wash{0%{opacity:0}45%{opacity:1}100%{opacity:.78}}
 @media (prefers-reduced-motion:reduce){.sl-vine .sl-stem,.sl-vine .sl-tend{animation:none;stroke-dashoffset:0}.sl-vine .sl-leaf,.sl-vine .sl-burst{animation:none}.sl-evolved::before{animation:none;opacity:.78}.sl-evolved .sl-bub{display:none}}
+/* Data sources and Current versus Challenger (0.1.4). */
+.sl-dash{--sl-live:#1f6b3a;--sl-grey:#7a8780;--sl-chal:#0b7a8f}
+@media (prefers-color-scheme:dark){.sl-dash{--sl-live:#7fd39b;--sl-grey:#8d9c93;--sl-chal:#4fd3ea}}
+.sl-dash .sl-sources{margin:1.25rem 0 .75rem}
+.sl-dash .sl-sources h3{font-size:1rem;margin:0 0 .4rem}
+.sl-dash ul.sl-src-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.sl-dash li.sl-src{display:flex;align-items:flex-start;gap:.6rem;background:var(--sl-card);border:1px solid var(--sl-line);border-radius:8px;padding:.55rem .8rem;flex:1 1 17rem;min-width:0;max-width:100%}
+.sl-dash .sl-src-ico{flex:0 0 auto;box-sizing:border-box;width:24px;height:24px;padding:3px;margin-top:.1rem;background:#fff;border:1px solid var(--sl-line);border-radius:5px;display:flex;align-items:center;justify-content:center}
+.sl-dash .sl-src-ico svg,.sl-dash .sl-src-ico img{display:block;width:16px;height:16px;object-fit:contain}
+.sl-dash .sl-src-body{display:flex;flex-direction:column;gap:.1rem;min-width:0}
+.sl-dash .sl-src-top{display:flex;flex-wrap:wrap;align-items:center;gap:.15rem .6rem}
+.sl-dash .sl-src-name{font-size:.95rem}
+.sl-dash .sl-src-state{display:inline-flex;align-items:center;gap:.35rem;font-size:.85rem;font-weight:600}
+.sl-dash .sl-dot{display:inline-block;width:.65rem;height:.65rem;border-radius:50%;background:var(--sl-grey)}
+.sl-dash li.sl-src-live .sl-dot{background:var(--sl-live);box-shadow:0 0 0 3px color-mix(in srgb,var(--sl-live) 25%,transparent)}
+.sl-dash li.sl-src-paused .sl-src-state{color:var(--sl-muted)}
+.sl-dash .sl-src-what,.sl-dash .sl-src-detail{font-size:.85rem;line-height:1.4;color:var(--sl-muted);overflow-wrap:anywhere}
+.sl-dash p.sl-cmp-type{margin:.75rem 0 .4rem}
+.sl-dash dl.sl-cmp{margin:0;display:grid;grid-template-columns:minmax(0,1fr);gap:.5rem}
+.sl-dash .sl-cmp-row{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:.2rem .9rem;align-items:baseline;padding:.5rem .75rem;border:1px solid var(--sl-line);border-left-width:5px;border-radius:6px;background:var(--sl-bg)}
+.sl-dash .sl-cmp-a{border-left-color:var(--sl-grey)}
+.sl-dash .sl-cmp-b{border-left-color:var(--sl-chal)}
+.sl-dash .sl-cmp-row dt{margin:0;font-weight:700}
+.sl-dash .sl-cmp-row dt .sl-muted{display:block;font-weight:400;font-size:.8rem}
+.sl-dash .sl-cmp-row dd{margin:0;overflow-wrap:anywhere}
+.sl-dash .sl-pill{display:inline-block;max-width:100%;padding:.2rem .85rem;border-radius:999px;border:1px solid var(--sl-line);background:var(--sl-card);font-weight:600;line-height:1.35}
+.sl-dash .sl-cmp-b .sl-pill{border-color:var(--sl-chal);box-shadow:inset 0 0 0 1px var(--sl-chal)}
+.sl-dash .sl-cmp-q{font-weight:600}
+.sl-dash .sl-cmp-plain{font-style:italic}
+.sl-dash .sl-sel{font-size:.8rem;opacity:.9}
+@media (max-width:600px){.sl-dash table{display:block;max-width:100%;overflow-x:auto}.sl-dash .sl-cmp-row{grid-template-columns:minmax(0,1fr)}.sl-dash .sl-cmp-row dt .sl-muted{display:inline;margin-left:.4rem}.sl-dash li.sl-src{flex-basis:100%}}
 .sl-dash a:focus,.sl-dash button:focus,.sl-dash input:focus,.sl-dash select:focus,.sl-dash textarea:focus{outline:3px solid var(--sl-accent);outline-offset:2px}
 </style>';
 	}
@@ -338,6 +369,7 @@ body.sl-page{margin:0;background:#ffffff}
 			self::render_running( $running, $admin_controls );
 		} else {
 			echo '<p>' . esc_html__( 'No test is running right now. The next one starts as soon as the brain queues it.', 'spark-living' ) . '</p>';
+			echo Spark_Living_Sources::render(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 		if ( $admin_controls ) {
 			self::render_queue();
@@ -416,6 +448,49 @@ body.sl-page{margin:0;background:#ffffff}
 	}
 
 	/**
+	 * One side of the comparison. A wording test shows the text in quotes; on a
+	 * button or link target each text is a small pill. Everything is escaped.
+	 *
+	 * @param string $text   Description.
+	 * @param bool   $quoted Wrap in quotation marks.
+	 * @param bool   $pill   Show as a pill.
+	 * @return string
+	 */
+	private static function cmp_value( string $text, bool $quoted, bool $pill ): string {
+		$shown = $quoted ? "\u{201C}" . $text . "\u{201D}" : $text;
+		$class = $quoted ? 'sl-cmp-q' : 'sl-cmp-plain';
+		if ( $pill && $quoted ) {
+			return '<span class="sl-pill">' . esc_html( $shown ) . '</span>';
+		}
+		return '<span class="' . esc_attr( $quoted ? $class : '' ) . '">' . esc_html( $shown ) . '</span>';
+	}
+
+	/**
+	 * "What is being tested", then the Current (A) and Challenger (B) rows.
+	 *
+	 * @param array $exp Running experiment.
+	 * @return string HTML.
+	 */
+	private static function comparison( array $exp ): string {
+		$d = Spark_Living_Store::describe( $exp );
+		ob_start();
+		?>
+		<p class="sl-cmp-type"><strong><?php esc_html_e( 'What is being tested:', 'spark-living' ); ?></strong> <span class="sl-cmp-kind"><?php echo esc_html( $d['type_label'] ); ?></span></p>
+		<dl class="sl-cmp">
+			<div class="sl-cmp-row sl-cmp-a">
+				<dt><?php esc_html_e( 'Current', 'spark-living' ); ?> <span class="sl-muted"><?php esc_html_e( 'variant A', 'spark-living' ); ?></span></dt>
+				<dd><?php echo self::cmp_value( $d['current'], $d['current_quoted'], $d['pill'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></dd>
+			</div>
+			<div class="sl-cmp-row sl-cmp-b">
+				<dt><?php esc_html_e( 'Challenger', 'spark-living' ); ?> <span class="sl-muted"><?php esc_html_e( 'variant B', 'spark-living' ); ?></span></dt>
+				<dd><?php echo self::cmp_value( $d['challenger'], $d['challenger_quoted'], $d['pill'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></dd>
+			</div>
+		</dl>
+		<?php
+		return (string) ob_get_clean();
+	}
+
+	/**
 	 * The running test block.
 	 *
 	 * @param array $exp            Experiment.
@@ -429,16 +504,18 @@ body.sl-page{margin:0;background:#ffffff}
 		?>
 	<div class="sl-card">
 		<p><strong><?php echo esc_html( $exp['name'] ); ?></strong>
-			<span class="sl-muted">(<?php echo esc_html( 'block' === $exp['element_type'] ? __( 'Living Block', 'spark-living' ) : $exp['target'] ); ?>)</span></p>
+			<span class="sl-muted sl-sel">(<?php echo esc_html( 'block' === $exp['element_type'] ? __( 'Living Block', 'spark-living' ) : $exp['target'] ); ?>)</span></p>
 		<?php if ( '' !== $exp['hypothesis'] ) : ?>
 		<p><?php echo esc_html( $exp['hypothesis'] ); ?></p>
 		<?php endif; ?>
+		<?php echo self::comparison( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		<p class="sl-muted"><?php echo esc_html( sprintf( /* translators: 1: days, 2: hard stop days, 3: start date */ __( 'Day %1$s of %2$d (started %3$s).', 'spark-living' ), number_format_i18n( floor( $snap['days_running'] ) + 1 ), Spark_Living_Stats::HARD_STOP_DAYS, self::date( (string) $exp['start_date'] ) ) ); ?></p>
 		<p class="sl-muted"><?php echo esc_html( self::device_label( (string) $exp['device'] ) ); ?></p>
 			<?php if ( $exp['forced_start'] ) : ?>
 		<p class="sl-warn" id="sl-forced"><?php echo esc_html( self::forced_label( (int) $exp['start_sessions_14d'] ) ); ?></p>
 		<?php endif; ?>
 	</div>
+		<?php echo Spark_Living_Sources::render(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	<table>
 		<caption><?php esc_html_e( 'Live numbers', 'spark-living' ); ?></caption>
 		<thead><tr>

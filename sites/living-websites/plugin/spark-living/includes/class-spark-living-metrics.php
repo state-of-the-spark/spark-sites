@@ -260,6 +260,23 @@ final class Spark_Living_Metrics {
 	}
 
 	/**
+	 * Timestamp of the newest event, or null if there are none.
+	 *
+	 * @param int|null $experiment_id Limit to one experiment; null for any row.
+	 * @return string|null UTC datetime.
+	 */
+	public static function latest_event_at( ?int $experiment_id = null ): ?string {
+		global $wpdb;
+		$t = self::table();
+		if ( null === $experiment_id ) {
+			$max = $wpdb->get_var( "SELECT MAX(created_at) FROM {$t}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		} else {
+			$max = $wpdb->get_var( $wpdb->prepare( "SELECT MAX(created_at) FROM {$t} WHERE experiment_id = %d", $experiment_id ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		}
+		return $max ? (string) $max : null;
+	}
+
+	/**
 	 * Delete events older than a number of days.
 	 *
 	 * @param int $days Retention in days.

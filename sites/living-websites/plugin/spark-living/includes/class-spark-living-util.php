@@ -212,6 +212,29 @@ final class Spark_Living_Util {
 	}
 
 	/**
+	 * The change type a test may declare (what is being tested).
+	 *
+	 * @param mixed $type Raw type.
+	 * @return string One of Spark_Living_Store::CHANGE_TYPES, or an empty string.
+	 */
+	public static function sanitize_change_type( $type ): string {
+		$type = strtolower( trim( sanitize_text_field( (string) $type ) ) );
+		return in_array( $type, Spark_Living_Store::CHANGE_TYPES, true ) ? $type : '';
+	}
+
+	/**
+	 * A short plain-text description of what one variant shows (a_label, b_label).
+	 * Same sanitiser as the other text fields, capped at 200 characters.
+	 *
+	 * @param mixed $label Raw label.
+	 * @return string
+	 */
+	public static function sanitize_label( $label ): string {
+		$label = sanitize_text_field( (string) $label );
+		return function_exists( 'mb_substr' ) ? mb_substr( $label, 0, 200 ) : substr( $label, 0, 200 );
+	}
+
+	/**
 	 * Sanitize a list of selector-swap changes.
 	 *
 	 * Allowed ops: text, href, add_class, remove_class, style.

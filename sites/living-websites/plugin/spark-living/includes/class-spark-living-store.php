@@ -28,6 +28,9 @@ final class Spark_Living_Store {
 
 	public const DEVICES = array( 'all', 'mobile', 'desktop' );
 
+	/** What a test may say it is testing (0.1.4). */
+	public const CHANGE_TYPES = array( 'wording', 'color', 'shape', 'placement', 'visibility', 'style', 'block' );
+
 	/**
 	 * Register both private post types.
 	 */
@@ -98,6 +101,9 @@ final class Spark_Living_Store {
 			'revert_checked' => false,
 			'reverted'      => false,
 			'snapshot'      => array(),
+			'change_type'   => '',
+			'a_label'       => '',
+			'b_label'       => '',
 		);
 	}
 
@@ -183,6 +189,9 @@ final class Spark_Living_Store {
 		$values['variants']     = $variants;
 		$values['tier']         = $tier;
 		$values['device']       = $device;
+		$values['change_type']  = Spark_Living_Util::sanitize_change_type( $args['change_type'] ?? '' );
+		$values['a_label']      = Spark_Living_Util::sanitize_label( $args['a_label'] ?? '' );
+		$values['b_label']      = Spark_Living_Util::sanitize_label( $args['b_label'] ?? '' );
 		foreach ( $values as $key => $value ) {
 			update_post_meta( $id, '_spark_living_' . $key, wp_slash( $value ) );
 		}
@@ -237,6 +246,152 @@ final class Spark_Living_Store {
 				update_post_meta( $id, '_spark_living_' . $key, wp_slash( $value ) );
 			}
 		}
+	}
+
+	/**
+	 * Edit only the descriptive fields of a test (change_type, a_label, b_label).
+	 * Allowed in any status, including running: these three fields never feed
+	 * assignment, variants, weights, start time or counts. Only keys present in
+	 * $fields are changed; an empty string clears a field.
+	 *
+	 * @param int   $id     Experiment ID.
+	 * @param array $fields Any of change_type, a_label, b_label.
+	 * @return true|WP_Error
+	 */
+	public static function update_descriptors( int $id, array $fields ) {
+		if ( ! self::get( $id ) ) {
+			return new WP_Error( 'spark_living_missing', __( 'Test not found.', 'spark-living' ), array( 'status' => 404 ) );
+		}
+		$clean = array();
+		if ( array_key_exists( 'change_type', $fields ) ) {
+			$raw  = trim( (string) $fields['change_type'] );
+			$type = Spark_Living_Util::sanitize_change_type( $raw );
+			if ( '' !== $raw && '' === $type ) {
+				return new WP_Error( 'spark_living_change_type', __( 'change_type must be wording, color, shape, placement, visibility, style or block.', 'spark-living' ), array( 'status' => 400 ) );
+			}
+			$clean['change_type'] = $type;
+		}
+		if ( array_key_exists( 'a_label', $fields ) ) {
+			$clean['a_label'] = Spark_Living_Util::sanitize_label( $fields['a_label'] );
+		}
+		if ( array_key_exists( 'b_label', $fields ) ) {
+			$clean['b_label'] = Spark_Living_Util::sanitize_label( $fields['b_label'] );
+		}
+		self::update( $id, $clean );
+		return true;
+	}
+
+	/**
+	 * Display name of a change type.
+	 *
+	 * @param string $type One of CHANGE_TYPES.
+	 * @return string
+	 */
+	public static function change_type_label( string $type ): string {
+		$labels = array(
+			'wording'    => __( 'Wording', 'spark-living' ),
+			'color'      => __( 'Colour', 'spark-living' ),
+			'shape'      => __( 'Shape', 'spark-living' ),
+			'placement'  => __( 'Placement', 'spark-living' ),
+			'visibility' => __( 'Visibility', 'spark-living' ),
+			'style'      => __( 'Style', 'spark-living' ),
+			'block'      => __( 'Block content', 'spark-living' ),
+		);
+		return $labels[ $type ] ?? '';
+	}
+
+	/**
+	 * Does a selector point at a button or a link? (decides the pill styling)
+	 *
+	 * @param string $selector CSS selector.
+	 * @return bool
+	 */
+	public static function is_button_target( string $selector ): bool {
+		return (bool) preg_match( '/(?:^|[\s>+~,(])(?:a|button)(?![A-Za-z0-9_-])|button|btn|cta|\[href|\[type=["\']?(?:submit|button)/i', $selector );
+	}
+
+	/**
+	 * Plain-language Current versus Challenger description of a test.
+	 *
+	 * Defaults when a field is empty: a text-swap selector test is Wording and
+	 * quotes the replacement text. The original text is not stored anywhere (A
+	 * carries no change), so Current reads "Original text (unchanged)" unless
+	 * a_label is set or A itself carries a text change. A CSS-only test is
+	 * Style; a Living Block test is Block content (Version A, Version B).
+	 *
+	 * @param array $exp Experiment (from get()).
+	 * @return array{type: string, type_label: string, current: string, challenger: string, current_quoted: bool, challenger_quoted: bool, pill: bool}
+	 */
+	public static function describe( array $exp ): array {
+		$variants = is_array( $exp['variants'] ?? null ) ? $exp['variants'] : array();
+		$text_of  = static function ( $variant ): string {
+			$text    = '';
+			$changes = ( is_array( $variant ) && is_array( $variant['changes'] ?? null ) ) ? $variant['changes'] : array();
+			foreach ( $changes as $change ) {
+				if ( is_array( $change ) && 'text' === ( $change['op'] ?? '' ) && '' !== (string) ( $change['value'] ?? '' ) ) {
+					$text = (string) $change['value'];
+				}
+			}
+			return $text;
+		};
+		$a_text = $text_of( $variants['A'] ?? array() );
+		$b_text = $text_of( $variants['B'] ?? array() );
+		$b_css  = (string) ( $variants['B']['css'] ?? '' );
+
+		$type = Spark_Living_Util::sanitize_change_type( $exp['change_type'] ?? '' );
+		if ( '' === $type ) {
+			if ( 'block' === ( $exp['element_type'] ?? '' ) ) {
+				$type = 'block';
+			} elseif ( '' !== $b_text ) {
+				$type = 'wording';
+			} else {
+				$type = 'style';
+			}
+		}
+
+		$a_label = Spark_Living_Util::sanitize_label( $exp['a_label'] ?? '' );
+		$b_label = Spark_Living_Util::sanitize_label( $exp['b_label'] ?? '' );
+
+		$cur_quoted  = false;
+		$chal_quoted = false;
+
+		if ( '' !== $a_label ) {
+			$current    = $a_label;
+			$cur_quoted = ( 'wording' === $type );
+		} elseif ( 'block' === $type ) {
+			$current = __( 'Version A', 'spark-living' );
+		} elseif ( 'wording' === $type && '' !== $a_text ) {
+			$current    = $a_text;
+			$cur_quoted = true;
+		} elseif ( 'wording' === $type ) {
+			$current = __( 'Original text (unchanged)', 'spark-living' );
+		} else {
+			$current = __( 'Original (no change)', 'spark-living' );
+		}
+
+		if ( '' !== $b_label ) {
+			$challenger  = $b_label;
+			$chal_quoted = ( 'wording' === $type );
+		} elseif ( 'block' === $type ) {
+			$challenger = __( 'Version B', 'spark-living' );
+		} elseif ( 'wording' === $type && '' !== $b_text ) {
+			$challenger  = $b_text;
+			$chal_quoted = true;
+		} elseif ( 'style' === $type || '' !== $b_css ) {
+			$challenger = __( 'Restyled by the test', 'spark-living' );
+		} else {
+			$challenger = __( 'Changed by the test', 'spark-living' );
+		}
+
+		return array(
+			'type'              => $type,
+			'type_label'        => self::change_type_label( $type ),
+			'current'           => $current,
+			'challenger'        => $challenger,
+			'current_quoted'    => $cur_quoted,
+			'challenger_quoted' => $chal_quoted,
+			'pill'              => ( 'wording' === $type && 'selector' === ( $exp['element_type'] ?? '' ) && self::is_button_target( (string) ( $exp['target'] ?? '' ) ) ),
+		);
 	}
 
 	/**

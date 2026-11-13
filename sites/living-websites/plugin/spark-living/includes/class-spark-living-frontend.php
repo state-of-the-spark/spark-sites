@@ -81,6 +81,25 @@ final class Spark_Living_Frontend {
 	}
 
 	/**
+	 * Is the tracking script being printed for a running test right now?
+	 * (Staff are excluded per visitor; this answers for the site.)
+	 *
+	 * @return bool
+	 */
+	public static function tracking_active(): bool {
+		$js_file = SPARK_LIVING_DIR . 'assets/js/living.js';
+		if ( ! is_readable( $js_file ) ) {
+			return false;
+		}
+		foreach ( self::tests_config() as $test ) {
+			if ( 'running' === ( $test['mode'] ?? '' ) ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
 	 * Tests the browser script should know about.
 	 *
 	 * @return array[]

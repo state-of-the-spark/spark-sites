@@ -1,4 +1,4 @@
-# Spark Living v0.1.3
+# Spark Living v0.1.4
 
 Living Websites by Spark Sites. A WordPress plugin that runs one split test at a time on a site, keeps what brings in more leads, logs every change, and reports through a REST API.
 
@@ -130,10 +130,11 @@ All routes need `manage_options` (use an application password). Base: `/wp-json/
 
 | Method and route | Purpose |
 |---|---|
-| `GET /state` | Running test with live numbers and the current decision, queued tests, promoted winners, cumulative lift, `tally` (evolved, keep_a, no_difference, guard_blocked, reverted), `evolutions` (= tally.evolved), rules |
+| `GET /state` | Running test with live numbers and the current decision, `sources` (the data source list), queued tests, promoted winners, cumulative lift, `tally` (evolved, keep_a, no_difference, guard_blocked, reverted), `evolutions` (= tally.evolved), rules |
 | `GET /stats?experiment_id=ID` | Stats for one test (the running test when omitted); concluded tests return their stored final snapshot |
 | `GET /log?per_page=50&page=1` | Evolution log, newest first; `X-WP-Total` header |
 | `POST /tests` | Create a test (body above; optional `device`, optional `variants.B.css`). `start: true` starts it if none is running (409 otherwise) and needs `sessions_14d` (or `force: true`) like `/start` |
+| `POST /tests/{id}` | Edit only `change_type`, `a_label` and `b_label` (see "Current versus Challenger"). Allowed in any status, including running; nothing else is touched. 400 for an unknown `change_type` or an empty body; an empty string clears a field |
 | `POST /tests/{id}/start` | Start a draft, or approve and start a Tier 2 test. Body `{"sessions_14d": N}`, N of 100 or more, or `{"force": true}` (administrator; recorded). 400 or 422 otherwise |
 | `POST /tests/{id}/conclude` | Body `{"verdict":"ship_b" \| "keep_a" \| "no_difference","note":"..."}`; logs it and promotes B on `ship_b` |
 | `POST /event` (public) | Browser events only; nonce-free, validated, rate limited, `no-store` |
@@ -163,6 +164,48 @@ The dashboard (admin only) plays two one-time animations on load, in pure inline
 
 The vine now stops at about 75 percent of the width (1.8 s). A Spark burst, redrawn inline from the brand logo mark, grows out of the vine tip the moment the stem finishes (0.55 s with a slight overshoot) and stays as the resting ornament. The evolved card bubbles start at that same moment. One CSS value, `--sl-stem`, drives the stem, the burst and the bubbles, so they cannot drift apart. Reduced motion shows the finished state with no movement.
 
+## Dashboard sources and current vs challenger (0.1.4)
+
+Two additions to the admin dashboard (`/living/`, the shortcode and the wp-admin page).
+
+### Data sources row
+
+Just above the live numbers (or under the "no test is running" line) a row headed **Data sources** shows one chip per source: a 16 px logo, the name, a status dot with the word **Live** or **Paused** (green or grey; the word is always there, so colour is never the only signal), one muted line on what the source supplies and one detail line. `GET /state` returns the same list under `sources` (`id`, `name`, `what`, `status`, `live`, `detail`, `icon`).
+
+Statuses are computed from real state on every request:
+
+* **Site visit log** (the plugin's own events table). Logo: the WordPress site icon (`get_site_icon_url`), with an inline leaf if none is set. Supplies "Views, clicks and form submissions for the test". Live when a test is running and the tracking script is being printed for it (`Spark_Living_Frontend::tracking_active()`); Paused otherwise. Detail: "Last event: 3 minutes ago" from the newest row for the running test, or "No events yet". With no test running it reads "No test is running. Last event: ..." (newest row overall).
+* **Google Analytics.** Inline SVG bar-chart mark, no external request. Supplies "Traffic check before a test starts". Paused unless the `spark_living_ga_connected` filter returns true; the plugin has no direct Analytics connection today (the 14-day session count is typed in when a test starts and stored as `start_sessions_14d`, and the event mirror to Analytics is not forwarding), so it shows grey and Paused with "Not connected. Traffic count entered by hand when the test started (N sessions)" (no parenthesis when no count was stored). Return true from that filter only from code that really reads Analytics.
+
+Add more sources with the `spark_living_data_sources` filter. Each entry: `id`, `name`, `icon` (`{type: 'url' | 'svg', value: image URL or inline SVG}`), `what`, `status` (`'live'` or `'paused'`, anything else is shown as paused) and `detail`. Names and lines are escaped; inline SVG goes through an allow-list (shapes and paths only, scripts removed).
+
+```php
+add_filter( 'spark_living_ga_connected', '__return_true' ); // only when a real connection exists
+add_filter( 'spark_living_data_sources', function ( $sources ) {
+	$sources[] = array( 'id' => 'crm', 'name' => 'Lead sheet', 'icon' => array( 'type' => 'url', 'value' => 'https://example.com/i.png' ), 'what' => 'Leads typed in by hand', 'status' => 'live', 'detail' => 'Updated daily' );
+	return $sources;
+} );
+```
+
+### Current versus Challenger
+
+In the "Current test" card, after the hypothesis, the dashboard says **What is being tested** (Wording, Colour, Shape, Placement, Visibility, Style or Block content) and shows two rows: **Current** (variant A) and **Challenger** (variant B), in plain language. The selector stays in the card, smaller and muted.
+
+Three optional fields on a test: `change_type` (`wording`, `color`, `shape`, `placement`, `visibility`, `style`, `block`), `a_label` and `b_label` (plain text, sanitised with the plugin's text sanitiser, 200 characters). They are accepted by `POST /tests` and by `POST /tests/{id}`, and returned in `GET /state` (each experiment also carries a `comparison` object with the resolved type and both descriptions). Editing them on a running test never changes assignment, variants, weights, start time or counts.
+
+Defaults when the fields are empty:
+
+| Test | What is being tested | Current | Challenger |
+|---|---|---|---|
+| Text swap (B has a `text` change) | Wording | The original text in quotes if `a_label` is set or A carries a text change; otherwise "Original text (unchanged)" | B's replacement text in quotes |
+| CSS variant or other selector change | Style | Original (no change) | Restyled by the test |
+| Living Block | Block content | Version A | Version B |
+| Another `change_type` with no labels | that type | Original (no change) | Changed by the test |
+
+**Where the original text lives:** nowhere. Variant A of a text-swap test carries no change (A is "leave the element alone"), only B stores the replacement. That is why a running test shows "Original text (unchanged)" until `a_label` is set to the original wording. For wording tests on a button or link target (selector with `a`, `button`, `btn`, `cta`, `[href` and similar) each text is shown as a small pill. Everything is escaped.
+
+On narrow screens (600 px and under) the comparison stacks, the chips take a full row each, and the numbers tables scroll sideways inside their own box instead of widening the page.
+
 ## Cache flush
 
 The allocation weights and the live set are printed into the page head, so a cached page can carry stale ones. `Spark_Living_Util::flush_page_cache()` runs: after the nightly job updates the allocation weights; when a test starts, concludes (nightly, REST or admin) or a winner is auto-reverted (through the `spark_living_test_started`, `spark_living_test_concluded` and `spark_living_test_reverted` actions). It calls, each only when it exists (`function_exists` / `has_action`): `wp_cache_flush()`, `batcache_clear_url()` for the home URL (Pressable page cache), `rocket_clean_domain()` (WP Rocket), `w3tc_flush_all()` (W3 Total Cache), `wp_cache_clear_cache()` (WP Super Cache), `sg_cachepress_purge_cache()` (SiteGround), `wpfc_clear_all_cache()` (WP Fastest Cache) and the `litespeed_purge_all` action. A site with another cache can hook the `spark_living_flush_cache` action, which fires at the end. Only the home URL is cleared per URL on Batcache; other pages expire on their normal cache lifetime.
@@ -171,7 +214,7 @@ The allocation weights and the live set are printed into the page head, so a cac
 
 **Events table `{prefix}spark_living_events`:** `id`, `experiment_id` (0 = site watch, see below), `variant` (A, B, H holdout, L living/promoted), `visitor_id`, `session_id`, `event_type` (`exposure`, `cta_click`, `form_start`, `form_submit`, `tel_click`), `created_at` (UTC). Indexes: `(experiment_id, event_type, session_id)`, `(experiment_id, variant, event_type)`, `created_at`, `visitor_id`. No IP address, user agent or URL is stored.
 
-**Experiments:** private custom post type `living_experiment` (post ID = experiment ID; title = name). Chosen over an options row because tests are kept forever for the log, IDs come free, and nothing needs a custom table. Post meta (`_spark_living_` prefix): `element_type` (block or selector), `target`, `hypothesis`, `variants` ({A:{label,changes}, B:{label,changes,css}}), `weights` ({A,B}), `status` (draft, awaiting_approval, running, concluded), `start_date`, `end_date`, `tier` (1 or 2), `device` (all, mobile, desktop), `forced_start` (true when started below the 100-session bar), `start_sessions_14d` (the number stated at start, 0 if none), `verdict`, `winner`, `promoted`, `shipped_at`, `revert_checked`, `reverted`, `snapshot` (final numbers).
+**Experiments:** private custom post type `living_experiment` (post ID = experiment ID; title = name). Chosen over an options row because tests are kept forever for the log, IDs come free, and nothing needs a custom table. Post meta (`_spark_living_` prefix): `change_type`, `a_label`, `b_label` (0.1.4, descriptive only), `element_type` (block or selector), `target`, `hypothesis`, `variants` ({A:{label,changes}, B:{label,changes,css}}), `weights` ({A,B}), `status` (draft, awaiting_approval, running, concluded), `start_date`, `end_date`, `tier` (1 or 2), `device` (all, mobile, desktop), `forced_start` (true when started below the 100-session bar), `start_sessions_14d` (the number stated at start, 0 if none), `verdict`, `winner`, `promoted`, `shipped_at`, `revert_checked`, `reverted`, `snapshot` (final numbers).
 
 **Evolution log:** private custom post type `living_evolution`, one post per concluded test (plus one per auto-revert, `entry_type = revert`). Meta (`_spark_living_log_` prefix): `experiment_id`, `element_type`, `target`, `hypothesis`, `variant_a`, `variant_b`, `numbers`, `verdict`, `shipped`, `started`, `ended`, `note`, `device`, `forced_start`, `start_sessions_14d`.
 
