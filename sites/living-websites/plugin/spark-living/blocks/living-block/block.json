@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "spark-living/living-block",
+	"title": "Living Block",
+	"category": "widgets",
+	"icon": "update",
+	"description": "A container whose two variants (A current, B challenger) are tested by the Living Website. Put real blocks inside each variant.",
+	"keywords": [ "living", "ab test", "experiment", "variant" ],
+	"textdomain": "spark-living",
+	"attributes": {
+		"experimentId": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"providesContext": {
+		"spark-living/experimentId": "experimentId"
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ]
+	},
+	"editorScript": "file:./editor.js"
+}

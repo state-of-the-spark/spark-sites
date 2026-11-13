@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "spark-living/variant",
+	"title": "Living Variant",
+	"category": "widgets",
+	"icon": "randomize",
+	"description": "One variant (A or B) inside a Living Block. Holds a normal block tree.",
+	"parent": [ "spark-living/living-block" ],
+	"textdomain": "spark-living",
+	"attributes": {
+		"variantKey": {
+			"type": "string",
+			"enum": [ "A", "B" ],
+			"default": "A"
+		}
+	},
+	"usesContext": [ "spark-living/experimentId" ],
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"editorScript": "file:./editor.js"
+}

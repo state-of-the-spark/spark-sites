@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Living Websites by Spark Sites</title>
+<meta name="description" content="Your website is alive. It gets better every week, on its own.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+/* Spark Sites "Quiet Voltage" tokens (from core/brand/tokens/spark-sites.css) */
+:root{
+  --ss-ink:#101418; --ss-porcelain:#F7F8F8; --ss-cyan:#0ECAEB; --ss-graphite:#2A3138;
+  --ss-mist:#E4E8EA; --ss-gray:#8A939B; --ss-white:#FFFFFF;
+  --ss-font-display:'Hanken Grotesk',system-ui,sans-serif;
+  --ss-font-body:'Source Serif 4',Georgia,serif;
+  --ss-font-logo:'Poppins',sans-serif;
+  --ss-radius:10px;
+  /* prototype-only extensions for the living theme: muted, no gradients */
+  --lw-leaf:#2D5A3F;      /* deep green line work, 7.9:1 on porcelain */
+  --lw-leaf-fill:#5E9B6E; /* leaf fill (graphic only) */
+  --lw-leaf-lt:#7DBE8E;   /* green on ink */
+  --lw-sun:#F2B544;       /* warm light (graphic only) */
+  --lw-sun-ln:#D98E1F;
+  --lw-soil:#4A3B30;
+  --lw-root:#D9B382;      /* roots on ink */
+  --lw-muted:#586169;     /* AA-safe muted text on porcelain (replaces gray for small text) */
+  --lw-muted-ink:#B4BCC2; /* AA-safe muted text on ink */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ss-porcelain);color:var(--ss-graphite);font-family:var(--ss-font-body);font-size:18px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--ss-font-display);font-weight:600;letter-spacing:-.03em;line-height:1.1;color:var(--ss-ink);margin:0}
+h1{font-size:clamp(34px,5.4vw,60px);line-height:1.06}
+h2{font-size:clamp(28px,3.6vw,42px)}
+h3{font-size:20px;letter-spacing:-.02em}
+p{margin:0 0 1em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.hairline{height:2px;width:44px;background:var(--ss-cyan);margin:22px 0}
+.eyebrow{font-family:var(--ss-font-display);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--lw-muted);margin:0 0 14px}
+.on-ink{background:var(--ss-ink);color:#DDE2E5}
+.on-ink h2,.on-ink h3{color:var(--ss-white)}
+.on-ink .eyebrow{color:var(--lw-muted-ink)}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;padding-top:20px;padding-bottom:20px}
+.wordmark{font-family:var(--ss-font-logo);font-weight:600;letter-spacing:-.02em;color:var(--ss-ink);font-size:22px;text-decoration:none}
+.tag{font-family:var(--ss-font-display);font-size:12px;letter-spacing:.06em;color:var(--lw-muted);border:1px solid #C9D0D4;border-radius:99px;padding:4px 12px}
+
+/* scene layout */
+.scene{padding:56px 0 64px;position:relative}
+.scene .wrap{display:grid;grid-template-columns:1fr;gap:32px;align-items:center}
+.stage{position:relative;width:100%;max-width:640px;margin:0 auto}
+.stage svg{display:block;width:100%;height:auto;overflow:visible}
+@media(min-width:900px){
+  .scene{padding:88px 0 96px}
+  .scene .wrap{grid-template-columns:1fr 1fr;gap:64px}
+  .scene.flip .copy{order:2}
+}
+.copy p{max-width:34em}
+.lede{font-size:20px;color:var(--ss-graphite)}
+.sample-note{display:inline-block;font-family:var(--ss-font-display);font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ss-ink);background:var(--lw-sun);border-radius:6px;padding:4px 10px;margin:0 0 14px}
+
+/* how it works */
+.how{background:var(--ss-white);border-top:1px solid var(--ss-mist);border-bottom:1px solid var(--ss-mist);padding:36px 0}
+.how h2{font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--lw-muted);margin-bottom:18px}
+.how ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:14px;counter-reset:s}
+.how li{counter-increment:s;font-family:var(--ss-font-display);font-weight:600;font-size:22px;letter-spacing:-.02em;color:var(--ss-ink);display:flex;gap:12px;align-items:baseline}
+.how li::before{content:counter(s);font-size:14px;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--lw-leaf);color:var(--lw-leaf);display:inline-grid;place-items:center;flex:none;transform:translateY(-2px)}
+@media(min-width:900px){.how ol{grid-template-columns:repeat(4,1fr);gap:24px}.how li{font-size:21px}}
+
+/* svg styling */
+.draw{stroke-dasharray:1 1;stroke-dashoffset:0}
+.ln{fill:none;stroke:var(--ss-ink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.stem{fill:none;stroke:var(--lw-leaf);stroke-linecap:round;stroke-linejoin:round}
+.leaf{fill:var(--lw-leaf-fill);stroke:var(--lw-leaf);stroke-width:2;stroke-linejoin:round}
+.on-ink .leaf{fill:#4F8F5E;stroke:var(--lw-leaf-lt)}
+.on-ink .stem{stroke:var(--lw-leaf-lt)}
+.root{fill:none;stroke:var(--lw-root);stroke-linecap:round}
+
+/* root labels */
+.lbl{position:absolute;transform:translateX(-50%);font-family:var(--ss-font-display);font-weight:600;font-size:15px;line-height:1.2;color:var(--ss-white);background:#1B222A;border:1.5px solid var(--lw-root);border-radius:99px;padding:7px 14px;white-space:nowrap}
+@media(max-width:480px){.lbl{font-size:12.5px;padding:5px 9px}}
+
+/* variant keys */
+.keys{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.keys li{display:flex;gap:12px;align-items:baseline}
+.keys b{font-family:var(--ss-font-display);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;border:2px solid var(--lw-leaf);color:var(--ss-ink);flex:none;font-size:16px}
+
+/* rings */
+.badge{position:absolute;width:28px;height:28px;border-radius:50%;background:var(--ss-ink);color:var(--ss-white);font-family:var(--ss-font-display);font-weight:700;font-size:14px;display:grid;place-items:center;transform:translate(-50%,-50%)}
+.ringlist{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:14px}
+.ringlist li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start}
+.ringlist .n{width:28px;height:28px;border-radius:50%;background:var(--ss-ink);color:var(--ss-white);font-family:var(--ss-font-display);font-weight:700;font-size:14px;display:grid;place-items:center;margin-top:2px}
+.ringlist .d{font-family:var(--ss-font-display);font-weight:600;font-size:14px;letter-spacing:.04em;color:var(--lw-muted);display:block}
+.ringlist .w{color:var(--ss-ink)}
+
+/* proof */
+.bignum{font-family:var(--ss-font-display);font-weight:700;color:var(--ss-cyan);font-size:1em}
+.proof-line{font-family:var(--ss-font-display);font-weight:600;letter-spacing:-.03em;line-height:1.12;color:var(--ss-white);font-size:clamp(30px,4.4vw,52px);margin:0 0 20px}
+.test-card{border:1px solid #39434C;border-radius:var(--ss-radius);padding:18px 20px;background:#161C22;max-width:34em}
+.test-card .k{font-family:var(--ss-font-display);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--lw-muted-ink);display:block;margin-bottom:6px}
+.test-card p{margin:0;color:var(--ss-white)}
+.on-ink .sample-note{margin-bottom:16px}
+
+/* cta */
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{font-family:var(--ss-font-display);font-weight:600;font-size:17px;border-radius:var(--ss-radius);padding:14px 26px;text-decoration:none;display:inline-block;border:2px solid var(--ss-ink);line-height:1.2}
+.btn-primary{background:var(--ss-ink);color:var(--ss-white)}
+.btn-primary:hover,.btn-primary:focus-visible{box-shadow:inset 0 -3px 0 var(--ss-cyan)}
+.btn-ghost{background:transparent;color:var(--ss-ink)}
+.btn-ghost:hover,.btn-ghost:focus-visible{background:var(--ss-mist)}
+.btn:focus-visible{outline:3px solid var(--lw-leaf);outline-offset:3px}
+footer{padding:36px 0 48px;border-top:1px solid var(--ss-mist)}
+.ss-endorsement{font-family:var(--ss-font-display);font-size:12px;letter-spacing:.06em;color:var(--lw-muted)}
+
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .pulse{animation:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="leafp" d="M0 0 C10 -16 34 -18 46 0 C34 18 10 16 0 0 Z"/>
+  </defs>
+</svg>
+
+<header class="wrap top">
+  <a class="wordmark" href="#top">spark sites</a>
+  <span class="tag">Local prototype</span>
+</header>
+
+<main id="top">
+
+<!-- SCENE 1: HERO -->
+<section class="scene" id="s1" data-scene="hero" aria-labelledby="h1" style="padding-top:24px">
+  <div class="wrap">
+    <div class="copy">
+      <p class="eyebrow">Living Websites by Spark Sites</p>
+      <h1 id="h1">Your website is alive. It gets better every week, on its own.</h1>
+      <div class="hairline" aria-hidden="true"></div>
+      <p class="lede">Most websites are finished the day they launch. Yours watches its own visitors, tests one improvement at a time, keeps what brings in more leads, and reports back to you.</p>
+    </div>
+    <div class="stage">
+      <svg viewBox="0 0 640 520" role="img" aria-label="A small website wireframe planted in soil, a sprout growing from it, and the sun rising behind.">
+        <!-- sun -->
+        <g data-fx="rise" data-dy="-270" data-s="0.05" data-e="0.9">
+          <g transform="translate(470 440)">
+            <circle r="44" fill="#F2B544"/>
+            <g stroke="#D98E1F" stroke-width="4" stroke-linecap="round">
+              <line x1="0" y1="-58" x2="0" y2="-76"/><line x1="0" y1="58" x2="0" y2="76"/>
+              <line x1="-58" y1="0" x2="-76" y2="0"/><line x1="58" y1="0" x2="76" y2="0"/>
+              <line x1="41" y1="41" x2="54" y2="54"/><line x1="-41" y1="41" x2="-54" y2="54"/>
+              <line x1="41" y1="-41" x2="54" y2="-54"/><line x1="-41" y1="-41" x2="-54" y2="-54"/>
+              <line x1="22" y1="-54" x2="28" y2="-70"/><line x1="-22" y1="-54" x2="-28" y2="-70"/>
+              <line x1="54" y1="-22" x2="70" y2="-28"/><line x1="-54" y1="-22" x2="-70" y2="-28"/>
+            </g>
+          </g>
+        </g>
+        <!-- wireframe site -->
+        <rect x="215" y="290" width="210" height="150" rx="10" fill="#fff" data-fx="fade" data-s="0" data-e="0.25"/>
+        <g class="ln">
+          <rect class="draw" pathLength="1" data-fx="draw" data-s="0" data-e="0.35" x="215" y="290" width="210" height="150" rx="10"/>
+          <line class="draw" pathLength="1" data-fx="draw" data-s="0.15" data-e="0.4" x1="215" y1="318" x2="425" y2="318"/>
+          <line class="draw" pathLength="1" data-fx="draw" data-s="0.2" data-e="0.45" x1="335" y1="304" x2="405" y2="304"/>
+          <rect class="draw" pathLength="1" data-fx="draw" data-s="0.25" data-e="0.5" x="235" y="336" width="100" height="12" rx="3"/>
+          <line class="draw" pathLength="1" data-fx="draw" data-s="0.3" data-e="0.55" x1="235" y1="364" x2="325" y2="364"/>
+          <line class="draw" pathLength="1" data-fx="draw" data-s="0.32" data-e="0.57" x1="235" y1="378" x2="300" y2="378"/>
+          <rect class="draw" pathLength="1" data-fx="draw" data-s="0.3" data-e="0.55" x="352" y="334" width="56" height="44" rx="4"/>
+        </g>
+        <g fill="#101418" data-fx="fade" data-s="0.2" data-e="0.4">
+          <circle cx="232" cy="304" r="3.5"/><circle cx="246" cy="304" r="3.5"/><circle cx="260" cy="304" r="3.5"/>
+        </g>
+        <!-- the spark: seed core (single cyan dot) -->
+        <g data-fx="fade" data-s="0.3" data-e="0.5">
+          <circle class="pulse" cx="380" cy="356" r="8" fill="#0ECAEB"/>
+        </g>
+        <!-- sprout -->
+        <path class="stem draw" pathLength="1" data-fx="draw" data-s="0.45" data-e="0.78" stroke-width="4.5" d="M320 292 C320 262 316 240 322 210"/>
+        <g transform="translate(319 258) rotate(212)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.65" data-e="0.88"/></g>
+        <g transform="translate(321 232) rotate(-34)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.7" data-e="0.92"/></g>
+        <g transform="translate(322 211) rotate(-92) scale(1.25)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.78" data-e="1"/></g>
+        <!-- soil -->
+        <clipPath id="soilclip"><rect x="0" y="360" width="640" height="150" rx="18"/></clipPath>
+        <g clip-path="url(#soilclip)"><path d="M0 394 C80 380 160 398 250 390 S420 376 520 392 S610 386 640 390 V520 H0 Z" fill="#4A3B30"/></g>
+        <g fill="none" stroke="#6E5946" stroke-width="3" stroke-linecap="round">
+          <path d="M40 430 q30 -8 64 0"/><path d="M180 458 q34 -8 70 0"/><path d="M330 428 q30 -8 60 0"/>
+          <path d="M470 462 q30 -8 66 0"/><path d="M96 492 q26 -6 52 0"/><path d="M400 494 q30 -6 58 0"/>
+        </g>
+        <!-- grass -->
+        <g class="stem" stroke-width="3">
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.5" data-e="0.9" d="M150 392 q4 -18 -2 -30"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.55" data-e="0.92" d="M160 392 q8 -14 12 -22"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.5" data-e="0.9" d="M520 392 q-4 -18 2 -32"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.55" data-e="0.92" d="M532 392 q-8 -12 -12 -20"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" aria-labelledby="hw">
+  <div class="wrap" style="display:block">
+    <h2 id="hw">How it works</h2>
+    <ol>
+      <li>It watches.</li>
+      <li>It tests one thing.</li>
+      <li>It keeps the winner.</li>
+      <li>It tells you what changed.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SCENE 2: ROOTS -->
+<section class="scene on-ink" id="s2" data-scene="roots" aria-labelledby="h2r">
+  <div class="wrap">
+    <div class="copy">
+      <p class="eyebrow">Roots</p>
+      <h2 id="h2r">It drinks from your real numbers.</h2>
+      <div class="hairline" aria-hidden="true" style="background:#39434C"></div>
+      <p>Roots reach down to the places your customers leave signals: your analytics, your ad accounts, your forms and your phone line. Every change it makes starts from what those sources show.</p>
+    </div>
+    <div class="stage" style="aspect-ratio:640/580">
+      <svg viewBox="0 0 640 580" role="img" aria-label="A website wireframe on top, with roots growing down to six labeled data sources: GA4, Google Ads, Meta Ads, Local Services Ads, Forms and Calls.">
+        <g fill="none" stroke="#F7F8F8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect class="draw" pathLength="1" data-fx="draw" data-s="0" data-e="0.2" x="250" y="24" width="140" height="92" rx="9"/>
+          <line class="draw" pathLength="1" data-fx="draw" data-s="0.05" data-e="0.22" x1="250" y1="46" x2="390" y2="46"/>
+          <line class="draw" pathLength="1" data-fx="draw" data-s="0.08" data-e="0.25" x1="268" y1="68" x2="338" y2="68"/>
+          <line class="draw" pathLength="1" data-fx="draw" data-s="0.1" data-e="0.27" x1="268" y1="84" x2="320" y2="84"/>
+          <rect class="draw" pathLength="1" data-fx="draw" data-s="0.1" data-e="0.27" x="346" y="62" width="30" height="30" rx="3"/>
+        </g>
+        <path class="stem draw" pathLength="1" data-fx="draw" data-s="0.15" data-e="0.3" stroke="#7DBE8E" stroke-width="8" d="M320 116 V196"/>
+        <!-- roots -->
+        <g class="root">
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.28" data-e="0.62" stroke-width="5" d="M320 196 C320 250 160 250 160 304"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.34" data-e="0.7" stroke-width="5" d="M320 196 C320 282 250 352 160 404"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.4" data-e="0.78" stroke-width="5" d="M320 196 C320 300 260 450 160 504"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.28" data-e="0.62" stroke-width="5" d="M320 196 C320 250 480 250 480 304"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.34" data-e="0.7" stroke-width="5" d="M320 196 C320 282 390 352 480 404"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.4" data-e="0.78" stroke-width="5" d="M320 196 C320 300 380 450 480 504"/>
+          <!-- rootlets -->
+          <g stroke-width="2" opacity=".75">
+            <path class="draw" pathLength="1" data-fx="draw" data-s="0.45" data-e="0.85" d="M236 242 q-30 6 -52 -4"/>
+            <path class="draw" pathLength="1" data-fx="draw" data-s="0.5" data-e="0.88" d="M262 330 q-34 -4 -56 14"/>
+            <path class="draw" pathLength="1" data-fx="draw" data-s="0.55" data-e="0.9" d="M246 430 q-34 6 -50 -6"/>
+            <path class="draw" pathLength="1" data-fx="draw" data-s="0.45" data-e="0.85" d="M404 242 q30 6 52 -4"/>
+            <path class="draw" pathLength="1" data-fx="draw" data-s="0.5" data-e="0.88" d="M378 330 q34 -4 56 14"/>
+            <path class="draw" pathLength="1" data-fx="draw" data-s="0.55" data-e="0.9" d="M394 430 q34 6 50 -6"/>
+            <path class="draw" pathLength="1" data-fx="draw" data-s="0.6" data-e="0.95" d="M320 230 q-6 40 -2 70 q4 30 -10 60"/>
+          </g>
+        </g>
+      </svg>
+      <span class="lbl" data-fx="fade" data-s="0.55" data-e="0.7" style="left:25%;top:calc(300/580*100%)">GA4</span>
+      <span class="lbl" data-fx="fade" data-s="0.62" data-e="0.78" style="left:25%;top:calc(400/580*100%)">Google Ads</span>
+      <span class="lbl" data-fx="fade" data-s="0.7" data-e="0.86" style="left:25%;top:calc(500/580*100%)">Meta Ads</span>
+      <span class="lbl" data-fx="fade" data-s="0.55" data-e="0.7" style="left:75%;top:calc(300/580*100%)">Local Services Ads</span>
+      <span class="lbl" data-fx="fade" data-s="0.62" data-e="0.78" style="left:75%;top:calc(400/580*100%)">Forms</span>
+      <span class="lbl" data-fx="fade" data-s="0.7" data-e="0.86" style="left:75%;top:calc(500/580*100%)">Calls</span>
+    </div>
+  </div>
+</section>
+
+<!-- SCENE 3: BRANCHING -->
+<section class="scene" id="s3" data-scene="branch" aria-labelledby="h2b">
+  <div class="wrap">
+    <div class="copy">
+      <p class="eyebrow">Branching</p>
+      <h2 id="h2b">One test at a time. Only the stronger branch grows.</h2>
+      <div class="hairline" aria-hidden="true"></div>
+      <p>The site grows a second branch with one change on it. Visitors see both. When the evidence is in, the weaker branch is pruned and the stronger one leafs out.</p>
+      <ul class="keys">
+        <li><b>A</b><span>The version you have now.</span></li>
+        <li><b>B</b><span>The challenger, with one change.</span></li>
+      </ul>
+    </div>
+    <div class="stage">
+      <svg viewBox="0 0 640 520" role="img" aria-label="A trunk splits into two branches marked A and B. Light falls on both. Branch A fades and is pruned; branch B grows leaves.">
+        <!-- sun and light -->
+        <g data-fx="fade" data-s="0.3" data-e="0.5">
+          <circle cx="320" cy="34" r="20" fill="#F2B544"/>
+          <g stroke="#D98E1F" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10" fill="none">
+            <path d="M310 54 L160 92"/><path d="M314 56 L206 106"/><path d="M330 56 L450 92"/><path d="M326 54 L486 94"/><path d="M318 56 L150 96"/>
+          </g>
+        </g>
+        <!-- ground -->
+        <rect x="0" y="500" width="640" height="20" rx="8" fill="#4A3B30"/>
+        <!-- trunk -->
+        <path class="stem draw" pathLength="1" data-fx="draw" data-s="0" data-e="0.2" stroke-width="12" d="M320 504 V300"/>
+        <!-- branch A (dims, tip is pruned) -->
+        <g data-fx="dim" data-to="0.35" data-s="0.55" data-e="0.7">
+          <path class="stem draw" pathLength="1" data-fx="draw" data-s="0.15" data-e="0.4" stroke-width="8" d="M320 302 C300 250 250 220 215 200"/>
+          <g data-fx="fall" data-o="215 200" data-dx="-30" data-dy="290" data-rot="-50" data-to="0.3" data-s="0.74" data-e="0.95">
+            <path class="stem draw" pathLength="1" data-fx="draw" data-s="0.25" data-e="0.45" stroke-width="7" d="M215 200 C190 186 170 150 150 122"/>
+            <g data-fx="fade" data-s="0.4" data-e="0.5">
+              <circle cx="150" cy="116" r="26" fill="#fff" stroke="#2D5A3F" stroke-width="3"/>
+              <text x="150" y="126" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-weight="700" font-size="28" fill="#101418">A</text>
+            </g>
+          </g>
+        </g>
+        <path d="M205 211 L225 189" stroke="#101418" stroke-width="3.5" stroke-linecap="round" data-fx="fade" data-s="0.74" data-e="0.82"/>
+        <!-- branch B -->
+        <path class="stem draw" pathLength="1" data-fx="draw" data-s="0.15" data-e="0.45" stroke-width="8" d="M320 302 C330 240 400 180 470 124"/>
+        <path class="stem draw" pathLength="1" data-fx="draw" data-s="0.78" data-e="0.9" stroke-width="5" d="M408 175 C450 187 500 182 540 160"/>
+        <!-- B leaves -->
+        <g transform="translate(357 228) rotate(-70)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.72" data-e="0.88"/></g>
+        <g transform="translate(357 228) rotate(200)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.74" data-e="0.9"/></g>
+        <g transform="translate(408 175) rotate(215)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.76" data-e="0.92"/></g>
+        <g transform="translate(470 175) rotate(-25) scale(.9)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.82" data-e="0.97"/></g>
+        <g transform="translate(508 176) rotate(-38) scale(.9)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.84" data-e="0.98"/></g>
+        <g transform="translate(430 150) rotate(190)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.78" data-e="0.94"/></g>
+        <g transform="translate(462 150) rotate(-10) scale(.9)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.8" data-e="0.95"/></g>
+        <g transform="translate(540 160) rotate(-30)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.86" data-e="1"/></g>
+      
+        <g data-fx="fade" data-s="0.4" data-e="0.5">
+          <circle cx="470" cy="116" r="26" fill="#fff" stroke="#2D5A3F" stroke-width="3"/>
+          <text x="470" y="126" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-weight="700" font-size="28" fill="#101418">B</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SCENE 4: GROWTH RINGS -->
+<section class="scene" id="s4" data-scene="rings" aria-labelledby="h2g" style="background:var(--ss-white);border-top:1px solid var(--ss-mist);border-bottom:1px solid var(--ss-mist)">
+  <div class="wrap">
+    <div class="copy">
+      <p class="eyebrow">Growth rings</p>
+      <h2 id="h2g">Every change leaves a ring.</h2>
+      <div class="hairline" aria-hidden="true"></div>
+      <p>Cut the trunk and you can read the site's history. Each ring is one evolution, with a date and what changed, kept in a public log you can open.</p>
+      <p class="sample-note">Sample data. These rings show how the log reads, not real results.</p>
+      <ol class="ringlist">
+        <li><span class="n">1</span><span><span class="d">JAN 6 (SAMPLE)</span><span class="w">Launch version recorded as the starting point.</span></span></li>
+        <li><span class="n">2</span><span><span class="d">JAN 20 (SAMPLE)</span><span class="w">Header button wording tested. Challenger kept.</span></span></li>
+        <li><span class="n">3</span><span><span class="d">FEB 10 (SAMPLE)</span><span class="w">Contact form cut from six fields to four. Challenger kept.</span></span></li>
+        <li><span class="n">4</span><span><span class="d">MAR 3 (SAMPLE)</span><span class="w">Homepage headline angle tested. No difference, original kept.</span></span></li>
+        <li><span class="n">5</span><span><span class="d">MAR 24 (SAMPLE)</span><span class="w">Services page section order tested. Challenger kept.</span></span></li>
+      </ol>
+    </div>
+    <div class="stage" style="max-width:520px" id="ringstage">
+      <svg viewBox="0 0 520 520" role="img" aria-label="Cross-section of a tree trunk with five growth rings, numbered one to five from the center outward.">
+        <g transform="rotate(-90 260 260)" fill="none">
+          <circle cx="260" cy="260" r="57" fill="#E9D9C3" data-fx="grow" data-o="260 260" data-s="0" data-e="0.15"/>
+          <circle class="draw" pathLength="1" data-fx="draw" data-s="0.12" data-e="0.35" cx="260" cy="260" r="80" stroke="#DCC6A6" stroke-width="46"/>
+          <circle class="draw" pathLength="1" data-fx="draw" data-s="0.32" data-e="0.55" cx="260" cy="260" r="126" stroke="#E9D9C3" stroke-width="46"/>
+          <circle class="draw" pathLength="1" data-fx="draw" data-s="0.52" data-e="0.75" cx="260" cy="260" r="172" stroke="#DCC6A6" stroke-width="46"/>
+          <circle class="draw" pathLength="1" data-fx="draw" data-s="0.72" data-e="0.95" cx="260" cy="260" r="218" stroke="#E9D9C3" stroke-width="46"/>
+          <g stroke="#7A5638" stroke-width="2">
+            <circle class="draw" pathLength="1" data-fx="draw" data-s="0.1" data-e="0.3" cx="260" cy="260" r="57"/>
+            <circle class="draw" pathLength="1" data-fx="draw" data-s="0.3" data-e="0.5" cx="260" cy="260" r="103"/>
+            <circle class="draw" pathLength="1" data-fx="draw" data-s="0.5" data-e="0.7" cx="260" cy="260" r="149"/>
+            <circle class="draw" pathLength="1" data-fx="draw" data-s="0.7" data-e="0.9" cx="260" cy="260" r="195"/>
+          </g>
+          <circle class="draw" pathLength="1" data-fx="draw" data-s="0.78" data-e="1" cx="260" cy="260" r="241" stroke="#5A3F29" stroke-width="7"/>
+        </g>
+        <!-- pith -->
+        <g data-fx="grow" data-o="260 260" data-s="0" data-e="0.12"><circle cx="260" cy="260" r="9" fill="#0ECAEB"/></g>
+      </svg>
+      <span class="badge" data-r="34" data-fx="fade" data-s="0.1" data-e="0.2">1</span>
+      <span class="badge" data-r="80" data-fx="fade" data-s="0.3" data-e="0.4">2</span>
+      <span class="badge" data-r="126" data-fx="fade" data-s="0.5" data-e="0.6">3</span>
+      <span class="badge" data-r="172" data-fx="fade" data-s="0.7" data-e="0.8">4</span>
+      <span class="badge" data-r="218" data-fx="fade" data-s="0.88" data-e="0.98">5</span>
+    </div>
+  </div>
+</section>
+
+<!-- SCENE 5: LIVE PROOF -->
+<section class="scene on-ink" id="s5" data-scene="proof" aria-labelledby="h2p">
+  <div class="wrap">
+    <div class="copy">
+      <p class="eyebrow">Live proof</p>
+      <p class="sample-note">Sample data. Placeholder values; the live version reads this page's own log.</p>
+      <h2 id="h2p" class="proof-line">This page has evolved <span class="bignum" data-count="7" data-fx="count" data-s="0.1" data-e="0.85">7</span> times.</h2>
+      <div class="test-card">
+        <span class="k">Current test</span>
+        <p>Header button wording. A: "Get a quote". B: "Book a call". (Sample.)</p>
+      </div>
+    </div>
+    <div class="stage" style="max-width:400px">
+      <svg viewBox="0 0 400 480" role="img" aria-label="A young plant with seven leaves, one for each evolution.">
+        <rect x="0" y="462" width="400" height="18" rx="8" fill="#2A3138"/>
+        <path class="stem draw" pathLength="1" data-fx="draw" data-s="0" data-e="0.85" stroke="#7DBE8E" stroke-width="6" d="M200 464 C194 380 206 300 200 70"/>
+        <g class="leaves">
+          <g transform="translate(199 410) rotate(-30)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.10" data-e="0.22"/></g>
+          <g transform="translate(200 365) rotate(212)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.22" data-e="0.34"/></g>
+          <g transform="translate(202 318) rotate(-32)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.34" data-e="0.46"/></g>
+          <g transform="translate(203 270) rotate(210)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.46" data-e="0.58"/></g>
+          <g transform="translate(203 220) rotate(-34)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.58" data-e="0.70"/></g>
+          <g transform="translate(202 168) rotate(208)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.70" data-e="0.82"/></g>
+          <g transform="translate(201 110) rotate(-80) scale(1.2)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.80" data-e="0.95"/></g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SCENE 6: CTA -->
+<section class="scene" id="s6" data-scene="cta" aria-labelledby="h2c">
+  <div class="wrap">
+    <div class="copy">
+      <p class="eyebrow">Living Websites by Spark Sites</p>
+      <h2 id="h2c">Built once. Growing forever.</h2>
+      <div class="hairline" aria-hidden="true"></div>
+      <p class="lede">Your website is alive. It gets better every week, on its own.</p>
+      <div class="btns">
+        <a class="btn btn-ghost" href="#">See the evolution log</a>
+        <a class="btn btn-primary" href="#">Get a Living Website</a>
+      </div>
+    </div>
+    <div class="stage" style="max-width:440px">
+      <svg viewBox="0 0 440 440" role="img" aria-label="A grown tree with a full canopy.">
+        <rect x="0" y="420" width="440" height="20" rx="8" fill="#4A3B30"/>
+        <g fill="none" class="stem" stroke-linecap="round">
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0" data-e="0.3" stroke-width="16" d="M220 424 C218 360 224 320 220 250"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.2" data-e="0.5" stroke-width="9" d="M221 290 C190 262 150 250 112 214"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.22" data-e="0.52" stroke-width="9" d="M221 276 C255 248 300 240 338 206"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.3" data-e="0.58" stroke-width="8" d="M220 252 C216 210 222 170 220 120"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.4" data-e="0.62" stroke-width="5" d="M150 246 C130 226 126 196 134 168"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.4" data-e="0.62" stroke-width="5" d="M296 238 C316 216 316 188 308 160"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.45" data-e="0.65" stroke-width="5" d="M220 190 C190 176 172 150 168 124"/>
+          <path class="draw" pathLength="1" data-fx="draw" data-s="0.45" data-e="0.65" stroke-width="5" d="M220 176 C250 162 268 138 274 112"/>
+        </g>
+        <g>
+          <g transform="translate(112 214) rotate(200)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.60" data-e="0.78"/></g>
+          <g transform="translate(112 214) rotate(-130) scale(.9)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.62" data-e="0.8"/></g>
+          <g transform="translate(134 168) rotate(-110)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.64" data-e="0.82"/></g>
+          <g transform="translate(134 168) rotate(185) scale(.9)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.66" data-e="0.84"/></g>
+          <g transform="translate(168 124) rotate(-105)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.68" data-e="0.86"/></g>
+          <g transform="translate(168 124) rotate(190) scale(.85)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.7" data-e="0.88"/></g>
+          <g transform="translate(220 120) rotate(-90) scale(1.2)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.74" data-e="0.92"/></g>
+          <g transform="translate(220 120) rotate(-140)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.74" data-e="0.92"/></g>
+          <g transform="translate(220 120) rotate(-40)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.76" data-e="0.94"/></g>
+          <g transform="translate(274 112) rotate(-75)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.78" data-e="0.95"/></g>
+          <g transform="translate(274 112) rotate(-10) scale(.9)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.8" data-e="0.96"/></g>
+          <g transform="translate(308 160) rotate(-70)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.82" data-e="0.97"/></g>
+          <g transform="translate(308 160) rotate(-5) scale(.9)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.84" data-e="0.98"/></g>
+          <g transform="translate(338 206) rotate(-30)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.86" data-e="1"/></g>
+          <g transform="translate(338 206) rotate(35) scale(.9)"><use href="#leafp" class="leaf" data-fx="grow" data-s="0.88" data-e="1"/></g>
+        </g>
+        <!-- warm light on the canopy -->
+        <circle cx="372" cy="62" r="22" fill="#F2B544" data-fx="fade" data-s="0.5" data-e="0.8"/>
+      </svg>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:block">
+    <span class="wordmark" style="font-size:18px">spark sites</span>
+    <p class="ss-endorsement" style="margin:6px 0 0">a State of the Spark company</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp=function(x,a,b){return Math.min(b,Math.max(a,x))};
+  var ease=function(t){return t*t*(3-2*t)};
+  var scenes=[].slice.call(document.querySelectorAll('.scene')).map(function(sec){
+    return {sec:sec, els:[].slice.call(sec.querySelectorAll('[data-fx]'))};
+  });
+
+  // position ring badges around the cross-section
+  var stage=document.getElementById('ringstage');
+  if(stage){
+    var a=-50*Math.PI/180;
+    [].forEach.call(stage.querySelectorAll('.badge'),function(b){
+      var r=+b.dataset.r;
+      b.style.left=((260+r*Math.cos(a))/520*100)+'%';
+      b.style.top=((260+r*Math.sin(a))/520*100)+'%';
+    });
+  }
+
+  function apply(el,p){
+    var s=+el.dataset.s||0, e=+el.dataset.e||1;
+    var t=ease(clamp((p-s)/(e-s),0,1));
+    var o=el.dataset.o;
+    if(o){var xy=o.split(' ');el.style.transformOrigin=xy[0]+'px '+xy[1]+'px';}
+    switch(el.dataset.fx){
+      case 'draw': el.style.strokeDashoffset=(1-t); el.style.opacity=t>0?1:0; break;
+      case 'fade': el.style.opacity=t; break;
+      case 'dim': el.style.opacity=1-(1-(+el.dataset.to))*t; break;
+      case 'grow': el.style.transform='scale('+t+')'; break;
+      case 'rise': el.style.transform='translateY('+(+el.dataset.dy*t)+'px)'; el.style.opacity=clamp(t*6,0,1); break;
+      case 'fall':
+        el.style.transform='translate('+(+el.dataset.dx*t)+'px,'+(+el.dataset.dy*t)+'px) rotate('+(+el.dataset.rot*t)+'deg)';
+        el.style.opacity=1-(1-(+el.dataset.to))*t; break;
+      case 'count': el.textContent=Math.round((+el.dataset.count)*t); break;
+    }
+  }
+  function render(sc,p){ sc.els.forEach(function(el){apply(el,p)}); }
+
+  if(reduce){ scenes.forEach(function(sc){render(sc,1)}); return; }
+
+  var t0=performance.now();
+  function progress(sc){
+    var vh=window.innerHeight, r=sc.sec.getBoundingClientRect();
+    var span=Math.min(r.height*0.7, vh*0.7);
+    var p=clamp((vh*0.92-r.top)/span,0,1);
+    if(sc.sec.dataset.scene==='hero'){
+      var intro=clamp((performance.now()-t0)/2800,0,1);
+      p=Math.max(p<0.02?0:p, intro);
+    }
+    return p;
+  }
+  var last=[];
+  function tick(){
+    scenes.forEach(function(sc,i){
+      var p=progress(sc);
+      if(last[i]!==p){last[i]=p;render(sc,p);}
+    });
+    if(performance.now()-t0<3200) requestAnimationFrame(tick);
+    else ticking=false;
+  }
+  var ticking=false;
+  function kick(){ if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;tickOnce();});} }
+  function tickOnce(){
+    scenes.forEach(function(sc,i){var p=progress(sc);if(last[i]!==p){last[i]=p;render(sc,p);}});
+  }
+  window.addEventListener('scroll',kick,{passive:true});
+  window.addEventListener('resize',kick);
+  scenes.forEach(function(sc,i){last[i]=0;render(sc,0)});
+  ticking=true; requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

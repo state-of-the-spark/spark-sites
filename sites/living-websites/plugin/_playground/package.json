@@ -1,0 +1,17 @@
+{
+  "name": "_playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@wp-playground/cli": "^3.1.64",
+    "playwright-core": "^1.65.0"
+  }
+}
