@@ -12,6 +12,11 @@
  *   POST /wp-json/spark-living/v1/tests/{id}          (edit change_type, a_label, b_label only; allowed on a running test)
  *   POST /wp-json/spark-living/v1/tests/{id}/start   (needs sessions_14d >= 100, or force:true)
  *   POST /wp-json/spark-living/v1/tests/{id}/conclude
+ *   GET  /wp-json/spark-living/v1/suggestions
+ *   POST /wp-json/spark-living/v1/suggestions
+ *   POST /wp-json/spark-living/v1/suggestions/{id}/queue
+ *   POST /wp-json/spark-living/v1/suggestions/{id}/unqueue
+ *   POST /wp-json/spark-living/v1/suggestions/{id}/dismiss
  *
  * @package SparkLiving
  */
@@ -125,6 +130,89 @@ final class Spark_Living_Rest {
 				'permission_callback' => array( __CLASS__, 'can_manage' ),
 			)
 		);
+		register_rest_route(
+			$ns,
+			'/suggestions',
+			array(
+				array(
+					'methods'             => WP_REST_Server::READABLE,
+					'callback'            => array( __CLASS__, 'get_suggestions' ),
+					'permission_callback' => array( __CLASS__, 'can_manage' ),
+				),
+				array(
+					'methods'             => WP_REST_Server::CREATABLE,
+					'callback'            => array( __CLASS__, 'create_suggestion' ),
+					'permission_callback' => array( __CLASS__, 'can_manage' ),
+				),
+			)
+		);
+		foreach ( array( 'queue', 'unqueue', 'dismiss' ) as $action ) {
+			register_rest_route(
+				$ns,
+				'/suggestions/(?P<id>\d+)/' . $action,
+				array(
+					'methods'             => WP_REST_Server::CREATABLE,
+					'callback'            => static function ( WP_REST_Request $request ) use ( $action ) {
+						return self::suggestion_action( $action, absint( $request['id'] ) );
+					},
+					'permission_callback' => array( __CLASS__, 'can_manage' ),
+				)
+			);
+		}
+	}
+
+	/**
+	 * GET /suggestions
+	 *
+	 * @return WP_REST_Response
+	 */
+	public static function get_suggestions(): WP_REST_Response {
+		return new WP_REST_Response( Spark_Living_Queue::overview(), 200 );
+	}
+
+	/**
+	 * POST /suggestions
+	 *
+	 * Body (JSON): title, hypothesis, page (post ID or URL), device, element_type,
+	 * target, variants (same format as POST /tests), change_type, a_label, b_label,
+	 * rationale (up to 600 characters), evidence [{source, detail, as_of}],
+	 * priority (1 is first), suggested_by, sessions_14d, sessions_as_of
+	 * (YYYY-MM-DD). Creates a test with status `suggested`. It never starts it.
+	 *
+	 * @param WP_REST_Request $request Request.
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public static function create_suggestion( WP_REST_Request $request ) {
+		$params = $request->get_json_params();
+		if ( ! is_array( $params ) ) {
+			$params = $request->get_params();
+		}
+		$id = Spark_Living_Queue::create_suggestion( $params );
+		if ( is_wp_error( $id ) ) {
+			return $id;
+		}
+		return new WP_REST_Response( Spark_Living_Queue::present( (array) Spark_Living_Store::get( $id ) ), 201 );
+	}
+
+	/**
+	 * POST /suggestions/{id}/queue | unqueue | dismiss
+	 *
+	 * @param string $action queue, unqueue or dismiss.
+	 * @param int    $id     Experiment ID.
+	 * @return WP_REST_Response|WP_Error
+	 */
+	private static function suggestion_action( string $action, int $id ) {
+		$done = 'queue' === $action ? Spark_Living_Queue::queue( $id ) : ( 'unqueue' === $action ? Spark_Living_Queue::unqueue( $id ) : Spark_Living_Queue::dismiss( $id ) );
+		if ( is_wp_error( $done ) ) {
+			return $done;
+		}
+		$position = 0;
+		foreach ( Spark_Living_Queue::queue_list() as $i => $q ) {
+			if ( (int) $q['id'] === $id ) {
+				$position = $i + 1;
+			}
+		}
+		return new WP_REST_Response( Spark_Living_Queue::present( $done, $position ), 200 );
 	}
 
 	/**
@@ -160,6 +248,7 @@ final class Spark_Living_Rest {
 			$promoted[] = self::present_experiment( $exp );
 		}
 		$tally = Spark_Living_Store::verdict_tally();
+		$plan  = Spark_Living_Queue::overview();
 
 		return new WP_REST_Response(
 			array(
@@ -169,6 +258,8 @@ final class Spark_Living_Rest {
 				'running'        => $running ? array_merge( self::present_experiment( $running ), array( 'live' => Spark_Living_Engine::snapshot( $running ) ) ) : null,
 					'sources'        => Spark_Living_Sources::for_rest(),
 				'queued'         => array_map( array( __CLASS__, 'present_experiment' ), $queue ),
+				'suggestions'    => $plan['suggestions'],
+				'queue'          => $plan['queue'],
 				'promoted'       => $promoted,
 				'lift'           => Spark_Living_Engine::lift_summary(),
 				'evolutions'     => $tally['evolved'],
@@ -341,8 +432,8 @@ final class Spark_Living_Rest {
 		if ( ! $exp ) {
 			return new WP_Error( 'spark_living_missing', __( 'Test not found.', 'spark-living' ), array( 'status' => 404 ) );
 		}
-		if ( ! in_array( $exp['status'], array( Spark_Living_Store::STATUS_DRAFT, Spark_Living_Store::STATUS_AWAITING ), true ) ) {
-			return new WP_Error( 'spark_living_state', __( 'Only a draft test can be started.', 'spark-living' ), array( 'status' => 409 ) );
+		if ( ! in_array( $exp['status'], Spark_Living_Store::STARTABLE, true ) ) {
+			return new WP_Error( 'spark_living_state', __( 'Only a draft, suggested or queued test can be started.', 'spark-living' ), array( 'status' => 409 ) );
 		}
 		$elig = Spark_Living_Store::check_eligibility( $params['sessions_14d'] ?? null, rest_sanitize_boolean( $params['force'] ?? false ), (string) $exp['device'] );
 		if ( is_wp_error( $elig ) ) {

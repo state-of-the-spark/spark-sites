@@ -1,4 +1,4 @@
-# Spark Living v0.1.4
+# Spark Living v0.2.0
 
 Living Websites by Spark Sites. A WordPress plugin that runs one split test at a time on a site, keeps what brings in more leads, logs every change, and reports through a REST API.
 
@@ -130,13 +130,18 @@ All routes need `manage_options` (use an application password). Base: `/wp-json/
 
 | Method and route | Purpose |
 |---|---|
-| `GET /state` | Running test with live numbers and the current decision, `sources` (the data source list), queued tests, promoted winners, cumulative lift, `tally` (evolved, keep_a, no_difference, guard_blocked, reverted), `evolutions` (= tally.evolved), rules |
+| `GET /state` | Running test with live numbers and the current decision, `sources` (the data source list), `queued` (draft and awaiting-approval tests, as before), `suggestions` and `queue` (0.2.0, see below), promoted winners, cumulative lift, `tally` (evolved, keep_a, no_difference, guard_blocked, reverted), `evolutions` (= tally.evolved), rules |
 | `GET /stats?experiment_id=ID` | Stats for one test (the running test when omitted); concluded tests return their stored final snapshot |
 | `GET /log?per_page=50&page=1` | Evolution log, newest first; `X-WP-Total` header |
 | `POST /tests` | Create a test (body above; optional `device`, optional `variants.B.css`). `start: true` starts it if none is running (409 otherwise) and needs `sessions_14d` (or `force: true`) like `/start` |
 | `POST /tests/{id}` | Edit only `change_type`, `a_label` and `b_label` (see "Current versus Challenger"). Allowed in any status, including running; nothing else is touched. 400 for an unknown `change_type` or an empty body; an empty string clears a field |
 | `POST /tests/{id}/start` | Start a draft, or approve and start a Tier 2 test. Body `{"sessions_14d": N}`, N of 100 or more, or `{"force": true}` (administrator; recorded). 400 or 422 otherwise |
 | `POST /tests/{id}/conclude` | Body `{"verdict":"ship_b" \| "keep_a" \| "no_difference","note":"..."}`; logs it and promotes B on `ship_b` |
+| `GET /suggestions` | `{suggestions: [...], queue: [...]}`. Suggestions by priority (1 first), the queue in start order. Each item carries `traffic` (sessions, as_of, age_days, meets_min, fresh), `gate` (ok, code, message) and `queue_position` (0 when not queued) |
+| `POST /suggestions` | Create a suggested test (fields below). 201 with the new test; 400 with a specific `code` for any invalid field. Never starts anything |
+| `POST /suggestions/{id}/queue` | Suggested to queued, at the end of the line. 409 unless the test is `suggested`. Does not start it |
+| `POST /suggestions/{id}/unqueue` | Queued back to suggested ("Remove from queue"). It keeps its priority |
+| `POST /suggestions/{id}/dismiss` | Suggested or queued to dismissed. The record is kept; it leaves every list |
 | `POST /event` (public) | Browser events only; nonce-free, validated, rate limited, `no-store` |
 
 ## How it runs
@@ -206,6 +211,46 @@ Defaults when the fields are empty:
 
 On narrow screens (600 px and under) the comparison stacks, the chips take a full row each, and the numbers tables scroll sideways inside their own box instead of widening the page.
 
+## Suggested tests and queue (0.2.0)
+
+The dashboard (`/living/`, the shortcode and the wp-admin page) has two sections after "Current test": **Up next** (the queue) and **Suggested tests**. A suggestion is a fully specified test that nobody has queued yet. The brain (or a page review) writes it; the owner reads it and presses **Queue this test** or **Dismiss**.
+
+### What existed before 0.2.0
+There was no ordered queue and no suggestions. The only waiting tests were drafts and Tier 2 tests awaiting approval (`GET /state` `queued`, and a list in wp-admin only, headed "Queued tests"), each started by hand with a session count. Nothing started a test on its own. That list is unchanged apart from its wp-admin heading, now "Drafts and approvals", so "queue" means one thing.
+
+### What was added
+Three statuses on `living_experiment`: `suggested`, `queued`, `dismissed`; new fields; the five routes above; a new class `Spark_Living_Queue` (`includes/class-spark-living-queue.php`); the two dashboard sections; and one extra step in the nightly job. Nothing in the assignment, statistics, event collection or the running test changed.
+
+### Suggestion fields (`POST /suggestions`, JSON)
+| Field | Rule |
+|---|---|
+| `title` (or `name`) | Required. Plain text, 200 characters. |
+| `hypothesis` | Optional text. |
+| `page` | Required. A post ID, an http or https URL, or a path starting with `/`. Anything else (for example `javascript:`) is 400. |
+| `device` | `all` (default), `mobile` or `desktop`. |
+| `element_type`, `target`, `variants` | Exactly as `POST /tests`: a selector test needs a valid selector and a challenger with a change or a `css` snippet (sanitised by the same CSS sanitiser); a block test uses `element_type: block`. |
+| `change_type`, `a_label`, `b_label` | As in 0.1.4. An unknown `change_type` is 400. |
+| `rationale` | Required. Plain text, up to 600 characters (601 is 400): what was seen on the page. |
+| `evidence` | Optional list of up to 5 items `{source, detail, as_of}`: source (120 characters), one-line detail (200) and a real date `YYYY-MM-DD`. An item missing any of the three is 400. |
+| `priority` | Whole number of 1 or more; 1 is first. Default: last place. |
+| `suggested_by` | Plain text, 80 characters, for example "Lumen page review". `suggested_at` is set by the server. |
+| `sessions_14d`, `sessions_as_of` | Required. The trailing 14-day sessions for the target page and device, and the date (`YYYY-MM-DD`, not in the future) they were measured. Supplied by whoever writes the suggestion; the plugin has no pageview data. |
+| `tier` | Tier 2 is refused (400): those tests need owner approval and may not be queued to start by themselves. |
+
+Every text field goes through the plugin's existing sanitisers (tags and script bodies stripped) and is escaped again on output. Nothing is written when any field is invalid.
+
+### The queue
+* One test runs at a time, as before. Queued tests wait in the order they were queued (`queue_order`); removing one and queueing it again puts it last.
+* **Queueing never starts a test.** The nightly job (`spark_living_nightly`) starts the next one: after it has evaluated the running test, if no test is running it looks at the first queued test only and starts it when its stored count passes the gate: `sessions_14d` is 100 or more **and** `sessions_as_of` is no more than 21 days old (a count measured 21 days ago still passes; 22 does not). The test then starts like any other (50/50, holdout, `start_sessions_14d` = the stored count, `forced_start` false). The dashboard says "Starts on the next nightly check after the current test ends."
+* A failed gate leaves the test queued and starts nothing. The dashboard shows why on its card: "Waiting: traffic count is below the minimum" or "Waiting: traffic count is out of date". A blocked first test is not skipped for the one behind it.
+* The queue never forces a start. A suggestion below 100 sessions can only be started by hand with `POST /tests/{id}/start` and `force: true` (recorded as `forced_start`), which now also accepts `suggested` and `queued` tests.
+* Suggest, queue, remove and dismiss touch only the suggestion's own fields. They never change the running test, its variants, assignment, start time or event rows (`t16.js` compares a fingerprint before and after).
+
+### The cards
+"Suggested tests" shows the two best-ranked suggestions, then a muted "N more suggested tests are waiting." Each card has: rank and title; page and device; "What would change" (change type, then Current and Challenger rows, the same as the Current test card); "Why" (the rationale); "Based on" (each evidence item as a small tag with the source and date, plus its detail line); "Traffic" ("137 sessions in 14 days (measured Nov 11). Meets the 100-session minimum." or, under 100, "Below the 100-session minimum; this would need a forced start." in a muted warning bar; a count older than 21 days adds a note that it would not start on its own); and two buttons, **Queue this test** (primary) and **Dismiss**. "Up next" lists queued tests with their position, the same comparison, the wait reason if any, and **Remove from queue**.
+
+The buttons are real `<button type="button">` elements with a visible focus outline. A press disables every button, shows "Working...", posts to the REST route with the REST nonce, then swaps the two sections in place (no page reload, so the load animation does not replay) and reads the result out in a status line (`role="status"`). A failure shows the server's message in that line and re-enables the buttons. There is no alert, confirm or prompt dialog anywhere.
+
 ## Cache flush
 
 The allocation weights and the live set are printed into the page head, so a cached page can carry stale ones. `Spark_Living_Util::flush_page_cache()` runs: after the nightly job updates the allocation weights; when a test starts, concludes (nightly, REST or admin) or a winner is auto-reverted (through the `spark_living_test_started`, `spark_living_test_concluded` and `spark_living_test_reverted` actions). It calls, each only when it exists (`function_exists` / `has_action`): `wp_cache_flush()`, `batcache_clear_url()` for the home URL (Pressable page cache), `rocket_clean_domain()` (WP Rocket), `w3tc_flush_all()` (W3 Total Cache), `wp_cache_clear_cache()` (WP Super Cache), `sg_cachepress_purge_cache()` (SiteGround), `wpfc_clear_all_cache()` (WP Fastest Cache) and the `litespeed_purge_all` action. A site with another cache can hook the `spark_living_flush_cache` action, which fires at the end. Only the home URL is cleared per URL on Batcache; other pages expire on their normal cache lifetime.
@@ -214,7 +259,7 @@ The allocation weights and the live set are printed into the page head, so a cac
 
 **Events table `{prefix}spark_living_events`:** `id`, `experiment_id` (0 = site watch, see below), `variant` (A, B, H holdout, L living/promoted), `visitor_id`, `session_id`, `event_type` (`exposure`, `cta_click`, `form_start`, `form_submit`, `tel_click`), `created_at` (UTC). Indexes: `(experiment_id, event_type, session_id)`, `(experiment_id, variant, event_type)`, `created_at`, `visitor_id`. No IP address, user agent or URL is stored.
 
-**Experiments:** private custom post type `living_experiment` (post ID = experiment ID; title = name). Chosen over an options row because tests are kept forever for the log, IDs come free, and nothing needs a custom table. Post meta (`_spark_living_` prefix): `change_type`, `a_label`, `b_label` (0.1.4, descriptive only), `element_type` (block or selector), `target`, `hypothesis`, `variants` ({A:{label,changes}, B:{label,changes,css}}), `weights` ({A,B}), `status` (draft, awaiting_approval, running, concluded), `start_date`, `end_date`, `tier` (1 or 2), `device` (all, mobile, desktop), `forced_start` (true when started below the 100-session bar), `start_sessions_14d` (the number stated at start, 0 if none), `verdict`, `winner`, `promoted`, `shipped_at`, `revert_checked`, `reverted`, `snapshot` (final numbers).
+**Experiments:** private custom post type `living_experiment` (post ID = experiment ID; title = name). Chosen over an options row because tests are kept forever for the log, IDs come free, and nothing needs a custom table. Post meta (`_spark_living_` prefix): `change_type`, `a_label`, `b_label` (0.1.4, descriptive only), `element_type` (block or selector), `target`, `hypothesis`, `variants` ({A:{label,changes}, B:{label,changes,css}}), `weights` ({A,B}), `status` (draft, awaiting_approval, running, concluded, and from 0.2.0 suggested, queued, dismissed), the suggestion fields `page`, `rationale`, `evidence`, `priority`, `suggested_by`, `suggested_at`, `sessions_14d`, `sessions_as_of`, `queued_at`, `queue_order`, `dismissed_at` (0.2.0, empty on other tests), `start_date`, `end_date`, `tier` (1 or 2), `device` (all, mobile, desktop), `forced_start` (true when started below the 100-session bar), `start_sessions_14d` (the number stated at start, 0 if none), `verdict`, `winner`, `promoted`, `shipped_at`, `revert_checked`, `reverted`, `snapshot` (final numbers).
 
 **Evolution log:** private custom post type `living_evolution`, one post per concluded test (plus one per auto-revert, `entry_type = revert`). Meta (`_spark_living_log_` prefix): `experiment_id`, `element_type`, `target`, `hypothesis`, `variant_a`, `variant_b`, `numbers`, `verdict`, `shipped`, `started`, `ended`, `note`, `device`, `forced_start`, `start_sessions_14d`.
 

@@ -185,3 +185,61 @@ Before the deploy and after the label: status running, start 2026-11-13 13:58:11
 - A real phone and a real mobile user agent (frames at 390 px use a desktop user agent).
 - Logged-out homepage in a browser: the site's bot check (a hashcash challenge) did not pass in my headless Chromium this time, so the logged-out checks were HTTP status only (curl).
 - The Analytics chip turning Live on the live site (it needs a real connection; covered locally by the filter test).
+
+## Suggested tests and queue (0.2.0)
+
+Result: **live (plugin 0.2.0), not rolled back.** Site confirmed before every write (`siteurl` = https://sparkmysite.com, Pressable site 1614838; each write command aborts unless that matches). Test 46907 was not touched (see "Test 46907 before and after").
+
+### What queue support existed, and what was added
+Before 0.2.0 there was no ordered queue and no suggestions. The only waiting tests were drafts and Tier 2 tests awaiting approval (`GET /state` `queued`, plus a list in wp-admin only), each started by hand with a typed session count; nothing started a test by itself and `/living/` showed no upcoming-test section. Added: statuses `suggested`, `queued` and `dismissed` on `living_experiment` (no table or schema change; the fields are post meta), 11 new meta fields, five REST routes (`GET` and `POST /suggestions`, `POST /suggestions/{id}/queue`, `/unqueue`, `/dismiss`), `suggestions` and `queue` in `GET /state`, a new class `Spark_Living_Queue` (new file `includes/class-spark-living-queue.php`), the two dashboard sections "Up next" and "Suggested tests" (shown on `/living/`, the shortcode and the wp-admin page), and one extra step in the nightly job. The old wp-admin list kept its function and was renamed "Drafts and approvals" so "queue" means one thing. Field rules, endpoints and the queue rules are in `plugin\spark-living\README.md` ("Suggested tests and queue (0.2.0)").
+
+Design choices worth knowing:
+- Queueing never starts a test. The nightly job starts the first queued test only when nothing is running and its stored `sessions_14d` is 100 or more and `sessions_as_of` is 21 days old or less (21 passes, 22 does not). A blocked first test is not skipped for one behind it, and the queue never forces a start.
+- A suggestion below 100 sessions can still be started by hand with `POST /tests/{id}/start` and `force: true`; that route now accepts `suggested` and `queued` tests as well as drafts.
+- Tier 2 tests are refused as suggestions (they need owner approval and may not be queued to start on their own).
+- The buttons post to the REST routes with the REST nonce and swap the two sections in place (no reload, so the load animation does not replay). Buttons are real `<button>` elements, disabled while a request is in flight, with a visible focus outline and a polite status line. No alert, confirm or prompt dialogs.
+
+### Local
+t10 (36), t11 (34), t12 (15), t13 (42), t14 (16), t15 (70), `tests/stats-check.js` (28) and the new `_playground\t16.js` (109) all pass on a final serial run against a freshly started Playground server (an earlier run that overlapped another run of mine on the shared database gave false failures; it was discarded). t16 covers create, list, queue, dismiss and remove from queue; 18 refusal cases for invalid fields; sanitising and escaping of every text field (hostile tags, script, event handlers, quotes, CSS `@import` and `url(`); permissions (subscriber and editor get 403 on every route, logged out gets 401, an admin cookie without the REST nonce is refused, `/living/` stays 404 for a subscriber and logged out); the top-two display rule and the "N more" line; the below-100 warning; the auto-start gate (100 starts, 99 and 0 do not, 22 days old does not, exactly 21 days does); strict head-of-line order; one test at a time; a fingerprint of the running test (fields plus event rows) unchanged by suggest, queue, unqueue and dismiss; `GET /state` contents; and the buttons in a real browser (keyboard focus, in-flight disabled state, no reload, error path, no dialogs). Local frames viewed at 1366, 390 and dark mode: `C:\Users\grant\Documents\GitHub\spark-sites\sites\living-websites\audit\screenshots\local-dash-suggested-desktop.png`, `local-dash-suggested-mobile.png`, `local-dash-suggested-dark.png` (same folder).
+
+### Backup
+Pressable on-demand database backup taken first (a status was added): id **17390998329**, request 1081713, 49,531,719 bytes, completed 2026-11-13 18:55:12 UTC, kept until 2026-12-13. Latest earlier backups: database 17387975529 and filesystem 17387980953 (13:25 UTC). No filesystem backup was taken for this deploy (plugin files only; the old files are in git).
+
+### Deploy
+Same Pressable WP-CLI route, with no temporary branch on the public repository. The 7 changed files were sent as line patches (old md5 guarded) and the new class file in full: one gzip bundle of 18,514 bytes, base64 in 5 chunks (md5 of the joined text 856342553fac2389ca267d26ad5dbc36, every chunk md5 matched on the server). The staging step refused to continue unless each live old file matched the expected md5 and each patched result matched the local file; it passed. Old files were copied to `wp-content/sl-bak-020/` first, every file was written as `.new`, md5 checked, then renamed in a fixed order (new class first, `spark-living.php` second, dashboard last). Live md5 after, all equal to the local files: `class-spark-living-queue.php` (new) 0774b7ae6046df781f82ac1fc608953f, `spark-living.php` c8893e3e55109107e4d01dab9ac712e2, store 7b80b46e93da8dd0d8d2e4d2c04c8605, rest 4f9cc8fea145ec7f23d82d584d97f516, cron f2cf4b42a31db787a224852674d2dc14, dashboard 211515e538ab7b6aeb43db9885d4dcfe, both `editor.asset.php` 908aa4110310ba66fab03aac6cb8ff2b. 0 stray `.new` files; the three temporary folders (upload, stage, backup) were removed after verification. Pressable edge cache purged and object cache flushed.
+
+### Checks after the deploy
+- `wp plugin get spark-living`: active, version 0.2.0. `GET /wp-json/spark-living/v1/suggestions` answers 401 without credentials (the route exists and is protected).
+- Logged out: https://sparkmysite.com/ 200, https://sparkmysite.com/living/ 404, /shop/ 200.
+- Pressable PHP log (last 7 days, 221 entries): 0 mention Spark Living; the newest entry is 2026-11-13 18:05:38 UTC (the known WordPress core site health and cron error), before the deploy.
+- Nightly job: next run 2026-11-14 14:30:41 UTC (`last_run` option 2026-11-13 14:31:11). It will find 46907 still running, so `Spark_Living_Queue::start_next()` returns without doing anything until 46907 ends.
+
+### Test 46907 before and after
+Compared with a fingerprint taken before the first write (18:55 UTC) and again at 19:07 UTC, after the deploy, the seed, the screenshots and the cache purge:
+
+| | Before | After |
+|---|---|---|
+| status | running | running |
+| start_date | 2026-11-13 13:58:11 UTC | 2026-11-13 13:58:11 UTC |
+| variants md5 | 8a72dc8fbff2dc6d8c6a0360fef729d6 | 8a72dc8fbff2dc6d8c6a0360fef729d6 |
+| weights md5 | 911ae2d78112cf8cb8232d9b5d2c9c12 | 911ae2d78112cf8cb8232d9b5d2c9c12 |
+| start_sessions_14d, forced_start, a_label | 137, false, "Get started" | 137, false, "Get started" |
+| all fields of the test (the 0.1.4 key set) md5 | baee342c500af384f6d323c47863afac | baee342c500af384f6d323c47863afac |
+| event rows, whole table | 12 (max id 18), digest deee5a52fb58271570b7f21272079236 | 12 (max id 18), digest deee5a52fb58271570b7f21272079236 |
+| event rows under 46907 | 2, digest a7cff3bd7bd8e022f5a357e485eecdd6 | 2, digest a7cff3bd7bd8e022f5a357e485eecdd6 |
+
+(The "after" fingerprint uses the 0.1.4 key set because 0.2.0 adds empty suggestion fields to what `Spark_Living_Store::get()` returns; none of them is stored on 46907.)
+
+### Seeded suggestion (status suggested only; not queued, not started)
+Created with the plugin's own `Spark_Living_Queue::create_suggestion()` inside WP-CLI: post **46910**, "Show the Get Started button on phones", status `suggested`, page `/` (the homepage), device mobile, selector `a.et_pb_button[href="#contact"]`, change type visibility, priority 1, suggested by "Lumen page review", `sessions_14d` 41, `sessions_as_of` 2026-11-11, three evidence items (page review 2026-11-12, Google Analytics 2026-11-11, staging test 2026-11-12). The CSS variant is the Test 2 CSS from the staging record and the plugin's CSS sanitiser left it unchanged (376 characters, string equal). The running test is still 46907 and `start_date` of 46910 is empty. The card shows the below-minimum warning, as intended.
+
+### Seen live (as the owner's administrator, user ID 17393, no password touched)
+30 minute login cookie from WP-CLI (`WP_Session_Tokens::create` plus `wp_generate_auth_cookie`, logged_in scheme), desktop user agent in my own playwright-core Chromium (also at 390 px, since the bot check blocks mobile user agents), frames taken after the animation settled. The cookie's session token was destroyed afterwards (`verify` returned false). No page errors. Buttons were not pressed on live. Frames in `C:\Users\grant\Documents\GitHub\spark-sites\sites\living-websites\audit\screenshots\`: `live-dash-suggested-desktop.png`, `live-dash-suggested-mobile.png`, `live-dash-suggested-dark.png`. They show "Up next" with "Nothing is queued." and the muted "Starts on the next nightly check after the current test ends.", then "Suggested tests" with the one seeded card: rank 1, page and device, What would change (Visibility, Current "No button in the header on phones", Challenger "Get Started button shown in the header on phones"), Why, three Based on tags with dates and detail lines, "Traffic: 41 sessions in 14 days (measured Nov 11)." with the amber bar "Below the 100-session minimum; this would need a forced start.", and the two buttons.
+
+### Homepage review captures (logged out)
+`review-home-desktop-full.png` (1366 wide, 8,899 px tall) and `review-home-mobile-full.png` (390 wide with a desktop user agent, 14,127 px tall), each also saved as consecutive slices of at most 2,500 px: `review-home-desktop-1.png` to `-4.png` and `review-home-mobile-1.png` to `-6.png`, all in the screenshots folder. The staff cookie `spark_living_staff=1` was set before every visit so the plugin script returns early. The events table had 12 rows (max id 18) before and 12 rows (max id 18) after, with an identical digest, so the visits were not counted. The site's bot check (a hashcash challenge) does not pass in the bundled headless Chromium; the installed Google Chrome (`channel: 'chrome'`, headless) passes it.
+
+### Not verified
+- The nightly auto-start on live. It is covered by `t16.js` locally (including the gate cases); on live it cannot run until 46907 ends and a suggestion is queued and passes the gate. I did not queue the seeded suggestion.
+- The Queue, Remove and Dismiss buttons on live (not pressed, as asked); exercised locally in a real browser.
+- A real phone and a real mobile user agent (frames at 390 px use a desktop user agent). A real WP-Cron tick on MySQL: the job is called directly in the local tests.

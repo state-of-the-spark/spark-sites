@@ -26,6 +26,14 @@ final class Spark_Living_Store {
 	public const STATUS_RUNNING   = 'running';
 	public const STATUS_CONCLUDED = 'concluded';
 
+	/** Suggested tests and the queue (0.2.0). */
+	public const STATUS_SUGGESTED = 'suggested';
+	public const STATUS_QUEUED    = 'queued';
+	public const STATUS_DISMISSED = 'dismissed';
+
+	/** Statuses a test may be started from. */
+	public const STARTABLE = array( 'draft', 'awaiting_approval', 'queued', 'suggested' );
+
 	public const DEVICES = array( 'all', 'mobile', 'desktop' );
 
 	/** What a test may say it is testing (0.1.4). */
@@ -104,6 +112,18 @@ final class Spark_Living_Store {
 			'change_type'   => '',
 			'a_label'       => '',
 			'b_label'       => '',
+			// Suggested tests and the queue (0.2.0).
+			'page'          => '',
+			'rationale'     => '',
+			'evidence'      => array(),
+			'priority'      => 0,
+			'suggested_by'  => '',
+			'suggested_at'  => '',
+			'sessions_14d'  => 0,
+			'sessions_as_of' => '',
+			'queued_at'     => '',
+			'queue_order'   => 0,
+			'dismissed_at'  => '',
 		);
 	}
 
@@ -227,6 +247,10 @@ final class Spark_Living_Store {
 		$out['device']         = in_array( $out['device'], self::DEVICES, true ) ? $out['device'] : 'all';
 		$out['forced_start']   = (bool) $out['forced_start'];
 		$out['start_sessions_14d'] = (int) $out['start_sessions_14d'];
+		$out['priority']       = (int) $out['priority'];
+		$out['sessions_14d']   = (int) $out['sessions_14d'];
+		$out['queue_order']    = (int) $out['queue_order'];
+		$out['evidence']       = is_array( $out['evidence'] ) ? $out['evidence'] : array();
 		$out['promoted']       = (bool) $out['promoted'];
 		$out['revert_checked'] = (bool) $out['revert_checked'];
 		$out['reverted']       = (bool) $out['reverted'];
@@ -471,8 +495,8 @@ final class Spark_Living_Store {
 		if ( ! $exp ) {
 			return new WP_Error( 'spark_living_missing', __( 'Test not found.', 'spark-living' ), array( 'status' => 404 ) );
 		}
-		if ( ! in_array( $exp['status'], array( self::STATUS_DRAFT, self::STATUS_AWAITING ), true ) ) {
-			return new WP_Error( 'spark_living_state', __( 'Only a draft test can be started.', 'spark-living' ), array( 'status' => 409 ) );
+		if ( ! in_array( $exp['status'], self::STARTABLE, true ) ) {
+			return new WP_Error( 'spark_living_state', __( 'Only a draft, suggested or queued test can be started.', 'spark-living' ), array( 'status' => 409 ) );
 		}
 		if ( self::get_running() ) {
 			return new WP_Error( 'spark_living_busy', __( 'A test is already running. One test per site at a time.', 'spark-living' ), array( 'status' => 409 ) );

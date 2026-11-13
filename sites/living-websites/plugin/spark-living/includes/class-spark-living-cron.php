@@ -36,7 +36,8 @@ final class Spark_Living_Cron {
 
 	/**
 	 * Nightly work: evaluate the running test (weights, verdict, promotion,
-	 * evolution log), then check recent ships for auto-revert, then prune.
+	 * evolution log), then check recent ships for auto-revert, then start the
+	 * next queued test when none is running, then prune.
 	 */
 	public static function run(): void {
 		$running = Spark_Living_Store::get_running();
@@ -53,6 +54,9 @@ final class Spark_Living_Cron {
 		if ( $changed ) {
 			Spark_Living_Util::flush_page_cache();
 		}
+		// Nothing running (it just concluded, or the line was empty): start the
+		// first queued test if its traffic count passes the gate. Never forced.
+		Spark_Living_Queue::start_next();
 		Spark_Living_Metrics::prune( 400 );
 		update_option( 'spark_living_last_run', Spark_Living_Util::mysql_utc(), false );
 		do_action( 'spark_living_nightly_complete' );

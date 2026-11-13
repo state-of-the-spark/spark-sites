@@ -307,7 +307,33 @@ body.sl-page{margin:0;background:#ffffff}
 .sl-dash .sl-cmp-q{font-weight:600}
 .sl-dash .sl-cmp-plain{font-style:italic}
 .sl-dash .sl-sel{font-size:.8rem;opacity:.9}
-@media (max-width:600px){.sl-dash table{display:block;max-width:100%;overflow-x:auto}.sl-dash .sl-cmp-row{grid-template-columns:minmax(0,1fr)}.sl-dash .sl-cmp-row dt .sl-muted{display:inline;margin-left:.4rem}.sl-dash li.sl-src{flex-basis:100%}}
+@media (max-width:600px){.sl-dash .sl-acts button.sl-btn{flex:1 1 100%}.sl-dash table{display:block;max-width:100%;overflow-x:auto}.sl-dash .sl-cmp-row{grid-template-columns:minmax(0,1fr)}.sl-dash .sl-cmp-row dt .sl-muted{display:inline;margin-left:.4rem}.sl-dash li.sl-src{flex-basis:100%}}
+/* Suggested tests and Up next (0.2.0). */
+.sl-dash{--sl-warn-bg:#fff4e0}
+@media (prefers-color-scheme:dark){.sl-dash{--sl-warn-bg:#2b2111}}
+.sl-dash h3.sl-sug-title{font-size:1.05rem;margin:0 0 .15rem;line-height:1.35}
+.sl-dash .sl-rank{display:inline-block;min-width:1.6rem;margin-right:.45rem;padding:0 .4rem;border-radius:999px;background:var(--sl-accent);color:var(--sl-bg);font-size:.85rem;font-weight:700;text-align:center}
+.sl-dash .sl-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.sl-dash .sl-sug{margin:.75rem 0}
+.sl-dash .sl-sug p{margin:.5rem 0}
+.sl-dash .sl-sug p.sl-sug-where{margin:.1rem 0 .25rem;font-size:.9rem}
+.sl-dash ul.sl-ev{list-style:none;margin:.35rem 0 0;padding:0;display:flex;flex-direction:column;gap:.35rem}
+.sl-dash ul.sl-ev li{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .55rem;min-width:0}
+.sl-dash .sl-tag{display:inline-block;max-width:100%;padding:.05rem .6rem;border:1px solid var(--sl-line);border-radius:999px;background:var(--sl-bg);font-size:.8rem;line-height:1.55;overflow-wrap:anywhere}
+.sl-dash .sl-tag time{color:var(--sl-muted);margin-left:.25rem}
+.sl-dash .sl-ev-detail{font-size:.85rem;color:var(--sl-muted);overflow-wrap:anywhere}
+.sl-dash .sl-traffic-low{display:block;margin-top:.3rem;padding:.35rem .6rem;border-left:4px solid var(--sl-warn);background:var(--sl-warn-bg);color:var(--sl-warn);font-weight:600;font-size:.9rem}
+.sl-dash .sl-traffic-ok{color:var(--sl-muted)}
+.sl-dash .sl-acts{display:flex;flex-wrap:wrap;gap:.6rem;margin:.75rem 0 .1rem}
+.sl-dash button.sl-btn{font:inherit;font-weight:600;padding:.5rem 1rem;min-height:2.5rem;border-radius:6px;border:1px solid var(--sl-accent);background:transparent;color:var(--sl-accent);cursor:pointer}
+.sl-dash button.sl-btn-primary{background:var(--sl-accent);color:var(--sl-bg)}
+.sl-dash button.sl-btn:hover:not(:disabled){filter:brightness(1.08);text-decoration:underline}
+.sl-dash button.sl-btn:focus-visible{outline:3px solid var(--sl-chal);outline-offset:3px}
+.sl-dash button.sl-btn:disabled{opacity:.55;cursor:progress}
+.sl-dash .sl-plan-status{min-height:1.4rem;margin:.5rem 0 0;font-weight:600}
+.sl-dash .sl-plan-status:focus{outline:none}
+.sl-dash .sl-plan-more{margin:.5rem 0}
+.sl-dash .sl-wait{margin:.4rem 0;font-weight:600;color:var(--sl-warn)}
 .sl-dash a:focus,.sl-dash button:focus,.sl-dash input:focus,.sl-dash select:focus,.sl-dash textarea:focus{outline:3px solid var(--sl-accent);outline-offset:2px}
 </style>';
 	}
@@ -374,6 +400,7 @@ body.sl-page{margin:0;background:#ffffff}
 		if ( $admin_controls ) {
 			self::render_queue();
 		}
+		self::render_plan();
 		?>
 
 	<h2 id="sl-timeline"><?php esc_html_e( 'Test history', 'spark-living' ); ?></h2>
@@ -468,14 +495,18 @@ body.sl-page{margin:0;background:#ffffff}
 	/**
 	 * "What is being tested", then the Current (A) and Challenger (B) rows.
 	 *
-	 * @param array $exp Running experiment.
+	 * @param array  $exp     Experiment.
+	 * @param string $heading Label before the change type.
 	 * @return string HTML.
 	 */
-	private static function comparison( array $exp ): string {
+	private static function comparison( array $exp, string $heading = '' ): string {
 		$d = Spark_Living_Store::describe( $exp );
+		if ( '' === $heading ) {
+			$heading = __( 'What is being tested:', 'spark-living' );
+		}
 		ob_start();
 		?>
-		<p class="sl-cmp-type"><strong><?php esc_html_e( 'What is being tested:', 'spark-living' ); ?></strong> <span class="sl-cmp-kind"><?php echo esc_html( $d['type_label'] ); ?></span></p>
+		<p class="sl-cmp-type"><strong><?php echo esc_html( $heading ); ?></strong> <span class="sl-cmp-kind"><?php echo esc_html( $d['type_label'] ); ?></span></p>
 		<dl class="sl-cmp">
 			<div class="sl-cmp-row sl-cmp-a">
 				<dt><?php esc_html_e( 'Current', 'spark-living' ); ?> <span class="sl-muted"><?php esc_html_e( 'variant A', 'spark-living' ); ?></span></dt>
@@ -572,6 +603,209 @@ body.sl-page{margin:0;background:#ffffff}
 	}
 
 	/**
+	 * Short date such as "Nov 11" (the year is added when it is not this year).
+	 *
+	 * @param string $ymd YYYY-MM-DD.
+	 * @return string
+	 */
+	private static function short_date( string $ymd ): string {
+		$ts = '' === $ymd ? 0 : (int) strtotime( $ymd . ' 12:00:00 UTC' );
+		if ( ! $ts ) {
+			return "\u{2014}";
+		}
+		return gmdate( 'Y', $ts ) === gmdate( 'Y' ) ? gmdate( 'M j', $ts ) : gmdate( 'M j, Y', $ts );
+	}
+
+	/**
+	 * Where a suggestion applies, as a short phrase.
+	 *
+	 * @param array $exp Experiment.
+	 * @return string
+	 */
+	private static function where_label( array $exp ): string {
+		$page = (string) $exp['page'];
+		if ( '' === $page ) {
+			return '';
+		}
+		if ( preg_match( '/^\d+$/', $page ) ) {
+			$title = get_the_title( (int) $page );
+			return '' !== $title ? $title : sprintf( /* translators: %s: post ID */ __( 'Page %s', 'spark-living' ), $page );
+		}
+		if ( '/' === $page || untrailingslashit( $page ) === untrailingslashit( home_url() ) ) {
+			return __( 'Homepage', 'spark-living' ) . ' (' . $page . ')';
+		}
+		return $page;
+	}
+
+	/**
+	 * The "Traffic" paragraph of a suggestion card.
+	 *
+	 * @param array $exp Experiment.
+	 * @return string HTML.
+	 */
+	private static function traffic_html( array $exp ): string {
+		$t    = Spark_Living_Queue::traffic( $exp );
+		$line = sprintf(
+			/* translators: 1: sessions, 2: date */
+			__( '%1$s sessions in 14 days (measured %2$s).', 'spark-living' ),
+			number_format_i18n( $t['sessions'] ),
+			self::short_date( $t['as_of'] )
+		);
+		$html = '<p class="sl-traffic"><strong>' . esc_html__( 'Traffic:', 'spark-living' ) . '</strong> ' . esc_html( $line ) . ' ';
+		if ( $t['meets_min'] ) {
+			$html .= '<span class="sl-traffic-ok">' . esc_html(
+				sprintf( /* translators: %d: minimum sessions */ __( 'Meets the %d-session minimum.', 'spark-living' ), $t['min'] )
+			) . '</span>';
+		} else {
+			$html .= '<span class="sl-traffic-low">' . esc_html(
+				sprintf( /* translators: %d: minimum sessions */ __( 'Below the %d-session minimum; this would need a forced start.', 'spark-living' ), $t['min'] )
+			) . '</span>';
+		}
+		if ( $t['meets_min'] && ! $t['fresh'] ) {
+			$html .= ' <span class="sl-traffic-low">' . esc_html(
+				sprintf( /* translators: %d: days */ __( 'This count is more than %d days old, so it would not start on its own until it is measured again.', 'spark-living' ), $t['max_age_days'] )
+			) . '</span>';
+		}
+		return $html . '</p>';
+	}
+
+	/**
+	 * One suggestion card.
+	 *
+	 * @param array $exp  Suggested experiment.
+	 * @param int   $rank 1-based rank among the suggestions.
+	 */
+	private static function render_suggestion( array $exp, int $rank ): void {
+		$eid = (string) $exp['id'];
+		?>
+		<article class="sl-card sl-sug" data-sl-id="<?php echo esc_attr( $eid ); ?>" aria-labelledby="sl-sug-t-<?php echo esc_attr( $eid ); ?>">
+			<h3 class="sl-sug-title" id="sl-sug-t-<?php echo esc_attr( $eid ); ?>"><span class="sl-rank" aria-hidden="true"><?php echo esc_html( (string) $rank ); ?></span><span class="sl-sr"><?php echo esc_html( sprintf( /* translators: %d: rank */ __( 'Rank %d: ', 'spark-living' ), $rank ) ); ?></span><?php echo esc_html( $exp['name'] ); ?></h3>
+			<p class="sl-muted sl-sug-where"><?php echo esc_html( self::where_label( $exp ) ); ?> &middot; <?php echo esc_html( rtrim( self::device_label( (string) $exp['device'] ), '.' ) ); ?></p>
+			<?php echo self::comparison( $exp, __( 'What would change:', 'spark-living' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<p><strong><?php esc_html_e( 'Why:', 'spark-living' ); ?></strong> <?php echo esc_html( $exp['rationale'] ); ?></p>
+			<?php if ( $exp['evidence'] ) : ?>
+			<div class="sl-based"><strong><?php esc_html_e( 'Based on:', 'spark-living' ); ?></strong>
+				<ul class="sl-ev">
+				<?php foreach ( $exp['evidence'] as $item ) : ?>
+					<li><span class="sl-tag"><?php echo esc_html( (string) ( $item['source'] ?? '' ) ); ?> <time datetime="<?php echo esc_attr( (string) ( $item['as_of'] ?? '' ) ); ?>"><?php echo esc_html( self::short_date( (string) ( $item['as_of'] ?? '' ) ) ); ?></time></span> <span class="sl-ev-detail"><?php echo esc_html( (string) ( $item['detail'] ?? '' ) ); ?></span></li>
+				<?php endforeach; ?>
+				</ul>
+			</div>
+			<?php endif; ?>
+			<?php echo self::traffic_html( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<div class="sl-acts">
+				<button type="button" class="sl-btn sl-btn-primary" data-sl-act="queue"><?php esc_html_e( 'Queue this test', 'spark-living' ); ?></button>
+				<button type="button" class="sl-btn" data-sl-act="dismiss"><?php esc_html_e( 'Dismiss', 'spark-living' ); ?></button>
+			</div>
+		</article>
+		<?php
+	}
+
+	/**
+	 * One card in the "Up next" list.
+	 *
+	 * @param array $exp      Queued experiment.
+	 * @param int   $position 1-based place in the queue.
+	 */
+	private static function render_queued( array $exp, int $position ): void {
+		$gate = Spark_Living_Queue::gate( $exp );
+		$eid  = (string) $exp['id'];
+		?>
+		<article class="sl-card sl-sug sl-queued" data-sl-id="<?php echo esc_attr( $eid ); ?>" aria-labelledby="sl-q-t-<?php echo esc_attr( $eid ); ?>">
+			<h3 class="sl-sug-title" id="sl-q-t-<?php echo esc_attr( $eid ); ?>"><span class="sl-rank" aria-hidden="true"><?php echo esc_html( (string) $position ); ?></span><span class="sl-sr"><?php echo esc_html( sprintf( /* translators: %d: place in the queue */ __( 'Position %d: ', 'spark-living' ), $position ) ); ?></span><?php echo esc_html( $exp['name'] ); ?></h3>
+			<p class="sl-muted sl-sug-where"><?php echo esc_html( sprintf( /* translators: %d: place in the queue */ __( 'Position %d in the queue', 'spark-living' ), $position ) ); ?> &middot; <?php echo esc_html( self::where_label( $exp ) ); ?> &middot; <?php echo esc_html( rtrim( self::device_label( (string) $exp['device'] ), '.' ) ); ?></p>
+			<?php echo self::comparison( $exp, __( 'What would change:', 'spark-living' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<?php if ( ! $gate['ok'] ) : ?>
+			<p class="sl-wait"><?php echo esc_html( $gate['message'] ); ?></p>
+			<?php endif; ?>
+			<?php echo self::traffic_html( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<div class="sl-acts">
+				<button type="button" class="sl-btn" data-sl-act="unqueue"><?php esc_html_e( 'Remove from queue', 'spark-living' ); ?></button>
+			</div>
+		</article>
+		<?php
+	}
+
+	/**
+	 * "Up next" (the queue) and "Suggested tests". Used by every surface. The
+	 * buttons call the REST routes with the REST nonce and the section is
+	 * swapped in place; a page reload is the fallback.
+	 */
+	private static function render_plan(): void {
+		$queue       = Spark_Living_Queue::queue_list();
+		$suggestions = Spark_Living_Queue::suggestions();
+		$shown       = array_slice( $suggestions, 0, Spark_Living_Queue::SHOW_TOP );
+		$more        = count( $suggestions ) - count( $shown );
+		?>
+	<div id="sl-plan" class="sl-plan" data-rest="<?php echo esc_url( rest_url( 'spark-living/v1' ) ); ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ); ?>">
+		<div id="sl-plan-body">
+		<h2 id="sl-upnext"><?php esc_html_e( 'Up next', 'spark-living' ); ?></h2>
+		<p class="sl-muted"><?php esc_html_e( 'Starts on the next nightly check after the current test ends.', 'spark-living' ); ?></p>
+		<?php if ( ! $queue ) : ?>
+		<p><?php esc_html_e( 'Nothing is queued.', 'spark-living' ); ?></p>
+		<?php else : ?>
+			<?php foreach ( $queue as $i => $exp ) : ?>
+				<?php self::render_queued( $exp, $i + 1 ); ?>
+			<?php endforeach; ?>
+		<?php endif; ?>
+
+		<h2 id="sl-suggested"><?php esc_html_e( 'Suggested tests', 'spark-living' ); ?></h2>
+		<?php if ( ! $shown ) : ?>
+		<p><?php esc_html_e( 'No tests are suggested right now.', 'spark-living' ); ?></p>
+		<?php else : ?>
+			<?php foreach ( $shown as $i => $exp ) : ?>
+				<?php self::render_suggestion( $exp, $i + 1 ); ?>
+			<?php endforeach; ?>
+			<?php if ( $more > 0 ) : ?>
+		<p class="sl-muted sl-plan-more"><?php echo esc_html( sprintf( /* translators: %s: number of further suggestions */ _n( '%s more suggested test is waiting.', '%s more suggested tests are waiting.', $more, 'spark-living' ), number_format_i18n( $more ) ) ); ?></p>
+			<?php endif; ?>
+		<?php endif; ?>
+		</div>
+		<p class="sl-plan-status" role="status" aria-live="polite" tabindex="-1"></p>
+	</div>
+	<script>
+	(function(){
+		var root=document.getElementById("sl-plan");
+		if(!root||root.getAttribute("data-bound")){return;}
+		root.setAttribute("data-bound","1");
+		var done={queue:"Queued. It starts on the next nightly check after the current test ends.",unqueue:"Removed from the queue. It is back in Suggested tests.",dismiss:"Dismissed."};
+		function status(){return root.querySelector(".sl-plan-status");}
+		root.addEventListener("click",function(e){
+			var b=e.target.closest?e.target.closest("button[data-sl-act]"):null;
+			if(!b||b.disabled){return;}
+			var card=b.closest("[data-sl-id]");
+			if(!card){return;}
+			var act=b.getAttribute("data-sl-act"),id=card.getAttribute("data-sl-id");
+			var all=root.querySelectorAll("button[data-sl-act]"),i;
+			for(i=0;i<all.length;i++){all[i].disabled=true;}
+			b.setAttribute("aria-busy","true");
+			status().textContent="Working…";
+			fetch(root.getAttribute("data-rest")+"/suggestions/"+encodeURIComponent(id)+"/"+act,{method:"POST",credentials:"same-origin",headers:{"X-WP-Nonce":root.getAttribute("data-nonce"),"Content-Type":"application/json"},body:"{}"})
+			.then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};},function(){return {ok:r.ok,j:{}};});})
+			.then(function(res){
+				if(!res.ok){throw new Error((res.j&&res.j.message)||"That did not work. Please reload the page and try again.");}
+				return fetch(window.location.href,{credentials:"same-origin",cache:"no-store"}).then(function(r){return r.text();});
+			})
+			.then(function(html){
+				var doc=new DOMParser().parseFromString(html,"text/html"),n=doc.getElementById("sl-plan-body"),cur=document.getElementById("sl-plan-body");
+				if(!n||!cur){window.location.reload();return;}
+				cur.innerHTML=n.innerHTML;
+				var fresh=doc.getElementById("sl-plan");
+				if(fresh&&fresh.getAttribute("data-nonce")){root.setAttribute("data-nonce",fresh.getAttribute("data-nonce"));}
+				var s=status();s.textContent=done[act]||"Done.";s.focus();
+			})
+			.catch(function(err){
+				var k;for(k=0;k<all.length;k++){all[k].disabled=false;}
+				b.removeAttribute("aria-busy");
+				var s=status();s.textContent=err&&err.message?err.message:"That did not work. Please try again.";s.focus();
+			});
+		});
+	})();
+	</script>
+		<?php
+	}
+
+	/**
 	 * Draft and approval queue plus the create form (wp-admin only).
 	 */
 	private static function render_queue(): void {
@@ -585,7 +819,7 @@ body.sl-page{margin:0;background:#ffffff}
 			)
 		);
 		?>
-	<h2 id="sl-queue"><?php esc_html_e( 'Queued tests', 'spark-living' ); ?></h2>
+	<h2 id="sl-queue"><?php esc_html_e( 'Drafts and approvals', 'spark-living' ); ?></h2>
 		<?php if ( ! $queue ) : ?>
 	<p><?php esc_html_e( 'Nothing is queued.', 'spark-living' ); ?></p>
 		<?php else : ?>
