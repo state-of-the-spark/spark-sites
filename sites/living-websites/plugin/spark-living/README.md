@@ -1,4 +1,4 @@
-# Spark Living v0.1.1
+# Spark Living v0.1.2
 
 Living Websites by Spark Sites. A WordPress plugin that runs one split test at a time on a site, keeps what brings in more leads, logs every change, and reports through a REST API.
 
@@ -154,6 +154,10 @@ The `/living/` dashboard, the wp-admin page and `GET /state` use the same tally 
 * **Shipped, then reverted** (auto-revert log entries) is its own tile when above zero. A reverted winner still counts once under Evolved, because it did ship; the reverted tile tells you how many were rolled back.
 
 Before this change the sentence used the total number of log entries, so every concluded test (and every revert) was called an evolution.
+
+## Dashboard animation (0.1.2)
+
+The dashboard (admin only) plays two one-time animations on load, in pure inline SVG and CSS: a vine that grows under the title (about 2.2 s), then, after about 2.6 s, small spark blue bubbles rise through the first tally card ("evolved") and it settles into a soft spark blue gradient. Transform and opacity only, no libraries, no requests. A three-line inline script sets how far the bubbles rise to the card height (the CSS has a default if it does not run). With `prefers-reduced-motion: reduce` the vine is fully drawn, the card shows its resting gradient and nothing moves. Nothing outside the dashboard changed.
 
 ## Cache flush
 

@@ -92,3 +92,33 @@ Same route as the install (Pressable WP-CLI, base64 through `wp eval`), but only
 - GA4 itself and a GTM tag: none exists yet, so the dataLayer events are not forwarded to GA4 until a GTM tag is added.
 - Mobile after the fix (only the desktop path changed; mobile hides the button).
 - `form_submit` on live, administrator exclusion, a natural B assignment from a random cookie (B was checked with a preset bucket).
+
+## Dashboard animation (0.1.2)
+
+Result: **live (plugin 0.1.2), not rolled back.** Site confirmed before every write (`siteurl` = https://sparkmysite.com, Pressable site 1614838; every write command also checks it inside the eval and aborts otherwise).
+
+### What changed
+Only the admin dashboard (`/living/`, the shortcode and the wp-admin page). A vine (one inline SVG: 2px green stem that draws itself in about 2.2 s, 7 leaves that unfurl as the tip passes, 2 small tendrils, a spark blue bud at the tip) sits under the title; after about 2.6 s about 30 small spark blue bubbles (2 to 5 px, a few with a lighter rim) rise through the first tally card once, and the card settles into a soft spark blue gradient. Transform and opacity only, no libraries, no external requests; `prefers-reduced-motion: reduce` shows the vine drawn and the card at its resting gradient with no motion. Colors: spark blue #0ECAEB (brand token `--ss-cyan`); the brand tokens have no green, so the vine uses the dashboard's own accent family (#238a4a light, #7fd39b dark). Version 0.1.2 in `spark-living.php` (header and constant) and both `editor.asset.php`.
+
+### Local
+t10 (36), t11 (34), t12 (15), t13 (42), t14 (16) and `tests/stats-check.js` (28) all pass on the final code. The tally markup keeps `<strong>` directly after the `<li>` open tag (t12 reads it), so the bubble layer sits at the end of the card.
+
+### Deploy
+Pressable WP-CLI `wp eval`, but with an in-place patch instead of base64 chunks of whole files: each command held the old md5, the replacement text and the expected new md5, and refused to write unless both matched. Two deploys, both clean:
+1. 4 files (dashboard 5d9677f1 to 91668713, spark-living.php 199b6f85 to d28e2041, both editor.asset.php 1a463c6c to 42d66566). Old files copied to `wp-content/sl-bak-012/` first; written as `.new`, md5 checked, then renamed. Verified afterwards: 0 stray `.new` files, `SPARK_LIVING_VERSION` 0.1.2, plugin active.
+2. Dashboard only, 91668713 to **f9b694fa** (md5 f9b694faa25b3f310ba00af06eb66943), three string fixes found while viewing the first live frames: the bud's halo ring showed before its turn, the tendrils drew a pinpoint dot before growing, and the stem easing did not match the leaf timing. Old copy kept in `wp-content/sl-bak-012b/`.
+Both temporary backup folders were removed after verification (the 0.1.1 originals are in git HEAD and the 13:25 UTC Pressable backups). Edge cache purged and object cache flushed after the first deploy and the edge cache purged again after the second. The README was not copied to live.
+
+### Seen live (as the owner's administrator, user ID 17393, no password touched)
+- Short-lived login cookie from WP-CLI (`wp eval`: a 30 minute session token, `wp_generate_auth_cookie` for the `logged_in` scheme) set in my own playwright-core Chromium (desktop user agent, 1366 wide). It worked first time: `/living/` answered 200 and rendered the dashboard. The session tokens were destroyed afterwards (`WP_Session_Tokens::destroy`); the owner's own existing session was not touched.
+- Frames captured at exact times by pausing every animation and setting its clock (Web Animations API), plus one real-time 6.5 s load: `C:UsersgrantDocumentsGitHubspark-sitessitesliving-websitesauditscreenshotslive-dash-anim-0.3s.png`, `-1.2s`, `-2.4s`, `-3.2s`, `-4.0s`, `-rest`, and `live-dash-anim-realtime-6s.png` (full page).
+- The dashboard shows the running test with its numbers: "Header button wording" (test 46907, running, confirmed by `Spark_Living_Store::get_running()`), day 1 of 14, A "Get started" and B "Get My Free Website Plan" each 0 sessions, 0 intent, 0.0 percent, 0 leads; holdout 0; probability challenger beats current 50.0 percent; status "Minimum run not met yet (7 full days and 100 sessions per variant)". Tally 0 evolved, 0 original won, 1 no difference (the voided 46905 counts as the one no-difference).
+- **Administrator exclusion confirmed.** Events table before one logged-in homepage load: 10 rows (max id 10, all the voided 46905 rows). After the load (checked 26 s later) and again after the second dashboard session: still 10 rows, 0 under 46907. In the logged-in page the header button reads "Get started", there is no `sl-v-*` class on `<html>`, no Spark Living inline script and no `spark_living` cookie: the server prints nothing for administrators, so the visit was not counted as an exposure. This closes the "administrator exclusion on live" item left open above.
+
+### Logged out, after the deploy
+Homepage 200, `X-nananana: Batcache-Hit`, edge MISS once after the purge then HIT; /shop/ 200 (MISS then HIT); /living/ 404. Pressable PHP log (last 7 days, 218 entries, newest 15:10 UTC): no Spark Living entries; the entries after the deploy are unrelated (AutomateWoo cron reschedule notice).
+
+### Not verified
+- Mobile on live (not asked; the site's bot check blocks mobile user agents). Local 390 px frames viewed: the vine is a thin line about 18 px tall at that width with small leaves, readable but small.
+- Dark mode and a real phone were not viewed. A browser console error "atob" appeared on the logged-in homepage; it comes from the site's own scripts (the plugin prints nothing for administrators) and was not investigated.
+- Real-time frame timing on live was captured once (the 6.5 s load); the timed frames are clock-set, not wall-clock.

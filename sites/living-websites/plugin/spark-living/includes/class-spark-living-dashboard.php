@@ -254,8 +254,51 @@ body.sl-page{margin:0;background:#ffffff}
 .sl-dash .sl-bar{display:inline-block;height:.6rem;background:var(--sl-accent);border-radius:3px;vertical-align:middle}
 .sl-dash form label{display:block;margin:.5rem 0 .15rem;font-weight:600}
 .sl-dash form input[type=text],.sl-dash form select,.sl-dash form textarea{width:100%;max-width:36rem}
+/* Load animations (0.1.2): a vine that grows once, then bubbles on the evolved card. Transform and opacity only. */
+.sl-dash{--sl-vine:#238a4a;--sl-spark:#0ECAEB}
+@media (prefers-color-scheme:dark){.sl-dash{--sl-vine:#7fd39b}}
+.sl-dash .sl-vine{display:block;width:100%;height:auto;margin:.4rem 0 .6rem;overflow:visible}
+.sl-vine .sl-stem{fill:none;stroke:var(--sl-vine);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1000 1000;stroke-dashoffset:1000;animation:sl-grow 2.2s cubic-bezier(.25,.6,.35,1) both}
+.sl-vine .sl-tend{fill:none;stroke:var(--sl-vine);stroke-width:1.3;stroke-linecap:round;stroke-dasharray:30 100;stroke-dashoffset:30;animation:sl-grow .7s ease-out both}
+.sl-vine .sl-leaf{fill:var(--sl-vine);fill-opacity:.9;transform-origin:0 0;animation:sl-unfurl .7s cubic-bezier(.2,.8,.3,1.15) both}
+.sl-vine .sl-bud{fill:var(--sl-spark);transform-origin:0 0;animation:sl-pop .55s cubic-bezier(.2,.9,.3,1.4) 2.25s both}
+.sl-vine .sl-halo{fill:none;stroke:var(--sl-spark);stroke-width:1.2;transform-origin:0 0;opacity:0;animation:sl-halo 1s ease-out 2.35s forwards}
+.sl-vine .sl-vein{fill:none;stroke:rgba(255,255,255,.55);stroke-width:.8;stroke-linecap:round}
+@media (max-width:600px){.sl-vine .sl-stem{stroke-width:3.4}.sl-vine .sl-tend{stroke-width:2.2}}
+@keyframes sl-grow{to{stroke-dashoffset:0}}
+@keyframes sl-unfurl{0%{transform:scale(0) rotate(-40deg);opacity:0}50%{opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}
+@keyframes sl-pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+@keyframes sl-halo{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.sl-dash ul.sl-tally li.sl-evolved{position:relative;overflow:hidden;isolation:isolate}
+.sl-evolved::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(to top,rgba(14,202,235,.34),rgba(14,202,235,.15) 50%,rgba(14,202,235,.02));opacity:.78;animation:sl-wash 2.6s ease-out 2.7s both}
+.sl-evolved .sl-bub{--r:-110px;position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.sl-evolved .sl-bub i{position:absolute;left:var(--x);top:100%;width:var(--s);height:var(--s);border-radius:50%;background:var(--sl-spark);opacity:0;animation:sl-rise var(--t) linear calc(2.6s + var(--d)) both,sl-wob calc(var(--t) / 2.2) ease-in-out calc(2.6s + var(--d)) infinite alternate both}
+.sl-evolved .sl-bub i.r{background:rgba(14,202,235,.4);box-shadow:inset 0 0 0 1px rgba(160,240,252,.95)}
+@keyframes sl-rise{0%{transform:translate3d(0,0,0);opacity:0}10%{opacity:var(--o)}80%{opacity:var(--o)}100%{transform:translate3d(0,var(--r),0);opacity:0}}
+@keyframes sl-wob{from{translate:calc(var(--w) * -1) 0}to{translate:var(--w) 0}}
+@keyframes sl-wash{0%{opacity:0}45%{opacity:1}100%{opacity:.78}}
+@media (prefers-reduced-motion:reduce){.sl-vine .sl-stem,.sl-vine .sl-tend{animation:none;stroke-dashoffset:0}.sl-vine .sl-leaf,.sl-vine .sl-bud{animation:none}.sl-vine .sl-halo{animation:none;opacity:0}.sl-evolved::before{animation:none;opacity:.78}.sl-evolved .sl-bub{display:none}}
 .sl-dash a:focus,.sl-dash button:focus,.sl-dash input:focus,.sl-dash select:focus,.sl-dash textarea:focus{outline:3px solid var(--sl-accent);outline-offset:2px}
 </style>';
+	}
+
+	/**
+	 * The vine ornament: one inline SVG, static markup, animated by the CSS above.
+	 *
+	 * @return string
+	 */
+	private static function vine(): string {
+		return '<svg class="sl-vine" viewBox="0 2 800 48" preserveAspectRatio="xMinYMid meet" aria-hidden="true" focusable="false"><path class="sl-stem" pathLength="1000" d="M4 30 C50 20, 100 38, 160 29 C220 20, 260 18, 320 28 C380 38, 430 40, 490 30 C550 20, 600 19, 660 27 C710 35, 760 36, 796 26"/><path class="sl-tend" style="animation-delay:0.43s" d="M250.5 21.4c3 -8 10 -9 9 -3c-1 3 -5 2 -4 -1" pathLength="30"/><path class="sl-tend" style="animation-delay:0.93s" d="M582.4 21.7c-3 8 -10 9 -9 3c1 -3 5 -2 4 1" pathLength="30"/><g transform="translate(83.7 29.7) rotate(-43.4)"><g class="sl-leaf" style="animation-delay:0.09s"><path d="M0 0C4.8 5.9 13.6 7.1 22.0 2.2C14.1 -4.5 5.5 -5.0 0 0Z"/><path class="sl-vein" d="M0 0Q11.0 0.4 18.0 1.8"/></g></g><g transform="translate(194.7 24.4) rotate(48.6)"><g class="sl-leaf" style="animation-delay:0.22s"><path d="M0 0C6.4 -7.8 18.0 -9.4 29.0 -2.9C18.6 6.0 7.3 6.7 0 0Z"/><path class="sl-vein" d="M0 0Q14.5 -0.6 23.8 -2.3"/></g></g><g transform="translate(306.0 25.8) rotate(-43.0)"><g class="sl-leaf" style="animation-delay:0.35s"><path d="M0 0C5.5 6.8 15.5 8.1 25.0 2.5C16.0 -5.2 6.3 -5.7 0 0Z"/><path class="sl-vein" d="M0 0Q12.5 0.5 20.5 2.0"/></g></g><g transform="translate(416.6 36.6) rotate(57.6)"><g class="sl-leaf" style="animation-delay:0.49s"><path d="M0 0C6.8 -8.4 19.2 -10.0 31.0 -3.1C19.8 6.4 7.8 7.1 0 0Z"/><path class="sl-vein" d="M0 0Q15.5 -0.6 25.4 -2.5"/></g></g><g transform="translate(527.5 24.8) rotate(-60.2)"><g class="sl-leaf" style="animation-delay:0.67s"><path d="M0 0C5.7 7.0 16.1 8.4 26.0 2.6C16.6 -5.4 6.5 -6.0 0 0Z"/><path class="sl-vein" d="M0 0Q13.0 0.5 21.3 2.1"/></g></g><g transform="translate(637.9 24.4) rotate(55.6)"><g class="sl-leaf" style="animation-delay:0.92s"><path d="M0 0C6.4 -7.8 18.0 -9.4 29.0 -2.9C18.6 6.0 7.3 6.7 0 0Z"/><path class="sl-vein" d="M0 0Q14.5 -0.6 23.8 -2.3"/></g></g><g transform="translate(725.5 33.2) rotate(-55.8)"><g class="sl-leaf" style="animation-delay:1.25s"><path d="M0 0C4.4 5.4 12.4 6.5 20.0 2.0C12.8 -4.1 5.0 -4.6 0 0Z"/><path class="sl-vein" d="M0 0Q10.0 0.4 16.4 1.6"/></g></g><g transform="translate(796.0 26.0)"><circle class="sl-halo" r="9"/><circle class="sl-bud" r="4.2"/></g></svg>';
+	}
+
+	/**
+	 * Carbonation bubbles for the evolved card (decorative, hidden from assistive tech).
+	 * The small script sets how far they rise to the card height; without it the CSS default is used.
+	 *
+	 * @return string
+	 */
+	private static function bubbles(): string {
+		return '<span class="sl-bub" aria-hidden="true"><i style="--x:89%;--s:2px;--d:0.12s;--t:1.11s;--o:0.75;--w:4.7px"></i><i style="--x:73%;--s:3px;--d:0.52s;--t:1.36s;--o:0.73;--w:5.2px"></i><i class="r" style="--x:26%;--s:4px;--d:0.18s;--t:1.48s;--o:0.73;--w:2.3px"></i><i style="--x:47%;--s:4px;--d:0.71s;--t:1.56s;--o:0.42;--w:4.6px"></i><i style="--x:67%;--s:5px;--d:0.41s;--t:1.38s;--o:0.85;--w:6.5px"></i><i style="--x:35%;--s:3px;--d:0.61s;--t:1.20s;--o:0.43;--w:3.5px"></i><i style="--x:31%;--s:3px;--d:0.73s;--t:1.37s;--o:0.75;--w:6.4px"></i><i class="r" style="--x:29%;--s:2px;--d:0.34s;--t:1.33s;--o:0.58;--w:3.0px"></i><i style="--x:9%;--s:5px;--d:0.18s;--t:1.21s;--o:0.72;--w:6.6px"></i><i style="--x:19%;--s:4px;--d:0.21s;--t:1.16s;--o:0.55;--w:4.1px"></i><i style="--x:53%;--s:3px;--d:0.38s;--t:1.12s;--o:0.85;--w:4.3px"></i><i style="--x:62%;--s:5px;--d:0.40s;--t:1.34s;--o:0.63;--w:5.4px"></i><i class="r" style="--x:40%;--s:5px;--d:0.48s;--t:1.14s;--o:0.67;--w:3.8px"></i><i style="--x:40%;--s:3px;--d:0.57s;--t:1.61s;--o:0.41;--w:6.1px"></i><i style="--x:41%;--s:2px;--d:0.05s;--t:1.01s;--o:0.90;--w:3.1px"></i><i style="--x:17%;--s:4px;--d:0.25s;--t:1.39s;--o:0.43;--w:6.6px"></i><i style="--x:86%;--s:5px;--d:0.67s;--t:1.63s;--o:0.77;--w:3.4px"></i><i class="r" style="--x:27%;--s:2px;--d:0.02s;--t:0.95s;--o:0.69;--w:3.2px"></i><i style="--x:49%;--s:4px;--d:0.46s;--t:1.13s;--o:0.84;--w:3.2px"></i><i style="--x:86%;--s:3px;--d:0.03s;--t:1.32s;--o:0.35;--w:6.6px"></i><i style="--x:89%;--s:4px;--d:0.00s;--t:1.63s;--o:0.45;--w:6.8px"></i><i style="--x:67%;--s:4px;--d:0.11s;--t:1.12s;--o:0.46;--w:4.8px"></i><i class="r" style="--x:75%;--s:2px;--d:0.47s;--t:1.49s;--o:0.62;--w:2.2px"></i><i style="--x:89%;--s:2px;--d:0.04s;--t:1.47s;--o:0.84;--w:2.2px"></i><i style="--x:83%;--s:5px;--d:0.79s;--t:1.67s;--o:0.77;--w:4.1px"></i><i style="--x:71%;--s:3px;--d:0.66s;--t:1.25s;--o:0.48;--w:4.0px"></i><i style="--x:55%;--s:5px;--d:0.17s;--t:1.42s;--o:0.75;--w:3.7px"></i><i class="r" style="--x:43%;--s:4px;--d:0.07s;--t:1.18s;--o:0.89;--w:7.0px"></i><i style="--x:84%;--s:4px;--d:0.70s;--t:1.10s;--o:0.70;--w:2.7px"></i><i style="--x:55%;--s:3px;--d:0.54s;--t:1.66s;--o:0.62;--w:2.9px"></i></span><script>(function(){function f(){var b=document.querySelectorAll(".sl-evolved .sl-bub");for(var i=0;i<b.length;i++){b[i].style.setProperty("--r",-(b[i].offsetHeight+6)+"px");}}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",f);}else{f();}})();</script>';
 	}
 
 	/**
@@ -276,9 +319,10 @@ body.sl-page{margin:0;background:#ffffff}
 <div class="sl-dash">
 	<h1><?php esc_html_e( 'Living Website', 'spark-living' ); ?></h1>
 	<p class="sl-muted"><?php echo esc_html( sprintf( /* translators: 1: site name, 2: number of evolutions */ _n( '%1$s has evolved %2$s time.', '%1$s has evolved %2$s times.', $tally['evolved'], 'spark-living' ), get_bloginfo( 'name' ), number_format_i18n( $tally['evolved'] ) ) ); ?></p>
+	<?php echo self::vine(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	<p class="sl-muted"><?php esc_html_e( 'Evolved means a challenger won and shipped. Tests that ended with no difference, or where the original won, are counted separately.', 'spark-living' ); ?></p>
 	<ul class="sl-tally" id="sl-tally" aria-label="<?php esc_attr_e( 'Test outcomes', 'spark-living' ); ?>">
-		<li class="sl-evolved" data-sl-tally="evolved"><strong><?php echo esc_html( number_format_i18n( $tally['evolved'] ) ); ?></strong> <?php esc_html_e( 'evolved (challenger won and shipped)', 'spark-living' ); ?></li>
+		<li class="sl-evolved" data-sl-tally="evolved"><strong><?php echo esc_html( number_format_i18n( $tally['evolved'] ) ); ?></strong> <?php esc_html_e( 'evolved (challenger won and shipped)', 'spark-living' ); ?><?php echo self::bubbles(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></li>
 		<li data-sl-tally="keep_a"><strong><?php echo esc_html( number_format_i18n( $tally['keep_a'] ) ); ?></strong> <?php esc_html_e( 'original won', 'spark-living' ); ?></li>
 		<li data-sl-tally="no_difference"><strong><?php echo esc_html( number_format_i18n( $tally['no_difference'] ) ); ?></strong> <?php esc_html_e( 'no difference', 'spark-living' ); ?></li>
 			<?php if ( $tally['guard_blocked'] > 0 ) : ?>
