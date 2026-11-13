@@ -243,3 +243,37 @@ Created with the plugin's own `Spark_Living_Queue::create_suggestion()` inside W
 - The nightly auto-start on live. It is covered by `t16.js` locally (including the gate cases); on live it cannot run until 46907 ends and a suggestion is queued and passes the gate. I did not queue the seeded suggestion.
 - The Queue, Remove and Dismiss buttons on live (not pressed, as asked); exercised locally in a real browser.
 - A real phone and a real mobile user agent (frames at 390 px use a desktop user agent). A real WP-Cron tick on MySQL: the job is called directly in the local tests.
+
+## Second suggestion from page review (2026-11-13)
+
+Result: **seeded on live, status suggested only. Nothing queued, started or dismissed.** Site confirmed before every write (`siteurl` = https://sparkmysite.com, Pressable site 1614838; the write command aborts unless that matches). No plugin code changed (still 0.2.0).
+
+- **Post ID 46912**, "Make 'Book a free call' a button in the hero". Page `/` (homepage), device all, change type style, priority 1, suggested by "Lumen page review", sessions_14d 137 as of 2026-11-11 (meets the 100-session minimum, so the card says so). Created with `Spark_Living_Queue::create_suggestion()` inside WP-CLI.
+- **Target** `div.et_pb_text_3 p a`: exactly one match on the live homepage. Link text read from the live page: "or book a free call →" (the word "or" is INSIDE the link), href https://calendar.app.google/QZ8TkgtqGG2fMvot5.
+- **Variant format:** variant B carries both a text change (`{"op":"text","value":"Book a free call →"}`) and a CSS snippet for the same target. The store (`sanitize_variants`) keeps `changes` and `css` together on B and `living.js` applies both (the style element is added before first paint, the text swap at DOM ready, and the target is hidden until the swap lands), so no workaround and no code change was needed.
+- **Clicks:** since 0.1.1, `targetClicked()` in `living.js` counts a click on any running selector test's own target as `cta_click` (once per session, A, B and holdout), so a click on this link would count for this variant format. Not exercised on live (test not running).
+- **Sanitiser:** the stored CSS is string-equal to the CSS I sent (711 characters, under the 2000 cap; no `<`, backslash, `@import`, `url(`, `expression` or `javascript:`). Specificity is raised with `html body div.et_pb_text_3 .et_pb_text_inner p a` plus `!important`.
+- Labels, rationale and the three evidence items are as briefed. The dashboard shows "What would change: Style", Current "Small text link: 'or book a free call'", Challenger "Outlined button: 'Book a free call'".
+- **46910** ("Show the Get Started button on phones") priority changed 1 to 2 through `Spark_Living_Store::update()`; a hash of every other field is identical before and after, and its status is still suggested. Dashboard order is now 46912 (rank 1), 46910 (rank 2).
+- **46907** (running test): hash of the full record identical before and after (md5 9bed3323ce5f068b50a41f67995e9f96), still running, not touched.
+
+### Final CSS (variant B)
+```css
+html body div.et_pb_text_3 .et_pb_text_inner p a{display:inline-block!important;margin:6px 0 0 2px!important;padding:10px 18px!important;min-height:44px!important;box-sizing:border-box!important;line-height:24px!important;background:transparent!important;border:2px solid #0ECAEB!important;border-radius:999px!important;color:#fff!important;font-weight:700!important;font-size:15px!important;text-decoration:none!important;transition:background-color .15s,color .15s!important}
+html body div.et_pb_text_3 .et_pb_text_inner p a:hover,html body div.et_pb_text_3 .et_pb_text_inner p a:focus-visible{background:#0ECAEB!important;color:#0b1b2b!important;outline:2px solid #fff!important;outline-offset:2px!important}
+```
+
+### Preview before seeding (browser-only injection, nothing changed on the site)
+Installed Chrome (headless), desktop user agent, staff cookie `spark_living_staff=1` set so the plugin script returns early; the preview CSS and the text swap were injected in the page in the browser only. Files in `sites/living-websites/audit/screenshots/`: `suggest2-hero-current-desktop.png`, `suggest2-hero-challenger-desktop.png` (1366 px), `suggest2-hero-current-mobile.png`, `suggest2-hero-challenger-mobile.png` (390 px), plus `suggest2-hero-challenger-desktop-hover.png` and `suggest2-hero-challenger-mobile-hover.png` (hover state: filled spark blue, dark text, white focus ring). Measured: pill 170 x 48 px at both widths (tap target above 44 px), no horizontal scroll (scrollWidth equals the viewport), the pink "See the menu" button stays visually heavier. One imperfection: the original "·" separator after "5.0 on Google" is plain text outside the link, so on a phone it stays at the end of the stars line with the pill wrapping to the next line.
+The first pass used a 12 px left margin; it indented the wrapped pill on the phone, so it became 2 px.
+
+### Events table
+Install record count at 19:07 UTC: 12 rows, max id 18. Before the seed: 13 rows, max id 19. After the seed, the dashboard views and the session cleanup: 13 rows, max id 19. The one extra row (id 19, experiment 46907, variant H, exposure, 2026-11-13 19:09:30 UTC) is from a real holdout visitor and predates my preview visits; my visits (staff cookie) added none. I did not take a count immediately before my own preview visits, so "none of mine were logged" rests on id 19 predating them and no further rows appearing.
+
+### Live dashboard
+As the owner's administrator through a 30 minute WP-CLI login cookie (user 17393, no password touched), desktop user agent, 1366 and 390 px; buttons not pressed. `live-dash-suggested-two-desktop.png` and `live-dash-suggested-two-mobile.png` show both cards in the new order. The session token was destroyed afterwards (`verify` returned false); the queue holds 0 tests.
+
+### Not verified
+- A real phone and a real mobile user agent (390 px frames use a desktop user agent; the site's bot check blocks mobile user agents).
+- The challenger running live as a real B session (the preview injects the same CSS and text, but the plugin's own B delivery was not exercised because the test is not running).
+- Dark mode of the hero and the dashboard cards.
