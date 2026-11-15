@@ -277,3 +277,78 @@ As the owner's administrator through a 30 minute WP-CLI login cookie (user 17393
 - A real phone and a real mobile user agent (390 px frames use a desktop user agent; the site's bot check blocks mobile user agents).
 - The challenger running live as a real B session (the preview injects the same CSS and text, but the plugin's own B delivery was not exercised because the test is not running).
 - Dark mode of the hero and the dashboard cards.
+
+## Test rows removed (2026-11-15)
+
+Approved by the owner. Site confirmed first (`siteurl` = https://sparkmysite.com, Pressable site 1614838). Table `wp_yzxlp1vqce_spark_living_events`. All six rows were selected in full and matched (experiment 46907, type exposure, 2026-11-13 21:00 to 21:03 UTC, variants A B A B A B). Deleted with `DELETE ... WHERE id IN (21,22,23,24,25,26)`; the database reported 6 rows affected. To re-insert them, run one INSERT per row with these values (id, experiment_id, variant, visitor_id, session_id, event_type, created_at):
+
+| id | experiment_id | variant | visitor_id | session_id | event_type | created_at (UTC) |
+|---|---|---|---|---|---|---|
+| 21 | 46907 | A | 5c7cae56c2adf536 | e49cace9c94bf30f | exposure | 2026-11-13 21:00:54 |
+| 22 | 46907 | B | 67f8006069e3365d | c67c0791dc4620b3 | exposure | 2026-11-13 21:01:09 |
+| 23 | 46907 | A | 9888034600907034 | 0c8f49498a2629a0 | exposure | 2026-11-13 21:01:23 |
+| 24 | 46907 | B | 7911a35beaa980f1 | 8f3aa74d494afc1d | exposure | 2026-11-13 21:01:34 |
+| 25 | 46907 | A | cadc568b2b008a93 | 828e867a2649ed50 | exposure | 2026-11-13 21:02:44 |
+| 26 | 46907 | B | a4d2bd239d5ddb78 | 9a7013ed1c56fe32 | exposure | 2026-11-13 21:02:55 |
+
+Counts before (46 rows, highest id 52) and after (40 rows, highest id 52, none of ids 21 to 26 present):
+
+| experiment | variant | type | before | after |
+|---|---|---|---|---|
+| 46905 (voided) | A | exposure | 6 | 6 |
+| 46905 (voided) | B | exposure | 4 | 4 |
+| 46907 | A | exposure | 12 | 9 |
+| 46907 | A | form_start | 1 | 1 |
+| 46907 | A | tel_click | 1 | 1 |
+| 46907 | B | exposure | 20 | 17 |
+| 46907 | H (holdout) | exposure | 2 | 2 |
+
+Test 46907 untouched: before the delete, after the delete, and again after all the speed-check visits below, `get_post_status` = publish, status = running, start 2026-11-13 13:58:11, and an md5 over all of the test's post meta (557ae47e50a6bcb091ef5f979bce6944) and over its post row (4e79ad3e4fc4a6287f9585d8a0ee40bf) is identical. The plugin does not cache stats, so no cache flush was needed or done.
+
+Note: the live test's stored weights read A 0.8 / B 0.2 (not the 50/50 recorded at install). The stored meta was identical before and after this work, so it was not changed by it.
+
+## Speed check (2026-11-15)
+
+Live was read-only apart from the delete above; no live setting changed, plugin not deactivated. Staging (site 1869351, `sparkmysite-living-test`, https://sparkmysite-living-test.mystagingwebsite.com) was toggled and left as found (spark-living active, version 0.1.0, test 46894 running, test 46892 concluded). Live runs plugin 0.2.0; staging runs the older 0.1.0, so the staging comparison is for the older code (same design: one inline script printed in the head).
+
+### A. Footprint on the live homepage (plugin 0.2.0)
+- Delivery: the script is not a file. `print_head` (wp_head priority 1) prints one inline `<style id="spark-living-base">` (98 bytes) and one inline `<script id="spark-living-js">` of 11,840 bytes raw (4,630 gzip), made of a 393 byte JSON config plus the 11.4 KB `living.js`. No extra file and no extra request apart from the exposure beacon. Homepage HTML is 375,252 bytes raw, 63.8 KB over the wire (brotli), so the plugin is about 3.2 percent of the raw HTML, and about 4.6 KB of roughly 63.8 KB compressed HTML. In installed Chrome the whole page was 109 sub-resources and about 5.2 MB transferred, so the plugin is about 0.1 percent of page weight.
+- Blocking and caching: inline in the head, parsed synchronously; nothing to download, and its execution is a few milliseconds of JS. It travels inside the HTML, which the edge page cache serves (`Cache-Control: max-age` 28 to 75 s with must-revalidate, `X-nananana: Batcache-Hit`). Cached homepage TTFB over 10 requests from this PC: 42 to 96 ms (median 43 ms).
+- Anti-flicker (installed Chrome 157, headless, ordinary Chrome user agent, `navigator.webdriver` false, 1366x900, fresh context per visit, identity cookie preset so visits alternate B and A; 8 visits, event endpoint stubbed in the browser for visits 1 to 6; ms from navigation start):
+
+| visit | variant | TTFB | FCP | button visible | load event |
+|---|---|---|---|---|---|
+| 1 | B | 68 | 268 | 357 | 908 |
+| 2 | A | 76 | 296 | 262 | 934 |
+| 3 | B | 72 | 280 | 388 | 804 |
+| 4 | A | 76 | 284 | 258 | 823 |
+| 5 | B | 104 | 320 | 425 | 1218 |
+| 6 | A | 68 | 288 | 252 | 869 |
+| 7 | B | 101 | 308 | 405 | 846 |
+| 8 | A | 68 | 276 | 250 | 800 |
+
+  Median FCP 286 ms, median load 856 ms (no difference between A and B). Variant A and the holdout are never hidden (button visible about 250 to 262 ms, at first paint). Variant B hides only the target button (`visibility:hidden` on `a.et_pb_button[href="#contact"]`) until the DOM is parsed (about 340 to 400 ms), so B's button appears about 100 to 165 ms later than A's (median B 397 ms vs A 255 ms). FCP and the load event were not affected, and nothing but that selector is hidden. Safety timeout: 1,200 ms (`timeout` in the config) reveals the button even if the script never reaches DOMContentLoaded. The hide style was gone in every visit.
+- Network calls: 1 per page view (the `exposure` event, once per session; other events only on tel click, first form focus, or a click on the button). Sent with `navigator.sendBeacon` (fetch keepalive fallback): fire-and-forget, does not block render or load (load events were 800 to 934 ms even when the beacon took 2.9 s). Server response time for the beacon: 2,960 and 2,863 ms in the two real visits; 2.85 to 3.09 s for 5 bot-user-agent POSTs (not stored). A POST to an unrelated REST route takes 2.46 to 3.08 s too, so that 3 s is the site's uncached PHP start-up, not the plugin's own work.
+- Server side (live `wp eval`, read only): `Spark_Living_Frontend::print_head()` over 8 runs took 1.48 to 3.31 ms (first run 3.31, then about 1.6), 0 database queries per call (the data came from the persistent object cache; external object cache = yes), 12,236 bytes output. `get_running()` 1.65 ms and `get_promoted()` 0.55 ms, 0 queries. This is only paid when WordPress renders the page (a page-cache miss); cache hits pay none. The cost with a cold object cache was not measured (flushing the live cache was out of bounds).
+
+### B. Staging with versus without (cache-busted `?cb=` URLs, curl, TTFB, 15 each, alternating blocks to spot drift)
+
+| state | median | mean | min / max | sd |
+|---|---|---|---|---|
+| active, block 1 | 3,671 ms | 3,608 | 3,081 / 4,014 | 284 |
+| inactive, block 1 | 3,860 ms | 3,939 | 3,188 / 4,898 | 488 |
+| active, block 2 | 3,688 ms | 3,682 | 3,302 / 4,134 | 227 |
+| inactive, block 2 | 3,785 ms | 3,833 | 3,526 / 4,567 | 240 |
+
+The plugin-active runs were not slower (medians 3,671 and 3,688 ms against 3,860 and 3,785 ms inactive). The 100 to 190 ms gap in favour of "active" is inside the run-to-run spread, so the plugin's server cost cannot be seen at this resolution; the real hook cost is about 1.6 to 3 ms (A above). Staging had a running test (46894), so the inline script was printed when active (HTML 379,154 bytes active vs 367,243 inactive, 11.9 KB more). A whole uncached page costs about 3.7 s on this host.
+
+### C. The 7 second delay
+- What it is: an nginx 403 "Checking your browser..." page (1,762 bytes, 3 scripts, a hashcash proof-of-work). It carries no WordPress or edge-cache headers, so it is served by the host (Pressable / WP Cloud) in front of PHP, before WordPress or any plugin runs. The plugin has no such code or string. Pressable shows no edge rules on the live site (0 of 20 used) and defensive mode off; I could not see which host feature sets it.
+- Real visitors: some do. The Lumen-Browser VM (Linux Chrome, `navigator.webdriver` false, not automated) got the 403 holding page on https://sparkmysite.com/?v=speed1, solved it by itself, and the real page then loaded (real document TTFB 4,516 ms, load 5,475 ms, shown after a wait of 8 s or less). Screenshots of both states were viewed; not saved to disk. It appears per client: curl, installed Chrome and bundled Chromium from this PC never got it in about 30 requests today, so it looks to depend on IP or client reputation, not on the request.
+- Not the plugin: the same holding page appeared on staging with spark-living deactivated and no plugin script in the HTML (VM visit, 2026-11-15 about 22:39 UTC), and the 2026-11-12 staging note already records the bot check, before live had the plugin.
+- Cache-miss render: any uncached URL (such as `?v=speed1`) takes 3 to 5 s of PHP on this host with or without the plugin (live 4.3 to 5.4 s, staging 3.1 to 4.9 s). That plus the challenge accounts for the roughly 7 s seen.
+- Field data: not measurable. The keyless PageSpeed Insights API returned 429 (daily quota for unauthenticated callers) on mobile and desktop, and the CrUX API needs a key (403). No real-user LCP, INP, CLS or TTFB were obtained; that window would mostly predate the plugin (installed 2026-11-13) in any case.
+- Pre-plugin evidence: only the 2026-11-12 staging note. Pressable web server logs keep 7 days and hold 1,740 403s, nearly all scanner requests for malware file names; none from this PC's address; they cannot show homepage challenges before 2026-11-13.
+
+### Event rows created by this check (live, experiment 46907)
+Left in place as instructed: id 53 (B exposure, 2026-11-15 22:31:28 UTC) and id 54 (A exposure, 22:31:32) from the two un-stubbed installed-Chrome visits, and id 55 (A exposure, 22:37:04) from the Lumen-Browser VM visit. Visits 1 to 6 had the endpoint stubbed (no request reached the server). The `spark_living_staff` cookie was not set: `living.js` returns immediately when it is present (before assignment, hiding or any event), so it would have removed the code being measured. (It also returns for `navigator.webdriver` and bot user agents.)
