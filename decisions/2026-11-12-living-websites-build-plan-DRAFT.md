@@ -184,3 +184,72 @@ Built as inline SVG with scroll-driven animation, honoring reduced-motion settin
 | E | Weekly owner report | Email template and sender | After D |
 | F | Install on a Pressable sandbox, then sparkmysite.com | Live prototype | After A and B; going live on the public site needs Grant's go |
 | G | Ads and launch PR | Meta campaign, press piece | After Phase 1 produces a real result |
+
+
+---
+
+## Roadmap additions: full autonomy (added 2026-11-16, from Grant)
+
+**The one goal.** Every change, edit and test exists to raise leads or conversions for the site owner. Anything that cannot be tied to that goal does not ship.
+
+**Grant's six asks, 2026-11-16:** (1) self-assigning tests, chosen by expected payoff, not just suggested; (2) automatic design consistency across all client-facing content; (3) automatic ad effectiveness checks, with suggested or implemented changes; (4) every change checked against the organization's core goals and the website's goals before it is implemented; (5) every change recorded in the database; (6) Lumen plans the remaining features and how agents run the work without a person in the loop.
+
+### Phase A. Foundations (nothing autonomous is safe without these)
+
+1. **Site Charter.** One record per site: the business goal, the primary conversion (form, call, booking, purchase), secondary conversions, the audience, brand rules, an off-limits list (prices, legal text, guarantees, claims, the owner's own named pages), and the autonomy level. Written once with the owner at onboarding, drafted by an agent from the site itself, editable in wp-admin.
+2. **Goal Gate.** Before any change is implemented it is scored against the Charter: does it serve the primary conversion, does it conflict with an off-limits item, is it on brand, can it be undone. Pass means implement; fail means discard and record why; unclear means hold for the owner. The gate is run by a different agent than the one that proposed the change.
+3. **Change Ledger.** New table `spark_living_changes`. One row per change of any kind (test queued, started, concluded, winner made permanent, style fix, ad change, revert): time, site, what changed, before and after values, which agent proposed it, the Goal Gate verdict and reasons, the evidence used, the result once known, and the payload needed to undo it. Shown on the dashboard as "Change log" with a one-click undo. Nothing changes a site without a ledger row first.
+4. **Trustworthy lead counting.** Verified form submissions, phone taps, booking link clicks and the GA4 connection all confirmed on live. An autonomous system that optimizes a miscounted number makes the site worse with confidence.
+5. **Clean test traffic.** A test-visit mode so staff and agent checks run the variant code without being counted (today the staff cookie skips the code entirely, so every check pollutes the numbers).
+6. **Slower weight shifting.** The split moved from 50/50 to 80/20 after 26 visits. Add a minimum sample per version before weights may move.
+7. **Speed budget.** Every change must keep the page inside a measured speed budget; the measurement from 2026-11-15 is the baseline.
+
+### Phase B. Self-assigning tests
+
+- **Weekly per site, an agent looks at the pages with its own eyes and reads the data** (visit log, GA4, form and call counts, past results), then lists candidate tests.
+- **Each candidate gets a payoff score:** traffic reaching the element, times how far the element sits from the conversion, times the expected lift from the results library, divided by the days needed to reach a result at this site's traffic. Highest score that clears the traffic minimum wins.
+- **It queues and starts tests itself.** When the running test concludes, the next starts without a click. Winners become permanent, losers revert, both recorded in the ledger.
+- **Risk tiers decide what needs a person.** Tier 1 (wording, button look, order, visibility, on brand and reversible): fully autonomous. Tier 2 (layout, new sections, offers, form fields): autonomous only at the top autonomy level, otherwise one-click approval. Tier 3 (prices, legal, guarantees, claims): never autonomous.
+- **Low traffic changes the strategy.** At about 137 homepage sessions in 14 days a site gets roughly two results a month, so the agent must pick bold changes over small ones, and lean on what won on similar sites.
+- **Results library.** Every concluded test from every site feeds a shared record of what won, by industry and element. This is the advantage of hosting 165 sites: a new client starts with tests that already won elsewhere.
+
+### Phase C. Design consistency guardian
+
+- **Brand tokens per site:** colors, fonts, button shape, spacing and logo use, extracted from the site and confirmed in the Charter.
+- **Weekly crawl of every public page** by screenshot and computed style, compared to the tokens. Drift is listed with the page, the element and the fix.
+- **Auto-fix what is safe** (wrong button color, off-brand font, stray spacing) through CSS, logged in the ledger; larger issues go to the owner report.
+- **Every test challenger passes the same brand check** before it can run.
+- **Later:** extend from site pages to emails, landing pages and ad creative.
+
+### Phase D. Ads loop
+
+- **Connect the ad accounts** (Meta, Google) and tie each ad and campaign to leads through tagged links and the plugin's lead events: cost per lead, not clicks.
+- **Message match:** compare each ad's promise with the page it lands on; mismatches become page tests or ad edits.
+- **Three stages of authority.** Stage 1: report and suggest. Stage 2: pause clear losers and move budget between ads, never raising total spend above the owner's ceiling. Stage 3: write and launch new ad variations inside that ceiling. Default is Stage 1; Stages 2 and 3 are switched on per client by Grant, since they spend money and publish.
+- **All ad changes go through the Goal Gate and the ledger** like any site change.
+
+### Phase E. Proof and rollout
+
+- **Permanent 10% holdout stays,** so the monthly owner report can state the total lift from everything the system did, not test by test.
+- **Guard rails that act alone:** leads dropping on a changed page triggers auto-revert; a kill switch per site freezes everything.
+- **Monthly owner report:** what changed, why, what it did to leads, in plain words, pulled from the ledger.
+- **Order of rollout:** sparkmysite.com at full autonomy first, then VIP clients at "Tier 1 autonomous", then all hosted sites.
+
+### How the agents are harnessed
+
+| Role | Job | Runs on |
+|---|---|---|
+| Scout | Looks at pages and data, proposes changes with a payoff score | cheaper model, weekly per site |
+| Judge | Goal Gate: Charter, brand, risk tier. Independent of the Scout | stronger model, per proposal |
+| Builder | Builds the challenger or fix, previews it, checks the screenshot | cheaper model |
+| Engine | Splits traffic, counts, decides winners, reverts | plugin code, no AI, nightly |
+| Auditor | Confirms each change landed as intended, watches guard metrics and speed | cheaper model, after each change and daily |
+| Reporter | Owner report and the ledger summaries | cheaper model, monthly |
+
+- **A central controller** (one scheduler across all sites) hands sites to the agents; the plugin stays thin and holds the Charter, the ledger and the engine.
+- **The statistics never run on an AI model.** Agents choose and build; fixed code measures and decides.
+- **Three autonomy levels per site:** Suggest only, Tier 1 autonomous, Full. The level lives in the Charter.
+
+### Build order
+
+A (foundations) then B (self-assigning tests) on sparkmysite.com, then C, then D, with E's reporting built alongside B. A and B are the minimum for "it runs itself".

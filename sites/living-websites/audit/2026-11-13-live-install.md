@@ -352,3 +352,29 @@ The plugin-active runs were not slower (medians 3,671 and 3,688 ms against 3,860
 
 ### Event rows created by this check (live, experiment 46907)
 Left in place as instructed: id 53 (B exposure, 2026-11-15 22:31:28 UTC) and id 54 (A exposure, 22:31:32) from the two un-stubbed installed-Chrome visits, and id 55 (A exposure, 22:37:04) from the Lumen-Browser VM visit. Visits 1 to 6 had the endpoint stubbed (no request reached the server). The `spark_living_staff` cookie was not set: `living.js` returns immediately when it is present (before assignment, hiding or any event), so it would have removed the code being measured. (It also returns for `navigator.webdriver` and bot user agents.)
+
+
+## Test rows removed (2026-11-16)
+
+Three rows in `wp_yzxlp1vqce_spark_living_events` were created by our own speed-test visits on 2026-11-15 and were deleted with `WHERE id IN (53,54,55)` after the site owner approved. Each row was selected in full and matched before deletion.
+
+| id | experiment_id | variant | visitor_id | session_id | event_type | created_at (UTC) |
+|----|---------------|---------|------------|------------|------------|------------------|
+| 53 | 46907 | B | 352609e75d63b3c4 | 9e9925cbbc5a1785 | exposure | 2026-11-15 22:31:28 |
+| 54 | 46907 | A | cb1ccb99b233aaea | 27b76663ac247742 | exposure | 2026-11-15 22:31:32 |
+| 55 | 46907 | A | 67b974a7b4dee56f | 83fd10b36bb5cadf | exposure | 2026-11-15 22:37:04 |
+
+Counts (table total, then experiment 46907 by variant and type):
+
+| | Before | After |
+|---|---|---|
+| Table total rows | 49 | 46 |
+| 46907 A exposure | 13 | 11 |
+| 46907 A form_start | 4 | 4 |
+| 46907 A tel_click | 1 | 1 |
+| 46907 B exposure | 19 | 18 |
+| 46907 H exposure | 2 | 2 |
+| 46905 A exposure (other test) | 6 | 6 |
+| 46905 B exposure (other test) | 4 | 4 |
+
+Read-back after delete: ids 53, 54, 55 gone; total 46 = 49 minus 3; a hash over all remaining rows (id, experiment, variant, visitor, session, type, time) was identical before and after (1b4e2a4f9be2c59de1b5d5010077e87f), so no other row changed. Test 46907 still status `running`, start 2026-11-13 13:58:11 UTC, stored weights A 0.8 / B 0.2, variants unchanged, post_modified_gmt unchanged.
