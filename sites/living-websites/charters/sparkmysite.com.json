@@ -1,0 +1,62 @@
+{
+  "business_name": "Spark Sites (a State of the Spark company)",
+  "business_goal": "Bring in qualified inbound leads: at least one business owner reaching out first (plan-call request, booked call or phone call) every business day, and grow monthly revenue from them.",
+  "primary_conversion": {
+    "type": "form",
+    "description": "The plan-call request form on the homepage (Gravity Form 31). Fields: name, mobile number, email, business name, what are you interested in. Submit button: Get my plan call.",
+    "selector": "#gform_31"
+  },
+  "secondary_conversions": [
+    {
+      "type": "booking",
+      "description": "Click on the free plan call booking link (https://calendar.app.google/QZ8TkgtqGG2fMvot5). It appears six times on the homepage, including the small link under the hero button.",
+      "selector": "a[href*=\"calendar.app.google\"]"
+    },
+    {
+      "type": "call",
+      "description": "Tap on the phone number (863) 225-1713. It appears four times on the homepage, none of them in the first screen.",
+      "selector": "a[href^=\"tel:\"]"
+    }
+  ],
+  "audience": "Owners of small local businesses (home services, trades, professional practices, local shops) in Lakeland and Polk County, Florida, and small businesses elsewhere, who want a website that brings in calls or help with online marketing, and who prefer a local team they can reach to a ticket queue.",
+  "brand": {
+    "colors": {
+      "live_button_gradient_start": "#EC0868",
+      "live_button_gradient_end": "#8B3FD9",
+      "live_form_button": "#EC0868",
+      "live_link_blue": "#1FB6E0",
+      "live_text_on_light": "#0A0505",
+      "live_text_on_dark": "#FFFFFF",
+      "live_dark_ground": "#0B0B14",
+      "brand_folder_spark_blue": "#0ECAEB",
+      "brand_folder_ink": "#101418",
+      "brand_folder_porcelain": "#F7F8F8"
+    },
+    "fonts": {
+      "headings_and_buttons": "Plus Jakarta Sans (800 for headlines, 700 for buttons)",
+      "body": "Poppins 500 on the page body, Inter 600 for text links in content blocks",
+      "brand_folder": "Hanken Grotesk for headlines, Source Serif 4 for body, Poppins 600 for the wordmark only"
+    },
+    "button_shape": "Pill (fully rounded, border-radius 999px) for main call-to-action buttons; the form submit button is a flat pink rectangle with 10px corners. Primary buttons carry the pink to purple gradient.",
+    "voice_notes": "Plain, warm and short. Local and human: real people, no ticket queue, no jargon. Calls to action are small verbs in the owner's words: Get started, See the menu, Book a call, Call us. No hype, no invented numbers."
+  },
+  "off_limits": [
+    "Prices and anything that states or implies a price (Websites from $1,800, $34/month, $65/hr, one-time, no retainer)",
+    "Package contents and the What's included lists",
+    "Guarantees and promises (no hidden fees, no long contract, you own your site, human-reviewed work, month to month)",
+    "Legal text (privacy policy, the registered fictitious name line, copyright, terms)",
+    "Testimonials and reviews, including the review carousel and the Trustindex badge",
+    "Team names, team photos and any photo of a person",
+    "The Google rating (5.0 stars, 5.0 on Google, Average Google rating)",
+    "Statistics and proof numbers (20+ years, 2013, 100%) and the client logo row",
+    "The phone number (863) 225-1713 and the booking link address; wording around them may be tested, the destinations may not",
+    "Any new claim about results, savings, speed or rankings that the owner has not supplied"
+  ],
+  "autonomy_level": "suggest",
+  "speed_budget": {
+    "load_ms": 1100,
+    "button_visible_ms": 500,
+    "max_added_kb": 4
+  },
+  "version": 1
+}

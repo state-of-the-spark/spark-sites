@@ -1,0 +1,568 @@
+{
+  "site": "sparkmysite.com",
+  "run_date": "2026-11-16",
+  "scout": "agent:scout (dry run, played by Lumen from the existing screenshots; no new site visit)",
+  "charter_version": 1,
+  "inputs": {
+    "state_read_at": null,
+    "running_test": {
+      "id": 46907,
+      "element": "header button wording (a.et_pb_button[href=\"#contact\"])",
+      "started": "2026-11-13",
+      "note": "From the 2026-11-13 install audit. GET /state was NOT read in this dry run, so whether it is still running is assumed; its 14-day stop falls on 2026-11-27."
+    },
+    "traffic_source": "facts supplied in the brief and the audit file: GA4, 14 days ending 2026-11-11",
+    "traffic_as_of": "2026-11-11",
+    "library_read": false
+  },
+  "screens": [
+    {
+      "file": "audit/screenshots/review-home-desktop-1.png",
+      "page": "/",
+      "viewport": "1366 wide",
+      "looked_at": true
+    },
+    {
+      "file": "audit/screenshots/review-home-desktop-2.png",
+      "page": "/",
+      "viewport": "1366 wide",
+      "looked_at": true
+    },
+    {
+      "file": "audit/screenshots/review-home-desktop-3.png",
+      "page": "/",
+      "viewport": "1366 wide",
+      "looked_at": true
+    },
+    {
+      "file": "audit/screenshots/review-home-desktop-4.png",
+      "page": "/",
+      "viewport": "1366 wide",
+      "looked_at": true
+    },
+    {
+      "file": "audit/screenshots/review-home-mobile-1.png",
+      "page": "/",
+      "viewport": "390 wide",
+      "looked_at": true
+    },
+    {
+      "file": "audit/screenshots/review-home-mobile-2.png",
+      "page": "/",
+      "viewport": "390 wide",
+      "looked_at": true
+    },
+    {
+      "file": "audit/screenshots/review-home-mobile-6.png",
+      "page": "/",
+      "viewport": "390 wide",
+      "looked_at": true
+    },
+    {
+      "file": "audit/screenshots/review-home-mobile-3.png, -4.png, -5.png",
+      "page": "/",
+      "viewport": "390 wide",
+      "looked_at": false
+    }
+  ],
+  "candidates": [
+    {
+      "id": "c1-floating-call-button",
+      "title": "Keep a Call us button on screen as visitors scroll",
+      "page": "/",
+      "device": "all",
+      "element": {
+        "selector": "a[href^=\"tel:\"] (the pink 'Call us: (863) 225-1713' button in the 'Custom builds & services' block; the page has four phone links, so a selector that matches only this one is not yet confirmed)",
+        "match_count": null,
+        "current_text": "Call us: (863) 225-1713",
+        "where": "Roughly the middle of the page, under the packages. Not on the first screen at either width; the phone number first appears there.",
+        "destination": "tel:+18632251713"
+      },
+      "change": {
+        "change_type": "cta_add",
+        "format": "selector_css",
+        "current": "The only phone button sits in the middle of the page. A visitor who wants to call has to scroll to find it.",
+        "challenger": "The same pink button is pinned to the bottom corner of the screen so it is always in reach.",
+        "challenger_text": null,
+        "css_idea": "Pin the existing button with fixed positioning at the bottom right, same pink gradient and pill shape as the page's other buttons."
+      },
+      "rationale": "On the first screen, desktop and phone, there is no phone number and no call button; the only first-screen ways to reach the owner are the header Get started button (not shown on phones) and a small text link. Owners of local service businesses often prefer to call. Keeping the call button in reach should turn some of the visits that never scroll that far into calls.",
+      "evidence": [
+        {
+          "source": "screenshot review-home-desktop-1.png",
+          "detail": "First screen at 1366 wide: no phone number or call button; the phone button appears in the middle of the page (desktop-2).",
+          "as_of": "2026-11-13"
+        },
+        {
+          "source": "screenshot review-home-mobile-1.png",
+          "detail": "First screen at 390 wide: only a menu icon in the header, no phone number, no call button.",
+          "as_of": "2026-11-13"
+        },
+        {
+          "source": "live page read, 2026-11-16",
+          "detail": "Four phone links on the homepage, all to the same number.",
+          "as_of": "2026-11-16"
+        },
+        {
+          "source": "GA4 via the 2026-11-13 install audit",
+          "detail": "Homepage: 137 sessions in 14 days (96 desktop, 41 phone).",
+          "as_of": "2026-11-11"
+        }
+      ],
+      "tier": 1,
+      "tier_reason": "It is an existing button; only where it is shown changes.",
+      "touches_off_limits": false,
+      "off_limits_check": "Checked all ten lines. The phone number and what the button says stay exactly as they are; only its position changes.",
+      "payoff_inputs": {
+        "sessions_14d": 137,
+        "sessions_as_of": "2026-11-11",
+        "reach_share": 1,
+        "reach_basis": "a pinned button is on screen for every visit",
+        "proximity": 1,
+        "proximity_basis": "the button is the lead itself (a phone tap is counted automatically)",
+        "change_type": "cta_add"
+      },
+      "payoff": {
+        "rank": 1,
+        "score": 0.1455,
+        "traffic_class": "below_minimum",
+        "below_minimum": true,
+        "eligible_to_start": true,
+        "excluded_tier3": false,
+        "needs_owner_approval_unless_full": false,
+        "lift_prior": 0.15,
+        "lift_used": 0.15,
+        "sessions_reaching": 137,
+        "per_version_sessions_14d": 61.7,
+        "days_to_100_per_version": 22.7,
+        "days_effective": 14,
+        "mde_relative": 1.514,
+        "power_factor": 0.0991,
+        "baseline_rate_used": 0.06
+      },
+      "existing_suggestion_id": null,
+      "risks": "A pinned button can cover the form or other content on a phone, and pinning may not work inside a section with its own scrolling or transform. Needs a careful preview."
+    },
+    {
+      "id": "c2-hero-book-call-button",
+      "title": "Make 'Book a free call' a real button in the hero",
+      "page": "/",
+      "device": "all",
+      "element": {
+        "selector": "div.et_pb_text_3 p a",
+        "match_count": 1,
+        "current_text": "or book a free call →",
+        "where": "Under the big pink See the menu button, on the same line as the 5.0 on Google stars, in small blue text.",
+        "destination": "https://calendar.app.google/QZ8TkgtqGG2fMvot5"
+      },
+      "change": {
+        "change_type": "cta_promote",
+        "format": "selector_text_css",
+        "current": "A small blue text link, with the word 'or' inside it.",
+        "challenger": "An outlined button that reads 'Book a free call →' under the main button.",
+        "challenger_text": "Book a free call →",
+        "css_idea": "Outlined pill, 44 pixels tall or more, spark blue outline, white text, fills with spark blue on hover; main pink button stays visually heavier."
+      },
+      "rationale": "On the first screen the only direct way to book a call is a small text link beside the star rating. The big pink button sends visitors to the packages, not to a call. A visitor who wants to talk first has nothing obvious to press. A real button makes the booking path easy to see and easy to tap on a phone.",
+      "evidence": [
+        {
+          "source": "screenshot review-home-desktop-1.png",
+          "detail": "'or book a free call' is small blue text next to '5.0 on Google', far lighter than the pink See the menu button.",
+          "as_of": "2026-11-13"
+        },
+        {
+          "source": "screenshot review-home-mobile-1.png",
+          "detail": "On a phone the link is a small line under the hero button.",
+          "as_of": "2026-11-13"
+        },
+        {
+          "source": "GA4 via the 2026-11-13 install audit",
+          "detail": "Homepage: 137 sessions in 14 days.",
+          "as_of": "2026-11-11"
+        }
+      ],
+      "tier": 1,
+      "tier_reason": "Wording and look of one existing link.",
+      "touches_off_limits": false,
+      "off_limits_check": "Only the link changes. The 5.0 on Google line beside it is outside the link and stays as it is. The booking address does not change.",
+      "payoff_inputs": {
+        "sessions_14d": 137,
+        "sessions_as_of": "2026-11-11",
+        "reach_share": 1,
+        "reach_basis": "above the first screen on desktop and phone",
+        "proximity": 0.8,
+        "proximity_basis": "goes straight to the booking page",
+        "change_type": "cta_promote"
+      },
+      "payoff": {
+        "rank": 3,
+        "score": 0.0517,
+        "traffic_class": "below_minimum",
+        "below_minimum": true,
+        "eligible_to_start": true,
+        "excluded_tier3": false,
+        "needs_owner_approval_unless_full": false,
+        "lift_prior": 0.1,
+        "lift_used": 0.1,
+        "sessions_reaching": 137,
+        "per_version_sessions_14d": 61.7,
+        "days_to_100_per_version": 22.7,
+        "days_effective": 14,
+        "mde_relative": 1.514,
+        "power_factor": 0.0661,
+        "baseline_rate_used": 0.06
+      },
+      "existing_suggestion_id": 46912,
+      "risks": "The booking page click is counted as a click, but booking completions are not counted as leads by the plugin."
+    },
+    {
+      "id": "c3-hero-button-to-form",
+      "title": "Send the main hero button to the plan-call form",
+      "page": "/",
+      "device": "all",
+      "element": {
+        "selector": "the pink 'See the menu' button in the hero (a.et_pb_button; exact selector not yet confirmed)",
+        "match_count": null,
+        "current_text": "See the menu",
+        "where": "The big pink button on the first screen.",
+        "destination": "the packages section further down the same page"
+      },
+      "change": {
+        "change_type": "cta_retarget",
+        "format": "selector_text_changes",
+        "current": "'See the menu' scrolls the visitor to the packages (the two $1,800 options).",
+        "challenger": "'Get my free plan call' takes the visitor to the plan-call form.",
+        "challenger_text": "Get my free plan call",
+        "css_idea": null
+      },
+      "rationale": "The largest button on the first screen takes visitors to a price list. Many small business owners are not ready to choose a package and need to talk first. Sending the main button to the plan-call form puts the form, the page's primary lead, one press away instead of far down the page.",
+      "evidence": [
+        {
+          "source": "screenshot review-home-desktop-1.png",
+          "detail": "The largest button on the first screen is See the menu; the plan-call form is at the very bottom of the page (desktop-4).",
+          "as_of": "2026-11-13"
+        },
+        {
+          "source": "audit file 2026-11-13",
+          "detail": "Hero button See the menu goes to packages; the only form is far down the page.",
+          "as_of": "2026-11-13"
+        },
+        {
+          "source": "GA4 via the 2026-11-13 install audit",
+          "detail": "Homepage: 137 sessions in 14 days.",
+          "as_of": "2026-11-11"
+        }
+      ],
+      "tier": 1,
+      "tier_reason": "Wording and destination of one existing button.",
+      "touches_off_limits": false,
+      "off_limits_check": "The button's words do not mention a price or a guarantee. The packages themselves are not touched.",
+      "payoff_inputs": {
+        "sessions_14d": 137,
+        "sessions_as_of": "2026-11-11",
+        "reach_share": 1,
+        "reach_basis": "above the first screen",
+        "proximity": 0.6,
+        "proximity_basis": "today it leads to the packages, a step before the lead",
+        "change_type": "cta_retarget"
+      },
+      "payoff": {
+        "rank": 2,
+        "score": 0.0559,
+        "traffic_class": "below_minimum",
+        "below_minimum": true,
+        "eligible_to_start": true,
+        "excluded_tier3": false,
+        "needs_owner_approval_unless_full": false,
+        "lift_prior": 0.12,
+        "lift_used": 0.12,
+        "sessions_reaching": 137,
+        "per_version_sessions_14d": 61.7,
+        "days_to_100_per_version": 22.7,
+        "days_effective": 14,
+        "mde_relative": 1.514,
+        "power_factor": 0.0793,
+        "baseline_rate_used": 0.06
+      },
+      "existing_suggestion_id": null,
+      "risks": "Visitors who would have bought a package straight from the packages section may no longer see it first."
+    },
+    {
+      "id": "c4-shorter-plan-call-form",
+      "title": "Ask for three things in the plan-call form instead of five",
+      "page": "/",
+      "device": "all",
+      "element": {
+        "selector": "#gform_31 (the Business name and What are you interested in fields)",
+        "match_count": 1,
+        "current_text": "Form with name, mobile number, email, business name, what are you interested in; button 'Get my plan call'",
+        "where": "The bottom section of the page, after the FAQ.",
+        "destination": "submits the form"
+      },
+      "change": {
+        "change_type": "form_length",
+        "format": "selector_css",
+        "current": "Five fields; only name and mobile number are marked required.",
+        "challenger": "Name, mobile number and email only; the two optional text boxes are hidden.",
+        "challenger_text": null,
+        "css_idea": "Hide the two optional field wrappers for challenger visitors."
+      },
+      "rationale": "The form is the page's main lead and it is long for a first contact: five boxes, two of them optional text boxes that ask the visitor to think. Fewer boxes usually means more finished forms. The cost is that the team gets less to prepare the call with.",
+      "evidence": [
+        {
+          "source": "screenshot review-home-desktop-4.png",
+          "detail": "Five fields; only Your name and Mobile number are marked (Required). Submit button reads Get my plan call.",
+          "as_of": "2026-11-13"
+        },
+        {
+          "source": "live page read, 2026-11-16",
+          "detail": "Form #gform_31 is on the page.",
+          "as_of": "2026-11-16"
+        },
+        {
+          "source": "GA4 via the 2026-11-13 install audit",
+          "detail": "Homepage: 137 sessions in 14 days.",
+          "as_of": "2026-11-11"
+        }
+      ],
+      "tier": 2,
+      "tier_reason": "Form fields are tier 2 in the roadmap.",
+      "touches_off_limits": false,
+      "off_limits_check": "No price, guarantee, legal text or claim is touched. The form has no consent text in the screenshot.",
+      "payoff_inputs": {
+        "sessions_14d": 137,
+        "sessions_as_of": "2026-11-11",
+        "reach_share": 0.35,
+        "reach_basis": "estimate, no scroll data: the form is at the very bottom of an 8,899 px page",
+        "proximity": 1,
+        "proximity_basis": "the form is the lead",
+        "change_type": "form_length"
+      },
+      "payoff": {
+        "rank": 4,
+        "score": 0.0326,
+        "traffic_class": "below_minimum",
+        "below_minimum": true,
+        "eligible_to_start": true,
+        "excluded_tier3": false,
+        "needs_owner_approval_unless_full": true,
+        "lift_prior": 0.12,
+        "lift_used": 0.12,
+        "sessions_reaching": 47.9,
+        "per_version_sessions_14d": 61.7,
+        "days_to_100_per_version": 22.7,
+        "days_effective": 14,
+        "mde_relative": 1.514,
+        "power_factor": 0.0793,
+        "baseline_rate_used": 0.06
+      },
+      "existing_suggestion_id": null,
+      "risks": "The sales team loses the 'what are you interested in' answer for challenger visitors."
+    },
+    {
+      "id": "c5-header-button-on-phones",
+      "title": "Show the Get started button in the header on phones",
+      "page": "/",
+      "device": "mobile",
+      "element": {
+        "selector": "a.et_pb_button[href=\"#contact\"]",
+        "match_count": 1,
+        "current_text": "Get started",
+        "where": "Header, top right on desktop. Hidden by the theme at 980 pixels wide and below.",
+        "destination": "#contact (the plan-call form)"
+      },
+      "change": {
+        "change_type": "visibility",
+        "format": "selector_css",
+        "current": "No button in the header on phones, only a menu icon.",
+        "challenger": "The Get started button is shown in the header on phones.",
+        "challenger_text": null,
+        "css_idea": "Override the theme's hide rule for the button on phones with a more specific selector."
+      },
+      "rationale": "On phones the header shows only a menu icon, and the page does not keep any call to action on screen as you scroll. The same button works on desktop. Showing it on phones gives phone visitors a way in without scrolling to the form.",
+      "evidence": [
+        {
+          "source": "screenshot review-home-mobile-1.png",
+          "detail": "Header at 390 wide: logo and menu icon only.",
+          "as_of": "2026-11-13"
+        },
+        {
+          "source": "audit file 2026-11-12",
+          "detail": "The theme hides the button at 980 pixels wide and below.",
+          "as_of": "2026-11-12"
+        },
+        {
+          "source": "GA4 via the 2026-11-13 install audit",
+          "detail": "Homepage on phones: 41 sessions in 14 days.",
+          "as_of": "2026-11-11"
+        }
+      ],
+      "tier": 1,
+      "tier_reason": "Visibility of an existing element.",
+      "touches_off_limits": false,
+      "off_limits_check": "Only whether an existing button is shown. Nothing on the list is touched.",
+      "payoff_inputs": {
+        "sessions_14d": 41,
+        "sessions_as_of": "2026-11-11",
+        "reach_share": 1,
+        "reach_basis": "header, always on screen at the top",
+        "proximity": 0.8,
+        "proximity_basis": "jumps to the form",
+        "change_type": "visibility"
+      },
+      "payoff": {
+        "rank": 6,
+        "score": 0.0085,
+        "traffic_class": "below_minimum_not_eligible",
+        "below_minimum": true,
+        "eligible_to_start": false,
+        "excluded_tier3": false,
+        "needs_owner_approval_unless_full": false,
+        "lift_prior": 0.1,
+        "lift_used": 0.1,
+        "sessions_reaching": 41,
+        "per_version_sessions_14d": 18.5,
+        "days_to_100_per_version": 75.9,
+        "days_effective": 14,
+        "mde_relative": 2.767,
+        "power_factor": 0.0361,
+        "baseline_rate_used": 0.06
+      },
+      "existing_suggestion_id": 46910,
+      "risks": "Only 41 phone visits in 14 days; the plugin's start gate (100) is not met without a forced start."
+    },
+    {
+      "id": "c6-hero-headline-promise",
+      "title": "Hero headline that names the result: 'A website that brings you calls.'",
+      "page": "/",
+      "device": "all",
+      "element": {
+        "selector": "h1 (the hero headline)",
+        "match_count": null,
+        "current_text": "A website that works as hard as you do.",
+        "where": "The largest text on the first screen.",
+        "destination": null
+      },
+      "change": {
+        "change_type": "headline",
+        "format": "selector_text",
+        "current": "A line about effort ('works as hard as you do').",
+        "challenger": "A line about the result a visitor wants.",
+        "challenger_text": "A website that brings you calls.",
+        "css_idea": null
+      },
+      "rationale": "The current headline says the site works hard but not at what. Naming the result tells a business owner immediately that this is about getting calls, which is what they came for.",
+      "evidence": [
+        {
+          "source": "screenshot review-home-desktop-1.png",
+          "detail": "Hero headline: 'A website that works as hard as you do.'",
+          "as_of": "2026-11-13"
+        },
+        {
+          "source": "GA4 via the 2026-11-13 install audit",
+          "detail": "Homepage: 137 sessions in 14 days.",
+          "as_of": "2026-11-11"
+        }
+      ],
+      "tier": 1,
+      "tier_reason": "Wording of a headline.",
+      "touches_off_limits": false,
+      "off_limits_check": "No price, rating, review, photo or legal line.",
+      "payoff_inputs": {
+        "sessions_14d": 137,
+        "sessions_as_of": "2026-11-11",
+        "reach_share": 1,
+        "reach_basis": "first thing on the page",
+        "proximity": 0.2,
+        "proximity_basis": "a headline has no click path",
+        "change_type": "headline"
+      },
+      "payoff": {
+        "rank": 5,
+        "score": 0.0083,
+        "traffic_class": "below_minimum",
+        "below_minimum": true,
+        "eligible_to_start": true,
+        "excluded_tier3": false,
+        "needs_owner_approval_unless_full": false,
+        "lift_prior": 0.08,
+        "lift_used": 0.08,
+        "sessions_reaching": 137,
+        "per_version_sessions_14d": 61.7,
+        "days_to_100_per_version": 22.7,
+        "days_effective": 14,
+        "mde_relative": 1.514,
+        "power_factor": 0.0529,
+        "baseline_rate_used": 0.06
+      },
+      "existing_suggestion_id": null,
+      "risks": "The new wording promises a result rather than describing the service."
+    }
+  ],
+  "dropped": [
+    {
+      "idea": "Change the colour of the pink gradient buttons",
+      "reason": "A colour change cannot be told apart from luck at this traffic."
+    },
+    {
+      "idea": "Reword the header Get started button",
+      "reason": "That is the test already running (46907)."
+    },
+    {
+      "idea": "Move the reviews higher on the page",
+      "reason": "Reviews and the rating are off-limits."
+    },
+    {
+      "idea": "Change or reorder the package lists, or the $1,800 and $34 wording",
+      "reason": "Prices and package contents are off-limits."
+    },
+    {
+      "idea": "Add a brand-new sticky call bar",
+      "reason": "A selector test cannot create a new element; c1 pins the phone button already on the page instead."
+    }
+  ],
+  "not_done": [
+    "No new screenshots: this dry run uses the 2026-11-13 review frames; mobile frames 3 to 5 were not opened.",
+    "GET /state and GET /suggestions were not read (no site calls in a dry run), so what is running now is taken from the 2026-11-13 audit.",
+    "Selectors for c1, c3 and c6 were not confirmed on the live page (only one homepage visit was allowed and it was spent on the charter).",
+    "No traffic.json was supplied; the session counts are the facts given in the brief."
+  ],
+  "ranking_by_scout_score": [
+    {
+      "rank": 1,
+      "id": "c1-floating-call-button",
+      "score": 0.1455,
+      "traffic_class": "below_minimum"
+    },
+    {
+      "rank": 2,
+      "id": "c3-hero-button-to-form",
+      "score": 0.0559,
+      "traffic_class": "below_minimum"
+    },
+    {
+      "rank": 3,
+      "id": "c2-hero-book-call-button",
+      "score": 0.0517,
+      "traffic_class": "below_minimum"
+    },
+    {
+      "rank": 4,
+      "id": "c4-shorter-plan-call-form",
+      "score": 0.0326,
+      "traffic_class": "below_minimum"
+    },
+    {
+      "rank": 5,
+      "id": "c6-hero-headline-promise",
+      "score": 0.0083,
+      "traffic_class": "below_minimum"
+    },
+    {
+      "rank": 6,
+      "id": "c5-header-button-on-phones",
+      "score": 0.0085,
+      "traffic_class": "below_minimum_not_eligible"
+    }
+  ]
+}

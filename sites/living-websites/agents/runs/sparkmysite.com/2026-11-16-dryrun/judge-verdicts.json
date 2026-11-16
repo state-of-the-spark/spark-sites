@@ -1,0 +1,173 @@
+{
+  "site": "sparkmysite.com",
+  "run_date": "2026-11-16",
+  "judge": "agent:judge (dry run, played by Lumen; judged only from scout-candidates.json and the draft charter, charters/sparkmysite.com.json version 1)",
+  "charter_version": 1,
+  "autonomy_level": "suggest",
+  "verdicts": [
+    {
+      "candidate_id": "c1-floating-call-button",
+      "verdict": "hold",
+      "tier_confirmed": 2,
+      "tier_changed": true,
+      "queue_allowed_at_level": false,
+      "checks": {
+        "serves_a_lead": { "ok": true, "sentence": "More visitors will tap Call us, and that is a lead because a phone tap is one of the charter's secondary conversions." },
+        "off_limits": { "ok": true, "why": "The phone number and the button's words stay as they are; only where it sits changes. Checked all ten lines." },
+        "on_brand": { "ok": true, "why": "It reuses the page's own pink pill button. No new colour." },
+        "reversible": { "ok": true, "why": "A style snippet on the challenger only; the original and the holdout are untouched." },
+        "no_collision": { "ok": true, "why": "The running test (46907) is on the header button, a different element." },
+        "lead_is_measured": { "ok": true, "why": "Phone taps are counted automatically." },
+        "speed": { "ok": true, "why": "A few lines of style." },
+        "target_is_known": { "ok": false, "why": "The Scout did not confirm which element this is: the page has four phone links and the selector is not unique. A selector that matches all four would pin four buttons on top of each other." }
+      },
+      "payoff_recomputed": { "score": 0.1455, "scout_score": 0.1455, "matches_scout": true, "traffic_class": "below_minimum", "inputs_corrected": null },
+      "reasons": [
+        "The idea ties directly to a phone lead and stays on brand.",
+        "I raised it from tier 1 to tier 2. Pinning a button to the screen changes the page layout and can cover other content, especially the form on a phone; the Scout called it a placement of an existing button.",
+        "Hold because the Scout never confirmed one selector that matches only the pink Call us button. Settle that first, and the Builder must show a phone frame where the pinned button does not cover the form or the menu.",
+        "Because it is tier 2, the owner must approve it; at the current autonomy level an agent cannot queue it."
+      ],
+      "notes_for_orchestrator": [
+        "below_minimum: 137 sessions in 14 days gives about 62 per version; it cannot reach 100 per version in 14 days.",
+        "The Scout's scoring is right but the selector is missing; send it back to the Scout or Builder to confirm one unique selector, then re-judge."
+      ],
+      "gate_post_body": { "verdict": "hold", "reasons": "Ties to a phone lead and stays on brand. Raised to tier 2 because pinning a button changes the layout and can cover content on a phone. Held until one selector that matches only this button is confirmed; the page has four phone links. Owner approval needed.", "by": "agent:judge" }
+    },
+    {
+      "candidate_id": "c3-hero-button-to-form",
+      "verdict": "hold",
+      "tier_confirmed": 1,
+      "tier_changed": false,
+      "queue_allowed_at_level": false,
+      "checks": {
+        "serves_a_lead": { "ok": false, "sentence": "More visitors will reach the plan-call form, and that is a lead because the form is the primary conversion; but the Scout's own risk says today's button also feeds direct package purchases, which the charter does not count as a conversion, so a rise in forms could come with a fall in purchases that nothing would notice." },
+        "off_limits": { "ok": true, "why": "The new words ('Get my free plan call') name no price, guarantee or claim; the packages are untouched." },
+        "on_brand": { "ok": true, "why": "Same button, new words in the page's plain voice." },
+        "reversible": { "ok": true, "why": "A text and link change on the challenger only." },
+        "no_collision": { "ok": true, "why": "Different element from the running test." },
+        "lead_is_measured": { "ok": true, "why": "A click on the test's own button is counted; the form is counted on submission." },
+        "speed": { "ok": true, "why": "A few words." },
+        "target_is_known": { "ok": false, "why": "The Scout did not confirm a selector for this button." }
+      },
+      "payoff_recomputed": { "score": 0.0559, "scout_score": 0.0559, "matches_scout": true, "traffic_class": "below_minimum", "inputs_corrected": null },
+      "reasons": [
+        "It is a bold, on-goal idea: it moves the main button from a price list to the lead.",
+        "Hold for a decision only the owner can make: do direct purchases from the packages count as a win? The charter lists only the form, booking and phone, so the guard would not see purchases drop.",
+        "Also needs a confirmed selector for the hero button."
+      ],
+      "notes_for_orchestrator": [
+        "below_minimum: 137 sessions in 14 days.",
+        "Ask the owner to add purchase as a secondary conversion in the charter, or to say purchases do not matter; then re-judge."
+      ],
+      "gate_post_body": { "verdict": "hold", "reasons": "Bold and on goal, but the main hero button feeds direct package purchases, and the charter does not count purchases, so a drop in sales would not be seen. Owner must say whether purchases count. Selector for the hero button also still to be confirmed.", "by": "agent:judge" }
+    },
+    {
+      "candidate_id": "c2-hero-book-call-button",
+      "verdict": "pass",
+      "tier_confirmed": 1,
+      "tier_changed": false,
+      "queue_allowed_at_level": false,
+      "checks": {
+        "serves_a_lead": { "ok": true, "sentence": "More visitors will press Book a free call, and that is a lead because a booked call is one of the charter's secondary conversions." },
+        "off_limits": { "ok": true, "why": "Only the link changes. The '5.0 on Google' line next to it is outside the link and stays. The booking address does not change." },
+        "on_brand": { "ok": true, "why": "Outlined pill, like the page's other buttons. White text on the dark hero is about 19.6 to 1. Spark blue (#0ECAEB, from the charter's brand colours) outline on the dark ground is about 9.9 to 1. Condition: the hover look must use dark text (for example #0b1b2b, about 8.8 to 1) on the spark blue fill; white on spark blue is only 2.0 to 1 and would fail. The dark ground colour is the charter's by-eye value, not measured, but the margins are large." },
+        "reversible": { "ok": true, "why": "Challenger only; original and holdout untouched." },
+        "no_collision": { "ok": true, "why": "Different element from the running test. Waiting suggestion 46912 is this same idea (the Scout set it on purpose)." },
+        "lead_is_measured": { "ok": true, "why": "A click on the link counts as a click for the test. The plugin does not count a completed booking as a lead, so the lead guard will not see bookings. The click is the measure." },
+        "speed": { "ok": true, "why": "A few lines of style and one short text swap." }
+      },
+      "payoff_recomputed": { "score": 0.0517, "scout_score": 0.0517, "matches_scout": true, "traffic_class": "below_minimum", "inputs_corrected": null },
+      "reasons": [
+        "Clear path to a lead: the only direct booking path on the first screen is small text beside the star rating.",
+        "Nothing off-limits is touched and the change is fully reversible.",
+        "Condition for the Builder: dark text on the hover fill. If the Builder changes any word, colour or the link address, it comes back for a second check."
+      ],
+      "notes_for_orchestrator": [
+        "below_minimum: 137 sessions in 14 days gives about 62 per version; it cannot reach 100 per version in 14 days, so under the plugin's current rules it can only end as 'no difference'.",
+        "Same idea as waiting suggestion 46912."
+      ],
+      "gate_post_body": { "verdict": "pass", "reasons": "Ties to a booked-call lead; the only direct booking path on the first screen is a small text link. Touches nothing off-limits; reversible; on brand. Condition: dark text on the hover fill (white on spark blue is only 2 to 1).", "by": "agent:judge" }
+    },
+    {
+      "candidate_id": "c4-shorter-plan-call-form",
+      "verdict": "hold",
+      "tier_confirmed": 2,
+      "tier_changed": false,
+      "queue_allowed_at_level": false,
+      "checks": {
+        "serves_a_lead": { "ok": false, "sentence": "More visitors will finish the form, and that is a lead because the form is the primary conversion; but the charter's goal is QUALIFIED leads, and the two hidden boxes are the only place a visitor says what they want, which the Scout's own risk says the team uses." },
+        "off_limits": { "ok": true, "why": "No price, guarantee, legal text or claim is touched." },
+        "on_brand": { "ok": true, "why": "Hiding boxes changes no colour, font or words." },
+        "reversible": { "ok": true, "why": "Hidden by style on the challenger only; the boxes stay in the form." },
+        "no_collision": { "ok": true, "why": "Different element." },
+        "lead_is_measured": { "ok": true, "why": "Form submissions are counted on the server." },
+        "speed": { "ok": true, "why": "A few lines of style." }
+      },
+      "payoff_recomputed": { "score": 0.0326, "scout_score": 0.0326, "matches_scout": true, "traffic_class": "below_minimum", "inputs_corrected": null },
+      "reasons": [
+        "More forms sent is likely, but more forms is not the same as more qualified leads.",
+        "Hold: the owner should say whether the team can run a plan call without the 'what are you interested in' answer.",
+        "The reach input (35 percent of visits get to the form) is an estimate with no scroll data behind it; I left it as given but it cannot be confirmed.",
+        "It is tier 2, so the owner approves it in any case."
+      ],
+      "notes_for_orchestrator": [
+        "below_minimum: 137 sessions in 14 days.",
+        "Tier 2: the plugin version described refuses to create a tier 2 suggestion at all."
+      ],
+      "gate_post_body": { "verdict": "hold", "reasons": "Likely to raise the number of forms sent, but the goal is qualified leads and the two hidden boxes tell the team what the visitor wants. Owner must say the call can run without them. Tier 2: owner approval needed.", "by": "agent:judge" }
+    },
+    {
+      "candidate_id": "c5-header-button-on-phones",
+      "verdict": "pass",
+      "tier_confirmed": 1,
+      "tier_changed": false,
+      "queue_allowed_at_level": false,
+      "checks": {
+        "serves_a_lead": { "ok": true, "sentence": "More phone visitors will press Get started, and that is a lead because it jumps to the plan-call form, the primary conversion." },
+        "off_limits": { "ok": true, "why": "Only whether an existing button is shown." },
+        "on_brand": { "ok": true, "why": "It is the page's own header button, already on brand on desktop." },
+        "reversible": { "ok": true, "why": "Challenger only." },
+        "no_collision": { "ok": true, "why": "This is the same element as the running test 46907 (the header button's words), set on purpose as waiting suggestion 46910. Only one test runs at a time, so it can only start after 46907 ends. If 46907's winner changes the button's words, this test's current version changes too, so it must be re-checked then." },
+        "lead_is_measured": { "ok": true, "why": "A click on the test's button is counted; the form on submission." },
+        "speed": { "ok": true, "why": "One style rule." }
+      },
+      "payoff_recomputed": { "score": 0.0085, "scout_score": 0.0085, "matches_scout": true, "traffic_class": "below_minimum_not_eligible", "inputs_corrected": null },
+      "reasons": [
+        "On phones the header offers no way in; the same button works on desktop.",
+        "Nothing off-limits is touched and it is reversible.",
+        "Passes the gate, but it is not startable: only 41 phone visits in 14 days."
+      ],
+      "notes_for_orchestrator": [
+        "below_minimum_not_eligible: 41 sessions is under the plugin's 100 start gate; it can only start with a forced start and cannot reach a result.",
+        "Waits for test 46907 (same element) to finish; re-check its current version after that.",
+        "Same idea as waiting suggestion 46910."
+      ],
+      "gate_post_body": { "verdict": "pass", "reasons": "Phone visitors have no header button; showing the existing on-brand one gives them a way to the form. Nothing off-limits, reversible. Not startable yet: only 41 phone visits in 14 days, and it shares an element with running test 46907.", "by": "agent:judge" }
+    },
+    {
+      "candidate_id": "c6-hero-headline-promise",
+      "verdict": "fail",
+      "tier_confirmed": 3,
+      "tier_changed": true,
+      "queue_allowed_at_level": false,
+      "checks": {
+        "serves_a_lead": { "ok": false, "sentence": "I cannot write the sentence beyond 'the headline may be clearer'. A headline has no click path, and the Scout scored it 0.2 for closeness to a lead." },
+        "off_limits": { "ok": false, "why": "'A website that brings you calls' promises a result. The charter forbids any new claim about results that the owner has not supplied." },
+        "on_brand": { "ok": true, "why": "Plain and short, like the page." },
+        "reversible": { "ok": true, "why": "A text swap on the challenger." },
+        "no_collision": { "ok": true, "why": "Different element." },
+        "lead_is_measured": { "ok": false, "why": "A headline has nothing to click, so the test would measure the page, not the headline." }
+      },
+      "payoff_recomputed": { "score": 0, "scout_score": 0.0083, "matches_scout": false, "traffic_class": "below_minimum", "inputs_corrected": null },
+      "reasons": [
+        "It is a promise about results the owner has not supplied, which is on the off-limits list, so it is tier 3 and always fails.",
+        "I also cannot tie it to a lead: a headline has no button to press.",
+        "The Scout's score of 0.0083 becomes 0 because tier 3 is excluded from ranking."
+      ],
+      "notes_for_orchestrator": [ "Drop it. If the owner supplies a result they stand behind, a headline test can be proposed again." ],
+      "gate_post_body": { "verdict": "fail", "reasons": "Promises a result (brings you calls) that the owner has not supplied; that is a claim and on the off-limits list, so tier 3. Also nothing to press, so it cannot be tied to a lead.", "by": "agent:judge" }
+    }
+  ],
+  "summary": "2 pass (c2 hero book-a-call button, c5 header button on phones), 3 hold (c1 floating call button: selector not confirmed and raised to tier 2; c3 hero button to form: owner must say whether purchases count; c4 shorter form: qualified leads and tier 2), 1 fail (c6 headline: a result promise, tier 3). None of the passes can be queued at autonomy level suggest. No candidate is decidable at current traffic."
+}

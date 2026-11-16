@@ -1,0 +1,7 @@
+# Secrets and local working files never go in this public repository.
+.secrets/
+*.env
+*.secret
+# Screenshots taken from client sites during runs stay local.
+runs/**/screenshots/
+runs/**/*.png
