@@ -17,6 +17,12 @@
  *   POST /wp-json/spark-living/v1/suggestions/{id}/queue
  *   POST /wp-json/spark-living/v1/suggestions/{id}/unqueue
  *   POST /wp-json/spark-living/v1/suggestions/{id}/dismiss
+ *   POST /wp-json/spark-living/v1/suggestions/{id}/gate     (0.3.0: record a Goal Gate verdict)
+ *   GET  /wp-json/spark-living/v1/charter                    (0.3.0)
+ *   PUT  /wp-json/spark-living/v1/charter
+ *   GET  /wp-json/spark-living/v1/changes[?per_page=20&page=1&kind=&subject_id=]
+ *   POST /wp-json/spark-living/v1/changes
+ *   POST /wp-json/spark-living/v1/changes/{id}/undo
  *
  * @package SparkLiving
  */
@@ -153,12 +159,211 @@ final class Spark_Living_Rest {
 				array(
 					'methods'             => WP_REST_Server::CREATABLE,
 					'callback'            => static function ( WP_REST_Request $request ) use ( $action ) {
-						return self::suggestion_action( $action, absint( $request['id'] ) );
+						return self::suggestion_action( $action, absint( $request['id'] ), self::body( $request ) );
 					},
 					'permission_callback' => array( __CLASS__, 'can_manage' ),
 				)
 			);
 		}
+		register_rest_route(
+			$ns,
+			'/suggestions/(?P<id>\d+)/gate',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( __CLASS__, 'record_gate' ),
+				'permission_callback' => array( __CLASS__, 'can_manage' ),
+			)
+		);
+		register_rest_route(
+			$ns,
+			'/charter',
+			array(
+				array(
+					'methods'             => WP_REST_Server::READABLE,
+					'callback'            => array( __CLASS__, 'get_charter' ),
+					'permission_callback' => array( __CLASS__, 'can_manage' ),
+				),
+				array(
+					'methods'             => WP_REST_Server::EDITABLE,
+					'callback'            => array( __CLASS__, 'put_charter' ),
+					'permission_callback' => array( __CLASS__, 'can_manage' ),
+				),
+			)
+		);
+		register_rest_route(
+			$ns,
+			'/changes',
+			array(
+				array(
+					'methods'             => WP_REST_Server::READABLE,
+					'callback'            => array( __CLASS__, 'get_changes' ),
+					'permission_callback' => array( __CLASS__, 'can_manage' ),
+				),
+				array(
+					'methods'             => WP_REST_Server::CREATABLE,
+					'callback'            => array( __CLASS__, 'post_change' ),
+					'permission_callback' => array( __CLASS__, 'can_manage' ),
+				),
+			)
+		);
+		register_rest_route(
+			$ns,
+			'/changes/(?P<id>\d+)/undo',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( __CLASS__, 'undo_change' ),
+				'permission_callback' => array( __CLASS__, 'can_manage' ),
+			)
+		);
+	}
+
+	/**
+	 * The JSON body of a request as an array (falls back to form params).
+	 *
+	 * @param WP_REST_Request $request Request.
+	 * @return array
+	 */
+	private static function body( WP_REST_Request $request ): array {
+		$params = $request->get_json_params();
+		return is_array( $params ) ? $params : (array) $request->get_params();
+	}
+
+	/**
+	 * GET /charter
+	 *
+	 * @return WP_REST_Response
+	 */
+	public static function get_charter(): WP_REST_Response {
+		return new WP_REST_Response( Spark_Living_Charter::get(), 200 );
+	}
+
+	/**
+	 * PUT /charter
+	 *
+	 * Body (JSON): any of business_name, business_goal, primary_conversion
+	 * {type, description, selector}, secondary_conversions [same shape],
+	 * audience, brand {colors[], fonts[], button_shape, voice_notes},
+	 * off_limits [], autonomy_level (suggest|tier1|full), speed_budget
+	 * {load_ms, button_visible_ms, max_added_kb}, updated_by. Fields that are
+	 * left out keep their value; brand, primary_conversion and speed_budget
+	 * merge field by field. Unknown keys are dropped. The version goes up by
+	 * one on every save and a charter_update ledger row is written.
+	 *
+	 * @param WP_REST_Request $request Request.
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public static function put_charter( WP_REST_Request $request ) {
+		$body  = self::body( $request );
+		$saved = Spark_Living_Charter::save( $body, Spark_Living_Gate::clean_by( $body['updated_by'] ?? '' ) );
+		if ( is_wp_error( $saved ) ) {
+			return $saved;
+		}
+		unset( $saved['change_id'] );
+		return new WP_REST_Response( $saved, 200 );
+	}
+
+	/**
+	 * GET /changes
+	 *
+	 * @param WP_REST_Request $request Request.
+	 * @return WP_REST_Response
+	 */
+	public static function get_changes( WP_REST_Request $request ): WP_REST_Response {
+		$per_page = $request->get_param( 'per_page' ) ? (int) $request->get_param( 'per_page' ) : 20;
+		$q        = Spark_Living_Ledger::query(
+			array(
+				'per_page'   => $per_page,
+				'page'       => $request->get_param( 'page' ) ? (int) $request->get_param( 'page' ) : 1,
+				'kind'       => (string) $request->get_param( 'kind' ),
+				'subject_id' => (string) $request->get_param( 'subject_id' ),
+			)
+		);
+		$resp     = new WP_REST_Response( $q['items'], 200 );
+		$resp->header( 'X-WP-Total', (string) $q['total'] );
+		$resp->header( 'X-WP-TotalPages', (string) max( 1, (int) ceil( $q['total'] / max( 1, min( 100, $per_page ) ) ) ) );
+		return $resp;
+	}
+
+	/**
+	 * POST /changes: an outside agent records a change (rows_removed, style_fix,
+	 * ad_change, speed measurements and so on).
+	 *
+	 * Body (JSON): kind (required, one of the ledger kinds), summary (required,
+	 * 300 characters), subject_type, subject_id, before_json or before,
+	 * after_json or after, proposed_by, gate_verdict (pass|fail|hold|na),
+	 * gate_reasons, gate_by, evidence_json or evidence, result_json or result,
+	 * status (applied|failed). A posted row is never undoable (no undo payload is
+	 * accepted) and is stamped with the current time and charter version.
+	 *
+	 * @param WP_REST_Request $request Request.
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public static function post_change( WP_REST_Request $request ) {
+		$p    = self::body( $request );
+		$kind = isset( $p['kind'] ) ? sanitize_key( (string) $p['kind'] ) : '';
+		if ( ! in_array( $kind, Spark_Living_Ledger::KINDS, true ) ) {
+			return new WP_Error( 'spark_living_change_kind', __( 'kind must be one of the ledger kinds.', 'spark-living' ), array( 'status' => 400, 'kinds' => Spark_Living_Ledger::KINDS ) );
+		}
+		if ( '' === trim( (string) ( $p['summary'] ?? '' ) ) ) {
+			return new WP_Error( 'spark_living_change_summary', __( 'summary is required: one plain sentence saying what changed.', 'spark-living' ), array( 'status' => 400 ) );
+		}
+		if ( isset( $p['gate_verdict'] ) && ! in_array( sanitize_key( (string) $p['gate_verdict'] ), Spark_Living_Ledger::VERDICTS, true ) ) {
+			return new WP_Error( 'spark_living_change_verdict', __( 'gate_verdict must be pass, fail, hold or na.', 'spark-living' ), array( 'status' => 400 ) );
+		}
+		if ( isset( $p['status'] ) && ! in_array( sanitize_key( (string) $p['status'] ), array( 'applied', 'failed' ), true ) ) {
+			return new WP_Error( 'spark_living_change_status', __( 'status must be applied or failed.', 'spark-living' ), array( 'status' => 400 ) );
+		}
+		unset( $p['undo'], $p['undo_json'], $p['created_at'], $p['undone_at'], $p['charter_version'], $p['id'] );
+		$id = Spark_Living_Ledger::record( $p );
+		if ( ! $id ) {
+			return new WP_Error( 'spark_living_change_failed', __( 'The change could not be recorded.', 'spark-living' ), array( 'status' => 500 ) );
+		}
+		return new WP_REST_Response( Spark_Living_Ledger::get( $id ), 201 );
+	}
+
+	/**
+	 * POST /changes/{id}/undo
+	 *
+	 * Body (optional): by. Works only for a queued test (takes it off the
+	 * queue), a charter save (restores the previous charter) and a weights change
+	 * (restores the previous weights). Anything else answers 409
+	 * spark_living_not_undoable. The undo is recorded as a new row.
+	 *
+	 * @param WP_REST_Request $request Request.
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public static function undo_change( WP_REST_Request $request ) {
+		$p    = self::body( $request );
+		$done = Spark_Living_Ledger::undo( absint( $request['id'] ), Spark_Living_Gate::clean_by( $p['by'] ?? '' ) );
+		if ( is_wp_error( $done ) ) {
+			return $done;
+		}
+		return new WP_REST_Response( $done, 200 );
+	}
+
+	/**
+	 * POST /suggestions/{id}/gate
+	 *
+	 * Body (JSON): verdict (pass|fail|hold, required), by (required, who judged
+	 * it), reasons (600 characters; required for fail and hold), risk_tier
+	 * (optional 1, 2 or 3; sets the test's tier), charter_version (optional, the
+	 * version the judge read; default the current one).
+	 *
+	 * @param WP_REST_Request $request Request.
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public static function record_gate( WP_REST_Request $request ) {
+		$exp = Spark_Living_Gate::record( absint( $request['id'] ), self::body( $request ) );
+		if ( is_wp_error( $exp ) ) {
+			return $exp;
+		}
+		$position = 0;
+		foreach ( Spark_Living_Queue::queue_list() as $i => $q ) {
+			if ( (int) $q['id'] === (int) $exp['id'] ) {
+				$position = $i + 1;
+			}
+		}
+		return new WP_REST_Response( Spark_Living_Queue::present( $exp, $position ), 200 );
 	}
 
 	/**
@@ -199,10 +404,12 @@ final class Spark_Living_Rest {
 	 *
 	 * @param string $action queue, unqueue or dismiss.
 	 * @param int    $id     Experiment ID.
+	 * @param array  $body   Request body; `by` names the actor. An actor that starts with "agent:" is checked against the Goal Gate and the charter autonomy level when queueing.
 	 * @return WP_REST_Response|WP_Error
 	 */
-	private static function suggestion_action( string $action, int $id ) {
-		$done = 'queue' === $action ? Spark_Living_Queue::queue( $id ) : ( 'unqueue' === $action ? Spark_Living_Queue::unqueue( $id ) : Spark_Living_Queue::dismiss( $id ) );
+	private static function suggestion_action( string $action, int $id, array $body = array() ) {
+		$by   = Spark_Living_Gate::clean_by( $body['by'] ?? '' );
+		$done = 'queue' === $action ? Spark_Living_Queue::queue( $id, $by ) : ( 'unqueue' === $action ? Spark_Living_Queue::unqueue( $id, $by ) : Spark_Living_Queue::dismiss( $id, $by ) );
 		if ( is_wp_error( $done ) ) {
 			return $done;
 		}
@@ -264,7 +471,11 @@ final class Spark_Living_Rest {
 				'lift'           => Spark_Living_Engine::lift_summary(),
 				'evolutions'     => $tally['evolved'],
 				'tally'          => $tally,
+				'charter'        => Spark_Living_Charter::get(),
+				'changes'        => Spark_Living_Ledger::latest( 10 ),
+				'speed'          => Spark_Living_Ledger::last_speed(),
 				'rules'          => array(
+					'min_exposures_before_shift' => Spark_Living_Engine::min_exposures(),
 					'min_days'       => Spark_Living_Stats::MIN_DAYS,
 					'min_sessions'   => Spark_Living_Stats::MIN_SESSIONS,
 					'hard_stop_days' => Spark_Living_Stats::HARD_STOP_DAYS,
@@ -369,6 +580,7 @@ final class Spark_Living_Rest {
 				array(
 					'forced_start'       => $elig['forced'],
 					'start_sessions_14d' => $elig['sessions'],
+					'by'                 => $params['by'] ?? '',
 				)
 			);
 			if ( is_wp_error( $started ) ) {
@@ -444,6 +656,7 @@ final class Spark_Living_Rest {
 			array(
 				'forced_start'       => $elig['forced'],
 				'start_sessions_14d' => $elig['sessions'],
+				'by'                 => $params['by'] ?? '',
 			)
 		);
 		if ( is_wp_error( $started ) ) {
@@ -475,7 +688,7 @@ final class Spark_Living_Rest {
 		if ( ! $exp ) {
 			return new WP_Error( 'spark_living_missing', __( 'Test not found.', 'spark-living' ), array( 'status' => 404 ) );
 		}
-		$log_id = Spark_Living_Engine::conclude( $id, $verdict, Spark_Living_Engine::snapshot( $exp ), 'rest', $note );
+		$log_id = Spark_Living_Engine::conclude( $id, $verdict, Spark_Living_Engine::snapshot( $exp ), 'rest', $note, (string) ( $params['by'] ?? '' ) );
 		if ( is_wp_error( $log_id ) ) {
 			return $log_id;
 		}

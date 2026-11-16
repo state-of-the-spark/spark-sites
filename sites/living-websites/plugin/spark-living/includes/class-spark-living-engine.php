@@ -78,6 +78,24 @@ final class Spark_Living_Engine {
 	}
 
 	/**
+	 * Minimum exposures each version needs before the traffic split may move
+	 * off 50/50. Default 30; stored in the option spark_living_settings
+	 * (min_exposures_before_shift) and filterable.
+	 *
+	 * @return int
+	 */
+	public static function min_exposures(): int {
+		$settings = get_option( 'spark_living_settings', array() );
+		$value    = ( is_array( $settings ) && isset( $settings['min_exposures_before_shift'] ) && is_numeric( $settings['min_exposures_before_shift'] ) ) ? (int) $settings['min_exposures_before_shift'] : 30;
+		/**
+		 * Filters the minimum exposures per version before the split may shift.
+		 *
+		 * @param int $value Minimum exposures per version.
+		 */
+		return max( 0, (int) apply_filters( 'spark_living_min_exposures_before_shift', $value ) );
+	}
+
+	/**
 	 * Nightly evaluation of the running test: update weights or conclude.
 	 *
 	 * @param int $id Experiment ID.
@@ -92,8 +110,62 @@ final class Spark_Living_Engine {
 		$decision = $snap['decision'];
 
 		if ( Spark_Living_Stats::V_CONTINUE === $decision['verdict'] ) {
-			Spark_Living_Store::update( $id, array( 'weights' => $decision['weights'] ) );
-			$snap['action'] = 'weights_updated';
+			// Slower weight shifting: the split stays 50/50 until each version has the minimum exposures.
+			$min    = self::min_exposures();
+			$n_a    = (int) $snap['counts']['A']['sessions'];
+			$n_b    = (int) $snap['counts']['B']['sessions'];
+			$gated  = Spark_Living_Stats::floor_weights( $decision['weights'], $n_a, $n_b, $min );
+			$new    = $gated['weights'];
+			$old    = is_array( $exp['weights'] ) ? $exp['weights'] : array( 'A' => 0.5, 'B' => 0.5 );
+			$moved  = abs( (float) ( $old['A'] ?? 0.5 ) - (float) $new['A'] ) > 0.0001 || abs( (float) ( $old['B'] ?? 0.5 ) - (float) $new['B'] ) > 0.0001;
+			Spark_Living_Store::update( $id, array( 'weights' => $new ) );
+			if ( $moved ) {
+				$reason = $gated['held']
+					? sprintf(
+						/* translators: 1: test name, 2: old split, 3: A exposures, 4: B exposures, 5: minimum */
+						__( 'Traffic split on "%1$s" put back from %2$s to 50/50: only %3$d (current) and %4$d (challenger) exposures so far, and each version needs %5$d before the split may move.', 'spark-living' ),
+						$exp['name'],
+						Spark_Living_Ledger::weights_text( $old ),
+						$n_a,
+						$n_b,
+						$min
+					)
+					: sprintf(
+						/* translators: 1: test name, 2: old split, 3: new split, 4: A exposures, 5: B exposures */
+						__( 'Traffic split on "%1$s" moved from %2$s to %3$s after %4$d (current) and %5$d (challenger) exposures.', 'spark-living' ),
+						$exp['name'],
+						Spark_Living_Ledger::weights_text( $old ),
+						Spark_Living_Ledger::weights_text( $new ),
+						$n_a,
+						$n_b
+					);
+				Spark_Living_Ledger::record(
+					array(
+						'kind'         => 'weights_changed',
+						'subject_type' => 'test',
+						'subject_id'   => (string) $id,
+						'summary'      => $reason,
+						'before'       => array( 'A' => (float) ( $old['A'] ?? 0.5 ), 'B' => (float) ( $old['B'] ?? 0.5 ) ),
+						'after'        => $new,
+						'proposed_by'  => 'engine',
+						'evidence'     => array(
+							'reason'                    => $gated['held'] ? 'below_exposure_floor' : 'evidence',
+							'exposures'                 => array( 'A' => $n_a, 'B' => $n_b ),
+							'min_exposures_before_shift' => $min,
+							'intent'                    => array( 'A' => (int) $snap['counts']['A']['intent'], 'B' => (int) $snap['counts']['B']['intent'] ),
+							'p_b_beats_a'               => $decision['p_b_beats_a'] ?? null,
+						),
+						'undo'         => array(
+							'action'        => 'restore_weights',
+							'experiment_id' => $id,
+							'weights'       => array( 'A' => (float) ( $old['A'] ?? 0.5 ), 'B' => (float) ( $old['B'] ?? 0.5 ) ),
+						),
+					)
+				);
+			}
+			$snap['action']          = 'weights_updated';
+			$snap['weights_changed'] = $moved;
+			$snap['weights_held']    = $gated['held'];
 			return $snap;
 		}
 
@@ -114,9 +186,10 @@ final class Spark_Living_Engine {
 	 * @param array  $snap    Snapshot from snapshot().
 	 * @param string $source  nightly, rest or admin.
 	 * @param string $note    Free text for the log.
+	 * @param string $by      Who concluded it, for the ledger (default: engine for nightly, owner otherwise).
 	 * @return int|WP_Error Log entry ID.
 	 */
-	public static function conclude( int $id, string $verdict, array $snap, string $source, string $note = '' ) {
+	public static function conclude( int $id, string $verdict, array $snap, string $source, string $note = '', string $by = '' ) {
 		$valid = array(
 			Spark_Living_Stats::V_SHIP_B,
 			Spark_Living_Stats::V_KEEP_A,
@@ -167,8 +240,63 @@ final class Spark_Living_Engine {
 				'note'       => $note,
 			)
 		);
+		$by = Spark_Living_Gate::clean_by( $by );
+		$by = '' !== $by ? $by : ( 'nightly' === $source ? 'engine' : 'owner' );
+		Spark_Living_Ledger::record(
+			array(
+				'kind'         => 'test_concluded',
+				'subject_type' => 'test',
+				'subject_id'   => (string) $id,
+				'summary'      => sprintf( /* translators: 1: test name, 2: outcome */ __( 'Test ended: "%1$s". Outcome: %2$s.', 'spark-living' ), $exp['name'], self::verdict_words( $verdict ) ),
+				'before'       => array( 'status' => 'running' ),
+				'after'        => array(
+					'status'  => 'concluded',
+					'verdict' => $verdict,
+					'winner'  => $ship ? 'B' : 'A',
+				),
+				'proposed_by'  => $by,
+				'evidence'     => array( 'source' => $source, 'note' => $note, 'reason' => $snap['decision']['reason'] ?? '' ),
+				'result'       => array(
+					'counts'           => $snap['counts'] ?? array(),
+					'rates'            => $snap['rates'] ?? array(),
+					'days_running'     => $snap['days_running'] ?? 0,
+					'p_b_beats_a'      => $snap['decision']['p_b_beats_a'] ?? null,
+					'p_lead_b_beats_a' => $snap['decision']['p_lead_b_beats_a'] ?? null,
+				),
+			)
+		);
+		if ( $ship ) {
+			Spark_Living_Ledger::record(
+				array(
+					'kind'         => 'winner_applied',
+					'subject_type' => 'test',
+					'subject_id'   => (string) $id,
+					'summary'      => sprintf( /* translators: %s: test name */ __( 'Winner made permanent: the challenger from "%s" is now what living visitors see.', 'spark-living' ), $exp['name'] ),
+					'before'       => array( 'promoted' => false ),
+					'after'        => array( 'promoted' => true, 'variants' => $exp['variants']['B'] ?? array() ),
+					'proposed_by'  => $by,
+					'evidence'     => array( 'source' => $source ),
+				)
+			);
+		}
 		do_action( 'spark_living_test_concluded', $id, $verdict, $ship );
 		return $log_id;
+	}
+
+	/**
+	 * Plain words for a verdict (ledger summaries).
+	 *
+	 * @param string $verdict Verdict.
+	 * @return string
+	 */
+	public static function verdict_words( string $verdict ): string {
+		$words = array(
+			'ship_b'        => __( 'challenger won and shipped', 'spark-living' ),
+			'keep_a'        => __( 'current version kept', 'spark-living' ),
+			'no_difference' => __( 'no difference, current version kept', 'spark-living' ),
+			'guard_blocked' => __( 'blocked by the lead guard, current version kept', 'spark-living' ),
+		);
+		return $words[ $verdict ] ?? $verdict;
 	}
 
 	/**
@@ -228,6 +356,22 @@ final class Spark_Living_Engine {
 							'revert_below_leads'       => round( $check['threshold'], 2 ),
 						),
 						'note'       => 'Auto-revert: leads in the 7 days after the ship fell more than 30 percent below the prior 14-day daily average.',
+					)
+				);
+				Spark_Living_Ledger::record(
+					array(
+						'kind'         => 'reverted',
+						'subject_type' => 'test',
+						'subject_id'   => (string) $exp['id'],
+						'summary'      => sprintf( /* translators: %s: test name */ __( 'Winner reverted: leads fell after "%s" shipped, so visitors see the original again.', 'spark-living' ), $exp['name'] ),
+						'before'       => array( 'promoted' => true ),
+						'after'        => array( 'promoted' => false, 'reverted' => true ),
+						'proposed_by'  => 'engine',
+						'result'       => array(
+							'leads_7_days_after_ship' => $leads_after,
+							'prior_14_day_daily_avg'  => round( $prior_avg, 3 ),
+							'revert_below_leads'      => round( $check['threshold'], 2 ),
+						),
 					)
 				);
 				do_action( 'spark_living_test_reverted', (int) $exp['id'] );

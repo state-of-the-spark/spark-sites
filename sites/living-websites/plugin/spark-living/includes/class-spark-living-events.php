@@ -79,15 +79,22 @@ final class Spark_Living_Events {
 	 * @return WP_REST_Response
 	 */
 	public static function handle_event( WP_REST_Request $request ): WP_REST_Response {
-		// Bots and staff are accepted silently and never stored.
-		if ( Spark_Living_Util::is_bot( Spark_Living_Util::user_agent() ) || Spark_Living_Util::has_staff_cookie() ) {
-			return self::respond( array( 'ok' => true, 'stored' => false ) );
+		// Bots and staff are accepted silently and never stored. So is a test visit
+		// (cookie spark_living_test): the browser script sends nothing in that mode,
+		// and this is the second guard in case anything slips through.
+		if ( Spark_Living_Util::is_bot( Spark_Living_Util::user_agent() ) || Spark_Living_Util::has_staff_cookie() || Spark_Living_Util::has_test_cookie() ) {
+			return self::respond( array( 'ok' => true, 'stored' => false, 'test' => Spark_Living_Util::has_test_cookie() ) );
 		}
 
 		$params = $request->get_json_params();
 		if ( ! is_array( $params ) ) {
 			$decoded = json_decode( (string) $request->get_body(), true ); // sendBeacon may send text/plain.
 			$params  = is_array( $decoded ) ? $decoded : $request->get_body_params();
+		}
+
+		// An event that carries the test flag is never stored.
+		if ( ! empty( $params['test'] ) && '0' !== (string) $params['test'] && 'false' !== strtolower( (string) $params['test'] ) ) {
+			return self::respond( array( 'ok' => true, 'stored' => false, 'test' => true ) );
 		}
 
 		$type    = isset( $params['event_type'] ) ? sanitize_key( (string) $params['event_type'] ) : '';
@@ -152,7 +159,7 @@ final class Spark_Living_Events {
 	 */
 	public static function on_gform_submission( $entry = array(), $form = array() ): void {
 		unset( $entry, $form );
-		if ( Spark_Living_Util::is_bot( Spark_Living_Util::user_agent() ) || Spark_Living_Util::has_staff_cookie() ) {
+		if ( Spark_Living_Util::is_bot( Spark_Living_Util::user_agent() ) || Spark_Living_Util::has_staff_cookie() || Spark_Living_Util::has_test_cookie() ) {
 			return;
 		}
 		$c = Spark_Living_Util::read_cookies();

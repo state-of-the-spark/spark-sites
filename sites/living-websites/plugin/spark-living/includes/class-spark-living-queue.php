@@ -25,6 +25,9 @@ final class Spark_Living_Queue {
 	/** The dashboard shows this many suggestions at once. */
 	public const SHOW_TOP = 2;
 
+	/** Ledger row id written by the last queue(), unqueue() or dismiss() call (0 when none). */
+	public static int $last_change_id = 0;
+
 	public const MAX_RATIONALE = 600;
 	public const MAX_EVIDENCE  = 5;
 
@@ -216,6 +219,28 @@ final class Spark_Living_Queue {
 				'sessions_as_of' => $as_of,
 			)
 		);
+		$by = Spark_Living_Gate::clean_by( $args['by'] ?? '' );
+		$by = '' !== $by ? $by : self::text( $args['suggested_by'] ?? '', 80 );
+		Spark_Living_Ledger::record(
+			array(
+				'kind'         => 'test_suggested',
+				'subject_type' => 'test',
+				'subject_id'   => (string) $id,
+				'summary'      => sprintf( /* translators: %s: test title */ __( 'Test suggested: "%s".', 'spark-living' ), $title ),
+				'after'        => array(
+					'status'   => 'suggested',
+					'page'     => $page,
+					'device'   => $device,
+					'priority' => $priority,
+				),
+				'proposed_by'  => '' !== $by ? $by : 'owner',
+				'evidence'     => array(
+					'rationale'    => $rationale,
+					'items'        => $evidence,
+					'sessions_14d' => (int) $sessions,
+				),
+			)
+		);
 		return (int) $id;
 	}
 
@@ -286,13 +311,44 @@ final class Spark_Living_Queue {
 	/**
 	 * Suggested to queued, at the end of the line. Never starts anything.
 	 *
-	 * @param int $id Experiment ID.
+	 * @param int    $id Experiment ID.
+	 * @param string $by Who is queueing it: empty or owner for a person; "agent:..." is checked against the Goal Gate and the charter autonomy level.
 	 * @return array|WP_Error The updated experiment.
 	 */
-	public static function queue( int $id ) {
+	public static function queue( int $id, string $by = '' ) {
+		self::$last_change_id = 0;
 		$exp = self::expect( $id, array( Spark_Living_Store::STATUS_SUGGESTED ) );
 		if ( is_wp_error( $exp ) ) {
 			return $exp;
+		}
+		$by    = Spark_Living_Gate::clean_by( $by );
+		$agent = Spark_Living_Gate::is_agent( $by );
+		if ( $agent ) {
+			// An agent may queue only what the Goal Gate passed against the current charter, within the autonomy level.
+			$ok = Spark_Living_Gate::check_queue( $exp, $by );
+			if ( is_wp_error( $ok ) ) {
+				self::$last_change_id = Spark_Living_Ledger::record(
+					array(
+						'kind'            => 'test_queued',
+						'subject_type'    => 'test',
+						'subject_id'      => (string) $id,
+						'summary'         => sprintf( /* translators: 1: actor, 2: test name */ __( '%1$s tried to queue "%2$s" and was refused.', 'spark-living' ), $by, $exp['name'] ),
+						'before'          => array( 'status' => 'suggested' ),
+						'proposed_by'     => $by,
+						'gate_verdict'    => in_array( $exp['gate_verdict'], Spark_Living_Ledger::VERDICTS, true ) ? $exp['gate_verdict'] : 'na',
+						'gate_reasons'    => $ok->get_error_message(),
+						'gate_by'         => (string) $exp['gate_by'],
+						'charter_version' => (int) $exp['gate_charter_version'],
+						'evidence'        => array(
+							'refused'        => $ok->get_error_code(),
+							'autonomy_level' => Spark_Living_Charter::autonomy(),
+							'risk_tier'      => (int) $exp['tier'],
+						),
+						'status'          => 'failed',
+					)
+				);
+				return $ok;
+			}
 		}
 		$order = 0;
 		foreach ( self::queue_list() as $q ) {
@@ -306,6 +362,28 @@ final class Spark_Living_Queue {
 				'queue_order' => $order + 1,
 			)
 		);
+		self::$last_change_id = Spark_Living_Ledger::record(
+			array(
+				'kind'            => 'test_queued',
+				'subject_type'    => 'test',
+				'subject_id'      => (string) $id,
+				'summary'         => sprintf( /* translators: %s: test name */ __( 'Test queued: "%s".', 'spark-living' ), $exp['name'] ),
+				'before'          => array( 'status' => 'suggested' ),
+				'after'           => array(
+					'status'      => 'queued',
+					'queue_order' => $order + 1,
+				),
+				'proposed_by'     => $agent ? $by : ( '' !== $by ? $by : 'owner' ),
+				'gate_verdict'    => $agent ? 'pass' : 'na',
+				'gate_reasons'    => $agent ? (string) $exp['gate_reasons'] : '',
+				'gate_by'         => $agent ? (string) $exp['gate_by'] : '',
+				'charter_version' => $agent ? (int) $exp['gate_charter_version'] : Spark_Living_Charter::version(),
+				'undo'            => array(
+					'action'        => 'unqueue',
+					'experiment_id' => $id,
+				),
+			)
+		);
 		return (array) Spark_Living_Store::get( $id );
 	}
 
@@ -315,17 +393,33 @@ final class Spark_Living_Queue {
 	 * @param int $id Experiment ID.
 	 * @return array|WP_Error
 	 */
-	public static function unqueue( int $id ) {
+	public static function unqueue( int $id, string $by = '', array $opts = array() ) {
+		self::$last_change_id = 0;
 		$exp = self::expect( $id, array( Spark_Living_Store::STATUS_QUEUED ) );
 		if ( is_wp_error( $exp ) ) {
 			return $exp;
 		}
+		$by = Spark_Living_Gate::clean_by( $by );
 		Spark_Living_Store::update(
 			$id,
 			array(
 				'status'      => Spark_Living_Store::STATUS_SUGGESTED,
 				'queued_at'   => '',
 				'queue_order' => 0,
+			)
+		);
+		self::$last_change_id = Spark_Living_Ledger::record(
+			array(
+				'kind'         => 'test_unqueued',
+				'subject_type' => 'test',
+				'subject_id'   => (string) $id,
+				'summary'      => isset( $opts['undo_of'] )
+					? sprintf( /* translators: 1: test name, 2: change id */ __( 'Undo: "%1$s" taken off the queue and back in Suggested tests (undo of change #%2$d).', 'spark-living' ), $exp['name'], (int) $opts['undo_of'] )
+					: sprintf( /* translators: %s: test name */ __( 'Test taken off the queue: "%s".', 'spark-living' ), $exp['name'] ),
+				'before'       => array( 'status' => 'queued' ),
+				'after'        => array( 'status' => 'suggested' ),
+				'proposed_by'  => '' !== $by ? $by : 'owner',
+				'evidence'     => isset( $opts['undo_of'] ) ? array( 'undo_of' => (int) $opts['undo_of'] ) : array(),
 			)
 		);
 		return (array) Spark_Living_Store::get( $id );
@@ -337,11 +431,13 @@ final class Spark_Living_Queue {
 	 * @param int $id Experiment ID.
 	 * @return array|WP_Error
 	 */
-	public static function dismiss( int $id ) {
+	public static function dismiss( int $id, string $by = '' ) {
+		self::$last_change_id = 0;
 		$exp = self::expect( $id, array( Spark_Living_Store::STATUS_SUGGESTED, Spark_Living_Store::STATUS_QUEUED ) );
 		if ( is_wp_error( $exp ) ) {
 			return $exp;
 		}
+		$by = Spark_Living_Gate::clean_by( $by );
 		Spark_Living_Store::update(
 			$id,
 			array(
@@ -349,6 +445,17 @@ final class Spark_Living_Queue {
 				'dismissed_at' => Spark_Living_Util::mysql_utc(),
 				'queued_at'    => '',
 				'queue_order'  => 0,
+			)
+		);
+		self::$last_change_id = Spark_Living_Ledger::record(
+			array(
+				'kind'         => 'test_dismissed',
+				'subject_type' => 'test',
+				'subject_id'   => (string) $id,
+				'summary'      => sprintf( /* translators: %s: test name */ __( 'Test dismissed: "%s".', 'spark-living' ), $exp['name'] ),
+				'before'       => array( 'status' => $exp['status'] ),
+				'after'        => array( 'status' => 'dismissed' ),
+				'proposed_by'  => '' !== $by ? $by : 'owner',
 			)
 		);
 		return (array) Spark_Living_Store::get( $id );
@@ -447,6 +554,7 @@ final class Spark_Living_Queue {
 			array(
 				'forced_start'       => false,
 				'start_sessions_14d' => (int) $head['sessions_14d'],
+				'by'                 => 'engine',
 			)
 		);
 		if ( is_wp_error( $started ) ) {

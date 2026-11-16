@@ -378,3 +378,48 @@ Counts (table total, then experiment 46907 by variant and type):
 | 46905 B exposure (other test) | 4 | 4 |
 
 Read-back after delete: ids 53, 54, 55 gone; total 46 = 49 minus 3; a hash over all remaining rows (id, experiment, variant, visitor, session, type, time) was identical before and after (1b4e2a4f9be2c59de1b5d5010077e87f), so no other row changed. Test 46907 still status `running`, start 2026-11-13 13:58:11 UTC, stored weights A 0.8 / B 0.2, variants unchanged, post_modified_gmt unchanged.
+
+
+## 0.3.0 Phase A (2026-11-16)
+
+Result: **0.3.0 is live and running; not rolled back.** Site confirmed first (`siteurl` https://sparkmysite.com, Pressable site 1614838).
+
+### What was deployed
+Phase A foundations: Site Charter, Change Ledger, Goal Gate record, test-visit mode, slower weight shifting, speed budget (record only). 13 existing files patched and 4 new class files added (charter, ledger, gate, upgrade). Not deployed: README, `tests/`, unchanged files.
+
+### Backup
+Pressable on-demand **database backup id 17437063310** (request 1088302, 49,917,005 bytes, completed 2026-11-16 22:38:11 UTC), taken before any file was written. Older backups from 2026-11-13 remain.
+
+### Method
+Pressable WP-CLI only, no SFTP, no git, no GitHub fetch. Line-diff patches (old file md5 checked against live before applying) plus the four new files, gzip + base64 in 10 chunks of 4,000 characters written with `wp eval` into `wp-content/sl030b/`. Each chunk was md5-checked on the server (three chunks arrived wrong or short and were resent); the joined payload md5 (528b88b214c1c630747a329d3405ba77) matched. Staging step: all 13 live files matched their expected 0.2.0 md5 and every rebuilt file matched the local md5 (`STAGED_OK 13+4`). Swap step: old files copied to `wp-content/sl-bak-030/`, new files copied in (new classes first, main plugin file last), staging and backup folders deleted afterwards (0 `sl*` folders left). Then edge cache purge and object cache flush. Three live files (both `editor.asset.php` and `class-spark-living-engine.php`, plus `class-spark-living-events.php`) were LF on live, so their deployed copies are LF; the other files are the CRLF working copies. Content is identical.
+
+### Before and after, test 46907
+| | Before (22:37 UTC) | After deploy | After screenshots (22:51 UTC) |
+|---|---|---|---|
+| status | running | running | running |
+| start_date | 2026-11-13 13:58:11 | 2026-11-13 13:58:11 | 2026-11-13 13:58:11 |
+| weights | A 0.8 / B 0.2 | A 0.8 / B 0.2 | A 0.8 / B 0.2 |
+| variants hash | 8a72dc8fbff2dc6d8c6a0360fef729d6 | same | not rechecked (same post) |
+| post_modified_gmt | 2026-11-13 13:58:11 | same | n/a |
+| events table | 59 rows, hash 606653bdc95224d8a6d1a475dc9acf4f | 59, same hash | 59, same hash, newest id 74 |
+
+My own browser visits were only to `/living/` (admin page, no events) and a curl of the homepage with `?sl_test=1` (curl runs no JavaScript, so no event). The events table did not change, so no visit of mine created a row.
+
+### After deploy
+- `SPARK_LIVING_VERSION` 0.3.0, `spark_living_db_version` 2, table `{prefix}spark_living_changes` exists.
+- Ledger backfill, 8 rows from stored data: 2 plugin_update (first recorded activity 2026-11-13 08:32 ET, and the update 0.2.0 to 0.3.0), 2 test_started (46905 and 46907 at their real start times), 1 test_concluded (46905, voided), 2 test_suggested (46910 and 46912 at their stored suggested_at), 1 weights_changed (80/20 present when the ledger began; the exact time was not recorded so the row says so).
+- Charter: not written. Version 0, `autonomy_level` suggest, every other field empty (the other agent drafts the content).
+- Homepage HTTP 200 (378,030 bytes), still serves the variant script (now "Spark Living 0.3.0", test id 46907). `/living/` 404 logged out, `/wp-json/spark-living/v1/charter` 401 without credentials.
+- PHP log: one Fatal from my own WP-CLI command at 22:48:19 UTC (`Spark_Living_Upgrade` not found: that command ran in parallel with the file swap, before the new files existed). Nothing from the plugin on any web request. The upgrade itself ran on the first request after the swap.
+- Live screenshots (logged in with a WP-CLI generated cookie for user 17393, desktop user agent, Playwright Chromium; the page loaded without the bot check): `live-dash-phaseA-desktop.png`, `live-dash-phaseA-mobile.png`, `live-dash-phaseA-dark.png` (plus the `-full` variants), showing Site goals and Change log.
+- Login cookie: its session token was destroyed afterwards with `WP_Session_Tokens::destroy` for that token only (other sessions of the user untouched; one other session remains). The cookie value appeared in the WP-CLI operation output in Pressable's own history, which is why it was short lived (20 minutes) and destroyed.
+
+### Weight floor on live
+Not forced. Stored weights are still 80/20 with 15 A and 19 B exposures (below the floor of 30 each). The next nightly run will set the split back to 50/50 and write a `weights_changed` ledger row saying why, which is the rule working as designed.
+
+### Not verified
+- Lead counting (form submissions, phone taps, booking clicks, GA4): out of scope, needs form submissions.
+- Test-visit mode on the live public homepage (every public visit would need a headless browser, and the brief only allowed `?sl_test=1` visits; verified locally in t19 and by the live homepage serving the new script, not by a live browser run).
+- The live nightly job with the new engine code (it has not run yet).
+- Real MySQL behaviour of the ledger queries beyond what the live table creation and the 8 backfill rows show (local tests ran on SQLite).
+- Agent queue refusals and undo on live (they would alter live suggestions; tested locally only).

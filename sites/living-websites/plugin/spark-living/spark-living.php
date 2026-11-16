@@ -3,7 +3,7 @@
  * Plugin Name:       Spark Living
  * Plugin URI:        https://sparkmysite.com/
  * Description:       Living Websites by Spark Sites. A site that tests one improvement at a time, keeps what brings in more leads, and logs every change.
- * Version:           0.2.0
+ * Version:           0.3.0
  * Requires at least: 6.3
  * Requires PHP:      8.1
  * Author:            Spark Sites
@@ -18,8 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SPARK_LIVING_VERSION', '0.2.0' );
-define( 'SPARK_LIVING_DB_VERSION', '1' );
+define( 'SPARK_LIVING_VERSION', '0.3.0' );
+define( 'SPARK_LIVING_DB_VERSION', '2' );
 define( 'SPARK_LIVING_FILE', __FILE__ );
 define( 'SPARK_LIVING_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SPARK_LIVING_URL', plugin_dir_url( __FILE__ ) );
@@ -27,6 +27,10 @@ define( 'SPARK_LIVING_URL', plugin_dir_url( __FILE__ ) );
 require_once SPARK_LIVING_DIR . 'includes/class-spark-living-stats.php';
 require_once SPARK_LIVING_DIR . 'includes/class-spark-living-util.php';
 require_once SPARK_LIVING_DIR . 'includes/class-spark-living-store.php';
+require_once SPARK_LIVING_DIR . 'includes/class-spark-living-charter.php';
+require_once SPARK_LIVING_DIR . 'includes/class-spark-living-ledger.php';
+require_once SPARK_LIVING_DIR . 'includes/class-spark-living-gate.php';
+require_once SPARK_LIVING_DIR . 'includes/class-spark-living-upgrade.php';
 require_once SPARK_LIVING_DIR . 'includes/class-spark-living-metrics.php';
 require_once SPARK_LIVING_DIR . 'includes/class-spark-living-sources.php';
 require_once SPARK_LIVING_DIR . 'includes/class-spark-living-engine.php';
@@ -47,6 +51,7 @@ final class Spark_Living_Plugin {
 	 */
 	public static function init(): void {
 		add_action( 'init', array( 'Spark_Living_Store', 'register_post_types' ), 5 );
+		Spark_Living_Upgrade::init();
 
 		Spark_Living_Events::init();
 		Spark_Living_Frontend::init();
@@ -59,17 +64,14 @@ final class Spark_Living_Plugin {
 		add_action( 'spark_living_test_concluded', array( 'Spark_Living_Util', 'flush_page_cache' ) );
 		add_action( 'spark_living_test_reverted', array( 'Spark_Living_Util', 'flush_page_cache' ) );
 
-		// Upgrade the table when the schema version changes.
-		if ( get_option( 'spark_living_db_version' ) !== SPARK_LIVING_DB_VERSION ) {
-			Spark_Living_Metrics::create_table();
-		}
+		// The tables are created and upgraded by Spark_Living_Upgrade (init, priority 1).
 	}
 
 	/**
 	 * Activation: events table, post types, rewrite rule, cron.
 	 */
 	public static function activate(): void {
-		Spark_Living_Metrics::create_table();
+		Spark_Living_Upgrade::run();
 		Spark_Living_Store::register_post_types();
 		add_rewrite_rule( '^living/?$', 'index.php?spark_living_dash=1', 'top' );
 		flush_rewrite_rules( false );

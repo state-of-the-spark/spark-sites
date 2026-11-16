@@ -124,6 +124,12 @@ final class Spark_Living_Store {
 			'queued_at'     => '',
 			'queue_order'   => 0,
 			'dismissed_at'  => '',
+			// Goal Gate record (0.3.0). The risk tier is the existing `tier` field (1, 2 or 3).
+			'gate_verdict'  => '',
+			'gate_reasons'  => '',
+			'gate_by'       => '',
+			'gate_at'       => '',
+			'gate_charter_version' => 0,
 		);
 	}
 
@@ -250,6 +256,8 @@ final class Spark_Living_Store {
 		$out['priority']       = (int) $out['priority'];
 		$out['sessions_14d']   = (int) $out['sessions_14d'];
 		$out['queue_order']    = (int) $out['queue_order'];
+		$out['gate_charter_version'] = (int) $out['gate_charter_version'];
+		$out['risk_tier']      = $out['tier']; // Alias: the risk tier is the test's tier (1, 2 or 3).
 		$out['evidence']       = is_array( $out['evidence'] ) ? $out['evidence'] : array();
 		$out['promoted']       = (bool) $out['promoted'];
 		$out['revert_checked'] = (bool) $out['revert_checked'];
@@ -487,7 +495,7 @@ final class Spark_Living_Store {
 	 * check_eligibility(); this method records the outcome on the experiment.
 	 *
 	 * @param int   $id   Experiment ID.
-	 * @param array $opts Optional: forced_start (bool), start_sessions_14d (int).
+	 * @param array $opts Optional: forced_start (bool), start_sessions_14d (int), by (who started it, for the ledger).
 	 * @return true|WP_Error
 	 */
 	public static function start( int $id, array $opts = array() ) {
@@ -515,6 +523,29 @@ final class Spark_Living_Store {
 			)
 		);
 		do_action( 'spark_living_test_started', $id );
+		$by = isset( $opts['by'] ) ? Spark_Living_Gate::clean_by( $opts['by'] ) : '';
+		Spark_Living_Ledger::record(
+			array(
+				'kind'         => 'test_started',
+				'subject_type' => 'test',
+				'subject_id'   => (string) $id,
+				'summary'      => sprintf( /* translators: 1: test name, 2: where */ __( 'Test started: "%1$s" on %2$s, split 50/50.', 'spark-living' ), $exp['name'], '' !== (string) $exp['target'] ? $exp['target'] : __( 'a Living Block', 'spark-living' ) ),
+				'before'       => array( 'status' => $exp['status'] ),
+				'after'        => array(
+					'status'  => 'running',
+					'weights' => array(
+						'A' => 0.5,
+						'B' => 0.5,
+					),
+					'device'  => $exp['device'],
+				),
+				'proposed_by'  => '' !== $by ? $by : 'owner',
+				'evidence'     => array(
+					'sessions_14d' => isset( $opts['start_sessions_14d'] ) ? max( 0, (int) $opts['start_sessions_14d'] ) : 0,
+					'forced_start' => ! empty( $opts['forced_start'] ),
+				),
+			)
+		);
 		return true;
 	}
 

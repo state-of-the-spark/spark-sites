@@ -1,4 +1,4 @@
-# Spark Living v0.2.0
+# Spark Living v0.3.0
 
 Living Websites by Spark Sites. A WordPress plugin that runs one split test at a time on a site, keeps what brings in more leads, logs every change, and reports through a REST API.
 
@@ -144,6 +144,55 @@ All routes need `manage_options` (use an application password). Base: `/wp-json/
 | `POST /suggestions/{id}/dismiss` | Suggested or queued to dismissed. The record is kept; it leaves every list |
 | `POST /event` (public) | Browser events only; nonce-free, validated, rate limited, `no-store` |
 
+## Phase A: Foundations (0.3.0)
+
+Six additions that every later autonomous feature depends on. Nothing here starts, stops or changes a test by itself.
+
+### 1. Site Charter
+
+One option, `spark_living_charter` (a JSON string). Empty until someone saves it (version 0, autonomy `suggest`). Fields: `business_name`, `business_goal`, `primary_conversion` {`type` form|call|booking|purchase, `description`, `selector`}, `secondary_conversions` (same shape, up to 10), `audience`, `brand` {`colors`, `fonts`, `button_shape`, `voice_notes`}, `off_limits` (up to 50 strings), `autonomy_level` (`suggest` | `tier1` | `full`), `speed_budget` {`load_ms`, `button_visible_ms`, `max_added_kb`}, `version`, `updated_at`, `updated_by`.
+
+* `GET /charter` returns it. `PUT /charter` saves it: fields you leave out keep their value, `brand`, `primary_conversion` and `speed_budget` merge field by field, lists are replaced, unknown keys are dropped, `version`/`updated_at` are never taken from input. A bad enum or a negative budget is a 400. `updated_by` (optional) names the actor, default the signed-in user. **The version goes up by one on every save**, even an identical one. 401 without credentials.
+* wp-admin: **Living Websites, Site charter** (a form posting through the same code). The dashboard shows a read-only **Site goals** card on `/living/`, the shortcode and wp-admin. `GET /state` carries `charter`.
+* Autonomy: `suggest` agents may never queue; `tier1` agents may queue risk tier 1; `full` agents may queue tier 1 and 2. Tier 3 is never queued by an agent.
+
+### 2. Change Ledger
+
+Table `{prefix}spark_living_changes`, created by `Spark_Living_Upgrade` (dbDelta, runs on `init` when the stored versions differ, safe to run twice). Columns: `id`, `created_at` (UTC), `kind`, `subject_type`, `subject_id`, `summary` (300), `before_json`, `after_json`, `proposed_by`, `gate_verdict` (pass|fail|hold|na), `gate_reasons`, `gate_by`, `charter_version`, `evidence_json`, `result_json`, `undo_json`, `undone_at`, `status` (applied|undone|failed). Kinds: test_suggested, test_queued, test_unqueued, test_dismissed, test_started, test_concluded, winner_applied, reverted, weights_changed, style_fix, ad_change, charter_update, rows_removed, plugin_update, other.
+
+The engine writes a row for every suggestion, queue, unqueue, dismiss, start, conclusion, winner, auto-revert, every weight change by the nightly job (before and after, and the exposure counts that caused it), every charter save and every plugin version change, all through `Spark_Living_Ledger::record()`. A refused agent queue attempt is a `test_queued` row with status `failed`. Goal Gate verdicts are `other` rows (subject_type `test`).
+
+* `GET /changes?per_page=20&page=1&kind=&subject_id=`: newest first, `X-WP-Total`, `X-WP-TotalPages`. The `*_json` fields hold decoded values (objects), not strings; each row also has `can_undo`.
+* `POST /changes`: for outside agents. Required `kind` and `summary`; optional `subject_type`, `subject_id`, `before_json`/`before`, `after_json`/`after`, `proposed_by`, `gate_verdict`, `gate_reasons`, `gate_by`, `evidence_json`, `result_json`, `status` (applied|failed). No undo payload is accepted, so a posted row is never undoable. 201 with the row.
+* `POST /changes/{id}/undo` (optional `by`): implemented for a queued test (takes it off the queue), a charter save (only while it is still the latest charter version) and a weights change (only while the test runs). Anything else is 409 `spark_living_not_undoable`. The undo is recorded as a new row and the original is marked `undone`.
+* Dashboard **Change log**: newest 10 rows in plain words with the gate verdict as a tag and an Undo button where it works. `GET /state` carries `changes` (newest 10).
+* **Speed (record only).** Post `{"kind":"other","subject_type":"speed","summary":"...","after_json":{"load_ms":880,"button_visible_ms":410,"added_kb":4.6}}`; `GET /state` returns the last one as `speed` ({load_ms, button_visible_ms, added_kb, measured_at, measured_by, change_id}, or null) and the Site goals card shows it beside the charter budget. Nothing enforces the budget.
+* **Backfill.** The first upgrade to 0.3.0 writes rows for what already exists, derived from stored post data only: first recorded activity (install), each suggestion at its stored `suggested_at`, queued/dismissed times, each started test at its real `start_date`, concluded tests, winners, reverts, and a note when a running test already sits off 50/50 (time not recorded). Then the `plugin_update` row. Rows are flagged `evidence_json.backfill`.
+
+### 3. Goal Gate record
+
+New test meta: `gate_verdict`, `gate_reasons` (600), `gate_by`, `gate_at`, `gate_charter_version`. The risk tier is the existing `tier` field (now 1, 2 or 3); responses also show it as `risk_tier`.
+
+* `POST /suggestions/{id}/gate` body `{verdict: pass|fail|hold, reasons, by, risk_tier?, charter_version?}`. `by` is required; `reasons` is required for fail and hold; `risk_tier` sets `tier`; `charter_version` (optional) is the version the judge read, default the current one. Allowed on suggested, queued and draft tests. Writes a ledger row.
+* `POST /suggestions/{id}/queue` takes an optional `by`. A `by` starting with `agent:` is refused (403) unless the autonomy level allows its tier and the suggestion has `gate_verdict` = `pass` with `gate_charter_version` equal to the CURRENT charter version. Codes: `spark_living_agent_not_allowed` (level suggest), `spark_living_agent_tier3`, `spark_living_agent_tier` (tier 2 at level tier1), `spark_living_gate_missing` (no verdict, fail or hold), `spark_living_gate_stale`. No `by` or any other `by` is a human click and is recorded with gate `na`. `unqueue`, `dismiss`, `/tests/{id}/start` and `/conclude` also accept `by` for the ledger but are not gated.
+* The suggestion and queue cards show the verdict, reasons, judge, charter version, risk tier, and "Out of date" when the charter changed after the verdict.
+
+### 4. Test-visit mode
+
+Open any page with `?sl_test=1` (optionally `&sl_force=A` or `&sl_force=B`). The browser script sets the session cookie `spark_living_test` (`1.<bucket>[:A|B]`) and then runs the variant code exactly as for a real visitor, with these differences: it runs even for staff, bots and `navigator.webdriver` (so headless agents and logged-in staff can check a variant); it sends **no events** and pushes nothing to GA or the dataLayer; it never reads for writing or changes the real cookies `spark_living`, `spark_living_sid`, `spark_living_a` (a real `spark_living` bucket is read only, so the tester sees what that visitor would); `sl_force` overrides holdout and weights. The mode lasts for the browser session; `?sl_test=0` ends it; `?sl_test=1` without `sl_force` clears an earlier force. `<html data-sl-test="1">` and `window.sparkLivingTest` ({force, bucket, assignments:[{id, mode, variant, label, applied}]}) show what ran. Second guard: the event endpoint stores nothing for a browser carrying the test cookie or for a body with `test` true, and the Gravity Forms hook skips test browsers. The served HTML does not change, so cached pages are safe. A logged-in editor gets the script only when the request carries `sl_test=1` or the test cookie.
+
+### 5. Slower weight shifting
+
+The nightly job keeps the split at 50/50 until EACH version has at least `min_exposures_before_shift` exposures (default 30; option `spark_living_settings` {min_exposures_before_shift}, editable on the Site charter screen, filter `spark_living_min_exposures_before_shift`; shown in `GET /state` rules). A test below the floor whose stored weights are not 50/50 is put back to 50/50 on the next nightly run and a `weights_changed` row says why. A test that moves writes a row with the counts that caused it. `Spark_Living_Stats::floor_weights()` is mirrored in `tests/stats-check.js`.
+
+### 6. Speed budget
+
+`speed_budget` lives in the charter and `speed` in `GET /state` (see the ledger). Record and display only.
+
+### Tests
+
+`_playground/t17.js` (charter, ledger, upgrade, backfill), `t18.js` (gate and the 27-case agent queue matrix), `t19.js` (test-visit mode), `t20.js` (weight floor), `t21.js` (dashboard on three surfaces, 390 and 1366 px, light and dark), `runall.sh` runs any list of them.
+
 ## How it runs
 
 * **Assignment (inline script in the head).** First decides whether the viewport is mobile (980px or narrower) and drops every test scoped to the other device. Then reads or sets cookie `spark_living` (random visitor id plus a bucket 0-9999). Bucket under 1000 is the permanent 10 percent holdout and always sees A. Everyone else is placed by the stored weights (sticky through cookie `spark_living_a`). Blocks: injected CSS shows the chosen variant before first paint, and the other is removed at DOMContentLoaded. Selector tests: the target is hidden until the change is applied, with a 1.2 second safety timeout that always reveals it. Bots (user agent, `navigator.webdriver`) and users who can `edit_posts` (server: nothing is printed; browser: cookie `spark_living_staff` set at login) are never assigned or counted and see A.
@@ -265,7 +314,9 @@ The allocation weights and the live set are printed into the page head, so a cac
 
 **Definitions used by the stats** (counted per distinct session, only sessions that have an exposure row for that experiment): *sessions* = exposed sessions; *intent* = sessions with `cta_click`, `form_submit` or `tel_click`; *leads* = sessions with `form_submit` or `tel_click`. "Site watch" rows (`experiment_id = 0`, variant H or L) record exposures when winners are live but no test is running, so the lift keeps measuring.
 
-**Options:** `spark_living_db_version`, `spark_living_rewrite_version`, `spark_living_last_run`.
+**Options:** `spark_living_db_version` (2 from 0.3.0), `spark_living_version`, `spark_living_rewrite_version`, `spark_living_last_run`, `spark_living_charter`, `spark_living_settings`, `spark_living_ledger_backfilled`.
+
+**Change ledger table `{prefix}spark_living_changes`:** see "Phase A". Events table unchanged.
 
 **Hooks for other code:** actions `spark_living_test_started`, `spark_living_test_concluded` (id, verdict, shipped), `spark_living_test_reverted`, `spark_living_nightly_complete`.
 

@@ -175,6 +175,33 @@ final class Spark_Living_Stats {
 	}
 
 	/**
+	 * Slower weight shifting (0.3.0): the split stays 50/50 until EACH version
+	 * has at least $min exposures. Pure function, mirrored in tests/stats-check.js.
+	 *
+	 * @param array $weights Wanted weights {A, B}.
+	 * @param int   $n_a     Exposures of version A.
+	 * @param int   $n_b     Exposures of version B.
+	 * @param int   $min     Minimum exposures per version before the split may move.
+	 * @return array{weights: array, held: bool} held is true when the floor forced 50/50.
+	 */
+	public static function floor_weights( array $weights, int $n_a, int $n_b, int $min ): array {
+		$min = max( 0, $min );
+		if ( min( max( 0, $n_a ), max( 0, $n_b ) ) < $min ) {
+			return array(
+				'weights' => array(
+					'A' => 0.5,
+					'B' => 0.5,
+				),
+				'held'    => true,
+			);
+		}
+		return array(
+			'weights' => $weights,
+			'held'    => false,
+		);
+	}
+
+	/**
 	 * Apply every test rule from section 3.
 	 *
 	 * Each arm array: sessions (exposed sessions), intent (sessions with a

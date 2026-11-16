@@ -26,6 +26,7 @@ final class Spark_Living_Dashboard {
 		add_action( 'admin_post_spark_living_create', array( __CLASS__, 'handle_create' ) );
 		add_action( 'admin_post_spark_living_start', array( __CLASS__, 'handle_start' ) );
 		add_action( 'admin_post_spark_living_conclude', array( __CLASS__, 'handle_conclude' ) );
+		add_action( 'admin_post_spark_living_save_charter', array( __CLASS__, 'handle_save_charter' ) );
 	}
 
 	/**
@@ -138,6 +139,14 @@ final class Spark_Living_Dashboard {
 			array( __CLASS__, 'render_admin_page' ),
 			'dashicons-chart-line',
 			58
+		);
+		add_submenu_page(
+			'spark-living',
+			__( 'Site charter', 'spark-living' ),
+			__( 'Site charter', 'spark-living' ),
+			'manage_options',
+			'spark-living-charter',
+			array( __CLASS__, 'render_charter_page' )
 		);
 	}
 
@@ -335,6 +344,36 @@ body.sl-page{margin:0;background:#ffffff}
 .sl-dash .sl-plan-more{margin:.5rem 0}
 .sl-dash .sl-wait{margin:.4rem 0;font-weight:600;color:var(--sl-warn)}
 .sl-dash a:focus,.sl-dash button:focus,.sl-dash input:focus,.sl-dash select:focus,.sl-dash textarea:focus{outline:3px solid var(--sl-accent);outline-offset:2px}
+/* Site goals, Change log and the Goal Gate line (0.3.0). */
+.sl-dash{--sl-pass:#1f6b3a;--sl-fail:#a32121;--sl-hold:#8a4b00;--sl-na:#55655c}
+@media (prefers-color-scheme:dark){.sl-dash{--sl-pass:#7fd39b;--sl-fail:#ff9d9d;--sl-hold:#f0b36a;--sl-na:#a9bbb0}}
+.sl-dash .sl-gate{display:inline-block;max-width:100%;padding:.05rem .65rem;border:1px solid currentColor;border-radius:999px;font-size:.8rem;font-weight:700;line-height:1.55;background:color-mix(in srgb,currentColor 11%,transparent)}
+.sl-dash .sl-gate-pass{color:var(--sl-pass)}
+.sl-dash .sl-gate-fail{color:var(--sl-fail)}
+.sl-dash .sl-gate-hold,.sl-dash .sl-gate-stale{color:var(--sl-hold)}
+.sl-dash .sl-gate-na,.sl-dash .sl-gate-none{color:var(--sl-na)}
+.sl-dash .sl-goals a{color:var(--sl-accent);text-decoration:underline}
+.sl-dash p.sl-gate-line{margin:.5rem 0}
+.sl-dash p.sl-gate-why{margin:.2rem 0 .5rem;font-size:.9rem;overflow-wrap:anywhere}
+.sl-dash dl.sl-kv{margin:.25rem 0 0;display:grid;grid-template-columns:minmax(0,1fr);gap:.6rem}
+.sl-dash dl.sl-kv>div{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:.1rem .9rem;align-items:baseline}
+.sl-dash dl.sl-kv dt{margin:0;font-weight:700}
+.sl-dash dl.sl-kv dd{margin:0;overflow-wrap:anywhere}
+.sl-dash ul.sl-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem}
+.sl-dash ul.sl-chips li{padding:.05rem .6rem;border:1px solid var(--sl-line);border-radius:999px;background:var(--sl-bg);font-size:.85rem;overflow-wrap:anywhere}
+.sl-dash .sl-swatch{display:inline-block;width:.9rem;height:.9rem;border-radius:3px;border:1px solid var(--sl-line);vertical-align:-.1rem;margin-right:.25rem}
+.sl-dash ol.sl-log{list-style:none;margin:.5rem 0;padding:0;display:flex;flex-direction:column;gap:.6rem}
+.sl-dash ol.sl-log>li{background:var(--sl-card);border:1px solid var(--sl-line);border-left-width:5px;border-radius:6px;padding:.6rem .8rem;min-width:0}
+.sl-dash ol.sl-log>li.sl-log-failed{border-left-color:var(--sl-fail)}
+.sl-dash ol.sl-log>li.sl-log-undone{opacity:.75}
+.sl-dash .sl-log-top{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem .6rem}
+.sl-dash .sl-log-top time{font-weight:700;font-size:.9rem}
+.sl-dash .sl-kind{font-size:.85rem;color:var(--sl-muted)}
+.sl-dash p.sl-log-sum{margin:.3rem 0 .2rem;overflow-wrap:anywhere}
+.sl-dash p.sl-log-meta{margin:.1rem 0;font-size:.85rem;overflow-wrap:anywhere}
+.sl-dash .sl-log-state{font-weight:700;font-size:.85rem;color:var(--sl-muted)}
+.sl-dash .sl-changes .sl-acts{margin:.5rem 0 .1rem}
+@media (max-width:600px){.sl-dash dl.sl-kv>div{grid-template-columns:minmax(0,1fr)}.sl-dash .sl-changes button.sl-btn{flex:1 1 100%}}
 </style>';
 	}
 
@@ -389,6 +428,8 @@ body.sl-page{margin:0;background:#ffffff}
 		<?php endif; ?>
 	</ul>
 
+	<?php self::render_goals(); ?>
+
 	<h2 id="sl-current"><?php esc_html_e( 'Current test', 'spark-living' ); ?></h2>
 		<?php
 		if ( $running ) {
@@ -401,6 +442,7 @@ body.sl-page{margin:0;background:#ffffff}
 			self::render_queue();
 		}
 		self::render_plan();
+		self::render_changes();
 		?>
 
 	<h2 id="sl-timeline"><?php esc_html_e( 'Test history', 'spark-living' ); ?></h2>
@@ -693,6 +735,7 @@ body.sl-page{margin:0;background:#ffffff}
 			</div>
 			<?php endif; ?>
 			<?php echo self::traffic_html( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<?php echo self::gate_html( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<div class="sl-acts">
 				<button type="button" class="sl-btn sl-btn-primary" data-sl-act="queue"><?php esc_html_e( 'Queue this test', 'spark-living' ); ?></button>
 				<button type="button" class="sl-btn" data-sl-act="dismiss"><?php esc_html_e( 'Dismiss', 'spark-living' ); ?></button>
@@ -719,6 +762,7 @@ body.sl-page{margin:0;background:#ffffff}
 			<p class="sl-wait"><?php echo esc_html( $gate['message'] ); ?></p>
 			<?php endif; ?>
 			<?php echo self::traffic_html( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<?php echo self::gate_html( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<div class="sl-acts">
 				<button type="button" class="sl-btn" data-sl-act="unqueue"><?php esc_html_e( 'Remove from queue', 'spark-living' ); ?></button>
 			</div>
@@ -877,6 +921,390 @@ body.sl-page{margin:0;background:#ffffff}
 		<p><button type="submit" class="button button-primary"><?php esc_html_e( 'Create test', 'spark-living' ); ?></button></p>
 	</form>
 		<?php
+	}
+
+	/**
+	 * Display label and CSS class for a gate verdict.
+	 *
+	 * @param string $verdict pass, fail, hold, na or empty.
+	 * @return array{0: string, 1: string} Label, class suffix.
+	 */
+	private static function gate_tag( string $verdict ): array {
+		$map = array(
+			'pass' => array( __( 'Gate: pass', 'spark-living' ), 'pass' ),
+			'fail' => array( __( 'Gate: fail', 'spark-living' ), 'fail' ),
+			'hold' => array( __( 'Gate: hold', 'spark-living' ), 'hold' ),
+			'na'   => array( __( 'Not gated', 'spark-living' ), 'na' ),
+		);
+		return $map[ $verdict ] ?? array( __( 'Not checked', 'spark-living' ), 'none' );
+	}
+
+	/**
+	 * The Goal Gate line on a suggestion or queued card.
+	 *
+	 * @param array $exp Experiment.
+	 * @return string HTML (escaped).
+	 */
+	private static function gate_html( array $exp ): string {
+		$verdict = (string) $exp['gate_verdict'];
+		$tier    = (int) $exp['tier'];
+		$html    = '<p class="sl-gate-line"><strong>' . esc_html__( 'Goal Gate:', 'spark-living' ) . '</strong> ';
+		if ( '' === $verdict ) {
+			$html .= '<span class="sl-gate sl-gate-none">' . esc_html__( 'Not checked yet', 'spark-living' ) . '</span>';
+			$html .= ' <span class="sl-muted">' . esc_html( sprintf( /* translators: %d: risk tier */ __( 'Risk tier %d.', 'spark-living' ), $tier ) ) . '</span></p>';
+			return $html;
+		}
+		[ $label, $cls ] = self::gate_tag( $verdict );
+		$html           .= '<span class="sl-gate sl-gate-' . esc_attr( $cls ) . '">' . esc_html( $label ) . '</span>';
+		$stale           = Spark_Living_Gate::is_stale( $exp );
+		if ( $stale ) {
+			$html .= ' <span class="sl-gate sl-gate-stale">' . esc_html__( 'Out of date', 'spark-living' ) . '</span>';
+		}
+		$meta = sprintf(
+			/* translators: 1: who judged, 2: date, 3: charter version, 4: risk tier */
+			__( 'Judged by %1$s on %2$s against charter version %3$d. Risk tier %4$d.', 'spark-living' ),
+			'' !== (string) $exp['gate_by'] ? $exp['gate_by'] : __( 'unknown', 'spark-living' ),
+			self::date( (string) $exp['gate_at'] ),
+			(int) $exp['gate_charter_version'],
+			$tier
+		);
+		if ( $stale ) {
+			$meta .= ' ' . sprintf( /* translators: %d: current charter version */ __( 'The charter is now version %d, so an agent may not queue this until it is judged again.', 'spark-living' ), Spark_Living_Charter::version() );
+		}
+		$html .= ' <span class="sl-muted">' . esc_html( $meta ) . '</span></p>';
+		if ( '' !== (string) $exp['gate_reasons'] ) {
+			$html .= '<p class="sl-gate-why"><strong>' . esc_html__( 'Reasons:', 'spark-living' ) . '</strong> ' . esc_html( (string) $exp['gate_reasons'] ) . '</p>';
+		}
+		return $html;
+	}
+
+	/**
+	 * "Site goals": the charter, read only.
+	 */
+	private static function render_goals(): void {
+		$c     = Spark_Living_Charter::get();
+		$speed = Spark_Living_Ledger::last_speed();
+		$edit  = admin_url( 'admin.php?page=spark-living-charter' );
+		$none  = '<span class="sl-muted">' . esc_html__( 'Not written yet', 'spark-living' ) . '</span>';
+		$num   = static function ( $v, string $unit ): string {
+			return null === $v ? "\u{2014}" : number_format_i18n( (float) $v, (float) $v === floor( (float) $v ) ? 0 : 1 ) . ' ' . $unit;
+		};
+		?>
+	<h2 id="sl-goals"><?php esc_html_e( 'Site goals', 'spark-living' ); ?></h2>
+	<section class="sl-card sl-goals" aria-labelledby="sl-goals">
+		<?php if ( 0 === (int) $c['version'] ) : ?>
+		<p><?php esc_html_e( 'No site goals have been written yet. Agents and tests are judged against these goals, so until they are written every change stays a suggestion.', 'spark-living' ); ?>
+			<a href="<?php echo esc_url( $edit ); ?>"><?php esc_html_e( 'Write the site goals in wp-admin', 'spark-living' ); ?></a>.</p>
+		<?php endif; ?>
+		<dl class="sl-kv">
+			<div><dt><?php esc_html_e( 'Business', 'spark-living' ); ?></dt><dd><?php echo '' !== $c['business_name'] ? esc_html( $c['business_name'] ) : $none; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></dd></div>
+			<div><dt><?php esc_html_e( 'Goal', 'spark-living' ); ?></dt><dd><?php echo '' !== $c['business_goal'] ? esc_html( $c['business_goal'] ) : $none; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></dd></div>
+			<div><dt><?php esc_html_e( 'Main conversion', 'spark-living' ); ?></dt><dd>
+				<?php
+				$pc = $c['primary_conversion'];
+				if ( '' !== (string) $pc['type'] ) {
+					echo '<strong>' . esc_html( Spark_Living_Charter::conversion_label( (string) $pc['type'] ) ) . '</strong>' . ( '' !== (string) $pc['description'] ? ': ' . esc_html( (string) $pc['description'] ) : '' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				} else {
+					echo $none; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				}
+				?>
+			</dd></div>
+			<?php if ( ! empty( $c['secondary_conversions'] ) ) : ?>
+			<div><dt><?php esc_html_e( 'Other conversions', 'spark-living' ); ?></dt><dd>
+				<?php
+				$parts = array();
+				foreach ( $c['secondary_conversions'] as $sc ) {
+					$parts[] = '<strong>' . esc_html( Spark_Living_Charter::conversion_label( (string) ( $sc['type'] ?? '' ) ) ) . '</strong>' . ( '' !== (string) ( $sc['description'] ?? '' ) ? ': ' . esc_html( (string) $sc['description'] ) : '' );
+				}
+				echo implode( '; ', $parts ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				?>
+			</dd></div>
+			<?php endif; ?>
+			<div><dt><?php esc_html_e( 'Audience', 'spark-living' ); ?></dt><dd><?php echo '' !== $c['audience'] ? esc_html( $c['audience'] ) : $none; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></dd></div>
+			<div><dt><?php esc_html_e( 'Off limits', 'spark-living' ); ?></dt><dd>
+				<?php if ( $c['off_limits'] ) : ?>
+				<ul class="sl-chips">
+					<?php foreach ( $c['off_limits'] as $item ) : ?>
+					<li><?php echo esc_html( (string) $item ); ?></li>
+					<?php endforeach; ?>
+				</ul>
+				<?php else : ?>
+					<?php echo $none; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php endif; ?>
+			</dd></div>
+			<?php
+			$b       = $c['brand'];
+			$has_brd = $b['colors'] || $b['fonts'] || '' !== (string) $b['button_shape'];
+			if ( $has_brd ) :
+				?>
+			<div><dt><?php esc_html_e( 'Brand', 'spark-living' ); ?></dt><dd>
+				<?php
+				$bits = array();
+				foreach ( $b['colors'] as $col ) {
+					$sw     = preg_match( '/^#[0-9a-f]{3,8}$/i', (string) $col ) ? '<span class="sl-swatch" style="background:' . esc_attr( (string) $col ) . '"></span>' : '';
+					$bits[] = $sw . esc_html( (string) $col );
+				}
+				echo implode( ' &middot; ', $bits ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				if ( $b['fonts'] ) {
+					echo '<br>' . esc_html( sprintf( /* translators: %s: fonts */ __( 'Fonts: %s', 'spark-living' ), implode( ', ', $b['fonts'] ) ) );
+				}
+				if ( '' !== (string) $b['button_shape'] ) {
+					echo '<br>' . esc_html( sprintf( /* translators: %s: button shape */ __( 'Buttons: %s', 'spark-living' ), $b['button_shape'] ) );
+				}
+				?>
+			</dd></div>
+			<?php endif; ?>
+			<div><dt><?php esc_html_e( 'Autonomy', 'spark-living' ); ?></dt><dd><?php echo esc_html( Spark_Living_Charter::autonomy_label( (string) $c['autonomy_level'] ) ); ?></dd></div>
+			<div><dt><?php esc_html_e( 'Speed budget', 'spark-living' ); ?></dt><dd>
+				<?php
+				$sb = $c['speed_budget'];
+				echo esc_html(
+					sprintf(
+						/* translators: 1: page load, 2: button visible, 3: added KB */
+						__( 'Page load %1$s; button visible %2$s; added by the plugin %3$s at most.', 'spark-living' ),
+						$num( $sb['load_ms'], 'ms' ),
+						$num( $sb['button_visible_ms'], 'ms' ),
+						$num( $sb['max_added_kb'], 'KB' )
+					)
+				);
+				?>
+				<br><span class="sl-muted">
+				<?php
+				if ( $speed ) {
+					echo esc_html(
+						sprintf(
+							/* translators: 1: load ms, 2: button ms, 3: added KB, 4: date, 5: who measured */
+							__( 'Last measured: page load %1$s; button visible %2$s; added %3$s (%4$s, by %5$s). Recorded only; nothing enforces the budget yet.', 'spark-living' ),
+							$num( $speed['load_ms'], 'ms' ),
+							$num( $speed['button_visible_ms'], 'ms' ),
+							$num( $speed['added_kb'], 'KB' ),
+							self::date( (string) $speed['measured_at'] ),
+							'' !== (string) $speed['measured_by'] ? $speed['measured_by'] : __( 'unknown', 'spark-living' )
+						)
+					);
+				} else {
+					esc_html_e( 'Nothing measured yet. Recorded only; nothing enforces the budget yet.', 'spark-living' );
+				}
+				?>
+				</span>
+			</dd></div>
+		</dl>
+		<?php if ( (int) $c['version'] > 0 ) : ?>
+		<p class="sl-muted"><?php echo esc_html( sprintf( /* translators: 1: version, 2: date, 3: who */ __( 'Charter version %1$d, saved %2$s by %3$s.', 'spark-living' ), (int) $c['version'], self::date( (string) $c['updated_at'] ), '' !== (string) $c['updated_by'] ? $c['updated_by'] : __( 'unknown', 'spark-living' ) ) ); ?>
+			<a href="<?php echo esc_url( $edit ); ?>"><?php esc_html_e( 'Edit in wp-admin', 'spark-living' ); ?></a></p>
+		<?php endif; ?>
+	</section>
+		<?php
+	}
+
+	/**
+	 * "Change log": the newest ten ledger rows, with Undo where it is supported.
+	 */
+	private static function render_changes(): void {
+		$rows = Spark_Living_Ledger::latest( 10 );
+		?>
+	<div id="sl-changes" class="sl-changes" data-rest="<?php echo esc_url( rest_url( 'spark-living/v1' ) ); ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ); ?>">
+		<h2 id="sl-changelog"><?php esc_html_e( 'Change log', 'spark-living' ); ?></h2>
+		<p class="sl-muted"><?php esc_html_e( 'Everything that changed on this site, newest first: what, who proposed it and whether it passed the Goal Gate. Undo appears where a change can be reversed safely.', 'spark-living' ); ?></p>
+		<?php if ( ! $rows ) : ?>
+		<p><?php esc_html_e( 'Nothing has been recorded yet.', 'spark-living' ); ?></p>
+		<?php else : ?>
+		<ol class="sl-log">
+			<?php foreach ( $rows as $row ) : ?>
+				<?php
+				[ $glabel, $gcls ] = self::gate_tag( (string) $row['gate_verdict'] );
+				$ts                = Spark_Living_Util::to_ts( (string) $row['created_at'] );
+				?>
+			<li class="sl-log-<?php echo esc_attr( (string) $row['status'] ); ?>" data-sl-change="<?php echo esc_attr( (string) $row['id'] ); ?>">
+				<div class="sl-log-top">
+					<time datetime="<?php echo esc_attr( (string) $row['created_at'] ); ?>Z"><?php echo esc_html( $ts ? wp_date( 'M j, g:i A', $ts ) : '' ); ?></time>
+					<span class="sl-kind"><?php echo esc_html( Spark_Living_Ledger::kind_label( (string) $row['kind'] ) ); ?></span>
+					<span class="sl-gate sl-gate-<?php echo esc_attr( $gcls ); ?>"><?php echo esc_html( $glabel ); ?></span>
+					<?php if ( 'failed' === $row['status'] ) : ?>
+					<span class="sl-log-state"><?php esc_html_e( 'Refused', 'spark-living' ); ?></span>
+					<?php elseif ( 'undone' === $row['status'] ) : ?>
+					<span class="sl-log-state"><?php esc_html_e( 'Undone', 'spark-living' ); ?></span>
+					<?php endif; ?>
+				</div>
+				<p class="sl-log-sum"><?php echo esc_html( (string) $row['summary'] ); ?></p>
+				<p class="sl-muted sl-log-meta"><?php echo esc_html( sprintf( /* translators: %s: who */ __( 'Proposed by: %s', 'spark-living' ), '' !== (string) $row['proposed_by'] ? $row['proposed_by'] : __( 'unknown', 'spark-living' ) ) ); ?><?php echo '' !== (string) $row['gate_reasons'] ? ' &middot; ' . esc_html( (string) $row['gate_reasons'] ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php if ( $row['can_undo'] ) : ?>
+				<div class="sl-acts"><button type="button" class="sl-btn" data-sl-undo="<?php echo esc_attr( (string) $row['id'] ); ?>"><?php esc_html_e( 'Undo', 'spark-living' ); ?></button></div>
+				<?php endif; ?>
+			</li>
+			<?php endforeach; ?>
+		</ol>
+		<?php endif; ?>
+		<p class="sl-plan-status" role="status" aria-live="polite" tabindex="-1"></p>
+	</div>
+	<script>
+	(function(){
+		var root=document.getElementById("sl-changes");
+		if(!root||root.getAttribute("data-bound")){return;}
+		root.setAttribute("data-bound","1");
+		root.addEventListener("click",function(e){
+			var b=e.target.closest?e.target.closest("button[data-sl-undo]"):null;
+			if(!b||b.disabled){return;}
+			var all=root.querySelectorAll("button[data-sl-undo]"),i,s=root.querySelector(".sl-plan-status");
+			for(i=0;i<all.length;i++){all[i].disabled=true;}
+			b.setAttribute("aria-busy","true");
+			s.textContent="Working…";
+			fetch(root.getAttribute("data-rest")+"/changes/"+encodeURIComponent(b.getAttribute("data-sl-undo"))+"/undo",{method:"POST",credentials:"same-origin",headers:{"X-WP-Nonce":root.getAttribute("data-nonce"),"Content-Type":"application/json"},body:"{}"})
+			.then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};},function(){return {ok:r.ok,j:{}};});})
+			.then(function(res){
+				if(!res.ok){throw new Error((res.j&&res.j.message)||"That did not work. Please reload the page and try again.");}
+				s.textContent="Undone. Reloading…";
+				window.location.reload();
+			})
+			.catch(function(err){
+				for(i=0;i<all.length;i++){all[i].disabled=false;}
+				b.removeAttribute("aria-busy");
+				s.textContent=err&&err.message?err.message:"That did not work. Please try again.";s.focus();
+			});
+		});
+	})();
+	</script>
+		<?php
+	}
+
+	/**
+	 * wp-admin: the Site charter screen.
+	 */
+	public static function render_charter_page(): void {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html__( 'You do not have permission to view this page.', 'spark-living' ), '', array( 'response' => 403 ) );
+		}
+		$c    = Spark_Living_Charter::get();
+		$code = isset( $_GET['sl_msg'] ) ? sanitize_key( wp_unslash( $_GET['sl_msg'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		echo '<div class="wrap"><h1>' . esc_html__( 'Site charter', 'spark-living' ) . '</h1>';
+		if ( 'charter_saved' === $code ) {
+			echo '<div class="notice notice-success"><p>' . esc_html__( 'Site charter saved.', 'spark-living' ) . '</p></div>';
+		} elseif ( 'charter_invalid' === $code ) {
+			$err = get_transient( 'spark_living_charter_err_' . get_current_user_id() );
+			echo '<div class="notice notice-error"><p>' . esc_html( is_string( $err ) && '' !== $err ? $err : __( 'The charter could not be saved.', 'spark-living' ) ) . '</p></div>';
+		}
+		echo '<p>' . esc_html__( 'What this site is for. Agents and tests are judged against it, and every save raises the version number, so an earlier Goal Gate verdict stops counting until the test is judged again.', 'spark-living' ) . '</p>';
+		if ( (int) $c['version'] > 0 ) {
+			echo '<p>' . esc_html( sprintf( /* translators: 1: version, 2: date, 3: who */ __( 'Version %1$d, saved %2$s by %3$s.', 'spark-living' ), (int) $c['version'], self::date( (string) $c['updated_at'] ), $c['updated_by'] ) ) . '</p>';
+		}
+		$sec = array();
+		foreach ( $c['secondary_conversions'] as $sc ) {
+			$sec[] = implode( ' | ', array( (string) ( $sc['type'] ?? '' ), (string) ( $sc['description'] ?? '' ), (string) ( $sc['selector'] ?? '' ) ) );
+		}
+		$pc  = $c['primary_conversion'];
+		$b   = $c['brand'];
+		$sb  = $c['speed_budget'];
+		$val = static function ( $v ): string {
+			return null === $v ? '' : (string) $v;
+		};
+		?>
+	<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+		<input type="hidden" name="action" value="spark_living_save_charter">
+		<?php wp_nonce_field( 'spark_living_save_charter', 'spark_living_nonce' ); ?>
+		<table class="form-table" role="presentation">
+			<tr><th scope="row"><label for="sl-c-name"><?php esc_html_e( 'Business name', 'spark-living' ); ?></label></th><td><input type="text" class="regular-text" id="sl-c-name" name="business_name" maxlength="200" value="<?php echo esc_attr( $c['business_name'] ); ?>"></td></tr>
+			<tr><th scope="row"><label for="sl-c-goal"><?php esc_html_e( 'Business goal', 'spark-living' ); ?></label></th><td><textarea class="large-text" rows="3" id="sl-c-goal" name="business_goal" maxlength="1000"><?php echo esc_textarea( $c['business_goal'] ); ?></textarea></td></tr>
+			<tr><th scope="row"><label for="sl-c-pct"><?php esc_html_e( 'Main conversion', 'spark-living' ); ?></label></th><td>
+				<select id="sl-c-pct" name="pc_type">
+					<option value=""><?php esc_html_e( 'Not set', 'spark-living' ); ?></option>
+					<?php foreach ( Spark_Living_Charter::CONVERSION_TYPES as $t ) : ?>
+					<option value="<?php echo esc_attr( $t ); ?>" <?php selected( $pc['type'], $t ); ?>><?php echo esc_html( Spark_Living_Charter::conversion_label( $t ) ); ?></option>
+					<?php endforeach; ?>
+				</select><br>
+				<label for="sl-c-pcd"><?php esc_html_e( 'What counts', 'spark-living' ); ?></label><br>
+				<input type="text" class="regular-text" id="sl-c-pcd" name="pc_description" maxlength="500" value="<?php echo esc_attr( $pc['description'] ); ?>"><br>
+				<label for="sl-c-pcs"><?php esc_html_e( 'CSS selector of the form, button or link (optional)', 'spark-living' ); ?></label><br>
+				<input type="text" class="regular-text" id="sl-c-pcs" name="pc_selector" value="<?php echo esc_attr( $pc['selector'] ); ?>">
+			</td></tr>
+			<tr><th scope="row"><label for="sl-c-sec"><?php esc_html_e( 'Other conversions', 'spark-living' ); ?></label></th><td><textarea class="large-text code" rows="3" id="sl-c-sec" name="secondary"><?php echo esc_textarea( implode( "\n", $sec ) ); ?></textarea><p class="description"><?php esc_html_e( 'One per line: type | what counts | selector (optional). Types: form, call, booking, purchase.', 'spark-living' ); ?></p></td></tr>
+			<tr><th scope="row"><label for="sl-c-aud"><?php esc_html_e( 'Audience', 'spark-living' ); ?></label></th><td><textarea class="large-text" rows="2" id="sl-c-aud" name="audience" maxlength="1000"><?php echo esc_textarea( $c['audience'] ); ?></textarea></td></tr>
+			<tr><th scope="row"><label for="sl-c-col"><?php esc_html_e( 'Brand colours', 'spark-living' ); ?></label></th><td><input type="text" class="regular-text" id="sl-c-col" name="colors" value="<?php echo esc_attr( implode( ', ', $b['colors'] ) ); ?>"><p class="description"><?php esc_html_e( 'Comma separated, for example #1f6b3a, #0ecaeb.', 'spark-living' ); ?></p></td></tr>
+			<tr><th scope="row"><label for="sl-c-font"><?php esc_html_e( 'Brand fonts', 'spark-living' ); ?></label></th><td><input type="text" class="regular-text" id="sl-c-font" name="fonts" value="<?php echo esc_attr( implode( ', ', $b['fonts'] ) ); ?>"></td></tr>
+			<tr><th scope="row"><label for="sl-c-btn"><?php esc_html_e( 'Button shape', 'spark-living' ); ?></label></th><td><input type="text" class="regular-text" id="sl-c-btn" name="button_shape" maxlength="60" value="<?php echo esc_attr( $b['button_shape'] ); ?>"></td></tr>
+			<tr><th scope="row"><label for="sl-c-voice"><?php esc_html_e( 'Voice notes', 'spark-living' ); ?></label></th><td><textarea class="large-text" rows="2" id="sl-c-voice" name="voice_notes" maxlength="1000"><?php echo esc_textarea( $b['voice_notes'] ); ?></textarea></td></tr>
+			<tr><th scope="row"><label for="sl-c-off"><?php esc_html_e( 'Off limits', 'spark-living' ); ?></label></th><td><textarea class="large-text" rows="4" id="sl-c-off" name="off_limits"><?php echo esc_textarea( implode( "\n", $c['off_limits'] ) ); ?></textarea><p class="description"><?php esc_html_e( 'One per line: prices, legal text, guarantees, claims, pages the owner named. No automated change may touch these.', 'spark-living' ); ?></p></td></tr>
+			<tr><th scope="row"><label for="sl-c-auto"><?php esc_html_e( 'Autonomy level', 'spark-living' ); ?></label></th><td>
+				<select id="sl-c-auto" name="autonomy_level">
+					<?php foreach ( Spark_Living_Charter::AUTONOMY_LEVELS as $lvl ) : ?>
+					<option value="<?php echo esc_attr( $lvl ); ?>" <?php selected( $c['autonomy_level'], $lvl ); ?>><?php echo esc_html( Spark_Living_Charter::autonomy_label( $lvl ) ); ?></option>
+					<?php endforeach; ?>
+				</select>
+			</td></tr>
+			<tr><th scope="row"><?php esc_html_e( 'Speed budget', 'spark-living' ); ?></th><td>
+				<label for="sl-c-s1"><?php esc_html_e( 'Page load (ms)', 'spark-living' ); ?></label> <input type="number" min="0" step="1" id="sl-c-s1" name="load_ms" value="<?php echo esc_attr( $val( $sb['load_ms'] ) ); ?>" style="width:7rem">
+				<label for="sl-c-s2"><?php esc_html_e( 'Button visible (ms)', 'spark-living' ); ?></label> <input type="number" min="0" step="1" id="sl-c-s2" name="button_visible_ms" value="<?php echo esc_attr( $val( $sb['button_visible_ms'] ) ); ?>" style="width:7rem">
+				<label for="sl-c-s3"><?php esc_html_e( 'Added by the plugin (KB, at most)', 'spark-living' ); ?></label> <input type="number" min="0" step="1" id="sl-c-s3" name="max_added_kb" value="<?php echo esc_attr( $val( $sb['max_added_kb'] ) ); ?>" style="width:7rem">
+				<p class="description"><?php esc_html_e( 'Recorded and shown on the dashboard. Nothing enforces it yet.', 'spark-living' ); ?></p>
+			</td></tr>
+			<tr><th scope="row"><label for="sl-c-min"><?php esc_html_e( 'Minimum exposures before the split may move', 'spark-living' ); ?></label></th><td><input type="number" min="0" step="1" id="sl-c-min" name="min_exposures" value="<?php echo esc_attr( (string) Spark_Living_Engine::min_exposures() ); ?>" style="width:7rem"><p class="description"><?php esc_html_e( 'The traffic split stays 50/50 until each version has this many exposures. Engine setting, not part of the charter.', 'spark-living' ); ?></p></td></tr>
+		</table>
+		<p><button type="submit" class="button button-primary"><?php esc_html_e( 'Save charter', 'spark-living' ); ?></button></p>
+	</form>
+		<?php
+		echo '</div>';
+	}
+
+	/**
+	 * Save the charter from the wp-admin form (same code path as PUT /charter).
+	 */
+	public static function handle_save_charter(): void {
+		self::guard( 'spark_living_save_charter' );
+		$post = wp_unslash( $_POST ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+		$get  = static function ( string $k ) use ( $post ): string {
+			return isset( $post[ $k ] ) && is_string( $post[ $k ] ) ? $post[ $k ] : '';
+		};
+		$num = static function ( string $k ) use ( $get ) {
+			$v = trim( $get( $k ) );
+			return '' === $v ? null : $v;
+		};
+		$secondary = array();
+		foreach ( preg_split( '/\r\n|\r|\n/', $get( 'secondary' ) ) ?: array() as $line ) {
+			if ( '' === trim( $line ) ) {
+				continue;
+			}
+			$bits        = array_map( 'trim', explode( '|', $line ) );
+			$secondary[] = array(
+				'type'        => $bits[0] ?? '',
+				'description' => $bits[1] ?? '',
+				'selector'    => $bits[2] ?? '',
+			);
+		}
+		$data = array(
+			'business_name'         => $get( 'business_name' ),
+			'business_goal'         => $get( 'business_goal' ),
+			'primary_conversion'    => array(
+				'type'        => $get( 'pc_type' ),
+				'description' => $get( 'pc_description' ),
+				'selector'    => $get( 'pc_selector' ),
+			),
+			'secondary_conversions' => $secondary,
+			'audience'              => $get( 'audience' ),
+			'brand'                 => array(
+				'colors'       => preg_split( '/[\s,]+/', trim( $get( 'colors' ) ), -1, PREG_SPLIT_NO_EMPTY ) ?: array(),
+				'fonts'        => array_map( 'trim', explode( ',', $get( 'fonts' ) ) ),
+				'button_shape' => $get( 'button_shape' ),
+				'voice_notes'  => $get( 'voice_notes' ),
+			),
+			'off_limits'            => $get( 'off_limits' ),
+			'autonomy_level'        => $get( 'autonomy_level' ),
+			'speed_budget'          => array(
+				'load_ms'           => $num( 'load_ms' ),
+				'button_visible_ms' => $num( 'button_visible_ms' ),
+				'max_added_kb'      => $num( 'max_added_kb' ),
+			),
+		);
+		$saved = Spark_Living_Charter::save( $data );
+		if ( is_wp_error( $saved ) ) {
+			set_transient( 'spark_living_charter_err_' . get_current_user_id(), $saved->get_error_message(), 60 );
+			wp_safe_redirect( add_query_arg( array( 'page' => 'spark-living-charter', 'sl_msg' => 'charter_invalid' ), admin_url( 'admin.php' ) ) );
+			exit;
+		}
+		$min = trim( $get( 'min_exposures' ) );
+		if ( '' !== $min && is_numeric( $min ) && (int) $min >= 0 ) {
+			update_option( 'spark_living_settings', array( 'min_exposures_before_shift' => (int) $min ), false );
+		}
+		wp_safe_redirect( add_query_arg( array( 'page' => 'spark-living-charter', 'sl_msg' => 'charter_saved' ), admin_url( 'admin.php' ) ) );
+		exit;
 	}
 
 	/**

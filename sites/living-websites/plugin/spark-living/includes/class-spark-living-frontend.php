@@ -169,8 +169,9 @@ final class Spark_Living_Frontend {
 		// Default state with no JavaScript: variant A visible, B hidden.
 		echo '<style id="spark-living-base">.spark-living-variant[data-living-variant="B"]{display:none}</style>' . "\n";
 
-		// Staff (anyone who can edit posts) always see A and are never counted.
-		if ( current_user_can( 'edit_posts' ) ) {
+		// Staff (anyone who can edit posts) always see A and are never counted, unless
+		// they ask for a test visit (?sl_test=1): then the script runs and records nothing.
+		if ( current_user_can( 'edit_posts' ) && ! Spark_Living_Util::test_requested() ) {
 			return;
 		}
 

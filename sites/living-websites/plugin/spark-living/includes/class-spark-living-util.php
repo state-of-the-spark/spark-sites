@@ -15,6 +15,7 @@ final class Spark_Living_Util {
 	public const COOKIE_ASSIGNMENT = 'spark_living_a';
 	public const COOKIE_SESSION    = 'spark_living_sid';
 	public const COOKIE_STAFF      = 'spark_living_staff';
+	public const COOKIE_TEST       = 'spark_living_test';
 
 	/**
 	 * User-agent bot check. An empty user agent counts as a bot.
@@ -72,6 +73,27 @@ final class Spark_Living_Util {
 	 */
 	public static function has_staff_cookie(): bool {
 		return isset( $_COOKIE[ self::COOKIE_STAFF ] ) && '1' === $_COOKIE[ self::COOKIE_STAFF ];
+	}
+
+	/**
+	 * Is this browser in test-visit mode (cookie `spark_living_test`, set by
+	 * ?sl_test=1)? A test visit runs the variant code but records nothing.
+	 *
+	 * @return bool
+	 */
+	public static function has_test_cookie(): bool {
+		$v = isset( $_COOKIE[ self::COOKIE_TEST ] ) ? sanitize_text_field( wp_unslash( $_COOKIE[ self::COOKIE_TEST ] ) ) : '';
+		return 1 === preg_match( '/^1(?:\.\d{1,4})?(?::[AB])?$/', $v );
+	}
+
+	/**
+	 * Does this request ask for test-visit mode (?sl_test=1)?
+	 *
+	 * @return bool
+	 */
+	public static function test_requested(): bool {
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return ( isset( $_GET['sl_test'] ) && '1' === (string) wp_unslash( $_GET['sl_test'] ) ) || self::has_test_cookie();
 	}
 
 	/**

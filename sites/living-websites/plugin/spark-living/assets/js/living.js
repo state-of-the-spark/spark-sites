@@ -1,5 +1,6 @@
 /*!
- * Spark Living 0.1.1: assignment, selector-swap engine and event listeners.
+ * Spark Living 0.3.0: assignment, selector-swap engine, event listeners and test-visit mode.
+ * (Test-visit mode: a visit with ?sl_test=1 runs the variant code and records nothing; see README.)
  * Printed inline in <head> by the plugin. Plain ES5, no dependencies.
  * window.sparkLiving is set just before this file by the plugin.
  */
@@ -8,22 +9,6 @@
 
 	var C = w.sparkLiving;
 	if (!C || !C.tests || !C.tests.length) { return; }
-
-	// Bots never get assigned or counted; they see baseline A (the default CSS).
-	var BOT = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|headless|lighthouse|pagespeed|gtmetrix|pingdom|uptime|monitor|python|curl|wget|httpclient|java\/|go-http|node-fetch|axios|phantom|selenium|puppeteer|playwright/i;
-	if (BOT.test(navigator.userAgent || '') || navigator.webdriver) { return; }
-	// Staff cookie (set at login for users who can edit posts).
-	if (/(?:^|;\s*)spark_living_staff=1/.test(d.cookie)) { return; }
-
-	var root = d.documentElement;
-
-	// Device scope is decided here, in the browser, so cached pages still work.
-	// Mobile = viewport 980px or narrower (Divi 4's mobile-menu breakpoint).
-	var isMobile = w.matchMedia ? w.matchMedia('(max-width: 980px)').matches : ((w.innerWidth || root.clientWidth || 0) <= 980);
-	function deviceOk(t) {
-		var dv = t.device || 'all';
-		return dv === 'all' || (dv === 'mobile') === isMobile;
-	}
 
 	function getCookie(name) {
 		var m = d.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
@@ -35,6 +20,56 @@
 		if (w.location.protocol === 'https:') { s += '; Secure'; }
 		d.cookie = s;
 	}
+	function expireCookie(name) {
+		d.cookie = name + '=; path=/; max-age=0; SameSite=Lax' + (w.location.protocol === 'https:' ? '; Secure' : '');
+	}
+
+	// ---- Test-visit mode (0.3.0) ----------------------------------------------
+	// ?sl_test=1 (optionally &sl_force=A or B) sets the session cookie spark_living_test. In this mode the
+	// variant code runs exactly as for a real visitor, but nothing is sent, no GA/dataLayer event is pushed,
+	// and the visitor's real cookies (spark_living, spark_living_sid, spark_living_a) are neither read for
+	// writing nor changed. ?sl_test=0 leaves the mode. The server also refuses any event from a browser
+	// that carries the test cookie, or an event that carries a test flag.
+	var TEST = false, testForce = '', testBucket = -1;
+	(function () {
+		var qs = w.location.search || '';
+		var qt = /[?&]sl_test=([^&#]*)/.exec(qs);
+		var qf = /[?&]sl_force=([^&#]*)/.exec(qs);
+		var cur = /^1(?:\.(\d{1,4}))?(?::([AB]))?$/.exec(getCookie('spark_living_test'));
+		var fv = qf ? String(qf[1]).toUpperCase() : '';
+		fv = (fv === 'A' || fv === 'B') ? fv : '';
+		if (qt && qt[1] === '0') { expireCookie('spark_living_test'); return; }
+		if (qt && qt[1] === '1') {
+			TEST = true;
+			testBucket = (cur && cur[1] !== undefined) ? parseInt(cur[1], 10) : Math.floor(Math.random() * 10000);
+			testForce = fv; // Asking for test mode again without sl_force clears an earlier force.
+		} else if (cur) {
+			TEST = true;
+			testBucket = cur[1] !== undefined ? parseInt(cur[1], 10) : Math.floor(Math.random() * 10000);
+			testForce = qf ? fv : (cur[2] || '');
+		}
+		if (TEST) { setCookie('spark_living_test', '1.' + testBucket + (testForce ? ':' + testForce : ''), 0); }
+	})();
+
+	if (!TEST) {
+		// Bots never get assigned or counted; they see baseline A (the default CSS).
+		var BOT = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|headless|lighthouse|pagespeed|gtmetrix|pingdom|uptime|monitor|python|curl|wget|httpclient|java\/|go-http|node-fetch|axios|phantom|selenium|puppeteer|playwright/i;
+		if (BOT.test(navigator.userAgent || '') || navigator.webdriver) { return; }
+		// Staff cookie (set at login for users who can edit posts).
+		if (/(?:^|;\s*)spark_living_staff=1/.test(d.cookie)) { return; }
+	}
+
+	var root = d.documentElement;
+	if (TEST) { root.setAttribute('data-sl-test', '1'); }
+
+	// Device scope is decided here, in the browser, so cached pages still work.
+	// Mobile = viewport 980px or narrower (Divi 4's mobile-menu breakpoint).
+	var isMobile = w.matchMedia ? w.matchMedia('(max-width: 980px)').matches : ((w.innerWidth || root.clientWidth || 0) <= 980);
+	function deviceOk(t) {
+		var dv = t.device || 'all';
+		return dv === 'all' || (dv === 'mobile') === isMobile;
+	}
+
 	function randHex(bytes) {
 		var out = '', i, a;
 		if (w.crypto && w.crypto.getRandomValues) {
@@ -48,20 +83,27 @@
 	}
 
 	// ---- Identity: visitor id + bucket (0-9999), session id ------------------
-	var vid, bucket;
+	var vid, bucket, sid;
 	var m = /^([a-f0-9]{16,32})\.(\d{1,4})$/.exec(getCookie('spark_living'));
-	if (m) {
-		vid = m[1];
-		bucket = parseInt(m[2], 10);
+	if (TEST) {
+		// Read-only: a real visitor cookie only lends its bucket so the tester sees what that visitor would see.
+		// Nothing is written and nothing is sent.
+		vid = sid = '0000000000000000';
+		bucket = m ? parseInt(m[2], 10) : testBucket;
 	} else {
-		vid = randHex(8);
-		bucket = Math.floor(Math.random() * 10000);
-		setCookie('spark_living', vid + '.' + bucket, 180);
-	}
-	var sid = getCookie('spark_living_sid');
-	if (!/^[a-f0-9]{16,32}$/.test(sid)) {
-		sid = randHex(8);
-		setCookie('spark_living_sid', sid, 0); // Session cookie.
+		if (m) {
+			vid = m[1];
+			bucket = parseInt(m[2], 10);
+		} else {
+			vid = randHex(8);
+			bucket = Math.floor(Math.random() * 10000);
+			setCookie('spark_living', vid + '.' + bucket, 180);
+		}
+		sid = getCookie('spark_living_sid');
+		if (!/^[a-f0-9]{16,32}$/.test(sid)) {
+			sid = randHex(8);
+			setCookie('spark_living_sid', sid, 0); // Session cookie.
+		}
 	}
 
 	// ---- Assignment ----------------------------------------------------------
@@ -81,7 +123,10 @@
 			if (t.mode === 'running') { skippedRunning = true; }
 			continue;
 		}
-		if (isHoldout) {
+		if (TEST && testForce) {
+			variant = testForce; // Forced version, for both running and shipped tests.
+			label = testForce;
+		} else if (isHoldout) {
 			variant = 'A';
 			label = 'H';
 		} else if (t.mode === 'running') {
@@ -108,7 +153,7 @@
 	var noLog = !plan.length || (skippedRunning && !running);
 	var eventExp = running ? running.t.id : 0;
 	var eventLabel = running ? running.label : (isHoldout ? 'H' : 'L');
-	setCookie('spark_living_a', eventExp + ':' + eventLabel, 180);
+	if (!TEST) { setCookie('spark_living_a', eventExp + ':' + eventLabel, 180); }
 
 	// ---- Before first paint: hide what must not show -------------------------
 	var blockCss = '';
@@ -156,6 +201,7 @@
 	// ---- Events --------------------------------------------------------------
 	var sentOnce = {};
 	function ga(name, params) {
+		if (TEST) { return; }
 		if (typeof w.gtag === 'function') {
 			try { w.gtag('event', name, params); } catch (e) { /* ignore */ }
 		} else if (w.dataLayer && typeof w.dataLayer.push === 'function') {
@@ -188,7 +234,7 @@
 	}
 	var exposed = false;
 	function fire(type) {
-		if (noLog || sentOnce[type]) { return; }
+		if (TEST || noLog || sentOnce[type]) { return; }
 		sentOnce[type] = true;
 		send(type, eventExp, eventLabel);
 	}
@@ -233,6 +279,12 @@
 			if (plan[j].applied) { any = true; }
 		}
 		reveal();
+		if (TEST) {
+			w.sparkLivingTest = { force: testForce, bucket: bucket, holdout: isHoldout, assignments: [] };
+			for (j = 0; j < plan.length; j++) {
+				w.sparkLivingTest.assignments.push({ id: plan[j].t.id, mode: plan[j].t.mode, variant: plan[j].variant, label: plan[j].label, applied: plan[j].applied });
+			}
+		}
 		if (!exposed) {
 			if (running && running.applied) {
 				exposed = true;

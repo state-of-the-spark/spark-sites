@@ -47,6 +47,13 @@ function probBBeatsA(sA, nA, sB, nB) {
 
 const rate = (s, n) => (n > 0 ? s / n : 0.0);
 
+// 0.3.0: weights stay 50/50 until EACH version has at least `min` exposures (mirror of Spark_Living_Stats::floor_weights).
+function floorWeights(weights, nA, nB, min) {
+	min = Math.max(0, min | 0);
+	if (Math.min(Math.max(0, nA | 0), Math.max(0, nB | 0)) < min) return { weights: { A: 0.5, B: 0.5 }, held: true };
+	return { weights, held: false };
+}
+
 function allocate(pBBest, floor = S.FLOOR) {
 	const wB = Math.min(1.0 - floor, Math.max(floor, pBBest));
 	const r4 = (v) => Math.round(v * 1e4) / 1e4;
@@ -167,6 +174,32 @@ const wEq = allocate(probBBeatsA(40, 100, 40, 100));
 check('equal arms allocation is 50/50', wEq.A === 0.5 && wEq.B === 0.5, JSON.stringify(wEq));
 const wMid = allocate(0.65);
 check('moderate evidence (p=0.65) allocates 35/65', wMid.A === 0.35 && wMid.B === 0.65, JSON.stringify(wMid));
+
+console.log('\n--- Slower weight shifting: 50/50 until each version has the minimum exposures ---');
+const want80 = allocate(probBBeatsA(3, 30, 20, 30)); // strong evidence at 30 each
+check('the evidence alone would move the split (sanity: 80/20)', want80.B === 0.8 && want80.A === 0.2, JSON.stringify(want80));
+const fw1 = floorWeights(allocate(probBBeatsA(3, 14, 12, 12)), 14, 12, 30);
+check('14 and 12 exposures, min 30: held at 50/50 although the evidence wants to move', fw1.held === true && fw1.weights.A === 0.5 && fw1.weights.B === 0.5, JSON.stringify(fw1));
+const fw2 = floorWeights(want80, 30, 29, 30);
+check('30 and 29 exposures (one version just under): still 50/50', fw2.held === true && fw2.weights.A === 0.5, JSON.stringify(fw2));
+const fw3 = floorWeights(want80, 29, 30, 30);
+check('29 and 30 exposures (the other version under): still 50/50', fw3.held === true, JSON.stringify(fw3));
+const fw4 = floorWeights(want80, 30, 30, 30);
+check('exactly 30 and 30: the split may move (80/20 passes through)', fw4.held === false && fw4.weights.B === 0.8 && fw4.weights.A === 0.2, JSON.stringify(fw4));
+const fw5 = floorWeights(want80, 500, 41, 30);
+check('both well above the floor: passes through', fw5.held === false && fw5.weights.B === 0.8, JSON.stringify(fw5));
+const fw6 = floorWeights(want80, 0, 0, 30);
+check('no exposures at all: held at 50/50', fw6.held === true && fw6.weights.A === 0.5 && fw6.weights.B === 0.5, JSON.stringify(fw6));
+const fw7 = floorWeights(want80, 3, 3, 0);
+check('a floor of 0 switches the rule off', fw7.held === false && fw7.weights.B === 0.8, JSON.stringify(fw7));
+const fw8 = floorWeights(want80, 40, 40, 50);
+check('raising the floor to 50 holds a test at 40 and 40', fw8.held === true, JSON.stringify(fw8));
+const fw9 = floorWeights({ A: 0.5, B: 0.5 }, 5, 5, 30);
+check('already 50/50 below the floor: the answer is 50/50 (no change to record)', fw9.held === true && fw9.weights.A === 0.5, JSON.stringify(fw9));
+const fwNeg = floorWeights(want80, -4, 40, 30);
+check('negative counts are treated as zero', fwNeg.held === true, JSON.stringify(fwNeg));
+const live = floorWeights(allocate(probBBeatsA(8, 20, 12, 6)), 20, 6, 30);
+check('the live case (about 26 visits, 80/20 after the nightly run) would have stayed 50/50', live.held === true && live.weights.A === 0.5, JSON.stringify(live));
 
 console.log('\n--- decide(): every rule in section 3 ---');
 const arm = (sessions, intent, leads) => ({ sessions, intent, leads });
