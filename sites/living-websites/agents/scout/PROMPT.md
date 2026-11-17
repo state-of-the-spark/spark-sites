@@ -50,7 +50,7 @@ Phone view means a 390 pixel wide window with the desktop user agent (the bot ch
 
 1. **Read the charter.** Note the primary conversion, the secondary conversions, the off-limits list and the autonomy level. If `charter.json` is missing, stop and report.
 2. **Read the site's state.** `GET {site}/wp-json/spark-living/v1/state` and `GET .../suggestions`. Write down: the test now running (element, page, start date), tests queued or suggested (so you do not repeat them), past results and the verdicts, and the rules block. Save a copy as `state.json` (remove nothing; it holds no secrets).
-3. **Pick the pages.** The homepage, plus every other page in `traffic.json` that had 100 or more sessions in 14 days, plus the page with the form or booking step if it is separate. Skip thank-you pages.
+3. **Pick the pages.** The homepage, plus every other page in `traffic.json` that had 75 or more sessions in 14 days (the smallest count from which a test can reach 100 sessions per version inside the plugin's 42 day limit), plus the page with the form or booking step if it is separate. Skip thank-you pages.
 4. **Look at each page, desktop and phone.** Take full-page screenshots and also consecutive slices of at most 2,500 pixels tall, so every slice is readable. Save them in `screenshots\` as `<page>-desktop-1.png`, `<page>-mobile-1.png` and so on. **Open and look at every slice.** As you look, write down: what a visitor sees in the first screen, where the first way to reach the owner is (button, phone, form, booking link), how big and how easy to hit it is, what is the loudest thing on the screen and whether it leads to a lead, and where the form is.
 5. **Inventory the page's calls to action in the page itself.** Read only: list every link and button (text, destination, position from the top, whether it is visible at 1366 and at 390 wide), and the forms (id, fields). A link that exists in the page code but is hidden on phones is worth noting: read its computed `display`. Confirm any selector you will name matches exactly one element on the page (`document.querySelectorAll(selector).length === 1`).
 6. **Read the data.** Combine what you saw with the state and traffic numbers. Where are visitors, on which device, and does the first screen on that device offer a way to become a lead?
@@ -80,7 +80,7 @@ When unsure between two tiers, pick the higher one.
 
 | Field | Meaning | How to fill it |
 |---|---|---|
-| `sessions_14d` | Visits to the page in the last 14 days, on the device the test covers (all devices if the test covers all) | From `traffic.json` only. Whole number. |
+| `sessions_14d` | Visits to the page in the last 14 days, on the device the test covers (all devices if the test covers all); for a whole-site test (`scope: "sitewide"`, an element that appears on every page), the whole site | From `traffic.json` only. Whole number. |
 | `sessions_as_of` | The date that count was measured | From `traffic.json`. |
 | `reach_share` | Share of those visits that get to see the element, 0 to 1 | Above the first screen on the device: 1. Further down: your estimate, and say so in `reach_basis` ("estimate, no scroll data"). |
 | `proximity` | How close the element is to a lead, 0 to 1 | 1.0 the lead itself (phone number, booking link, the form's submit button). 0.8 a button or link that goes straight to the lead (to the form or to the booking page). 0.6 leads to a step before the lead (for example to the packages). 0.4 a section on the way. 0.2 a headline or picture. 0.1 no click path. |
@@ -124,11 +124,13 @@ When unsure between two tiers, pick the higher one.
       "rationale": "Up to 600 characters. What you saw on the page and why it should bring more leads.",
       "evidence": [ { "source": "screenshot home-desktop-1.png", "detail": "one line", "as_of": "2026-11-16" } ],
       "tier": 1,
+      "scope": "page",
       "tier_reason": "one line",
       "touches_off_limits": false,
       "off_limits_check": "which off-limits lines you checked and why none apply",
       "payoff_inputs": { "sessions_14d": 137, "sessions_as_of": "2026-11-11", "reach_share": 1, "reach_basis": "above the first screen on desktop and phone", "proximity": 0.8, "proximity_basis": "goes straight to the booking page", "change_type": "cta_promote" },
       "payoff": {},
+      "payoff_note": "run payoff.js on payoff_inputs; copy payoff_score and the plugin-ready payoff_inputs from pluginPayload() into 'payoff'. The plugin works out days to result itself (a test needs 75 sessions in 14 days or more; the stop date is 14 to 42 days).",
       "existing_suggestion_id": null,
       "risks": "what could go wrong, in plain words"
     }

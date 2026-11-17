@@ -304,6 +304,144 @@ final class Spark_Living_Util {
 	}
 
 	/**
+	 * Why a selector was not accepted, in one plain sentence.
+	 *
+	 * @param string $selector Raw selector.
+	 * @return string Empty when the selector is acceptable.
+	 */
+	private static function selector_problem( string $selector ): string {
+		$selector = trim( $selector );
+		if ( '' === $selector ) {
+			return 'The selector is empty.';
+		}
+		if ( strlen( $selector ) > 200 ) {
+			return 'The selector is longer than 200 characters.';
+		}
+		if ( preg_match( '/[{};\\\\<@]|\/\*/', $selector ) ) {
+			return 'The selector contains a character that is not allowed: { } ; \\ < @ or a comment.';
+		}
+		if ( ! preg_match( '/^[A-Za-z0-9\s\.\#\-\_\>\+\~\,\:\[\]\=\"\'\(\)\*\^\$\|]+$/', $selector ) ) {
+			return 'The selector contains a character outside letters, digits, spaces and . # - _ > + ~ , : [ ] = " \' ( ) * ^ $ |.';
+		}
+		return '';
+	}
+
+	/**
+	 * Check a variant without writing anything (POST /validate-variant): what the
+	 * plugin would keep, what it would strip, and whether the selector is acceptable.
+	 *
+	 * @param array $in selector, element_type or format (selector|block), changes [{op, value}], css,
+	 *                  and the shorthands text, href, add_class, remove_class, style.
+	 * @return array
+	 */
+	public static function validate_variant( array $in ): array {
+		$stripped = array();
+		$problems = array();
+		$format   = isset( $in['format'] ) ? sanitize_key( (string) $in['format'] ) : ( isset( $in['element_type'] ) ? sanitize_key( (string) $in['element_type'] ) : 'selector' );
+		$format   = '' === $format ? 'selector' : $format;
+		if ( ! in_array( $format, array( 'selector', 'block' ), true ) ) {
+			$problems[] = 'format must be selector or block.';
+			$format     = 'selector';
+		}
+
+		// Selector.
+		$selector = array(
+			'given'     => null,
+			'ok'        => null,
+			'sanitized' => '',
+			'reason'    => '',
+		);
+		if ( 'block' === $format ) {
+			$problems[] = 'A Living Block test cannot be placed through the REST API, so a block variant is not validated here.';
+		} elseif ( array_key_exists( 'selector', $in ) ) {
+			$given              = is_scalar( $in['selector'] ) ? (string) $in['selector'] : '';
+			$clean              = self::sanitize_selector( $given );
+			$selector['given']     = $given;
+			$selector['ok']        = '' !== $clean;
+			$selector['sanitized'] = $clean;
+			$selector['reason']    = '' === $clean ? self::selector_problem( $given ) : '';
+			if ( ! $selector['ok'] ) {
+				$problems[] = 'The selector is not acceptable: ' . $selector['reason'];
+			}
+		}
+
+		// Changes: the list plus the shorthands.
+		$raw = array();
+		if ( isset( $in['changes'] ) && is_array( $in['changes'] ) ) {
+			$raw = array_values( $in['changes'] );
+		}
+		foreach ( array( 'text', 'href', 'add_class', 'remove_class', 'style' ) as $op ) {
+			if ( array_key_exists( $op, $in ) && is_scalar( $in[ $op ] ) ) {
+				$raw[] = array( 'op' => $op, 'value' => (string) $in[ $op ] );
+			}
+		}
+		if ( count( $raw ) > 10 ) {
+			$stripped[] = array( 'what' => 'changes', 'given' => count( $raw ), 'reason' => 'Only the first 10 changes are kept.' );
+		}
+		$kept = array();
+		foreach ( array_slice( $raw, 0, 10 ) as $i => $change ) {
+			$op    = is_array( $change ) ? (string) ( $change['op'] ?? '' ) : '';
+			$value = is_array( $change ) && isset( $change['value'] ) && is_scalar( $change['value'] ) ? (string) $change['value'] : '';
+			if ( ! in_array( $op, array( 'text', 'href', 'add_class', 'remove_class', 'style' ), true ) ) {
+				$stripped[] = array( 'what' => 'change', 'index' => $i, 'op' => $op, 'given' => $value, 'reason' => 'The operation is not one of text, href, add_class, remove_class, style.' );
+				continue;
+			}
+			$clean = self::sanitize_changes( array( array( 'op' => $op, 'value' => $value ) ) );
+			if ( ! $clean ) {
+				$stripped[] = array( 'what' => 'change', 'index' => $i, 'op' => $op, 'given' => $value, 'reason' => 'Nothing valid was left after cleaning, so the change is dropped.' );
+				continue;
+			}
+			if ( $clean[0]['value'] !== $value ) {
+				$stripped[] = array( 'what' => 'change', 'index' => $i, 'op' => $op, 'given' => $value, 'kept' => $clean[0]['value'], 'reason' => 'Part of the value was removed (tags, unsafe characters, or declarations that are not allowed).' );
+			}
+			$kept[] = $clean[0];
+		}
+
+		// CSS.
+		$css_in  = isset( $in['css'] ) && is_scalar( $in['css'] ) ? (string) $in['css'] : '';
+		$css_out = self::sanitize_css( $css_in );
+		if ( trim( $css_in ) !== $css_out ) {
+			$why = array();
+			if ( preg_match( '/<|\\\\/', $css_in ) ) {
+				$why[] = 'angle brackets and backslashes';
+			}
+			if ( preg_match( '/@\s*import|url\s*\(|expression|javascript\s*:/i', $css_in ) ) {
+				$why[] = '@import, url(, expression or javascript:';
+			}
+			if ( preg_match( '/[\x00-\x08\x0B\x0C\x0E-\x1F]/', $css_in ) ) {
+				$why[] = 'control characters';
+			}
+			if ( strlen( trim( $css_in ) ) > 2000 && ! $why ) {
+				$why[] = 'text beyond 2000 characters';
+			}
+			$stripped[] = array(
+				'what'        => 'css',
+				'given_chars' => strlen( $css_in ),
+				'kept_chars'  => strlen( $css_out ),
+				'kept'        => $css_out,
+				'reason'      => $why ? 'Removed: ' . implode( '; ', $why ) . '.' : 'Cleaned.',
+			);
+		}
+
+		if ( 'selector' === $format && ! $kept && '' === $css_out ) {
+			$problems[] = 'The challenger needs at least one valid change or a CSS snippet.';
+		}
+
+		return array(
+			'ok'        => ! $problems && ( null === $selector['ok'] || true === $selector['ok'] ),
+			'format'    => $format,
+			'selector'  => $selector,
+			'variant'   => array(
+				'changes' => $kept,
+				'css'     => $css_out,
+			),
+			'stripped'  => $stripped,
+			'problems'  => $problems,
+			'written'   => false,
+		);
+	}
+
+	/**
 	 * Flush page caches so cached pages stop carrying stale allocation weights
 	 * or a stale live set. Every call is guarded, so this is safe on any host.
 	 * Called after the nightly job changes weights, concludes a test or reverts

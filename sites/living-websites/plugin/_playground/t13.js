@@ -1,5 +1,5 @@
-// t13: eligibility at start. A test starts only with sessions_14d >= 100, or an explicit force:true
-// from an administrator (recorded on the experiment). Run: node t13.js
+// t13: eligibility at start. 0.4.0: a test starts only when 100 sessions per version are reachable within 42 days, which means
+// sessions_14d >= 75 (it was 100 before 0.4.0), or with an explicit force:true from an administrator (recorded on the experiment). Run: node t13.js
 const { chromium } = require('playwright-core');
 const { BASE, UA, tool, run, admin, check, summary, cleanup } = require('./lib');
 
@@ -16,11 +16,11 @@ const body = (name, extra = {}) => ({ name, element_type: 'selector', target: '.
   const id = r.body.id;
 
   r = await a.api('POST', `/tests/${id}/start`);
-  check('start without sessions_14d is refused with 400 and a clear reason', r.status === 400 && r.body.code === 'spark_living_eligibility_missing' && /sessions_14d/.test(r.body.message) && /100/.test(r.body.message), r.body);
+  check('start without sessions_14d is refused with 400 and a clear reason', r.status === 400 && r.body.code === 'spark_living_eligibility_missing' && /sessions_14d/.test(r.body.message) && /75/.test(r.body.message) && /42 days/.test(r.body.message), r.body);
   r = await a.api('POST', `/tests/${id}/start`, {});
   check('start with an empty body is refused too (400)', r.status === 400, r.status);
-  r = await a.api('POST', `/tests/${id}/start`, { sessions_14d: 99 });
-  check('99 sessions: refused with 422 and the reason names 99 and 100', r.status === 422 && r.body.code === 'spark_living_not_eligible' && /99/.test(r.body.message) && /100/.test(r.body.message), r.body);
+  r = await a.api('POST', `/tests/${id}/start`, { sessions_14d: 74 });
+  check('74 sessions: refused with 422 and the reason names 74, the 42-day limit and the bar of 75', r.status === 422 && r.body.code === 'spark_living_not_eligible' && /74/.test(r.body.message) && /75/.test(r.body.message) && /42-day limit/.test(r.body.message), r.body);
   check('the refusal says how an administrator can override', /force:true/.test(r.body.message), r.body.message);
   let st = await a.api('GET', `/stats&experiment_id=${id}`);
   check('after refusals the test is still a draft', st.body.experiment.status === 'draft', st.body.experiment.status);
@@ -34,9 +34,9 @@ const body = (name, extra = {}) => ({ name, element_type: 'selector', target: '.
   r = await a.api('POST', `/tests/${id}/start`, { sessions_14d: true });
   check('sessions_14d true is refused (400)', r.status === 400, r.status);
 
-  r = await a.api('POST', `/tests/${id}/start`, { sessions_14d: 100 });
-  check('exactly 100 sessions starts the test (200, running)', r.status === 200 && r.body.status === 'running', r.body);
-  check('a normal start is not marked forced and records the number', r.body.forced_start === false && r.body.start_sessions_14d === 100, [r.body.forced_start, r.body.start_sessions_14d]);
+  r = await a.api('POST', `/tests/${id}/start`, { sessions_14d: 75 });
+  check('exactly 75 sessions starts the test (200, running; 42 days is the longest it may take)', r.status === 200 && r.body.status === 'running' && r.body.max_days === 42, r.body);
+  check('a normal start is not marked forced and records the number', r.body.forced_start === false && r.body.start_sessions_14d === 75, [r.body.forced_start, r.body.start_sessions_14d]);
 
   r = await a.api('POST', `/tests/${id}/start`, { sessions_14d: 500 });
   check('starting a running test is a 409 (state error comes before eligibility)', r.status === 409, r.status);
@@ -47,8 +47,8 @@ const body = (name, extra = {}) => ({ name, element_type: 'selector', target: '.
   // numeric string, device scoped
   r = await a.api('POST', '/tests', body('Elig mobile', { device: 'mobile' }));
   const idM = r.body.id;
-  r = await a.api('POST', `/tests/${idM}/start`, { sessions_14d: 80 });
-  check('mobile test: 80 sessions refused and the message names the device', r.status === 422 && /mobile/.test(r.body.message) && r.body.data.device === 'mobile', r.body);
+  r = await a.api('POST', `/tests/${idM}/start`, { sessions_14d: 60 });
+  check('mobile test: 60 sessions refused and the message names the device', r.status === 422 && /mobile/.test(r.body.message) && r.body.data.device === 'mobile', r.body);
   r = await a.api('POST', `/tests/${idM}/start`, { sessions_14d: '150' });
   check('mobile test: "150" (numeric string) starts', r.status === 200 && r.body.start_sessions_14d === 150 && r.body.forced_start === false, r.body);
   await a.api('POST', `/tests/${idM}/conclude`, { verdict: 'keep_a', note: 'x' });
@@ -62,7 +62,7 @@ const body = (name, extra = {}) => ({ name, element_type: 'selector', target: '.
   st = await a.api('GET', `/stats&experiment_id=${idF}`);
   check('the record is visible through /stats too', st.body.experiment.forced_start === true, st.body.experiment.forced_start);
   const stt = await a.api('GET', '/state');
-  check('/state exposes the forced flag on the running test and the 100 bar in the rules', stt.body.running.forced_start === true && stt.body.rules.eligibility_sessions_14d === 100, [stt.body.running.forced_start, stt.body.rules]);
+  check('/state exposes the forced flag on the running test and the 75 bar in the rules', stt.body.running.forced_start === true && stt.body.rules.eligibility_sessions_14d === 75, [stt.body.running.forced_start, stt.body.rules]);
   await a.api('POST', `/tests/${idF}/conclude`, { verdict: 'no_difference', note: 'x' });
 
   r = await a.api('POST', '/tests', body('Elig forced 40'));
@@ -99,8 +99,8 @@ const body = (name, extra = {}) => ({ name, element_type: 'selector', target: '.
   r = await a.api('POST', '/tests', body('Create+start low', { start: true, sessions_14d: 50 }));
   check('create with start:true and 50 sessions is refused (422)', r.status === 422, r.status);
   check('a refused create+start leaves no stray draft behind', (await countQueued()) === q0, [q0, await countQueued()]);
-  r = await a.api('POST', '/tests', body('Create+start ok', { start: true, sessions_14d: 100 }));
-  check('create with start:true and 100 sessions starts (201, running)', r.status === 201 && r.body.status === 'running' && r.body.forced_start === false, r.body);
+  r = await a.api('POST', '/tests', body('Create+start ok', { start: true, sessions_14d: 75 }));
+  check('create with start:true and 75 sessions starts (201, running)', r.status === 201 && r.body.status === 'running' && r.body.forced_start === false, r.body);
   await cleanup();
   r = await a.api('POST', '/tests', body('Create+start forced', { start: true, force: true }));
   check('create with start:true and force:true starts and records it', r.status === 201 && r.body.status === 'running' && r.body.forced_start === true, r.body);
@@ -129,7 +129,7 @@ const body = (name, extra = {}) => ({ name, element_type: 'selector', target: '.
   const row = p.locator('li', { hasText: 'Admin form test' }).first();
   await row.locator('button:has-text("Start")').click(); await p.waitForLoadState('networkidle');
   let txt = await p.textContent('body');
-  check('wp-admin Start with no number: refused with a clear notice', /Not started: the target page needs at least 100 sessions/.test(txt), txt.slice(0, 200));
+  check('wp-admin Start with no number: refused with a clear notice', /Not started: at that traffic a result would take longer than 42 days \(a test needs at least 75 sessions/.test(txt), txt.slice(0, 200));
   st = await a.api('GET', `/stats&experiment_id=${idA}`);
   check('wp-admin refusal left the test a draft', st.body.experiment.status === 'draft');
   await p.locator('li', { hasText: 'Admin form test' }).first().locator('input[name="sessions_14d"]').fill('60');
@@ -137,14 +137,14 @@ const body = (name, extra = {}) => ({ name, element_type: 'selector', target: '.
   await p.locator('li', { hasText: 'Admin form test' }).first().locator('button:has-text("Start")').click(); await p.waitForLoadState('networkidle');
   txt = await p.textContent('body');
   check('wp-admin Start anyway with 60 sessions: the test is running', /Test started\./.test(txt), txt.slice(0, 200));
-  check('dashboard shows "Started below the 100-session bar (60 sessions in the last 14 days)"', /Started below the 100-session bar \(60 sessions in the last 14 days\)\./.test(txt), txt.slice(0, 300));
+  check('dashboard shows "Started although it cannot reach 100 sessions per version within 42 days (60 sessions in the last 14 days)"', /Started although it cannot reach 100 sessions per version within 42 days \(60 sessions in the last 14 days\)\./.test(txt), txt.slice(0, 300));
   check('dashboard shows the device scope of the running test', /Mobile only \(viewport 980px or narrower\)\./.test(txt));
   st = await a.api('GET', `/stats&experiment_id=${idA}`);
   check('the admin-form start is recorded on the experiment', st.body.experiment.forced_start === true && st.body.experiment.start_sessions_14d === 60, [st.body.experiment.forced_start, st.body.experiment.start_sessions_14d]);
   // After it concludes, the history still carries the note.
   await a.api('POST', `/tests/${idA}/conclude`, { verdict: 'no_difference', note: 'admin form test' });
   const hist = await (await fetch(BASE + '/living/', { headers: { cookie: a.cookie() } })).text();
-  check('/living/ test history keeps the "below the bar" note for a concluded forced test', /Started below the 100-session bar \(60 sessions/.test(hist));
+  check('/living/ test history keeps the "cannot reach 100 per version" note for a concluded forced test', /Started although it cannot reach 100 sessions per version within 42 days \(60 sessions/.test(hist));
   const lg0 = await a.api('GET', '/log&per_page=5');
   check('the evolution log entry carries forced_start and device', lg0.body.some((x) => x.experiment_id === idA && x.forced_start === true && x.device === 'mobile'), lg0.body.slice(0, 2));
   await browser.close();

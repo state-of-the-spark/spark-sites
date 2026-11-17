@@ -8,7 +8,7 @@
 'use strict';
 
 const S = {
-	MIN_DAYS: 7, MIN_SESSIONS: 100, HARD_STOP_DAYS: 14,
+	MIN_DAYS: 7, MIN_SESSIONS: 100, HARD_STOP_DAYS: 14, MIN_STOP_DAYS: 14, MAX_STOP_DAYS: 42, VERSION_SHARE: 0.45, ELIGIBILITY_SESSIONS: 75,
 	WIN_P: 0.90, LOSE_P: 0.10, FLOOR: 0.20, GUARD_P: 0.80,
 	REVERT_DROP: 0.30, REVERT_DAYS: 7,
 };
@@ -60,7 +60,22 @@ function allocate(pBBest, floor = S.FLOOR) {
 	return { A: r4(1.0 - wB), B: r4(wB) };
 }
 
-function decide(a, b, daysRunning) {
+// 0.4.0: the hard stop scales with traffic (mirror of Spark_Living_Stats::projected_days, stop_days, reachable, projected_days_observed).
+const clampStop = (d) => Math.max(S.MIN_STOP_DAYS, Math.min(S.MAX_STOP_DAYS, d | 0));
+function projectedDays(sessions14d) {
+	if (!(sessions14d > 0)) return null;
+	return Math.ceil(S.MIN_SESSIONS / ((sessions14d / 14.0) * S.VERSION_SHARE) - 1e-9);
+}
+function stopDays(sessions14d) { const p = projectedDays(sessions14d); return p === null ? S.MAX_STOP_DAYS : clampStop(p); }
+function reachable(sessions14d) { const p = projectedDays(sessions14d); return p !== null && p <= S.MAX_STOP_DAYS; }
+function projectedDaysObserved(nA, nB, days, minW = 0.5) {
+	const total = Math.max(0, nA) + Math.max(0, nB);
+	if (days <= 0 || total <= 0) return null;
+	return Math.ceil(S.MIN_SESSIONS / ((total / days) * Math.max(0.05, Math.min(0.5, minW))) - 1e-9);
+}
+
+function decide(a, b, daysRunning, maxDays = S.MIN_STOP_DAYS) {
+	maxDays = clampStop(maxDays);
 	const nA = Math.max(0, a.sessions | 0), nB = Math.max(0, b.sessions | 0);
 	const sA = Math.min(nA, Math.max(0, a.intent | 0)), sB = Math.min(nB, Math.max(0, b.intent | 0));
 	const lA = Math.min(nA, Math.max(0, a.leads | 0)), lB = Math.min(nB, Math.max(0, b.leads | 0));
@@ -71,7 +86,7 @@ function decide(a, b, daysRunning) {
 	const minMet = daysRunning >= S.MIN_DAYS && Math.min(nA, nB) >= S.MIN_SESSIONS;
 	out.minRunMet = minMet;
 	if (!minMet) {
-		if (daysRunning >= S.HARD_STOP_DAYS) { out.verdict = 'no_difference'; out.reason = 'hard stop before minimum run'; }
+		if (daysRunning >= maxDays) { out.verdict = 'no_difference'; out.reason = 'hard stop before minimum run'; }
 		else { out.reason = 'minimum run not met'; }
 		return out;
 	}
@@ -81,7 +96,7 @@ function decide(a, b, daysRunning) {
 		return out;
 	}
 	if (p <= S.LOSE_P) { out.verdict = 'keep_a'; out.reason = 'A wins'; return out; }
-	if (daysRunning >= S.HARD_STOP_DAYS) { out.verdict = 'no_difference'; out.reason = 'hard stop, no winner'; return out; }
+	if (daysRunning >= maxDays) { out.verdict = 'no_difference'; out.reason = 'hard stop, no winner'; return out; }
 	out.reason = 'keep running';
 	return out;
 }
@@ -230,6 +245,26 @@ for (const s of scenarios) {
 	check(s.name, d.verdict === s.want,
 		'got=' + d.verdict + ' P(B>A)=' + f(d.p) + ' P(lead B>A)=' + f(d.pLead) + ' weights=' + JSON.stringify(d.weights));
 }
+
+console.log('\n--- 0.4.0: the hard stop scales with traffic (14 to 42 days) ---');
+// Scenario 6 and 7 again with a longer stop: day 14 is no longer the end.
+const longA = arm(100, 40, 15), longB = arm(100, 42, 15);
+check('14. a test with a 23 day stop is still running on day 14 when undecided -> continue', decide(longA, longB, 14, 23).verdict === 'continue');
+check('15. ... and stops at day 23 -> no_difference', decide(longA, longB, 23, 23).verdict === 'no_difference');
+check('16. the 7 day minimum still applies: huge gap on day 6 at a 23 day stop -> continue', decide(arm(500, 100, 20), arm(500, 250, 60), 6, 23).verdict === 'continue');
+check('17. before the minimum run is met, the hard stop is the test\'s own stop (day 22 of 23 -> continue, day 23 -> no_difference)', decide(arm(60, 20, 6), arm(60, 30, 9), 22, 23).verdict === 'continue' && decide(arm(60, 20, 6), arm(60, 30, 9), 23, 23).verdict === 'no_difference');
+check('18. a win is called on day 20 of 23 (win beats the stop)', decide(arm(200, 60, 24), arm(200, 100, 40), 20, 23).verdict === 'ship_b');
+check('19. a stop below 14 is raised to 14; above 42 is cut to 42', decide(longA, longB, 13.9, 3).verdict === 'continue' && decide(longA, longB, 42, 999).verdict === 'no_difference' && decide(longA, longB, 41.9, 999).verdict === 'continue');
+check('20. projected days at 137 sessions in 14 days is 23 (the homepage)', projectedDays(137) === 23, projectedDays(137));
+check('21. 223 sessions gives 14 days (the old rule\'s boundary); 222 gives 15', projectedDays(223) === 14 && projectedDays(222) === 15, [projectedDays(223), projectedDays(222)]);
+check('22. 75 sessions gives 42 days and is reachable; 74 gives 43 and is not', projectedDays(75) === 42 && reachable(75) && projectedDays(74) === 43 && !reachable(74), [projectedDays(75), projectedDays(74)]);
+check('23. the stop is floored at 14 (5,000 sessions would need 2 days) and capped at 42 (10 sessions)', stopDays(5000) === 14 && stopDays(10) === 42 && stopDays(0) === 42, [stopDays(5000), stopDays(10), stopDays(0)]);
+check('24. stop days: 137 -> 23, 223 -> 14, 75 -> 42, 74 -> 42 (capped), 300 -> 14', stopDays(137) === 23 && stopDays(223) === 14 && stopDays(75) === 42 && stopDays(74) === 42 && stopDays(300) === 14);
+check('25. zero sessions has no projection and is not reachable', projectedDays(0) === null && !reachable(0));
+// Observed rate: 3 days, 17 + 17 exposures at 50/50: 34 / 3 = 11.33 a day, half each = 5.67 a day per version -> 17.6 -> 18 days.
+check('26. observed rate: 34 exposures in 3 days at 50/50 -> 18 days', projectedDaysObserved(17, 17, 3, 0.5) === 18, projectedDaysObserved(17, 17, 3, 0.5));
+check('27. observed rate with an 80/20 split uses the smaller share (0.2)', projectedDaysObserved(17, 17, 3, 0.2) === 45, projectedDaysObserved(17, 17, 3, 0.2));
+check('28. nothing exposed yet has no observed projection', projectedDaysObserved(0, 0, 3) === null && projectedDaysObserved(5, 5, 0) === null);
 
 console.log('\n--- Auto-revert ---');
 const r1 = autoRevertCheck(20, 5, 7);   // expected 35, threshold 24.5 -> 20 is below

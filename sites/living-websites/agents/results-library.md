@@ -2,7 +2,7 @@
 
 The shared record of concluded tests across every enrolled site. The Scout reads it to replace the guessed lift in `payoff-scoring.md` with what has actually happened on similar pages. This is the advantage of hosting many sites: a new client starts with tests that already won (or lost) elsewhere.
 
-Nothing is built yet. There is no cross-site store. This file says what the record is, how it is matched, and how the Scout uses it, so the plugin and the controller can be built to it.
+Status 2026-11-16: the per-site half is built (plugin 0.4.0 keeps one row per concluded test in its own table and serves it at `GET /results`, see the last section). The cross-site store is not built. This file says what the record is, how it is matched, and how the Scout uses it, so the plugin and the controller can be built to it.
 
 ## One record per concluded test
 
@@ -77,3 +77,20 @@ Not in this repository (it is public, and the records come from client sites). A
 - Better lift estimates in the payoff score for every new site.
 - "Observe mode" for sites too small to test: they can inherit a change that won on several similar sites (a Phase B follow-up; the Judge still checks every inherited change against that site's own charter).
 - The owner report's line "tests like this one have won on N similar sites".
+
+## What the plugin records (0.4.0), and how it differs from the record above
+
+Plugin 0.4.0 writes one row per concluded test into `{prefix}spark_living_results` (when the test concludes; once, from the stored data, for tests that had already concluded) and serves them at `GET /results?per_page=20&page=1&outcome=&change_type=&scope=` (administrators only, newest first, `X-WP-Total` header). Nothing is sent anywhere. The shape follows the record above for every field the plugin can truthfully know:
+
+| Field in the record above | In `GET /results` |
+|---|---|
+| `record_id` | `<ended date>-<test id>`, no site key |
+| `site_key`, `industry` | **not present**: the plugin does not know them; the controller adds them when it copies the rows into the library |
+| `page_type` | only `home`, `product`, `sitewide`, `other` or `unknown` (the plugin knows the front page, a WooCommerce product, a sitewide test, and nothing finer); the controller can refine it |
+| `element` | the CSS selector (`element`), not the library's fixed element names; the controller maps it |
+| `change_type` | the test's own `change_type` (wording, color, shape, placement, visibility, style, block), or the one derived from the variant; the Scout's finer names (`cta_promote`, `headline`, ...) are not stored by the plugin |
+| `device`, `tier`, `started`, `ended`, `days`, `sessions_a`, `sessions_b`, `intent_rate_*`, `lead_rate_*`, `relative_lift_intent`, `relative_lift_leads`, `p_b_beats_a`, `verdict`, `shipped`, `met_minimum`, `summary`, `variant_a`, `variant_b` | present, as described above (`variant_a`/`variant_b` are the a_label and b_label) |
+| `holdout_note` | not present |
+| (new) | `test_id`, `test_name`, `scope` (page or sitewide), `outcome` (challenger won, original won, no difference, voided; a guard-blocked test is "original won" with `verdict: guard_blocked`), `max_days` (the stop date in days), `forced_start`, `payoff_score_at_start`, and the aliases `lift` (= `relative_lift_intent`) and `probability` (= `p_b_beats_a`) |
+
+A voided test (concluded with no verdict, for example one cleaned away) is recorded with its counts if it has any, otherwise zeros, and `outcome: "voided"`. The `met_minimum` flag uses the plugin's rule: both versions at 100 sessions or more and at least 7 days.

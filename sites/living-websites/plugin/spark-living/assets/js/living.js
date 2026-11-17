@@ -1,5 +1,5 @@
 /*!
- * Spark Living 0.3.0: assignment, selector-swap engine, event listeners and test-visit mode.
+ * Spark Living 0.4.0: assignment, selector-swap engine, event listeners and test-visit mode.
  * (Test-visit mode: a visit with ?sl_test=1 runs the variant code and records nothing; see README.)
  * Printed inline in <head> by the plugin. Plain ES5, no dependencies.
  * window.sparkLiving is set just before this file by the plugin.
@@ -118,12 +118,17 @@
 
 	for (i = 0; i < C.tests.length; i++) {
 		t = C.tests[i];
+		// A preview entry (a test that is not running yet) exists only in test-visit mode, in this browser only.
+		if (t.mode === 'preview' && !TEST) { continue; }
 		// A test scoped to the other device: this session sees the original and logs nothing for it.
 		if (!deviceOk(t)) {
 			if (t.mode === 'running') { skippedRunning = true; }
 			continue;
 		}
-		if (TEST && testForce) {
+		if (t.mode === 'preview') {
+			variant = testForce || 'B'; // A previewed test shows its challenger unless A is asked for.
+			label = variant;
+		} else if (TEST && testForce) {
 			variant = testForce; // Forced version, for both running and shipped tests.
 			label = testForce;
 		} else if (isHoldout) {

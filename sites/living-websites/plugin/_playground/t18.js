@@ -15,7 +15,13 @@ const sg = (n, over = {}) => ({
 
 (async () => {
   const a = await admin();
-  const api = (m, p, b) => a.api(m, p.replace('?', '&'), b);
+  // 0.4.0: an agent may queue nothing while the charter is a draft, so every charter save here is followed by the owner's approval
+  // (approving does not change the version, so the verdict/version logic under test is unchanged).
+  const api = async (m, p, b) => {
+    const r = await a.api(m, p.replace('?', '&'), b);
+    if (m === 'PUT' && p === '/charter' && r.status === 200) { await a.api('POST', '/charter/approve', { by: 'owner' }); }
+    return r;
+  };
   await q('reset_all');
   await q('upgrade');
 
@@ -80,8 +86,8 @@ const sg = (n, over = {}) => ({
   check('"  Agent:Sneaky" is still treated as an agent', r.status === 403, r.status);
 
   // Refusals are recorded in the ledger
-  const failedRows = (await api('GET', `/changes?subject_id=${s.id}&kind=test_queued`)).body;
-  check('refused agent attempts are recorded as failed test_queued rows with the reason', failedRows.length >= 4 && failedRows.every((x) => x.status === 'failed' && x.proposed_by.toLowerCase().includes('agent:') && x.gate_reasons.startsWith('Refused')), failedRows.map((x) => [x.status, x.proposed_by]));
+  const failedRows = (await api('GET', `/changes?subject_id=${s.id}&kind=queue_attempt`)).body;
+  check('refused agent attempts are recorded as failed queue_attempt rows with the reason (0.4.0: was test_queued)', failedRows.length >= 4 && failedRows.every((x) => x.status === 'failed' && x.proposed_by.toLowerCase().includes('agent:') && x.gate_reasons.startsWith('Refused')), failedRows.map((x) => [x.status, x.proposed_by]));
   check('a failed row cannot be undone', failedRows[0].can_undo === false);
 
   // Human queue works at every level, recorded as gate na
@@ -114,7 +120,7 @@ const sg = (n, over = {}) => ({
   const ver = (await api('GET', '/charter')).body.version;
   check('gate: stored fields (verdict, reasons capped at 600, by, at, charter version, risk tier)', r.status === 200 && stored.gate_verdict === 'pass' && stored.gate_reasons.length === 600 && stored.gate_by === 'agent:judge' && /^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d$/.test(stored.gate_at) && stored.gate_charter_version === ver && stored.risk_tier === 1 && stored.tier === 1, stored);
   const row = (await api('GET', `/changes?subject_id=${s.id}`)).body.find((x) => x.gate_verdict === 'pass' && /Goal Gate/.test(x.summary));
-  check('gate: writes a ledger row carrying the verdict, reasons, judge and charter version', row && row.gate_by === 'agent:judge' && row.charter_version === ver && row.gate_reasons.length === 600 && row.kind === 'other', row);
+  check('gate: writes a ledger row carrying the verdict, reasons, judge and charter version', row && row.gate_by === 'agent:judge' && row.charter_version === ver && row.gate_reasons.length === 600 && row.kind === 'gate_verdict', row); // 0.4.0: was kind other
   const sug = (await api('GET', '/suggestions')).body.suggestions.find((x) => x.id === s.id);
   check('GET /suggestions shows the gate fields', sug.gate_verdict === 'pass' && sug.gate_by === 'agent:judge' && sug.gate_charter_version === ver && sug.risk_tier === 1, sug);
   const bd = async (name, body, status, code) => { const x = await api('POST', `/suggestions/${s.id}/gate`, body); check('gate refused: ' + name, x.status === status && (!code || x.body.code === code), [x.status, x.body.code]); };

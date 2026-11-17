@@ -35,9 +35,10 @@ final class Spark_Living_Cron {
 	}
 
 	/**
-	 * Nightly work: evaluate the running test (weights, verdict, promotion,
-	 * evolution log), then check recent ships for auto-revert, then start the
-	 * next queued test when none is running, then prune.
+	 * Nightly work: evaluate the running test (stop date, weights, verdict,
+	 * promotion, evolution log), then check recent ships for auto-revert, then
+	 * (auto-pick, when allowed) start the next queued test when none is running,
+	 * then prune.
 	 */
 	public static function run(): void {
 		$running = Spark_Living_Store::get_running();
@@ -54,6 +55,9 @@ final class Spark_Living_Cron {
 		if ( $changed ) {
 			Spark_Living_Util::flush_page_cache();
 		}
+		// 0.4.0: at autonomy tier1 or full, with an approved charter, nothing running and nothing queued,
+		// queue the best qualifying suggestion (recorded as proposed by engine:auto-pick). Never at "suggest".
+		Spark_Living_Queue::auto_pick();
 		// Nothing running (it just concluded, or the line was empty): start the
 		// first queued test if its traffic count passes the gate. Never forced.
 		Spark_Living_Queue::start_next();

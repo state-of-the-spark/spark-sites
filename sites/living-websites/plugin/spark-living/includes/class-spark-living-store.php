@@ -36,6 +36,9 @@ final class Spark_Living_Store {
 
 	public const DEVICES = array( 'all', 'mobile', 'desktop' );
 
+	/** Where a test applies (0.4.0). A test stored without a scope is a page test. */
+	public const SCOPES = array( 'page', 'sitewide' );
+
 	/** What a test may say it is testing (0.1.4). */
 	public const CHANGE_TYPES = array( 'wording', 'color', 'shape', 'placement', 'visibility', 'style', 'block' );
 
@@ -130,6 +133,15 @@ final class Spark_Living_Store {
 			'gate_by'       => '',
 			'gate_at'       => '',
 			'gate_charter_version' => 0,
+			// 0.4.0: scope, the stop date that scales with traffic, and the payoff score.
+			'scope'         => '',
+			'max_days'      => 0,
+			'stop_basis'    => '',
+			'stop_updated_at' => '',
+			'payoff_score'  => '',
+			'payoff_inputs' => array(),
+			'payoff_version' => '',
+			'payoff_check'  => array(),
 		);
 	}
 
@@ -196,6 +208,12 @@ final class Spark_Living_Store {
 
 		$tier = ( isset( $args['tier'] ) && 2 === (int) $args['tier'] ) ? 2 : 1;
 
+		$scope = isset( $args['scope'] ) ? sanitize_key( (string) $args['scope'] ) : 'page';
+		$scope = '' === $scope ? 'page' : $scope;
+		if ( ! in_array( $scope, self::SCOPES, true ) ) {
+			return new WP_Error( 'spark_living_scope', __( 'scope must be page or sitewide.', 'spark-living' ), array( 'status' => 400 ) );
+		}
+
 		$id = wp_insert_post(
 			array(
 				'post_type'   => self::CPT_EXPERIMENT,
@@ -215,6 +233,7 @@ final class Spark_Living_Store {
 		$values['variants']     = $variants;
 		$values['tier']         = $tier;
 		$values['device']       = $device;
+		$values['scope']        = $scope;
 		$values['change_type']  = Spark_Living_Util::sanitize_change_type( $args['change_type'] ?? '' );
 		$values['a_label']      = Spark_Living_Util::sanitize_label( $args['a_label'] ?? '' );
 		$values['b_label']      = Spark_Living_Util::sanitize_label( $args['b_label'] ?? '' );
@@ -222,6 +241,15 @@ final class Spark_Living_Store {
 			update_post_meta( $id, '_spark_living_' . $key, wp_slash( $value ) );
 		}
 		return (int) $id;
+	}
+
+	/**
+	 * An empty experiment record (used to ask the Goal Gate rules about a test that does not exist yet).
+	 *
+	 * @return array
+	 */
+	public static function get_defaults_for_probe(): array {
+		return array_merge( self::meta_defaults(), array( 'id' => 0, 'name' => '', 'tier' => 1, 'scope' => 'page' ) );
 	}
 
 	/**
@@ -258,6 +286,11 @@ final class Spark_Living_Store {
 		$out['queue_order']    = (int) $out['queue_order'];
 		$out['gate_charter_version'] = (int) $out['gate_charter_version'];
 		$out['risk_tier']      = $out['tier']; // Alias: the risk tier is the test's tier (1, 2 or 3).
+		$out['scope']          = 'sitewide' === $out['scope'] ? 'sitewide' : 'page';
+		$out['max_days']       = (int) $out['max_days'];
+		$out['payoff_score']   = ( '' === $out['payoff_score'] || null === $out['payoff_score'] || ! is_numeric( $out['payoff_score'] ) ) ? null : (float) $out['payoff_score'];
+		$out['payoff_inputs']  = is_array( $out['payoff_inputs'] ) ? $out['payoff_inputs'] : array();
+		$out['payoff_check']   = is_array( $out['payoff_check'] ) ? $out['payoff_check'] : array();
 		$out['evidence']       = is_array( $out['evidence'] ) ? $out['evidence'] : array();
 		$out['promoted']       = (bool) $out['promoted'];
 		$out['revert_checked'] = (bool) $out['revert_checked'];
@@ -491,7 +524,7 @@ final class Spark_Living_Store {
 	/**
 	 * Start a draft or approved test. Enforces one running test per site.
 	 *
-	 * Eligibility (100+ sessions in 14 days) is checked by the callers through
+	 * Eligibility (a result reachable within 42 days, 75+ sessions in 14 days) is checked by the callers through
 	 * check_eligibility(); this method records the outcome on the experiment.
 	 *
 	 * @param int   $id   Experiment ID.
@@ -509,11 +542,20 @@ final class Spark_Living_Store {
 		if ( self::get_running() ) {
 			return new WP_Error( 'spark_living_busy', __( 'A test is already running. One test per site at a time.', 'spark-living' ), array( 'status' => 409 ) );
 		}
+		$clash = Spark_Living_Queue::selector_conflict( $exp );
+		if ( $clash ) {
+			return new WP_Error( 'spark_living_selector_in_use', sprintf( /* translators: 1: selector, 2: test name, 3: test id, 4: status */ __( 'Not started: the element %1$s is already used by "%2$s" (test %3$d, %4$s). Only one test can touch a given element at a time.', 'spark-living' ), (string) $exp['target'], $clash['name'], (int) $clash['id'], $clash['status'] . ( $clash['promoted'] ? ', shipped winner' : '' ) ), array( 'status' => 409 ) );
+		}
+		$start_sessions = isset( $opts['start_sessions_14d'] ) ? max( 0, (int) $opts['start_sessions_14d'] ) : 0;
+		$max_days       = Spark_Living_Stats::stop_days( (float) $start_sessions );
 		self::update(
 			$id,
 			array(
-				'status'     => self::STATUS_RUNNING,
-				'start_date' => Spark_Living_Util::mysql_utc(),
+				'status'          => self::STATUS_RUNNING,
+				'max_days'        => $max_days,
+				'stop_basis'      => 'start_traffic',
+				'stop_updated_at' => Spark_Living_Util::mysql_utc(),
+				'start_date'      => Spark_Living_Util::mysql_utc(),
 				'weights'    => array(
 					'A' => 0.5,
 					'B' => 0.5,
@@ -529,20 +571,24 @@ final class Spark_Living_Store {
 				'kind'         => 'test_started',
 				'subject_type' => 'test',
 				'subject_id'   => (string) $id,
-				'summary'      => sprintf( /* translators: 1: test name, 2: where */ __( 'Test started: "%1$s" on %2$s, split 50/50.', 'spark-living' ), $exp['name'], '' !== (string) $exp['target'] ? $exp['target'] : __( 'a Living Block', 'spark-living' ) ),
+				'summary'      => sprintf( /* translators: 1: test name, 2: where, 3: stop date */ __( 'Test started: "%1$s" on %2$s, split 50/50. Stops by %3$s at the latest.', 'spark-living' ), $exp['name'], '' !== (string) $exp['target'] ? $exp['target'] : __( 'a Living Block', 'spark-living' ), wp_date( 'M j', time() + $max_days * DAY_IN_SECONDS ) ),
 				'before'       => array( 'status' => $exp['status'] ),
 				'after'        => array(
-					'status'  => 'running',
-					'weights' => array(
+					'status'   => 'running',
+					'weights'  => array(
 						'A' => 0.5,
 						'B' => 0.5,
 					),
-					'device'  => $exp['device'],
+					'device'   => $exp['device'],
+					'max_days' => $max_days,
+					'scope'    => $exp['scope'],
 				),
 				'proposed_by'  => '' !== $by ? $by : 'owner',
 				'evidence'     => array(
-					'sessions_14d' => isset( $opts['start_sessions_14d'] ) ? max( 0, (int) $opts['start_sessions_14d'] ) : 0,
-					'forced_start' => ! empty( $opts['forced_start'] ),
+					'sessions_14d'   => $start_sessions,
+					'forced_start'   => ! empty( $opts['forced_start'] ),
+					'projected_days' => Spark_Living_Stats::projected_days( (float) $start_sessions ),
+					'max_days'       => $max_days,
 				),
 			)
 		);
@@ -550,49 +596,58 @@ final class Spark_Living_Store {
 	}
 
 	/**
-	 * Eligibility at start: the target page (for a device-scoped test, the
-	 * target page on that device) needs 100 or more sessions in the last 14
-	 * days. The plugin has no pageview data, so the caller (the brain, from
-	 * GA4) states the number as `sessions_14d`. An administrator may start a
-	 * test below the bar with force; that is recorded on the experiment.
+	 * Eligibility at start (0.4.0): can this test reach a result within 42 days?
+	 * The caller (the brain, from GA4) states sessions_14d: the sessions on the
+	 * target page (on that device for a device-scoped test) in the last 14 days;
+	 * for a whole-site test, the sessions on the whole site. At that traffic, with
+	 * a 50/50 split and the 10 percent holdout, the days until each version
+	 * reaches 100 sessions must be 42 or fewer (75 sessions in 14 days or more).
+	 * An administrator may start a test below the bar with force; that is recorded.
 	 *
 	 * @param mixed  $sessions Raw sessions_14d (null or '' when not sent).
 	 * @param bool   $force    Raw force flag.
 	 * @param string $device   all, mobile or desktop (used in the message).
-	 * @return array{sessions: int, forced: bool}|WP_Error
+	 * @param string $scope    page or sitewide (used in the message).
+	 * @return array{sessions: int, forced: bool, projected_days: int|null, max_days: int}|WP_Error
 	 */
-	public static function check_eligibility( $sessions, bool $force, string $device = 'all' ) {
-		$min     = Spark_Living_Stats::ELIGIBILITY_SESSIONS;
-		$has     = ( null !== $sessions && '' !== $sessions );
-		$where   = ( 'all' === $device ) ? __( 'on the target page', 'spark-living' ) : sprintf( /* translators: %s: mobile or desktop */ __( 'on the target page on %s', 'spark-living' ), $device );
+	public static function check_eligibility( $sessions, bool $force, string $device = 'all', string $scope = 'page' ) {
+		$min = Spark_Living_Stats::ELIGIBILITY_SESSIONS;
+		$has = ( null !== $sessions && '' !== $sessions );
+		if ( 'sitewide' === $scope ) {
+			$where = __( 'on the whole site', 'spark-living' );
+		} else {
+			$where = ( 'all' === $device ) ? __( 'on the target page', 'spark-living' ) : sprintf( /* translators: %s: mobile or desktop */ __( 'on the target page on %s', 'spark-living' ), $device );
+		}
 		$can_all = current_user_can( 'manage_options' );
 
 		if ( $has && ( ! is_numeric( $sessions ) || (float) $sessions < 0 || (float) $sessions !== floor( (float) $sessions ) ) ) {
 			return new WP_Error( 'spark_living_sessions_invalid', __( 'sessions_14d must be a whole number of zero or more.', 'spark-living' ), array( 'status' => 400 ) );
 		}
-		$n = $has ? (int) $sessions : 0;
+		$n    = $has ? (int) $sessions : 0;
+		$days = Spark_Living_Stats::projected_days( (float) $n );
+		$ok   = array(
+			'sessions'       => $n,
+			'forced'         => false,
+			'projected_days' => $days,
+			'max_days'       => Spark_Living_Stats::stop_days( (float) $n ),
+		);
 
-		if ( $has && $n >= $min ) {
-			return array(
-				'sessions' => $n,
-				'forced'   => false,
-			);
+		if ( $has && Spark_Living_Stats::reachable( (float) $n ) ) {
+			return $ok;
 		}
 		if ( $force ) {
 			if ( ! $can_all ) {
-				return new WP_Error( 'spark_living_force_denied', __( 'Only an administrator can force a start below the session bar.', 'spark-living' ), array( 'status' => 403 ) );
+				return new WP_Error( 'spark_living_force_denied', __( 'Only an administrator can force a start that cannot reach a result in time.', 'spark-living' ), array( 'status' => 403 ) );
 			}
-			return array(
-				'sessions' => $n,
-				'forced'   => true,
-			);
+			$ok['forced'] = true;
+			return $ok;
 		}
 		if ( ! $has ) {
 			return new WP_Error(
 				'spark_living_eligibility_missing',
 				sprintf(
 					/* translators: 1: where, 2: minimum sessions */
-					__( 'Not started: send sessions_14d, the sessions %1$s in the last 14 days. A test needs at least %2$d. An administrator can send force:true to start anyway.', 'spark-living' ),
+					__( 'Not started: send sessions_14d, the sessions %1$s in the last 14 days. A test needs at least %2$d, so that each version can reach 100 sessions within 42 days. An administrator can send force:true to start anyway.', 'spark-living' ),
 					$where,
 					$min
 				),
@@ -600,23 +655,27 @@ final class Spark_Living_Store {
 					'status'   => 400,
 					'required' => $min,
 					'device'   => $device,
+					'scope'    => $scope,
 				)
 			);
 		}
 		return new WP_Error(
 			'spark_living_not_eligible',
 			sprintf(
-				/* translators: 1: sessions, 2: where, 3: minimum sessions */
-				__( 'Not started: only %1$d sessions %2$s in the last 14 days; a test needs at least %3$d. An administrator can send force:true to start anyway; the start is then recorded as below the bar.', 'spark-living' ),
+				/* translators: 1: sessions, 2: where, 3: days, 4: minimum sessions */
+				__( 'Not started: only %1$d sessions %2$s in the last 14 days. At that rate each version would take %3$s days to reach 100 sessions, longer than the 42-day limit; a test needs at least %4$d sessions in 14 days. An administrator can send force:true to start anyway; the start is then recorded as unable to finish in time.', 'spark-living' ),
 				$n,
 				$where,
+				null === $days ? __( 'more than 42', 'spark-living' ) : (string) $days,
 				$min
 			),
 			array(
-				'status'       => 422,
-				'sessions_14d' => $n,
-				'required'     => $min,
-				'device'       => $device,
+				'status'         => 422,
+				'sessions_14d'   => $n,
+				'required'       => $min,
+				'projected_days' => $days,
+				'device'         => $device,
+				'scope'          => $scope,
 			)
 		);
 	}

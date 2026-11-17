@@ -1,6 +1,6 @@
 # Payoff scoring
 
-How the Scout ranks candidate tests, how the Judge checks the ranking, and why this site gets bold tests before small ones. The code is `payoff.js` in this folder (no dependencies; `node payoff.js --test` runs 21 checks; `node payoff.js candidates.json` ranks a file).
+How the Scout ranks candidate tests, how the Judge checks the ranking, and why this site gets bold tests before small ones. The code is `payoff.js` in this folder (no dependencies; `node payoff.js --test` runs 26 checks; `node payoff.js candidates.json` ranks a file; `pluginPayload()` turns a candidate into the fields `POST /suggestions` and `PATCH /suggestions/{id}` accept). Updated 2026-11-16 for plugin 0.4.0: the 14 day hard stop became a stop that scales with traffic (14 to 42 days).
 
 ## The formula
 
@@ -16,7 +16,7 @@ score = sessions_reaching x proximity x lift x power_factor / days_needed
 | `proximity` | 0 to 1: how close the element is to a lead. | The scale below. |
 | `lift` | Expected relative gain in the lead-side rate, from the prior table, blended with the results library when it has similar tests. | The table below. A prior, not data. |
 | `power_factor` | 0 to 1: how likely this test is to show its effect at the sample it can reach. Equals `lift / mde`, capped at 1. | Section "Why bold beats small". This is an addition to the roadmap formula; without it the score treats a test too small to tell anything apart as if it would. |
-| `days_needed` | Days to a result, between 7 and 14. | Section "Days needed". |
+| `days_needed` | Days to a result, between 7 and 42 (the days each version needs to reach 100 sessions at this traffic, 7 at the least). | Section "Days needed". |
 
 The score has no unit a person should read into; only the order matters. Doubling the score means a candidate is worth about twice as much testing time.
 
@@ -56,30 +56,32 @@ The score has no unit a person should read into; only the order matters. Doublin
 
 ## Days needed, and the traffic classes
 
-The plugin's fixed rules (Spark_Living_Stats): a result needs **100 sessions per version and 7 full days**, and every test stops at **14 days**. A new test starts at 50/50 among the 90 percent of visitors who are not in the permanent 10 percent holdout, so each version gets **45 percent of the page's visits**.
+The plugin's rules from 0.4.0 (Spark_Living_Stats): a result needs **100 sessions per version and 7 full days**. A test's last day is no longer a fixed 14: it is **the number of days projected to reach 100 sessions per version, rounded up, never below 14 and never above 42**. A new test starts at 50/50 among the 90 percent of visitors who are not in the permanent 10 percent holdout, so each version gets **45 percent of the page's visits**.
 
 ```
 per_version_per_day = sessions_14d / 14 x 0.45
-days_to_100         = 100 / per_version_per_day
-days_needed         = min(14, max(7, days_to_100))
+projected_days      = ceil(100 / per_version_per_day)
+days_to_result      = max(7, projected_days)        (the days_needed above)
+stop_days           = clamp(projected_days, 14, 42) (the test's last day, stored on the test)
 ```
 
-Three classes, which decide rank before score does:
+The plugin refuses to start a test whose `projected_days` is over 42 (fewer than 75 sessions in 14 days), unless an administrator forces it. After the start the nightly job recomputes the stop date from the exposure rate the test has actually had (from day 3 and 20 exposed sessions), within the same 14 to 42 days. The score divides by `min(42, max(7, days_to_100))`, so a slow test scores lower than the same test on a busier page.
+
+Two classes, which decide rank before score does:
 
 | Class | Rule | Meaning |
 |---|---|---|
-| `decidable` | the test can reach 100 sessions per version inside 14 days (needs 223 or more sessions in 14 days) | ranked first |
-| `below_minimum` | it cannot reach 100 per version in 14 days, but the page has 100 or more sessions so the plugin will let it start | **ranked after every decidable candidate.** Under the plugin's current rules such a test can only end at the 14-day stop as "no difference"; it cannot ship a winner. |
-| `below_minimum_not_eligible` | fewer than 100 sessions in 14 days, so the plugin refuses to start it | ranked after the above |
+| `decidable` | `projected_days` is 42 or fewer (75 or more sessions in 14 days) | ranked first |
+| `below_minimum` | `projected_days` is over 42 | **ranked after every decidable candidate.** The plugin will not start it on its own; forced, it would end at the 42 day stop as "no difference". |
 | (excluded) | tier 3 | score 0, last, never proposed |
 
-Sessions needed in 14 days: **223** to be decidable at all (14 days needed); **445** to be decidable in the 7 day minimum.
+Boundaries (checked in `payoff.js --test` and in the plugin's own tests): 223 sessions in 14 days gives 14 days, 222 gives 15, 137 gives 23, 100 gives 32, 75 gives 42, 74 gives 43 (too slow). Sessions needed for a 7 day result: 445.
 
 ## What this means at low traffic: sparkmysite.com
 
-The homepage had 137 sessions in the 14 days ending 2026-11-11 (96 desktop, 41 phone). That is 61.7 sessions per version by day 14 and would take 22.7 days to reach 100. **No test confined to the homepage can be decided by the rules as they stand.** Only a page or an element with at least 223 sessions in 14 days can. Whole-site elements pool traffic: the whole site had 526 sessions in the same 14 days, which is decidable in the 7 day minimum, but only for an element that exists on every page counted.
+The homepage had 137 sessions in the 14 days ending 2026-11-11 (96 desktop, 41 phone). Under the old fixed 14 day stop that was 61.7 sessions per version, and **no homepage test could ever be decided**. Under the 0.4.0 rule the same test takes **23 days** (137 sessions give 22.7 days to 100 per version): it can finish, and its stop date is 23 days after it starts. Phone-only tests are still too slow (41 sessions need 76 days). Whole-site elements pool traffic: the whole site had 526 sessions, which reaches a result in 7 days (the stop date is floored at 14), but only for an element that exists on every page counted; such a test uses `scope: "sitewide"` and the whole-site count.
 
-So when the Orchestrator finds that no candidate is decidable, it queues nothing, and says so, and names the three remedies: pool traffic (find a whole-site element), raise traffic (ads), or have the owner change the plugin's rule for small sites (for example a lower per-version minimum with a higher certainty bar).
+When the Orchestrator finds that no candidate is decidable, it queues nothing, says so, and names the remedies: pool traffic (a whole-site element), or raise traffic (ads).
 
 ## Why bold beats small here
 
@@ -89,7 +91,7 @@ A test's chance to show a real difference depends on its sample. The smallest re
 mde = 2.12 x sqrt(2 x p x (1 - p) / n) / p
 ```
 
-With the assumed baseline of 6 percent:
+With the assumed baseline of 6 percent (the table counts the sessions a test has at the end of 14 days; a test with a longer stop collects more, up to 100 per version, which is the 119 percent row):
 
 | Sessions in 14 days | Per version at the end | Smallest lift the test could call |
 |---|---|---|
@@ -102,12 +104,12 @@ With the assumed baseline of 6 percent:
 
 Every prior in the table is far below those figures. At this site's traffic even a doubling is hard to call. So the chance that a test shows its effect is roughly `lift / mde` (capped at 1), and the score includes that as `power_factor`. The result: **while a test is too small to see its effect, the score grows with the square of the lift.** Five times the lift is 25 times the score. A colour change (0.03) scores one twenty-fifth of a new call button (0.15) with everything else equal. A small tweak is not just less valuable; it is almost unmeasurable. Hence the Scout's rule: propose changes a visitor would clearly notice, and keep them on the lead.
 
-The same reasoning is why results come at the rate they do: at one page with 137 visits, one 14-day test gives at most one "no difference", about two a month.
+The same reasoning is why results come at the rate they do: at one page with 137 visits a test takes 23 days, so about one result a month, and it can now be a real one.
 
 ## Assumptions to replace
 
 - `baseline_rate` defaults to **0.06**. It is a guess. As soon as the plugin reports a real intent rate for the page, the Scout passes it in.
-- The 45 percent share assumes the plugin's start split. The plugin shifts weights nightly (within 20 to 80 percent); the scorer ignores that, which is fair before the first test.
+- The 45 percent share assumes the plugin's start split. The plugin shifts weights nightly (within 20 to 80 percent, and not before each version has 30 exposures); the scorer ignores that, which is fair before the first test.
 - `reach_share` below the first screen is an estimate until the site records scroll depth.
 - The lift prior is a prior.
 - The model is a ranking aid, not a forecast. Nothing in it is shown to an owner as a promise.

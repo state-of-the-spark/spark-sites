@@ -32,8 +32,19 @@ final class Spark_Living_Ledger {
 		'charter_update',
 		'rows_removed',
 		'plugin_update',
+		// 0.4.0.
+		'gate_verdict',
+		'suggestion_created',
+		'suggestion_updated',
+		'queue_attempt',
+		'audit',
+		'stop_date_changed',
+		'charter_approved',
 		'other',
 	);
+
+	/** Kinds only a holder of the gate capability may post through POST /changes. */
+	public const GATE_KINDS = array( 'gate_verdict' );
 
 	public const VERDICTS = array( 'pass', 'fail', 'hold', 'na' );
 	public const STATUSES = array( 'applied', 'undone', 'failed' );
@@ -480,6 +491,13 @@ final class Spark_Living_Ledger {
 			'charter_update'  => __( 'Site goals saved', 'spark-living' ),
 			'rows_removed'    => __( 'Rows removed', 'spark-living' ),
 			'plugin_update'   => __( 'Plugin update', 'spark-living' ),
+			'gate_verdict'    => __( 'Goal Gate verdict', 'spark-living' ),
+			'suggestion_created' => __( 'Test suggested', 'spark-living' ),
+			'suggestion_updated' => __( 'Suggestion updated', 'spark-living' ),
+			'queue_attempt'   => __( 'Queue attempt', 'spark-living' ),
+			'audit'           => __( 'Audit', 'spark-living' ),
+			'stop_date_changed' => __( 'Stop date changed', 'spark-living' ),
+			'charter_approved' => __( 'Site goals approved', 'spark-living' ),
 			'other'           => __( 'Other change', 'spark-living' ),
 		);
 		return $labels[ $kind ] ?? $kind;

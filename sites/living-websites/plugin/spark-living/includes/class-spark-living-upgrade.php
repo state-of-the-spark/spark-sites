@@ -1,6 +1,6 @@
 <?php
 /**
- * Spark Living: the upgrade routine (0.3.0).
+ * Spark Living: the upgrade routine (0.3.0, extended in 0.4.0).
  *
  * Runs on `init` (priority 1) whenever the stored database version or plugin
  * version differs from the code. Creates or updates both tables with dbDelta
@@ -41,7 +41,7 @@ final class Spark_Living_Upgrade {
 	/**
 	 * The upgrade. Safe to call any number of times.
 	 *
-	 * @return array{ran: bool, from: string, to: string, backfilled: int, plugin_update_rows: int}
+	 * @return array{ran: bool, from: string, to: string, backfilled: int, plugin_update_rows: int, results_backfilled: int, stop_dates_set: int}
 	 */
 	public static function run(): array {
 		$out = array(
@@ -50,6 +50,8 @@ final class Spark_Living_Upgrade {
 			'to'                 => SPARK_LIVING_VERSION,
 			'backfilled'         => 0,
 			'plugin_update_rows' => 0,
+			'results_backfilled' => 0,
+			'stop_dates_set'     => 0,
 		);
 
 		// One run at a time (two requests can arrive together right after a file copy).
@@ -69,6 +71,7 @@ final class Spark_Living_Upgrade {
 
 		Spark_Living_Metrics::create_table();
 		Spark_Living_Ledger::create_table();
+		Spark_Living_Results::create_table();
 		update_option( 'spark_living_db_version', SPARK_LIVING_DB_VERSION, false );
 
 		if ( ! get_option( self::OPT_BACKFILL ) ) {
@@ -93,6 +96,20 @@ final class Spark_Living_Upgrade {
 				)
 			);
 			$out['plugin_update_rows'] = $id ? 1 : 0;
+		}
+
+		// 0.4.0: one results row per concluded test (once; a second run finds them all and adds none).
+		if ( ! get_option( Spark_Living_Results::OPT_BACKFILL ) ) {
+			$out['results_backfilled'] = Spark_Living_Results::backfill();
+			update_option( Spark_Living_Results::OPT_BACKFILL, Spark_Living_Util::mysql_utc(), false );
+		}
+
+		// 0.4.0: a test that was already running gets its stop date from the same code the nightly job uses.
+		// Its start time, variants, weights and events are not touched.
+		$running = Spark_Living_Store::get_running();
+		if ( $running && (int) $running['max_days'] <= 0 ) {
+			$r                      = Spark_Living_Engine::refresh_stop_date( $running, 'upgrade' );
+			$out['stop_dates_set'] = $r['changed'] ? 1 : 0;
 		}
 
 		update_option( self::OPT_VERSION, SPARK_LIVING_VERSION, false );

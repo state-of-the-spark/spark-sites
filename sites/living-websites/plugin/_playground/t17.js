@@ -96,7 +96,7 @@ const kinds = (list) => list.map((x) => x.kind);
 
   // ---------- speed (record only) ----------
   let s = (await api('GET', '/state')).body;
-  check('GET /state: charter, changes (max 10), speed null, rules.min_exposures_before_shift, version 0.3.0', s.charter && s.charter.version === 3 && Array.isArray(s.changes) && s.changes.length <= 10 && s.changes.length > 0 && s.speed === null && s.rules.min_exposures_before_shift === 30 && s.plugin_version === '0.3.0', [s.plugin_version, s.speed, s.rules]);
+  check('GET /state: charter, changes (max 10), speed null, rules.min_exposures_before_shift, version 0.4.0', s.charter && s.charter.version === 3 && Array.isArray(s.changes) && s.changes.length <= 10 && s.changes.length > 0 && s.speed === null && s.rules.min_exposures_before_shift === 30 && s.plugin_version === '0.4.0', [s.plugin_version, s.speed, s.rules]);
   r = await api('POST', '/changes', { kind: 'other', subject_type: 'speed', subject_id: 'home', summary: 'Speed measured on the homepage.', proposed_by: 'agent:auditor', after: { load_ms: 880, button_visible_ms: 410, added_kb: 4.6 } });
   s = (await api('GET', '/state')).body;
   check('GET /state: speed holds the last posted values', s.speed && s.speed.load_ms === 880 && s.speed.button_visible_ms === 410 && s.speed.added_kb === 4.6 && s.speed.measured_by === 'agent:auditor' && /^\d{4}-/.test(s.speed.measured_at), s.speed);
@@ -174,7 +174,8 @@ const kinds = (list) => list.map((x) => x.kind);
   // ---------- wp-admin charter screen ----------
   const adminPage = await (await fetch(`${BASE}/wp-admin/admin.php?page=spark-living-charter`, { headers: { cookie: a.cookie() } })).text();
   check('wp-admin charter screen renders with the form and current values', /name="spark_living_nonce"/.test(adminPage) && /name="business_name"/.test(adminPage) && /Spark Sites/.test(adminPage) && /name="autonomy_level"/.test(adminPage), adminPage.slice(0, 200));
-  const nonce = (adminPage.match(/name="spark_living_nonce" value="([a-f0-9]+)"/) || [])[1];
+  // 0.4.0: the screen has two forms (save and approve) with the same field name; take the nonce that belongs to the save form.
+  const nonce = (adminPage.match(/spark_living_save_charter">[\s\S]*?name="spark_living_nonce" value="([a-f0-9]+)"/) || [])[1];
   const body = new URLSearchParams({ action: 'spark_living_save_charter', spark_living_nonce: nonce, _wp_http_referer: '/wp-admin/admin.php?page=spark-living-charter', business_name: 'Saved From Admin', business_goal: 'Goal text', pc_type: 'call', pc_description: 'Tap to call', pc_selector: '', secondary: 'form | Contact form | #contact form\nbooking | Book a slot |', audience: 'Locals', colors: '#112233, #445566', fonts: 'Inter', button_shape: 'rounded', voice_notes: 'Warm', off_limits: 'Prices\nGuarantees', autonomy_level: 'full', load_ms: '2000', button_visible_ms: '500', max_added_kb: '10' });
   const post = await fetch(`${BASE}/wp-admin/admin-post.php`, { method: 'POST', redirect: 'manual', headers: { cookie: a.cookie(), 'content-type': 'application/x-www-form-urlencoded' }, body });
   const cAfter = (await api('GET', '/charter')).body;
@@ -192,14 +193,14 @@ const kinds = (list) => list.map((x) => x.kind);
   await q('set_weights', `&id=${runT.id}&wa=0.8&wb=0.2`);
   await q('ledger_wipe');
   const up = JSON.parse(await q('fresh'));
-  check('upgrade from 0.2.0: ran, from 0.2.0 to 0.3.0, rows backfilled', up.ran === true && up.from === '0.2.0' && up.to === '0.3.0' && up.backfilled >= 4 && up.plugin_update_rows === 1, up);
+  check('upgrade from 0.2.0: ran, from 0.2.0 to 0.4.0 (the current version), rows backfilled', up.ran === true && up.from === '0.2.0' && up.to === '0.4.0' && up.backfilled >= 4 && up.plugin_update_rows === 1, up);
   check('upgrade: the ledger table exists again', (await q('table')) === 'yes');
   const rows = JSON.parse(await q('ledger_rows'));
   const by = (k, sid) => rows.filter((x) => x.kind === k && (sid === undefined || x.subject_id === String(sid)));
   check('backfill: test_started at the real start time (2026-11-13 13:58:11)', by('test_started', runT.id).length === 1 && by('test_started', runT.id)[0].created_at === '2026-11-13 13:58:11', by('test_started', runT.id));
   check('backfill: both suggestions, at their stored suggested_at', by('test_suggested', sgA.id).length === 1 && by('test_suggested', sgB.id).length === 1 && by('test_suggested', sgA.id)[0].created_at === sgA.suggested_at && by('test_suggested', sgA.id)[0].proposed_by === 'Lumen page review', by('test_suggested'));
   const pu = by('plugin_update');
-  check('backfill: plugin installed row (first activity) and plugin_update 0.2.0 to 0.3.0', pu.length === 2 && pu.some((x) => /updated from 0\.2\.0 to 0\.3\.0/.test(x.summary)) && pu.some((x) => /installed on this site/.test(x.summary)), pu.map((x) => x.summary));
+  check('backfill: plugin installed row (first activity) and plugin_update 0.2.0 to 0.4.0', pu.length === 2 && pu.some((x) => /updated from 0\.2\.0 to 0\.4\.0/.test(x.summary)) && pu.some((x) => /installed on this site/.test(x.summary)), pu.map((x) => x.summary));
   check('backfill: 80/20 weights noted as time unknown, before 50/50, after 80/20', by('weights_changed', runT.id).length === 1 && JSON.parse(by('weights_changed', runT.id)[0].after_json).A === 0.8 && /exact time was not recorded/.test(by('weights_changed', runT.id)[0].summary), by('weights_changed'));
   check('backfill rows are flagged in evidence', rows.filter((x) => x.kind !== 'plugin_update' || /installed on this/.test(x.summary)).every((x) => JSON.parse(x.evidence_json).backfill === true));
   const n1 = Number(await q('ledger_count'));

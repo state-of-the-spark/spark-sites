@@ -27,6 +27,7 @@ final class Spark_Living_Dashboard {
 		add_action( 'admin_post_spark_living_start', array( __CLASS__, 'handle_start' ) );
 		add_action( 'admin_post_spark_living_conclude', array( __CLASS__, 'handle_conclude' ) );
 		add_action( 'admin_post_spark_living_save_charter', array( __CLASS__, 'handle_save_charter' ) );
+		add_action( 'admin_post_spark_living_approve_charter', array( __CLASS__, 'handle_approve_charter' ) );
 	}
 
 	/**
@@ -225,11 +226,10 @@ final class Spark_Living_Dashboard {
 	 * @return string
 	 */
 	private static function forced_label( int $sessions ): string {
-		$bar = Spark_Living_Stats::ELIGIBILITY_SESSIONS;
 		if ( $sessions > 0 ) {
-			return sprintf( /* translators: 1: session bar, 2: sessions stated at start */ __( 'Started below the %1$d-session bar (%2$s sessions in the last 14 days).', 'spark-living' ), $bar, number_format_i18n( $sessions ) );
+			return sprintf( /* translators: %s: sessions stated at start */ __( 'Started although it cannot reach 100 sessions per version within 42 days (%s sessions in the last 14 days).', 'spark-living' ), number_format_i18n( $sessions ) );
 		}
-		return sprintf( /* translators: %d: session bar */ __( 'Started below the %d-session bar (no session count given).', 'spark-living' ), $bar );
+		return __( 'Started although it cannot reach 100 sessions per version within 42 days (no session count given).', 'spark-living' );
 	}
 
 	/**
@@ -374,6 +374,17 @@ body.sl-page{margin:0;background:#ffffff}
 .sl-dash .sl-log-state{font-weight:700;font-size:.85rem;color:var(--sl-muted)}
 .sl-dash .sl-changes .sl-acts{margin:.5rem 0 .1rem}
 @media (max-width:600px){.sl-dash dl.sl-kv>div{grid-template-columns:minmax(0,1fr)}.sl-dash .sl-changes button.sl-btn{flex:1 1 100%}}
+/* Payoff, scope, stop date and the rejected list (0.4.0). */
+.sl-dash p.sl-payoff{margin:.4rem 0}
+.sl-dash .sl-small{font-size:.8rem;color:var(--sl-muted)}
+.sl-dash p.sl-scope{margin:.1rem 0 .25rem;font-size:.9rem}
+.sl-dash details.sl-rejected{margin:1rem 0;border:1px solid var(--sl-line);border-radius:6px;padding:.4rem .8rem;background:var(--sl-card)}
+.sl-dash details.sl-rejected>summary{cursor:pointer;font-weight:700;padding:.3rem 0}
+.sl-dash details.sl-rejected>summary:focus-visible{outline:3px solid var(--sl-chal);outline-offset:3px}
+.sl-dash .sl-rej{background:var(--sl-bg)}
+.sl-dash p.sl-sched{margin:.2rem 0}
+.sl-dash .sl-draft{color:var(--sl-hold);font-weight:700}
+.sl-dash .sl-approved{color:var(--sl-pass);font-weight:700}
 </style>';
 	}
 
@@ -582,7 +593,9 @@ body.sl-page{margin:0;background:#ffffff}
 		<p><?php echo esc_html( $exp['hypothesis'] ); ?></p>
 		<?php endif; ?>
 		<?php echo self::comparison( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-		<p class="sl-muted"><?php echo esc_html( sprintf( /* translators: 1: days, 2: hard stop days, 3: start date */ __( 'Day %1$s of %2$d (started %3$s).', 'spark-living' ), number_format_i18n( floor( $snap['days_running'] ) + 1 ), Spark_Living_Stats::HARD_STOP_DAYS, self::date( (string) $exp['start_date'] ) ) ); ?></p>
+		<?php $sch = $snap['schedule']; ?>
+		<p class="sl-muted sl-sched" id="sl-schedule"><?php echo esc_html( sprintf( /* translators: 1: day number, 2: days in all, 3: start date, 4: earliest read date, 5: stop date */ __( 'Day %1$s of %2$d. Started %3$s. Earliest read %4$s. Stops %5$s at the latest.', 'spark-living' ), number_format_i18n( $sch['day'] ), (int) $sch['max_days'], self::date( (string) $sch['start'] ), self::date( (string) $sch['earliest_read'] ), self::date( (string) $sch['stop'] ) ) ); ?></p>
+		<p class="sl-muted sl-sched"><?php echo esc_html( sprintf( /* translators: %d: days */ __( 'The stop date follows the traffic: it is the days each version needs to reach 100 sessions at this rate, never fewer than 14 or more than 42 (here %d).', 'spark-living' ), (int) $sch['max_days'] ) ); ?></p>
 		<p class="sl-muted"><?php echo esc_html( self::device_label( (string) $exp['device'] ) ); ?></p>
 			<?php if ( $exp['forced_start'] ) : ?>
 		<p class="sl-warn" id="sl-forced"><?php echo esc_html( self::forced_label( (int) $exp['start_sessions_14d'] ) ); ?></p>
@@ -665,6 +678,9 @@ body.sl-page{margin:0;background:#ffffff}
 	 * @return string
 	 */
 	private static function where_label( array $exp ): string {
+		if ( 'sitewide' === ( $exp['scope'] ?? 'page' ) ) {
+			return __( 'Whole site (every page where the element appears)', 'spark-living' );
+		}
 		$page = (string) $exp['page'];
 		if ( '' === $page ) {
 			return '';
@@ -686,24 +702,24 @@ body.sl-page{margin:0;background:#ffffff}
 	 * @return string HTML.
 	 */
 	private static function traffic_html( array $exp ): string {
-		$t    = Spark_Living_Queue::traffic( $exp );
-		$line = sprintf(
+		$t     = Spark_Living_Queue::traffic( $exp );
+		$whole = ( 'sitewide' === $t['scope'] ) ? ' ' . __( 'on the whole site', 'spark-living' ) : '';
+		$line  = sprintf(
 			/* translators: 1: sessions, 2: date */
-			__( '%1$s sessions in 14 days (measured %2$s).', 'spark-living' ),
+			__( '%1$s sessions%3$s in 14 days (measured %2$s).', 'spark-living' ),
 			number_format_i18n( $t['sessions'] ),
-			self::short_date( $t['as_of'] )
+			self::short_date( $t['as_of'] ),
+			$whole
 		);
 		$html = '<p class="sl-traffic"><strong>' . esc_html__( 'Traffic:', 'spark-living' ) . '</strong> ' . esc_html( $line ) . ' ';
-		if ( $t['meets_min'] ) {
-			$html .= '<span class="sl-traffic-ok">' . esc_html(
-				sprintf( /* translators: %d: minimum sessions */ __( 'Meets the %d-session minimum.', 'spark-living' ), $t['min'] )
-			) . '</span>';
+		if ( null === $t['projected_days'] ) {
+			$html .= '<span class="sl-traffic-low">' . esc_html__( 'At this traffic a result cannot be reached; this would need a forced start.', 'spark-living' ) . '</span>';
+		} elseif ( $t['reachable'] ) {
+			$html .= '<span class="sl-traffic-ok">' . esc_html( sprintf( /* translators: %d: days */ __( 'At this traffic a result takes about %d days.', 'spark-living' ), (int) $t['days_to_result'] ) ) . '</span>';
 		} else {
-			$html .= '<span class="sl-traffic-low">' . esc_html(
-				sprintf( /* translators: %d: minimum sessions */ __( 'Below the %d-session minimum; this would need a forced start.', 'spark-living' ), $t['min'] )
-			) . '</span>';
+			$html .= '<span class="sl-traffic-low">' . esc_html( sprintf( /* translators: 1: days, 2: limit */ __( 'At this traffic a result takes about %1$d days, more than the %2$d-day limit; this would need a forced start.', 'spark-living' ), (int) $t['projected_days'], Spark_Living_Stats::MAX_STOP_DAYS ) ) . '</span>';
 		}
-		if ( $t['meets_min'] && ! $t['fresh'] ) {
+		if ( $t['reachable'] && ! $t['fresh'] ) {
 			$html .= ' <span class="sl-traffic-low">' . esc_html(
 				sprintf( /* translators: %d: days */ __( 'This count is more than %d days old, so it would not start on its own until it is measured again.', 'spark-living' ), $t['max_age_days'] )
 			) . '</span>';
@@ -712,12 +728,59 @@ body.sl-page{margin:0;background:#ffffff}
 	}
 
 	/**
+	 * Ranking words for a payoff score among the scored suggestions that are still in play.
+	 *
+	 * @param int $rank 1-based rank (1 is the highest payoff).
+	 * @param int $of   How many are scored.
+	 * @return string
+	 */
+	private static function payoff_words( int $rank, int $of ): string {
+		if ( $of <= 1 ) {
+			return __( 'the only one scored', 'spark-living' );
+		}
+		if ( 1 === $rank ) {
+			/* translators: %d: how many suggestions are scored */
+			return sprintf( __( 'highest of %d', 'spark-living' ), $of );
+		}
+		if ( $rank === $of ) {
+			/* translators: %d: how many suggestions are scored */
+			return sprintf( __( 'lowest of %d', 'spark-living' ), $of );
+		}
+		$ord = array( 2 => __( 'second', 'spark-living' ), 3 => __( 'third', 'spark-living' ), 4 => __( 'fourth', 'spark-living' ), 5 => __( 'fifth', 'spark-living' ) );
+		/* translators: 1: ordinal word, 2: how many suggestions are scored */
+		return sprintf( __( '%1$s of %2$d', 'spark-living' ), $ord[ $rank ] ?? sprintf( '#%d', $rank ), $of );
+	}
+
+	/**
+	 * The "Expected payoff" line of a suggestion card.
+	 *
+	 * @param array      $exp Experiment.
+	 * @param array|null $pr  {rank, of} among the scored suggestions in play, or null.
+	 * @return string HTML (escaped).
+	 */
+	private static function payoff_html( array $exp, ?array $pr ): string {
+		$html = '<p class="sl-payoff"><strong>' . esc_html__( 'Expected payoff:', 'spark-living' ) . '</strong> ';
+		if ( null === $exp['payoff_score'] ) {
+			return $html . '<span class="sl-muted">' . esc_html__( 'not scored yet', 'spark-living' ) . '</span></p>';
+		}
+		$raw   = rtrim( rtrim( number_format( (float) $exp['payoff_score'], 4, '.', '' ), '0' ), '.' );
+		$raw   = '' === $raw ? '0' : $raw;
+		if ( $pr ) {
+			$html .= esc_html( self::payoff_words( (int) $pr['rank'], (int) $pr['of'] ) );
+			$html .= ' <span class="sl-small">' . esc_html( sprintf( /* translators: %s: raw score */ __( '(score %s)', 'spark-living' ), $raw ) ) . '</span></p>';
+			return $html;
+		}
+		// A queued test is not ranked against the suggestions; only its number is shown.
+		return $html . '<span class="sl-small">' . esc_html( sprintf( /* translators: %s: raw score */ __( 'score %s', 'spark-living' ), $raw ) ) . '</span></p>';
+	}
+
+	/**
 	 * One suggestion card.
 	 *
 	 * @param array $exp  Suggested experiment.
 	 * @param int   $rank 1-based rank among the suggestions.
 	 */
-	private static function render_suggestion( array $exp, int $rank ): void {
+	private static function render_suggestion( array $exp, int $rank, ?array $pr = null ): void {
 		$eid = (string) $exp['id'];
 		?>
 		<article class="sl-card sl-sug" data-sl-id="<?php echo esc_attr( $eid ); ?>" aria-labelledby="sl-sug-t-<?php echo esc_attr( $eid ); ?>">
@@ -734,6 +797,7 @@ body.sl-page{margin:0;background:#ffffff}
 				</ul>
 			</div>
 			<?php endif; ?>
+			<?php echo self::payoff_html( $exp, $pr ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<?php echo self::traffic_html( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<?php echo self::gate_html( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<div class="sl-acts">
@@ -758,6 +822,7 @@ body.sl-page{margin:0;background:#ffffff}
 			<h3 class="sl-sug-title" id="sl-q-t-<?php echo esc_attr( $eid ); ?>"><span class="sl-rank" aria-hidden="true"><?php echo esc_html( (string) $position ); ?></span><span class="sl-sr"><?php echo esc_html( sprintf( /* translators: %d: place in the queue */ __( 'Position %d: ', 'spark-living' ), $position ) ); ?></span><?php echo esc_html( $exp['name'] ); ?></h3>
 			<p class="sl-muted sl-sug-where"><?php echo esc_html( sprintf( /* translators: %d: place in the queue */ __( 'Position %d in the queue', 'spark-living' ), $position ) ); ?> &middot; <?php echo esc_html( self::where_label( $exp ) ); ?> &middot; <?php echo esc_html( rtrim( self::device_label( (string) $exp['device'] ), '.' ) ); ?></p>
 			<?php echo self::comparison( $exp, __( 'What would change:', 'spark-living' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<?php echo self::payoff_html( $exp, null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<?php if ( ! $gate['ok'] ) : ?>
 			<p class="sl-wait"><?php echo esc_html( $gate['message'] ); ?></p>
 			<?php endif; ?>
@@ -777,9 +842,30 @@ body.sl-page{margin:0;background:#ffffff}
 	 */
 	private static function render_plan(): void {
 		$queue       = Spark_Living_Queue::queue_list();
-		$suggestions = Spark_Living_Queue::suggestions();
-		$shown       = array_slice( $suggestions, 0, Spark_Living_Queue::SHOW_TOP );
-		$more        = count( $suggestions ) - count( $shown );
+		$all         = Spark_Living_Queue::suggestions();
+		$suggestions = array();
+		$rejected    = array();
+		foreach ( $all as $s ) {
+			if ( 3 === Spark_Living_Queue::gate_rank( $s ) ) {
+				$rejected[] = $s; // A "fail" from the Goal Gate is hidden under its own expander.
+			} else {
+				$suggestions[] = $s;
+			}
+		}
+		$shown = array_slice( $suggestions, 0, Spark_Living_Queue::SHOW_TOP );
+		$more  = count( $suggestions ) - count( $shown );
+		// Payoff ranking among the scored suggestions still in play.
+		$scored = array();
+		foreach ( $suggestions as $s ) {
+			if ( null !== $s['payoff_score'] ) {
+				$scored[ (int) $s['id'] ] = (float) $s['payoff_score'];
+			}
+		}
+		$pranks = array();
+		foreach ( $scored as $sid => $score ) {
+			$higher         = count( array_filter( $scored, static function ( $other ) use ( $score ) { return $other > $score; } ) );
+			$pranks[ $sid ] = array( 'rank' => $higher + 1, 'of' => count( $scored ) );
+		}
 		?>
 	<div id="sl-plan" class="sl-plan" data-rest="<?php echo esc_url( rest_url( 'spark-living/v1' ) ); ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ); ?>">
 		<div id="sl-plan-body">
@@ -798,11 +884,24 @@ body.sl-page{margin:0;background:#ffffff}
 		<p><?php esc_html_e( 'No tests are suggested right now.', 'spark-living' ); ?></p>
 		<?php else : ?>
 			<?php foreach ( $shown as $i => $exp ) : ?>
-				<?php self::render_suggestion( $exp, $i + 1 ); ?>
+				<?php self::render_suggestion( $exp, $i + 1, $pranks[ (int) $exp['id'] ] ?? null ); ?>
 			<?php endforeach; ?>
 			<?php if ( $more > 0 ) : ?>
 		<p class="sl-muted sl-plan-more"><?php echo esc_html( sprintf( /* translators: %s: number of further suggestions */ _n( '%s more suggested test is waiting.', '%s more suggested tests are waiting.', $more, 'spark-living' ), number_format_i18n( $more ) ) ); ?></p>
 			<?php endif; ?>
+		<?php endif; ?>
+		<?php if ( $rejected ) : ?>
+		<details class="sl-rejected" id="sl-rejected">
+			<summary><?php echo esc_html( sprintf( /* translators: %d: how many */ __( 'Rejected by the Goal Gate (%d)', 'spark-living' ), count( $rejected ) ) ); ?></summary>
+			<?php foreach ( $rejected as $exp ) : ?>
+			<article class="sl-card sl-sug sl-rej" data-sl-id="<?php echo esc_attr( (string) $exp['id'] ); ?>">
+				<h3 class="sl-sug-title"><?php echo esc_html( $exp['name'] ); ?></h3>
+				<p class="sl-muted sl-sug-where"><?php echo esc_html( self::where_label( $exp ) ); ?></p>
+				<?php echo self::gate_html( $exp ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<div class="sl-acts"><button type="button" class="sl-btn" data-sl-act="dismiss"><?php esc_html_e( 'Dismiss', 'spark-living' ); ?></button></div>
+			</article>
+			<?php endforeach; ?>
+		</details>
 		<?php endif; ?>
 		</div>
 		<p class="sl-plan-status" role="status" aria-live="polite" tabindex="-1"></p>
@@ -876,9 +975,9 @@ body.sl-page{margin:0;background:#ffffff}
 				<input type="hidden" name="action" value="spark_living_start">
 				<input type="hidden" name="experiment_id" value="<?php echo esc_attr( (string) $exp['id'] ); ?>">
 				<?php wp_nonce_field( 'spark_living_start', 'spark_living_nonce' ); ?>
-				<label for="sl-sess-<?php echo esc_attr( (string) $exp['id'] ); ?>" style="display:inline;font-weight:400"><?php esc_html_e( 'Sessions, last 14 days:', 'spark-living' ); ?></label>
+				<label for="sl-sess-<?php echo esc_attr( (string) $exp['id'] ); ?>" style="display:inline;font-weight:400"><?php echo esc_html( 'sitewide' === $exp['scope'] ? __( 'Sessions on the whole site, last 14 days:', 'spark-living' ) : __( 'Sessions, last 14 days:', 'spark-living' ) ); ?></label>
 				<input type="number" min="0" step="1" id="sl-sess-<?php echo esc_attr( (string) $exp['id'] ); ?>" name="sessions_14d" style="width:6rem">
-				<label style="display:inline;font-weight:400"><input type="checkbox" name="force" value="1"> <?php esc_html_e( 'Start anyway (below the bar)', 'spark-living' ); ?></label>
+				<label style="display:inline;font-weight:400"><input type="checkbox" name="force" value="1"> <?php esc_html_e( 'Start anyway (cannot finish in 42 days)', 'spark-living' ); ?></label>
 				<button type="submit" class="button"><?php echo esc_html( Spark_Living_Store::STATUS_AWAITING === $exp['status'] ? __( 'Approve and start', 'spark-living' ) : __( 'Start', 'spark-living' ) ); ?></button>
 			</form>
 		</li>
@@ -912,6 +1011,11 @@ body.sl-page{margin:0;background:#ffffff}
 			<option value="all"><?php esc_html_e( 'All devices', 'spark-living' ); ?></option>
 			<option value="mobile"><?php esc_html_e( 'Mobile only (viewport 980px or narrower)', 'spark-living' ); ?></option>
 			<option value="desktop"><?php esc_html_e( 'Desktop only (wider than 980px)', 'spark-living' ); ?></option>
+		</select>
+		<label for="sl-scope"><?php esc_html_e( 'Where it applies', 'spark-living' ); ?></label>
+		<select id="sl-scope" name="scope">
+			<option value="page"><?php esc_html_e( 'This page (the traffic count is that page)', 'spark-living' ); ?></option>
+			<option value="sitewide"><?php esc_html_e( 'Whole site (every page where the selector matches; the traffic count is the whole site)', 'spark-living' ); ?></option>
 		</select>
 		<label for="sl-tier"><?php esc_html_e( 'Tier', 'spark-living' ); ?></label>
 		<select id="sl-tier" name="tier">
@@ -993,7 +1097,7 @@ body.sl-page{margin:0;background:#ffffff}
 	<h2 id="sl-goals"><?php esc_html_e( 'Site goals', 'spark-living' ); ?></h2>
 	<section class="sl-card sl-goals" aria-labelledby="sl-goals">
 		<?php if ( 0 === (int) $c['version'] ) : ?>
-		<p><?php esc_html_e( 'No site goals have been written yet. Agents and tests are judged against these goals, so until they are written every change stays a suggestion.', 'spark-living' ); ?>
+		<p><?php esc_html_e( 'No site goals have been written yet. Agents and tests are judged against these goals, so until they are written and approved every change stays a suggestion and nothing is queued or picked by an agent.', 'spark-living' ); ?>
 			<a href="<?php echo esc_url( $edit ); ?>"><?php esc_html_e( 'Write the site goals in wp-admin', 'spark-living' ); ?></a>.</p>
 		<?php endif; ?>
 		<dl class="sl-kv">
@@ -1055,6 +1159,15 @@ body.sl-page{margin:0;background:#ffffff}
 			</dd></div>
 			<?php endif; ?>
 			<div><dt><?php esc_html_e( 'Autonomy', 'spark-living' ); ?></dt><dd><?php echo esc_html( Spark_Living_Charter::autonomy_label( (string) $c['autonomy_level'] ) ); ?></dd></div>
+			<?php if ( (int) $c['version'] > 0 ) : ?>
+			<div><dt><?php esc_html_e( 'Approval', 'spark-living' ); ?></dt><dd>
+				<?php if ( 'approved' === $c['status'] ) : ?>
+				<span class="sl-approved"><?php esc_html_e( 'Approved', 'spark-living' ); ?></span> <?php echo esc_html( sprintf( /* translators: 1: who, 2: date */ __( 'by %1$s on %2$s.', 'spark-living' ), '' !== (string) $c['approved_by'] ? $c['approved_by'] : __( 'unknown', 'spark-living' ), self::date( (string) $c['approved_at'] ) ) ); ?>
+				<?php else : ?>
+				<span class="sl-draft"><?php esc_html_e( 'Draft', 'spark-living' ); ?></span> <?php esc_html_e( 'Agents may not queue or start tests, and nothing is picked automatically, until a person approves these goals.', 'spark-living' ); ?> <a href="<?php echo esc_url( $edit ); ?>"><?php esc_html_e( 'Review and approve in wp-admin', 'spark-living' ); ?></a>
+				<?php endif; ?>
+			</dd></div>
+			<?php endif; ?>
 			<div><dt><?php esc_html_e( 'Speed budget', 'spark-living' ); ?></dt><dd>
 				<?php
 				$sb = $c['speed_budget'];
@@ -1179,6 +1292,8 @@ body.sl-page{margin:0;background:#ffffff}
 		echo '<div class="wrap"><h1>' . esc_html__( 'Site charter', 'spark-living' ) . '</h1>';
 		if ( 'charter_saved' === $code ) {
 			echo '<div class="notice notice-success"><p>' . esc_html__( 'Site charter saved.', 'spark-living' ) . '</p></div>';
+		} elseif ( 'charter_approved' === $code ) {
+			echo '<div class="notice notice-success"><p>' . esc_html__( 'Site goals approved.', 'spark-living' ) . '</p></div>';
 		} elseif ( 'charter_invalid' === $code ) {
 			$err = get_transient( 'spark_living_charter_err_' . get_current_user_id() );
 			echo '<div class="notice notice-error"><p>' . esc_html( is_string( $err ) && '' !== $err ? $err : __( 'The charter could not be saved.', 'spark-living' ) ) . '</p></div>';
@@ -1186,6 +1301,14 @@ body.sl-page{margin:0;background:#ffffff}
 		echo '<p>' . esc_html__( 'What this site is for. Agents and tests are judged against it, and every save raises the version number, so an earlier Goal Gate verdict stops counting until the test is judged again.', 'spark-living' ) . '</p>';
 		if ( (int) $c['version'] > 0 ) {
 			echo '<p>' . esc_html( sprintf( /* translators: 1: version, 2: date, 3: who */ __( 'Version %1$d, saved %2$s by %3$s.', 'spark-living' ), (int) $c['version'], self::date( (string) $c['updated_at'] ), $c['updated_by'] ) ) . '</p>';
+			if ( 'approved' === $c['status'] ) {
+				echo '<p><strong>' . esc_html__( 'Approved', 'spark-living' ) . '</strong> ' . esc_html( sprintf( /* translators: 1: who, 2: date */ __( 'by %1$s on %2$s. Any change below puts it back to draft until it is approved again.', 'spark-living' ), $c['approved_by'], self::date( (string) $c['approved_at'] ) ) ) . '</p>';
+			} else {
+				echo '<div class="notice notice-warning inline"><p>' . esc_html__( 'Draft: agents may not queue or start tests, and nothing is picked automatically, until you approve these goals.', 'spark-living' ) . '</p>';
+				echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"><input type="hidden" name="action" value="spark_living_approve_charter">';
+				wp_nonce_field( 'spark_living_approve_charter', 'spark_living_nonce' );
+				echo '<p><button type="submit" class="button button-primary">' . esc_html__( 'Approve these goals', 'spark-living' ) . '</button></p></form></div>';
+			}
 		}
 		$sec = array();
 		foreach ( $c['secondary_conversions'] as $sc ) {
@@ -1308,6 +1431,21 @@ body.sl-page{margin:0;background:#ffffff}
 	}
 
 	/**
+	 * Approve the charter from wp-admin (a person; same code path as POST /charter/approve).
+	 */
+	public static function handle_approve_charter(): void {
+		self::guard( 'spark_living_approve_charter' );
+		$done = Spark_Living_Charter::approve();
+		if ( is_wp_error( $done ) ) {
+			set_transient( 'spark_living_charter_err_' . get_current_user_id(), $done->get_error_message(), 60 );
+			wp_safe_redirect( add_query_arg( array( 'page' => 'spark-living-charter', 'sl_msg' => 'charter_invalid' ), admin_url( 'admin.php' ) ) );
+			exit;
+		}
+		wp_safe_redirect( add_query_arg( array( 'page' => 'spark-living-charter', 'sl_msg' => 'charter_approved' ), admin_url( 'admin.php' ) ) );
+		exit;
+	}
+
+	/**
 	 * wp-admin page.
 	 */
 	public static function render_admin_page(): void {
@@ -1319,13 +1457,14 @@ body.sl-page{margin:0;background:#ffffff}
 			'started'   => __( 'Test started.', 'spark-living' ),
 			'concluded' => __( 'Test ended and logged.', 'spark-living' ),
 			'busy'      => __( 'A test is already running. One test per site at a time.', 'spark-living' ),
-			'ineligible' => __( 'Not started: the target page needs at least 100 sessions in the last 14 days. Enter the number, or tick "Start anyway" to start below the bar (it is recorded).', 'spark-living' ),
+			'ineligible' => __( 'Not started: at that traffic a result would take longer than 42 days (a test needs at least 75 sessions in the last 14 days). Enter the number, or tick "Start anyway" to start it regardless (it is recorded).', 'spark-living' ),
+			'selector_in_use' => __( 'Not started: another test or a shipped winner already uses that element. Only one test can touch a given element at a time.', 'spark-living' ),
 			'invalid'   => __( 'That test could not be saved. Check the name, selector and at least one change or CSS snippet for B.', 'spark-living' ),
 		);
 		$code = isset( $_GET['sl_msg'] ) ? sanitize_key( wp_unslash( $_GET['sl_msg'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		echo '<div class="wrap">';
 		if ( isset( $messages[ $code ] ) ) {
-			$class = in_array( $code, array( 'busy', 'invalid', 'ineligible' ), true ) ? 'notice-error' : 'notice-success';
+			$class = in_array( $code, array( 'busy', 'invalid', 'ineligible', 'selector_in_use' ), true ) ? 'notice-error' : 'notice-success';
 			echo '<div class="notice ' . esc_attr( $class ) . '"><p>' . esc_html( $messages[ $code ] ) . '</p></div>';
 		}
 		echo self::render_view( true ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -1388,6 +1527,7 @@ body.sl-page{margin:0;background:#ffffff}
 				'element_type' => 'selector',
 				'target'       => isset( $_POST['target'] ) ? sanitize_text_field( wp_unslash( $_POST['target'] ) ) : '',
 				'tier'         => isset( $_POST['tier'] ) ? absint( $_POST['tier'] ) : 1,
+				'scope'        => isset( $_POST['scope'] ) ? sanitize_key( wp_unslash( $_POST['scope'] ) ) : 'page',
 				'device'       => $device,
 				'variants'     => array(
 					'A' => array( 'label' => 'Current' ),
@@ -1416,7 +1556,7 @@ body.sl-page{margin:0;background:#ffffff}
 			self::back( 'invalid' );
 		}
 		$sessions = isset( $_POST['sessions_14d'] ) ? sanitize_text_field( wp_unslash( $_POST['sessions_14d'] ) ) : '';
-		$elig     = Spark_Living_Store::check_eligibility( '' === $sessions ? null : $sessions, ! empty( $_POST['force'] ), (string) $exp['device'] );
+		$elig     = Spark_Living_Store::check_eligibility( '' === $sessions ? null : $sessions, ! empty( $_POST['force'] ), (string) $exp['device'], (string) $exp['scope'] );
 		if ( is_wp_error( $elig ) ) {
 			self::back( 'ineligible' );
 		}
@@ -1427,7 +1567,7 @@ body.sl-page{margin:0;background:#ffffff}
 				'start_sessions_14d' => $elig['sessions'],
 			)
 		);
-		self::back( is_wp_error( $started ) ? 'busy' : 'started' );
+		self::back( is_wp_error( $started ) ? ( 'spark_living_selector_in_use' === $started->get_error_code() ? 'selector_in_use' : 'busy' ) : 'started' );
 	}
 
 	/**

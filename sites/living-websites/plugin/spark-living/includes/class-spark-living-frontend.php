@@ -18,6 +18,39 @@ final class Spark_Living_Frontend {
 	public static function init(): void {
 		add_action( 'init', array( __CLASS__, 'register_blocks' ) );
 		add_action( 'wp_head', array( __CLASS__, 'print_head' ), 1 );
+		add_action( 'send_headers', array( __CLASS__, 'preview_headers' ) );
+	}
+
+	/**
+	 * A preview page carries a token in its address and must never be cached.
+	 */
+	public static function preview_headers(): void {
+		if ( is_admin() || ! isset( $_GET['sl_exp'] ) || ! Spark_Living_Preview::requested_test() ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			return;
+		}
+		if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+			define( 'DONOTCACHEPAGE', true );
+		}
+		nocache_headers();
+		header( 'X-Robots-Tag: noindex, nofollow' );
+	}
+
+	/**
+	 * Script config for a previewed test (a test that is not running yet).
+	 *
+	 * @param array $exp Experiment.
+	 * @return array
+	 */
+	private static function preview_config( array $exp ): array {
+		return array(
+			'id'       => (int) $exp['id'],
+			'mode'     => 'preview',
+			'type'     => $exp['element_type'],
+			'device'   => $exp['device'],
+			'target'   => $exp['target'],
+			'weights'  => array( 'A' => 0.5, 'B' => 0.5 ),
+			'variants' => self::variants_for_script( $exp ),
+		);
 	}
 
 	/**
@@ -175,7 +208,10 @@ final class Spark_Living_Frontend {
 			return;
 		}
 
-		$tests = self::tests_config();
+		// 0.4.0: a signed-in administrator, or a visitor with a valid preview token, may preview a test that
+		// is not running yet (?sl_test=1&sl_exp=ID&sl_force=B). That page shows only the previewed test.
+		$preview = isset( $_GET['sl_exp'] ) ? Spark_Living_Preview::requested_test() : null; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$tests   = $preview ? array( self::preview_config( $preview ) ) : self::tests_config();
 		if ( ! $tests ) {
 			return;
 		}

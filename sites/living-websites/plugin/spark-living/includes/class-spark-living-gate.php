@@ -42,6 +42,23 @@ final class Spark_Living_Gate {
 	}
 
 	/**
+	 * Is the caller an agent? True when `by` starts with "agent:" (the stated
+	 * actor), and also whenever a signed-in user without manage_options is
+	 * calling (a Builder login that holds only the build capability is an agent
+	 * whatever `by` it sends). A call with no user at all (the nightly job,
+	 * WP-CLI) is the engine, not an agent.
+	 *
+	 * @param string $by The `by` value from the request.
+	 * @return bool
+	 */
+	public static function acts_as_agent( string $by ): bool {
+		if ( self::is_agent( $by ) ) {
+			return true;
+		}
+		return function_exists( 'is_user_logged_in' ) && is_user_logged_in() && ! current_user_can( 'manage_options' );
+	}
+
+	/**
 	 * Clean an actor name.
 	 *
 	 * @param mixed $by Raw value.
@@ -117,7 +134,7 @@ final class Spark_Living_Gate {
 
 		Spark_Living_Ledger::record(
 			array(
-				'kind'            => 'other',
+				'kind'            => 'gate_verdict',
 				'subject_type'    => 'test',
 				'subject_id'      => (string) $id,
 				'summary'         => sprintf( /* translators: 1: verdict, 2: test name */ __( 'Goal Gate verdict %1$s recorded for "%2$s".', 'spark-living' ), $verdict, $exp['name'] ),
@@ -151,19 +168,42 @@ final class Spark_Living_Gate {
 	}
 
 	/**
-	 * May this actor queue this suggestion? Only an agent is checked.
+	 * The Goal Gate data of a test, under its own unambiguous key (0.4.0). The
+	 * traffic check is a different thing and is reported as traffic_gate.
+	 *
+	 * @param array $exp Experiment.
+	 * @return array{verdict: string, reasons: string, by: string, at: string, charter_version: int, stale: bool}
+	 */
+	public static function present( array $exp ): array {
+		return array(
+			'verdict'         => (string) $exp['gate_verdict'],
+			'reasons'         => (string) $exp['gate_reasons'],
+			'by'              => (string) $exp['gate_by'],
+			'at'              => (string) $exp['gate_at'],
+			'charter_version' => (int) $exp['gate_charter_version'],
+			'stale'           => self::is_stale( $exp ),
+		);
+	}
+
+	/**
+	 * May this actor queue (or start) this test? Only an agent is checked.
+	 * The same checks apply to every route an agent can use to put a test in
+	 * motion: queue, create-and-start, start.
 	 *
 	 * @param array  $exp Experiment.
 	 * @param string $by  The `by` value.
 	 * @return true|WP_Error
 	 */
 	public static function check_queue( array $exp, string $by ) {
-		if ( ! self::is_agent( $by ) ) {
+		if ( ! self::acts_as_agent( $by ) ) {
 			return true;
 		}
 		$level = Spark_Living_Charter::autonomy();
 		$tier  = (int) $exp['tier'];
 
+		if ( ! Spark_Living_Charter::is_approved() ) {
+			return new WP_Error( 'spark_living_charter_unapproved', __( 'Refused: the site goals (charter) are empty or not approved yet, so agents may not queue or start tests. A person approves them under Living Websites, Site charter.', 'spark-living' ), array( 'status' => 403 ) );
+		}
 		if ( 'suggest' === $level ) {
 			return new WP_Error( 'spark_living_agent_not_allowed', __( 'Refused: the charter autonomy level is "suggest", so agents may not queue tests. A person queues them.', 'spark-living' ), array( 'status' => 403 ) );
 		}

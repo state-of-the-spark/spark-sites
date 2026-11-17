@@ -423,3 +423,32 @@ Not forced. Stored weights are still 80/20 with 15 A and 19 B exposures (below t
 - The live nightly job with the new engine code (it has not run yet).
 - Real MySQL behaviour of the ledger queries beyond what the live table creation and the 8 backfill rows show (local tests ran on SQLite).
 - Agent queue refusals and undo on live (they would alter live suggestions; tested locally only).
+
+## 0.4.0 Phase B (2026-11-16)
+
+Deployed 2026-11-17 11:12 UTC (still the evening of 11/16 in Eastern time). Pressable WP-CLI through the MCP, files sent as a gzip and base64 payload of line patches in 14 chunks (each md5-checked on the server), staged in `wp-content/sl040b/new`, md5-checked there, then swapped in (new classes first, `spark-living.php` last). All 18 changed or new plugin files were md5-checked on the live site against the local files: 0 differences. Edge cache purged, object cache flushed, `wp-content/sl040b` and the old-file copy folder `wp-content/sl-bak-040` deleted. No temporary git branches, no public fetches, no new credentials, no new users or application passwords.
+
+Backup before the deploy: Pressable on-demand database backup 17437688219 (completed 2026-11-16 23:53 UTC). It displaced the oldest on-demand database backup, 17387975529 (the 2026-11-13 13:25 UTC pre-install baseline), because the account holds a fixed number.
+
+### Test 46907 before and after
+| | Before (11/16 23:50 UTC) | After (11/17 11:14 UTC) |
+|---|---|---|
+| plugin version | 0.3.0 | 0.4.0 |
+| status | running | running |
+| start_date | 2026-11-13 13:58:11 | 2026-11-13 13:58:11 |
+| variants md5 (wp_json_encode of the meta) | 8a72dc8f... | 8a72dc8f... |
+| weights | A 0.8, B 0.2 | A 0.8, B 0.2 |
+| post_modified | 2026-11-13 08:58:11 (site time) | same |
+| max_days, stop basis | none | 23, start_traffic (start_sessions_14d 137), stop about 2026-12-06 13:58 UTC |
+| event rows (whole table / 46907) | 60 / 50 | 63 / 53 (three real visitors in between); unchanged by my live visits (63 / 53 before and after) |
+| results table | none | created, 1 row backfilled (the voided 11/13 test) |
+
+The ledger shows "Stop date of Header button wording changed from Nov 27 (14 days) to Dec 6 (23 days)", written by `engine:upgrade-0.4.0`.
+
+### Seen live
+Test-visit addresses (`sl_test=1`, nothing recorded): `?sl_test=1&sl_force=B` header button "Get My Free Website Plan", `&sl_force=A` "Get started". Preview of suggestion 46912 with a 30-minute signed token: the hero link becomes an outlined "Book a free call" button at 1366 and 390 wide; the same address without the token, and an ordinary visit, show the original text link. Dashboard as the owner's administrator (30 minute login cookie from WP-CLI for user 17393; the session token was destroyed afterwards, `verify` returned false, no sessions left for the user). Frames in `C:\Users\grant\Documents\GitHub\spark-sites\sites\living-websites\audit\screenshots\`: `live-testvisit-forceB.png`, `live-testvisit-forceA.png`, `live-preview-46912-desktop.png`, `live-preview-46912-mobile.png`, `live-preview-46912-notoken-desktop.png`, `live-dash-phaseB-desktop.png`, `live-dash-phaseB-mobile.png`, `live-dash-phaseB-dark.png`.
+
+Dry run on live: payoff fields set with `PATCH /suggestions/{id}` on 46912 (score 0.0406) and 46910 (score 0.0049); Judge dry-run verdicts (pass, risk tier 1) recorded through `POST /suggestions/{id}/gate` with `by` "agent:judge (dry run 2026-11-16)". Nothing queued, started, dismissed or auto-picked. Charter still empty (draft, version 0), autonomy suggest.
+
+### Not verified
+The nightly job was not forced; MySQL-specific results queries (all local tests ran on SQLite); auto-pick against live traffic (autonomy is suggest, so it cannot run); lead counting; a booking is not counted as a lead.

@@ -1,6 +1,6 @@
 <?php
 /**
- * Spark Living: the Site Charter (0.3.0).
+ * Spark Living: the Site Charter (0.3.0; approval added in 0.4.0).
  *
  * One record per site, stored as a JSON string in the option
  * `spark_living_charter`: what the site is for, what counts as a conversion,
@@ -21,6 +21,7 @@ final class Spark_Living_Charter {
 
 	public const CONVERSION_TYPES = array( 'form', 'call', 'booking', 'purchase' );
 	public const AUTONOMY_LEVELS  = array( 'suggest', 'tier1', 'full' );
+	public const STATUSES         = array( 'draft', 'approved' );
 
 	/** Keyed sub-objects: a partial save changes only the fields it names. */
 	private const SUBOBJECTS = array( 'primary_conversion', 'brand', 'speed_budget' );
@@ -53,6 +54,9 @@ final class Spark_Living_Charter {
 			),
 			'updated_at'            => '',
 			'updated_by'            => '',
+			'status'                => 'draft',
+			'approved_by'           => '',
+			'approved_at'           => '',
 		);
 	}
 
@@ -91,6 +95,11 @@ final class Spark_Living_Charter {
 		}
 		$out['version']        = (int) $out['version'];
 		$out['autonomy_level'] = in_array( $out['autonomy_level'], self::AUTONOMY_LEVELS, true ) ? $out['autonomy_level'] : 'suggest';
+		$out['status']         = ( 'approved' === $out['status'] && $out['version'] > 0 ) ? 'approved' : 'draft';
+		if ( 'approved' !== $out['status'] ) {
+			$out['approved_by'] = '';
+			$out['approved_at'] = '';
+		}
 		return $out;
 	}
 
@@ -102,6 +111,18 @@ final class Spark_Living_Charter {
 	public static function version(): int {
 		$c = self::get();
 		return (int) $c['version'];
+	}
+
+	/**
+	 * Has a person approved the current content of the charter? An empty charter
+	 * (version 0) never counts. Agents may not queue, start or auto-pick anything
+	 * until this is true.
+	 *
+	 * @return bool
+	 */
+	public static function is_approved(): bool {
+		$c = self::get();
+		return (int) $c['version'] > 0 && 'approved' === $c['status'];
 	}
 
 	/**
@@ -334,6 +355,19 @@ final class Spark_Living_Charter {
 		$after['updated_at'] = Spark_Living_Util::mysql_utc();
 		$after['updated_by'] = $by;
 
+		$content_changed = false;
+		foreach ( $clean as $key => $value ) {
+			if ( wp_json_encode( $before[ $key ] ?? null ) !== wp_json_encode( $after[ $key ] ?? null ) ) {
+				$content_changed = true;
+			}
+		}
+		// 0.4.0: any change of content puts the charter back to draft; a person approves it again.
+		if ( $content_changed || 0 === (int) $before['version'] ) {
+			$after['status']      = 'draft';
+			$after['approved_by'] = '';
+			$after['approved_at'] = '';
+		}
+
 		update_option( self::OPTION, wp_json_encode( $after ), false );
 
 		$changed = array();
@@ -356,7 +390,7 @@ final class Spark_Living_Charter {
 				'before'       => $before,
 				'after'        => $after,
 				'proposed_by'  => $by,
-				'evidence'     => array_merge( array( 'changed_fields' => $changed ), isset( $opts['undo_of'] ) ? array( 'undo_of' => (int) $opts['undo_of'] ) : array() ),
+				'evidence'     => array_merge( array( 'changed_fields' => $changed, 'status' => $after['status'] ), isset( $opts['undo_of'] ) ? array( 'undo_of' => (int) $opts['undo_of'] ) : array() ),
 				'undo'         => isset( $opts['undo_of'] ) ? array() : array(
 					'action'         => 'restore_charter',
 					'charter'        => $before,
@@ -365,6 +399,42 @@ final class Spark_Living_Charter {
 			)
 		);
 		$after['change_id'] = $change_id;
+		return $after;
+	}
+
+	/**
+	 * Approve the current content of the charter. Does not change the version, so
+	 * Goal Gate verdicts already recorded against it stay valid.
+	 *
+	 * @param string $by Who approved it (a person; the REST route refuses "agent:").
+	 * @return array|WP_Error The charter.
+	 */
+	public static function approve( string $by = '' ) {
+		$c = self::get();
+		if ( (int) $c['version'] <= 0 ) {
+			return new WP_Error( 'spark_living_charter_empty', __( 'There is nothing to approve: the charter has not been written yet.', 'spark-living' ), array( 'status' => 409 ) );
+		}
+		if ( 'approved' === $c['status'] ) {
+			return $c;
+		}
+		$by                 = '' !== $by ? $by : self::current_user_label();
+		$by                 = function_exists( 'mb_substr' ) ? mb_substr( sanitize_text_field( $by ), 0, 80 ) : substr( sanitize_text_field( $by ), 0, 80 );
+		$after              = $c;
+		$after['status']      = 'approved';
+		$after['approved_by'] = $by;
+		$after['approved_at'] = Spark_Living_Util::mysql_utc();
+		update_option( self::OPTION, wp_json_encode( $after ), false );
+		Spark_Living_Ledger::record(
+			array(
+				'kind'         => 'charter_approved',
+				'subject_type' => 'charter',
+				'subject_id'   => (string) $after['version'],
+				'summary'      => sprintf( /* translators: %d: version */ __( 'Site charter version %d approved.', 'spark-living' ), (int) $after['version'] ),
+				'before'       => array( 'status' => 'draft', 'version' => (int) $c['version'] ),
+				'after'        => array( 'status' => 'approved', 'version' => (int) $after['version'], 'approved_by' => $by ),
+				'proposed_by'  => $by,
+			)
+		);
 		return $after;
 	}
 

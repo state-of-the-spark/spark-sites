@@ -55,7 +55,7 @@ const runBody = (name) => ({ name, element_type: 'selector', target: '.hdr-run',
   await bad('sessions_as_of missing', { sessions_as_of: '' }, 'spark_living_sessions_as_of');
   await bad('sessions_as_of in the future', { sessions_as_of: ymd(-30) }, 'spark_living_sessions_as_of');
   await bad('priority zero', { priority: 0 }, 'spark_living_priority');
-  await bad('Tier 2', { tier: 2 }, 'spark_living_tier2');
+  await bad('Tier 3', { tier: 3 }, 'spark_living_tier3'); // 0.4.0: tier 2 is accepted, tier 3 is refused
   await bad('no valid change in B', { variants: { A: { label: 'A' }, B: { label: 'B' } } }, 'spark_living_changes');
   await bad('invalid selector', { target: 'a{}' }, 'spark_living_selector');
   let list = (await a.api('GET', '/suggestions')).body;
@@ -126,9 +126,9 @@ const runBody = (name) => ({ name, element_type: 'selector', target: '.hdr-run',
   await a.api('POST', `/suggestions/${p2.id}/dismiss`); await a.api('POST', `/suggestions/${p3.id}/dismiss`);
   d = await page(); cs = cards(d.html, 'sl-suggested');
   const lowCard = text(cs.find((c) => /Low traffic/.test(c))), okCard = text(cs.find((c) => /Enough traffic/.test(c)));
-  check('under 100: "41 sessions in 14 days (measured Nov 11)" and the plain warning', /Traffic: 41 sessions in 14 days \(measured Nov 11\)\. Below the 100-session minimum; this would need a forced start\./.test(lowCard), lowCard);
-  check('the warning is the muted-warning element', /<span class="sl-traffic-low">Below the 100-session minimum; this would need a forced start\.<\/span>/.test(cs.find((c) => /Low traffic/.test(c))));
-  check('137: meets the minimum, no warning', /Traffic: 137 sessions in 14 days \(measured Nov 11\)\. Meets the 100-session minimum\./.test(okCard) && !/Below/.test(okCard), okCard);
+  check('over the 42-day limit: "41 sessions in 14 days (measured Nov 11)" and the plain warning', /Traffic: 41 sessions in 14 days \(measured Nov 11\)\. At this traffic a result takes about 76 days, more than the 42-day limit; this would need a forced start\./.test(lowCard), lowCard);
+  check('the warning is the muted-warning element', /<span class="sl-traffic-low">At this traffic a result takes about 76 days, more than the 42-day limit; this would need a forced start\.<\/span>/.test(cs.find((c) => /Low traffic/.test(c))));
+  check('137: reachable (23 days), no warning', /Traffic: 137 sessions in 14 days \(measured Nov 11\)\. At this traffic a result takes about 23 days\./.test(okCard) && !/more than the 42-day limit/.test(okCard), okCard);
   const stale = await mk('Stale traffic', 8, 500, { sessions_as_of: ymd(30) });
   await a.api('POST', `/suggestions/${lowS.id}/dismiss`);
   d = await page(); cs = cards(d.html, 'sl-suggested');
@@ -159,7 +159,7 @@ const runBody = (name) => ({ name, element_type: 'selector', target: '.hdr-run',
   check('Up next lists the two queued tests in order with their position', up.length === 2 && /Position 1 in the queue/.test(text(up[0])) && /Show the Get Started/.test(up[0]) && /Position 2 in the queue/.test(text(up[1])) && /Queue B/.test(up[1]), up.length);
   check('Up next cards have a Remove from queue button and no Queue button', up.every((c) => /data-sl-act="unqueue">Remove from queue<\/button>/.test(c) && !/data-sl-act="queue"/.test(c)));
   check('queued tests are gone from Suggested tests', !/Queue B/.test(section(d.html, 'sl-suggested')) && /Queue C/.test(section(d.html, 'sl-suggested')));
-  check('the card in Up next explains the wait (head item is under the minimum)', /Waiting: traffic count is below the minimum/.test(text(up[0])) && !/Waiting/.test(text(up[1])), text(up[0]));
+  check('the card in Up next explains the wait (head item is under the minimum)', /Waiting: at this traffic a result would take more than 42 days/.test(text(up[0])) && !/Waiting/.test(text(up[1])), text(up[0]));
   let st = (await a.api('GET', '/state')).body;
   check('/state: suggestions and queue are present with positions, traffic and gate', Array.isArray(st.suggestions) && Array.isArray(st.queue) && st.queue.length === 2 && st.queue[0].id === A1.id && st.queue[1].queue_position === 2 && st.queue[0].gate.code === 'below_minimum' && st.queue[1].gate.ok === true && st.suggestions.length === 1 && st.suggestions[0].name === 'Queue C' && st.suggestions[0].traffic.sessions === 300, [st.suggestions.length, st.queue.length]);
   check('/state: the older draft list ("queued") is untouched and holds none of these', Array.isArray(st.queued) && !st.queued.some((x) => [A1.id, B1.id, C1.id].includes(x.id)), st.queued.map((x) => x.id));
@@ -187,11 +187,12 @@ const runBody = (name) => ({ name, element_type: 'selector', target: '.hdr-run',
   };
   let g = await gateCase('100 sessions, fresh', 100, 1, true);
   check('started test records start_sessions_14d = stored count, not forced, a start date', g.e.start_sessions_14d === 100 && g.e.forced_start === false && /^\d{4}-/.test(g.e.start_date) && g.e.weights.A === 0.5, g.e);
-  g = await gateCase('99 sessions', 99, 1, false);
+  g = await gateCase('74 sessions', 74, 1, false);
+  g = await gateCase('75 sessions', 75, 1, true);
   g = await gateCase('0 sessions', 0, 1, false);
   g = await gateCase('500 sessions, 22 days old', 500, 22, false);
   g = await gateCase('500 sessions, exactly 21 days old', 500, 21, true);
-  g = await gateCase('99 sessions and 30 days old', 99, 30, false);
+  g = await gateCase('74 sessions and 30 days old', 74, 30, false);
   st = (await a.api('GET', '/state')).body;
   await q('reset');
   const low = await mk('Why low', 1, 60), old = await mk('Why old', 2, 400);
@@ -199,7 +200,7 @@ const runBody = (name) => ({ name, element_type: 'selector', target: '.hdr-run',
   await a.api('POST', `/suggestions/${low.id}/queue`); await a.api('POST', `/suggestions/${old.id}/queue`);
   await q('cron');
   d = await page(); const w = cards(d.html, 'sl-upnext');
-  check('dashboard says why a queued test waits: below the minimum', /Waiting: traffic count is below the minimum/.test(text(w[0])), text(w[0]));
+  check('dashboard says why a queued test waits: over the 42-day limit', /Waiting: at this traffic a result would take more than 42 days/.test(text(w[0])), text(w[0]));
   check('dashboard says why a queued test waits: out of date', /Waiting: traffic count is out of date/.test(text(w[1])), text(w[1]));
   check('head of the line is not skipped: the blocked head holds back the second even if it would pass', (await q('running')) === '0');
   // a fresh, big second item behind a blocked head

@@ -22,7 +22,10 @@ final class Spark_Living_Stats {
 	// Section 3 of the build plan. Do not change without changing the plan.
 	public const MIN_DAYS       = 7;      // Minimum run, full days.
 	public const MIN_SESSIONS   = 100;    // Minimum run, sessions per variant.
-	public const HARD_STOP_DAYS = 14;     // Hard stop.
+	public const HARD_STOP_DAYS = 14;     // The shortest hard stop (kept under its old name). 0.4.0: the hard stop scales with traffic, 14 to 42 days.
+	public const MIN_STOP_DAYS  = 14;     // 0.4.0: floor of a test's hard stop.
+	public const MAX_STOP_DAYS  = 42;     // 0.4.0: ceiling of a test's hard stop; a test that cannot reach a result inside it does not start.
+	public const VERSION_SHARE  = 0.45;   // 0.4.0: each version's share of a page's sessions at a 50/50 split with the 10 percent holdout (0.9 x 0.5).
 	public const WIN_P          = 0.90;   // P(B beats A) at or above: B wins.
 	public const LOSE_P         = 0.10;   // P(B beats A) at or below: A wins.
 	public const FLOOR          = 0.20;   // Neither variant below 20 percent of traffic.
@@ -31,7 +34,7 @@ final class Spark_Living_Stats {
 	public const REVERT_DAYS    = 7;      // Window after a ship that is watched.
 	public const PRIOR_DAYS     = 14;     // Baseline window before a ship.
 	public const HOLDOUT        = 0.10;   // Permanent holdout share of visitors.
-	public const ELIGIBILITY_SESSIONS = 100; // Sessions in the last 14 days a page (or device) needs before a test may start.
+	public const ELIGIBILITY_SESSIONS = 75;  // 0.4.0: fewest sessions in the last 14 days from which 100 per version is reachable inside 42 days (the start gate).
 
 	public const V_CONTINUE      = 'continue';
 	public const V_SHIP_B        = 'ship_b';
@@ -211,9 +214,11 @@ final class Spark_Living_Stats {
 	 * @param array $a            Arm A counts.
 	 * @param array $b            Arm B counts.
 	 * @param float $days_running Days since the test started (fractional).
+	 * @param int   $max_days     The test's hard stop in days (0.4.0: 14 to 42, from its traffic). Default 14, the old fixed stop.
 	 * @return array Verdict, reason, probabilities and the next weights.
 	 */
-	public static function decide( array $a, array $b, float $days_running ): array {
+	public static function decide( array $a, array $b, float $days_running, int $max_days = self::MIN_STOP_DAYS ): array {
+		$max_days = self::clamp_stop_days( $max_days );
 		$n_a = max( 0, (int) ( $a['sessions'] ?? 0 ) );
 		$n_b = max( 0, (int) ( $b['sessions'] ?? 0 ) );
 		$s_a = min( $n_a, max( 0, (int) ( $a['intent'] ?? 0 ) ) );
@@ -226,6 +231,7 @@ final class Spark_Living_Stats {
 		$p_lead_worse = 1.0 - $p_lead; // P(B lead rate is lower than A lead rate).
 
 		$out = array(
+			'max_days'         => $max_days,
 			'verdict'          => self::V_CONTINUE,
 			'reason'           => '',
 			'p_b_beats_a'      => $p,
@@ -240,9 +246,9 @@ final class Spark_Living_Stats {
 		$out['min_run_met']  = $min_met;
 
 		if ( ! $min_met ) {
-			if ( $days_running >= self::HARD_STOP_DAYS ) {
+			if ( $days_running >= $max_days ) {
 				$out['verdict'] = self::V_NO_DIFF;
-				$out['reason']  = 'Hard stop at 14 days before the minimum run (7 days and 100 sessions per variant) was met. Keep A.';
+				$out['reason']  = 'Hard stop at ' . $max_days . ' days before the minimum run (7 days and 100 sessions per variant) was met. Keep A.';
 			} else {
 				$out['reason'] = 'Minimum run not met yet (7 full days and 100 sessions per variant).';
 			}
@@ -267,14 +273,83 @@ final class Spark_Living_Stats {
 			return $out;
 		}
 
-		if ( $days_running >= self::HARD_STOP_DAYS ) {
+		if ( $days_running >= $max_days ) {
 			$out['verdict'] = self::V_NO_DIFF;
-			$out['reason']  = 'Hard stop at 14 days with no winner. No difference: keep A, log it, queue a bolder test.';
+			$out['reason']  = 'Hard stop at ' . $max_days . ' days with no winner. No difference: keep A, log it, queue a bolder test.';
 			return $out;
 		}
 
 		$out['reason'] = 'No winner yet; the test keeps running.';
 		return $out;
+	}
+
+	/**
+	 * Keep a hard stop inside the 14 to 42 day window.
+	 *
+	 * @param int $days Wanted days.
+	 * @return int
+	 */
+	public static function clamp_stop_days( int $days ): int {
+		return max( self::MIN_STOP_DAYS, min( self::MAX_STOP_DAYS, $days ) );
+	}
+
+	/**
+	 * Days until each version reaches the 100-session minimum, at a steady rate of
+	 * $sessions_14d sessions per 14 days on the page (or, for a sitewide test, the
+	 * whole site), a 50/50 split and the 10 percent holdout. Rounded up.
+	 *
+	 * @param float $sessions_14d Sessions in 14 days.
+	 * @return int|null Null when there is no traffic at all.
+	 */
+	public static function projected_days( float $sessions_14d ): ?int {
+		if ( $sessions_14d <= 0 ) {
+			return null;
+		}
+		$per_version_per_day = ( $sessions_14d / 14.0 ) * self::VERSION_SHARE;
+		return (int) ceil( ( self::MIN_SESSIONS / $per_version_per_day ) - 1e-9 );
+	}
+
+	/**
+	 * The hard stop for a test at this traffic: projected days to 100 per version,
+	 * never below 14 and never above 42.
+	 *
+	 * @param float $sessions_14d Sessions in 14 days.
+	 * @return int
+	 */
+	public static function stop_days( float $sessions_14d ): int {
+		$p = self::projected_days( $sessions_14d );
+		return null === $p ? self::MAX_STOP_DAYS : self::clamp_stop_days( $p );
+	}
+
+	/**
+	 * Can a test reach 100 sessions per version inside 42 days at this traffic?
+	 * (The start gate: 75 sessions in 14 days or more.)
+	 *
+	 * @param float $sessions_14d Sessions in 14 days.
+	 * @return bool
+	 */
+	public static function reachable( float $sessions_14d ): bool {
+		$p = self::projected_days( $sessions_14d );
+		return null !== $p && $p <= self::MAX_STOP_DAYS;
+	}
+
+	/**
+	 * Observed rate: days to 100 sessions per version from what a running test has
+	 * actually collected. Pure function, mirrored in tests/stats-check.js.
+	 *
+	 * @param int   $n_a      Exposed sessions in A so far.
+	 * @param int   $n_b      Exposed sessions in B so far.
+	 * @param float $days     Days running.
+	 * @param float $min_w    The smaller of the two traffic weights (0.5 at a 50/50 split).
+	 * @return int|null Null when nothing has been exposed yet.
+	 */
+	public static function projected_days_observed( int $n_a, int $n_b, float $days, float $min_w = 0.5 ): ?int {
+		$total = max( 0, $n_a ) + max( 0, $n_b );
+		if ( $days <= 0 || $total <= 0 ) {
+			return null;
+		}
+		$per_version_per_day = ( $total / $days ) * max( 0.05, min( 0.5, $min_w ) );
+		return (int) ceil( ( self::MIN_SESSIONS / $per_version_per_day ) - 1e-9 );
 	}
 
 	/**

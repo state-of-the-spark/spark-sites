@@ -1,8 +1,8 @@
-# Spark Living v0.3.0
+# Spark Living v0.4.0
 
 Living Websites by Spark Sites. A WordPress plugin that runs one split test at a time on a site, keeps what brings in more leads, logs every change, and reports through a REST API.
 
-Spec: `spark-sites/decisions/2026-11-12-living-websites-build-plan-DRAFT.md` (sections 3 and 4.1 are the contract). This is a local build. It has not been installed on any live site. On 2026-11-12 it was run in WordPress Playground (PHP 8.2, WordPress 7.1, SQLite) and the flows listed in "Not finished or not verified" were exercised.
+Spec: `spark-sites/decisions/2026-11-12-living-websites-build-plan-DRAFT.md` (sections 3 and 4.1 are the contract). Live on sparkmysite.com since 2026-11-13 (0.4.0 deployed 2026-11-16, see the audit file `audit/2026-11-13-live-install.md`). On 2026-11-12 it was first run in WordPress Playground (PHP 8.2, WordPress 7.1, SQLite) and the flows listed in "Not finished or not verified" were exercised.
 
 Requirements: WordPress 6.3 or newer, PHP 8.1 or newer. Gravity Forms is optional (server-side `form_submit` needs it). No npm, no build step, no external libraries.
 
@@ -93,28 +93,35 @@ An experiment has a `device` field: `all` (the default), `mobile` or `desktop`. 
 * Block tests (`element_type: "block"`) accept `device` too.
 * Eligibility counts for a device-scoped test are sessions on that device (see "Eligibility at start").
 
-### Eligibility at start
+### Eligibility at start, and the stop date (0.4.0)
 
-A test is refused unless the request states that its target page had **100 or more sessions in the last 14 days** (for a device-scoped test: sessions on that device). The plugin has no pageview data, so the caller (the brain, from GA4) sends the number as `sessions_14d`; the plugin cannot check that it is true. The bar is `Spark_Living_Stats::ELIGIBILITY_SESSIONS` and is reported in `GET /state` under `rules.eligibility_sessions_14d`.
+**The rule changed in 0.4.0.** Before, a test needed 100 sessions in 14 days and was force-stopped at 14 days, so a page with about 137 sessions in 14 days gave each version about 62 and every test ended "no difference". Now a test's last day scales with its traffic.
+
+* **Days to result.** From the traffic the caller states (`sessions_14d`), with the 50/50 split and the 10 percent holdout, each version gets 45 percent of the visits: `projected_days = ceil(100 / (sessions_14d / 14 x 0.45))`.
+* **Start gate: can this reach a result within 42 days?** A test is refused unless `projected_days` is **42 or fewer**, which means **75 or more sessions in the last 14 days** (`Spark_Living_Stats::ELIGIBILITY_SESSIONS`, reported in `GET /state` rules). The plugin has no pageview data, so the caller (the brain, from GA4) sends the number as `sessions_14d`: for a page test, the sessions on the target page (on that device for a device-scoped test); for a sitewide test, the sessions on the whole site. The plugin cannot check that it is true.
+* **Stop date.** The test's hard stop is `max_days = clamp(projected_days, 14, 42)`, stored on the test when it starts (`max_days`, `stop_basis`, `stop_updated_at`). The 7 day minimum and the 90 percent / 10 percent win and loss rules are unchanged. Examples: 223 sessions in 14 days gives 14 days, 222 gives 15, 137 gives 23, 100 gives 32, 75 gives 42, 74 gives 43 (refused unless forced).
+* **Nightly recompute.** Each night, before it decides, the job recomputes `max_days` from the exposure rate the test has actually had (once it has run 3 days and exposed 20 sessions; before that the stated traffic is used): `100 / ((exposures in A and B / days) x the smaller traffic share)`, rounded up, within 14 and 42. The smaller share is 50 percent until each version has the exposure floor (30). A change writes a `stop_date_changed` ledger row with the old and new day count and date and the reason; no change writes nothing.
+* **A test that was running when 0.4.0 arrived** gets its stop date from the same code during the upgrade (computed from its stated `start_sessions_14d`, so it does not jump), with one `stop_date_changed` row saying the rule changed. Its start time, variants, weights and events are not touched.
+* **Dashboard.** The running card reads "Day N of M. Started <date>. Earliest read <date>. Stops <date> at the latest." Suggestion cards read "At this traffic a result takes about N days." (amber, with "this would need a forced start", only when N is over 42).
 
 ```json
 POST /wp-json/spark-living/v1/tests/123/start
-{ "sessions_14d": 240 }
+{ "sessions_14d": 137 }
 ```
 
 | Request | Result |
 |---|---|
-| `sessions_14d` missing | 400 `spark_living_eligibility_missing`, with the reason and the 100 bar |
+| `sessions_14d` missing | 400 `spark_living_eligibility_missing`, with the reason and the bar (75) |
 | `sessions_14d` not a whole number of 0 or more | 400 `spark_living_sessions_invalid` |
-| `sessions_14d` below 100 | 422 `spark_living_not_eligible`, naming the number, the device and the bar |
-| 100 or more | the test starts; `start_sessions_14d` is stored, `forced_start` is false |
-| `force: true` (administrator) with a missing or low number | the test starts; stored as `forced_start: true` plus the number given (0 if none) |
-| `force: true` with 100 or more | starts normally; `forced_start` stays false because the bar was met |
-| `force: true` from anyone without `manage_options` | refused (all these routes already need `manage_options`; the check is repeated for force) |
+| `sessions_14d` below 75 | 422 `spark_living_not_eligible`, naming the number, the days it would take and the 42 day limit |
+| 75 or more | the test starts; `start_sessions_14d` and `max_days` are stored, `forced_start` is false |
+| `force: true` (administrator) with a missing or low number | the test starts; stored as `forced_start: true` plus the number given (0 if none); `max_days` is the 42 day ceiling |
+| `force: true` with 75 or more | starts normally; `forced_start` stays false because the bar was met |
+| `force: true` from anyone without `manage_options`, or from an agent | refused |
 
-The state errors come first: a missing test is 404, a test that is not a draft or awaiting approval is 409. **`POST /tests` with `start: true` follows the same rule** (send `sessions_14d` or `force: true` in the body); it is checked before anything is written, so a refusal leaves no draft behind. Tier 2 tests are still created as `awaiting_approval` and need the number when they are approved and started. The wp-admin "Start" button has a "Sessions, last 14 days" box and a "Start anyway" tick box; the dashboard shows "Started below the 100-session bar (N sessions in the last 14 days)" for a forced test, while it runs and in the history afterwards.
+The state errors come first: a missing test is 404, a test that is not a draft, suggested, queued or awaiting approval is 409. **`POST /tests` with `start: true` follows the same rule** (send `sessions_14d` or `force: true` in the body); it is checked before anything is written, so a refusal leaves no draft behind. Tier 2 tests created through `POST /tests` are still created as `awaiting_approval` and need the number when they are approved and started.
 
-Tier 2 tests (offer, price, guarantee, legal claim) are created as `awaiting_approval` and only start through the explicit approve button (admin) or `POST /tests/{id}/start`.
+Tier 2 tests (offer, price, guarantee, legal claim) created through `POST /tests` are `awaiting_approval` and only start through the explicit approve button (admin) or `POST /tests/{id}/start`.
 
 ### Measuring
 
@@ -126,7 +133,7 @@ Tier 2 tests (offer, price, guarantee, legal claim) are created as `awaiting_app
 
 ## REST API (brain)
 
-All routes need `manage_options` (use an application password). Base: `/wp-json/spark-living/v1`.
+Use an application password (HTTP Basic over HTTPS). Since 0.4.0 not every route needs `manage_options`: see "Phase B", "Capabilities". Administrators can call everything. Base: `/wp-json/spark-living/v1`.
 
 | Method and route | Purpose |
 |---|---|
@@ -135,13 +142,15 @@ All routes need `manage_options` (use an application password). Base: `/wp-json/
 | `GET /log?per_page=50&page=1` | Evolution log, newest first; `X-WP-Total` header |
 | `POST /tests` | Create a test (body above; optional `device`, optional `variants.B.css`). `start: true` starts it if none is running (409 otherwise) and needs `sessions_14d` (or `force: true`) like `/start` |
 | `POST /tests/{id}` | Edit only `change_type`, `a_label` and `b_label` (see "Current versus Challenger"). Allowed in any status, including running; nothing else is touched. 400 for an unknown `change_type` or an empty body; an empty string clears a field |
-| `POST /tests/{id}/start` | Start a draft, or approve and start a Tier 2 test. Body `{"sessions_14d": N}`, N of 100 or more, or `{"force": true}` (administrator; recorded). 400 or 422 otherwise |
+| `POST /tests/{id}/start` | Start a draft, or approve and start a Tier 2 test. Body `{"sessions_14d": N}`, N of 75 or more (0.4.0; it was 100), or `{"force": true}` (administrator; recorded). 400 or 422 otherwise. An agent (`by` starting `agent:`, or a login without `manage_options`) must also pass the gate, tier, autonomy and approved-charter checks and cannot force |
 | `POST /tests/{id}/conclude` | Body `{"verdict":"ship_b" \| "keep_a" \| "no_difference","note":"..."}`; logs it and promotes B on `ship_b` |
 | `GET /suggestions` | `{suggestions: [...], queue: [...]}`. Suggestions by priority (1 first), the queue in start order. Each item carries `traffic` (sessions, as_of, age_days, meets_min, fresh), `gate` (ok, code, message) and `queue_position` (0 when not queued) |
 | `POST /suggestions` | Create a suggested test (fields below). 201 with the new test; 400 with a specific `code` for any invalid field. Never starts anything |
 | `POST /suggestions/{id}/queue` | Suggested to queued, at the end of the line. 409 unless the test is `suggested`. Does not start it |
 | `POST /suggestions/{id}/unqueue` | Queued back to suggested ("Remove from queue"). It keeps its priority |
 | `POST /suggestions/{id}/dismiss` | Suggested or queued to dismissed. The record is kept; it leaves every list |
+| `PATCH /suggestions/{id}` | (0.4.0) Edit the payoff fields, the traffic count (`sessions_14d` with `sessions_as_of`) and the priority of a suggested or queued test |
+| `POST /suggestions/{id}/gate`, `POST /suggestions/{id}/preview-token`, `POST /validate-variant`, `POST /charter/approve`, `GET /results` | (0.4.0) See "Phase B" |
 | `POST /event` (public) | Browser events only; nonce-free, validated, rate limited, `no-store` |
 
 ## Phase A: Foundations (0.3.0)
@@ -193,11 +202,79 @@ The nightly job keeps the split at 50/50 until EACH version has at least `min_ex
 
 `_playground/t17.js` (charter, ledger, upgrade, backfill), `t18.js` (gate and the 27-case agent queue matrix), `t19.js` (test-visit mode), `t20.js` (weight floor), `t21.js` (dashboard on three surfaces, 390 and 1366 px, light and dark), `runall.sh` runs any list of them.
 
+## Phase B: Self-assigning tests (0.4.0)
+
+What an agent harness needs from the plugin to pick, build and queue tests by itself, with the plugin keeping the statistics, the gates and the record. Nothing here removes a human gate: at autonomy `suggest` (the default) nothing is ever queued or started by an agent or by the nightly job.
+
+### 1. A stop date that scales with traffic, and whole-site scope
+
+See "Eligibility at start, and the stop date" above for the rule. Also:
+
+* **`scope`: `page` (default) or `sitewide`.** Accepted by `POST /tests`, `POST /suggestions` and the wp-admin create form, shown on every card ("Whole site"). A sitewide test's variant applies on every page where its selector matches (the browser script decides, as before), the traffic input is the whole site's sessions, `page` may be left out, and **exposure is counted once per session wherever the selector first matches** (the one-exposure-per-session rule is per experiment and session, not per page). A page test's `page` is advisory for the traffic count and the cards: the selector, not the page, decides where the variant appears. The test that was running when 0.4.0 was installed is not converted.
+* **One test per element.** One test runs at a time, as before. In addition the plugin refuses (409 `spark_living_selector_in_use`) to start a test, or to queue one, whose element (the selector, compared after trimming spaces and ignoring case and spaces around `> + ~ ,`) is already held by a shipped winner on overlapping pages and devices (a page test and a sitewide test overlap; two page tests overlap unless both name a different page; mobile and desktop do not overlap). A queued test waits behind a running test on the same element. Revert the winner first. Overlapping but differently written selectors (`.btn` and `a.btn.x`) are not detected.
+
+### 2. Payoff score on suggestions
+
+* New fields on `POST /suggestions` and `PATCH /suggestions/{id}`: `payoff_score` (number of 0 or more; `null` clears it), `payoff_inputs` (object: `sessions_reaching`, `proximity` 0 to 1, `expected_lift`, `days_to_result`, `traffic_class`; optionally `sessions_14d`, `reach_share`, `change_type`, `baseline_rate`, `power_factor`, `library_n`; other keys are dropped), `payoff_version` (up to 40 characters). A bad value is 400 (`spark_living_payoff_score`, `_inputs`, `_version`) and nothing is written. `PATCH` also takes `sessions_14d` with `sessions_as_of` and `priority`, works on a suggested or queued test, and writes a `suggestion_updated` ledger row.
+* **The plugin does its own days to result** from its own rules and stores it beside the agent's: `payoff.plugin_check` = {`days_to_result` (7 at the least), `stop_days`, `reachable`, `traffic_class` (`decidable` or `below_minimum`), `agent_days_to_result`, `agrees` (within a day), `computed_at`}. The agent's own figure stays in `payoff_inputs.days_to_result`.
+* **Order.** `GET /suggestions`, `GET /state` and the dashboard sort by Goal Gate verdict first (pass, then not checked or out of date, then hold, then fail), then by payoff score (highest first, unscored last), then the old priority, then oldest first. On the dashboard a verdict of fail is hidden under a closed "Rejected by the Goal Gate (N)" expander. Each card has "Expected payoff: highest of 3" (or "second of 3", "lowest of 3", "the only one scored", "not scored yet") with the raw number small beside it.
+* **Auto-pick.** At autonomy `tier1` or `full`, when the nightly job finds no running test and nothing queued, it queues the highest-payoff suggestion that has a `pass` verdict against the current charter version, whose tier the level allows (tier 1 at `tier1`, tiers 1 and 2 at `full`, tier 3 never), that has a payoff score, that has a fresh traffic count (21 days) from which a result is reachable within 42 days, and whose element is free. The ledger row (`test_queued`) is proposed by `engine:auto-pick` and lists what was skipped and why; the usual start path then starts it in the same run (`test_started` by `engine`). **At `suggest` it never does this, and it never does it while the charter is empty or a draft.** `GET /state` carries `auto_pick` (what the next run would do and why not), which writes nothing.
+
+### 3. Results record
+
+Table `{prefix}spark_living_results` (dbDelta, created by the upgrade, safe to run twice; `spark_living_db_version` is 3). One row per concluded test, written when the test concludes and, once on upgrade, for the tests that had already concluded: test id and name, page type, scope, device, element selector, change type, `a_label`, `b_label`, outcome (`challenger won`, `original won`, `no difference`, `voided`), verdict, shipped, tier, started and ended dates, days run, `max_days`, sessions, intent and lead rates per version, lift, probability, `met_minimum`, `forced_start`, the payoff score at the start and a one-line summary. `GET /results?per_page=20&page=1&outcome=&change_type=&scope=` (administrators only) returns them newest first with `X-WP-Total` and `X-WP-TotalPages`, in the shape of `agents/results-library.md` for the fields the plugin can truthfully know. It does not know `site_key`, `industry`, or a finer `page_type` than home, product, sitewide, other or unknown; it keeps the selector, not a named element. **Nothing is sent to any other site.**
+
+### 4. Gaps the agent harness reported, and what was done
+
+1. **Tier 2 suggestions** can be created through `POST /suggestions` (`tier` or `risk_tier` of 1 or 2). Tier 3 is still refused (400 `spark_living_tier3`). An agent queues tier 2 only at autonomy `full`.
+2. **Unambiguous gate keys.** Every suggestion and queued card carries `goal_gate` = {`verdict`, `reasons` (a string of at most 600 characters), `by`, `at`, `charter_version`, `stale`} for the Goal Gate and `traffic_gate` = {`ok`, `code`, `message`} for the traffic check. The old `gate` key (the traffic check) and the flat `gate_verdict`, `gate_reasons`, `gate_by`, `gate_at`, `gate_charter_version` fields stay as aliases for one version (0.4.x) and will be removed.
+3. **Authorship.** New ledger kinds: `gate_verdict`, `suggestion_created`, `suggestion_updated`, `queue_attempt`, `audit`, `stop_date_changed`, `charter_approved`. The server uses `gate_verdict` for a verdict, `queue_attempt` (status `failed`) for a refused queue or start, `stop_date_changed`, `suggestion_updated` and `charter_approved`; it keeps `test_suggested` for the creation of a suggestion (`suggestion_created` is accepted through `POST /changes` for outside rows). Two capabilities, below.
+4. **Server-side rows.** `POST /suggestions`, `PATCH`, `/gate`, `/queue`, `/unqueue`, `/dismiss`, `/tests/{id}/start`, `/conclude`, `PUT /charter`, `POST /charter/approve`, the nightly job and the upgrade all write their own ledger rows on the server. **Agents must not post duplicates** through `POST /changes`; that route is for facts the plugin cannot see (an audit finding, a speed measurement, an ad change).
+5. **`POST /validate-variant`** (build capability; writes nothing). Body: `selector`, `changes` [{op, value}] and/or the shorthands `text`, `href`, `add_class`, `remove_class`, `style`, plus `css`, and `format` (`selector` or `block`). Returns `ok`, `selector` {given, ok, sanitized, reason}, `variant` {changes, css} (what would be kept), `stripped` [what was removed and why], `problems`, `written: false`.
+6. **Preview of a test that is not running.** `POST /suggestions/{id}/preview-token` (build capability) returns a signed token valid for 30 minutes and for that test id only (HMAC with the site's auth salt; nothing is stored). Open any page as `?sl_test=1&sl_exp={id}&sl_force=B&sl_pt={token}` (`sl_force=A` shows the original; with no `sl_force` a preview shows B). The page then carries only that test's challenger, in that browser only, in test-visit mode (nothing is recorded, no cookie of the visitor is touched). It works for a signed-in user with the build capability (no token needed) or a holder of a valid token; for anyone else the parameters are ignored and the page is the normal one. The preview page is sent not cacheable and noindex. Only suggested, queued and draft selector tests can be previewed; a running test is seen with `?sl_test=1&sl_force=B` as before.
+7. **Charter approval.** The charter has `status` (`draft` or `approved`), `approved_by` and `approved_at`. Any change of content through `PUT /charter` (or the wp-admin form, or an undo) sets it back to `draft`, clears the approval and bumps the version on the server; a save that changes nothing bumps the version but keeps the approval. `status`, `approved_by`, `approved_at` in a request body are ignored. `POST /charter/approve` (administrator; optional `by`) approves the current content without changing the version, so verdicts already recorded stay valid; it is refused when `by` starts with `agent:` (403 `spark_living_agent_cannot_approve`) and when the charter is empty (409). **While the charter is empty or a draft, every agent queue, create-and-start and start is refused (403 `spark_living_charter_unapproved`) and auto-pick does nothing, whatever the autonomy level.** The Site goals card says "Draft" and why, and wp-admin, Living Websites, Site charter shows an **Approve these goals** button.
+8. **The hole in `POST /tests` and `/start` is closed.** A caller is an agent when its `by` starts with `agent:` or when it is signed in without `manage_options`. An agent's `POST /tests` (with or without `start`, with or without `force`) is refused with the same checks as the queue route (a new test has no verdict, so `spark_living_gate_missing`), and an agent's `POST /tests/{id}/start` must pass the gate, tier, autonomy and approved-charter checks, and may not use `force` (`spark_living_agent_no_force`). Each refusal is a `queue_attempt` ledger row with status `failed`. An administrator who sends no `by` (or a `by` that does not start with `agent:`) behaves as before.
+9. **Documented limits.** Living Block tests cannot be placed through REST (a person places the block in the page editor). A selector test cannot create a new element, only change one that is in the page's HTML. The plugin has no per-page session source: the controller supplies `sessions_14d` (from GA4). A completed booking on Google Calendar is not counted as a lead, only the click on the booking link.
+
+### Capabilities
+
+| Capability | May | Granted to |
+|---|---|---|
+| `spark_living_gate` | `POST /suggestions/{id}/gate`; a `gate_verdict` row or gate data through `POST /changes`; the read routes | administrators (automatically) and any user or role given it |
+| `spark_living_build` | `POST /suggestions`, `PATCH /suggestions/{id}`, `/queue`, `/unqueue`, `/dismiss`, `POST /validate-variant`, `POST /suggestions/{id}/preview-token`, `POST /tests`, `/tests/{id}`, `/tests/{id}/start` (as an agent: checked), the read routes | administrators (automatically) and any user or role given it |
+| `manage_options` | everything, including `/conclude`, `PUT /charter`, `/charter/approve`, `/changes/{id}/undo`, `GET /results`, the dashboard | administrators |
+
+Read routes (`GET /state`, `/stats`, `/log`, `/suggestions`, `/charter`, `/changes`) and `POST /changes` are open to a holder of either capability. A row posted through `POST /changes` by someone without the gate capability is stored with `gate_verdict` `na` and no gate data, and a `gate_verdict` row from them is refused, so a Builder cannot record its own verdict. Administrators hold both capabilities through a filter (`user_has_cap`), so no role is changed in the database.
+
+### Separate low-privilege logins (one with gate only, one with build only)
+
+Do this once per site, with WP-CLI or the Users screen; the plugin never creates users itself. Use real, generated passwords; the application password is shown once.
+
+```
+# Judge: may post a Goal Gate verdict and read, nothing else.
+wp role create spark_living_judge "Spark Living Judge"
+wp cap add spark_living_judge read spark_living_gate
+wp user create living-judge living-judge@example.com --role=spark_living_judge --user_pass="<generate one>"
+wp user application-password create living-judge "judge agent"
+
+# Builder: may create, patch and queue suggestions, validate and preview a variant; cannot post a verdict.
+wp role create spark_living_builder "Spark Living Builder"
+wp cap add spark_living_builder read spark_living_build
+wp user create living-builder living-builder@example.com --role=spark_living_builder --user_pass="<generate one>"
+wp user application-password create living-builder "builder agent"
+```
+
+The agent sends the application password as HTTP Basic over HTTPS. A Builder that posts `/gate` gets 403; a Judge that posts `/suggestions` gets 403; neither can conclude a test, change or approve the charter, undo a change or read `/results`. A Builder login is treated as an agent on every route whatever `by` it sends, so it is always checked against the Goal Gate, the approved charter and the autonomy level.
+
+### Tests
+
+`_playground/t22.js` (stop date, start gate, nightly recompute, upgrade of a running test, sitewide scope, one test per element), `t23.js` (payoff, sorting, the rejected expander, goal_gate and traffic_gate keys, tier 2, auto-pick), `t24.js` (results and backfill, capabilities, validate-variant, preview tokens, charter approval, the closed hole), `t25.js` (dashboard layout at 1366 and 390 px, light and dark), and the mirror `tests/stats-check.js`. `runall.sh` runs any list of them.
+
 ## How it runs
 
 * **Assignment (inline script in the head).** First decides whether the viewport is mobile (980px or narrower) and drops every test scoped to the other device. Then reads or sets cookie `spark_living` (random visitor id plus a bucket 0-9999). Bucket under 1000 is the permanent 10 percent holdout and always sees A. Everyone else is placed by the stored weights (sticky through cookie `spark_living_a`). Blocks: injected CSS shows the chosen variant before first paint, and the other is removed at DOMContentLoaded. Selector tests: the target is hidden until the change is applied, with a 1.2 second safety timeout that always reveals it. Bots (user agent, `navigator.webdriver`) and users who can `edit_posts` (server: nothing is printed; browser: cookie `spark_living_staff` set at login) are never assigned or counted and see A.
 * **Promoted winners** stay live for everyone except the holdout. The holdout keeps seeing the original, which is what produces the living versus frozen number.
-* **Nightly job (`spark_living_nightly`, daily WP-Cron).** For the running test: gather counts, run `Spark_Living_Stats::decide()`, then either update the weights (Thompson, 20 percent floor) or conclude the test, write the `living_evolution` entry and promote a winner. Then it checks any winner shipped 7 or more days ago for auto-revert, and prunes events older than 400 days.
+* **Nightly job (`spark_living_nightly`, daily WP-Cron).** For the running test: recompute its stop date (0.4.0), gather counts, run `Spark_Living_Stats::decide()`, then either update the weights (Thompson, 20 percent floor) or conclude the test, write the `living_evolution` entry and promote a winner. Then it checks any winner shipped 7 or more days ago for auto-revert, auto-picks a suggestion when allowed (0.4.0, never at autonomy `suggest`), starts the first queued test when none runs, and prunes events older than 400 days.
 * **Stats (`includes/class-spark-living-stats.php`).** Beta-Bernoulli with a uniform prior. P(B beats A) uses the exact closed-form sum for integer Beta parameters (deterministic, no random numbers), cross-checked against a seeded Monte Carlo in the test script. Thompson allocation for two arms is P(B beats A), clamped to 20 to 80 percent.
 
 ## Dashboard counts
@@ -275,7 +352,7 @@ Three statuses on `living_experiment`: `suggested`, `queued`, `dismissed`; new f
 |---|---|
 | `title` (or `name`) | Required. Plain text, 200 characters. |
 | `hypothesis` | Optional text. |
-| `page` | Required. A post ID, an http or https URL, or a path starting with `/`. Anything else (for example `javascript:`) is 400. |
+| `page` | Required unless `scope` is `sitewide`. A post ID, an http or https URL, or a path starting with `/`. Anything else (for example `javascript:`) is 400. |
 | `device` | `all` (default), `mobile` or `desktop`. |
 | `element_type`, `target`, `variants` | Exactly as `POST /tests`: a selector test needs a valid selector and a challenger with a change or a `css` snippet (sanitised by the same CSS sanitiser); a block test uses `element_type: block`. |
 | `change_type`, `a_label`, `b_label` | As in 0.1.4. An unknown `change_type` is 400. |
@@ -284,19 +361,20 @@ Three statuses on `living_experiment`: `suggested`, `queued`, `dismissed`; new f
 | `priority` | Whole number of 1 or more; 1 is first. Default: last place. |
 | `suggested_by` | Plain text, 80 characters, for example "Lumen page review". `suggested_at` is set by the server. |
 | `sessions_14d`, `sessions_as_of` | Required. The trailing 14-day sessions for the target page and device, and the date (`YYYY-MM-DD`, not in the future) they were measured. Supplied by whoever writes the suggestion; the plugin has no pageview data. |
-| `tier` | Tier 2 is refused (400): those tests need owner approval and may not be queued to start by themselves. |
+| `tier` | 1 (default) or 2 (0.4.0). Tier 3 is refused (400). A tier 2 suggestion is queued by a person, or by an agent only at autonomy `full`. |
+| `scope`, `payoff_score`, `payoff_inputs`, `payoff_version` | 0.4.0, see Phase B. |
 
 Every text field goes through the plugin's existing sanitisers (tags and script bodies stripped) and is escaped again on output. Nothing is written when any field is invalid.
 
 ### The queue
 * One test runs at a time, as before. Queued tests wait in the order they were queued (`queue_order`); removing one and queueing it again puts it last.
-* **Queueing never starts a test.** The nightly job (`spark_living_nightly`) starts the next one: after it has evaluated the running test, if no test is running it looks at the first queued test only and starts it when its stored count passes the gate: `sessions_14d` is 100 or more **and** `sessions_as_of` is no more than 21 days old (a count measured 21 days ago still passes; 22 does not). The test then starts like any other (50/50, holdout, `start_sessions_14d` = the stored count, `forced_start` false). The dashboard says "Starts on the next nightly check after the current test ends."
-* A failed gate leaves the test queued and starts nothing. The dashboard shows why on its card: "Waiting: traffic count is below the minimum" or "Waiting: traffic count is out of date". A blocked first test is not skipped for the one behind it.
-* The queue never forces a start. A suggestion below 100 sessions can only be started by hand with `POST /tests/{id}/start` and `force: true` (recorded as `forced_start`), which now also accepts `suggested` and `queued` tests.
+* **Queueing never starts a test.** The nightly job (`spark_living_nightly`) starts the next one: after it has evaluated the running test, if no test is running it looks at the first queued test only and starts it when its stored count passes the gate: `sessions_14d` lets a result be reached within 42 days (75 or more sessions in 14 days, 0.4.0) **and** `sessions_as_of` is no more than 21 days old (a count measured 21 days ago still passes; 22 does not). The test then starts like any other (50/50, holdout, `start_sessions_14d` = the stored count, `forced_start` false). The dashboard says "Starts on the next nightly check after the current test ends."
+* A failed gate leaves the test queued and starts nothing. The dashboard shows why on its card: "Waiting: at this traffic a result would take more than 42 days" or "Waiting: traffic count is out of date". A blocked first test is not skipped for the one behind it.
+* The queue never forces a start. A suggestion below 75 sessions (0.4.0; it was 100) can only be started by hand with `POST /tests/{id}/start` and `force: true` (recorded as `forced_start`), which now also accepts `suggested` and `queued` tests.
 * Suggest, queue, remove and dismiss touch only the suggestion's own fields. They never change the running test, its variants, assignment, start time or event rows (`t16.js` compares a fingerprint before and after).
 
 ### The cards
-"Suggested tests" shows the two best-ranked suggestions, then a muted "N more suggested tests are waiting." Each card has: rank and title; page and device; "What would change" (change type, then Current and Challenger rows, the same as the Current test card); "Why" (the rationale); "Based on" (each evidence item as a small tag with the source and date, plus its detail line); "Traffic" ("137 sessions in 14 days (measured Nov 11). Meets the 100-session minimum." or, under 100, "Below the 100-session minimum; this would need a forced start." in a muted warning bar; a count older than 21 days adds a note that it would not start on its own); and two buttons, **Queue this test** (primary) and **Dismiss**. "Up next" lists queued tests with their position, the same comparison, the wait reason if any, and **Remove from queue**.
+"Suggested tests" shows the two best-ranked suggestions, then a muted "N more suggested tests are waiting." Each card has: rank and title; page and device; "What would change" (change type, then Current and Challenger rows, the same as the Current test card); "Why" (the rationale); "Based on" (each evidence item as a small tag with the source and date, plus its detail line); "Traffic" (0.4.0: "137 sessions in 14 days (measured Nov 11). At this traffic a result takes about 23 days." or, when that is over 42 days, "At this traffic a result takes about 76 days, more than the 42-day limit; this would need a forced start." in a muted warning bar; 0.2.0 to 0.3.0 said "Meets the 100-session minimum." and "Below the 100-session minimum."; a count older than 21 days adds a note that it would not start on its own); and two buttons, **Queue this test** (primary) and **Dismiss**. "Up next" lists queued tests with their position, the same comparison, the wait reason if any, and **Remove from queue**.
 
 The buttons are real `<button type="button">` elements with a visible focus outline. A press disables every button, shows "Working...", posts to the REST route with the REST nonce, then swaps the two sections in place (no page reload, so the load animation does not replay) and reads the result out in a status line (`role="status"`). A failure shows the server's message in that line and re-enables the buttons. There is no alert, confirm or prompt dialog anywhere.
 
@@ -314,13 +392,15 @@ The allocation weights and the live set are printed into the page head, so a cac
 
 **Definitions used by the stats** (counted per distinct session, only sessions that have an exposure row for that experiment): *sessions* = exposed sessions; *intent* = sessions with `cta_click`, `form_submit` or `tel_click`; *leads* = sessions with `form_submit` or `tel_click`. "Site watch" rows (`experiment_id = 0`, variant H or L) record exposures when winners are live but no test is running, so the lift keeps measuring.
 
-**Options:** `spark_living_db_version` (2 from 0.3.0), `spark_living_version`, `spark_living_rewrite_version`, `spark_living_last_run`, `spark_living_charter`, `spark_living_settings`, `spark_living_ledger_backfilled`.
+**Results table `{prefix}spark_living_results`** (0.4.0): see Phase B. **Options:** `spark_living_db_version` (3 from 0.4.0; 2 in 0.3.0), `spark_living_version`, `spark_living_rewrite_version`, `spark_living_last_run`, `spark_living_charter`, `spark_living_settings`, `spark_living_ledger_backfilled`, `spark_living_results_backfilled`.
 
 **Change ledger table `{prefix}spark_living_changes`:** see "Phase A". Events table unchanged.
 
 **Hooks for other code:** actions `spark_living_test_started`, `spark_living_test_concluded` (id, verdict, shipped), `spark_living_test_reverted`, `spark_living_nightly_complete`.
 
 ## Not finished or not verified
+
+**0.4.0 (Phase B) limits.** Not built: cross-site results store, the scheduler, ads and design phases, verification of lead counting. Not verified on MySQL: the results queries (local tests ran on SQLite). A page-scope test's `page` does not restrict where the browser script applies the variant (the selector does). Auto-pick has been exercised only against seeded data in WordPress Playground, never against live traffic. A preview token is a bearer token in the address: anyone who has the whole address can open the preview for 30 minutes; it shows only the challenger of that one test and records nothing.
 
 Verified 2026-11-12 in WordPress Playground (PHP 8.2, WordPress 7.1, SQLite, WP_DEBUG and WP_DEBUG_LOG on, empty log): activation and the events table, both blocks (registration, editor, server render), selector tests through the REST API (cookie plus nonce, and an application password), A, B and holdout assignment, stickiness, the safety timeout, bot and editor exclusion, exposure, cta_click, tel_click and form_start events, the nightly job on seeded data (ship B, day-14 no difference, lead guard, weights inside 20 to 80), the cache flush, `/living/` (404 logged out, dashboard for an administrator) and the wp-admin forms. `node tests/stats-check.js` passes.
 
@@ -331,7 +411,7 @@ Still unverified (needs a real Pressable site): the SQL on MySQL (Playground use
 Known gaps and limits in v0.1:
 * **Chained tests on one element.** When a winner ships, "B becomes the new A" is modeled as a promoted winner. A follow-up test on the same element is a new experiment whose A should equal the promoted version; the holdout then sees that experiment's A, not the true original. The brain must define follow-ups that way until v0.2 adds a baseline-of-record.
 * **Weights are in cached HTML.** New visitors follow the weights printed in the page at cache time. The plugin flushes the cache when weights change (see "Cache flush"), so the lag is short. Existing visitors are sticky.
-* **Eligibility (100+ sessions in 14 days) is enforced only on the number the caller sends.** The plugin has no pageview data, so it cannot tell whether `sessions_14d` is true; the brain still has to read GA4. What the plugin does is refuse a start with no number or a low one, and record a forced start. `POST /tests` with `start: true` now needs the number as well, which changes the v0.1 behaviour (it used to start without one).
+* **Eligibility (0.4.0: a result reachable within 42 days, 75+ sessions in 14 days; it was 100+) is enforced only on the number the caller sends.** The plugin has no pageview data, so it cannot tell whether `sessions_14d` is true; the brain still has to read GA4. What the plugin does is refuse a start with no number or a low one, and record a forced start. `POST /tests` with `start: true` now needs the number as well, which changes the v0.1 behaviour (it used to start without one).
 * **Device is decided once per page load.** A visitor who resizes a window across 980px mid-visit keeps the decision made at load; the next page load re-decides. A returning visitor whose window sits on the other side of the line is simply not in the test that visit.
 * **CSS variant exposure needs the target element in the page HTML.** Elements the theme only inserts with JavaScript after load are not seen at DOMContentLoaded. Not checked on a real Divi page.
 * **The visibility / CSS snippet cannot load anything by URL** (`url(` and `@import` are stripped), and it is not linted for validity.
