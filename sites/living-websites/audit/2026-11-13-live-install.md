@@ -452,3 +452,33 @@ Dry run on live: payoff fields set with `PATCH /suggestions/{id}` on 46912 (scor
 
 ### Not verified
 The nightly job was not forced; MySQL-specific results queries (all local tests ran on SQLite); auto-pick against live traffic (autonomy is suggest, so it cannot run); lead counting; a booking is not counted as a lead.
+
+## Draft charter loaded (2026-11-17)
+
+Loaded the draft site goals from `charters/sparkmysite.com.json` onto https://sparkmysite.com (Pressable site 1614838) so the owner can read and approve them. Nothing was approved by me.
+
+How: the plugin's own `Spark_Living_Charter::save()` through WP-CLI `wp eval` (the same function the REST `PUT /charter` calls), `updated_by` "Lumen (draft for Grant to approve)", `autonomy_level` suggest. The save code sets status to draft whenever content changes or the version was 0, so a save cannot leave a charter approved; proved first in the local Playground (status draft, autonomy suggest after the save). Edge cache purged and object cache flushed afterwards. No backup taken (the save is undoable through the ledger).
+
+### Before and after
+| | Before (11/17 11:26 UTC) | After (11/17 11:28 UTC) |
+|---|---|---|
+| test 46907 status, post_modified | running, 2026-11-13 08:58:11 | same |
+| 46907 full post meta hash (variants, weights, start, max days) | d3db7a86 | d3db7a86 |
+| events table rows (whole table) | 63 | 63 |
+| suggestions 46912, 46910 | suggested, meta hashes 9f1d529a, 75c86432 | same |
+| ledger rows | 14 | 15 |
+| charter | empty (option absent), draft, version 0 | version 1, draft, autonomy suggest, approved_by empty |
+
+New ledger row 15: kind charter_update, applied, proposed by "Lumen (draft for Grant to approve)", Undo offered (shown on the dashboard change log). Nothing queued, started or auto-picked.
+
+### What the plugin stored differently from the JSON
+The plugin cleans input, so three things differ from the source file and are worth fixing before approval: brand colours are stored as a plain list of 9 hex values (the names such as live_button_gradient_start are dropped, hex lowercased); the third font line is cut at 80 characters ("...Poppins 600 for the wordm"); button_shape is cut at 60 characters ("...for main call-to-a"). All other fields match (goal text hash identical, 10 off-limits lines, 2 other conversions).
+
+### Dashboard
+Viewed as the owner's administrator with a 25 minute WP-CLI login cookie (user 17393); the session token was destroyed afterwards. The Site goals card shows the charter, "Draft" and a link "Review and approve in wp-admin". The "Approve these goals" button itself is on the wp-admin Site charter screen, not on /living/. Screenshots in `screenshots/`: `live-dash-charter-draft-desktop.png`, `live-dash-charter-draft-goals-zoom.png`, `live-dash-charter-draft-mobile.png`.
+
+### Live numbers table at 390 wide (read only, not changed)
+The table is `display:block; overflow-x:auto; max-width:100%`: table scrollWidth 460 against clientWidth 358, so it scrolls sideways inside its own box and the page itself does not (document scrollWidth 390). The Intent sessions, Intent rate and Leads columns are cut off at the right edge until the reader swipes, with no visible hint that more columns exist.
+
+### Not verified
+The nightly job and the Goal Gate were not run against charter version 1 (the dry-run verdicts on the suggestions still say version 0). The Undo button was seen but not clicked. Output of the first two WP-CLI save jobs was truncated by the Pressable log, so the save result was confirmed by the later read-back, not by the save command's own output.
