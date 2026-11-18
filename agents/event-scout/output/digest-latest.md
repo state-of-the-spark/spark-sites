@@ -1,15 +1,15 @@
 ---
 type: digest
-date: 2026-11-13
+date: 2026-11-18
 agent: event-scout
 status: active
 ---
 
-# Event Scout Digest — 2026-11-13
+# Event Scout Digest — 2026-11-18
 
 **Business:** Spark Sites
 **Geography:** Lakeland, Tampa, Orlando, Winter Haven, Kissimmee, Brandon, St. Petersburg, Cocoa, Cocoa Beach, Cape Canaveral, New Smyrna Beach
-**Date range:** 2026-11-13 to 2026-12-04
+**Date range:** 2026-11-18 to 2026-12-09
 **0 new events | 0 previously seen | 0 total scored**
 
 ---
